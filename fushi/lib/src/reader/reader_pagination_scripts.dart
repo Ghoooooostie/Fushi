@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:fushi/src/reader/reader_content_styles.dart';
 import 'package:fushi/src/reader/reader_sentence_audio_ownership_script.dart';
 import 'package:fushi/src/reader/reader_study_unit_script.dart';
+import 'package:fushi/src/reader/reader_translation_scripts.dart';
 import 'package:fushi/src/reader/reader_visual_novel_scripts.dart';
 import 'package:fushi_core/fushi_core.dart'
     show
@@ -970,6 +971,7 @@ class ReaderPaginationScripts {
     return '''<script>
 $kStudyUnitJs
 $kSentenceAudioOwnershipJs
+$kTranslationJs
 window.__fushiShells = {};
 ${_stripShellScriptTags(shell)}
 window.__fushiInstallShell = function(C) {

@@ -6247,5 +6247,18 @@
   "ocr_system_model_play_services_resolvable": "システム OCR には Google Play 開発者サービスが必要ですが、この端末では見つからないか、無効、または古いバージョンです。",
   "ocr_system_model_play_services_fix": "Google Play 開発者サービスを修復",
   "ocr_system_model_play_services_unavailable": "この端末には利用できる Google Play 開発者サービスがないため、システム OCR は使えません。",
-  "manga_ocr_ai_mode_low_confidence_legacy": "Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text."
+  "manga_ocr_ai_mode_low_confidence_legacy": "Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.",
+  "reader_translation_enabled": "Show translation",
+  "reader_translation_visible": "Show translation lines",
+  "reader_translation_opacity": "Translation opacity",
+  "reader_translation_engine": "Translation engine",
+  "reader_translation_engine_caiyun": "Caiyun (no key)",
+  "reader_translation_engine_llm": "LLM (own key)",
+  "reader_translation_target_language": "Target language",
+  "reader_translation_lang_zh": "Chinese",
+  "reader_translation_lang_en": "English",
+  "reader_translation_lang_ja": "Japanese",
+  "reader_translation_color": "Translation color",
+  "ai_feature_translation": "Paragraph translation",
+  "ai_feature_translation_summary": "Insert translation below each original paragraph"
 }

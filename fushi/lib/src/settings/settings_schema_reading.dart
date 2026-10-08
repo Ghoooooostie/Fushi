@@ -10,6 +10,50 @@ import 'package:fushi/src/settings/settings_context.dart';
 import 'package:fushi/src/settings/settings_destination.dart';
 import 'package:fushi/src/settings/settings_schema_listening.dart';
 import 'package:fushi/utils.dart';
+import 'package:flutter_colorpicker/flutter_colorpicker.dart';
+
+/// 译文取色：复用 flutter_colorpicker 的取色盘，关掉 alpha（不透明度另有滑杆管）。
+/// 仿 [settings_schema_game.dart] 的 `_pickGalHookColor`，但这一处置读用户设置，
+/// 落盘经 `ctx.readerSource`，不碰外观系统。
+Future<Color?> _pickTranslationColor(
+  BuildContext context, {
+  required String title,
+  required Color initial,
+}) async {
+  Color picked = initial;
+  bool confirmed = false;
+  await showDialog<void>(
+    context: context,
+    builder: (BuildContext dialogContext) => AlertDialog(
+      title: Text(title),
+      content: SingleChildScrollView(
+        child: ColorPicker(
+          pickerColor: initial,
+          onColorChanged: (Color color) => picked = color,
+          portraitOnly: true,
+          enableAlpha: false,
+          displayThumbColor: true,
+          hexInputBar: true,
+          labelTypes: const <ColorLabelType>[],
+        ),
+      ),
+      actions: <Widget>[
+        TextButton(
+          onPressed: () => Navigator.of(dialogContext).pop(),
+          child: Text(t.dialog_cancel),
+        ),
+        FilledButton(
+          onPressed: () {
+            confirmed = true;
+            Navigator.of(dialogContext).pop();
+          },
+          child: Text(t.dialog_done),
+        ),
+      ],
+    ),
+  );
+  return confirmed ? picked : null;
+}
 
 SettingsDestination buildReadingDestination() {
   bool isVertical(SettingsContext c) =>
@@ -245,10 +289,7 @@ SettingsDestination buildReadingDestination() {
             titleReadout: true,
             commitOnRelease: true,
             visible: isVisualNovel,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 22,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 22),
             value: (SettingsContext c) =>
                 c.readerSource.readerVisualNovelRevealSpeed.toDouble(),
             label: (double v) =>
@@ -264,10 +305,7 @@ SettingsDestination buildReadingDestination() {
             icon: Icons.view_agenda_outlined,
             controlBelow: true,
             visible: isVisualNovel,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 23,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 23),
             options: <SettingsSegmentOption<String>>[
               SettingsSegmentOption<String>(
                 value: 'block',
@@ -295,16 +333,14 @@ SettingsDestination buildReadingDestination() {
             min: 1,
             max: 12,
             step: 1,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 24,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 24),
             value: (SettingsContext c) =>
                 c.readerSource.readerVisualNovelSentencesPerScreen.toDouble(),
             format: (double v) => '${v.round()}',
             onChanged: (SettingsContext c, double v) async {
-              await c.readerSource
-                  .setReaderVisualNovelSentencesPerScreen(v.round());
+              await c.readerSource.setReaderVisualNovelSentencesPerScreen(
+                v.round(),
+              );
               notifyReaderLayoutChanged(c);
             },
           ),
@@ -313,15 +349,146 @@ SettingsDestination buildReadingDestination() {
             title: t.reader_vn_preserve_dialogue,
             icon: Icons.format_quote,
             visible: isVisualNovelSentenceMode,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 25,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 25),
             value: (SettingsContext c) =>
                 c.readerSource.readerVisualNovelPreserveDialogue,
             onChanged: (SettingsContext c, bool v) async {
               await c.readerSource.setReaderVisualNovelPreserveDialogue(v);
               notifyReaderLayoutChanged(c);
+            },
+          ),
+          // ── 段落对照翻译（整段原文下方插入译文）──────────────────────
+          // 颜色选择器是 custom item，单独一轮补；此处先把开关 / 显隐 / 不透明度 /
+          // 引擎 / 目标语言接上。开关关着时，其余项用 `visible` 联动隐藏。
+          SettingsSwitchItem(
+            id: 'reading_translation.enabled',
+            title: t.reader_translation_enabled,
+            icon: Icons.translate_outlined,
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 30),
+            value: (SettingsContext c) => c.readerSource.translationEnabled,
+            onChanged: (SettingsContext c, bool v) async {
+              await c.readerSource.setTranslationEnabled(v);
+              notifyReaderLayoutChanged(c);
+            },
+          ),
+          SettingsSwitchItem(
+            id: 'reading_translation.visible',
+            title: t.reader_translation_visible,
+            icon: Icons.visibility_outlined,
+            visible: (SettingsContext c) => c.readerSource.translationEnabled,
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 31),
+            value: (SettingsContext c) => c.readerSource.translationVisible,
+            onChanged: (SettingsContext c, bool v) async {
+              await c.readerSource.setTranslationVisible(v);
+              notifyReaderLayoutChanged(c);
+            },
+          ),
+          SettingsSliderItem(
+            id: 'reading_translation.opacity',
+            titleReadout: true,
+            title: t.reader_translation_opacity,
+            icon: Icons.opacity_outlined,
+            min: 0,
+            max: 1,
+            divisions: 20,
+            visible: (SettingsContext c) => c.readerSource.translationEnabled,
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 32),
+            value: (SettingsContext c) => c.readerSource.translationOpacity,
+            label: (double v) => '${(v * 100).round()}%',
+            onChanged: (SettingsContext c, double v) async {
+              await c.readerSource.setTranslationOpacity(v);
+              notifyReaderLayoutChanged(c);
+            },
+          ),
+          SettingsSegmentedItem<String>(
+            id: 'reading_translation.engine',
+            title: t.reader_translation_engine,
+            icon: Icons.hub_outlined,
+            controlBelow: true,
+            visible: (SettingsContext c) => c.readerSource.translationEnabled,
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 33),
+            selected: (SettingsContext c) => c.readerSource.translationEngineId,
+            options: <SettingsSegmentOption<String>>[
+              SettingsSegmentOption<String>(
+                value: 'caiyun',
+                label: t.reader_translation_engine_caiyun,
+              ),
+              SettingsSegmentOption<String>(
+                value: 'llm',
+                label: t.reader_translation_engine_llm,
+              ),
+            ],
+            onChanged: (SettingsContext c, String v) async {
+              await c.readerSource.setTranslationEngineId(v);
+              notifyReaderLayoutChanged(c);
+            },
+          ),
+          SettingsSegmentedItem<String>(
+            id: 'reading_translation.target_language',
+            title: t.reader_translation_target_language,
+            icon: Icons.translate_outlined,
+            controlBelow: true,
+            visible: (SettingsContext c) => c.readerSource.translationEnabled,
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 34),
+            selected: (SettingsContext c) =>
+                c.readerSource.translationTargetLanguage,
+            options: <SettingsSegmentOption<String>>[
+              SettingsSegmentOption<String>(
+                value: 'zh',
+                label: t.reader_translation_lang_zh,
+              ),
+              SettingsSegmentOption<String>(
+                value: 'en',
+                label: t.reader_translation_lang_en,
+              ),
+              SettingsSegmentOption<String>(
+                value: 'ja',
+                label: t.reader_translation_lang_ja,
+              ),
+            ],
+            onChanged: (SettingsContext c, String v) async {
+              await c.readerSource.setTranslationTargetLanguage(v);
+              notifyReaderLayoutChanged(c);
+            },
+          ),
+          // 颜色取色器：custom item，因为 schema 没有现成的颜色型控件。开关关着时一起隐藏。
+          SettingsCustomItem(
+            id: 'reading_translation.color',
+            searchTitle: t.reader_translation_color,
+            visible: (SettingsContext c) => c.readerSource.translationEnabled,
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 35),
+            builder: (SettingsContext c) {
+              final String hex = c.readerSource.translationColor;
+              final Color color = Color(
+                int.parse(hex.replaceFirst('#', ''), radix: 16) | 0xFF000000,
+              );
+              return ListTile(
+                contentPadding: EdgeInsets.zero,
+                leading: const Icon(Icons.palette_outlined),
+                title: Text(t.reader_translation_color),
+                trailing: Container(
+                  width: 28,
+                  height: 28,
+                  decoration: BoxDecoration(
+                    color: color,
+                    border: Border.all(color: Theme.of(c.context).dividerColor),
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                ),
+                onTap: () async {
+                  final Color? picked = await _pickTranslationColor(
+                    c.context,
+                    title: t.reader_translation_color,
+                    initial: color,
+                  );
+                  if (picked == null) return;
+                  // 去掉 alpha（取色盘已禁），只留 RRGGBB，与默认值 '#8A8F98' 同形。
+                  final String newHex =
+                      '#${picked.value.toRadixString(16).padLeft(8, '0').substring(2).toUpperCase()}';
+                  await c.readerSource.setTranslationColor(newHex);
+                  notifyReaderLayoutChanged(c);
+                },
+              );
             },
           ),
           SettingsSwitchItem(
@@ -791,9 +958,9 @@ SettingsDestination buildReadingDestination() {
             icon: Icons.web_asset_off_outlined,
             subtitleBuilder: (SettingsContext c) =>
                 c.readerSource.hideToolbars &&
-                        !c.appModel.prefsRepo.floatingBallInApp
-                    ? t.reader_toolbars_hide_ball_off
-                    : t.reader_toolbars_hide_subtitle,
+                    !c.appModel.prefsRepo.floatingBallInApp
+                ? t.reader_toolbars_hide_ball_off
+                : t.reader_toolbars_hide_subtitle,
             reader: const ReaderPlacement(
               group: ReaderGroup.behavior,
               order: 21,
