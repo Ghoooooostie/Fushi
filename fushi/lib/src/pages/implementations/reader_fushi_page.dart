@@ -89,6 +89,10 @@ import 'package:fushi/src/reader/reader_selection_data.dart';
 import 'package:fushi/src/reader/reader_selection_scripts.dart';
 import 'package:fushi/src/reader/reader_chrome_floating.dart';
 import 'package:fushi/src/reader/reader_settings.dart';
+import 'package:fushi/src/reader/reader_translation_scheduler.dart';
+import 'package:fushi_engine/ai/ai_feature.dart';
+import 'package:fushi_engine/translation/translation_client.dart';
+import 'package:fushi_engine/translation/translation_models.dart';
 import 'package:fushi/src/reader/reader_chrome_controller.dart';
 import 'package:fushi/src/reader/reader_control_layout.dart';
 import 'package:fushi/src/reader/reader_desktop_chrome.dart';
@@ -1507,6 +1511,16 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   bool _spreadDocumentLoaded = false;
   ReaderSettings? _settings;
   String? _extractDir;
+
+  /// 段落对照翻译的调度器（懒建）：把翻译引擎、段落队列与 WebView 求值缝在一起。
+  ///
+  /// null = 未启用。刻意**不在开书时创建**：翻译默认关闭，一上来就建等于白占一个
+  /// 出站连接；只有开关打开且 WebView 可用才实例化（见 `_ensureTranslation`）。
+  ReaderTranslationScheduler? _translation;
+
+  /// [_translation] 背后真实持有的出站客户端。单独存是为了 dispose 时能关掉它——
+  /// 各翻译引擎持有 `http.Client`，不关的话多次进出阅读器会攒出一堆空闲连接。
+  TranslationClient? _translationClient;
 
   /// 在线小说书（LNReader 在线阅读）的按需取章；普通书为 null。开书定位时按
   /// 书行描述符建一次，拦截层读章节文件前经它把占位页换成正文。
@@ -3104,6 +3118,14 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     _scrollProgressThrottleTimer?.cancel();
     _contentReadyTimer?.cancel();
     _contentReadyDeadline = null;
+    // 翻译：停掉待执行的扫描。队列里没发出的请求会被 scheduler 的世代号作废掉，
+    // 这里不必再去 cancel 一次——dispose 之后不会再有新的 enqueue。
+    _translation?.stop();
+    // 各翻译引擎持有出站 http.Client，不关的话多次进出阅读器会攒出空闲连接；
+    // 这里无人 await（dispose 里发起的事务会与 db.close() 互等），只负责发起。
+    unawaited(_translationClient?.close() ?? Future<void>.value());
+    _translationClient = null;
+    _translation = null;
     final MemoryImage? chapterTransitionSnapshot = _chapterTransitionSnapshot;
     _chapterTransitionSnapshot = null;
     if (chapterTransitionSnapshot != null) {

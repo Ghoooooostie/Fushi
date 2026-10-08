@@ -1,4 +1,4 @@
-{
+﻿{
   "about_tmdb_attribution": "本应用使用 TMDB 及 TMDB API，但未获 TMDB 认可或认证。",
   "action_exit": "退出",
   "action_favorite": "收藏",
@@ -6262,5 +6262,18 @@
   "tts_read_chapter_hint": "合成本章音频并播放",
   "tts_synthesizing": "正在合成语音…",
   "tts_synthesize_failed": "语音合成失败",
-  "tts_synthesizing_progress": "已合成 $completed / $total 句"
+  "tts_synthesizing_progress": "已合成 $completed / $total 句",
+  "reader_translation_enabled": "显示译文",
+  "reader_translation_visible": "显示译文行",
+  "reader_translation_opacity": "译文不透明度",
+  "reader_translation_engine": "翻译引擎",
+  "reader_translation_engine_caiyun": "彩云（免密钥）",
+  "reader_translation_engine_llm": "LLM（自备密钥）",
+  "reader_translation_target_language": "目标语言",
+  "reader_translation_lang_zh": "中文",
+  "reader_translation_lang_en": "英语",
+  "reader_translation_lang_ja": "日语",
+  "reader_translation_color": "译文颜色",
+  "ai_feature_translation": "段落翻译",
+  "ai_feature_translation_summary": "在每段原文下方插入译文"
 }

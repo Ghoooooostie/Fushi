@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 106488 (6264 per locale)
+/// Strings: 106514 (6265 per locale)
 ///
-/// Built on 2026-10-08 at 14:37 UTC
+/// Built on 2026-10-08 at 23:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6426,6 +6426,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get tts_synthesizing => 'Synthesizing audio...';
 	String get tts_synthesize_failed => 'TTS synthesis failed';
 	String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	String get reader_translation_enabled => 'Show translation';
+	String get reader_translation_visible => 'Show translation lines';
+	String get reader_translation_opacity => 'Translation opacity';
+	String get reader_translation_engine => 'Translation engine';
+	String get reader_translation_engine_caiyun => 'Caiyun (no key)';
+	String get reader_translation_engine_llm => 'LLM (own key)';
+	String get reader_translation_target_language => 'Target language';
+	String get reader_translation_lang_zh => 'Chinese';
+	String get reader_translation_lang_en => 'English';
+	String get reader_translation_lang_ja => 'Japanese';
+	String get reader_translation_color => 'Translation color';
+	String get ai_feature_translation => 'Paragraph translation';
+	String get ai_feature_translation_summary => 'Insert translation below each original paragraph';
 }
 
 // Path: <root>
@@ -100821,6 +100834,19 @@ class _StringsZhCn extends _StringsEn {
 	@override String get tts_synthesizing => '正在合成语音…';
 	@override String get tts_synthesize_failed => '语音合成失败';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '已合成 ${completed} / ${total} 句';
+	@override String get reader_translation_enabled => '显示译文';
+	@override String get reader_translation_visible => '显示译文行';
+	@override String get reader_translation_opacity => '译文不透明度';
+	@override String get reader_translation_engine => '翻译引擎';
+	@override String get reader_translation_engine_caiyun => '彩云（免密钥）';
+	@override String get reader_translation_engine_llm => 'LLM（自备密钥）';
+	@override String get reader_translation_target_language => '目标语言';
+	@override String get reader_translation_lang_zh => '中文';
+	@override String get reader_translation_lang_en => '英语';
+	@override String get reader_translation_lang_ja => '日语';
+	@override String get reader_translation_color => '译文颜色';
+	@override String get ai_feature_translation => '段落翻译';
+	@override String get ai_feature_translation_summary => '在每段原文下方插入译文';
 }
 
 // Path: <root>
@@ -113386,6 +113412,19 @@ extension on _StringsEn {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'reader_translation_enabled': return 'Show translation';
+			case 'reader_translation_visible': return 'Show translation lines';
+			case 'reader_translation_opacity': return 'Translation opacity';
+			case 'reader_translation_engine': return 'Translation engine';
+			case 'reader_translation_engine_caiyun': return 'Caiyun (no key)';
+			case 'reader_translation_engine_llm': return 'LLM (own key)';
+			case 'reader_translation_target_language': return 'Target language';
+			case 'reader_translation_lang_zh': return 'Chinese';
+			case 'reader_translation_lang_en': return 'English';
+			case 'reader_translation_lang_ja': return 'Japanese';
+			case 'reader_translation_color': return 'Translation color';
+			case 'ai_feature_translation': return 'Paragraph translation';
+			case 'ai_feature_translation_summary': return 'Insert translation below each original paragraph';
 			default: return null;
 		}
 	}
@@ -207466,6 +207505,19 @@ extension on _StringsZhCn {
 			case 'tts_synthesizing': return '正在合成语音…';
 			case 'tts_synthesize_failed': return '语音合成失败';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '已合成 ${completed} / ${total} 句';
+			case 'reader_translation_enabled': return '显示译文';
+			case 'reader_translation_visible': return '显示译文行';
+			case 'reader_translation_opacity': return '译文不透明度';
+			case 'reader_translation_engine': return '翻译引擎';
+			case 'reader_translation_engine_caiyun': return '彩云（免密钥）';
+			case 'reader_translation_engine_llm': return 'LLM（自备密钥）';
+			case 'reader_translation_target_language': return '目标语言';
+			case 'reader_translation_lang_zh': return '中文';
+			case 'reader_translation_lang_en': return '英语';
+			case 'reader_translation_lang_ja': return '日语';
+			case 'reader_translation_color': return '译文颜色';
+			case 'ai_feature_translation': return '段落翻译';
+			case 'ai_feature_translation_summary': return '在每段原文下方插入译文';
 			default: return null;
 		}
 	}

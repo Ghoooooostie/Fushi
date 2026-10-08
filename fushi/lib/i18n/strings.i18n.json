@@ -1,4 +1,4 @@
-{
+﻿{
   "about_tmdb_attribution": "This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.",
   "action_exit": "Exit",
   "action_favorite": "Favorite",
@@ -6262,5 +6262,18 @@
   "tts_read_chapter_hint": "Synthesize and play this chapter",
   "tts_synthesizing": "Synthesizing audio...",
   "tts_synthesize_failed": "TTS synthesis failed",
-  "tts_synthesizing_progress": "$completed / $total sentences"
+  "tts_synthesizing_progress": "$completed / $total sentences",
+  "reader_translation_enabled": "Show translation",
+  "reader_translation_visible": "Show translation lines",
+  "reader_translation_opacity": "Translation opacity",
+  "reader_translation_engine": "Translation engine",
+  "reader_translation_engine_caiyun": "Caiyun (no key)",
+  "reader_translation_engine_llm": "LLM (own key)",
+  "reader_translation_target_language": "Target language",
+  "reader_translation_lang_zh": "Chinese",
+  "reader_translation_lang_en": "English",
+  "reader_translation_lang_ja": "Japanese",
+  "reader_translation_color": "Translation color",
+  "ai_feature_translation": "Paragraph translation",
+  "ai_feature_translation_summary": "Insert translation below each original paragraph"
 }
