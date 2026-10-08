@@ -6,6 +6,8 @@ import 'package:fushi/src/models/module_id.dart';
 import 'package:fushi/src/settings/settings_actions.dart';
 import 'package:fushi/src/settings/settings_context.dart';
 import 'package:fushi/src/settings/settings_destination.dart';
+import 'package:fushi/src/tts/tts_engine_registry.dart';
+import 'package:fushi/src/tts/tts_settings_dialog.dart';
 import 'package:fushi/utils.dart';
 
 /// 「听书」的两个设置分区（有声书 + 悬浮歌词）。
@@ -86,15 +88,46 @@ List<SettingsSection> buildListeningSections() {
           icon: Icons.skip_next_outlined,
           // VolumeKeyChannel 仅 Android 实现，桌面隐藏此项（TODO-1155）。
           visible: (_) => Platform.isAndroid,
-          reader: const ReaderPlacement(
-            group: ReaderGroup.behavior,
-            order: 10,
-          ),
+          reader: const ReaderPlacement(group: ReaderGroup.behavior, order: 10),
           value: (SettingsContext settingsContext) =>
               settingsContext.readerSource.volumeKeySentenceNavEnabled,
           onChanged: (SettingsContext settingsContext, bool value) {
             settingsContext.readerSource.toggleVolumeKeySentenceNavEnabled();
             notifyReaderSettingsChanged(settingsContext);
+          },
+        ),
+        // 内置 TTS：把章节文本实时合成为有声书，支持上一句/下一句/同步高亮。
+        SettingsActionItem(
+          id: 'listening.tts_settings',
+          title: t.tts_settings_title,
+          subtitleBuilder: (SettingsContext c) {
+            final String engineId = c.appModel.ttsEngineId;
+            final String voiceId = c.appModel.ttsVoiceId;
+            final String engineName =
+                TtsEngineRegistry.instance.resolve(engineId)?.displayName ??
+                engineId;
+            return '$engineName / $voiceId';
+          },
+          icon: Icons.record_voice_over_outlined,
+          onTap: (SettingsContext c) async {
+            final TtsSettingsResult? result =
+                await showAppDialog<TtsSettingsResult>(
+                  context: c.context,
+                  builder: (_) => TtsSettingsDialog(
+                    engineId: c.appModel.ttsEngineId,
+                    voiceId: c.appModel.ttsVoiceId,
+                    speed: c.appModel.ttsSpeed,
+                    pitch: c.appModel.ttsPitch,
+                    preloadSentences: c.appModel.ttsPreloadSentences,
+                  ),
+                );
+            if (result == null) return;
+            await c.appModel.setTtsEngineId(result.engineId);
+            await c.appModel.setTtsVoiceId(result.voiceId);
+            await c.appModel.setTtsSpeed(result.speed);
+            await c.appModel.setTtsPitch(result.pitch);
+            await c.appModel.setTtsPreloadSentences(result.preloadSentences);
+            c.refresh();
           },
         ),
       ],
@@ -187,10 +220,8 @@ List<SettingsSection> buildListeningSections() {
           min: 0,
           max: 100,
           step: 5,
-          value: (SettingsContext settingsContext) => settingsContext
-              .appModel
-              .floatingLyricButtonBgOpacity
-              .toDouble(),
+          value: (SettingsContext settingsContext) =>
+              settingsContext.appModel.floatingLyricButtonBgOpacity.toDouble(),
           format: (double value) => '${value.round()}%',
           onChanged: (SettingsContext settingsContext, double value) async {
             await settingsContext.appModel.setFloatingLyricButtonBgOpacity(
