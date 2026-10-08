@@ -6247,5 +6247,20 @@
   "ocr_system_model_play_services_resolvable": "System OCR needs Google Play services, which is missing, disabled or outdated on this device.",
   "ocr_system_model_play_services_fix": "Fix Google Play services",
   "ocr_system_model_play_services_unavailable": "This device has no usable Google Play services, so system OCR can't run here.",
-  "manga_ocr_ai_mode_low_confidence_legacy": "Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text."
+  "manga_ocr_ai_mode_low_confidence_legacy": "Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.",
+  "tts_settings_title": "Built-in TTS",
+  "tts_engine": "TTS Engine",
+  "tts_voice": "Voice",
+  "tts_voice_load_failed": "Failed to load voices",
+  "tts_no_voices": "No voices available",
+  "tts_select_voice": "Select voice",
+  "tts_speed": "Speed",
+  "tts_pitch": "Pitch",
+  "tts_preload_sentences": "Preload sentences",
+  "tts_sentences_unit": "sentences",
+  "tts_read_chapter": "Read chapter with TTS",
+  "tts_read_chapter_hint": "Synthesize and play this chapter",
+  "tts_synthesizing": "Synthesizing audio...",
+  "tts_synthesize_failed": "TTS synthesis failed",
+  "tts_synthesizing_progress": "$completed / $total sentences"
 }

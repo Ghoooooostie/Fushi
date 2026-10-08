@@ -124,6 +124,8 @@ import 'package:fushi/src/utils/misc/debug_log_service.dart';
 import 'package:fushi/src/utils/misc/tts_channel.dart';
 import 'package:fushi/src/utils/misc/serial_task_queue.dart';
 import 'package:fushi/src/utils/misc/volume_key_channel.dart';
+import 'package:fushi/src/media/audiobook/tts_audiobook_builder.dart';
+import 'package:fushi/src/tts/tts.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:fushi/src/utils/misc/fushi_share.dart';
 import 'package:path_provider/path_provider.dart';

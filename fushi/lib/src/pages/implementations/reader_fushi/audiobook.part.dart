@@ -2146,6 +2146,149 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
   bool get _hasActiveAudiobook =>
       _audiobookController != null && _audiobookController!.chapterCueCount > 0;
 
+  Future<void> _showAudiobookSourceSheet() async {
+    if (!_moduleVisibility.isEnabled(ModuleId.listening)) return;
+    if (_srtBookUid != null) {
+      await _openSrtBookReimport();
+      return;
+    }
+    final String? action = await showModalBottomSheet<String>(
+      context: context,
+      builder: (BuildContext ctx) => SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            ListTile(
+              leading: const Icon(Icons.headphones_outlined),
+              title: Text(t.audiobook_import),
+              onTap: () => Navigator.of(ctx).pop('import'),
+            ),
+            ListTile(
+              leading: const Icon(Icons.record_voice_over_outlined),
+              title: Text(t.tts_read_chapter),
+              subtitle: Text(t.tts_read_chapter_hint),
+              onTap: () => Navigator.of(ctx).pop('tts'),
+            ),
+          ],
+        ),
+      ),
+    );
+    if (!mounted) return;
+    switch (action) {
+      case 'import':
+        await _openAudioImportDialog();
+      case 'tts':
+        await _startTtsAudiobook();
+    }
+  }
+
+  Future<void> _startTtsAudiobook() async {
+    if (_book == null) return;
+    final EpubBook book = _book!;
+    final int chapterIndex = _currentChapter;
+    if (chapterIndex < 0 || chapterIndex >= book.chapters.length) return;
+
+    // 按当前偏好解析引擎与音色。
+    final TtsEngine engine = TtsEngineRegistry.instance.resolve(
+      appModel.ttsEngineId,
+    )!;
+    final TtsVoice voice = await TtsEngineRegistry.instance.resolveVoice(
+      engineId: engine.id,
+      voiceId: appModel.ttsVoiceId,
+    );
+    final TtsParam param = TtsParam(
+      voice: voice,
+      speed: appModel.ttsSpeed,
+      pitch: appModel.ttsPitch,
+    );
+
+    final ValueNotifier<(int completed, int total)> progressNotifier =
+        ValueNotifier<(int, int)>((0, 0));
+    AudiobookSessionStartRequest? request;
+    Object? error;
+
+    // 先启动耗时任务，再盖不可取消的进度弹窗。
+    final Future<void> workFuture = (() async {
+      try {
+        final TtsAudiobookBuilder builder = TtsAudiobookBuilder(
+          bookKey: widget.bookKey,
+          chapterIndex: chapterIndex,
+          epubBook: book,
+          engine: engine,
+          param: param,
+          title: book.title,
+          author: book.author,
+          coverPath: book.coverHref,
+        );
+        request = await builder.build(
+          onProgress: (int completed, int total) {
+            progressNotifier.value = (completed, total);
+          },
+        );
+      } catch (e, stack) {
+        error = e;
+        ErrorLogService.instance.log('ReaderFushi.startTtsAudiobook', e, stack);
+      }
+    })();
+
+    if (mounted) {
+      unawaited(
+        showAppDialog<void>(
+          context: context,
+          barrierDismissible: false,
+          builder: (BuildContext ctx) => ValueListenableBuilder<(int, int)>(
+            valueListenable: progressNotifier,
+            builder: (BuildContext ctx, (int, int) value, Widget? child) {
+              return AlertDialog(
+                title: Text(t.tts_synthesizing),
+                content: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const CircularProgressIndicator(),
+                    const SizedBox(height: 16),
+                    Text(
+                      t.tts_synthesizing_progress(
+                        completed: value.$1,
+                        total: value.$2,
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
+        ),
+      );
+    }
+
+    await workFuture;
+    if (!mounted) {
+      progressNotifier.dispose();
+      return;
+    }
+    Navigator.of(context).pop();
+    progressNotifier.dispose();
+
+    if (error != null || request == null) {
+      FushiToast.show(
+        msg: t.tts_synthesize_failed,
+        severity: ToastSeverity.error,
+      );
+      return;
+    }
+
+    final AudiobookSessionStartRequest req = request!;
+    await appModel.audiobookSession.start(
+      info: req.info,
+      audioFiles: req.audioFiles,
+      prefs: req.prefs,
+      persist: req.persist,
+      cues: req.cues,
+    );
+    await _attachExistingSession(appModel.audiobookSession);
+    if (mounted) _rebuild(() {});
+  }
+
   Future<void> _openAudioImportDialog() async {
     // 兜底早退：四个入口（底栏耳机键 / 快速设置面板 / 桌面顶栏 / 快捷键 B）在
     // 「听书」关闭时都已不渲染，这里只挡住将来新接的调用方，不是用户可达路径，
