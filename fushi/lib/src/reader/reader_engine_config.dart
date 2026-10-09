@@ -66,6 +66,7 @@ class ReaderEngineConfig {
     required this.vnSentencesPerScreen,
     required this.vnPreserveDialogue,
     required this.vnMergeCrossScreenSentenceAudioCues,
+    required this.ttsGestureMode,
     this.sentenceAudioCuesJson,
     this.translationEnabled = false,
     this.translationVisible = true,
@@ -154,6 +155,10 @@ class ReaderEngineConfig {
   final String translationColor;
   final double translationOpacity;
 
+  /// TTS 触发手势：'double_tap' = 双击句子，'long_press' = 长按句子。
+  /// 经本配置下发，引擎在运行时读取，决定双击/长按是「朗读该句」还是原行为。
+  final String ttsGestureMode;
+
   /// 除 [sasayakiCuesJson] 外的全部字段（它是已编码的 JSON 片段，见 [toJsLiteral]）。
   Map<String, Object?> toJson() => <String, Object?>{
     'navigationGeneration': navigationGeneration,
@@ -198,6 +203,7 @@ class ReaderEngineConfig {
     'translationVisible': translationVisible,
     'translationColor': translationColor,
     'translationOpacity': translationOpacity,
+    'ttsGestureMode': ttsGestureMode,
   };
 
   /// 运行时可**热更新**的那一小份（BUG-2471）：`window.__fushiEngine.updateLive(patch)`

@@ -7213,6 +7213,11 @@ class AppModel with ChangeNotifier {
   Future<void> setTtsPreloadSentences(int value) =>
       prefsRepo.setTtsPreloadSentences(value);
 
+  /// TTS 触发手势：'double_tap' = 双击句子，'long_press' = 长按句子。
+  String get ttsGestureMode => prefsRepo.ttsGestureMode;
+  Future<void> setTtsGestureMode(String value) =>
+      prefsRepo.setTtsGestureMode(value);
+
   // ── player streams & audio handler (delegated to AudioController) ───
 
   Stream<void> get playStream => audioCtrl.playStream;

@@ -407,6 +407,15 @@ class PreferencesRepository extends ChangeNotifier
     notifyListeners();
   }
 
+  /// TTS 触发手势：'double_tap' = 双击句子，'long_press' = 长按句子。
+  String get ttsGestureMode =>
+      getPref('tts_gesture_mode', defaultValue: 'double_tap') as String;
+
+  Future<void> setTtsGestureMode(String value) async {
+    await setPref('tts_gesture_mode', value);
+    notifyListeners();
+  }
+
   // ── search & dictionary display ──────────────────────────────────────
 
   bool get autoSearchEnabled =>

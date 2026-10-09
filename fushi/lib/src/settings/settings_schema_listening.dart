@@ -130,6 +130,30 @@ List<SettingsSection> buildListeningSections() {
             c.refresh();
           },
         ),
+        // TTS 触发手势：双击句子 / 长按句子。触屏手势，桌面仅「双击」可用。
+        SettingsSegmentedItem<String>(
+          id: 'listening.tts_gesture_mode',
+          title: t.tts_gesture_mode_title,
+          subtitle: t.tts_gesture_mode_hint,
+          icon: Icons.gesture_outlined,
+          visible: (_) => Platform.isAndroid,
+          options: <SettingsSegmentOption<String>>[
+            SettingsSegmentOption<String>(
+              value: 'double_tap',
+              label: t.tts_gesture_double_tap,
+            ),
+            SettingsSegmentOption<String>(
+              value: 'long_press',
+              label: t.tts_gesture_long_press,
+            ),
+          ],
+          selected: (SettingsContext settingsContext) =>
+              settingsContext.appModel.ttsGestureMode,
+          onChanged: (SettingsContext settingsContext, String value) async {
+            await settingsContext.appModel.setTtsGestureMode(value);
+            settingsContext.refresh();
+          },
+        ),
       ],
     ),
     // 悬浮歌词全家桶（总开关 + 7 个样式/行为子项）独立成组：原先与后台播放/

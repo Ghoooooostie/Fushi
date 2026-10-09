@@ -390,6 +390,7 @@ ReaderEngineConfig _sampleConfig({String? sentenceAudioCuesJson}) =>
       vnPreserveDialogue: false,
       vnMergeCrossScreenSentenceAudioCues: false,
       sentenceAudioCuesJson: sentenceAudioCuesJson,
+      ttsGestureMode: 'double_tap',
     );
 
 String _stripScriptTags(String js) => js
