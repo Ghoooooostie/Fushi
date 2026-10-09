@@ -2182,55 +2182,31 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
     }
   }
 
-  Future<void> _startTtsAudiobook() async {
+  Future<void> _startTtsAudiobook({int startSentenceIndex = 0}) async {
     if (_book == null) return;
     final EpubBook book = _book!;
     final int chapterIndex = _currentChapter;
     if (chapterIndex < 0 || chapterIndex >= book.chapters.length) return;
 
-    // 按当前偏好解析引擎与音色。
-    final TtsEngine engine = TtsEngineRegistry.instance.resolve(
-      appModel.ttsEngineId,
-    )!;
-    final TtsVoice voice = await TtsEngineRegistry.instance.resolveVoice(
-      engineId: engine.id,
-      voiceId: appModel.ttsVoiceId,
-    );
-    final TtsParam param = TtsParam(
-      voice: voice,
-      speed: appModel.ttsSpeed,
-      pitch: appModel.ttsPitch,
+    final (:TtsEngine engine, :TtsVoice voice, :TtsParam param) =
+        await _resolveTtsParam();
+
+    final TtsAudiobookBuilder builder = TtsAudiobookBuilder(
+      bookKey: widget.bookKey,
+      chapterIndex: chapterIndex,
+      epubBook: book,
+      engine: engine,
+      param: param,
+      title: book.title,
+      author: book.author,
+      coverPath: book.coverHref,
     );
 
     final ValueNotifier<(int completed, int total)> progressNotifier =
         ValueNotifier<(int, int)>((0, 0));
-    AudiobookSessionStartRequest? request;
-    Object? error;
 
-    // 先启动耗时任务，再盖不可取消的进度弹窗。
-    final Future<void> workFuture = (() async {
-      try {
-        final TtsAudiobookBuilder builder = TtsAudiobookBuilder(
-          bookKey: widget.bookKey,
-          chapterIndex: chapterIndex,
-          epubBook: book,
-          engine: engine,
-          param: param,
-          title: book.title,
-          author: book.author,
-          coverPath: book.coverHref,
-        );
-        request = await builder.build(
-          onProgress: (int completed, int total) {
-            progressNotifier.value = (completed, total);
-          },
-        );
-      } catch (e, stack) {
-        error = e;
-        ErrorLogService.instance.log('ReaderFushi.startTtsAudiobook', e, stack);
-      }
-    })();
-
+    // 准备首句期间显示不可取消的「准备朗读」弹窗；首批就绪即关闭并立即开播，
+    // 后续句子在后台流式合成并追加，无需等待整章。
     if (mounted) {
       unawaited(
         showAppDialog<void>(
@@ -2240,14 +2216,14 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
             valueListenable: progressNotifier,
             builder: (BuildContext ctx, (int, int) value, Widget? child) {
               return AlertDialog(
-                title: Text(t.tts_synthesizing),
+                title: Text(t.tts_preparing),
                 content: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const CircularProgressIndicator(),
                     const SizedBox(height: 16),
                     Text(
-                      t.tts_synthesizing_progress(
+                      t.tts_preparing_progress(
                         completed: value.$1,
                         total: value.$2,
                       ),
@@ -2261,32 +2237,112 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
       );
     }
 
-    await workFuture;
-    if (!mounted) {
-      progressNotifier.dispose();
+    bool started = false;
+    AudiobookPlayerController? controller;
+    try {
+      await for (final TtsSynthesisBatch batch in builder.synthesize(
+        startSentenceIndex: startSentenceIndex,
+        onProgress: (int completed, int total) {
+          progressNotifier.value = (completed, total);
+        },
+      )) {
+        if (!mounted) break;
+        if (!started) {
+          started = true;
+          final AudiobookSessionStartRequest req =
+              builder.buildRequest(batch.files, batch.cues);
+          await appModel.audiobookSession.start(
+            info: req.info,
+            audioFiles: batch.files,
+            prefs: req.prefs,
+            persist: req.persist,
+            cues: batch.cues,
+          );
+          await _attachExistingSession(appModel.audiobookSession);
+          controller = _audiobookController;
+          if (mounted) Navigator.of(context).pop();
+          progressNotifier.dispose();
+        } else {
+          await controller?.appendAudioSources(
+            files: batch.files,
+            cues: batch.cues,
+          );
+        }
+      }
+    } catch (e, stack) {
+      ErrorLogService.instance.log('ReaderFushi.startTtsAudiobook', e, stack);
+    }
+
+    if (!started) {
+      if (mounted) {
+        if (Navigator.of(context).canPop()) Navigator.of(context).pop();
+        progressNotifier.dispose();
+        FushiToast.show(
+          msg: t.tts_synthesize_failed,
+          severity: ToastSeverity.error,
+        );
+      }
       return;
     }
-    Navigator.of(context).pop();
-    progressNotifier.dispose();
-
-    if (error != null || request == null) {
-      FushiToast.show(
-        msg: t.tts_synthesize_failed,
-        severity: ToastSeverity.error,
-      );
-      return;
-    }
-
-    final AudiobookSessionStartRequest req = request!;
-    await appModel.audiobookSession.start(
-      info: req.info,
-      audioFiles: req.audioFiles,
-      prefs: req.prefs,
-      persist: req.persist,
-      cues: req.cues,
-    );
-    await _attachExistingSession(appModel.audiobookSession);
     if (mounted) _rebuild(() {});
+  }
+
+  /// 按当前偏好解析 TTS 引擎、音色与参数（语速/音高）。
+  Future<({TtsEngine engine, TtsVoice voice, TtsParam param})>
+      _resolveTtsParam() async {
+    final TtsEngine engine = TtsEngineRegistry.instance.resolve(
+      appModel.ttsEngineId,
+    )!;
+    final TtsVoice voice = await TtsEngineRegistry.instance.resolveVoice(
+      engineId: engine.id,
+      voiceId: appModel.ttsVoiceId,
+    );
+    final TtsParam param = TtsParam(
+      voice: voice,
+      speed: appModel.ttsSpeed,
+      pitch: appModel.ttsPitch,
+    );
+    return (engine: engine, voice: voice, param: param);
+  }
+
+  /// 手势入口：从被双击/长按的句子开始实时朗读。
+  ///
+  /// [sentenceText] 是 WebView 侧 [getSentenceContext] 给出的被点句纯文本。先在章节
+  /// 分句结果里去空白匹配到起始句下标，再交给 [_startTtsAudiobook] 从该句流式合成。
+  /// 双击等手势可能先触发查词弹窗，这里先关掉避免与 TTS 面板重叠。
+  Future<void> _startTtsFromSentence(String sentenceText) async {
+    if (_book == null || !mounted) return;
+    clearDictionaryResult();
+    final EpubBook book = _book!;
+    final int chapterIndex = _currentChapter;
+    if (chapterIndex < 0 || chapterIndex >= book.chapters.length) return;
+
+    final (:TtsEngine engine, :TtsVoice voice, :TtsParam param) =
+        await _resolveTtsParam();
+    final TtsAudiobookBuilder probe = TtsAudiobookBuilder(
+      bookKey: widget.bookKey,
+      chapterIndex: chapterIndex,
+      epubBook: book,
+      engine: engine,
+      param: param,
+      title: book.title,
+      author: book.author,
+      coverPath: book.coverHref,
+    );
+
+    final sentences = await probe.split();
+    int startSentenceIndex = 0;
+    if (sentences.isNotEmpty) {
+      String clean(String s) => s.replaceAll(RegExp(r'\s+'), '');
+      final String target = clean(sentenceText);
+      for (int i = 0; i < sentences.length; i++) {
+        if (clean(sentences[i].text) == target) {
+          startSentenceIndex = i;
+          break;
+        }
+      }
+    }
+    await _startTtsAudiobook(startSentenceIndex: startSentenceIndex);
   }
 
   Future<void> _openAudioImportDialog() async {

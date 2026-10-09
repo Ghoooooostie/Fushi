@@ -77,6 +77,10 @@ class AudiobookPlayerController extends ChangeNotifier {
   /// 当前书的元数据（PR4 集成时供外部读取）。
   Audiobook? get audiobook => _audiobook;
 
+  /// 多文件模式下保存的 [ConcatenatingAudioSource] 引用，供 TTS 实时朗读在
+  /// 后台合成完成后追加新句子音频；单文件模式下为 null。
+  ConcatenatingAudioSource? _concatSource;
+
   /// 当前章节所有 cue（已按 startMs 排序）。
   List<AudioCue> _chapterCues = [];
 
@@ -786,6 +790,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     await _configureAudioSession();
 
     if (audioFiles.length == 1) {
+      _concatSource = null;
       try {
         await _player
             .setAudioSource(
@@ -804,10 +809,11 @@ class AudiobookPlayerController extends ChangeNotifier {
       for (final File f in audioFiles) {
         sources.add(AudioSource.file(f.path));
       }
+      _concatSource = ConcatenatingAudioSource(children: sources);
       try {
         await _player
             .setAudioSource(
-              ConcatenatingAudioSource(children: sources),
+              _concatSource!,
               preload: false,
             )
             .timeout(const Duration(seconds: 60));
@@ -1029,6 +1035,38 @@ class AudiobookPlayerController extends ChangeNotifier {
     }
     _fileDurationsMs = durations;
     _sectionFirstCueCache.clear();
+  }
+
+  /// TTS 实时朗读：在已加载的多文件会话上追加一批新句子音频与 cue。
+  ///
+  /// 仅当本次 [load] 走多文件（[ConcatenatingAudioSource]）模式时有效；单文件
+  /// 会话（导入的有声书）忽略追加。追加后更新全书/章节 cue 与文件时长，播放
+  /// 不会中断（新句子插在当前播放文件之后，just_audio 自动衔接）。
+  Future<void> appendAudioSources({
+    required List<File> files,
+    required List<AudioCue> cues,
+  }) async {
+    if (_concatSource == null || files.isEmpty) return;
+    final List<AudioSource> sources =
+        files.map((File f) => AudioSource.file(f.path)).toList();
+    try {
+      await _concatSource!.addAll(sources);
+    } catch (e, stack) {
+      debugPrint('AudiobookController.appendAudioSources: $e\n$stack');
+      return;
+    }
+    _allBookCues = List<AudioCue>.from(_allBookCues)..addAll(cues);
+    setAllBookCues(_allBookCues);
+    _chapterCues = List<AudioCue>.from(_chapterCues)
+      ..addAll(cues)
+      ..sort((AudioCue a, AudioCue b) => a.startMs.compareTo(b.startMs));
+    _playbackOrderedCues = List<AudioCue>.from(_chapterCues)
+      ..sort((AudioCue a, AudioCue b) {
+        final int byFile = a.audioFileIndex.compareTo(b.audioFileIndex);
+        if (byFile != 0) return byFile;
+        return a.startMs.compareTo(b.startMs);
+      });
+    notifyListeners();
   }
 
   // ── 播放控制 API ───────────────────────────────────────────────────────────

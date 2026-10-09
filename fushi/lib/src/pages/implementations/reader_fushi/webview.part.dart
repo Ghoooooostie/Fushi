@@ -727,6 +727,7 @@ extension _ReaderWebView on _ReaderFushiPageState {
       vnPreserveDialogue: s.visualNovelPreserveDialogueBubbles,
       vnMergeCrossScreenSentenceAudioCues:
           s.visualNovelMergeCrossScreenSentenceAudioCues,
+      ttsGestureMode: appModel.ttsGestureMode,
       sentenceAudioCuesJson: sentenceAudioCuesJson,
     );
   }
@@ -1130,6 +1131,9 @@ install: function(C) {
   // _syncTapGateJs 刷新。tap 手势据此在 JS 侧直接 selectText（见 _gestureEnd 的 tap
   // 分支），砍掉 onTap→Dart→evaluateJavascript 的整个来回。
   window.__fushiTapGate = { chrome: C.showChrome, lookup: C.highlightOnTap, maxLen: 400 };
+  // TTS 触发手势镜像（'double_tap' 双击句子 / 'long_press' 长按句子）。运行时只读，
+  // 设置热更新经导航重下发（翻页即生效）；Dart 不另写，避免与 memoized 静态源码冲突。
+  window.__fushiTtsGesture = C.ttsGestureMode;
   function _gestureEnd(x, y, e) {
     if (!hasStart) return;
     // TODO-1317: a mobile long-press drag-select owns this gesture (finalized
@@ -1439,9 +1443,17 @@ install: function(C) {
   // removeAllRanges 清掉既成选区。用 capture 让它先于振假名 handler（bubble 阶段）跑，
   // 从而振假名切换反而恢复正常（守卫不再被双击选区绊住）。单击查词走 onTap/_selectTextAt
   // 自管 CSS Highlight，不产生原生选区，零影响。
-  document.addEventListener('dblclick', function() {
+  document.addEventListener('dblclick', function(e) {
     var sel = window.getSelection && window.getSelection();
     if (sel && !sel.isCollapsed) sel.removeAllRanges();
+    // 双击句子启动 TTS：从被点句开始实时朗读（设置项 ttsGestureMode == 'double_tap'）。
+    if (window.__fushiTtsGesture === 'double_tap' && window.fushiSelection &&
+        window.fushiSelection.getSentenceContext) {
+      var ctx = window.fushiSelection.getSentenceContext(e.clientX, e.clientY);
+      if (ctx && ctx.sentence) {
+        window.flutter_inappwebview.callHandler('onSentenceTts', ctx.sentence);
+      }
+    }
   }, true);
 $kPagedWheelGestureHelperJs
   // BUG-2015：连续模式的章节边界必须按「手势」而不是 wheel tick 判定。记录正文
@@ -2058,6 +2070,18 @@ updateLive: function(patch) {
               );
               debugPrint('[ReaderFushi] onTextSelected error: $e');
             }
+          },
+        );
+
+        // 双击/长按句子触发：从被点句开始实时朗读（设置项 ttsGestureMode 控制哪种手势）。
+        controller.addJavaScriptHandler(
+          handlerName: 'onSentenceTts',
+          callback: (args) {
+            if (args.isEmpty || !mounted) return;
+            final Object? first = args.first;
+            final String? text = first is String ? first : null;
+            if (text == null || text.isEmpty) return;
+            _startTtsFromSentence(text);
           },
         );
 

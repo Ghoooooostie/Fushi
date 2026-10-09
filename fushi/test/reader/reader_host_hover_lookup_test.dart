@@ -170,6 +170,7 @@ void main() {
         vnPreserveDialogue: false,
         vnMergeCrossScreenSentenceAudioCues: false,
         sentenceAudioCuesJson: null,
+        ttsGestureMode: 'double_tap',
       );
       expect(config.hostHoverLookup, isFalse);
       expect(config.toJson()['hostHoverLookup'], isFalse);

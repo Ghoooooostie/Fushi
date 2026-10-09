@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 106488 (6264 per locale)
+/// Strings: 106590 (6270 per locale)
 ///
-/// Built on 2026-10-08 at 14:37 UTC
+/// Built on 2026-10-09 at 00:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6426,6 +6426,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get tts_synthesizing => 'Synthesizing audio...';
 	String get tts_synthesize_failed => 'TTS synthesis failed';
 	String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	String get tts_preparing => 'Preparing reading...';
+	String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	String get tts_gesture_mode_title => 'TTS trigger gesture';
+	String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	String get tts_gesture_double_tap => 'Double-tap sentence';
+	String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -12719,6 +12725,12 @@ class _StringsAr extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -19012,6 +19024,12 @@ class _StringsDe extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -25305,6 +25323,12 @@ class _StringsEs extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -31598,6 +31622,12 @@ class _StringsFr extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -37891,6 +37921,12 @@ class _StringsId extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -44184,6 +44220,12 @@ class _StringsIt extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -50477,6 +50519,12 @@ class _StringsJa extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -56770,6 +56818,12 @@ class _StringsKo extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -63063,6 +63117,12 @@ class _StringsNl extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -69356,6 +69416,12 @@ class _StringsPtBr extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -75649,6 +75715,12 @@ class _StringsRu extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -81942,6 +82014,12 @@ class _StringsTh extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -88235,6 +88313,12 @@ class _StringsTr extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -94528,6 +94612,12 @@ class _StringsVi extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 // Path: <root>
@@ -100821,6 +100911,12 @@ class _StringsZhCn extends _StringsEn {
 	@override String get tts_synthesizing => '正在合成语音…';
 	@override String get tts_synthesize_failed => '语音合成失败';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '已合成 ${completed} / ${total} 句';
+	@override String get tts_preparing => '正在准备朗读…';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => '已准备 ${completed} / ${total} 句';
+	@override String get tts_gesture_mode_title => 'TTS 触发手势';
+	@override String get tts_gesture_mode_hint => '双击或长按句子，从该句开始朗读';
+	@override String get tts_gesture_double_tap => '双击句子';
+	@override String get tts_gesture_long_press => '长按句子';
 }
 
 // Path: <root>
@@ -107114,6 +107210,12 @@ class _StringsZhHk extends _StringsEn {
 	@override String get tts_synthesizing => 'Synthesizing audio...';
 	@override String get tts_synthesize_failed => 'TTS synthesis failed';
 	@override String tts_synthesizing_progress({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+	@override String get tts_preparing => 'Preparing reading...';
+	@override String tts_preparing_progress({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+	@override String get tts_gesture_mode_title => 'TTS trigger gesture';
+	@override String get tts_gesture_mode_hint => 'Double-tap or long-press a sentence to start reading from it';
+	@override String get tts_gesture_double_tap => 'Double-tap sentence';
+	@override String get tts_gesture_long_press => 'Long-press sentence';
 }
 
 /// Flat map(s) containing all translations.
@@ -113386,6 +113488,12 @@ extension on _StringsEn {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -119658,6 +119766,12 @@ extension on _StringsAr {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -125930,6 +126044,12 @@ extension on _StringsDe {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -132202,6 +132322,12 @@ extension on _StringsEs {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -138474,6 +138600,12 @@ extension on _StringsFr {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -144746,6 +144878,12 @@ extension on _StringsId {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -151018,6 +151156,12 @@ extension on _StringsIt {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -157290,6 +157434,12 @@ extension on _StringsJa {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -163562,6 +163712,12 @@ extension on _StringsKo {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -169834,6 +169990,12 @@ extension on _StringsNl {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -176106,6 +176268,12 @@ extension on _StringsPtBr {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -182378,6 +182546,12 @@ extension on _StringsRu {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -188650,6 +188824,12 @@ extension on _StringsTh {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -194922,6 +195102,12 @@ extension on _StringsTr {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -201194,6 +201380,12 @@ extension on _StringsVi {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}
@@ -207466,6 +207658,12 @@ extension on _StringsZhCn {
 			case 'tts_synthesizing': return '正在合成语音…';
 			case 'tts_synthesize_failed': return '语音合成失败';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '已合成 ${completed} / ${total} 句';
+			case 'tts_preparing': return '正在准备朗读…';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => '已准备 ${completed} / ${total} 句';
+			case 'tts_gesture_mode_title': return 'TTS 触发手势';
+			case 'tts_gesture_mode_hint': return '双击或长按句子，从该句开始朗读';
+			case 'tts_gesture_double_tap': return '双击句子';
+			case 'tts_gesture_long_press': return '长按句子';
 			default: return null;
 		}
 	}
@@ -213738,6 +213936,12 @@ extension on _StringsZhHk {
 			case 'tts_synthesizing': return 'Synthesizing audio...';
 			case 'tts_synthesize_failed': return 'TTS synthesis failed';
 			case 'tts_synthesizing_progress': return ({required Object completed, required Object total}) => '${completed} / ${total} sentences';
+			case 'tts_preparing': return 'Preparing reading...';
+			case 'tts_preparing_progress': return ({required Object completed, required Object total}) => 'Prepared ${completed} / ${total} sentences';
+			case 'tts_gesture_mode_title': return 'TTS trigger gesture';
+			case 'tts_gesture_mode_hint': return 'Double-tap or long-press a sentence to start reading from it';
+			case 'tts_gesture_double_tap': return 'Double-tap sentence';
+			case 'tts_gesture_long_press': return 'Long-press sentence';
 			default: return null;
 		}
 	}

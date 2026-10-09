@@ -113,6 +113,17 @@ class ReaderSelectionScripts {
     lpsStartY = t.clientY;
     lpsTimer = setTimeout(function() {
       lpsTimer = null;
+      // 'long_press' 手势模式：长按句子直接启动 TTS（从被点句开始朗读），不进入拖选。
+      if (window.__fushiTtsGesture === 'long_press') {
+        if (window.fushiSelection && window.fushiSelection.getSentenceContext) {
+          var ctx = window.fushiSelection.getSentenceContext(lpsStartX, lpsStartY);
+          if (ctx && ctx.sentence) {
+            window.flutter_inappwebview.callHandler('onSentenceTts', ctx.sentence);
+          }
+        }
+        lpsActive = false;
+        return;
+      }
       if (window.fushiSelection && window.fushiSelection.beginRangeSelection &&
           window.fushiSelection.beginRangeSelection(lpsStartX, lpsStartY)) {
         lpsActive = true;

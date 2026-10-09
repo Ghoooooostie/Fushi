@@ -6262,5 +6262,11 @@
   "tts_read_chapter_hint": "Synthesize and play this chapter",
   "tts_synthesizing": "Synthesizing audio...",
   "tts_synthesize_failed": "TTS synthesis failed",
-  "tts_synthesizing_progress": "$completed / $total sentences"
+  "tts_synthesizing_progress": "$completed / $total sentences",
+  "tts_preparing": "Preparing reading...",
+  "tts_preparing_progress": "Prepared $completed / $total sentences",
+  "tts_gesture_mode_title": "TTS trigger gesture",
+  "tts_gesture_mode_hint": "Double-tap or long-press a sentence to start reading from it",
+  "tts_gesture_double_tap": "Double-tap sentence",
+  "tts_gesture_long_press": "Long-press sentence"
 }

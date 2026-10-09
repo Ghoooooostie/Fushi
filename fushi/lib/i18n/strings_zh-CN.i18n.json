@@ -6262,5 +6262,11 @@
   "tts_read_chapter_hint": "合成本章音频并播放",
   "tts_synthesizing": "正在合成语音…",
   "tts_synthesize_failed": "语音合成失败",
-  "tts_synthesizing_progress": "已合成 $completed / $total 句"
+  "tts_synthesizing_progress": "已合成 $completed / $total 句",
+  "tts_preparing": "正在准备朗读…",
+  "tts_preparing_progress": "已准备 $completed / $total 句",
+  "tts_gesture_mode_title": "TTS 触发手势",
+  "tts_gesture_mode_hint": "双击或长按句子，从该句开始朗读",
+  "tts_gesture_double_tap": "双击句子",
+  "tts_gesture_long_press": "长按句子"
 }
