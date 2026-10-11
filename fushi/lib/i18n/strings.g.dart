@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119527 (7031 per locale)
+/// Strings: 119510 (7030 per locale)
 ///
-/// Built on 2026-10-10 at 05:04 UTC
+/// Built on 2026-10-11 at 07:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9959,7 +9959,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get leaderboard_watermelon_fit => 'Fit to screen';
   String get leaderboard_account_sync => 'Sync';
   String home_continue_episode({required Object n}) => 'Ep ${n}';
-  String get home_recent_badge => 'New';
   String get stat_this_year => 'This year';
   String get stat_week_past => 'Past week';
   String get stat_center_settings => 'Statistics settings';
@@ -26793,8 +26792,6 @@ class _StringsAr extends _StringsEn {
   String get leaderboard_account_sync => 'Sync';
   @override
   String home_continue_episode({required Object n}) => 'الحلقة ${n}';
-  @override
-  String get home_recent_badge => 'جديد';
   @override
   String get stat_this_year => 'This year';
   @override
@@ -44123,8 +44120,6 @@ class _StringsDe extends _StringsEn {
   String get leaderboard_account_sync => 'Sync';
   @override
   String home_continue_episode({required Object n}) => 'Folge ${n}';
-  @override
-  String get home_recent_badge => 'Neu';
   @override
   String get stat_this_year => 'This year';
   @override
@@ -61513,8 +61508,6 @@ class _StringsEs extends _StringsEn {
   String get leaderboard_account_sync => 'Sync';
   @override
   String home_continue_episode({required Object n}) => 'Ep. ${n}';
-  @override
-  String get home_recent_badge => 'Nuevo';
   @override
   String get stat_this_year => 'This year';
   @override
@@ -78983,8 +78976,6 @@ class _StringsFr extends _StringsEn {
   @override
   String home_continue_episode({required Object n}) => 'Ép. ${n}';
   @override
-  String get home_recent_badge => 'Nouveau';
-  @override
   String get stat_this_year => 'This year';
   @override
   String get stat_week_past => 'Past week';
@@ -96106,8 +96097,6 @@ class _StringsId extends _StringsEn {
   String get leaderboard_account_sync => 'Sync';
   @override
   String home_continue_episode({required Object n}) => 'Ep. ${n}';
-  @override
-  String get home_recent_badge => 'Baru';
   @override
   String get stat_this_year => 'This year';
   @override
@@ -113396,8 +113385,6 @@ class _StringsIt extends _StringsEn {
   @override
   String home_continue_episode({required Object n}) => 'Ep. ${n}';
   @override
-  String get home_recent_badge => 'Nuovo';
-  @override
   String get stat_this_year => 'This year';
   @override
   String get stat_week_past => 'Past week';
@@ -129686,8 +129673,6 @@ class _StringsJa extends _StringsEn {
   String get leaderboard_account_sync => 'Sync';
   @override
   String home_continue_episode({required Object n}) => '第${n}話';
-  @override
-  String get home_recent_badge => '新着';
   @override
   String get stat_this_year => '今年';
   @override
@@ -146009,8 +145994,6 @@ class _StringsKo extends _StringsEn {
   String get leaderboard_account_sync => 'Sync';
   @override
   String home_continue_episode({required Object n}) => '${n}화';
-  @override
-  String get home_recent_badge => '신규';
   @override
   String get stat_this_year => '올해';
   @override
@@ -163246,8 +163229,6 @@ class _StringsNl extends _StringsEn {
   String get leaderboard_account_sync => 'Sync';
   @override
   String home_continue_episode({required Object n}) => 'Afl. ${n}';
-  @override
-  String get home_recent_badge => 'Nieuw';
   @override
   String get stat_this_year => 'This year';
   @override
@@ -180553,8 +180534,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String home_continue_episode({required Object n}) => 'Ep. ${n}';
   @override
-  String get home_recent_badge => 'Novo';
-  @override
   String get stat_this_year => 'This year';
   @override
   String get stat_week_past => 'Past week';
@@ -197805,8 +197784,6 @@ class _StringsRu extends _StringsEn {
   @override
   String home_continue_episode({required Object n}) => 'Эп. ${n}';
   @override
-  String get home_recent_badge => 'Новое';
-  @override
   String get stat_this_year => 'This year';
   @override
   String get stat_week_past => 'Past week';
@@ -214734,8 +214711,6 @@ class _StringsTh extends _StringsEn {
   String get leaderboard_account_sync => 'Sync';
   @override
   String home_continue_episode({required Object n}) => 'ตอนที่ ${n}';
-  @override
-  String get home_recent_badge => 'ใหม่';
   @override
   String get stat_this_year => 'This year';
   @override
@@ -231868,8 +231843,6 @@ class _StringsTr extends _StringsEn {
   @override
   String home_continue_episode({required Object n}) => '${n}. bölüm';
   @override
-  String get home_recent_badge => 'Yeni';
-  @override
   String get stat_this_year => 'This year';
   @override
   String get stat_week_past => 'Past week';
@@ -248928,8 +248901,6 @@ class _StringsVi extends _StringsEn {
   @override
   String home_continue_episode({required Object n}) => 'Tập ${n}';
   @override
-  String get home_recent_badge => 'Mới';
-  @override
   String get stat_this_year => 'This year';
   @override
   String get stat_week_past => 'Past week';
@@ -264556,8 +264527,6 @@ class _StringsZhCn extends _StringsEn {
   String get leaderboard_account_sync => '同步';
   @override
   String home_continue_episode({required Object n}) => '第 ${n} 集';
-  @override
-  String get home_recent_badge => '新';
   @override
   String get stat_this_year => '本年';
   @override
@@ -280280,8 +280249,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String home_continue_episode({required Object n}) => '第 ${n} 集';
   @override
-  String get home_recent_badge => '新';
-  @override
   String get stat_this_year => '本年';
   @override
   String get stat_week_past => '過去一週';
@@ -294889,8 +294856,6 @@ extension on _StringsEn {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'Ep ${n}';
-      case 'home_recent_badge':
-        return 'New';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -309458,8 +309423,6 @@ extension on _StringsAr {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'الحلقة ${n}';
-      case 'home_recent_badge':
-        return 'جديد';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -324103,8 +324066,6 @@ extension on _StringsDe {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'Folge ${n}';
-      case 'home_recent_badge':
-        return 'Neu';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -338730,8 +338691,6 @@ extension on _StringsEs {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'Ep. ${n}';
-      case 'home_recent_badge':
-        return 'Nuevo';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -353375,8 +353334,6 @@ extension on _StringsFr {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'Ép. ${n}';
-      case 'home_recent_badge':
-        return 'Nouveau';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -367964,8 +367921,6 @@ extension on _StringsId {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'Ep. ${n}';
-      case 'home_recent_badge':
-        return 'Baru';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -382589,8 +382544,6 @@ extension on _StringsIt {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'Ep. ${n}';
-      case 'home_recent_badge':
-        return 'Nuovo';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -397088,8 +397041,6 @@ extension on _StringsJa {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => '第${n}話';
-      case 'home_recent_badge':
-        return '新着';
       case 'stat_this_year':
         return '今年';
       case 'stat_week_past':
@@ -411594,8 +411545,6 @@ extension on _StringsKo {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => '${n}화';
-      case 'home_recent_badge':
-        return '신규';
       case 'stat_this_year':
         return '올해';
       case 'stat_week_past':
@@ -426214,8 +426163,6 @@ extension on _StringsNl {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'Afl. ${n}';
-      case 'home_recent_badge':
-        return 'Nieuw';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -440826,8 +440773,6 @@ extension on _StringsPtBr {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'Ep. ${n}';
-      case 'home_recent_badge':
-        return 'Novo';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -455443,8 +455388,6 @@ extension on _StringsRu {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'Эп. ${n}';
-      case 'home_recent_badge':
-        return 'Новое';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -470016,8 +469959,6 @@ extension on _StringsTh {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'ตอนที่ ${n}';
-      case 'home_recent_badge':
-        return 'ใหม่';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -484620,8 +484561,6 @@ extension on _StringsTr {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => '${n}. bölüm';
-      case 'home_recent_badge':
-        return 'Yeni';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -499207,8 +499146,6 @@ extension on _StringsVi {
         return 'Sync';
       case 'home_continue_episode':
         return ({required Object n}) => 'Tập ${n}';
-      case 'home_recent_badge':
-        return 'Mới';
       case 'stat_this_year':
         return 'This year';
       case 'stat_week_past':
@@ -513640,8 +513577,6 @@ extension on _StringsZhCn {
         return '同步';
       case 'home_continue_episode':
         return ({required Object n}) => '第 ${n} 集';
-      case 'home_recent_badge':
-        return '新';
       case 'stat_this_year':
         return '本年';
       case 'stat_week_past':
@@ -528078,8 +528013,6 @@ extension on _StringsZhHk {
         return '同步';
       case 'home_continue_episode':
         return ({required Object n}) => '第 ${n} 集';
-      case 'home_recent_badge':
-        return '新';
       case 'stat_this_year':
         return '本年';
       case 'stat_week_past':
