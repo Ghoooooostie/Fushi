@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120632 (7096 per locale)
+/// Strings: 120649 (7097 per locale)
 ///
-/// Built on 2026-10-11 at 08:45 UTC
+/// Built on 2026-10-11 at 09:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7204,7 +7204,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get audiobook_tts_empty_book => 'This book has no text to read aloud';
 	String get audiobook_tts_start_failed => 'Could not start reading aloud';
 	String get audiobook_tts_preparing => 'Preparing to read aloud…';
-	String get audiobook_tts_retry_hint => 'Press play to try again';
+	String get audiobook_tts_retry_hint => 'Press play to try again, or skip to the next sentence';
 	String get audiobook_tts_failure_not_configured => 'The voice is not fully configured';
 	String get audiobook_tts_failure_network => 'Could not reach the speech service';
 	String get audiobook_tts_failure_timeout => 'The speech service took too long to respond';
@@ -7258,6 +7258,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get audiobook_tts_param_voice => 'Voice';
 	String get audiobook_tts_param_invalid => 'This value is not valid';
 	String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -14383,6 +14384,7 @@ class _StringsAr extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -21508,6 +21510,7 @@ class _StringsDe extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -28633,6 +28636,7 @@ class _StringsEs extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -35758,6 +35762,7 @@ class _StringsFr extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -42883,6 +42888,7 @@ class _StringsId extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -50008,6 +50014,7 @@ class _StringsIt extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -57133,6 +57140,7 @@ class _StringsJa extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -64258,6 +64266,7 @@ class _StringsKo extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -71383,6 +71392,7 @@ class _StringsNl extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -78508,6 +78518,7 @@ class _StringsPtBr extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -85633,6 +85644,7 @@ class _StringsRu extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -92758,6 +92770,7 @@ class _StringsTh extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -99883,6 +99896,7 @@ class _StringsTr extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -107008,6 +107022,7 @@ class _StringsVi extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 // Path: <root>
@@ -114079,7 +114094,7 @@ class _StringsZhCn extends _StringsEn {
 	@override String get audiobook_tts_empty_book => '这本书没有可朗读的正文';
 	@override String get audiobook_tts_start_failed => '无法开始朗读';
 	@override String get audiobook_tts_preparing => '正在准备朗读…';
-	@override String get audiobook_tts_retry_hint => '按播放键重试';
+	@override String get audiobook_tts_retry_hint => '按播放键重试，或跳到下一句';
 	@override String get audiobook_tts_failure_not_configured => '声音尚未配置完整';
 	@override String get audiobook_tts_failure_network => '无法连接语音服务';
 	@override String get audiobook_tts_failure_timeout => '语音服务响应超时';
@@ -114133,6 +114148,7 @@ class _StringsZhCn extends _StringsEn {
 	@override String get audiobook_tts_param_voice => '声音';
 	@override String get audiobook_tts_param_invalid => '填写的值无效';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => '参考音频长 ${seconds} 秒，GPT-SoVITS 只接受 3–10 秒';
+	@override String get audiobook_tts_failure_rejected => '语音服务拒绝合成这一句';
 }
 
 // Path: <root>
@@ -121258,6 +121274,7 @@ class _StringsZhHk extends _StringsEn {
 	@override String get audiobook_tts_param_voice => 'Voice';
 	@override String get audiobook_tts_param_invalid => 'This value is not valid';
 	@override String audiobook_tts_param_ref_audio_length({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+	@override String get audiobook_tts_failure_rejected => 'The speech service refused this sentence';
 }
 
 /// Flat map(s) containing all translations.
@@ -128308,7 +128325,7 @@ extension on _StringsEn {
 			case 'audiobook_tts_empty_book': return 'This book has no text to read aloud';
 			case 'audiobook_tts_start_failed': return 'Could not start reading aloud';
 			case 'audiobook_tts_preparing': return 'Preparing to read aloud…';
-			case 'audiobook_tts_retry_hint': return 'Press play to try again';
+			case 'audiobook_tts_retry_hint': return 'Press play to try again, or skip to the next sentence';
 			case 'audiobook_tts_failure_not_configured': return 'The voice is not fully configured';
 			case 'audiobook_tts_failure_network': return 'Could not reach the speech service';
 			case 'audiobook_tts_failure_timeout': return 'The speech service took too long to respond';
@@ -128362,6 +128379,7 @@ extension on _StringsEn {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -135466,6 +135484,7 @@ extension on _StringsAr {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -142570,6 +142589,7 @@ extension on _StringsDe {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -149674,6 +149694,7 @@ extension on _StringsEs {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -156778,6 +156799,7 @@ extension on _StringsFr {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -163882,6 +163904,7 @@ extension on _StringsId {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -170986,6 +171009,7 @@ extension on _StringsIt {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -178090,6 +178114,7 @@ extension on _StringsJa {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -185194,6 +185219,7 @@ extension on _StringsKo {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -192298,6 +192324,7 @@ extension on _StringsNl {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -199402,6 +199429,7 @@ extension on _StringsPtBr {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -206506,6 +206534,7 @@ extension on _StringsRu {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -213610,6 +213639,7 @@ extension on _StringsTh {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -220714,6 +220744,7 @@ extension on _StringsTr {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -227818,6 +227849,7 @@ extension on _StringsVi {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
@@ -234868,7 +234900,7 @@ extension on _StringsZhCn {
 			case 'audiobook_tts_empty_book': return '这本书没有可朗读的正文';
 			case 'audiobook_tts_start_failed': return '无法开始朗读';
 			case 'audiobook_tts_preparing': return '正在准备朗读…';
-			case 'audiobook_tts_retry_hint': return '按播放键重试';
+			case 'audiobook_tts_retry_hint': return '按播放键重试，或跳到下一句';
 			case 'audiobook_tts_failure_not_configured': return '声音尚未配置完整';
 			case 'audiobook_tts_failure_network': return '无法连接语音服务';
 			case 'audiobook_tts_failure_timeout': return '语音服务响应超时';
@@ -234922,6 +234954,7 @@ extension on _StringsZhCn {
 			case 'audiobook_tts_param_voice': return '声音';
 			case 'audiobook_tts_param_invalid': return '填写的值无效';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => '参考音频长 ${seconds} 秒，GPT-SoVITS 只接受 3–10 秒';
+			case 'audiobook_tts_failure_rejected': return '语音服务拒绝合成这一句';
 			default: return null;
 		}
 	}
@@ -242026,6 +242059,7 @@ extension on _StringsZhHk {
 			case 'audiobook_tts_param_voice': return 'Voice';
 			case 'audiobook_tts_param_invalid': return 'This value is not valid';
 			case 'audiobook_tts_param_ref_audio_length': return ({required Object seconds}) => 'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+			case 'audiobook_tts_failure_rejected': return 'The speech service refused this sentence';
 			default: return null;
 		}
 	}
