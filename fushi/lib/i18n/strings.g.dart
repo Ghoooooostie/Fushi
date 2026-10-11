@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119697 (7041 per locale)
+/// Strings: 119765 (7045 per locale)
 ///
 /// Built on 2026-10-11 at 07:30 UTC
 
@@ -10131,6 +10131,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_dev_note_save => 'Save notes';
   String get feedback_dev_note_saved => 'Notes saved';
   String get feedback_dev_note_badge => 'Reviewed';
+  String get book_import_no_book_notice_title => 'No book selected';
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -27096,6 +27103,17 @@ class _StringsAr extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -44451,6 +44469,17 @@ class _StringsDe extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -61866,6 +61895,17 @@ class _StringsEs extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -79360,6 +79400,17 @@ class _StringsFr extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -96509,6 +96560,17 @@ class _StringsId extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -113823,6 +113885,17 @@ class _StringsIt extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -130137,6 +130210,17 @@ class _StringsJa extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -146487,6 +146571,17 @@ class _StringsKo extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -163749,6 +163844,17 @@ class _StringsNl extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -181080,6 +181186,17 @@ class _StringsPtBr extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -198357,6 +198474,17 @@ class _StringsRu extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -215312,6 +215440,17 @@ class _StringsTh extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -232470,6 +232609,17 @@ class _StringsTr extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -249555,6 +249705,17 @@ class _StringsVi extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => 'No book selected';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+  @override
+  String get book_import_no_book_transcribe_action =>
+      'Transcribe and generate book';
 }
 
 // Path: <root>
@@ -265184,6 +265345,16 @@ class _StringsZhCn extends _StringsEn {
   String get feedback_dev_note_saved => '批改已保存';
   @override
   String get feedback_dev_note_badge => '已批改';
+  @override
+  String get book_import_no_book_notice_title => '没有选择书籍';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      '没有书也能导入：直接用设备端转录把音频转成字幕，导入时会据此自动生成一本书。';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
+  @override
+  String get book_import_no_book_transcribe_action => '转录并生成书籍';
 }
 
 // Path: <root>
@@ -280949,6 +281120,16 @@ class _StringsZhHk extends _StringsEn {
   String get feedback_dev_note_saved => 'Notes saved';
   @override
   String get feedback_dev_note_badge => 'Reviewed';
+  @override
+  String get book_import_no_book_notice_title => '沒有選擇書籍';
+  @override
+  String get book_import_no_book_transcribe_hint =>
+      '沒有書也能匯入：直接用裝置端轉錄把音訊轉成字幕，匯入時會據此自動生成一本書。';
+  @override
+  String get book_import_no_book_subtitle_hint =>
+      '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
+  @override
+  String get book_import_no_book_transcribe_action => '轉錄並生成書籍';
 }
 
 /// Flat map(s) containing all translations.
@@ -295543,6 +295724,14 @@ extension on _StringsEn {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -310132,6 +310321,14 @@ extension on _StringsAr {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -324797,6 +324994,14 @@ extension on _StringsDe {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -339444,6 +339649,14 @@ extension on _StringsEs {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -354109,6 +354322,14 @@ extension on _StringsFr {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -368718,6 +368939,14 @@ extension on _StringsId {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -383363,6 +383592,14 @@ extension on _StringsIt {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -397882,6 +398119,14 @@ extension on _StringsJa {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -412408,6 +412653,14 @@ extension on _StringsKo {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -427048,6 +427301,14 @@ extension on _StringsNl {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -441680,6 +441941,14 @@ extension on _StringsPtBr {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -456317,6 +456586,14 @@ extension on _StringsRu {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -470910,6 +471187,14 @@ extension on _StringsTh {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -485534,6 +485819,14 @@ extension on _StringsTr {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -500141,6 +500434,14 @@ extension on _StringsVi {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return 'No book selected';
+      case 'book_import_no_book_transcribe_hint':
+        return 'You can import with audio alone: transcribe it on device and a book is generated from the transcript when you import.';
+      case 'book_import_no_book_subtitle_hint':
+        return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
+      case 'book_import_no_book_transcribe_action':
+        return 'Transcribe and generate book';
       default:
         return null;
     }
@@ -514588,6 +514889,14 @@ extension on _StringsZhCn {
         return '批改已保存';
       case 'feedback_dev_note_badge':
         return '已批改';
+      case 'book_import_no_book_notice_title':
+        return '没有选择书籍';
+      case 'book_import_no_book_transcribe_hint':
+        return '没有书也能导入：直接用设备端转录把音频转成字幕，导入时会据此自动生成一本书。';
+      case 'book_import_no_book_subtitle_hint':
+        return '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
+      case 'book_import_no_book_transcribe_action':
+        return '转录并生成书籍';
       default:
         return null;
     }
@@ -529052,6 +529361,14 @@ extension on _StringsZhHk {
         return 'Notes saved';
       case 'feedback_dev_note_badge':
         return 'Reviewed';
+      case 'book_import_no_book_notice_title':
+        return '沒有選擇書籍';
+      case 'book_import_no_book_transcribe_hint':
+        return '沒有書也能匯入：直接用裝置端轉錄把音訊轉成字幕，匯入時會據此自動生成一本書。';
+      case 'book_import_no_book_subtitle_hint':
+        return '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
+      case 'book_import_no_book_transcribe_action':
+        return '轉錄並生成書籍';
       default:
         return null;
     }
