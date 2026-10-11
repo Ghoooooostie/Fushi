@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119510 (7030 per locale)
+/// Strings: 119527 (7031 per locale)
 ///
-/// Built on 2026-10-09 at 20:29 UTC
+/// Built on 2026-10-10 at 05:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4421,7 +4421,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Last 7 days: ${n} chars/day on average';
   String get stat_goal_set => 'Set goal';
   String get stat_goal_unit_chars => 'chars';
-  String get stat_goal_weekly => 'Weekly goal';
   String get stat_hourly_band_epub => 'Text books';
   String get stat_hourly_band_manga => 'Manga';
   String get stat_hourly_band_pdf => 'PDF';
@@ -10113,6 +10112,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Package: ${package}';
   String get extension_nsfw_badge => 'NSFW';
   String get mihon_extension_min_downloads_any => 'Any';
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -17452,8 +17455,6 @@ class _StringsAr extends _StringsEn {
   String get stat_goal_set => 'تعيين هدف';
   @override
   String get stat_goal_unit_chars => 'أحرف';
-  @override
-  String get stat_goal_weekly => 'الهدف الأسبوعي';
   @override
   String get stat_hourly_band_epub => 'كتب نصية';
   @override
@@ -27049,6 +27050,12 @@ class _StringsAr extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'بلا حد';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -34564,8 +34571,6 @@ class _StringsDe extends _StringsEn {
   String get stat_goal_set => 'Ziel festlegen';
   @override
   String get stat_goal_unit_chars => 'Zeichen';
-  @override
-  String get stat_goal_weekly => 'Wochenziel';
   @override
   String get stat_hourly_band_epub => 'Textbücher';
   @override
@@ -44375,6 +44380,12 @@ class _StringsDe extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'Beliebig';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -51921,8 +51932,6 @@ class _StringsEs extends _StringsEn {
   String get stat_goal_set => 'Fijar meta';
   @override
   String get stat_goal_unit_chars => 'caracteres';
-  @override
-  String get stat_goal_weekly => 'Meta semanal';
   @override
   String get stat_hourly_band_epub => 'Libros de texto';
   @override
@@ -61761,6 +61770,12 @@ class _StringsEs extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'Cualquiera';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -69335,8 +69350,6 @@ class _StringsFr extends _StringsEn {
   String get stat_goal_set => 'Définir un objectif';
   @override
   String get stat_goal_unit_chars => 'car.';
-  @override
-  String get stat_goal_weekly => 'Objectif hebdomadaire';
   @override
   String get stat_hourly_band_epub => 'Romans';
   @override
@@ -79226,6 +79239,12 @@ class _StringsFr extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'Indifférent';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -86649,8 +86668,6 @@ class _StringsId extends _StringsEn {
   String get stat_goal_set => 'Atur target';
   @override
   String get stat_goal_unit_chars => 'karakter';
-  @override
-  String get stat_goal_weekly => 'Target mingguan';
   @override
   String get stat_hourly_band_epub => 'Buku teks';
   @override
@@ -96346,6 +96363,12 @@ class _StringsId extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'Apa saja';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -103842,8 +103865,6 @@ class _StringsIt extends _StringsEn {
   String get stat_goal_set => 'Imposta obiettivo';
   @override
   String get stat_goal_unit_chars => 'caratteri';
-  @override
-  String get stat_goal_weekly => 'Obiettivo settimanale';
   @override
   String get stat_hourly_band_epub => 'Libri di testo';
   @override
@@ -113631,6 +113652,12 @@ class _StringsIt extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'Qualsiasi';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -120678,8 +120705,6 @@ class _StringsJa extends _StringsEn {
   String get stat_goal_set => '目標を設定';
   @override
   String get stat_goal_unit_chars => '文字';
-  @override
-  String get stat_goal_weekly => '毎週の目標';
   @override
   String get stat_hourly_band_epub => 'テキスト書籍';
   @override
@@ -129916,6 +129941,12 @@ class _StringsJa extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => '指定なし';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -136963,8 +136994,6 @@ class _StringsKo extends _StringsEn {
   String get stat_goal_set => '목표 설정';
   @override
   String get stat_goal_unit_chars => '글자';
-  @override
-  String get stat_goal_weekly => '주간 목표';
   @override
   String get stat_hourly_band_epub => '텍스트 도서';
   @override
@@ -146237,6 +146266,12 @@ class _StringsKo extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => '제한 없음';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -153702,8 +153737,6 @@ class _StringsNl extends _StringsEn {
   String get stat_goal_set => 'Doel instellen';
   @override
   String get stat_goal_unit_chars => 'tekens';
-  @override
-  String get stat_goal_weekly => 'Weekdoel';
   @override
   String get stat_hourly_band_epub => 'Tekstboeken';
   @override
@@ -163470,6 +163503,12 @@ class _StringsNl extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'Willekeurig';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -170966,8 +171005,6 @@ class _StringsPtBr extends _StringsEn {
   String get stat_goal_set => 'Definir meta';
   @override
   String get stat_goal_unit_chars => 'caracteres';
-  @override
-  String get stat_goal_weekly => 'Meta semanal';
   @override
   String get stat_hourly_band_epub => 'Livros de texto';
   @override
@@ -180772,6 +180809,12 @@ class _StringsPtBr extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'Qualquer';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -188250,8 +188293,6 @@ class _StringsRu extends _StringsEn {
   String get stat_goal_set => 'Задать цель';
   @override
   String get stat_goal_unit_chars => 'символов';
-  @override
-  String get stat_goal_weekly => 'Цель на неделю';
   @override
   String get stat_hourly_band_epub => 'Текстовые книги';
   @override
@@ -198020,6 +198061,12 @@ class _StringsRu extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'Любое';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -205350,8 +205397,6 @@ class _StringsTh extends _StringsEn {
   String get stat_goal_set => 'ตั้งเป้าหมาย';
   @override
   String get stat_goal_unit_chars => 'ตัวอักษร';
-  @override
-  String get stat_goal_weekly => 'เป้าหมายรายสัปดาห์';
   @override
   String get stat_hourly_band_epub => 'หนังสือข้อความ';
   @override
@@ -214946,6 +214991,12 @@ class _StringsTh extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'ไม่จำกัด';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -222372,8 +222423,6 @@ class _StringsTr extends _StringsEn {
   String get stat_goal_set => 'Hedef belirle';
   @override
   String get stat_goal_unit_chars => 'karakter';
-  @override
-  String get stat_goal_weekly => 'Haftalık hedef';
   @override
   String get stat_hourly_band_epub => 'Metin kitaplar';
   @override
@@ -232075,6 +232124,12 @@ class _StringsTr extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'Herhangi';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -239471,8 +239526,6 @@ class _StringsVi extends _StringsEn {
   String get stat_goal_set => 'Đặt mục tiêu';
   @override
   String get stat_goal_unit_chars => 'ký tự';
-  @override
-  String get stat_goal_weekly => 'Mục tiêu hằng tuần';
   @override
   String get stat_hourly_band_epub => 'Sách văn bản';
   @override
@@ -249131,6 +249184,12 @@ class _StringsVi extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => 'Không giới hạn';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 // Path: <root>
@@ -255928,8 +255987,6 @@ class _StringsZhCn extends _StringsEn {
   String get stat_goal_set => '设定目标';
   @override
   String get stat_goal_unit_chars => '字';
-  @override
-  String get stat_goal_weekly => '每周目标';
   @override
   String get stat_hourly_band_epub => '文字书';
   @override
@@ -264734,6 +264791,12 @@ class _StringsZhCn extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => '不限';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      '有 ${n} 张原截图没能取回，未附上';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '已移除 ${n} 本 · 找回在书架上「仅从本机移除」的远端书';
 }
 
 // Path: <root>
@@ -271544,8 +271607,6 @@ class _StringsZhHk extends _StringsEn {
   String get stat_goal_set => '設定目標';
   @override
   String get stat_goal_unit_chars => '字';
-  @override
-  String get stat_goal_weekly => '每週目標';
   @override
   String get stat_hourly_band_epub => '文字書';
   @override
@@ -280470,6 +280531,12 @@ class _StringsZhHk extends _StringsEn {
   String get extension_nsfw_badge => 'NSFW';
   @override
   String get mihon_extension_min_downloads_any => '不限';
+  @override
+  String feedback_reopen_shots_failed({required Object n}) =>
+      'Could not fetch ${n} of the original screenshots; they are not attached';
+  @override
+  String remote_hidden_books_hint_count({required Object n}) =>
+      '${n} removed · Bring back remote books you removed from this device\'s shelf';
 }
 
 /// Flat map(s) containing all translations.
@@ -286868,8 +286935,6 @@ extension on _StringsEn {
         return 'Set goal';
       case 'stat_goal_unit_chars':
         return 'chars';
-      case 'stat_goal_weekly':
-        return 'Weekly goal';
       case 'stat_hourly_band_epub':
         return 'Text books';
       case 'stat_hourly_band_manga':
@@ -295040,6 +295105,12 @@ extension on _StringsEn {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'Any';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -301432,8 +301503,6 @@ extension on _StringsAr {
         return 'تعيين هدف';
       case 'stat_goal_unit_chars':
         return 'أحرف';
-      case 'stat_goal_weekly':
-        return 'الهدف الأسبوعي';
       case 'stat_hourly_band_epub':
         return 'كتب نصية';
       case 'stat_hourly_band_manga':
@@ -309605,6 +309674,12 @@ extension on _StringsAr {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'بلا حد';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -316042,8 +316117,6 @@ extension on _StringsDe {
         return 'Ziel festlegen';
       case 'stat_goal_unit_chars':
         return 'Zeichen';
-      case 'stat_goal_weekly':
-        return 'Wochenziel';
       case 'stat_hourly_band_epub':
         return 'Textbücher';
       case 'stat_hourly_band_manga':
@@ -324246,6 +324319,12 @@ extension on _StringsDe {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'Beliebig';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -330671,8 +330750,6 @@ extension on _StringsEs {
         return 'Fijar meta';
       case 'stat_goal_unit_chars':
         return 'caracteres';
-      case 'stat_goal_weekly':
-        return 'Meta semanal';
       case 'stat_hourly_band_epub':
         return 'Libros de texto';
       case 'stat_hourly_band_manga':
@@ -338869,6 +338946,12 @@ extension on _StringsEs {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'Cualquiera';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -345301,8 +345384,6 @@ extension on _StringsFr {
         return 'Définir un objectif';
       case 'stat_goal_unit_chars':
         return 'car.';
-      case 'stat_goal_weekly':
-        return 'Objectif hebdomadaire';
       case 'stat_hourly_band_epub':
         return 'Romans';
       case 'stat_hourly_band_manga':
@@ -353510,6 +353591,12 @@ extension on _StringsFr {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'Indifférent';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -359917,8 +360004,6 @@ extension on _StringsId {
         return 'Atur target';
       case 'stat_goal_unit_chars':
         return 'karakter';
-      case 'stat_goal_weekly':
-        return 'Target mingguan';
       case 'stat_hourly_band_epub':
         return 'Buku teks';
       case 'stat_hourly_band_manga':
@@ -368095,6 +368180,12 @@ extension on _StringsId {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'Apa saja';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -374516,8 +374607,6 @@ extension on _StringsIt {
         return 'Imposta obiettivo';
       case 'stat_goal_unit_chars':
         return 'caratteri';
-      case 'stat_goal_weekly':
-        return 'Obiettivo settimanale';
       case 'stat_hourly_band_epub':
         return 'Libri di testo';
       case 'stat_hourly_band_manga':
@@ -382716,6 +382805,12 @@ extension on _StringsIt {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'Qualsiasi';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -389086,8 +389181,6 @@ extension on _StringsJa {
         return '目標を設定';
       case 'stat_goal_unit_chars':
         return '文字';
-      case 'stat_goal_weekly':
-        return '毎週の目標';
       case 'stat_hourly_band_epub':
         return 'テキスト書籍';
       case 'stat_hourly_band_manga':
@@ -397211,6 +397304,12 @@ extension on _StringsJa {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return '指定なし';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -403583,8 +403682,6 @@ extension on _StringsKo {
         return '목표 설정';
       case 'stat_goal_unit_chars':
         return '글자';
-      case 'stat_goal_weekly':
-        return '주간 목표';
       case 'stat_hourly_band_epub':
         return '텍스트 도서';
       case 'stat_hourly_band_manga':
@@ -411713,6 +411810,12 @@ extension on _StringsKo {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return '제한 없음';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -418135,8 +418238,6 @@ extension on _StringsNl {
         return 'Doel instellen';
       case 'stat_goal_unit_chars':
         return 'tekens';
-      case 'stat_goal_weekly':
-        return 'Weekdoel';
       case 'stat_hourly_band_epub':
         return 'Tekstboeken';
       case 'stat_hourly_band_manga':
@@ -426329,6 +426430,12 @@ extension on _StringsNl {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'Willekeurig';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -432747,8 +432854,6 @@ extension on _StringsPtBr {
         return 'Definir meta';
       case 'stat_goal_unit_chars':
         return 'caracteres';
-      case 'stat_goal_weekly':
-        return 'Meta semanal';
       case 'stat_hourly_band_epub':
         return 'Livros de texto';
       case 'stat_hourly_band_manga':
@@ -440937,6 +441042,12 @@ extension on _StringsPtBr {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'Qualquer';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -447363,8 +447474,6 @@ extension on _StringsRu {
         return 'Задать цель';
       case 'stat_goal_unit_chars':
         return 'символов';
-      case 'stat_goal_weekly':
-        return 'Цель на неделю';
       case 'stat_hourly_band_epub':
         return 'Текстовые книги';
       case 'stat_hourly_band_manga':
@@ -455550,6 +455659,12 @@ extension on _StringsRu {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'Любое';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -461948,8 +462063,6 @@ extension on _StringsTh {
         return 'ตั้งเป้าหมาย';
       case 'stat_goal_unit_chars':
         return 'ตัวอักษร';
-      case 'stat_goal_weekly':
-        return 'เป้าหมายรายสัปดาห์';
       case 'stat_hourly_band_epub':
         return 'หนังสือข้อความ';
       case 'stat_hourly_band_manga':
@@ -470119,6 +470232,12 @@ extension on _StringsTh {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'ไม่จำกัด';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -476530,8 +476649,6 @@ extension on _StringsTr {
         return 'Hedef belirle';
       case 'stat_goal_unit_chars':
         return 'karakter';
-      case 'stat_goal_weekly':
-        return 'Haftalık hedef';
       case 'stat_hourly_band_epub':
         return 'Metin kitaplar';
       case 'stat_hourly_band_manga':
@@ -484719,6 +484836,12 @@ extension on _StringsTr {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'Herhangi';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -491129,8 +491252,6 @@ extension on _StringsVi {
         return 'Đặt mục tiêu';
       case 'stat_goal_unit_chars':
         return 'ký tự';
-      case 'stat_goal_weekly':
-        return 'Mục tiêu hằng tuần';
       case 'stat_hourly_band_epub':
         return 'Sách văn bản';
       case 'stat_hourly_band_manga':
@@ -499302,6 +499423,12 @@ extension on _StringsVi {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return 'Không giới hạn';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
@@ -505658,8 +505785,6 @@ extension on _StringsZhCn {
         return '设定目标';
       case 'stat_goal_unit_chars':
         return '字';
-      case 'stat_goal_weekly':
-        return '每周目标';
       case 'stat_hourly_band_epub':
         return '文字书';
       case 'stat_hourly_band_manga':
@@ -513727,6 +513852,10 @@ extension on _StringsZhCn {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return '不限';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) => '有 ${n} 张原截图没能取回，未附上';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) => '已移除 ${n} 本 · 找回在书架上「仅从本机移除」的远端书';
       default:
         return null;
     }
@@ -520083,8 +520212,6 @@ extension on _StringsZhHk {
         return '設定目標';
       case 'stat_goal_unit_chars':
         return '字';
-      case 'stat_goal_weekly':
-        return '每週目標';
       case 'stat_hourly_band_epub':
         return '文字書';
       case 'stat_hourly_band_manga':
@@ -528167,6 +528294,12 @@ extension on _StringsZhHk {
         return 'NSFW';
       case 'mihon_extension_min_downloads_any':
         return '不限';
+      case 'feedback_reopen_shots_failed':
+        return ({required Object n}) =>
+            'Could not fetch ${n} of the original screenshots; they are not attached';
+      case 'remote_hidden_books_hint_count':
+        return ({required Object n}) =>
+            '${n} removed · Bring back remote books you removed from this device\'s shelf';
       default:
         return null;
     }
