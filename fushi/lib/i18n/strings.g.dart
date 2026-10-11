@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 121618 (7154 per locale)
+/// Strings: 121975 (7175 per locale)
 ///
-/// Built on 2026-10-11 at 09:20 UTC
+/// Built on 2026-10-11 at 09:25 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7316,6 +7316,27 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get audiobook_tts_provider_google_translate => 'Google Translate';
 	String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	String get audiobook_tts_voice_pick => 'Choose a voice';
+	String get ai_feature_audiobook_cast => 'Audiobook casting';
+	String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	String get audiobook_studio_cast => 'Characters and voices';
+	String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	String get audiobook_studio_cast_reannotate => 'Annotate again';
+	String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	String get audiobook_studio_cast_narrator => 'Narrator';
+	String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	String get audiobook_studio_cast_default_voice => 'Default voice';
+	String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	String get audiobook_studio_cast_rename => 'Rename or merge';
+	String get audiobook_studio_cast_rename_title => 'Rename character';
+	String get audiobook_studio_cast_empty => 'No characters marked yet';
+	String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	String get audiobook_studio_cast_lines_title => 'Lines';
+	String get audiobook_studio_cast_line_speaker => 'Speaker';
+	String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -14499,6 +14520,27 @@ class _StringsAr extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -21682,6 +21724,27 @@ class _StringsDe extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -28865,6 +28928,27 @@ class _StringsEs extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -36048,6 +36132,27 @@ class _StringsFr extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -43231,6 +43336,27 @@ class _StringsId extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -50414,6 +50540,27 @@ class _StringsIt extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -57597,6 +57744,27 @@ class _StringsJa extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -64780,6 +64948,27 @@ class _StringsKo extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -71963,6 +72152,27 @@ class _StringsNl extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -79146,6 +79356,27 @@ class _StringsPtBr extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -86329,6 +86560,27 @@ class _StringsRu extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -93512,6 +93764,27 @@ class _StringsTh extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -100695,6 +100968,27 @@ class _StringsTr extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -107878,6 +108172,27 @@ class _StringsVi extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 // Path: <root>
@@ -115061,6 +115376,27 @@ class _StringsZhCn extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => '谷歌翻译';
 	@override String get audiobook_tts_unofficial_free_hint => '免费 · 非官方接口';
 	@override String get audiobook_tts_voice_pick => '选择音色';
+	@override String get ai_feature_audiobook_cast => '有声书角色标注';
+	@override String get ai_feature_audiobook_cast_summary => '标注每句台词的说话人，供多声优配音';
+	@override String get audiobook_studio_cast => '角色与配音';
+	@override String get audiobook_studio_cast_hint => '用 AI 标注每句台词的说话人，再给每个角色配声音';
+	@override String get audiobook_studio_cast_annotate => 'AI 标注说话人';
+	@override String get audiobook_studio_cast_reannotate => '重新标注';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => '标注中 ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => '旁白';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} 句台词';
+	@override String get audiobook_studio_cast_default_voice => '默认声音';
+	@override String get audiobook_studio_cast_no_ai => '请先在 AI 设置里为「有声书角色标注」指定服务';
+	@override String audiobook_studio_cast_failed({required Object reason}) => '标注失败：${reason}';
+	@override String get audiobook_studio_cast_rename => '改名 / 合并';
+	@override String get audiobook_studio_cast_rename_title => '角色改名';
+	@override String get audiobook_studio_cast_empty => '还没有标注角色';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '已标注 ${done} / ${total} 章';
+	@override String get audiobook_studio_cast_lines_title => '台词';
+	@override String get audiobook_studio_cast_line_speaker => '说话人';
+	@override String get audiobook_studio_cast_failure_bad_output => '无法解析 AI 的回复';
+	@override String get audiobook_studio_failure_cache_busy => '部分句子正在播放，无法重新生成';
+	@override String get audiobook_studio_failure_verify_failed => '语音识别出错';
 }
 
 // Path: <root>
@@ -122244,6 +122580,27 @@ class _StringsZhHk extends _StringsEn {
 	@override String get audiobook_tts_provider_google_translate => 'Google Translate';
 	@override String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
 	@override String get audiobook_tts_voice_pick => 'Choose a voice';
+	@override String get ai_feature_audiobook_cast => 'Audiobook casting';
+	@override String get ai_feature_audiobook_cast_summary => 'Mark which character speaks each line so different voices can read them';
+	@override String get audiobook_studio_cast => 'Characters and voices';
+	@override String get audiobook_studio_cast_hint => 'Use AI to mark who speaks each line, then give each character a voice';
+	@override String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+	@override String get audiobook_studio_cast_reannotate => 'Annotate again';
+	@override String audiobook_studio_cast_progress({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+	@override String get audiobook_studio_cast_narrator => 'Narrator';
+	@override String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+	@override String get audiobook_studio_cast_default_voice => 'Default voice';
+	@override String get audiobook_studio_cast_no_ai => 'Assign an AI provider to audiobook casting in AI settings first';
+	@override String audiobook_studio_cast_failed({required Object reason}) => 'Annotation failed: ${reason}';
+	@override String get audiobook_studio_cast_rename => 'Rename or merge';
+	@override String get audiobook_studio_cast_rename_title => 'Rename character';
+	@override String get audiobook_studio_cast_empty => 'No characters marked yet';
+	@override String audiobook_studio_cast_annotated({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+	@override String get audiobook_studio_cast_lines_title => 'Lines';
+	@override String get audiobook_studio_cast_line_speaker => 'Speaker';
+	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
+	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
+	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
 }
 
 /// Flat map(s) containing all translations.
@@ -129406,6 +129763,27 @@ extension on _StringsEn {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -136568,6 +136946,27 @@ extension on _StringsAr {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -143730,6 +144129,27 @@ extension on _StringsDe {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -150892,6 +151312,27 @@ extension on _StringsEs {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -158054,6 +158495,27 @@ extension on _StringsFr {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -165216,6 +165678,27 @@ extension on _StringsId {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -172378,6 +172861,27 @@ extension on _StringsIt {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -179540,6 +180044,27 @@ extension on _StringsJa {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -186702,6 +187227,27 @@ extension on _StringsKo {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -193864,6 +194410,27 @@ extension on _StringsNl {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -201026,6 +201593,27 @@ extension on _StringsPtBr {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -208188,6 +208776,27 @@ extension on _StringsRu {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -215350,6 +215959,27 @@ extension on _StringsTh {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -222512,6 +223142,27 @@ extension on _StringsTr {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -229674,6 +230325,27 @@ extension on _StringsVi {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
@@ -236836,6 +237508,27 @@ extension on _StringsZhCn {
 			case 'audiobook_tts_provider_google_translate': return '谷歌翻译';
 			case 'audiobook_tts_unofficial_free_hint': return '免费 · 非官方接口';
 			case 'audiobook_tts_voice_pick': return '选择音色';
+			case 'ai_feature_audiobook_cast': return '有声书角色标注';
+			case 'ai_feature_audiobook_cast_summary': return '标注每句台词的说话人，供多声优配音';
+			case 'audiobook_studio_cast': return '角色与配音';
+			case 'audiobook_studio_cast_hint': return '用 AI 标注每句台词的说话人，再给每个角色配声音';
+			case 'audiobook_studio_cast_annotate': return 'AI 标注说话人';
+			case 'audiobook_studio_cast_reannotate': return '重新标注';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => '标注中 ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return '旁白';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} 句台词';
+			case 'audiobook_studio_cast_default_voice': return '默认声音';
+			case 'audiobook_studio_cast_no_ai': return '请先在 AI 设置里为「有声书角色标注」指定服务';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => '标注失败：${reason}';
+			case 'audiobook_studio_cast_rename': return '改名 / 合并';
+			case 'audiobook_studio_cast_rename_title': return '角色改名';
+			case 'audiobook_studio_cast_empty': return '还没有标注角色';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '已标注 ${done} / ${total} 章';
+			case 'audiobook_studio_cast_lines_title': return '台词';
+			case 'audiobook_studio_cast_line_speaker': return '说话人';
+			case 'audiobook_studio_cast_failure_bad_output': return '无法解析 AI 的回复';
+			case 'audiobook_studio_failure_cache_busy': return '部分句子正在播放，无法重新生成';
+			case 'audiobook_studio_failure_verify_failed': return '语音识别出错';
 			default: return null;
 		}
 	}
@@ -243998,6 +244691,27 @@ extension on _StringsZhHk {
 			case 'audiobook_tts_provider_google_translate': return 'Google Translate';
 			case 'audiobook_tts_unofficial_free_hint': return 'Free, unofficial interface';
 			case 'audiobook_tts_voice_pick': return 'Choose a voice';
+			case 'ai_feature_audiobook_cast': return 'Audiobook casting';
+			case 'ai_feature_audiobook_cast_summary': return 'Mark which character speaks each line so different voices can read them';
+			case 'audiobook_studio_cast': return 'Characters and voices';
+			case 'audiobook_studio_cast_hint': return 'Use AI to mark who speaks each line, then give each character a voice';
+			case 'audiobook_studio_cast_annotate': return 'Mark speakers with AI';
+			case 'audiobook_studio_cast_reannotate': return 'Annotate again';
+			case 'audiobook_studio_cast_progress': return ({required Object done, required Object total}) => 'Annotating ${done}/${total}';
+			case 'audiobook_studio_cast_narrator': return 'Narrator';
+			case 'audiobook_studio_cast_lines': return ({required Object n}) => '${n} lines';
+			case 'audiobook_studio_cast_default_voice': return 'Default voice';
+			case 'audiobook_studio_cast_no_ai': return 'Assign an AI provider to audiobook casting in AI settings first';
+			case 'audiobook_studio_cast_failed': return ({required Object reason}) => 'Annotation failed: ${reason}';
+			case 'audiobook_studio_cast_rename': return 'Rename or merge';
+			case 'audiobook_studio_cast_rename_title': return 'Rename character';
+			case 'audiobook_studio_cast_empty': return 'No characters marked yet';
+			case 'audiobook_studio_cast_annotated': return ({required Object done, required Object total}) => '${done} of ${total} chapters annotated';
+			case 'audiobook_studio_cast_lines_title': return 'Lines';
+			case 'audiobook_studio_cast_line_speaker': return 'Speaker';
+			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
+			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
+			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
 			default: return null;
 		}
 	}
