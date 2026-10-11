@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 122553 (7209 per locale)
+/// Strings: 122604 (7212 per locale)
 ///
-/// Built on 2026-10-11 at 09:50 UTC
+/// Built on 2026-10-11 at 10:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7371,6 +7371,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	String get audiobook_studio_export_running => 'Exporting…';
+	String get audiobook_tts_concurrency => 'Parallel requests';
+	String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -14609,6 +14612,9 @@ class _StringsAr extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -21847,6 +21853,9 @@ class _StringsDe extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -29085,6 +29094,9 @@ class _StringsEs extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -36323,6 +36335,9 @@ class _StringsFr extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -43561,6 +43576,9 @@ class _StringsId extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -50799,6 +50817,9 @@ class _StringsIt extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -58037,6 +58058,9 @@ class _StringsJa extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -65275,6 +65299,9 @@ class _StringsKo extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -72513,6 +72540,9 @@ class _StringsNl extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -79751,6 +79781,9 @@ class _StringsPtBr extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -86989,6 +87022,9 @@ class _StringsRu extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -94227,6 +94263,9 @@ class _StringsTh extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -101465,6 +101504,9 @@ class _StringsTr extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -108703,6 +108745,9 @@ class _StringsVi extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 // Path: <root>
@@ -115941,6 +115986,9 @@ class _StringsZhCn extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => '导出失败：${reason}';
 	@override String get audiobook_studio_export_unsupported => '当前 ffmpeg 不支持写入 M4B 章节';
 	@override String get audiobook_studio_export_running => '正在导出…';
+	@override String get audiobook_tts_concurrency => '并发请求数';
+	@override String get audiobook_tts_concurrency_hint => '服务端和显卡扛得住时，提高并发能加快合成；在线服务调高可能被限流';
+	@override String audiobook_tts_concurrency_default({required Object n}) => '默认（${n}）';
 }
 
 // Path: <root>
@@ -123179,6 +123227,9 @@ class _StringsZhHk extends _StringsEn {
 	@override String audiobook_studio_export_failed({required Object reason}) => 'Export failed: ${reason}';
 	@override String get audiobook_studio_export_unsupported => 'This ffmpeg build cannot write M4B chapters';
 	@override String get audiobook_studio_export_running => 'Exporting…';
+	@override String get audiobook_tts_concurrency => 'Parallel requests';
+	@override String get audiobook_tts_concurrency_hint => 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+	@override String audiobook_tts_concurrency_default({required Object n}) => 'Default (${n})';
 }
 
 /// Flat map(s) containing all translations.
@@ -130396,6 +130447,9 @@ extension on _StringsEn {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -137613,6 +137667,9 @@ extension on _StringsAr {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -144830,6 +144887,9 @@ extension on _StringsDe {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -152047,6 +152107,9 @@ extension on _StringsEs {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -159264,6 +159327,9 @@ extension on _StringsFr {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -166481,6 +166547,9 @@ extension on _StringsId {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -173698,6 +173767,9 @@ extension on _StringsIt {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -180915,6 +180987,9 @@ extension on _StringsJa {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -188132,6 +188207,9 @@ extension on _StringsKo {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -195349,6 +195427,9 @@ extension on _StringsNl {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -202566,6 +202647,9 @@ extension on _StringsPtBr {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -209783,6 +209867,9 @@ extension on _StringsRu {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -217000,6 +217087,9 @@ extension on _StringsTh {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -224217,6 +224307,9 @@ extension on _StringsTr {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -231434,6 +231527,9 @@ extension on _StringsVi {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
@@ -238651,6 +238747,9 @@ extension on _StringsZhCn {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => '导出失败：${reason}';
 			case 'audiobook_studio_export_unsupported': return '当前 ffmpeg 不支持写入 M4B 章节';
 			case 'audiobook_studio_export_running': return '正在导出…';
+			case 'audiobook_tts_concurrency': return '并发请求数';
+			case 'audiobook_tts_concurrency_hint': return '服务端和显卡扛得住时，提高并发能加快合成；在线服务调高可能被限流';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => '默认（${n}）';
 			default: return null;
 		}
 	}
@@ -245868,6 +245967,9 @@ extension on _StringsZhHk {
 			case 'audiobook_studio_export_failed': return ({required Object reason}) => 'Export failed: ${reason}';
 			case 'audiobook_studio_export_unsupported': return 'This ffmpeg build cannot write M4B chapters';
 			case 'audiobook_studio_export_running': return 'Exporting…';
+			case 'audiobook_tts_concurrency': return 'Parallel requests';
+			case 'audiobook_tts_concurrency_hint': return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+			case 'audiobook_tts_concurrency_default': return ({required Object n}) => 'Default (${n})';
 			default: return null;
 		}
 	}
