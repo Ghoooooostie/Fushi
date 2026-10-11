@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119527 (7031 per locale)
+/// Strings: 119544 (7032 per locale)
 ///
-/// Built on 2026-10-10 at 05:04 UTC
+/// Built on 2026-10-11 at 06:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10116,6 +10116,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not fetch ${n} of the original screenshots; they are not attached';
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -27056,6 +27060,11 @@ class _StringsAr extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -44386,6 +44395,11 @@ class _StringsDe extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -61776,6 +61790,11 @@ class _StringsEs extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -79245,6 +79264,11 @@ class _StringsFr extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -96369,6 +96393,11 @@ class _StringsId extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -113658,6 +113687,11 @@ class _StringsIt extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -129947,6 +129981,11 @@ class _StringsJa extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -146272,6 +146311,11 @@ class _StringsKo extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -163509,6 +163553,11 @@ class _StringsNl extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -180815,6 +180864,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -198067,6 +198121,11 @@ class _StringsRu extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -214997,6 +215056,11 @@ class _StringsTh extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -232130,6 +232194,11 @@ class _StringsTr extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -249190,6 +249259,11 @@ class _StringsVi extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 // Path: <root>
@@ -264797,6 +264871,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '已移除 ${n} 本 · 找回在书架上「仅从本机移除」的远端书';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => '边读边识别：已读 ${percent}% · 已识别 ${done} 条';
 }
 
 // Path: <root>
@@ -280537,6 +280616,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String remote_hidden_books_hint_count({required Object n}) =>
       '${n} removed · Bring back remote books you removed from this device\'s shelf';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
 }
 
 /// Flat map(s) containing all translations.
@@ -295111,6 +295195,9 @@ extension on _StringsEn {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -309680,6 +309767,9 @@ extension on _StringsAr {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -324325,6 +324415,9 @@ extension on _StringsDe {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -338952,6 +339045,9 @@ extension on _StringsEs {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -353597,6 +353693,9 @@ extension on _StringsFr {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -368186,6 +368285,9 @@ extension on _StringsId {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -382811,6 +382913,9 @@ extension on _StringsIt {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -397310,6 +397415,9 @@ extension on _StringsJa {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -411816,6 +411924,9 @@ extension on _StringsKo {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -426436,6 +426547,9 @@ extension on _StringsNl {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -441048,6 +441162,9 @@ extension on _StringsPtBr {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -455665,6 +455782,9 @@ extension on _StringsRu {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -470238,6 +470358,9 @@ extension on _StringsTh {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -484842,6 +484965,9 @@ extension on _StringsTr {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -499429,6 +499555,9 @@ extension on _StringsVi {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
@@ -513856,6 +513985,9 @@ extension on _StringsZhCn {
         return ({required Object n}) => '有 ${n} 张原截图没能取回，未附上';
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) => '已移除 ${n} 本 · 找回在书架上「仅从本机移除」的远端书';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            '边读边识别：已读 ${percent}% · 已识别 ${done} 条';
       default:
         return null;
     }
@@ -528300,6 +528432,9 @@ extension on _StringsZhHk {
       case 'remote_hidden_books_hint_count':
         return ({required Object n}) =>
             '${n} removed · Bring back remote books you removed from this device\'s shelf';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
       default:
         return null;
     }
