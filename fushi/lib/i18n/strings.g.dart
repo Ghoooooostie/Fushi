@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 121975 (7175 per locale)
+/// Strings: 122009 (7177 per locale)
 ///
-/// Built on 2026-10-11 at 09:25 UTC
+/// Built on 2026-10-11 at 09:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7337,6 +7337,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	String get audiobook_studio_cast_new_speaker => 'New name…';
+	String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -14541,6 +14543,8 @@ class _StringsAr extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -21745,6 +21749,8 @@ class _StringsDe extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -28949,6 +28955,8 @@ class _StringsEs extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -36153,6 +36161,8 @@ class _StringsFr extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -43357,6 +43367,8 @@ class _StringsId extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -50561,6 +50573,8 @@ class _StringsIt extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -57765,6 +57779,8 @@ class _StringsJa extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -64969,6 +64985,8 @@ class _StringsKo extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -72173,6 +72191,8 @@ class _StringsNl extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -79377,6 +79397,8 @@ class _StringsPtBr extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -86581,6 +86603,8 @@ class _StringsRu extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -93785,6 +93809,8 @@ class _StringsTh extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -100989,6 +101015,8 @@ class _StringsTr extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -108193,6 +108221,8 @@ class _StringsVi extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 // Path: <root>
@@ -115397,6 +115427,8 @@ class _StringsZhCn extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => '无法解析 AI 的回复';
 	@override String get audiobook_studio_failure_cache_busy => '部分句子正在播放，无法重新生成';
 	@override String get audiobook_studio_failure_verify_failed => '语音识别出错';
+	@override String get audiobook_studio_cast_new_speaker => '新名字…';
+	@override String get audiobook_studio_cast_reannotate_confirm => '会覆盖所选章节的 AI 标注，手动修改的保留';
 }
 
 // Path: <root>
@@ -122601,6 +122633,8 @@ class _StringsZhHk extends _StringsEn {
 	@override String get audiobook_studio_cast_failure_bad_output => 'The AI reply could not be understood';
 	@override String get audiobook_studio_failure_cache_busy => 'Some sentences are playing and could not be regenerated';
 	@override String get audiobook_studio_failure_verify_failed => 'Speech recognition failed';
+	@override String get audiobook_studio_cast_new_speaker => 'New name…';
+	@override String get audiobook_studio_cast_reannotate_confirm => 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 }
 
 /// Flat map(s) containing all translations.
@@ -129784,6 +129818,8 @@ extension on _StringsEn {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -136967,6 +137003,8 @@ extension on _StringsAr {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -144150,6 +144188,8 @@ extension on _StringsDe {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -151333,6 +151373,8 @@ extension on _StringsEs {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -158516,6 +158558,8 @@ extension on _StringsFr {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -165699,6 +165743,8 @@ extension on _StringsId {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -172882,6 +172928,8 @@ extension on _StringsIt {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -180065,6 +180113,8 @@ extension on _StringsJa {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -187248,6 +187298,8 @@ extension on _StringsKo {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -194431,6 +194483,8 @@ extension on _StringsNl {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -201614,6 +201668,8 @@ extension on _StringsPtBr {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -208797,6 +208853,8 @@ extension on _StringsRu {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -215980,6 +216038,8 @@ extension on _StringsTh {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -223163,6 +223223,8 @@ extension on _StringsTr {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -230346,6 +230408,8 @@ extension on _StringsVi {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
@@ -237529,6 +237593,8 @@ extension on _StringsZhCn {
 			case 'audiobook_studio_cast_failure_bad_output': return '无法解析 AI 的回复';
 			case 'audiobook_studio_failure_cache_busy': return '部分句子正在播放，无法重新生成';
 			case 'audiobook_studio_failure_verify_failed': return '语音识别出错';
+			case 'audiobook_studio_cast_new_speaker': return '新名字…';
+			case 'audiobook_studio_cast_reannotate_confirm': return '会覆盖所选章节的 AI 标注，手动修改的保留';
 			default: return null;
 		}
 	}
@@ -244712,6 +244778,8 @@ extension on _StringsZhHk {
 			case 'audiobook_studio_cast_failure_bad_output': return 'The AI reply could not be understood';
 			case 'audiobook_studio_failure_cache_busy': return 'Some sentences are playing and could not be regenerated';
 			case 'audiobook_studio_failure_verify_failed': return 'Speech recognition failed';
+			case 'audiobook_studio_cast_new_speaker': return 'New name…';
+			case 'audiobook_studio_cast_reannotate_confirm': return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
 			default: return null;
 		}
 	}
