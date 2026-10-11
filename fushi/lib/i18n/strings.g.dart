@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119544 (7032 per locale)
+/// Strings: 119561 (7033 per locale)
 ///
-/// Built on 2026-10-11 at 06:17 UTC
+/// Built on 2026-10-11 at 07:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10120,6 +10120,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -27065,6 +27070,12 @@ class _StringsAr extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -44400,6 +44411,12 @@ class _StringsDe extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -61795,6 +61812,12 @@ class _StringsEs extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -79269,6 +79292,12 @@ class _StringsFr extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -96398,6 +96427,12 @@ class _StringsId extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -113692,6 +113727,12 @@ class _StringsIt extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -129986,6 +130027,12 @@ class _StringsJa extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -146316,6 +146363,12 @@ class _StringsKo extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -163558,6 +163611,12 @@ class _StringsNl extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -180869,6 +180928,12 @@ class _StringsPtBr extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -198126,6 +198191,12 @@ class _StringsRu extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -215061,6 +215132,12 @@ class _StringsTh extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -232199,6 +232276,12 @@ class _StringsTr extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -249264,6 +249347,12 @@ class _StringsVi extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -264876,6 +264965,12 @@ class _StringsZhCn extends _StringsEn {
     required Object percent,
     required Object done,
   }) => '边读边识别：已读 ${percent}% · 已识别 ${done} 条';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI 重读：${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -280621,6 +280716,12 @@ class _StringsZhHk extends _StringsEn {
     required Object percent,
     required Object done,
   }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 /// Flat map(s) containing all translations.
@@ -295198,6 +295299,12 @@ extension on _StringsEn {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -309770,6 +309877,12 @@ extension on _StringsAr {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -324418,6 +324531,12 @@ extension on _StringsDe {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -339048,6 +339167,12 @@ extension on _StringsEs {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -353696,6 +353821,12 @@ extension on _StringsFr {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -368288,6 +368419,12 @@ extension on _StringsId {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -382916,6 +383053,12 @@ extension on _StringsIt {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -397418,6 +397561,12 @@ extension on _StringsJa {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -411927,6 +412076,12 @@ extension on _StringsKo {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -426550,6 +426705,12 @@ extension on _StringsNl {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -441165,6 +441326,12 @@ extension on _StringsPtBr {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -455785,6 +455952,12 @@ extension on _StringsRu {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -470361,6 +470534,12 @@ extension on _StringsTh {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -484968,6 +485147,12 @@ extension on _StringsTr {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -499558,6 +499743,12 @@ extension on _StringsVi {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -513988,6 +514179,12 @@ extension on _StringsZhCn {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             '边读边识别：已读 ${percent}% · 已识别 ${done} 条';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI 重读：${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -528435,6 +528632,12 @@ extension on _StringsZhHk {
       case 'video_subtitle_graphic_ocr_job_extracting_live':
         return ({required Object percent, required Object done}) =>
             'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
