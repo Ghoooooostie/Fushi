@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119799 (7047 per locale)
+/// Strings: 119850 (7050 per locale)
 ///
-/// Built on 2026-10-12 at 18:06 UTC
+/// Built on 2026-10-12 at 18:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10141,6 +10141,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String feedback_reply_notice({required Object n}) =>
       'Developers updated ${n} of your feedback item(s)';
   String get feedback_reply_notice_open => 'View';
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -27122,6 +27127,14 @@ class _StringsAr extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -44493,6 +44506,14 @@ class _StringsDe extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -61924,6 +61945,14 @@ class _StringsEs extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -79434,6 +79463,14 @@ class _StringsFr extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -96599,6 +96636,14 @@ class _StringsId extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -113929,6 +113974,14 @@ class _StringsIt extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -130259,6 +130312,14 @@ class _StringsJa extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -146625,6 +146686,14 @@ class _StringsKo extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -163903,6 +163972,14 @@ class _StringsNl extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -181250,6 +181327,14 @@ class _StringsPtBr extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -198543,6 +198628,14 @@ class _StringsRu extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -215514,6 +215607,14 @@ class _StringsTh extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -232688,6 +232789,14 @@ class _StringsTr extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -249789,6 +249898,14 @@ class _StringsVi extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -265432,6 +265549,12 @@ class _StringsZhCn extends _StringsEn {
   String feedback_reply_notice({required Object n}) => '开发者更新了 ${n} 条你的反馈';
   @override
   String get feedback_reply_notice_open => '查看';
+  @override
+  String get feedback_reply_notification_title => '开发者回复了你的反馈';
+  @override
+  String get feedback_reply_notify_setting => '反馈有新回复时通知我';
+  @override
+  String get feedback_reply_notify_setting_hint => '在后台检查你提交的反馈有没有新回复，有就发系统通知';
 }
 
 // Path: <root>
@@ -281212,6 +281335,14 @@ class _StringsZhHk extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 /// Flat map(s) containing all translations.
@@ -295819,6 +295950,12 @@ extension on _StringsEn {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -310421,6 +310558,12 @@ extension on _StringsAr {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -325099,6 +325242,12 @@ extension on _StringsDe {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -339759,6 +339908,12 @@ extension on _StringsEs {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -354437,6 +354592,12 @@ extension on _StringsFr {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -369059,6 +369220,12 @@ extension on _StringsId {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -383717,6 +383884,12 @@ extension on _StringsIt {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -398249,6 +398422,12 @@ extension on _StringsJa {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -412788,6 +412967,12 @@ extension on _StringsKo {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -427441,6 +427626,12 @@ extension on _StringsNl {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -442086,6 +442277,12 @@ extension on _StringsPtBr {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -456736,6 +456933,12 @@ extension on _StringsRu {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -471342,6 +471545,12 @@ extension on _StringsTh {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -485979,6 +486188,12 @@ extension on _StringsTr {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -500599,6 +500814,12 @@ extension on _StringsVi {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -515058,6 +515279,12 @@ extension on _StringsZhCn {
         return ({required Object n}) => '开发者更新了 ${n} 条你的反馈';
       case 'feedback_reply_notice_open':
         return '查看';
+      case 'feedback_reply_notification_title':
+        return '开发者回复了你的反馈';
+      case 'feedback_reply_notify_setting':
+        return '反馈有新回复时通知我';
+      case 'feedback_reply_notify_setting_hint':
+        return '在后台检查你提交的反馈有没有新回复，有就发系统通知';
       default:
         return null;
     }
@@ -529535,6 +529762,12 @@ extension on _StringsZhHk {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
