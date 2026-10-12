@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119765 (7045 per locale)
+/// Strings: 120207 (7071 per locale)
 ///
-/// Built on 2026-10-11 at 07:30 UTC
+/// Built on 2026-10-12 at 18:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10138,6 +10138,56 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  String get interconnect_host_update_title => 'Host version';
+  String get interconnect_host_update_action => 'Update host';
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -27114,6 +27164,82 @@ class _StringsAr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -44480,6 +44606,82 @@ class _StringsDe extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -61906,6 +62108,82 @@ class _StringsEs extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -79411,6 +79689,82 @@ class _StringsFr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -96571,6 +96925,82 @@ class _StringsId extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -113896,6 +114326,82 @@ class _StringsIt extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -130221,6 +130727,82 @@ class _StringsJa extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -146582,6 +147164,82 @@ class _StringsKo extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -163855,6 +164513,82 @@ class _StringsNl extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -181197,6 +181931,82 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -198485,6 +199295,82 @@ class _StringsRu extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -215451,6 +216337,82 @@ class _StringsTh extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -232620,6 +233582,82 @@ class _StringsTr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -249716,6 +250754,82 @@ class _StringsVi extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 // Path: <root>
@@ -265355,6 +266469,70 @@ class _StringsZhCn extends _StringsEn {
       '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
   @override
   String get book_import_no_book_transcribe_action => '转录并生成书籍';
+  @override
+  String get interconnect_host_update_title => '主机版本';
+  @override
+  String get interconnect_host_update_action => '更新主机';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => '主机 ${current}，可更新到 ${latest}';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      '主机已是最新（${version}）';
+  @override
+  String get interconnect_host_update_checking => '正在获取主机版本…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      '主机正在下载更新（${percent}%）';
+  @override
+  String get interconnect_host_update_installing => '主机正在安装更新';
+  @override
+  String get interconnect_host_update_awaiting_confirm => '请在主机设备上确认安装';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      '请先在主机设备上允许 Fushi 安装应用，然后再更新一次';
+  @override
+  String get interconnect_host_update_restarting => '主机正在重启，等待重新连接…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      '主机已更新到 ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      '主机更新失败：${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      '主机还没有重新连上，请到主机设备上查看';
+  @override
+  String get interconnect_host_update_reason_disabled => '主机未开启「允许已配对设备远程更新本机」';
+  @override
+  String get interconnect_host_update_reason_unsupported => '主机所在平台不支持远程更新';
+  @override
+  String get interconnect_host_update_reason_zone => '只能在局域网内让主机更新';
+  @override
+  String get interconnect_host_update_reason_pairing => '需要重新配对主机后才能远程更新';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      '主机版本不支持远程更新，请先在主机上手动更新一次';
+  @override
+  String get interconnect_host_update_reason_busy => '主机正在更新，请稍后再试';
+  @override
+  String get interconnect_host_update_reason_retry => '请求已失效，请重试';
+  @override
+  String get interconnect_host_update_reason_no_update => '主机暂无可用更新';
+  @override
+  String get interconnect_host_update_confirm_title => '更新主机？';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      '主机将下载 ${version} 并重启，主机上正在播放或同步的内容会中断。';
+  @override
+  String get interconnect_host_update_host_toggle => '允许已配对设备远程更新本机';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      '局域网内的已配对设备可以查看本机版本并让本机更新。Android 上仍需在本机确认安装。';
+  @override
+  String get interconnect_host_update_remote_started => '已配对设备让本机开始更新';
 }
 
 // Path: <root>
@@ -281130,6 +282308,82 @@ class _StringsZhHk extends _StringsEn {
       '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
   @override
   String get book_import_no_book_transcribe_action => '轉錄並生成書籍';
+  @override
+  String get interconnect_host_update_title => 'Host version';
+  @override
+  String get interconnect_host_update_action => 'Update host';
+  @override
+  String interconnect_host_update_available({
+    required Object current,
+    required Object latest,
+  }) => 'Host ${current}, update to ${latest} available';
+  @override
+  String interconnect_host_update_up_to_date({required Object version}) =>
+      'Host is up to date (${version})';
+  @override
+  String get interconnect_host_update_checking => 'Checking the host version…';
+  @override
+  String interconnect_host_update_downloading({required Object percent}) =>
+      'Host is downloading the update (${percent}%)';
+  @override
+  String get interconnect_host_update_installing =>
+      'Host is installing the update';
+  @override
+  String get interconnect_host_update_awaiting_confirm =>
+      'Confirm the installation on the host device';
+  @override
+  String get interconnect_host_update_awaiting_permission =>
+      'Allow Fushi to install apps on the host device, then update again';
+  @override
+  String get interconnect_host_update_restarting =>
+      'Host is restarting, reconnecting…';
+  @override
+  String interconnect_host_update_done({required Object version}) =>
+      'Host updated to ${version}';
+  @override
+  String interconnect_host_update_failed({required Object message}) =>
+      'Host update failed: ${message}';
+  @override
+  String get interconnect_host_update_reconnect_timeout =>
+      'The host hasn\'t come back yet. Check it on the host device';
+  @override
+  String get interconnect_host_update_reason_disabled =>
+      'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+  @override
+  String get interconnect_host_update_reason_unsupported =>
+      'The host\'s platform can\'t be updated remotely';
+  @override
+  String get interconnect_host_update_reason_zone =>
+      'Host updates can only be started on the local network';
+  @override
+  String get interconnect_host_update_reason_pairing =>
+      'Pair with the host again to use remote update';
+  @override
+  String get interconnect_host_update_reason_unavailable =>
+      'This host version doesn\'t support remote update. Update it on the host once';
+  @override
+  String get interconnect_host_update_reason_busy =>
+      'The host is already updating, try again shortly';
+  @override
+  String get interconnect_host_update_reason_retry =>
+      'The request expired, try again';
+  @override
+  String get interconnect_host_update_reason_no_update =>
+      'No update available for the host';
+  @override
+  String get interconnect_host_update_confirm_title => 'Update the host?';
+  @override
+  String interconnect_host_update_confirm_body({required Object version}) =>
+      'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+  @override
+  String get interconnect_host_update_host_toggle =>
+      'Allow paired devices to update this device';
+  @override
+  String get interconnect_host_update_host_toggle_desc =>
+      'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+  @override
+  String get interconnect_host_update_remote_started =>
+      'A paired device started updating this app';
 }
 
 /// Flat map(s) containing all translations.
@@ -295732,6 +296986,61 @@ extension on _StringsEn {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -310329,6 +311638,61 @@ extension on _StringsAr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -325002,6 +326366,61 @@ extension on _StringsDe {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -339657,6 +341076,61 @@ extension on _StringsEs {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -354330,6 +355804,61 @@ extension on _StringsFr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -368947,6 +370476,61 @@ extension on _StringsId {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -383600,6 +385184,61 @@ extension on _StringsIt {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -398127,6 +399766,61 @@ extension on _StringsJa {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -412661,6 +414355,61 @@ extension on _StringsKo {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -427309,6 +429058,61 @@ extension on _StringsNl {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -441949,6 +443753,61 @@ extension on _StringsPtBr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -456594,6 +458453,61 @@ extension on _StringsRu {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -471195,6 +473109,61 @@ extension on _StringsTh {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -485827,6 +487796,61 @@ extension on _StringsTr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -500442,6 +502466,61 @@ extension on _StringsVi {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
@@ -514897,6 +516976,60 @@ extension on _StringsZhCn {
         return '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
       case 'book_import_no_book_transcribe_action':
         return '转录并生成书籍';
+      case 'interconnect_host_update_title':
+        return '主机版本';
+      case 'interconnect_host_update_action':
+        return '更新主机';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            '主机 ${current}，可更新到 ${latest}';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => '主机已是最新（${version}）';
+      case 'interconnect_host_update_checking':
+        return '正在获取主机版本…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) => '主机正在下载更新（${percent}%）';
+      case 'interconnect_host_update_installing':
+        return '主机正在安装更新';
+      case 'interconnect_host_update_awaiting_confirm':
+        return '请在主机设备上确认安装';
+      case 'interconnect_host_update_awaiting_permission':
+        return '请先在主机设备上允许 Fushi 安装应用，然后再更新一次';
+      case 'interconnect_host_update_restarting':
+        return '主机正在重启，等待重新连接…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => '主机已更新到 ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => '主机更新失败：${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return '主机还没有重新连上，请到主机设备上查看';
+      case 'interconnect_host_update_reason_disabled':
+        return '主机未开启「允许已配对设备远程更新本机」';
+      case 'interconnect_host_update_reason_unsupported':
+        return '主机所在平台不支持远程更新';
+      case 'interconnect_host_update_reason_zone':
+        return '只能在局域网内让主机更新';
+      case 'interconnect_host_update_reason_pairing':
+        return '需要重新配对主机后才能远程更新';
+      case 'interconnect_host_update_reason_unavailable':
+        return '主机版本不支持远程更新，请先在主机上手动更新一次';
+      case 'interconnect_host_update_reason_busy':
+        return '主机正在更新，请稍后再试';
+      case 'interconnect_host_update_reason_retry':
+        return '请求已失效，请重试';
+      case 'interconnect_host_update_reason_no_update':
+        return '主机暂无可用更新';
+      case 'interconnect_host_update_confirm_title':
+        return '更新主机？';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            '主机将下载 ${version} 并重启，主机上正在播放或同步的内容会中断。';
+      case 'interconnect_host_update_host_toggle':
+        return '允许已配对设备远程更新本机';
+      case 'interconnect_host_update_host_toggle_desc':
+        return '局域网内的已配对设备可以查看本机版本并让本机更新。Android 上仍需在本机确认安装。';
+      case 'interconnect_host_update_remote_started':
+        return '已配对设备让本机开始更新';
       default:
         return null;
     }
@@ -529369,6 +531502,61 @@ extension on _StringsZhHk {
         return '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
       case 'book_import_no_book_transcribe_action':
         return '轉錄並生成書籍';
+      case 'interconnect_host_update_title':
+        return 'Host version';
+      case 'interconnect_host_update_action':
+        return 'Update host';
+      case 'interconnect_host_update_available':
+        return ({required Object current, required Object latest}) =>
+            'Host ${current}, update to ${latest} available';
+      case 'interconnect_host_update_up_to_date':
+        return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_host_update_checking':
+        return 'Checking the host version…';
+      case 'interconnect_host_update_downloading':
+        return ({required Object percent}) =>
+            'Host is downloading the update (${percent}%)';
+      case 'interconnect_host_update_installing':
+        return 'Host is installing the update';
+      case 'interconnect_host_update_awaiting_confirm':
+        return 'Confirm the installation on the host device';
+      case 'interconnect_host_update_awaiting_permission':
+        return 'Allow Fushi to install apps on the host device, then update again';
+      case 'interconnect_host_update_restarting':
+        return 'Host is restarting, reconnecting…';
+      case 'interconnect_host_update_done':
+        return ({required Object version}) => 'Host updated to ${version}';
+      case 'interconnect_host_update_failed':
+        return ({required Object message}) => 'Host update failed: ${message}';
+      case 'interconnect_host_update_reconnect_timeout':
+        return 'The host hasn\'t come back yet. Check it on the host device';
+      case 'interconnect_host_update_reason_disabled':
+        return 'Remote update is off on the host (turn on “Allow paired devices to update this device” there)';
+      case 'interconnect_host_update_reason_unsupported':
+        return 'The host\'s platform can\'t be updated remotely';
+      case 'interconnect_host_update_reason_zone':
+        return 'Host updates can only be started on the local network';
+      case 'interconnect_host_update_reason_pairing':
+        return 'Pair with the host again to use remote update';
+      case 'interconnect_host_update_reason_unavailable':
+        return 'This host version doesn\'t support remote update. Update it on the host once';
+      case 'interconnect_host_update_reason_busy':
+        return 'The host is already updating, try again shortly';
+      case 'interconnect_host_update_reason_retry':
+        return 'The request expired, try again';
+      case 'interconnect_host_update_reason_no_update':
+        return 'No update available for the host';
+      case 'interconnect_host_update_confirm_title':
+        return 'Update the host?';
+      case 'interconnect_host_update_confirm_body':
+        return ({required Object version}) =>
+            'The host will download ${version} and restart. Anything playing or syncing on it will be interrupted.';
+      case 'interconnect_host_update_host_toggle':
+        return 'Allow paired devices to update this device';
+      case 'interconnect_host_update_host_toggle_desc':
+        return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
+      case 'interconnect_host_update_remote_started':
+        return 'A paired device started updating this app';
       default:
         return null;
     }
