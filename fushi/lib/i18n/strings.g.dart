@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119765 (7045 per locale)
+/// Strings: 119782 (7046 per locale)
 ///
-/// Built on 2026-10-11 at 07:30 UTC
+/// Built on 2026-10-12 at 18:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10138,6 +10138,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -27114,6 +27115,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -44480,6 +44483,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -61906,6 +61911,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -79411,6 +79418,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -96571,6 +96580,8 @@ class _StringsId extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -113896,6 +113907,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -130221,6 +130234,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -146582,6 +146597,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -163855,6 +163872,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -181197,6 +181216,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -198485,6 +198506,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -215451,6 +215474,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -232620,6 +232645,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -249716,6 +249743,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -265355,6 +265384,8 @@ class _StringsZhCn extends _StringsEn {
       '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
   @override
   String get book_import_no_book_transcribe_action => '转录并生成书籍';
+  @override
+  String get local_audio_source_reorder_tooltip => '拖动或点按调整顺序';
 }
 
 // Path: <root>
@@ -281130,6 +281161,8 @@ class _StringsZhHk extends _StringsEn {
       '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
   @override
   String get book_import_no_book_transcribe_action => '轉錄並生成書籍';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 /// Flat map(s) containing all translations.
@@ -295732,6 +295765,8 @@ extension on _StringsEn {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -310329,6 +310364,8 @@ extension on _StringsAr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -325002,6 +325039,8 @@ extension on _StringsDe {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -339657,6 +339696,8 @@ extension on _StringsEs {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -354330,6 +354371,8 @@ extension on _StringsFr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -368947,6 +368990,8 @@ extension on _StringsId {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -383600,6 +383645,8 @@ extension on _StringsIt {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -398127,6 +398174,8 @@ extension on _StringsJa {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -412661,6 +412710,8 @@ extension on _StringsKo {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -427309,6 +427360,8 @@ extension on _StringsNl {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -441949,6 +442002,8 @@ extension on _StringsPtBr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -456594,6 +456649,8 @@ extension on _StringsRu {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -471195,6 +471252,8 @@ extension on _StringsTh {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -485827,6 +485886,8 @@ extension on _StringsTr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -500442,6 +500503,8 @@ extension on _StringsVi {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -514897,6 +514960,8 @@ extension on _StringsZhCn {
         return '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
       case 'book_import_no_book_transcribe_action':
         return '转录并生成书籍';
+      case 'local_audio_source_reorder_tooltip':
+        return '拖动或点按调整顺序';
       default:
         return null;
     }
@@ -529369,6 +529434,8 @@ extension on _StringsZhHk {
         return '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
       case 'book_import_no_book_transcribe_action':
         return '轉錄並生成書籍';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
