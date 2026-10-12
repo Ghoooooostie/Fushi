@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119765 (7045 per locale)
+/// Strings: 119799 (7047 per locale)
 ///
-/// Built on 2026-10-11 at 07:30 UTC
+/// Built on 2026-10-12 at 17:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10138,6 +10138,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -27114,6 +27118,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -44480,6 +44490,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -61906,6 +61922,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -79411,6 +79433,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -96571,6 +96599,12 @@ class _StringsId extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -113896,6 +113930,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -130221,6 +130261,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -146582,6 +146628,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -163855,6 +163907,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -181197,6 +181255,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -198485,6 +198549,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -215451,6 +215521,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -232620,6 +232696,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -249716,6 +249798,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 // Path: <root>
@@ -265355,6 +265443,11 @@ class _StringsZhCn extends _StringsEn {
       '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
   @override
   String get book_import_no_book_transcribe_action => '转录并生成书籍';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle => '无字幕轨时暂停也识别画面文字';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      '适用于烧录在画面里的硬字幕：没有加载文本字幕时，暂停后识别画面文字，点字即可查词';
 }
 
 // Path: <root>
@@ -281130,6 +281223,12 @@ class _StringsZhHk extends _StringsEn {
       '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
   @override
   String get book_import_no_book_transcribe_action => '轉錄並生成書籍';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle =>
+      'OCR on pause without subtitle track';
+  @override
+  String get video_setting_pause_ocr_hard_subtitle_hint =>
+      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
 }
 
 /// Flat map(s) containing all translations.
@@ -295732,6 +295831,10 @@ extension on _StringsEn {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -310329,6 +310432,10 @@ extension on _StringsAr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -325002,6 +325109,10 @@ extension on _StringsDe {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -339657,6 +339768,10 @@ extension on _StringsEs {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -354330,6 +354445,10 @@ extension on _StringsFr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -368947,6 +369066,10 @@ extension on _StringsId {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -383600,6 +383723,10 @@ extension on _StringsIt {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -398127,6 +398254,10 @@ extension on _StringsJa {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -412661,6 +412792,10 @@ extension on _StringsKo {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -427309,6 +427444,10 @@ extension on _StringsNl {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -441949,6 +442088,10 @@ extension on _StringsPtBr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -456594,6 +456737,10 @@ extension on _StringsRu {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -471195,6 +471342,10 @@ extension on _StringsTh {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -485827,6 +485978,10 @@ extension on _StringsTr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -500442,6 +500597,10 @@ extension on _StringsVi {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
@@ -514897,6 +515056,10 @@ extension on _StringsZhCn {
         return '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
       case 'book_import_no_book_transcribe_action':
         return '转录并生成书籍';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return '无字幕轨时暂停也识别画面文字';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return '适用于烧录在画面里的硬字幕：没有加载文本字幕时，暂停后识别画面文字，点字即可查词';
       default:
         return null;
     }
@@ -529369,6 +529532,10 @@ extension on _StringsZhHk {
         return '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
       case 'book_import_no_book_transcribe_action':
         return '轉錄並生成書籍';
+      case 'video_setting_pause_ocr_hard_subtitle':
+        return 'OCR on pause without subtitle track';
+      case 'video_setting_pause_ocr_hard_subtitle_hint':
+        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       default:
         return null;
     }
