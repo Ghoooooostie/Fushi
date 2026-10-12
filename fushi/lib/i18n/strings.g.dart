@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119765 (7045 per locale)
+/// Strings: 119935 (7055 per locale)
 ///
-/// Built on 2026-10-11 at 07:30 UTC
+/// Built on 2026-10-12 at 18:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10138,6 +10138,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  String get ai_provider_api_key_enable => 'Use this key';
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  String get ai_provider_api_key_remove => 'Remove this key';
+  String get ai_provider_api_keys_add => 'Add another API key';
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -27114,6 +27131,33 @@ class _StringsAr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -44480,6 +44524,33 @@ class _StringsDe extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -61906,6 +61977,33 @@ class _StringsEs extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -79411,6 +79509,33 @@ class _StringsFr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -96571,6 +96696,33 @@ class _StringsId extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -113896,6 +114048,33 @@ class _StringsIt extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -130221,6 +130400,33 @@ class _StringsJa extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -146582,6 +146788,33 @@ class _StringsKo extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -163855,6 +164088,33 @@ class _StringsNl extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -181197,6 +181457,33 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -198485,6 +198772,33 @@ class _StringsRu extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -215451,6 +215765,33 @@ class _StringsTh extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -232620,6 +232961,33 @@ class _StringsTr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -249716,6 +250084,33 @@ class _StringsVi extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -265355,6 +265750,32 @@ class _StringsZhCn extends _StringsEn {
       '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
   @override
   String get book_import_no_book_transcribe_action => '转录并生成书籍';
+  @override
+  String get ai_error_quota_exhausted => '余额或额度不足';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API 密钥 ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) => '末尾 ${tail} · 正常';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => '末尾 ${tail} · 冷却中，${time} 后再用（${reason}）';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      '末尾 ${tail} · 已停用';
+  @override
+  String get ai_provider_api_key_enable => '启用此密钥';
+  @override
+  String get ai_provider_api_key_disable => '停用此密钥';
+  @override
+  String get ai_provider_api_key_remove => '删除此密钥';
+  @override
+  String get ai_provider_api_keys_add => '再添加一个 API 密钥';
+  @override
+  String get ai_provider_api_keys_summary =>
+      '配置多个密钥时，某个密钥被拒绝、限流或额度用尽，会自动换下一个重试；失败的密钥进入冷却，到期后再用。';
 }
 
 // Path: <root>
@@ -281130,6 +281551,33 @@ class _StringsZhHk extends _StringsEn {
       '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
   @override
   String get book_import_no_book_transcribe_action => '轉錄並生成書籍';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 /// Flat map(s) containing all translations.
@@ -295732,6 +296180,30 @@ extension on _StringsEn {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -310329,6 +310801,30 @@ extension on _StringsAr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -325002,6 +325498,30 @@ extension on _StringsDe {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -339657,6 +340177,30 @@ extension on _StringsEs {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -354330,6 +354874,30 @@ extension on _StringsFr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -368947,6 +369515,30 @@ extension on _StringsId {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -383600,6 +384192,30 @@ extension on _StringsIt {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -398127,6 +398743,30 @@ extension on _StringsJa {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -412661,6 +413301,30 @@ extension on _StringsKo {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -427309,6 +427973,30 @@ extension on _StringsNl {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -441949,6 +442637,30 @@ extension on _StringsPtBr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -456594,6 +457306,30 @@ extension on _StringsRu {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -471195,6 +471931,30 @@ extension on _StringsTh {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -485827,6 +486587,30 @@ extension on _StringsTr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -500442,6 +501226,30 @@ extension on _StringsVi {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -514897,6 +515705,30 @@ extension on _StringsZhCn {
         return '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
       case 'book_import_no_book_transcribe_action':
         return '转录并生成书籍';
+      case 'ai_error_quota_exhausted':
+        return '余额或额度不足';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API 密钥 ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => '末尾 ${tail} · 正常';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => '末尾 ${tail} · 冷却中，${time} 后再用（${reason}）';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => '末尾 ${tail} · 已停用';
+      case 'ai_provider_api_key_enable':
+        return '启用此密钥';
+      case 'ai_provider_api_key_disable':
+        return '停用此密钥';
+      case 'ai_provider_api_key_remove':
+        return '删除此密钥';
+      case 'ai_provider_api_keys_add':
+        return '再添加一个 API 密钥';
+      case 'ai_provider_api_keys_summary':
+        return '配置多个密钥时，某个密钥被拒绝、限流或额度用尽，会自动换下一个重试；失败的密钥进入冷却，到期后再用。';
       default:
         return null;
     }
@@ -529369,6 +530201,30 @@ extension on _StringsZhHk {
         return '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
       case 'book_import_no_book_transcribe_action':
         return '轉錄並生成書籍';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
