@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119765 (7045 per locale)
+/// Strings: 119935 (7055 per locale)
 ///
-/// Built on 2026-10-11 at 07:30 UTC
+/// Built on 2026-10-12 at 16:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8533,8 +8533,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Title, author, cover and finish time of the works you finished or are reading';
   String get leaderboard_intro_public_chars =>
       'Characters read per day (by date)';
-  String get leaderboard_signin_consent =>
-      'I understand what will be public (listed above) and agree to publish it.';
   String get leaderboard_error_too_many_devices =>
       'This account is signed in on too many devices. On a device that is already signed in, unlink an old device (Account → Signed-in devices).';
   String get leaderboard_error_unknown_account =>
@@ -10138,6 +10136,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  String get feedback_pending_retry => 'Retry upload';
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  String get feedback_detail_add_shot => 'Add screenshot';
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  String get leaderboard_summary_total_week => 'Characters this week';
+  String get leaderboard_summary_total_month => 'Characters this month';
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -24419,9 +24434,6 @@ class _StringsAr extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'الأحرف المقروءة يوميًا (حسب التاريخ)';
   @override
-  String get leaderboard_signin_consent =>
-      'أفهم ما سيكون عامًا (المذكور أعلاه) وأوافق على نشره.';
-  @override
   String get leaderboard_error_too_many_devices =>
       'تم تسجيل الدخول إلى هذا الحساب على عدد كبير جدًا من الأجهزة. على جهاز مسجَّل الدخول بالفعل، افصل جهازًا قديمًا (الحساب ← الأجهزة المسجَّل الدخول إليها).';
   @override
@@ -27114,6 +27126,34 @@ class _StringsAr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -41769,9 +41809,6 @@ class _StringsDe extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'Pro Tag gelesene Zeichen (nach Datum)';
   @override
-  String get leaderboard_signin_consent =>
-      'Ich verstehe, was öffentlich sein wird (oben aufgeführt), und stimme der Veröffentlichung zu.';
-  @override
   String get leaderboard_error_too_many_devices =>
       'Dieses Konto ist auf zu vielen Geräten angemeldet. Trenne auf einem bereits angemeldeten Gerät ein altes Gerät (Konto → Angemeldete Geräte).';
   @override
@@ -44480,6 +44517,34 @@ class _StringsDe extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -59195,9 +59260,6 @@ class _StringsEs extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'Caracteres leídos por día (por fecha)';
   @override
-  String get leaderboard_signin_consent =>
-      'Entiendo qué será público (indicado arriba) y acepto publicarlo.';
-  @override
   String get leaderboard_error_too_many_devices =>
       'Esta cuenta tiene sesión iniciada en demasiados dispositivos. En un dispositivo que ya tenga sesión, desvincula uno antiguo (Cuenta → Dispositivos con sesión iniciada).';
   @override
@@ -61906,6 +61968,34 @@ class _StringsEs extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -76696,9 +76786,6 @@ class _StringsFr extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'Caractères lus par jour (par date)';
   @override
-  String get leaderboard_signin_consent =>
-      'Je comprends ce qui sera public (indiqué ci-dessus) et j\'accepte de le publier.';
-  @override
   String get leaderboard_error_too_many_devices =>
       'Ce compte est connecté sur trop d\'appareils. Sur un appareil déjà connecté, dissociez un ancien appareil (Compte → Appareils connectés).';
   @override
@@ -79411,6 +79498,34 @@ class _StringsFr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -93868,9 +93983,6 @@ class _StringsId extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'Karakter dibaca per hari (menurut tanggal)';
   @override
-  String get leaderboard_signin_consent =>
-      'Saya mengerti apa yang akan dipublikasikan (tercantum di atas) dan setuju untuk menerbitkannya.';
-  @override
   String get leaderboard_error_too_many_devices =>
       'Akun ini masuk di terlalu banyak perangkat. Di perangkat yang sudah masuk, putuskan tautan perangkat lama (Akun → Perangkat yang masuk).';
   @override
@@ -96571,6 +96683,34 @@ class _StringsId extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -111185,9 +111325,6 @@ class _StringsIt extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'Caratteri letti al giorno (per data)';
   @override
-  String get leaderboard_signin_consent =>
-      'Capisco cosa sarà pubblico (elencato sopra) e accetto di pubblicarlo.';
-  @override
   String get leaderboard_error_too_many_devices =>
       'Questo account ha effettuato l\'accesso su troppi dispositivi. Su un dispositivo già connesso, scollega un vecchio dispositivo (Account → Dispositivi connessi).';
   @override
@@ -113896,6 +114033,34 @@ class _StringsIt extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -127574,8 +127739,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get leaderboard_intro_public_chars => '1 日ごとの読了文字数（日付別）';
   @override
-  String get leaderboard_signin_consent => '公開される内容（上記）を理解し、公開することに同意します。';
-  @override
   String get leaderboard_error_too_many_devices =>
       'このアカウントは多くのデバイスでサインインされています。すでにサインイン済みのデバイスで、古いデバイスのリンクを解除してください（アカウント → サインイン中のデバイス）。';
   @override
@@ -130221,6 +130384,34 @@ class _StringsJa extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -143905,9 +144096,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get leaderboard_intro_public_chars => '날짜별 하루 읽은 글자 수';
   @override
-  String get leaderboard_signin_consent =>
-      '공개되는 정보(위에 나열됨)를 이해했으며 공개하는 데 동의합니다.';
-  @override
   String get leaderboard_error_too_many_devices =>
       '이 계정이 너무 많은 기기에서 로그인되어 있습니다. 이미 로그인된 기기에서 이전 기기의 연결을 해제하세요(계정 → 로그인된 기기).';
   @override
@@ -146582,6 +146770,34 @@ class _StringsKo extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -161146,9 +161362,6 @@ class _StringsNl extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'Gelezen tekens per dag (op datum)';
   @override
-  String get leaderboard_signin_consent =>
-      'Ik begrijp wat openbaar wordt (hierboven vermeld) en ga akkoord met publicatie.';
-  @override
   String get leaderboard_error_too_many_devices =>
       'Dit account is op te veel apparaten aangemeld. Koppel op een apparaat dat al is aangemeld een oud apparaat los (Account → Aangemelde apparaten).';
   @override
@@ -163855,6 +164068,34 @@ class _StringsNl extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -178486,9 +178727,6 @@ class _StringsPtBr extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'Caracteres lidos por dia (por data)';
   @override
-  String get leaderboard_signin_consent =>
-      'Entendo o que será público (listado acima) e concordo em publicá-lo.';
-  @override
   String get leaderboard_error_too_many_devices =>
       'Esta conta está conectada em dispositivos demais. Em um dispositivo já conectado, desvincule um dispositivo antigo (Conta → Dispositivos conectados).';
   @override
@@ -181197,6 +181435,34 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -195776,9 +196042,6 @@ class _StringsRu extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'Прочитанные символы по дням (по датам)';
   @override
-  String get leaderboard_signin_consent =>
-      'Я понимаю, что станет общедоступным (перечислено выше), и согласен это опубликовать.';
-  @override
   String get leaderboard_error_too_many_devices =>
       'В этот аккаунт выполнен вход на слишком многих устройствах. На устройстве, где вход уже выполнен, отвяжите старое устройство (Аккаунт → Устройства с выполненным входом).';
   @override
@@ -198485,6 +198748,34 @@ class _StringsRu extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -212757,9 +213048,6 @@ class _StringsTh extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'จำนวนตัวอักษรที่อ่านต่อวัน (ตามวันที่)';
   @override
-  String get leaderboard_signin_consent =>
-      'ฉันเข้าใจว่าอะไรจะเป็นสาธารณะ (ที่ระบุไว้ด้านบน) และยินยอมให้เผยแพร่';
-  @override
   String get leaderboard_error_too_many_devices =>
       'บัญชีนี้ลงชื่อเข้าใช้บนอุปกรณ์มากเกินไป บนอุปกรณ์ที่ลงชื่อเข้าใช้อยู่แล้ว ให้ยกเลิกการเชื่อมโยงอุปกรณ์เก่า (บัญชี → อุปกรณ์ที่ลงชื่อเข้าใช้)';
   @override
@@ -215451,6 +215739,34 @@ class _StringsTh extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -229915,9 +230231,6 @@ class _StringsTr extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'Günlük okunan karakter sayısı (tarihe göre)';
   @override
-  String get leaderboard_signin_consent =>
-      'Nelerin herkese açık olacağını (yukarıda listelenen) anlıyor ve yayımlamayı kabul ediyorum.';
-  @override
   String get leaderboard_error_too_many_devices =>
       'Bu hesapta çok fazla cihazda oturum açık. Zaten oturum açık bir cihazda eski bir cihazın bağlantısını kaldırın (Hesap → Oturum açık cihazlar).';
   @override
@@ -232620,6 +232933,34 @@ class _StringsTr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -247015,9 +247356,6 @@ class _StringsVi extends _StringsEn {
   String get leaderboard_intro_public_chars =>
       'Số ký tự đọc mỗi ngày (theo ngày)';
   @override
-  String get leaderboard_signin_consent =>
-      'Tôi hiểu những gì sẽ được công khai (liệt kê ở trên) và đồng ý công bố.';
-  @override
   String get leaderboard_error_too_many_devices =>
       'Tài khoản này đã đăng nhập trên quá nhiều thiết bị. Trên một thiết bị đã đăng nhập, hãy hủy liên kết một thiết bị cũ (Tài khoản → Thiết bị đã đăng nhập).';
   @override
@@ -249716,6 +250054,34 @@ class _StringsVi extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 // Path: <root>
@@ -262879,8 +263245,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get leaderboard_intro_public_chars => '每日阅读字数（按日期）';
   @override
-  String get leaderboard_signin_consent => '我已了解上面列出的公开内容，同意公开。';
-  @override
   String get leaderboard_error_too_many_devices =>
       '这个账户登录的设备已达上限。请在已登录的设备上（账户 → 已登录设备）解绑旧设备。';
   @override
@@ -265355,6 +265719,33 @@ class _StringsZhCn extends _StringsEn {
       '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
   @override
   String get book_import_no_book_transcribe_action => '转录并生成书籍';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      '自动截图可能不包含网页、视频画面或查词卡；与实际画面不一致时请删除，改用系统截图添加。';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      '还有 ${n} 个附件没上传成功';
+  @override
+  String get feedback_pending_retry => '重试上传';
+  @override
+  String feedback_pending_retry_done({required Object n}) => '已上传 ${n} 个附件。';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '仍有 ${n} 个附件上传失败，请检查网络后重试。';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '有 ${n} 个附件被拒收或已过期（提交后 24 小时内才能补传附件）。';
+  @override
+  String get feedback_detail_add_shot => '追加截图';
+  @override
+  String get feedback_dev_select_hint => '在左侧选择一条反馈';
+  @override
+  String get leaderboard_summary_total_week => '本周字数';
+  @override
+  String get leaderboard_summary_total_month => '本月字数';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '占总数 ${pct}';
 }
 
 // Path: <root>
@@ -278533,8 +278924,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get leaderboard_intro_public_chars => '每日閱讀字數（按日期）';
   @override
-  String get leaderboard_signin_consent => '我已瞭解上面列出的公開內容，同意公開。';
-  @override
   String get leaderboard_error_too_many_devices =>
       '這個帳户登入的裝置已達上限。請在已登入的裝置上（帳户 → 已登入裝置）解綁舊裝置。';
   @override
@@ -281130,6 +281519,34 @@ class _StringsZhHk extends _StringsEn {
       '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
   @override
   String get book_import_no_book_transcribe_action => '轉錄並生成書籍';
+  @override
+  String get feedback_compose_auto_shot_hint =>
+      'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+  @override
+  String feedback_pending_attachments({required Object n}) =>
+      'Attachments not uploaded yet: ${n}';
+  @override
+  String get feedback_pending_retry => 'Retry upload';
+  @override
+  String feedback_pending_retry_done({required Object n}) =>
+      'Uploaded ${n} attachment(s).';
+  @override
+  String feedback_pending_retry_failed({required Object n}) =>
+      '${n} attachment(s) still failed to upload. Check your connection and try again.';
+  @override
+  String feedback_pending_dropped({required Object n}) =>
+      '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+  @override
+  String get feedback_detail_add_shot => 'Add screenshot';
+  @override
+  String get feedback_dev_select_hint => 'Select a feedback item on the left';
+  @override
+  String get leaderboard_summary_total_week => 'Characters this week';
+  @override
+  String get leaderboard_summary_total_month => 'Characters this month';
+  @override
+  String leaderboard_summary_window_share({required Object pct}) =>
+      '${pct} of your total';
 }
 
 /// Flat map(s) containing all translations.
@@ -293454,8 +293871,6 @@ extension on _StringsEn {
         return 'Title, author, cover and finish time of the works you finished or are reading';
       case 'leaderboard_intro_public_chars':
         return 'Characters read per day (by date)';
-      case 'leaderboard_signin_consent':
-        return 'I understand what will be public (listed above) and agree to publish it.';
       case 'leaderboard_error_too_many_devices':
         return 'This account is signed in on too many devices. On a device that is already signed in, unlink an old device (Account → Signed-in devices).';
       case 'leaderboard_error_unknown_account':
@@ -295732,6 +296147,30 @@ extension on _StringsEn {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -308051,8 +308490,6 @@ extension on _StringsAr {
         return 'العنوان والمؤلف والغلاف ووقت الإنهاء للأعمال التي أنهيتها أو تقرؤها';
       case 'leaderboard_intro_public_chars':
         return 'الأحرف المقروءة يوميًا (حسب التاريخ)';
-      case 'leaderboard_signin_consent':
-        return 'أفهم ما سيكون عامًا (المذكور أعلاه) وأوافق على نشره.';
       case 'leaderboard_error_too_many_devices':
         return 'تم تسجيل الدخول إلى هذا الحساب على عدد كبير جدًا من الأجهزة. على جهاز مسجَّل الدخول بالفعل، افصل جهازًا قديمًا (الحساب ← الأجهزة المسجَّل الدخول إليها).';
       case 'leaderboard_error_unknown_account':
@@ -310329,6 +310766,30 @@ extension on _StringsAr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -322720,8 +323181,6 @@ extension on _StringsDe {
         return 'Titel, Autor, Cover und Abschlusszeit der Werke, die du abgeschlossen hast oder gerade liest';
       case 'leaderboard_intro_public_chars':
         return 'Pro Tag gelesene Zeichen (nach Datum)';
-      case 'leaderboard_signin_consent':
-        return 'Ich verstehe, was öffentlich sein wird (oben aufgeführt), und stimme der Veröffentlichung zu.';
       case 'leaderboard_error_too_many_devices':
         return 'Dieses Konto ist auf zu vielen Geräten angemeldet. Trenne auf einem bereits angemeldeten Gerät ein altes Gerät (Konto → Angemeldete Geräte).';
       case 'leaderboard_error_unknown_account':
@@ -325002,6 +325461,30 @@ extension on _StringsDe {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -337376,8 +337859,6 @@ extension on _StringsEs {
         return 'Título, autor, portada y fecha de finalización de las obras que has terminado o estás leyendo';
       case 'leaderboard_intro_public_chars':
         return 'Caracteres leídos por día (por fecha)';
-      case 'leaderboard_signin_consent':
-        return 'Entiendo qué será público (indicado arriba) y acepto publicarlo.';
       case 'leaderboard_error_too_many_devices':
         return 'Esta cuenta tiene sesión iniciada en demasiados dispositivos. En un dispositivo que ya tenga sesión, desvincula uno antiguo (Cuenta → Dispositivos con sesión iniciada).';
       case 'leaderboard_error_unknown_account':
@@ -339657,6 +340138,30 @@ extension on _StringsEs {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -352049,8 +352554,6 @@ extension on _StringsFr {
         return 'Titre, auteur, couverture et date de fin des œuvres que vous avez terminées ou que vous lisez';
       case 'leaderboard_intro_public_chars':
         return 'Caractères lus par jour (par date)';
-      case 'leaderboard_signin_consent':
-        return 'Je comprends ce qui sera public (indiqué ci-dessus) et j\'accepte de le publier.';
       case 'leaderboard_error_too_many_devices':
         return 'Ce compte est connecté sur trop d\'appareils. Sur un appareil déjà connecté, dissociez un ancien appareil (Compte → Appareils connectés).';
       case 'leaderboard_error_unknown_account':
@@ -354330,6 +354833,30 @@ extension on _StringsFr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -366668,8 +367195,6 @@ extension on _StringsId {
         return 'Judul, penulis, sampul, dan waktu selesai karya yang Anda selesaikan atau sedang baca';
       case 'leaderboard_intro_public_chars':
         return 'Karakter dibaca per hari (menurut tanggal)';
-      case 'leaderboard_signin_consent':
-        return 'Saya mengerti apa yang akan dipublikasikan (tercantum di atas) dan setuju untuk menerbitkannya.';
       case 'leaderboard_error_too_many_devices':
         return 'Akun ini masuk di terlalu banyak perangkat. Di perangkat yang sudah masuk, putuskan tautan perangkat lama (Akun → Perangkat yang masuk).';
       case 'leaderboard_error_unknown_account':
@@ -368947,6 +369472,30 @@ extension on _StringsId {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -381319,8 +381868,6 @@ extension on _StringsIt {
         return 'Titolo, autore, copertina e data di fine delle opere che hai finito o stai leggendo';
       case 'leaderboard_intro_public_chars':
         return 'Caratteri letti al giorno (per data)';
-      case 'leaderboard_signin_consent':
-        return 'Capisco cosa sarà pubblico (elencato sopra) e accetto di pubblicarlo.';
       case 'leaderboard_error_too_many_devices':
         return 'Questo account ha effettuato l\'accesso su troppi dispositivi. Su un dispositivo già connesso, scollega un vecchio dispositivo (Account → Dispositivi connessi).';
       case 'leaderboard_error_unknown_account':
@@ -383600,6 +384147,30 @@ extension on _StringsIt {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -395853,8 +396424,6 @@ extension on _StringsJa {
         return '読了した作品、または読書中の作品のタイトル、著者、カバー、読了日時';
       case 'leaderboard_intro_public_chars':
         return '1 日ごとの読了文字数（日付別）';
-      case 'leaderboard_signin_consent':
-        return '公開される内容（上記）を理解し、公開することに同意します。';
       case 'leaderboard_error_too_many_devices':
         return 'このアカウントは多くのデバイスでサインインされています。すでにサインイン済みのデバイスで、古いデバイスのリンクを解除してください（アカウント → サインイン中のデバイス）。';
       case 'leaderboard_error_unknown_account':
@@ -398127,6 +398696,30 @@ extension on _StringsJa {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -410384,8 +410977,6 @@ extension on _StringsKo {
         return '완독했거나 읽고 있는 작품의 제목, 저자, 표지, 완독 시각';
       case 'leaderboard_intro_public_chars':
         return '날짜별 하루 읽은 글자 수';
-      case 'leaderboard_signin_consent':
-        return '공개되는 정보(위에 나열됨)를 이해했으며 공개하는 데 동의합니다.';
       case 'leaderboard_error_too_many_devices':
         return '이 계정이 너무 많은 기기에서 로그인되어 있습니다. 이미 로그인된 기기에서 이전 기기의 연결을 해제하세요(계정 → 로그인된 기기).';
       case 'leaderboard_error_unknown_account':
@@ -412661,6 +413252,30 @@ extension on _StringsKo {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -425028,8 +425643,6 @@ extension on _StringsNl {
         return 'Titel, auteur, omslag en uitleestijd van de werken die je hebt uitgelezen of aan het lezen bent';
       case 'leaderboard_intro_public_chars':
         return 'Gelezen tekens per dag (op datum)';
-      case 'leaderboard_signin_consent':
-        return 'Ik begrijp wat openbaar wordt (hierboven vermeld) en ga akkoord met publicatie.';
       case 'leaderboard_error_too_many_devices':
         return 'Dit account is op te veel apparaten aangemeld. Koppel op een apparaat dat al is aangemeld een oud apparaat los (Account → Aangemelde apparaten).';
       case 'leaderboard_error_unknown_account':
@@ -427309,6 +427922,30 @@ extension on _StringsNl {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -439668,8 +440305,6 @@ extension on _StringsPtBr {
         return 'Título, autor, capa e data de conclusão das obras que você concluiu ou está lendo';
       case 'leaderboard_intro_public_chars':
         return 'Caracteres lidos por dia (por data)';
-      case 'leaderboard_signin_consent':
-        return 'Entendo o que será público (listado acima) e concordo em publicá-lo.';
       case 'leaderboard_error_too_many_devices':
         return 'Esta conta está conectada em dispositivos demais. Em um dispositivo já conectado, desvincule um dispositivo antigo (Conta → Dispositivos conectados).';
       case 'leaderboard_error_unknown_account':
@@ -441949,6 +442584,30 @@ extension on _StringsPtBr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -454313,8 +454972,6 @@ extension on _StringsRu {
         return 'Название, автор, обложка и время завершения произведений, которые вы закончили или читаете';
       case 'leaderboard_intro_public_chars':
         return 'Прочитанные символы по дням (по датам)';
-      case 'leaderboard_signin_consent':
-        return 'Я понимаю, что станет общедоступным (перечислено выше), и согласен это опубликовать.';
       case 'leaderboard_error_too_many_devices':
         return 'В этот аккаунт выполнен вход на слишком многих устройствах. На устройстве, где вход уже выполнен, отвяжите старое устройство (Аккаунт → Устройства с выполненным входом).';
       case 'leaderboard_error_unknown_account':
@@ -456594,6 +457251,30 @@ extension on _StringsRu {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -468917,8 +469598,6 @@ extension on _StringsTh {
         return 'ชื่อเรื่อง ผู้แต่ง ภาพปก และเวลาที่อ่านจบของผลงานที่คุณอ่านจบหรือกำลังอ่าน';
       case 'leaderboard_intro_public_chars':
         return 'จำนวนตัวอักษรที่อ่านต่อวัน (ตามวันที่)';
-      case 'leaderboard_signin_consent':
-        return 'ฉันเข้าใจว่าอะไรจะเป็นสาธารณะ (ที่ระบุไว้ด้านบน) และยินยอมให้เผยแพร่';
       case 'leaderboard_error_too_many_devices':
         return 'บัญชีนี้ลงชื่อเข้าใช้บนอุปกรณ์มากเกินไป บนอุปกรณ์ที่ลงชื่อเข้าใช้อยู่แล้ว ให้ยกเลิกการเชื่อมโยงอุปกรณ์เก่า (บัญชี → อุปกรณ์ที่ลงชื่อเข้าใช้)';
       case 'leaderboard_error_unknown_account':
@@ -471195,6 +471874,30 @@ extension on _StringsTh {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -483546,8 +484249,6 @@ extension on _StringsTr {
         return 'Bitirdiğiniz veya okuduğunuz eserlerin başlığı, yazarı, kapağı ve bitirme zamanı';
       case 'leaderboard_intro_public_chars':
         return 'Günlük okunan karakter sayısı (tarihe göre)';
-      case 'leaderboard_signin_consent':
-        return 'Nelerin herkese açık olacağını (yukarıda listelenen) anlıyor ve yayımlamayı kabul ediyorum.';
       case 'leaderboard_error_too_many_devices':
         return 'Bu hesapta çok fazla cihazda oturum açık. Zaten oturum açık bir cihazda eski bir cihazın bağlantısını kaldırın (Hesap → Oturum açık cihazlar).';
       case 'leaderboard_error_unknown_account':
@@ -485827,6 +486528,30 @@ extension on _StringsTr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -498163,8 +498888,6 @@ extension on _StringsVi {
         return 'Tiêu đề, tác giả, ảnh bìa và thời điểm hoàn thành của các tác phẩm bạn đã đọc xong hoặc đang đọc';
       case 'leaderboard_intro_public_chars':
         return 'Số ký tự đọc mỗi ngày (theo ngày)';
-      case 'leaderboard_signin_consent':
-        return 'Tôi hiểu những gì sẽ được công khai (liệt kê ở trên) và đồng ý công bố.';
       case 'leaderboard_error_too_many_devices':
         return 'Tài khoản này đã đăng nhập trên quá nhiều thiết bị. Trên một thiết bị đã đăng nhập, hãy hủy liên kết một thiết bị cũ (Tài khoản → Thiết bị đã đăng nhập).';
       case 'leaderboard_error_unknown_account':
@@ -500442,6 +501165,30 @@ extension on _StringsVi {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
@@ -512648,8 +513395,6 @@ extension on _StringsZhCn {
         return '读完与在读作品的标题、作者、封面、读完时间';
       case 'leaderboard_intro_public_chars':
         return '每日阅读字数（按日期）';
-      case 'leaderboard_signin_consent':
-        return '我已了解上面列出的公开内容，同意公开。';
       case 'leaderboard_error_too_many_devices':
         return '这个账户登录的设备已达上限。请在已登录的设备上（账户 → 已登录设备）解绑旧设备。';
       case 'leaderboard_error_unknown_account':
@@ -514897,6 +515642,28 @@ extension on _StringsZhCn {
         return '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
       case 'book_import_no_book_transcribe_action':
         return '转录并生成书籍';
+      case 'feedback_compose_auto_shot_hint':
+        return '自动截图可能不包含网页、视频画面或查词卡；与实际画面不一致时请删除，改用系统截图添加。';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => '还有 ${n} 个附件没上传成功';
+      case 'feedback_pending_retry':
+        return '重试上传';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => '已上传 ${n} 个附件。';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) => '仍有 ${n} 个附件上传失败，请检查网络后重试。';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) => '有 ${n} 个附件被拒收或已过期（提交后 24 小时内才能补传附件）。';
+      case 'feedback_detail_add_shot':
+        return '追加截图';
+      case 'feedback_dev_select_hint':
+        return '在左侧选择一条反馈';
+      case 'leaderboard_summary_total_week':
+        return '本周字数';
+      case 'leaderboard_summary_total_month':
+        return '本月字数';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '占总数 ${pct}';
       default:
         return null;
     }
@@ -527104,8 +527871,6 @@ extension on _StringsZhHk {
         return '讀完與在讀作品的標題、作者、封面、讀完時間';
       case 'leaderboard_intro_public_chars':
         return '每日閱讀字數（按日期）';
-      case 'leaderboard_signin_consent':
-        return '我已瞭解上面列出的公開內容，同意公開。';
       case 'leaderboard_error_too_many_devices':
         return '這個帳户登入的裝置已達上限。請在已登入的裝置上（帳户 → 已登入裝置）解綁舊裝置。';
       case 'leaderboard_error_unknown_account':
@@ -529369,6 +530134,30 @@ extension on _StringsZhHk {
         return '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
       case 'book_import_no_book_transcribe_action':
         return '轉錄並生成書籍';
+      case 'feedback_compose_auto_shot_hint':
+        return 'The automatic screenshot may not include web views, video or the lookup card. If it looks different, remove it and add a system screenshot instead.';
+      case 'feedback_pending_attachments':
+        return ({required Object n}) => 'Attachments not uploaded yet: ${n}';
+      case 'feedback_pending_retry':
+        return 'Retry upload';
+      case 'feedback_pending_retry_done':
+        return ({required Object n}) => 'Uploaded ${n} attachment(s).';
+      case 'feedback_pending_retry_failed':
+        return ({required Object n}) =>
+            '${n} attachment(s) still failed to upload. Check your connection and try again.';
+      case 'feedback_pending_dropped':
+        return ({required Object n}) =>
+            '${n} attachment(s) were rejected or expired (attachments can only be added within 24 hours of submitting).';
+      case 'feedback_detail_add_shot':
+        return 'Add screenshot';
+      case 'feedback_dev_select_hint':
+        return 'Select a feedback item on the left';
+      case 'leaderboard_summary_total_week':
+        return 'Characters this week';
+      case 'leaderboard_summary_total_month':
+        return 'Characters this month';
+      case 'leaderboard_summary_window_share':
+        return ({required Object pct}) => '${pct} of your total';
       default:
         return null;
     }
