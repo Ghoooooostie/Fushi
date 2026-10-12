@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 119782 (7046 per locale)
 ///
-/// Built on 2026-10-12 at 18:01 UTC
+/// Built on 2026-10-13 at 01:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8972,7 +8972,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
   String get glass_material_frosted => 'Frosted';
   String get glass_material_liquid => 'Liquid';
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   String get glass_material => 'Glass material';
   String get glass_material_hint =>
       'Frosted blurs whatever is behind a surface; liquid glass adds refraction and highlights where the graphics engine supports it (otherwise it shows as frosted). On Windows 11 and macOS the window background shows the desktop through. Falls back to solid surfaces in e-ink mode and with increased contrast.';
@@ -25123,7 +25123,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -42490,7 +42490,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -59919,7 +59919,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -77427,7 +77427,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -94592,7 +94592,7 @@ class _StringsId extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -111918,7 +111918,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -128278,7 +128278,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -144615,7 +144615,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -161887,7 +161887,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -179231,7 +179231,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -196523,7 +196523,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -213492,7 +213492,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -230663,7 +230663,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -247763,7 +247763,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -263565,7 +263565,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get glass_material_liquid => '液态玻璃';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => '玻璃材质';
   @override
@@ -279240,7 +279240,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get glass_material_liquid => 'Liquid';
   @override
-  String get design_system_glass => 'Apple';
+  String get design_system_glass => 'Cupertino';
   @override
   String get glass_material => 'Glass material';
   @override
@@ -294063,7 +294063,7 @@ extension on _StringsEn {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -308662,7 +308662,7 @@ extension on _StringsAr {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -323337,7 +323337,7 @@ extension on _StringsDe {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -337994,7 +337994,7 @@ extension on _StringsEs {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -352669,7 +352669,7 @@ extension on _StringsFr {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -367288,7 +367288,7 @@ extension on _StringsId {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -381943,7 +381943,7 @@ extension on _StringsIt {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -396474,7 +396474,7 @@ extension on _StringsJa {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -411008,7 +411008,7 @@ extension on _StringsKo {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -425658,7 +425658,7 @@ extension on _StringsNl {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -440300,7 +440300,7 @@ extension on _StringsPtBr {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -454947,7 +454947,7 @@ extension on _StringsRu {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -469550,7 +469550,7 @@ extension on _StringsTh {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -484184,7 +484184,7 @@ extension on _StringsTr {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -498801,7 +498801,7 @@ extension on _StringsVi {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
@@ -513282,7 +513282,7 @@ extension on _StringsZhCn {
       case 'glass_material_liquid':
         return '液态玻璃';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return '玻璃材质';
       case 'glass_material_hint':
@@ -527741,7 +527741,7 @@ extension on _StringsZhHk {
       case 'glass_material_liquid':
         return 'Liquid';
       case 'design_system_glass':
-        return 'Apple';
+        return 'Cupertino';
       case 'glass_material':
         return 'Glass material';
       case 'glass_material_hint':
