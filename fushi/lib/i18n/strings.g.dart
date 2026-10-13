@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120003 (7059 per locale)
+/// Strings: 120037 (7061 per locale)
 ///
-/// Built on 2026-10-13 at 09:20 UTC
+/// Built on 2026-10-13 at 09:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10166,6 +10166,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'No profiles or decks yet. Connect Anki in settings first.';
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  String get manga_quick_spread_shift => 'Offset by one page';
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -27184,6 +27187,11 @@ class _StringsAr extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -44592,6 +44600,11 @@ class _StringsDe extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -62060,6 +62073,11 @@ class _StringsEs extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -79607,6 +79625,11 @@ class _StringsFr extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -96809,6 +96832,11 @@ class _StringsId extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -114176,6 +114204,11 @@ class _StringsIt extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -130543,6 +130576,11 @@ class _StringsJa extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -146946,6 +146984,11 @@ class _StringsKo extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -164261,6 +164304,11 @@ class _StringsNl extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -181645,6 +181693,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -198975,6 +199028,11 @@ class _StringsRu extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -215983,6 +216041,11 @@ class _StringsTh extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -233194,6 +233257,11 @@ class _StringsTr extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -250332,6 +250400,11 @@ class _StringsVi extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 // Path: <root>
@@ -266009,6 +266082,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       '切换制卡目标失败：${error}';
+  @override
+  String get manga_quick_spread_shift => '错开一页';
+  @override
+  String get manga_quick_spread_shift_subtitle => '封面单独成页，其余两两配对；关闭则从第一页起配对。';
 }
 
 // Path: <root>
@@ -281826,6 +281903,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String popup_mining_target_switch_failed({required Object error}) =>
       'Could not switch the mining target: ${error}';
+  @override
+  String get manga_quick_spread_shift => 'Offset by one page';
+  @override
+  String get manga_quick_spread_shift_subtitle =>
+      'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
 }
 
 /// Flat map(s) containing all translations.
@@ -296462,6 +296544,10 @@ extension on _StringsEn {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -311093,6 +311179,10 @@ extension on _StringsAr {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -325800,6 +325890,10 @@ extension on _StringsDe {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -340489,6 +340583,10 @@ extension on _StringsEs {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -355196,6 +355294,10 @@ extension on _StringsFr {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -369847,6 +369949,10 @@ extension on _StringsId {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -384534,6 +384640,10 @@ extension on _StringsIt {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -399095,6 +399205,10 @@ extension on _StringsJa {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -413663,6 +413777,10 @@ extension on _StringsKo {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -428345,6 +428463,10 @@ extension on _StringsNl {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -443019,6 +443141,10 @@ extension on _StringsPtBr {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -457698,6 +457824,10 @@ extension on _StringsRu {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -472333,6 +472463,10 @@ extension on _StringsTh {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -486999,6 +487133,10 @@ extension on _StringsTr {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -501648,6 +501786,10 @@ extension on _StringsVi {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
@@ -516136,6 +516278,10 @@ extension on _StringsZhCn {
         return '还没有可选的配置或牌组，请先在设置里连接 Anki。';
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) => '切换制卡目标失败：${error}';
+      case 'manga_quick_spread_shift':
+        return '错开一页';
+      case 'manga_quick_spread_shift_subtitle':
+        return '封面单独成页，其余两两配对；关闭则从第一页起配对。';
       default:
         return null;
     }
@@ -530642,6 +530788,10 @@ extension on _StringsZhHk {
       case 'popup_mining_target_switch_failed':
         return ({required Object error}) =>
             'Could not switch the mining target: ${error}';
+      case 'manga_quick_spread_shift':
+        return 'Offset by one page';
+      case 'manga_quick_spread_shift_subtitle':
+        return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
       default:
         return null;
     }
