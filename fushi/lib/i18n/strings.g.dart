@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119816 (7048 per locale)
+/// Strings: 119969 (7057 per locale)
 ///
-/// Built on 2026-10-13 at 03:48 UTC
+/// Built on 2026-10-13 at 03:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6391,7 +6391,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Asking the system to install the language…';
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
-  String get storage_models_components => 'Models and components';
   String get settings_group_tools => 'Tools';
   String get mihon_source_login => 'Log in';
   String get mihon_source_login_hint =>
@@ -6796,7 +6795,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_control_item_play_pause => 'Play / Pause';
   String get reader_control_item_seek_back => 'Rewind 10 seconds';
   String get reader_control_item_seek_forward => 'Forward 10 seconds';
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   String get ai_settings_summary =>
       'Configure AI providers and choose which one powers each feature';
   String get ai_providers_section => 'Provider configuration';
@@ -8249,7 +8248,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String ai_video_acquire_remote_unsupported({required Object device}) =>
       '${device} doesn\'t support AI video download. Update Fushi on that device.';
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI download. Assign one in Settings › Models › LLM on that device.';
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} isn\'t ready to download yet (download backend or managed video source not set up).';
   String video_library_delete_rows_failed({required Object n}) =>
@@ -8933,7 +8932,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Not downloaded on the server yet. Download it on the server first.';
   String get game_session_japanese_locale_skipped_hint_runtime_unavailable =>
       'Not switched this time: a Japanese locale was requested, but Locale Emulator could not launch this game (it only supports 32-bit games), so it started normally.';
-  String get ai_feature_manga_ocr => 'Manga OCR (vision)';
+  String get ai_feature_manga_ocr => 'OCR correction (vision)';
   String get ai_feature_manga_ocr_summary =>
       'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
   String get manga_ocr_ai_mode_label => 'AI recognition';
@@ -8941,7 +8940,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_ai_mode_low_confidence => 'Only uncertain text';
   String get manga_ocr_ai_mode_all => 'All text';
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
   String get manga_ocr_ai_mode_open_settings => 'Open AI settings';
@@ -10149,6 +10148,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  String get settings_destination_models => 'Models';
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  String get models_section_files => 'Model files';
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  String get models_tts_engine => 'Engine';
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  String get models_tts_usage_title => 'Used for';
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -20894,8 +20907,6 @@ class _StringsAr extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'لا يمكن لهذا المحرك الإيقاف المؤقت أثناء الملف — الإيقاف يتجاهل تقدّم الملف الحالي.';
   @override
-  String get storage_models_components => 'النماذج والمكوّنات';
-  @override
   String get settings_group_tools => 'الأدوات';
   @override
   String get mihon_source_login => 'تسجيل الدخول';
@@ -21565,7 +21576,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => 'تقدم 10 ثوانٍ';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'اضبط مزودي الذكاء الاصطناعي واختر أيّهم يشغّل كل ميزة';
@@ -23935,7 +23946,7 @@ class _StringsAr extends _StringsEn {
       '${device} لا يدعم تنزيل الفيديو بالذكاء الاصطناعي. حدّث Fushi على ذلك الجهاز.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › النماذج › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} ليس جاهزًا للتنزيل بعد (لم يُعدّ نظام التنزيل أو مصدر الفيديو المُدار).';
@@ -25080,7 +25091,7 @@ class _StringsAr extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › النماذج › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -27139,6 +27150,30 @@ class _StringsAr extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'النماذج';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -38142,8 +38177,6 @@ class _StringsDe extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'Diese Engine kann nicht mitten in einer Datei pausieren – Stoppen verwirft den Fortschritt der aktuellen Datei.';
   @override
-  String get storage_models_components => 'Modelle und Komponenten';
-  @override
   String get settings_group_tools => 'Werkzeuge';
   @override
   String get mihon_source_login => 'Anmelden';
@@ -38832,7 +38865,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => '10 Sekunden vor';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'KI-Anbieter konfigurieren und festlegen, welcher welche Funktion antreibt';
@@ -41283,7 +41316,7 @@ class _StringsDe extends _StringsEn {
       '${device} unterstützt den KI-Video-Download nicht. Aktualisiere Fushi auf diesem Gerät.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modelle › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} ist noch nicht zum Herunterladen bereit (Download-Backend oder verwaltete Videoquelle nicht eingerichtet).';
@@ -42458,7 +42491,7 @@ class _StringsDe extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelle › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -44519,6 +44552,30 @@ class _StringsDe extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'Modelle';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -55573,8 +55630,6 @@ class _StringsEs extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'Este motor no puede pausar a mitad de archivo: al detenerlo se descarta el progreso del archivo actual.';
   @override
-  String get storage_models_components => 'Modelos y componentes';
-  @override
   String get settings_group_tools => 'Herramientas';
   @override
   String get mihon_source_login => 'Iniciar sesión';
@@ -56263,7 +56318,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => 'Avanzar 10 segundos';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'Configura los proveedores de IA y elige cuál impulsa cada función';
@@ -58720,7 +58775,7 @@ class _StringsEs extends _StringsEn {
       '${device} no admite la descarga de vídeo con IA. Actualiza Fushi en ese dispositivo.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modelos › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} aún no está listo para descargar (falta configurar el backend de descargas o una fuente de vídeo gestionada).';
@@ -59898,7 +59953,7 @@ class _StringsEs extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelos › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -61959,6 +62014,30 @@ class _StringsEs extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'Modelos';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -73064,8 +73143,6 @@ class _StringsFr extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'Ce moteur ne peut pas être mis en pause au milieu d\'un fichier — l\'arrêt abandonne la progression du fichier en cours.';
   @override
-  String get storage_models_components => 'Modèles et composants';
-  @override
   String get settings_group_tools => 'Outils';
   @override
   String get mihon_source_login => 'Se connecter';
@@ -73765,7 +73842,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => 'Avancer de 10 secondes';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'Configurez les fournisseurs d\'IA et choisissez lequel alimente chaque fonctionnalité';
@@ -76234,7 +76311,7 @@ class _StringsFr extends _StringsEn {
       '${device} ne prend pas en charge le téléchargement vidéo par IA. Mettez à jour Fushi sur cet appareil.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modèles › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} n\'est pas encore prêt à télécharger (moteur de téléchargement ou source vidéo gérée non configuré).';
@@ -77417,7 +77494,7 @@ class _StringsFr extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modèles › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -79478,6 +79555,30 @@ class _StringsFr extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'Modèles';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -90350,8 +90451,6 @@ class _StringsId extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'Mesin ini tidak dapat dijeda di tengah file — menghentikan akan membuang progres file saat ini.';
   @override
-  String get storage_models_components => 'Model dan komponen';
-  @override
   String get settings_group_tools => 'Alat';
   @override
   String get mihon_source_login => 'Masuk';
@@ -91026,7 +91125,7 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => 'Maju 10 detik';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'Konfigurasikan penyedia AI dan pilih yang menjalankan setiap fitur';
@@ -93431,7 +93530,7 @@ class _StringsId extends _StringsEn {
       '${device} tidak mendukung unduhan video AI. Perbarui Fushi di perangkat itu.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › Model › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} belum siap mengunduh (backend unduhan atau sumber video terkelola belum diatur).';
@@ -94593,7 +94692,7 @@ class _StringsId extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Model › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -96652,6 +96751,30 @@ class _StringsId extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'Model';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -107631,8 +107754,6 @@ class _StringsIt extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'Questo motore non può essere messo in pausa a metà file: interrompendo si perde l\'avanzamento del file corrente.';
   @override
-  String get storage_models_components => 'Modelli e componenti';
-  @override
   String get settings_group_tools => 'Strumenti';
   @override
   String get mihon_source_login => 'Accedi';
@@ -108317,7 +108438,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => 'Avanti di 10 secondi';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'Configura i provider di IA e scegli quale alimenta ciascuna funzione';
@@ -110761,7 +110882,7 @@ class _StringsIt extends _StringsEn {
       '${device} non supporta il download video con IA. Aggiorna Fushi su quel dispositivo.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modelli › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} non è ancora pronto a scaricare (backend di download o fonte video gestita non configurati).';
@@ -111930,7 +112051,7 @@ class _StringsIt extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelli › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -113991,6 +114112,30 @@ class _StringsIt extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'Modelli';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -124293,8 +124438,6 @@ class _StringsJa extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'このエンジンはファイルの途中で一時停止できません。停止すると現在のファイルの進捗が破棄されます。';
   @override
-  String get storage_models_components => 'モデルとコンポーネント';
-  @override
   String get settings_group_tools => 'ツール';
   @override
   String get mihon_source_login => 'ログイン';
@@ -124931,7 +125074,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => '10 秒進む';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary => 'AI プロバイダーを設定し、機能ごとに使うものを選びます';
   @override
@@ -125040,7 +125183,7 @@ class _StringsJa extends _StringsEn {
   String get game_text_process_ai_generate => '生成';
   @override
   String get game_text_process_ai_no_provider =>
-      '先に「設定 › AI」で AI プロバイダーを選択してください';
+      '先に「設定 › モデル › LLM」で AI プロバイダーを選択してください';
   @override
   String get game_text_process_ai_empty =>
       'AI が使えるルールを返しませんでした。言い方を変えてもう一度お試しください。';
@@ -125228,7 +125371,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_assist_working => 'AI に問い合わせ中…';
   @override
-  String get ai_assist_no_provider => '先に「設定 › AI」でこの機能の AI プロバイダーを選択してください';
+  String get ai_assist_no_provider =>
+      '先に「設定 › モデル › LLM」でこの機能の AI プロバイダーを選択してください';
   @override
   String get ai_assist_empty => 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
   @override
@@ -127193,7 +127337,7 @@ class _StringsJa extends _StringsEn {
       '${device} は AI 動画ダウンロードに対応していません。そのデバイスの Fushi を更新してください。';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › モデル › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} はまだダウンロードの準備ができていません（ダウンロードバックエンドまたは管理対象の動画ソースが未設定）。';
@@ -128303,7 +128447,7 @@ class _StringsJa extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'すべての文字';
   @override
   String get manga_ocr_ai_mode_desc =>
-      '文字枠の検出はこれまでどおり端末内で行い、枠の中の文字を画像対応モデルが読み直します。切り出した文字枠は「設定 › AI」で割り当てたプロバイダーに送信され、その料金が発生します。「自信のない文字だけ」は端末内モデル専用です。ほかのエンジンは確信度を出さないので「すべての文字」を使ってください。';
+      '文字枠の検出はこれまでどおり端末内で行い、枠の中の文字を画像対応モデルが読み直します。切り出した文字枠は「設定 › モデル › LLM」で割り当てたプロバイダーに送信され、その料金が発生します。「自信のない文字だけ」は端末内モデル専用です。ほかのエンジンは確信度を出さないので「すべての文字」を使ってください。';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       '漫画 OCR に AI プロバイダーが割り当てられていないため、今は何も送信されません。';
@@ -130330,6 +130474,30 @@ class _StringsJa extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'モデル';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -140640,8 +140808,6 @@ class _StringsKo extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       '이 엔진은 파일 처리 도중에 일시정지할 수 없습니다. 중지하면 현재 파일의 진행 상황이 삭제됩니다.';
   @override
-  String get storage_models_components => '모델 및 구성 요소';
-  @override
   String get settings_group_tools => '도구';
   @override
   String get mihon_source_login => '로그인';
@@ -141281,7 +141447,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => '10초 앞으로';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary => 'AI 제공자를 설정하고 각 기능에 사용할 제공자를 선택합니다';
   @override
@@ -143538,7 +143704,7 @@ class _StringsKo extends _StringsEn {
       '${device}은(는) AI 비디오 다운로드를 지원하지 않습니다. 해당 기기에서 Fushi를 업데이트하세요.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › 모델 › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device}은(는) 아직 다운로드할 준비가 되지 않았습니다(다운로드 백엔드 또는 관리형 비디오 소스가 설정되지 않음).';
@@ -144649,7 +144815,7 @@ class _StringsKo extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › 모델 › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -146705,6 +146871,30 @@ class _StringsKo extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => '모델';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -157641,8 +157831,6 @@ class _StringsNl extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'Deze engine kan niet midden in een bestand pauzeren — stoppen verwerpt de voortgang van het huidige bestand.';
   @override
-  String get storage_models_components => 'Modellen en componenten';
-  @override
   String get settings_group_tools => 'Hulpmiddelen';
   @override
   String get mihon_source_login => 'Inloggen';
@@ -158326,7 +158514,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => '10 seconden vooruit';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'Stel AI-providers in en kies welke elke functie aandrijft';
@@ -160763,7 +160951,7 @@ class _StringsNl extends _StringsEn {
       '${device} ondersteunt geen AI-videodownload. Werk Fushi op dat apparaat bij.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modellen › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} is nog niet klaar om te downloaden (downloadbackend of beheerde videobron niet ingesteld).';
@@ -161932,7 +162120,7 @@ class _StringsNl extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modellen › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -163992,6 +164180,30 @@ class _StringsNl extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'Modellen';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -174981,8 +175193,6 @@ class _StringsPtBr extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'Este mecanismo não pode pausar no meio de um arquivo — parar descarta o progresso do arquivo atual.';
   @override
-  String get storage_models_components => 'Modelos e componentes';
-  @override
   String get settings_group_tools => 'Ferramentas';
   @override
   String get mihon_source_login => 'Entrar';
@@ -175666,7 +175876,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => 'Avançar 10 segundos';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'Configure provedores de IA e escolha qual alimenta cada recurso';
@@ -178110,7 +178320,7 @@ class _StringsPtBr extends _StringsEn {
       '${device} não é compatível com o download de vídeo com IA. Atualize o Fushi nesse dispositivo.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modelos › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} ainda não está pronto para baixar (backend de download ou fonte de vídeo gerenciada não configurados).';
@@ -179287,7 +179497,7 @@ class _StringsPtBr extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelos › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -181348,6 +181558,30 @@ class _StringsPtBr extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'Modelos';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -192310,8 +192544,6 @@ class _StringsRu extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'Этот движок не умеет приостанавливаться посреди файла — при остановке прогресс текущего файла теряется.';
   @override
-  String get storage_models_components => 'Модели и компоненты';
-  @override
   String get settings_group_tools => 'Инструменты';
   @override
   String get mihon_source_login => 'Войти';
@@ -192991,7 +193223,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => 'Вперёд на 10 секунд';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'Настройте ИИ-провайдеров и выберите, какой из них обслуживает каждую функцию';
@@ -195419,7 +195651,7 @@ class _StringsRu extends _StringsEn {
       '${device} не поддерживает ИИ-загрузку видео. Обновите Fushi на этом устройстве.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › Модели › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} ещё не готово к загрузке (не настроен механизм загрузки или управляемый источник видео).';
@@ -196590,7 +196822,7 @@ class _StringsRu extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Модели › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -198650,6 +198882,30 @@ class _StringsRu extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'Модели';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -209391,8 +209647,6 @@ class _StringsTh extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'เอนจินนี้หยุดชั่วคราวกลางไฟล์ไม่ได้ — การหยุดจะทิ้งความคืบหน้าของไฟล์ปัจจุบัน';
   @override
-  String get storage_models_components => 'โมเดลและส่วนประกอบ';
-  @override
   String get settings_group_tools => 'เครื่องมือ';
   @override
   String get mihon_source_login => 'เข้าสู่ระบบ';
@@ -210058,7 +210312,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => 'ไปข้างหน้า 10 วินาที';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'ตั้งค่าผู้ให้บริการ AI และเลือกว่าผู้ให้บริการใดขับเคลื่อนแต่ละฟีเจอร์';
@@ -212428,7 +212682,7 @@ class _StringsTh extends _StringsEn {
       '${device} ไม่รองรับการดาวน์โหลดวิดีโอด้วย AI อัปเดต Fushi บนอุปกรณ์นั้น';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › โมเดล › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} ยังไม่พร้อมดาวน์โหลด (ยังไม่ได้ตั้งค่าแบ็กเอนด์ดาวน์โหลดหรือแหล่งวิดีโอที่จัดการ)';
@@ -213570,7 +213824,7 @@ class _StringsTh extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › โมเดล › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -215630,6 +215884,30 @@ class _StringsTh extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'โมเดล';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -226502,8 +226780,6 @@ class _StringsTr extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'Bu motor dosyanın ortasında duraklatamaz — durdurmak geçerli dosyanın ilerlemesini atar.';
   @override
-  String get storage_models_components => 'Modeller ve bileşenler';
-  @override
   String get settings_group_tools => 'Araçlar';
   @override
   String get mihon_source_login => 'Giriş yap';
@@ -227177,7 +227453,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => '10 saniye ileri sar';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'Yapay zeka sağlayıcılarını yapılandırın ve her özelliği hangisinin çalıştıracağını seçin';
@@ -229593,7 +229869,7 @@ class _StringsTr extends _StringsEn {
       '${device} yapay zeka video indirmeyi desteklemiyor. O cihazda Fushi\'yi güncelleyin.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modeller › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} henüz indirmeye hazır değil (indirme arka ucu veya yönetilen video kaynağı kurulmamış).';
@@ -230752,7 +231028,7 @@ class _StringsTr extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modeller › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -232813,6 +233089,30 @@ class _StringsTr extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'Modeller';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -243639,8 +243939,6 @@ class _StringsVi extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       'Công cụ này không thể tạm dừng giữa chừng một tệp - dừng sẽ bỏ tiến độ của tệp hiện tại.';
   @override
-  String get storage_models_components => 'Mô hình và thành phần';
-  @override
   String get settings_group_tools => 'Công cụ';
   @override
   String get mihon_source_login => 'Đăng nhập';
@@ -244314,7 +244612,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => 'Tua tới 10 giây';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary =>
       'Cấu hình nhà cung cấp AI và chọn nhà cung cấp cho từng tính năng';
@@ -246708,7 +247006,7 @@ class _StringsVi extends _StringsEn {
       '${device} không hỗ trợ tải video bằng AI. Hãy cập nhật Fushi trên thiết bị đó.';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › Mô hình › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} chưa sẵn sàng để tải (chưa thiết lập backend tải xuống hoặc nguồn video được quản lý).';
@@ -247863,7 +248161,7 @@ class _StringsVi extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Mô hình › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -249923,6 +250221,30 @@ class _StringsVi extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => 'Mô hình';
+  @override
+  String get settings_destination_models_summary =>
+      'LLM, OCR, speech recognition, speech synthesis and model files';
+  @override
+  String get models_section_files => 'Model files';
+  @override
+  String get models_ocr_summary =>
+      'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+  @override
+  String get models_tts_title => 'Speech synthesis (TTS)';
+  @override
+  String get models_tts_summary =>
+      'System voices; the last fallback for card audio';
+  @override
+  String get models_tts_engine => 'Engine';
+  @override
+  String get models_tts_unavailable => 'No speech engine on this platform';
+  @override
+  String get models_tts_usage_title => 'Used for';
+  @override
+  String get models_tts_usage =>
+      'Generates word audio for cards only when no local or online audio is found';
 }
 
 // Path: <root>
@@ -259860,8 +260182,6 @@ class _StringsZhCn extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
   @override
-  String get storage_models_components => '模型与组件';
-  @override
   String get settings_group_tools => '工具';
   @override
   String get mihon_source_login => '登录';
@@ -260471,7 +260791,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => '快进 10 秒';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary => '配置 AI 提供商，并为每个功能指定使用哪一家';
   @override
@@ -260575,7 +260895,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_text_process_ai_generate => '生成';
   @override
-  String get game_text_process_ai_no_provider => '请先在「设置 › AI」里指定一家提供商';
+  String get game_text_process_ai_no_provider => '请先在「设置 › 模型 › LLM」里指定一家提供商';
   @override
   String get game_text_process_ai_empty => 'AI 没有给出可用的规则，换个说法再试一次。';
   @override
@@ -260754,7 +261074,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_assist_working => '正在询问 AI…';
   @override
-  String get ai_assist_no_provider => '请先在「设置 › AI」里为这个功能指定提供商';
+  String get ai_assist_no_provider => '请先在「设置 › 模型 › LLM」里为这个功能指定提供商';
   @override
   String get ai_assist_empty => 'AI 没有给出可用结果，换个说法再试试。';
   @override
@@ -262631,7 +262951,7 @@ class _StringsZhCn extends _StringsEn {
       '${device} 不支持 AI 下视频，请更新那台设备上的 Fushi。';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} 还没有给「AI 下载」指派 AI 提供商，请在那台设备的「设置 › AI」里指派。';
+      '${device} 还没有给「AI 下载」指派 AI 提供商，请在那台设备的「设置 › 模型 › LLM」里指派。';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} 的下载还没配好（下载后端或受管视频来源）。';
@@ -263665,7 +263985,7 @@ class _StringsZhCn extends _StringsEn {
   String get game_session_japanese_locale_skipped_hint_runtime_unavailable =>
       '本局未转区：已请求日文区域，但 Locale Emulator 无法启动该游戏（只支持 32 位游戏），已按普通方式启动。';
   @override
-  String get ai_feature_manga_ocr => '漫画 OCR（视觉识别）';
+  String get ai_feature_manga_ocr => 'OCR 纠错（视觉识别）';
   @override
   String get ai_feature_manga_ocr_summary =>
       '用视觉大模型重读漫画文字框里的字。在「漫画 OCR」设置里选了档位才会开启；裁出的文字框会上传给该提供商并由其计费。';
@@ -263679,7 +263999,7 @@ class _StringsZhCn extends _StringsEn {
   String get manga_ocr_ai_mode_all => '全部交给大模型';
   @override
   String get manga_ocr_ai_mode_desc =>
-      '文字框仍在本机检测，框里的字交给视觉大模型重读。裁出的文字框会上传给「设置 › AI」里指派的提供商并由其计费。「只重读没把握的字」需要本机模型；其他引擎不给置信度，请用「全部交给大模型」。';
+      '文字框仍在本机检测，框里的字交给视觉大模型重读。裁出的文字框会上传给「设置 › 模型 › LLM」里指派的提供商并由其计费。「只重读没把握的字」需要本机模型；其他引擎不给置信度，请用「全部交给大模型」。';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       '还没有给漫画 OCR 指派 AI 提供商，目前不会发送任何内容。';
@@ -265576,6 +265896,26 @@ class _StringsZhCn extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI 重读：${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => '模型';
+  @override
+  String get settings_destination_models_summary => 'LLM、OCR、语音转录、语音合成与模型文件';
+  @override
+  String get models_section_files => '模型文件';
+  @override
+  String get models_ocr_summary => '漫画与图形字幕共用：识别引擎、本机模型与 LLM 纠错';
+  @override
+  String get models_tts_title => '语音合成（TTS）';
+  @override
+  String get models_tts_summary => '系统语音，制卡发音的最后兜底';
+  @override
+  String get models_tts_engine => '引擎';
+  @override
+  String get models_tts_unavailable => '此平台没有可用的语音合成引擎';
+  @override
+  String get models_tts_usage_title => '用途';
+  @override
+  String get models_tts_usage => '只在本地与在线音频都找不到时，为制卡生成单词发音';
 }
 
 // Path: <root>
@@ -275526,8 +275866,6 @@ class _StringsZhHk extends _StringsEn {
   String get audiobook_transcribe_engine_system_no_pause =>
       '這個引擎在檔案中途無法暫停，停止會丟掉當前檔案的進度。';
   @override
-  String get storage_models_components => '模型與元件';
-  @override
   String get settings_group_tools => '工具';
   @override
   String get mihon_source_login => '登入';
@@ -276137,7 +276475,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_control_item_seek_forward => '快進 10 秒';
   @override
-  String get ai_settings_title => 'AI';
+  String get ai_settings_title => 'LLM';
   @override
   String get ai_settings_summary => '配置 AI 提供商，並為每個功能指定使用哪一家';
   @override
@@ -276242,7 +276580,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_text_process_ai_generate => '生成';
   @override
-  String get game_text_process_ai_no_provider => '請先在「設定 › AI」裡指定一家提供商';
+  String get game_text_process_ai_no_provider => '請先在「設定 › 模型 › LLM」裡指定一家提供商';
   @override
   String get game_text_process_ai_empty => 'AI 沒有給出可用的規則，換個説法再試一次。';
   @override
@@ -276421,7 +276759,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_assist_working => '正在詢問 AI…';
   @override
-  String get ai_assist_no_provider => '請先在「設定 › AI」裡為這個功能指定提供商';
+  String get ai_assist_no_provider => '請先在「設定 › 模型 › LLM」裡為這個功能指定提供商';
   @override
   String get ai_assist_empty => 'AI 沒有給出可用結果，換個説法再試試。';
   @override
@@ -278299,7 +278637,7 @@ class _StringsZhHk extends _StringsEn {
       '${device} 不支持 AI 下影片，請更新那台裝置上的 Fushi。';
   @override
   String ai_video_acquire_remote_no_provider({required Object device}) =>
-      '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+      '${device} has no AI provider assigned to AI video download. Assign one in Settings › 模型 › LLM on that device.';
   @override
   String ai_video_acquire_remote_not_ready({required Object device}) =>
       '${device} 的下載還沒配好（下載後端或受管影片來源）。';
@@ -279351,7 +279689,7 @@ class _StringsZhHk extends _StringsEn {
   String get game_session_japanese_locale_skipped_hint_runtime_unavailable =>
       'Not switched this time: a Japanese locale was requested, but Locale Emulator could not launch this game (it only supports 32-bit games), so it started normally.';
   @override
-  String get ai_feature_manga_ocr => '漫畫 OCR（視覺識別）';
+  String get ai_feature_manga_ocr => 'OCR 糾錯（視覺識別）';
   @override
   String get ai_feature_manga_ocr_summary =>
       '用視覺大模型重讀漫畫文字框裡的字。在「漫畫 OCR」設定裡選了模式才會開啟；裁出的文字框會上傳給該供應商並由其計費。';
@@ -279365,7 +279703,7 @@ class _StringsZhHk extends _StringsEn {
   String get manga_ocr_ai_mode_all => '全部交給大模型';
   @override
   String get manga_ocr_ai_mode_desc =>
-      '文字框仍在本機偵測，框裡的字交給視覺大模型重讀。裁出的文字框會上傳給「設定 › AI」裡指派的供應商並由其計費。「只重讀沒把握的字」需要本機模型；其他引擎不提供置信度，請用「全部交給大模型」。';
+      '文字框仍在本機偵測，框裡的字交給視覺大模型重讀。裁出的文字框會上傳給「設定 › 模型 › LLM」裡指派的供應商並由其計費。「只重讀沒把握的字」需要本機模型；其他引擎不提供置信度，請用「全部交給大模型」。';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       '還沒有給漫畫 OCR 指派 AI 供應商，目前不會傳送任何內容。';
@@ -281365,6 +281703,26 @@ class _StringsZhHk extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get settings_destination_models => '模型';
+  @override
+  String get settings_destination_models_summary => 'LLM、OCR、語音轉錄、語音合成與模型檔案';
+  @override
+  String get models_section_files => '模型檔案';
+  @override
+  String get models_ocr_summary => '漫畫與圖形字幕共用：識別引擎、本機模型與 LLM 糾錯';
+  @override
+  String get models_tts_title => '語音合成（TTS）';
+  @override
+  String get models_tts_summary => '系統語音，製卡發音的最後備援';
+  @override
+  String get models_tts_engine => '引擎';
+  @override
+  String get models_tts_unavailable => '此平台沒有可用的語音合成引擎';
+  @override
+  String get models_tts_usage_title => '用途';
+  @override
+  String get models_tts_usage => '只在本地與線上音訊都找不到時，為製卡產生單字發音';
 }
 
 /// Flat map(s) containing all translations.
@@ -290715,8 +291073,6 @@ extension on _StringsEn {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
-      case 'storage_models_components':
-        return 'Models and components';
       case 'settings_group_tools':
         return 'Tools';
       case 'mihon_source_login':
@@ -291283,7 +291639,7 @@ extension on _StringsEn {
       case 'reader_control_item_seek_forward':
         return 'Forward 10 seconds';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'Configure AI providers and choose which one powers each feature';
       case 'ai_providers_section':
@@ -293254,7 +293610,7 @@ extension on _StringsEn {
             '${device} doesn\'t support AI video download. Update Fushi on that device.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI download. Assign one in Settings › Models › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} isn\'t ready to download yet (download backend or managed video source not set up).';
@@ -294193,7 +294549,7 @@ extension on _StringsEn {
       case 'game_session_japanese_locale_skipped_hint_runtime_unavailable':
         return 'Not switched this time: a Japanese locale was requested, but Locale Emulator could not launch this game (it only supports 32-bit games), so it started normally.';
       case 'ai_feature_manga_ocr':
-        return 'Manga OCR (vision)';
+        return 'OCR correction (vision)';
       case 'ai_feature_manga_ocr_summary':
         return 'A vision model re-reads the text inside manga text boxes. Off until you pick a mode in Manga OCR settings; cropped text boxes are uploaded to this provider and billed by it.';
       case 'manga_ocr_ai_mode_label':
@@ -294205,7 +294561,7 @@ extension on _StringsEn {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -295978,6 +296334,26 @@ extension on _StringsEn {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'Models';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -305323,8 +305699,6 @@ extension on _StringsAr {
         return 'جارٍ طلب تثبيت اللغة من النظام…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'لا يمكن لهذا المحرك الإيقاف المؤقت أثناء الملف — الإيقاف يتجاهل تقدّم الملف الحالي.';
-      case 'storage_models_components':
-        return 'النماذج والمكوّنات';
       case 'settings_group_tools':
         return 'الأدوات';
       case 'mihon_source_login':
@@ -305891,7 +306265,7 @@ extension on _StringsAr {
       case 'reader_control_item_seek_forward':
         return 'تقدم 10 ثوانٍ';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'اضبط مزودي الذكاء الاصطناعي واختر أيّهم يشغّل كل ميزة';
       case 'ai_providers_section':
@@ -307862,7 +308236,7 @@ extension on _StringsAr {
             '${device} لا يدعم تنزيل الفيديو بالذكاء الاصطناعي. حدّث Fushi على ذلك الجهاز.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › النماذج › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} ليس جاهزًا للتنزيل بعد (لم يُعدّ نظام التنزيل أو مصدر الفيديو المُدار).';
@@ -308813,7 +309187,7 @@ extension on _StringsAr {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › النماذج › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -310586,6 +310960,26 @@ extension on _StringsAr {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'النماذج';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -319989,8 +320383,6 @@ extension on _StringsDe {
         return 'System wird gebeten, die Sprache zu installieren…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'Diese Engine kann nicht mitten in einer Datei pausieren – Stoppen verwirft den Fortschritt der aktuellen Datei.';
-      case 'storage_models_components':
-        return 'Modelle und Komponenten';
       case 'settings_group_tools':
         return 'Werkzeuge';
       case 'mihon_source_login':
@@ -320559,7 +320951,7 @@ extension on _StringsDe {
       case 'reader_control_item_seek_forward':
         return '10 Sekunden vor';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'KI-Anbieter konfigurieren und festlegen, welcher welche Funktion antreibt';
       case 'ai_providers_section':
@@ -322540,7 +322932,7 @@ extension on _StringsDe {
             '${device} unterstützt den KI-Video-Download nicht. Aktualisiere Fushi auf diesem Gerät.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modelle › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} ist noch nicht zum Herunterladen bereit (Download-Backend oder verwaltete Videoquelle nicht eingerichtet).';
@@ -323497,7 +323889,7 @@ extension on _StringsDe {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelle › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -325270,6 +325662,26 @@ extension on _StringsDe {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'Modelle';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -334659,8 +335071,6 @@ extension on _StringsEs {
         return 'Pidiendo al sistema que instale el idioma…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'Este motor no puede pausar a mitad de archivo: al detenerlo se descarta el progreso del archivo actual.';
-      case 'storage_models_components':
-        return 'Modelos y componentes';
       case 'settings_group_tools':
         return 'Herramientas';
       case 'mihon_source_login':
@@ -335231,7 +335641,7 @@ extension on _StringsEs {
       case 'reader_control_item_seek_forward':
         return 'Avanzar 10 segundos';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'Configura los proveedores de IA y elige cuál impulsa cada función';
       case 'ai_providers_section':
@@ -337209,7 +337619,7 @@ extension on _StringsEs {
             '${device} no admite la descarga de vídeo con IA. Actualiza Fushi en ese dispositivo.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modelos › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} aún no está listo para descargar (falta configurar el backend de descargas o una fuente de vídeo gestionada).';
@@ -338163,7 +338573,7 @@ extension on _StringsEs {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelos › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -339936,6 +340346,26 @@ extension on _StringsEs {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'Modelos';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -349338,8 +349768,6 @@ extension on _StringsFr {
         return 'Demande d\'installation de la langue au système…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'Ce moteur ne peut pas être mis en pause au milieu d\'un fichier — l\'arrêt abandonne la progression du fichier en cours.';
-      case 'storage_models_components':
-        return 'Modèles et composants';
       case 'settings_group_tools':
         return 'Outils';
       case 'mihon_source_login':
@@ -349911,7 +350339,7 @@ extension on _StringsFr {
       case 'reader_control_item_seek_forward':
         return 'Avancer de 10 secondes';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'Configurez les fournisseurs d\'IA et choisissez lequel alimente chaque fonctionnalité';
       case 'ai_providers_section':
@@ -351891,7 +352319,7 @@ extension on _StringsFr {
             '${device} ne prend pas en charge le téléchargement vidéo par IA. Mettez à jour Fushi sur cet appareil.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modèles › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} n\'est pas encore prêt à télécharger (moteur de téléchargement ou source vidéo gérée non configuré).';
@@ -352847,7 +353275,7 @@ extension on _StringsFr {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modèles › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -354620,6 +355048,26 @@ extension on _StringsFr {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'Modèles';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -363982,8 +364430,6 @@ extension on _StringsId {
         return 'Meminta sistem memasang bahasa…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'Mesin ini tidak dapat dijeda di tengah file — menghentikan akan membuang progres file saat ini.';
-      case 'storage_models_components':
-        return 'Model dan komponen';
       case 'settings_group_tools':
         return 'Alat';
       case 'mihon_source_login':
@@ -364550,7 +364996,7 @@ extension on _StringsId {
       case 'reader_control_item_seek_forward':
         return 'Maju 10 detik';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'Konfigurasikan penyedia AI dan pilih yang menjalankan setiap fitur';
       case 'ai_providers_section':
@@ -366523,7 +366969,7 @@ extension on _StringsId {
             '${device} tidak mendukung unduhan video AI. Perbarui Fushi di perangkat itu.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › Model › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} belum siap mengunduh (backend unduhan atau sumber video terkelola belum diatur).';
@@ -367475,7 +367921,7 @@ extension on _StringsId {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Model › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -369248,6 +369694,26 @@ extension on _StringsId {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'Model';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -378637,8 +379103,6 @@ extension on _StringsIt {
         return 'Richiesta al sistema di installare la lingua…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'Questo motore non può essere messo in pausa a metà file: interrompendo si perde l\'avanzamento del file corrente.';
-      case 'storage_models_components':
-        return 'Modelli e componenti';
       case 'settings_group_tools':
         return 'Strumenti';
       case 'mihon_source_login':
@@ -379207,7 +379671,7 @@ extension on _StringsIt {
       case 'reader_control_item_seek_forward':
         return 'Avanti di 10 secondi';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'Configura i provider di IA e scegli quale alimenta ciascuna funzione';
       case 'ai_providers_section':
@@ -381184,7 +381648,7 @@ extension on _StringsIt {
             '${device} non supporta il download video con IA. Aggiorna Fushi su quel dispositivo.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modelli › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} non è ancora pronto a scaricare (backend di download o fonte video gestita non configurati).';
@@ -382139,7 +382603,7 @@ extension on _StringsIt {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelli › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -383912,6 +384376,26 @@ extension on _StringsIt {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'Modelli';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -393214,8 +393698,6 @@ extension on _StringsJa {
         return 'システムに言語のインストールを依頼中…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'このエンジンはファイルの途中で一時停止できません。停止すると現在のファイルの進捗が破棄されます。';
-      case 'storage_models_components':
-        return 'モデルとコンポーネント';
       case 'settings_group_tools':
         return 'ツール';
       case 'mihon_source_login':
@@ -393778,7 +394260,7 @@ extension on _StringsJa {
       case 'reader_control_item_seek_forward':
         return '10 秒進む';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'AI プロバイダーを設定し、機能ごとに使うものを選びます';
       case 'ai_providers_section':
@@ -393880,7 +394362,7 @@ extension on _StringsJa {
       case 'game_text_process_ai_generate':
         return '生成';
       case 'game_text_process_ai_no_provider':
-        return '先に「設定 › AI」で AI プロバイダーを選択してください';
+        return '先に「設定 › モデル › LLM」で AI プロバイダーを選択してください';
       case 'game_text_process_ai_empty':
         return 'AI が使えるルールを返しませんでした。言い方を変えてもう一度お試しください。';
       case 'game_text_process_param_repeat':
@@ -394044,7 +394526,7 @@ extension on _StringsJa {
       case 'ai_assist_working':
         return 'AI に問い合わせ中…';
       case 'ai_assist_no_provider':
-        return '先に「設定 › AI」でこの機能の AI プロバイダーを選択してください';
+        return '先に「設定 › モデル › LLM」でこの機能の AI プロバイダーを選択してください';
       case 'ai_assist_empty':
         return 'AI が使える結果を返しませんでした。言い方を変えてもう一度お試しください。';
       case 'ai_assist_failed':
@@ -395734,7 +396216,7 @@ extension on _StringsJa {
             '${device} は AI 動画ダウンロードに対応していません。そのデバイスの Fushi を更新してください。';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › モデル › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} はまだダウンロードの準備ができていません（ダウンロードバックエンドまたは管理対象の動画ソースが未設定）。';
@@ -396680,7 +397162,7 @@ extension on _StringsJa {
       case 'manga_ocr_ai_mode_all':
         return 'すべての文字';
       case 'manga_ocr_ai_mode_desc':
-        return '文字枠の検出はこれまでどおり端末内で行い、枠の中の文字を画像対応モデルが読み直します。切り出した文字枠は「設定 › AI」で割り当てたプロバイダーに送信され、その料金が発生します。「自信のない文字だけ」は端末内モデル専用です。ほかのエンジンは確信度を出さないので「すべての文字」を使ってください。';
+        return '文字枠の検出はこれまでどおり端末内で行い、枠の中の文字を画像対応モデルが読み直します。切り出した文字枠は「設定 › モデル › LLM」で割り当てたプロバイダーに送信され、その料金が発生します。「自信のない文字だけ」は端末内モデル専用です。ほかのエンジンは確信度を出さないので「すべての文字」を使ってください。';
       case 'manga_ocr_ai_mode_no_provider':
         return '漫画 OCR に AI プロバイダーが割り当てられていないため、今は何も送信されません。';
       case 'manga_ocr_ai_mode_open_settings':
@@ -398450,6 +398932,26 @@ extension on _StringsJa {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'モデル';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -407754,8 +408256,6 @@ extension on _StringsKo {
         return '시스템에 언어 설치를 요청하는 중…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return '이 엔진은 파일 처리 도중에 일시정지할 수 없습니다. 중지하면 현재 파일의 진행 상황이 삭제됩니다.';
-      case 'storage_models_components':
-        return '모델 및 구성 요소';
       case 'settings_group_tools':
         return '도구';
       case 'mihon_source_login':
@@ -408316,7 +408816,7 @@ extension on _StringsKo {
       case 'reader_control_item_seek_forward':
         return '10초 앞으로';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'AI 제공자를 설정하고 각 기능에 사용할 제공자를 선택합니다';
       case 'ai_providers_section':
@@ -410275,7 +410775,7 @@ extension on _StringsKo {
             '${device}은(는) AI 비디오 다운로드를 지원하지 않습니다. 해당 기기에서 Fushi를 업데이트하세요.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › 모델 › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device}은(는) 아직 다운로드할 준비가 되지 않았습니다(다운로드 백엔드 또는 관리형 비디오 소스가 설정되지 않음).';
@@ -411222,7 +411722,7 @@ extension on _StringsKo {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › 모델 › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -412995,6 +413495,26 @@ extension on _StringsKo {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return '모델';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -422380,8 +422900,6 @@ extension on _StringsNl {
         return 'Het systeem vragen de taal te installeren…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'Deze engine kan niet midden in een bestand pauzeren — stoppen verwerpt de voortgang van het huidige bestand.';
-      case 'storage_models_components':
-        return 'Modellen en componenten';
       case 'settings_group_tools':
         return 'Hulpmiddelen';
       case 'mihon_source_login':
@@ -422951,7 +423469,7 @@ extension on _StringsNl {
       case 'reader_control_item_seek_forward':
         return '10 seconden vooruit';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'Stel AI-providers in en kies welke elke functie aandrijft';
       case 'ai_providers_section':
@@ -424926,7 +425444,7 @@ extension on _StringsNl {
             '${device} ondersteunt geen AI-videodownload. Werk Fushi op dat apparaat bij.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modellen › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} is nog niet klaar om te downloaden (downloadbackend of beheerde videobron niet ingesteld).';
@@ -425881,7 +426399,7 @@ extension on _StringsNl {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modellen › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -427654,6 +428172,26 @@ extension on _StringsNl {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'Modellen';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -437033,8 +437571,6 @@ extension on _StringsPtBr {
         return 'Pedindo ao sistema para instalar o idioma…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'Este mecanismo não pode pausar no meio de um arquivo — parar descarta o progresso do arquivo atual.';
-      case 'storage_models_components':
-        return 'Modelos e componentes';
       case 'settings_group_tools':
         return 'Ferramentas';
       case 'mihon_source_login':
@@ -437603,7 +438139,7 @@ extension on _StringsPtBr {
       case 'reader_control_item_seek_forward':
         return 'Avançar 10 segundos';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'Configure provedores de IA e escolha qual alimenta cada recurso';
       case 'ai_providers_section':
@@ -439578,7 +440114,7 @@ extension on _StringsPtBr {
             '${device} não é compatível com o download de vídeo com IA. Atualize o Fushi nesse dispositivo.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modelos › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} ainda não está pronto para baixar (backend de download ou fonte de vídeo gerenciada não configurados).';
@@ -440532,7 +441068,7 @@ extension on _StringsPtBr {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelos › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -442305,6 +442841,26 @@ extension on _StringsPtBr {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'Modelos';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -451691,8 +452247,6 @@ extension on _StringsRu {
         return 'Запрос системе на установку языка…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'Этот движок не умеет приостанавливаться посреди файла — при остановке прогресс текущего файла теряется.';
-      case 'storage_models_components':
-        return 'Модели и компоненты';
       case 'settings_group_tools':
         return 'Инструменты';
       case 'mihon_source_login':
@@ -452261,7 +452815,7 @@ extension on _StringsRu {
       case 'reader_control_item_seek_forward':
         return 'Вперёд на 10 секунд';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'Настройте ИИ-провайдеров и выберите, какой из них обслуживает каждую функцию';
       case 'ai_providers_section':
@@ -454234,7 +454788,7 @@ extension on _StringsRu {
             '${device} не поддерживает ИИ-загрузку видео. Обновите Fushi на этом устройстве.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › Модели › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} ещё не готово к загрузке (не настроен механизм загрузки или управляемый источник видео).';
@@ -455188,7 +455742,7 @@ extension on _StringsRu {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Модели › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -456961,6 +457515,26 @@ extension on _StringsRu {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'Модели';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -466312,8 +466886,6 @@ extension on _StringsTh {
         return 'กำลังขอให้ระบบติดตั้งภาษา…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'เอนจินนี้หยุดชั่วคราวกลางไฟล์ไม่ได้ — การหยุดจะทิ้งความคืบหน้าของไฟล์ปัจจุบัน';
-      case 'storage_models_components':
-        return 'โมเดลและส่วนประกอบ';
       case 'settings_group_tools':
         return 'เครื่องมือ';
       case 'mihon_source_login':
@@ -466880,7 +467452,7 @@ extension on _StringsTh {
       case 'reader_control_item_seek_forward':
         return 'ไปข้างหน้า 10 วินาที';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'ตั้งค่าผู้ให้บริการ AI และเลือกว่าผู้ให้บริการใดขับเคลื่อนแต่ละฟีเจอร์';
       case 'ai_providers_section':
@@ -468848,7 +469420,7 @@ extension on _StringsTh {
             '${device} ไม่รองรับการดาวน์โหลดวิดีโอด้วย AI อัปเดต Fushi บนอุปกรณ์นั้น';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › โมเดล › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} ยังไม่พร้อมดาวน์โหลด (ยังไม่ได้ตั้งค่าแบ็กเอนด์ดาวน์โหลดหรือแหล่งวิดีโอที่จัดการ)';
@@ -469800,7 +470372,7 @@ extension on _StringsTh {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › โมเดล › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -471573,6 +472145,26 @@ extension on _StringsTh {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'โมเดล';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -480944,8 +481536,6 @@ extension on _StringsTr {
         return 'Sistemden dilin yüklenmesi isteniyor…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'Bu motor dosyanın ortasında duraklatamaz — durdurmak geçerli dosyanın ilerlemesini atar.';
-      case 'storage_models_components':
-        return 'Modeller ve bileşenler';
       case 'settings_group_tools':
         return 'Araçlar';
       case 'mihon_source_login':
@@ -481515,7 +482105,7 @@ extension on _StringsTr {
       case 'reader_control_item_seek_forward':
         return '10 saniye ileri sar';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'Yapay zeka sağlayıcılarını yapılandırın ve her özelliği hangisinin çalıştıracağını seçin';
       case 'ai_providers_section':
@@ -483487,7 +484077,7 @@ extension on _StringsTr {
             '${device} yapay zeka video indirmeyi desteklemiyor. O cihazda Fushi\'yi güncelleyin.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › Modeller › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} henüz indirmeye hazır değil (indirme arka ucu veya yönetilen video kaynağı kurulmamış).';
@@ -484443,7 +485033,7 @@ extension on _StringsTr {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modeller › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -486216,6 +486806,26 @@ extension on _StringsTr {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'Modeller';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -495579,8 +496189,6 @@ extension on _StringsVi {
         return 'Đang yêu cầu hệ thống cài ngôn ngữ…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'Công cụ này không thể tạm dừng giữa chừng một tệp - dừng sẽ bỏ tiến độ của tệp hiện tại.';
-      case 'storage_models_components':
-        return 'Mô hình và thành phần';
       case 'settings_group_tools':
         return 'Công cụ';
       case 'mihon_source_login':
@@ -496147,7 +496755,7 @@ extension on _StringsVi {
       case 'reader_control_item_seek_forward':
         return 'Tua tới 10 giây';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return 'Cấu hình nhà cung cấp AI và chọn nhà cung cấp cho từng tính năng';
       case 'ai_providers_section':
@@ -498117,7 +498725,7 @@ extension on _StringsVi {
             '${device} không hỗ trợ tải video bằng AI. Hãy cập nhật Fushi trên thiết bị đó.';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › Mô hình › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) =>
             '${device} chưa sẵn sàng để tải (chưa thiết lập backend tải xuống hoặc nguồn video được quản lý).';
@@ -499069,7 +499677,7 @@ extension on _StringsVi {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › AI and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Mô hình › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -500842,6 +501450,26 @@ extension on _StringsVi {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return 'Mô hình';
+      case 'settings_destination_models_summary':
+        return 'LLM, OCR, speech recognition, speech synthesis and model files';
+      case 'models_section_files':
+        return 'Model files';
+      case 'models_ocr_summary':
+        return 'Shared by manga and graphic subtitles: engine, local models and LLM correction';
+      case 'models_tts_title':
+        return 'Speech synthesis (TTS)';
+      case 'models_tts_summary':
+        return 'System voices; the last fallback for card audio';
+      case 'models_tts_engine':
+        return 'Engine';
+      case 'models_tts_unavailable':
+        return 'No speech engine on this platform';
+      case 'models_tts_usage_title':
+        return 'Used for';
+      case 'models_tts_usage':
+        return 'Generates word audio for cards only when no local or online audio is found';
       default:
         return null;
     }
@@ -510115,8 +510743,6 @@ extension on _StringsZhCn {
         return '正在让系统安装该语言…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
-      case 'storage_models_components':
-        return '模型与组件';
       case 'settings_group_tools':
         return '工具';
       case 'mihon_source_login':
@@ -510673,7 +511299,7 @@ extension on _StringsZhCn {
       case 'reader_control_item_seek_forward':
         return '快进 10 秒';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return '配置 AI 提供商，并为每个功能指定使用哪一家';
       case 'ai_providers_section':
@@ -510775,7 +511401,7 @@ extension on _StringsZhCn {
       case 'game_text_process_ai_generate':
         return '生成';
       case 'game_text_process_ai_no_provider':
-        return '请先在「设置 › AI」里指定一家提供商';
+        return '请先在「设置 › 模型 › LLM」里指定一家提供商';
       case 'game_text_process_ai_empty':
         return 'AI 没有给出可用的规则，换个说法再试一次。';
       case 'game_text_process_param_repeat':
@@ -510939,7 +511565,7 @@ extension on _StringsZhCn {
       case 'ai_assist_working':
         return '正在询问 AI…';
       case 'ai_assist_no_provider':
-        return '请先在「设置 › AI」里为这个功能指定提供商';
+        return '请先在「设置 › 模型 › LLM」里为这个功能指定提供商';
       case 'ai_assist_empty':
         return 'AI 没有给出可用结果，换个说法再试试。';
       case 'ai_assist_failed':
@@ -512618,7 +513244,7 @@ extension on _StringsZhCn {
             '${device} 不支持 AI 下视频，请更新那台设备上的 Fushi。';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} 还没有给「AI 下载」指派 AI 提供商，请在那台设备的「设置 › AI」里指派。';
+            '${device} 还没有给「AI 下载」指派 AI 提供商，请在那台设备的「设置 › 模型 › LLM」里指派。';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) => '${device} 的下载还没配好（下载后端或受管视频来源）。';
       case 'video_library_delete_rows_failed':
@@ -513548,7 +514174,7 @@ extension on _StringsZhCn {
       case 'game_session_japanese_locale_skipped_hint_runtime_unavailable':
         return '本局未转区：已请求日文区域，但 Locale Emulator 无法启动该游戏（只支持 32 位游戏），已按普通方式启动。';
       case 'ai_feature_manga_ocr':
-        return '漫画 OCR（视觉识别）';
+        return 'OCR 纠错（视觉识别）';
       case 'ai_feature_manga_ocr_summary':
         return '用视觉大模型重读漫画文字框里的字。在「漫画 OCR」设置里选了档位才会开启；裁出的文字框会上传给该提供商并由其计费。';
       case 'manga_ocr_ai_mode_label':
@@ -513560,7 +514186,7 @@ extension on _StringsZhCn {
       case 'manga_ocr_ai_mode_all':
         return '全部交给大模型';
       case 'manga_ocr_ai_mode_desc':
-        return '文字框仍在本机检测，框里的字交给视觉大模型重读。裁出的文字框会上传给「设置 › AI」里指派的提供商并由其计费。「只重读没把握的字」需要本机模型；其他引擎不给置信度，请用「全部交给大模型」。';
+        return '文字框仍在本机检测，框里的字交给视觉大模型重读。裁出的文字框会上传给「设置 › 模型 › LLM」里指派的提供商并由其计费。「只重读没把握的字」需要本机模型；其他引擎不给置信度，请用「全部交给大模型」。';
       case 'manga_ocr_ai_mode_no_provider':
         return '还没有给漫画 OCR 指派 AI 提供商，目前不会发送任何内容。';
       case 'manga_ocr_ai_mode_open_settings':
@@ -515308,6 +515934,26 @@ extension on _StringsZhCn {
           required Object done,
           required Object total,
         }) => 'AI 重读：${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return '模型';
+      case 'settings_destination_models_summary':
+        return 'LLM、OCR、语音转录、语音合成与模型文件';
+      case 'models_section_files':
+        return '模型文件';
+      case 'models_ocr_summary':
+        return '漫画与图形字幕共用：识别引擎、本机模型与 LLM 纠错';
+      case 'models_tts_title':
+        return '语音合成（TTS）';
+      case 'models_tts_summary':
+        return '系统语音，制卡发音的最后兜底';
+      case 'models_tts_engine':
+        return '引擎';
+      case 'models_tts_unavailable':
+        return '此平台没有可用的语音合成引擎';
+      case 'models_tts_usage_title':
+        return '用途';
+      case 'models_tts_usage':
+        return '只在本地与在线音频都找不到时，为制卡生成单词发音';
       default:
         return null;
     }
@@ -524582,8 +525228,6 @@ extension on _StringsZhHk {
         return '正在讓系統安裝該語言…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return '這個引擎在檔案中途無法暫停，停止會丟掉當前檔案的進度。';
-      case 'storage_models_components':
-        return '模型與元件';
       case 'settings_group_tools':
         return '工具';
       case 'mihon_source_login':
@@ -525140,7 +525784,7 @@ extension on _StringsZhHk {
       case 'reader_control_item_seek_forward':
         return '快進 10 秒';
       case 'ai_settings_title':
-        return 'AI';
+        return 'LLM';
       case 'ai_settings_summary':
         return '配置 AI 提供商，並為每個功能指定使用哪一家';
       case 'ai_providers_section':
@@ -525242,7 +525886,7 @@ extension on _StringsZhHk {
       case 'game_text_process_ai_generate':
         return '生成';
       case 'game_text_process_ai_no_provider':
-        return '請先在「設定 › AI」裡指定一家提供商';
+        return '請先在「設定 › 模型 › LLM」裡指定一家提供商';
       case 'game_text_process_ai_empty':
         return 'AI 沒有給出可用的規則，換個説法再試一次。';
       case 'game_text_process_param_repeat':
@@ -525406,7 +526050,7 @@ extension on _StringsZhHk {
       case 'ai_assist_working':
         return '正在詢問 AI…';
       case 'ai_assist_no_provider':
-        return '請先在「設定 › AI」裡為這個功能指定提供商';
+        return '請先在「設定 › 模型 › LLM」裡為這個功能指定提供商';
       case 'ai_assist_empty':
         return 'AI 沒有給出可用結果，換個説法再試試。';
       case 'ai_assist_failed':
@@ -527085,7 +527729,7 @@ extension on _StringsZhHk {
             '${device} 不支持 AI 下影片，請更新那台裝置上的 Fushi。';
       case 'ai_video_acquire_remote_no_provider':
         return ({required Object device}) =>
-            '${device} has no AI provider assigned to AI video download. Assign one in Settings › AI on that device.';
+            '${device} has no AI provider assigned to AI video download. Assign one in Settings › 模型 › LLM on that device.';
       case 'ai_video_acquire_remote_not_ready':
         return ({required Object device}) => '${device} 的下載還沒配好（下載後端或受管影片來源）。';
       case 'video_library_delete_rows_failed':
@@ -528016,7 +528660,7 @@ extension on _StringsZhHk {
       case 'game_session_japanese_locale_skipped_hint_runtime_unavailable':
         return 'Not switched this time: a Japanese locale was requested, but Locale Emulator could not launch this game (it only supports 32-bit games), so it started normally.';
       case 'ai_feature_manga_ocr':
-        return '漫畫 OCR（視覺識別）';
+        return 'OCR 糾錯（視覺識別）';
       case 'ai_feature_manga_ocr_summary':
         return '用視覺大模型重讀漫畫文字框裡的字。在「漫畫 OCR」設定裡選了模式才會開啟；裁出的文字框會上傳給該供應商並由其計費。';
       case 'manga_ocr_ai_mode_label':
@@ -528028,7 +528672,7 @@ extension on _StringsZhHk {
       case 'manga_ocr_ai_mode_all':
         return '全部交給大模型';
       case 'manga_ocr_ai_mode_desc':
-        return '文字框仍在本機偵測，框裡的字交給視覺大模型重讀。裁出的文字框會上傳給「設定 › AI」裡指派的供應商並由其計費。「只重讀沒把握的字」需要本機模型；其他引擎不提供置信度，請用「全部交給大模型」。';
+        return '文字框仍在本機偵測，框裡的字交給視覺大模型重讀。裁出的文字框會上傳給「設定 › 模型 › LLM」裡指派的供應商並由其計費。「只重讀沒把握的字」需要本機模型；其他引擎不提供置信度，請用「全部交給大模型」。';
       case 'manga_ocr_ai_mode_no_provider':
         return '還沒有給漫畫 OCR 指派 AI 供應商，目前不會傳送任何內容。';
       case 'manga_ocr_ai_mode_open_settings':
@@ -529791,6 +530435,26 @@ extension on _StringsZhHk {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'settings_destination_models':
+        return '模型';
+      case 'settings_destination_models_summary':
+        return 'LLM、OCR、語音轉錄、語音合成與模型檔案';
+      case 'models_section_files':
+        return '模型檔案';
+      case 'models_ocr_summary':
+        return '漫畫與圖形字幕共用：識別引擎、本機模型與 LLM 糾錯';
+      case 'models_tts_title':
+        return '語音合成（TTS）';
+      case 'models_tts_summary':
+        return '系統語音，製卡發音的最後備援';
+      case 'models_tts_engine':
+        return '引擎';
+      case 'models_tts_unavailable':
+        return '此平台沒有可用的語音合成引擎';
+      case 'models_tts_usage_title':
+        return '用途';
+      case 'models_tts_usage':
+        return '只在本地與線上音訊都找不到時，為製卡產生單字發音';
       default:
         return null;
     }
