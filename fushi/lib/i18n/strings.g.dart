@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120377 (7081 per locale)
+/// Strings: 120394 (7082 per locale)
 ///
-/// Built on 2026-10-13 at 09:32 UTC
+/// Built on 2026-10-13 at 09:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10204,6 +10204,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Double-tap video to play/pause';
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -27282,6 +27283,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -44750,6 +44753,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -62278,6 +62283,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -79885,6 +79892,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -97147,6 +97156,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -114574,6 +114585,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -131001,6 +131014,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'タッチ画面で動画の中央をダブルタップ（ダブルタップでのシークがオフのときはどこでも）すると再生/一時停止を切り替えます';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -147464,6 +147479,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -164839,6 +164856,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -182283,6 +182302,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -199673,6 +199694,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -216741,6 +216764,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -234012,6 +234037,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -251210,6 +251237,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 // Path: <root>
@@ -266943,6 +266972,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       '触屏双击画面中间（或关闭双击快退快进时的任意位置）切换播放/暂停';
+  @override
+  String get local_audio_source_reorder_tooltip => '拖动或点按调整顺序';
 }
 
 // Path: <root>
@@ -282820,6 +282851,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
       '觸控螢幕雙擊畫面中間（或關閉雙擊快退快進時的任意位置）切換播放/暫停';
+  @override
+  String get local_audio_source_reorder_tooltip => 'Drag or tap to reorder';
 }
 
 /// Flat map(s) containing all translations.
@@ -297507,6 +297540,8 @@ extension on _StringsEn {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -312189,6 +312224,8 @@ extension on _StringsAr {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -326947,6 +326984,8 @@ extension on _StringsDe {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -341687,6 +341726,8 @@ extension on _StringsEs {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -356445,6 +356486,8 @@ extension on _StringsFr {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -371147,6 +371190,8 @@ extension on _StringsId {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -385885,6 +385930,8 @@ extension on _StringsIt {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -400497,6 +400544,8 @@ extension on _StringsJa {
         return 'ダブルタップで再生/一時停止';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'タッチ画面で動画の中央をダブルタップ（ダブルタップでのシークがオフのときはどこでも）すると再生/一時停止を切り替えます';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -415116,6 +415165,8 @@ extension on _StringsKo {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -429849,6 +429900,8 @@ extension on _StringsNl {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -444574,6 +444627,8 @@ extension on _StringsPtBr {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -459304,6 +459359,8 @@ extension on _StringsRu {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -473990,6 +474047,8 @@ extension on _StringsTh {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -488707,6 +488766,8 @@ extension on _StringsTr {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -503407,6 +503468,8 @@ extension on _StringsVi {
         return 'Double-tap video to play/pause';
       case 'video_setting_double_tap_toggles_playback_hint':
         return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
@@ -517943,6 +518006,8 @@ extension on _StringsZhCn {
         return '双击画面播放/暂停';
       case 'video_setting_double_tap_toggles_playback_hint':
         return '触屏双击画面中间（或关闭双击快退快进时的任意位置）切换播放/暂停';
+      case 'local_audio_source_reorder_tooltip':
+        return '拖动或点按调整顺序';
       default:
         return null;
     }
@@ -532500,6 +532565,8 @@ extension on _StringsZhHk {
         return '雙擊畫面播放/暫停';
       case 'video_setting_double_tap_toggles_playback_hint':
         return '觸控螢幕雙擊畫面中間（或關閉雙擊快退快進時的任意位置）切換播放/暫停';
+      case 'local_audio_source_reorder_tooltip':
+        return 'Drag or tap to reorder';
       default:
         return null;
     }
