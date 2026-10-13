@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119782 (7046 per locale)
+/// Strings: 119884 (7052 per locale)
 ///
-/// Built on 2026-10-12 at 18:01 UTC
+/// Built on 2026-10-13 at 03:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10140,6 +10140,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Transcribe and generate book';
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -27119,6 +27131,24 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -44488,6 +44518,24 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -61917,6 +61965,24 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -79425,6 +79491,24 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -96588,6 +96672,24 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -113916,6 +114018,24 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -130244,6 +130364,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -146608,6 +146746,24 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -163884,6 +164040,24 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -181229,6 +181403,24 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -198520,6 +198712,24 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -215489,6 +215699,24 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -232661,6 +232889,24 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -249760,6 +250006,24 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -265402,6 +265666,24 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。需要电脑版 Anki + AnkiConnect（手机可改连电脑上的 AnkiConnect）；AnkiDroid / AnkiMobile 无法重排。';
+  @override
+  String get media_audio_cd_rip_title => '正在抓取音频 CD';
+  @override
+  String get media_audio_cd_rip_reading => '正在读取光盘…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => '第 ${current} / ${total} 轨';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      '音频 CD 抓轨失败：${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '有 ${n} 个损坏扇区读不出来，已用静音填充';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda 只是光盘音轨的快捷方式，里面没有音频。Windows 上请放入光盘后直接选择光驱；其他平台请先把 CD 转成音频文件再导入。';
 }
 
 // Path: <root>
@@ -281180,6 +281462,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 /// Flat map(s) containing all translations.
@@ -295784,6 +296084,21 @@ extension on _StringsEn {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -310383,6 +310698,21 @@ extension on _StringsAr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -325058,6 +325388,21 @@ extension on _StringsDe {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -339715,6 +340060,21 @@ extension on _StringsEs {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -354390,6 +354750,21 @@ extension on _StringsFr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -369009,6 +369384,21 @@ extension on _StringsId {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -383664,6 +384054,21 @@ extension on _StringsIt {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -398193,6 +398598,21 @@ extension on _StringsJa {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -412729,6 +413149,21 @@ extension on _StringsKo {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -427379,6 +427814,21 @@ extension on _StringsNl {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -442021,6 +442471,21 @@ extension on _StringsPtBr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -456668,6 +457133,21 @@ extension on _StringsRu {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -471271,6 +471751,21 @@ extension on _StringsTh {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -485905,6 +486400,21 @@ extension on _StringsTr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -500522,6 +501032,21 @@ extension on _StringsVi {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -514979,6 +515504,19 @@ extension on _StringsZhCn {
         return '转录并生成书籍';
       case 'onboarding_anki_auto_reposition_hint':
         return '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。需要电脑版 Anki + AnkiConnect（手机可改连电脑上的 AnkiConnect）；AnkiDroid / AnkiMobile 无法重排。';
+      case 'media_audio_cd_rip_title':
+        return '正在抓取音频 CD';
+      case 'media_audio_cd_rip_reading':
+        return '正在读取光盘…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            '第 ${current} / ${total} 轨';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) => '音频 CD 抓轨失败：${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) => '有 ${n} 个损坏扇区读不出来，已用静音填充';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda 只是光盘音轨的快捷方式，里面没有音频。Windows 上请放入光盘后直接选择光驱；其他平台请先把 CD 转成音频文件再导入。';
       default:
         return null;
     }
@@ -529453,6 +529991,21 @@ extension on _StringsZhHk {
         return '轉錄並生成書籍';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
