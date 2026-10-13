@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126140 (7420 per locale)
+/// Strings: 126106 (7418 per locale)
 ///
-/// Built on 2026-10-13 at 11:24 UTC
+/// Built on 2026-10-13 at 11:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10144,10 +10144,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_subtitle_shadow_color => 'Shadow color';
   String get video_setting_subtitle_outline => 'Outline width';
   String get video_setting_subtitle_outline_color => 'Outline color';
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
   String anime_download_filter_episode({required Object n}) =>
@@ -27699,12 +27695,6 @@ class _StringsAr extends _StringsEn {
   String get video_setting_subtitle_outline => 'Outline width';
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
   @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
@@ -46019,12 +46009,6 @@ class _StringsDe extends _StringsEn {
   String get video_setting_subtitle_outline => 'Outline width';
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
   @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
@@ -64399,12 +64383,6 @@ class _StringsEs extends _StringsEn {
   String get video_setting_subtitle_outline => 'Outline width';
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
   @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
@@ -82859,12 +82837,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
   @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
-  @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
   @override
@@ -100972,12 +100944,6 @@ class _StringsId extends _StringsEn {
   String get video_setting_subtitle_outline => 'Outline width';
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
   @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
@@ -119252,12 +119218,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
   @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
-  @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
   @override
@@ -136532,12 +136492,6 @@ class _StringsJa extends _StringsEn {
   String get video_setting_subtitle_outline => 'Outline width';
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
   @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
@@ -153845,12 +153799,6 @@ class _StringsKo extends _StringsEn {
   String get video_setting_subtitle_outline => 'Outline width';
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
   @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
@@ -172072,12 +172020,6 @@ class _StringsNl extends _StringsEn {
   String get video_setting_subtitle_outline => 'Outline width';
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
   @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
@@ -190369,12 +190311,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
   @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
-  @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
   @override
@@ -208611,12 +208547,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
   @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
-  @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
   @override
@@ -226530,12 +226460,6 @@ class _StringsTh extends _StringsEn {
   String get video_setting_subtitle_outline => 'Outline width';
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
   @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
@@ -244654,12 +244578,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
   @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
-  @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
   @override
@@ -262704,12 +262622,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
   @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
-  @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
   @override
@@ -279297,11 +279209,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_subtitle_outline => '描边粗细';
   @override
   String get video_setting_subtitle_outline_color => '描边颜色';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle => '无字幕轨时暂停也识别画面文字';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      '适用于烧录在画面里的硬字幕：没有加载文本字幕时，暂停后识别画面文字，点字即可查词';
   @override
   String resource_version_select_all({required Object n}) => '全选本组 ${n} 个文件';
   @override
@@ -295916,12 +295823,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_subtitle_outline_color => 'Outline color';
   @override
-  String get video_setting_pause_ocr_hard_subtitle =>
-      'OCR on pause without subtitle track';
-  @override
-  String get video_setting_pause_ocr_hard_subtitle_hint =>
-      'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
-  @override
   String resource_version_select_all({required Object n}) =>
       'Select all ${n} files';
   @override
@@ -311461,10 +311362,6 @@ extension on _StringsEn {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -326842,10 +326739,6 @@ extension on _StringsAr {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -342299,10 +342192,6 @@ extension on _StringsDe {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -357738,10 +357627,6 @@ extension on _StringsEs {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -373195,10 +373080,6 @@ extension on _StringsFr {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -388596,10 +388477,6 @@ extension on _StringsId {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -404033,10 +403910,6 @@ extension on _StringsIt {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -419344,10 +419217,6 @@ extension on _StringsJa {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -434662,10 +434531,6 @@ extension on _StringsKo {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -450094,10 +449959,6 @@ extension on _StringsNl {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -465518,10 +465379,6 @@ extension on _StringsPtBr {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -480947,10 +480804,6 @@ extension on _StringsRu {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -496332,10 +496185,6 @@ extension on _StringsTh {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -511748,10 +511597,6 @@ extension on _StringsTr {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -527147,10 +526992,6 @@ extension on _StringsVi {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
@@ -542386,10 +542227,6 @@ extension on _StringsZhCn {
         return '描边粗细';
       case 'video_setting_subtitle_outline_color':
         return '描边颜色';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return '无字幕轨时暂停也识别画面文字';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return '适用于烧录在画面里的硬字幕：没有加载文本字幕时，暂停后识别画面文字，点字即可查词';
       case 'resource_version_select_all':
         return ({required Object n}) => '全选本组 ${n} 个文件';
       case 'anime_download_filter_episode':
@@ -557633,10 +557470,6 @@ extension on _StringsZhHk {
         return 'Outline width';
       case 'video_setting_subtitle_outline_color':
         return 'Outline color';
-      case 'video_setting_pause_ocr_hard_subtitle':
-        return 'OCR on pause without subtitle track';
-      case 'video_setting_pause_ocr_hard_subtitle_hint':
-        return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
       case 'resource_version_select_all':
         return ({required Object n}) => 'Select all ${n} files';
       case 'anime_download_filter_episode':
