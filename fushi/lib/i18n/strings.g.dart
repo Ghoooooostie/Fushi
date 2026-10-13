@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120836 (7108 per locale)
+/// Strings: 120853 (7109 per locale)
 ///
-/// Built on 2026-10-13 at 09:36 UTC
+/// Built on 2026-10-13 at 09:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10255,6 +10255,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -27411,6 +27413,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -44957,6 +44962,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -62563,6 +62571,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -80248,6 +80259,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -97588,6 +97602,9 @@ class _StringsId extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -115093,6 +115110,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -131598,6 +131618,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -148139,6 +148162,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -165592,6 +165618,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -183114,6 +183143,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -200582,6 +200614,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -217728,6 +217763,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -235077,6 +235115,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -252353,6 +252394,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 // Path: <root>
@@ -268152,6 +268196,8 @@ class _StringsZhCn extends _StringsEn {
       '局域网内的已配对设备可以查看本机版本并让本机更新。Android 上仍需在本机确认安装。';
   @override
   String get interconnect_host_update_remote_started => '已配对设备让本机开始更新';
+  @override
+  String get interconnect_host_update_cancelled => '主机上取消了这次更新';
 }
 
 // Path: <root>
@@ -284107,6 +284153,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get interconnect_host_update_remote_started =>
       'A paired device started updating this app';
+  @override
+  String get interconnect_host_update_cancelled =>
+      'The update was cancelled on the host';
 }
 
 /// Flat map(s) containing all translations.
@@ -298851,6 +298900,8 @@ extension on _StringsEn {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -313590,6 +313641,8 @@ extension on _StringsAr {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -328405,6 +328458,8 @@ extension on _StringsDe {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -343202,6 +343257,8 @@ extension on _StringsEs {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -358017,6 +358074,8 @@ extension on _StringsFr {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -372776,6 +372835,8 @@ extension on _StringsId {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -387571,6 +387632,8 @@ extension on _StringsIt {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -402240,6 +402303,8 @@ extension on _StringsJa {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -416916,6 +416981,8 @@ extension on _StringsKo {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -431706,6 +431773,8 @@ extension on _StringsNl {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -446488,6 +446557,8 @@ extension on _StringsPtBr {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -461275,6 +461346,8 @@ extension on _StringsRu {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -476018,6 +476091,8 @@ extension on _StringsTh {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -490792,6 +490867,8 @@ extension on _StringsTr {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -505549,6 +505626,8 @@ extension on _StringsVi {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
@@ -520141,6 +520220,8 @@ extension on _StringsZhCn {
         return '局域网内的已配对设备可以查看本机版本并让本机更新。Android 上仍需在本机确认安装。';
       case 'interconnect_host_update_remote_started':
         return '已配对设备让本机开始更新';
+      case 'interconnect_host_update_cancelled':
+        return '主机上取消了这次更新';
       default:
         return null;
     }
@@ -534755,6 +534836,8 @@ extension on _StringsZhHk {
         return 'Paired devices on the local network can see this app\'s version and start an update here. On Android you still confirm the install on this device.';
       case 'interconnect_host_update_remote_started':
         return 'A paired device started updating this app';
+      case 'interconnect_host_update_cancelled':
+        return 'The update was cancelled on the host';
       default:
         return null;
     }
