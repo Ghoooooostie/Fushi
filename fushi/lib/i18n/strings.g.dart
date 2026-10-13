@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 122315 (7195 per locale)
+/// Strings: 125392 (7376 per locale)
 ///
-/// Built on 2026-10-13 at 10:14 UTC
+/// Built on 2026-10-13 at 10:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10387,6 +10387,273 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} damaged sectors could not be read and were filled with silence';
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  String get audiobook_tts_entry_title => 'Listen';
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  String get audiobook_tts_retry_hint =>
+      'Press play to try again, or skip to the next sentence';
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  String get audiobook_tts_voices_section => 'Voices';
+  String get audiobook_tts_voice_add => 'Add voice';
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  String get audiobook_tts_voice_active => 'In use';
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  String get audiobook_tts_voice_ready => 'Ready';
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  String get audiobook_tts_voice_name => 'Name';
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  String get audiobook_tts_voice_test => 'Play a test';
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  String get audiobook_tts_cache_section => 'Cache';
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  String get audiobook_tts_provider_system => 'System voice';
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  String get audiobook_tts_param_text_lang => 'Text language';
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  String get audiobook_tts_param_region => 'Region';
+  String get audiobook_tts_param_api_key => 'API key';
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  String get audiobook_tts_param_voice => 'Voice';
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  String get audiobook_tts_category_external => 'External service';
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  String get audiobook_tts_category_online => 'Online service';
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  String get audiobook_tts_category_system => 'System voice';
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  String get audiobook_tts_service_type => 'Service';
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  String get audiobook_studio_title => 'Make audiobook';
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  String get audiobook_studio_voice => 'Voice';
+  String get audiobook_studio_chapters => 'Chapters';
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  String get audiobook_studio_select_all => 'Select all';
+  String get audiobook_studio_select_none => 'Select none';
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  String get audiobook_studio_start => 'Start';
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  String get audiobook_studio_phase_planning => 'Preparing';
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  String get audiobook_studio_phase_importing => 'Importing';
+  String get audiobook_studio_status_queued => 'Queued';
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  String get audiobook_studio_cancel => 'Cancel';
+  String get audiobook_studio_retry => 'Retry';
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  String get audiobook_studio_play => 'Play';
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  String get audiobook_studio_pronunciation_written => 'Written';
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  String get audiobook_studio_cast => 'Characters and voices';
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  String get audiobook_studio_cast_gender_female => 'Female';
+  String get audiobook_studio_cast_gender_male => 'Male';
+  String get audiobook_studio_cast_age_child => 'Child';
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  String get audiobook_studio_pause => 'Pauses';
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  String get audiobook_studio_pause_none => 'None';
+  String get audiobook_studio_pause_standard => 'Standard';
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  String get audiobook_studio_export => 'Export audiobook';
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  String get audiobook_studio_export_running => 'Exporting…';
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -27762,6 +28029,453 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -45527,6 +46241,453 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -63352,6 +64513,453 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -81256,6 +82864,453 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -98815,6 +100870,453 @@ class _StringsId extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -116539,6 +119041,453 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -133263,6 +136212,453 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -150023,6 +153419,453 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -167695,6 +171538,453 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -185436,6 +189726,453 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -203123,6 +207860,453 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -220488,6 +225672,453 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -238056,6 +243687,453 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -255551,6 +261629,453 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 // Path: <root>
@@ -271540,6 +278065,405 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda 只是光盘音轨的快捷方式，里面没有音频。Windows 上请放入光盘后直接选择光驱；其他平台请先把 CD 转成音频文件再导入。';
+  @override
+  String get audiobook_tts_entry_title => '听书';
+  @override
+  String get audiobook_tts_read_from_here => '从当前位置朗读';
+  @override
+  String get audiobook_tts_resume => '继续上次朗读';
+  @override
+  String get audiobook_tts_voice_settings => '朗读声音';
+  @override
+  String get audiobook_tts_voice_settings_hint => 'GPT-SoVITS、微软、谷歌或系统语音';
+  @override
+  String get audiobook_tts_import_audiobook => '导入有声书';
+  @override
+  String get audiobook_tts_no_voice => '请先设置朗读声音';
+  @override
+  String get audiobook_tts_voice_incomplete => '朗读声音尚未配置完整';
+  @override
+  String get audiobook_tts_empty_book => '这本书没有可朗读的正文';
+  @override
+  String get audiobook_tts_start_failed => '无法开始朗读';
+  @override
+  String get audiobook_tts_preparing => '正在准备朗读…';
+  @override
+  String get audiobook_tts_retry_hint => '按播放键重试，或跳到下一句';
+  @override
+  String get audiobook_tts_failure_not_configured => '声音尚未配置完整';
+  @override
+  String get audiobook_tts_failure_network => '无法连接语音服务';
+  @override
+  String get audiobook_tts_failure_timeout => '语音服务响应超时';
+  @override
+  String get audiobook_tts_failure_unauthorized => '语音服务拒绝了请求（请检查密钥）';
+  @override
+  String get audiobook_tts_failure_rate_limited => '语音服务限制了请求频率';
+  @override
+  String get audiobook_tts_failure_server => '语音服务出错';
+  @override
+  String get audiobook_tts_failure_bad_response => '语音服务返回的音频无效';
+  @override
+  String get audiobook_tts_failure_unsupported => '此设备不支持该声音';
+  @override
+  String get audiobook_tts_failure_cancelled => '已取消';
+  @override
+  String audiobook_tts_source_title({required Object name}) => '朗读 · ${name}';
+  @override
+  String get audiobook_tts_stop => '停止朗读';
+  @override
+  String get audiobook_tts_waiting => '正在合成…';
+  @override
+  String get audiobook_tts_voices_section => '声音';
+  @override
+  String get audiobook_tts_voice_add => '添加声音';
+  @override
+  String get audiobook_tts_voice_add_title => '选择语音服务';
+  @override
+  String get audiobook_tts_voice_empty => '还没有声音。添加一个即可朗读书籍。';
+  @override
+  String get audiobook_tts_voice_active => '使用中';
+  @override
+  String get audiobook_tts_voice_use => '用于朗读';
+  @override
+  String get audiobook_tts_voice_ready => '可用';
+  @override
+  String get audiobook_tts_voice_incomplete_status => '未配置完整';
+  @override
+  String get audiobook_tts_voice_name => '名称';
+  @override
+  String get audiobook_tts_voice_delete => '删除声音';
+  @override
+  String get audiobook_tts_voice_test => '试听';
+  @override
+  String get audiobook_tts_voice_test_text => '试听文本';
+  @override
+  String get audiobook_tts_voice_test_playing => '正在播放试听';
+  @override
+  String get audiobook_tts_voice_regenerate => '重新生成音频';
+  @override
+  String get audiobook_tts_voice_regenerate_hint => '不再复用此声音已合成的音频';
+  @override
+  String get audiobook_tts_voice_regenerated => '之后会重新合成音频';
+  @override
+  String get audiobook_tts_voice_list_fetch => '从声音列表选择';
+  @override
+  String get audiobook_tts_voice_list_empty => '服务没有返回可用声音';
+  @override
+  String get audiobook_tts_online_notice => '在线服务：朗读的正文会发送给服务提供方。';
+  @override
+  String get audiobook_tts_unofficial_notice => '非官方接口：微软可能随时变更或限制。';
+  @override
+  String get audiobook_tts_cache_section => '缓存';
+  @override
+  String audiobook_tts_cache_size({required Object size}) => '已合成音频：${size}';
+  @override
+  String get audiobook_tts_cache_clear => '清除已合成的音频';
+  @override
+  String get audiobook_tts_cache_cleared => '已清除合成音频';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => '微软 Edge';
+  @override
+  String get audiobook_tts_provider_azure => '微软 Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => '谷歌 Cloud';
+  @override
+  String get audiobook_tts_provider_system => '系统语音';
+  @override
+  String get audiobook_tts_param_endpoint => '服务地址';
+  @override
+  String get audiobook_tts_param_text_lang => '文本语言';
+  @override
+  String get audiobook_tts_param_ref_audio => '参考音频路径';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'GPT-SoVITS 所在电脑上的路径，3–10 秒干净人声';
+  @override
+  String get audiobook_tts_param_prompt_text => '参考音频文本';
+  @override
+  String get audiobook_tts_param_prompt_lang => '参考音频语言';
+  @override
+  String get audiobook_tts_param_region => '区域';
+  @override
+  String get audiobook_tts_param_api_key => 'API 密钥';
+  @override
+  String get audiobook_tts_param_bearer_hint => '仅当服务架在需要认证的网关后面时填写';
+  @override
+  String get audiobook_tts_param_voice => '声音';
+  @override
+  String get audiobook_tts_param_invalid => '填写的值无效';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      '参考音频长 ${seconds} 秒，GPT-SoVITS 只接受 3–10 秒';
+  @override
+  String get audiobook_tts_failure_rejected => '语音服务拒绝合成这一句';
+  @override
+  String get audiobook_tts_category_external => '外部服务';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS、Irodori 等本机或局域网服务';
+  @override
+  String get audiobook_tts_category_online => '在线服务';
+  @override
+  String get audiobook_tts_category_online_hint => '微软、谷歌';
+  @override
+  String get audiobook_tts_category_system => '系统语音';
+  @override
+  String get audiobook_tts_category_system_hint => '本机自带的语音，离线可用';
+  @override
+  String get audiobook_tts_service_type => '服务类型';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori 工作台';
+  @override
+  String get audiobook_tts_failure_busy => '语音服务正忙（有其它任务在运行）';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori 工作台端口 7870，GPT-SoVITS 工作台 7871';
+  @override
+  String get audiobook_tts_key_required_hint => '需要填写自己的 API 密钥';
+  @override
+  String get audiobook_studio_title => '制作有声书';
+  @override
+  String get audiobook_studio_hint => '用朗读声音合成整本书，作为有声书导入';
+  @override
+  String get audiobook_studio_voice => '声音';
+  @override
+  String get audiobook_studio_chapters => '章节';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} 句 · ${chars} 字';
+  @override
+  String get audiobook_studio_select_all => '全选';
+  @override
+  String get audiobook_studio_select_none => '全不选';
+  @override
+  String get audiobook_studio_verify => '用语音识别校对';
+  @override
+  String get audiobook_studio_verify_hint => '转录生成的音频，标出读错、漏读的句子';
+  @override
+  String get audiobook_studio_verify_unavailable => '未安装语音识别模型';
+  @override
+  String get audiobook_studio_start => '开始制作';
+  @override
+  String get audiobook_studio_replace_warning => '这本书已有有声书，制作完成后会替换它';
+  @override
+  String get audiobook_studio_online_warning => '在线服务合成整本书可能被限流';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '共 ${sentences} 句、${chars} 字';
+  @override
+  String get audiobook_studio_phase_planning => '准备中';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => '合成中 ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => '编码章节 ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => '校对中 ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => '导入中';
+  @override
+  String get audiobook_studio_status_queued => '排队中';
+  @override
+  String get audiobook_studio_status_done => '已完成，已作为有声书导入';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      '失败：${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => '已取消';
+  @override
+  String get audiobook_studio_cancel => '取消';
+  @override
+  String get audiobook_studio_retry => '重试';
+  @override
+  String audiobook_studio_flags_title({required Object n}) => '需要复查的句子（${n}）';
+  @override
+  String get audiobook_studio_flags_none => '没有发现读错的句子';
+  @override
+  String get audiobook_studio_flags_unverified => '未经语音识别校对';
+  @override
+  String audiobook_studio_heard({required Object text}) => '识别为：${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      '重新生成选中的句子（${n}）';
+  @override
+  String get audiobook_studio_play => '试听';
+  @override
+  String get audiobook_studio_pronunciation => '发音词典';
+  @override
+  String get audiobook_studio_pronunciation_hint => '替换词语的读法，例如 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => '添加规则';
+  @override
+  String get audiobook_studio_pronunciation_written => '写法';
+  @override
+  String get audiobook_studio_pronunciation_spoken => '读法';
+  @override
+  String get audiobook_studio_failure_voice_missing => '声音已被删除';
+  @override
+  String get audiobook_studio_failure_voice_unavailable => '此设备不能使用该声音';
+  @override
+  String get audiobook_studio_failure_book_missing => '无法打开书籍文件';
+  @override
+  String get audiobook_studio_failure_encode_failed => '音频编码失败';
+  @override
+  String get audiobook_studio_failure_internal => '发生意外错误';
+  @override
+  String get audiobook_studio_no_voice => '请先添加朗读声音';
+  @override
+  String get audiobook_tts_provider_ms_translator => '微软翻译';
+  @override
+  String get audiobook_tts_provider_google_translate => '谷歌翻译';
+  @override
+  String get audiobook_tts_unofficial_free_hint => '免费 · 非官方接口';
+  @override
+  String get audiobook_tts_voice_pick => '选择音色';
+  @override
+  String get ai_feature_audiobook_cast => '有声书角色标注';
+  @override
+  String get ai_feature_audiobook_cast_summary => '标注每句台词的说话人，供多声优配音';
+  @override
+  String get audiobook_studio_cast => '角色与配音';
+  @override
+  String get audiobook_studio_cast_hint => '用 AI 标注每句台词的说话人，再给每个角色配声音';
+  @override
+  String get audiobook_studio_cast_annotate => 'AI 标注说话人';
+  @override
+  String get audiobook_studio_cast_reannotate => '重新标注';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => '标注中 ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => '旁白';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} 句台词';
+  @override
+  String get audiobook_studio_cast_default_voice => '默认声音';
+  @override
+  String get audiobook_studio_cast_no_ai => '请先在 AI 设置里为「有声书角色标注」指定服务';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      '标注失败：${reason}';
+  @override
+  String get audiobook_studio_cast_rename => '改名 / 合并';
+  @override
+  String get audiobook_studio_cast_rename_title => '角色改名';
+  @override
+  String get audiobook_studio_cast_empty => '还没有标注角色';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '已标注 ${done} / ${total} 章';
+  @override
+  String get audiobook_studio_cast_lines_title => '台词';
+  @override
+  String get audiobook_studio_cast_line_speaker => '说话人';
+  @override
+  String get audiobook_studio_cast_failure_bad_output => '无法解析 AI 的回复';
+  @override
+  String get audiobook_studio_failure_cache_busy => '部分句子正在播放，无法重新生成';
+  @override
+  String get audiobook_studio_failure_verify_failed => '语音识别出错';
+  @override
+  String get audiobook_studio_cast_new_speaker => '新名字…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      '会覆盖所选章节的 AI 标注，手动修改的保留';
+  @override
+  String get audiobook_studio_cast_unknown => '说话人不明';
+  @override
+  String audiobook_studio_cast_review({required Object n}) => '待复核（${n}）';
+  @override
+  String get audiobook_studio_cast_review_hint => '不明、把握低或没有提示的台词，建议优先检查';
+  @override
+  String get audiobook_studio_cast_review_only => '只看待复核';
+  @override
+  String get audiobook_studio_cast_assign_all => '全部指给…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '把握 ${pct}%';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => '原文点名';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric => '由代词或称谓推断';
+  @override
+  String get audiobook_studio_cast_evidence_implicit => '由对话轮次推断';
+  @override
+  String get audiobook_studio_cast_gender_female => '女';
+  @override
+  String get audiobook_studio_cast_gender_male => '男';
+  @override
+  String get audiobook_studio_cast_age_child => '儿童';
+  @override
+  String get audiobook_studio_cast_age_teen => '少年';
+  @override
+  String get audiobook_studio_cast_age_adult => '成年';
+  @override
+  String get audiobook_studio_cast_age_elderly => '老年';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      '又称：${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => '识别角色 ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => '停顿';
+  @override
+  String get audiobook_studio_pause_hint => '在句、段落、场景和章节之间额外插入的静音';
+  @override
+  String get audiobook_studio_pause_none => '不插入';
+  @override
+  String get audiobook_studio_pause_standard => '标准';
+  @override
+  String get audiobook_studio_pause_literary => '文学（舒缓）';
+  @override
+  String get audiobook_studio_pause_brisk => '紧凑';
+  @override
+  String get audiobook_studio_loudness => '响度归一化';
+  @override
+  String get audiobook_studio_loudness_hint => '统一不同声音、不同章节的音量（按有声书响度规范）';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      '未做响度归一化：当前 ffmpeg 不含 loudnorm 滤镜';
+  @override
+  String get audiobook_studio_export => '导出有声书';
+  @override
+  String get audiobook_studio_export_hint => '带章节、封面和字幕的 M4B 文件';
+  @override
+  String audiobook_studio_export_done({required Object path}) => '已导出到 ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      '导出失败：${reason}';
+  @override
+  String get audiobook_studio_export_unsupported => '当前 ffmpeg 不支持写入 M4B 章节';
+  @override
+  String get audiobook_studio_export_running => '正在导出…';
+  @override
+  String get audiobook_tts_concurrency => '并发请求数';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      '服务端和显卡扛得住时，提高并发能加快合成；在线服务调高可能被限流';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) => '默认（${n}）';
 }
 
 // Path: <root>
@@ -287714,6 +294638,453 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_audio_cd_cda_unsupported =>
       '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+  @override
+  String get audiobook_tts_entry_title => 'Listen';
+  @override
+  String get audiobook_tts_read_from_here => 'Read aloud from here';
+  @override
+  String get audiobook_tts_resume => 'Continue reading aloud';
+  @override
+  String get audiobook_tts_voice_settings => 'Read-aloud voices';
+  @override
+  String get audiobook_tts_voice_settings_hint =>
+      'GPT-SoVITS, Microsoft, Google or the system voice';
+  @override
+  String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  @override
+  String get audiobook_tts_no_voice => 'Set up a read-aloud voice first';
+  @override
+  String get audiobook_tts_voice_incomplete =>
+      'The read-aloud voice is not fully configured';
+  @override
+  String get audiobook_tts_empty_book => 'This book has no text to read aloud';
+  @override
+  String get audiobook_tts_start_failed => 'Could not start reading aloud';
+  @override
+  String get audiobook_tts_preparing => 'Preparing to read aloud…';
+  @override
+  String get audiobook_tts_retry_hint => 'Press play to try again';
+  @override
+  String get audiobook_tts_failure_not_configured =>
+      'The voice is not fully configured';
+  @override
+  String get audiobook_tts_failure_network =>
+      'Could not reach the speech service';
+  @override
+  String get audiobook_tts_failure_timeout =>
+      'The speech service took too long to respond';
+  @override
+  String get audiobook_tts_failure_unauthorized =>
+      'The speech service rejected the request (check the key)';
+  @override
+  String get audiobook_tts_failure_rate_limited =>
+      'The speech service is rate limiting requests';
+  @override
+  String get audiobook_tts_failure_server =>
+      'The speech service reported an error';
+  @override
+  String get audiobook_tts_failure_bad_response =>
+      'The speech service returned invalid audio';
+  @override
+  String get audiobook_tts_failure_unsupported =>
+      'This voice is not available on this device';
+  @override
+  String get audiobook_tts_failure_cancelled => 'Cancelled';
+  @override
+  String audiobook_tts_source_title({required Object name}) =>
+      'Read aloud · ${name}';
+  @override
+  String get audiobook_tts_stop => 'Stop reading aloud';
+  @override
+  String get audiobook_tts_waiting => 'Synthesizing…';
+  @override
+  String get audiobook_tts_voices_section => 'Voices';
+  @override
+  String get audiobook_tts_voice_add => 'Add voice';
+  @override
+  String get audiobook_tts_voice_add_title => 'Choose a speech service';
+  @override
+  String get audiobook_tts_voice_empty =>
+      'No voices yet. Add one to read books aloud.';
+  @override
+  String get audiobook_tts_voice_active => 'In use';
+  @override
+  String get audiobook_tts_voice_use => 'Use for reading aloud';
+  @override
+  String get audiobook_tts_voice_ready => 'Ready';
+  @override
+  String get audiobook_tts_voice_incomplete_status => 'Incomplete';
+  @override
+  String get audiobook_tts_voice_name => 'Name';
+  @override
+  String get audiobook_tts_voice_delete => 'Delete voice';
+  @override
+  String get audiobook_tts_voice_test => 'Play a test';
+  @override
+  String get audiobook_tts_voice_test_text => 'Test sentence';
+  @override
+  String get audiobook_tts_voice_test_playing => 'Playing the test';
+  @override
+  String get audiobook_tts_voice_regenerate => 'Regenerate audio';
+  @override
+  String get audiobook_tts_voice_regenerate_hint =>
+      'Stop reusing audio already synthesized with this voice';
+  @override
+  String get audiobook_tts_voice_regenerated =>
+      'Audio will be synthesized again';
+  @override
+  String get audiobook_tts_voice_list_fetch => 'Choose from the voice list';
+  @override
+  String get audiobook_tts_voice_list_empty => 'The service returned no voices';
+  @override
+  String get audiobook_tts_online_notice =>
+      'Online service: the text being read is sent to the provider.';
+  @override
+  String get audiobook_tts_unofficial_notice =>
+      'Unofficial interface: Microsoft may change or block it at any time.';
+  @override
+  String get audiobook_tts_cache_section => 'Cache';
+  @override
+  String audiobook_tts_cache_size({required Object size}) =>
+      'Synthesized audio: ${size}';
+  @override
+  String get audiobook_tts_cache_clear => 'Clear synthesized audio';
+  @override
+  String get audiobook_tts_cache_cleared => 'Synthesized audio cleared';
+  @override
+  String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
+  @override
+  String get audiobook_tts_provider_edge => 'Microsoft Edge';
+  @override
+  String get audiobook_tts_provider_azure => 'Microsoft Azure';
+  @override
+  String get audiobook_tts_provider_google_cloud => 'Google Cloud';
+  @override
+  String get audiobook_tts_provider_system => 'System voice';
+  @override
+  String get audiobook_tts_param_endpoint => 'Server URL';
+  @override
+  String get audiobook_tts_param_text_lang => 'Text language';
+  @override
+  String get audiobook_tts_param_ref_audio => 'Reference audio path';
+  @override
+  String get audiobook_tts_param_ref_audio_hint =>
+      'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+  @override
+  String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
+  @override
+  String get audiobook_tts_param_prompt_lang => 'Reference audio language';
+  @override
+  String get audiobook_tts_param_region => 'Region';
+  @override
+  String get audiobook_tts_param_api_key => 'API key';
+  @override
+  String get audiobook_tts_param_bearer_hint =>
+      'Only needed when the server sits behind an authenticating gateway';
+  @override
+  String get audiobook_tts_param_voice => 'Voice';
+  @override
+  String get audiobook_tts_param_invalid => 'This value is not valid';
+  @override
+  String audiobook_tts_param_ref_audio_length({required Object seconds}) =>
+      'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+  @override
+  String get audiobook_tts_failure_rejected =>
+      'The speech service refused this sentence';
+  @override
+  String get audiobook_tts_category_external => 'External service';
+  @override
+  String get audiobook_tts_category_external_hint =>
+      'GPT-SoVITS, Irodori and other services on this computer or network';
+  @override
+  String get audiobook_tts_category_online => 'Online service';
+  @override
+  String get audiobook_tts_category_online_hint => 'Microsoft or Google';
+  @override
+  String get audiobook_tts_category_system => 'System voice';
+  @override
+  String get audiobook_tts_category_system_hint =>
+      'The voice built into this device, works offline';
+  @override
+  String get audiobook_tts_service_type => 'Service';
+  @override
+  String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_failure_busy =>
+      'The speech service is busy with another job';
+  @override
+  String get audiobook_tts_param_irodori_endpoint_hint =>
+      'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_key_required_hint => 'Requires your own API key';
+  @override
+  String get audiobook_studio_title => 'Make audiobook';
+  @override
+  String get audiobook_studio_hint =>
+      'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+  @override
+  String get audiobook_studio_voice => 'Voice';
+  @override
+  String get audiobook_studio_chapters => 'Chapters';
+  @override
+  String audiobook_studio_chapter_count({
+    required Object n,
+    required Object chars,
+  }) => '${n} sentences · ${chars} chars';
+  @override
+  String get audiobook_studio_select_all => 'Select all';
+  @override
+  String get audiobook_studio_select_none => 'Select none';
+  @override
+  String get audiobook_studio_verify => 'Check with speech recognition';
+  @override
+  String get audiobook_studio_verify_hint =>
+      'Transcribe the result and flag misread or skipped sentences';
+  @override
+  String get audiobook_studio_verify_unavailable =>
+      'No speech recognition model is installed';
+  @override
+  String get audiobook_studio_start => 'Start';
+  @override
+  String get audiobook_studio_replace_warning =>
+      'This book already has an audiobook; it will be replaced when done';
+  @override
+  String get audiobook_studio_online_warning =>
+      'Online services may rate-limit whole-book synthesis';
+  @override
+  String audiobook_studio_summary({
+    required Object sentences,
+    required Object chars,
+  }) => '${sentences} sentences, ${chars} characters';
+  @override
+  String get audiobook_studio_phase_planning => 'Preparing';
+  @override
+  String audiobook_studio_phase_synthesizing({
+    required Object done,
+    required Object total,
+  }) => 'Synthesizing ${done}/${total}';
+  @override
+  String audiobook_studio_phase_encoding({
+    required Object done,
+    required Object total,
+  }) => 'Encoding chapters ${done}/${total}';
+  @override
+  String audiobook_studio_phase_verifying({
+    required Object done,
+    required Object total,
+  }) => 'Checking ${done}/${total}';
+  @override
+  String get audiobook_studio_phase_importing => 'Importing';
+  @override
+  String get audiobook_studio_status_queued => 'Queued';
+  @override
+  String get audiobook_studio_status_done => 'Done, imported as the audiobook';
+  @override
+  String audiobook_studio_status_failed({required Object reason}) =>
+      'Failed: ${reason}';
+  @override
+  String get audiobook_studio_status_cancelled => 'Cancelled';
+  @override
+  String get audiobook_studio_cancel => 'Cancel';
+  @override
+  String get audiobook_studio_retry => 'Retry';
+  @override
+  String audiobook_studio_flags_title({required Object n}) =>
+      'Sentences to review (${n})';
+  @override
+  String get audiobook_studio_flags_none => 'No misread sentences found';
+  @override
+  String get audiobook_studio_flags_unverified =>
+      'Not checked with speech recognition';
+  @override
+  String audiobook_studio_heard({required Object text}) => 'Heard: ${text}';
+  @override
+  String audiobook_studio_regenerate_selected({required Object n}) =>
+      'Regenerate selected (${n})';
+  @override
+  String get audiobook_studio_play => 'Play';
+  @override
+  String get audiobook_studio_pronunciation => 'Pronunciation dictionary';
+  @override
+  String get audiobook_studio_pronunciation_hint =>
+      'Change how words are read, e.g. 今日 → きょう';
+  @override
+  String get audiobook_studio_pronunciation_add => 'Add rule';
+  @override
+  String get audiobook_studio_pronunciation_written => 'Written';
+  @override
+  String get audiobook_studio_pronunciation_spoken => 'Reading';
+  @override
+  String get audiobook_studio_failure_voice_missing =>
+      'The voice no longer exists';
+  @override
+  String get audiobook_studio_failure_voice_unavailable =>
+      'The voice is not available on this device';
+  @override
+  String get audiobook_studio_failure_book_missing =>
+      'The book file could not be opened';
+  @override
+  String get audiobook_studio_failure_encode_failed => 'Audio encoding failed';
+  @override
+  String get audiobook_studio_failure_internal => 'Unexpected error';
+  @override
+  String get audiobook_studio_no_voice => 'Add a read-aloud voice first';
+  @override
+  String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
+  @override
+  String get audiobook_tts_provider_google_translate => 'Google Translate';
+  @override
+  String get audiobook_tts_unofficial_free_hint => 'Free, unofficial interface';
+  @override
+  String get audiobook_tts_voice_pick => 'Choose a voice';
+  @override
+  String get ai_feature_audiobook_cast => 'Audiobook casting';
+  @override
+  String get ai_feature_audiobook_cast_summary =>
+      'Mark which character speaks each line so different voices can read them';
+  @override
+  String get audiobook_studio_cast => 'Characters and voices';
+  @override
+  String get audiobook_studio_cast_hint =>
+      'Use AI to mark who speaks each line, then give each character a voice';
+  @override
+  String get audiobook_studio_cast_annotate => 'Mark speakers with AI';
+  @override
+  String get audiobook_studio_cast_reannotate => 'Annotate again';
+  @override
+  String audiobook_studio_cast_progress({
+    required Object done,
+    required Object total,
+  }) => 'Annotating ${done}/${total}';
+  @override
+  String get audiobook_studio_cast_narrator => 'Narrator';
+  @override
+  String audiobook_studio_cast_lines({required Object n}) => '${n} lines';
+  @override
+  String get audiobook_studio_cast_default_voice => 'Default voice';
+  @override
+  String get audiobook_studio_cast_no_ai =>
+      'Assign an AI provider to audiobook casting in AI settings first';
+  @override
+  String audiobook_studio_cast_failed({required Object reason}) =>
+      'Annotation failed: ${reason}';
+  @override
+  String get audiobook_studio_cast_rename => 'Rename or merge';
+  @override
+  String get audiobook_studio_cast_rename_title => 'Rename character';
+  @override
+  String get audiobook_studio_cast_empty => 'No characters marked yet';
+  @override
+  String audiobook_studio_cast_annotated({
+    required Object done,
+    required Object total,
+  }) => '${done} of ${total} chapters annotated';
+  @override
+  String get audiobook_studio_cast_lines_title => 'Lines';
+  @override
+  String get audiobook_studio_cast_line_speaker => 'Speaker';
+  @override
+  String get audiobook_studio_cast_failure_bad_output =>
+      'The AI reply could not be understood';
+  @override
+  String get audiobook_studio_failure_cache_busy =>
+      'Some sentences are playing and could not be regenerated';
+  @override
+  String get audiobook_studio_failure_verify_failed =>
+      'Speech recognition failed';
+  @override
+  String get audiobook_studio_cast_new_speaker => 'New name…';
+  @override
+  String get audiobook_studio_cast_reannotate_confirm =>
+      'AI labels in the selected chapters will be replaced; your manual changes are kept';
+  @override
+  String get audiobook_studio_cast_unknown => 'Unknown speaker';
+  @override
+  String audiobook_studio_cast_review({required Object n}) =>
+      'To review (${n})';
+  @override
+  String get audiobook_studio_cast_review_hint =>
+      'Unclear, low-confidence or unattributed lines; check these first';
+  @override
+  String get audiobook_studio_cast_review_only => 'Only lines to review';
+  @override
+  String get audiobook_studio_cast_assign_all => 'Assign all to…';
+  @override
+  String audiobook_studio_cast_confidence({required Object pct}) =>
+      '${pct}% sure';
+  @override
+  String get audiobook_studio_cast_evidence_explicit => 'Named in the text';
+  @override
+  String get audiobook_studio_cast_evidence_anaphoric =>
+      'Inferred from a pronoun or title';
+  @override
+  String get audiobook_studio_cast_evidence_implicit =>
+      'Inferred from turn-taking';
+  @override
+  String get audiobook_studio_cast_gender_female => 'Female';
+  @override
+  String get audiobook_studio_cast_gender_male => 'Male';
+  @override
+  String get audiobook_studio_cast_age_child => 'Child';
+  @override
+  String get audiobook_studio_cast_age_teen => 'Teen';
+  @override
+  String get audiobook_studio_cast_age_adult => 'Adult';
+  @override
+  String get audiobook_studio_cast_age_elderly => 'Elderly';
+  @override
+  String audiobook_studio_cast_aliases({required Object names}) =>
+      'Also called: ${names}';
+  @override
+  String audiobook_studio_cast_phase_roster({
+    required Object done,
+    required Object total,
+  }) => 'Finding characters ${done}/${total}';
+  @override
+  String get audiobook_studio_pause => 'Pauses';
+  @override
+  String get audiobook_studio_pause_hint =>
+      'Extra silence between sentences, paragraphs, scenes and chapters';
+  @override
+  String get audiobook_studio_pause_none => 'None';
+  @override
+  String get audiobook_studio_pause_standard => 'Standard';
+  @override
+  String get audiobook_studio_pause_literary => 'Literary (slower)';
+  @override
+  String get audiobook_studio_pause_brisk => 'Brisk';
+  @override
+  String get audiobook_studio_loudness => 'Normalize loudness';
+  @override
+  String get audiobook_studio_loudness_hint =>
+      'Even out volume across voices and chapters (audiobook loudness targets)';
+  @override
+  String get audiobook_studio_loudness_skipped =>
+      'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+  @override
+  String get audiobook_studio_export => 'Export audiobook';
+  @override
+  String get audiobook_studio_export_hint =>
+      'One M4B file with chapters, cover and subtitles';
+  @override
+  String audiobook_studio_export_done({required Object path}) =>
+      'Exported to ${path}';
+  @override
+  String audiobook_studio_export_failed({required Object reason}) =>
+      'Export failed: ${reason}';
+  @override
+  String get audiobook_studio_export_unsupported =>
+      'This ffmpeg build cannot write M4B chapters';
+  @override
+  String get audiobook_studio_export_running => 'Exporting…';
+  @override
+  String get audiobook_tts_concurrency => 'Parallel requests';
+  @override
+  String get audiobook_tts_concurrency_hint =>
+      'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+  @override
+  String audiobook_tts_concurrency_default({required Object n}) =>
+      'Default (${n})';
 }
 
 /// Flat map(s) containing all translations.
@@ -302638,6 +310009,377 @@ extension on _StringsEn {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again, or skip to the next sentence';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -317557,6 +325299,377 @@ extension on _StringsAr {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -332552,6 +340665,377 @@ extension on _StringsDe {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -347529,6 +356013,377 @@ extension on _StringsEs {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -362524,6 +371379,377 @@ extension on _StringsFr {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -377463,6 +386689,377 @@ extension on _StringsId {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -392438,6 +402035,377 @@ extension on _StringsIt {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -407287,6 +417255,377 @@ extension on _StringsJa {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -422143,6 +432482,377 @@ extension on _StringsKo {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -437113,6 +447823,377 @@ extension on _StringsNl {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -452075,6 +463156,377 @@ extension on _StringsPtBr {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -467042,6 +478494,377 @@ extension on _StringsRu {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -481965,6 +493788,377 @@ extension on _StringsTh {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -496919,6 +509113,377 @@ extension on _StringsTr {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -511856,6 +524421,377 @@ extension on _StringsVi {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
@@ -526626,6 +539562,377 @@ extension on _StringsZhCn {
         return ({required Object n}) => '有 ${n} 个损坏扇区读不出来，已用静音填充';
       case 'media_audio_cd_cda_unsupported':
         return '.cda 只是光盘音轨的快捷方式，里面没有音频。Windows 上请放入光盘后直接选择光驱；其他平台请先把 CD 转成音频文件再导入。';
+      case 'audiobook_tts_entry_title':
+        return '听书';
+      case 'audiobook_tts_read_from_here':
+        return '从当前位置朗读';
+      case 'audiobook_tts_resume':
+        return '继续上次朗读';
+      case 'audiobook_tts_voice_settings':
+        return '朗读声音';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS、微软、谷歌或系统语音';
+      case 'audiobook_tts_import_audiobook':
+        return '导入有声书';
+      case 'audiobook_tts_no_voice':
+        return '请先设置朗读声音';
+      case 'audiobook_tts_voice_incomplete':
+        return '朗读声音尚未配置完整';
+      case 'audiobook_tts_empty_book':
+        return '这本书没有可朗读的正文';
+      case 'audiobook_tts_start_failed':
+        return '无法开始朗读';
+      case 'audiobook_tts_preparing':
+        return '正在准备朗读…';
+      case 'audiobook_tts_retry_hint':
+        return '按播放键重试，或跳到下一句';
+      case 'audiobook_tts_failure_not_configured':
+        return '声音尚未配置完整';
+      case 'audiobook_tts_failure_network':
+        return '无法连接语音服务';
+      case 'audiobook_tts_failure_timeout':
+        return '语音服务响应超时';
+      case 'audiobook_tts_failure_unauthorized':
+        return '语音服务拒绝了请求（请检查密钥）';
+      case 'audiobook_tts_failure_rate_limited':
+        return '语音服务限制了请求频率';
+      case 'audiobook_tts_failure_server':
+        return '语音服务出错';
+      case 'audiobook_tts_failure_bad_response':
+        return '语音服务返回的音频无效';
+      case 'audiobook_tts_failure_unsupported':
+        return '此设备不支持该声音';
+      case 'audiobook_tts_failure_cancelled':
+        return '已取消';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => '朗读 · ${name}';
+      case 'audiobook_tts_stop':
+        return '停止朗读';
+      case 'audiobook_tts_waiting':
+        return '正在合成…';
+      case 'audiobook_tts_voices_section':
+        return '声音';
+      case 'audiobook_tts_voice_add':
+        return '添加声音';
+      case 'audiobook_tts_voice_add_title':
+        return '选择语音服务';
+      case 'audiobook_tts_voice_empty':
+        return '还没有声音。添加一个即可朗读书籍。';
+      case 'audiobook_tts_voice_active':
+        return '使用中';
+      case 'audiobook_tts_voice_use':
+        return '用于朗读';
+      case 'audiobook_tts_voice_ready':
+        return '可用';
+      case 'audiobook_tts_voice_incomplete_status':
+        return '未配置完整';
+      case 'audiobook_tts_voice_name':
+        return '名称';
+      case 'audiobook_tts_voice_delete':
+        return '删除声音';
+      case 'audiobook_tts_voice_test':
+        return '试听';
+      case 'audiobook_tts_voice_test_text':
+        return '试听文本';
+      case 'audiobook_tts_voice_test_playing':
+        return '正在播放试听';
+      case 'audiobook_tts_voice_regenerate':
+        return '重新生成音频';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return '不再复用此声音已合成的音频';
+      case 'audiobook_tts_voice_regenerated':
+        return '之后会重新合成音频';
+      case 'audiobook_tts_voice_list_fetch':
+        return '从声音列表选择';
+      case 'audiobook_tts_voice_list_empty':
+        return '服务没有返回可用声音';
+      case 'audiobook_tts_online_notice':
+        return '在线服务：朗读的正文会发送给服务提供方。';
+      case 'audiobook_tts_unofficial_notice':
+        return '非官方接口：微软可能随时变更或限制。';
+      case 'audiobook_tts_cache_section':
+        return '缓存';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => '已合成音频：${size}';
+      case 'audiobook_tts_cache_clear':
+        return '清除已合成的音频';
+      case 'audiobook_tts_cache_cleared':
+        return '已清除合成音频';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return '微软 Edge';
+      case 'audiobook_tts_provider_azure':
+        return '微软 Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return '谷歌 Cloud';
+      case 'audiobook_tts_provider_system':
+        return '系统语音';
+      case 'audiobook_tts_param_endpoint':
+        return '服务地址';
+      case 'audiobook_tts_param_text_lang':
+        return '文本语言';
+      case 'audiobook_tts_param_ref_audio':
+        return '参考音频路径';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'GPT-SoVITS 所在电脑上的路径，3–10 秒干净人声';
+      case 'audiobook_tts_param_prompt_text':
+        return '参考音频文本';
+      case 'audiobook_tts_param_prompt_lang':
+        return '参考音频语言';
+      case 'audiobook_tts_param_region':
+        return '区域';
+      case 'audiobook_tts_param_api_key':
+        return 'API 密钥';
+      case 'audiobook_tts_param_bearer_hint':
+        return '仅当服务架在需要认证的网关后面时填写';
+      case 'audiobook_tts_param_voice':
+        return '声音';
+      case 'audiobook_tts_param_invalid':
+        return '填写的值无效';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            '参考音频长 ${seconds} 秒，GPT-SoVITS 只接受 3–10 秒';
+      case 'audiobook_tts_failure_rejected':
+        return '语音服务拒绝合成这一句';
+      case 'audiobook_tts_category_external':
+        return '外部服务';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS、Irodori 等本机或局域网服务';
+      case 'audiobook_tts_category_online':
+        return '在线服务';
+      case 'audiobook_tts_category_online_hint':
+        return '微软、谷歌';
+      case 'audiobook_tts_category_system':
+        return '系统语音';
+      case 'audiobook_tts_category_system_hint':
+        return '本机自带的语音，离线可用';
+      case 'audiobook_tts_service_type':
+        return '服务类型';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori 工作台';
+      case 'audiobook_tts_failure_busy':
+        return '语音服务正忙（有其它任务在运行）';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori 工作台端口 7870，GPT-SoVITS 工作台 7871';
+      case 'audiobook_tts_key_required_hint':
+        return '需要填写自己的 API 密钥';
+      case 'audiobook_studio_title':
+        return '制作有声书';
+      case 'audiobook_studio_hint':
+        return '用朗读声音合成整本书，作为有声书导入';
+      case 'audiobook_studio_voice':
+        return '声音';
+      case 'audiobook_studio_chapters':
+        return '章节';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} 句 · ${chars} 字';
+      case 'audiobook_studio_select_all':
+        return '全选';
+      case 'audiobook_studio_select_none':
+        return '全不选';
+      case 'audiobook_studio_verify':
+        return '用语音识别校对';
+      case 'audiobook_studio_verify_hint':
+        return '转录生成的音频，标出读错、漏读的句子';
+      case 'audiobook_studio_verify_unavailable':
+        return '未安装语音识别模型';
+      case 'audiobook_studio_start':
+        return '开始制作';
+      case 'audiobook_studio_replace_warning':
+        return '这本书已有有声书，制作完成后会替换它';
+      case 'audiobook_studio_online_warning':
+        return '在线服务合成整本书可能被限流';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '共 ${sentences} 句、${chars} 字';
+      case 'audiobook_studio_phase_planning':
+        return '准备中';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            '合成中 ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            '编码章节 ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            '校对中 ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return '导入中';
+      case 'audiobook_studio_status_queued':
+        return '排队中';
+      case 'audiobook_studio_status_done':
+        return '已完成，已作为有声书导入';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => '失败：${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return '已取消';
+      case 'audiobook_studio_cancel':
+        return '取消';
+      case 'audiobook_studio_retry':
+        return '重试';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => '需要复查的句子（${n}）';
+      case 'audiobook_studio_flags_none':
+        return '没有发现读错的句子';
+      case 'audiobook_studio_flags_unverified':
+        return '未经语音识别校对';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => '识别为：${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => '重新生成选中的句子（${n}）';
+      case 'audiobook_studio_play':
+        return '试听';
+      case 'audiobook_studio_pronunciation':
+        return '发音词典';
+      case 'audiobook_studio_pronunciation_hint':
+        return '替换词语的读法，例如 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return '添加规则';
+      case 'audiobook_studio_pronunciation_written':
+        return '写法';
+      case 'audiobook_studio_pronunciation_spoken':
+        return '读法';
+      case 'audiobook_studio_failure_voice_missing':
+        return '声音已被删除';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return '此设备不能使用该声音';
+      case 'audiobook_studio_failure_book_missing':
+        return '无法打开书籍文件';
+      case 'audiobook_studio_failure_encode_failed':
+        return '音频编码失败';
+      case 'audiobook_studio_failure_internal':
+        return '发生意外错误';
+      case 'audiobook_studio_no_voice':
+        return '请先添加朗读声音';
+      case 'audiobook_tts_provider_ms_translator':
+        return '微软翻译';
+      case 'audiobook_tts_provider_google_translate':
+        return '谷歌翻译';
+      case 'audiobook_tts_unofficial_free_hint':
+        return '免费 · 非官方接口';
+      case 'audiobook_tts_voice_pick':
+        return '选择音色';
+      case 'ai_feature_audiobook_cast':
+        return '有声书角色标注';
+      case 'ai_feature_audiobook_cast_summary':
+        return '标注每句台词的说话人，供多声优配音';
+      case 'audiobook_studio_cast':
+        return '角色与配音';
+      case 'audiobook_studio_cast_hint':
+        return '用 AI 标注每句台词的说话人，再给每个角色配声音';
+      case 'audiobook_studio_cast_annotate':
+        return 'AI 标注说话人';
+      case 'audiobook_studio_cast_reannotate':
+        return '重新标注';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            '标注中 ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return '旁白';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} 句台词';
+      case 'audiobook_studio_cast_default_voice':
+        return '默认声音';
+      case 'audiobook_studio_cast_no_ai':
+        return '请先在 AI 设置里为「有声书角色标注」指定服务';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => '标注失败：${reason}';
+      case 'audiobook_studio_cast_rename':
+        return '改名 / 合并';
+      case 'audiobook_studio_cast_rename_title':
+        return '角色改名';
+      case 'audiobook_studio_cast_empty':
+        return '还没有标注角色';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '已标注 ${done} / ${total} 章';
+      case 'audiobook_studio_cast_lines_title':
+        return '台词';
+      case 'audiobook_studio_cast_line_speaker':
+        return '说话人';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return '无法解析 AI 的回复';
+      case 'audiobook_studio_failure_cache_busy':
+        return '部分句子正在播放，无法重新生成';
+      case 'audiobook_studio_failure_verify_failed':
+        return '语音识别出错';
+      case 'audiobook_studio_cast_new_speaker':
+        return '新名字…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return '会覆盖所选章节的 AI 标注，手动修改的保留';
+      case 'audiobook_studio_cast_unknown':
+        return '说话人不明';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => '待复核（${n}）';
+      case 'audiobook_studio_cast_review_hint':
+        return '不明、把握低或没有提示的台词，建议优先检查';
+      case 'audiobook_studio_cast_review_only':
+        return '只看待复核';
+      case 'audiobook_studio_cast_assign_all':
+        return '全部指给…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '把握 ${pct}%';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return '原文点名';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return '由代词或称谓推断';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return '由对话轮次推断';
+      case 'audiobook_studio_cast_gender_female':
+        return '女';
+      case 'audiobook_studio_cast_gender_male':
+        return '男';
+      case 'audiobook_studio_cast_age_child':
+        return '儿童';
+      case 'audiobook_studio_cast_age_teen':
+        return '少年';
+      case 'audiobook_studio_cast_age_adult':
+        return '成年';
+      case 'audiobook_studio_cast_age_elderly':
+        return '老年';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => '又称：${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            '识别角色 ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return '停顿';
+      case 'audiobook_studio_pause_hint':
+        return '在句、段落、场景和章节之间额外插入的静音';
+      case 'audiobook_studio_pause_none':
+        return '不插入';
+      case 'audiobook_studio_pause_standard':
+        return '标准';
+      case 'audiobook_studio_pause_literary':
+        return '文学（舒缓）';
+      case 'audiobook_studio_pause_brisk':
+        return '紧凑';
+      case 'audiobook_studio_loudness':
+        return '响度归一化';
+      case 'audiobook_studio_loudness_hint':
+        return '统一不同声音、不同章节的音量（按有声书响度规范）';
+      case 'audiobook_studio_loudness_skipped':
+        return '未做响度归一化：当前 ffmpeg 不含 loudnorm 滤镜';
+      case 'audiobook_studio_export':
+        return '导出有声书';
+      case 'audiobook_studio_export_hint':
+        return '带章节、封面和字幕的 M4B 文件';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => '已导出到 ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => '导出失败：${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return '当前 ffmpeg 不支持写入 M4B 章节';
+      case 'audiobook_studio_export_running':
+        return '正在导出…';
+      case 'audiobook_tts_concurrency':
+        return '并发请求数';
+      case 'audiobook_tts_concurrency_hint':
+        return '服务端和显卡扛得住时，提高并发能加快合成；在线服务调高可能被限流';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => '默认（${n}）';
       default:
         return null;
     }
@@ -541420,6 +554727,377 @@ extension on _StringsZhHk {
             '${n} damaged sectors could not be read and were filled with silence';
       case 'media_audio_cd_cda_unsupported':
         return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
+      case 'audiobook_tts_entry_title':
+        return 'Listen';
+      case 'audiobook_tts_read_from_here':
+        return 'Read aloud from here';
+      case 'audiobook_tts_resume':
+        return 'Continue reading aloud';
+      case 'audiobook_tts_voice_settings':
+        return 'Read-aloud voices';
+      case 'audiobook_tts_voice_settings_hint':
+        return 'GPT-SoVITS, Microsoft, Google or the system voice';
+      case 'audiobook_tts_import_audiobook':
+        return 'Import an audiobook';
+      case 'audiobook_tts_no_voice':
+        return 'Set up a read-aloud voice first';
+      case 'audiobook_tts_voice_incomplete':
+        return 'The read-aloud voice is not fully configured';
+      case 'audiobook_tts_empty_book':
+        return 'This book has no text to read aloud';
+      case 'audiobook_tts_start_failed':
+        return 'Could not start reading aloud';
+      case 'audiobook_tts_preparing':
+        return 'Preparing to read aloud…';
+      case 'audiobook_tts_retry_hint':
+        return 'Press play to try again';
+      case 'audiobook_tts_failure_not_configured':
+        return 'The voice is not fully configured';
+      case 'audiobook_tts_failure_network':
+        return 'Could not reach the speech service';
+      case 'audiobook_tts_failure_timeout':
+        return 'The speech service took too long to respond';
+      case 'audiobook_tts_failure_unauthorized':
+        return 'The speech service rejected the request (check the key)';
+      case 'audiobook_tts_failure_rate_limited':
+        return 'The speech service is rate limiting requests';
+      case 'audiobook_tts_failure_server':
+        return 'The speech service reported an error';
+      case 'audiobook_tts_failure_bad_response':
+        return 'The speech service returned invalid audio';
+      case 'audiobook_tts_failure_unsupported':
+        return 'This voice is not available on this device';
+      case 'audiobook_tts_failure_cancelled':
+        return 'Cancelled';
+      case 'audiobook_tts_source_title':
+        return ({required Object name}) => 'Read aloud · ${name}';
+      case 'audiobook_tts_stop':
+        return 'Stop reading aloud';
+      case 'audiobook_tts_waiting':
+        return 'Synthesizing…';
+      case 'audiobook_tts_voices_section':
+        return 'Voices';
+      case 'audiobook_tts_voice_add':
+        return 'Add voice';
+      case 'audiobook_tts_voice_add_title':
+        return 'Choose a speech service';
+      case 'audiobook_tts_voice_empty':
+        return 'No voices yet. Add one to read books aloud.';
+      case 'audiobook_tts_voice_active':
+        return 'In use';
+      case 'audiobook_tts_voice_use':
+        return 'Use for reading aloud';
+      case 'audiobook_tts_voice_ready':
+        return 'Ready';
+      case 'audiobook_tts_voice_incomplete_status':
+        return 'Incomplete';
+      case 'audiobook_tts_voice_name':
+        return 'Name';
+      case 'audiobook_tts_voice_delete':
+        return 'Delete voice';
+      case 'audiobook_tts_voice_test':
+        return 'Play a test';
+      case 'audiobook_tts_voice_test_text':
+        return 'Test sentence';
+      case 'audiobook_tts_voice_test_playing':
+        return 'Playing the test';
+      case 'audiobook_tts_voice_regenerate':
+        return 'Regenerate audio';
+      case 'audiobook_tts_voice_regenerate_hint':
+        return 'Stop reusing audio already synthesized with this voice';
+      case 'audiobook_tts_voice_regenerated':
+        return 'Audio will be synthesized again';
+      case 'audiobook_tts_voice_list_fetch':
+        return 'Choose from the voice list';
+      case 'audiobook_tts_voice_list_empty':
+        return 'The service returned no voices';
+      case 'audiobook_tts_online_notice':
+        return 'Online service: the text being read is sent to the provider.';
+      case 'audiobook_tts_unofficial_notice':
+        return 'Unofficial interface: Microsoft may change or block it at any time.';
+      case 'audiobook_tts_cache_section':
+        return 'Cache';
+      case 'audiobook_tts_cache_size':
+        return ({required Object size}) => 'Synthesized audio: ${size}';
+      case 'audiobook_tts_cache_clear':
+        return 'Clear synthesized audio';
+      case 'audiobook_tts_cache_cleared':
+        return 'Synthesized audio cleared';
+      case 'audiobook_tts_provider_gpt_sovits':
+        return 'GPT-SoVITS';
+      case 'audiobook_tts_provider_edge':
+        return 'Microsoft Edge';
+      case 'audiobook_tts_provider_azure':
+        return 'Microsoft Azure';
+      case 'audiobook_tts_provider_google_cloud':
+        return 'Google Cloud';
+      case 'audiobook_tts_provider_system':
+        return 'System voice';
+      case 'audiobook_tts_param_endpoint':
+        return 'Server URL';
+      case 'audiobook_tts_param_text_lang':
+        return 'Text language';
+      case 'audiobook_tts_param_ref_audio':
+        return 'Reference audio path';
+      case 'audiobook_tts_param_ref_audio_hint':
+        return 'A path on the machine running GPT-SoVITS; 3-10 seconds of clean speech';
+      case 'audiobook_tts_param_prompt_text':
+        return 'Reference audio transcript';
+      case 'audiobook_tts_param_prompt_lang':
+        return 'Reference audio language';
+      case 'audiobook_tts_param_region':
+        return 'Region';
+      case 'audiobook_tts_param_api_key':
+        return 'API key';
+      case 'audiobook_tts_param_bearer_hint':
+        return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_voice':
+        return 'Voice';
+      case 'audiobook_tts_param_invalid':
+        return 'This value is not valid';
+      case 'audiobook_tts_param_ref_audio_length':
+        return ({required Object seconds}) =>
+            'The reference audio is ${seconds} s; GPT-SoVITS only accepts 3-10 s';
+      case 'audiobook_tts_failure_rejected':
+        return 'The speech service refused this sentence';
+      case 'audiobook_tts_category_external':
+        return 'External service';
+      case 'audiobook_tts_category_external_hint':
+        return 'GPT-SoVITS, Irodori and other services on this computer or network';
+      case 'audiobook_tts_category_online':
+        return 'Online service';
+      case 'audiobook_tts_category_online_hint':
+        return 'Microsoft or Google';
+      case 'audiobook_tts_category_system':
+        return 'System voice';
+      case 'audiobook_tts_category_system_hint':
+        return 'The voice built into this device, works offline';
+      case 'audiobook_tts_service_type':
+        return 'Service';
+      case 'audiobook_tts_provider_irodori':
+        return 'Irodori studio';
+      case 'audiobook_tts_failure_busy':
+        return 'The speech service is busy with another job';
+      case 'audiobook_tts_param_irodori_endpoint_hint':
+        return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_key_required_hint':
+        return 'Requires your own API key';
+      case 'audiobook_studio_title':
+        return 'Make audiobook';
+      case 'audiobook_studio_hint':
+        return 'Synthesize the whole book with a read-aloud voice and import it as an audiobook';
+      case 'audiobook_studio_voice':
+        return 'Voice';
+      case 'audiobook_studio_chapters':
+        return 'Chapters';
+      case 'audiobook_studio_chapter_count':
+        return ({required Object n, required Object chars}) =>
+            '${n} sentences · ${chars} chars';
+      case 'audiobook_studio_select_all':
+        return 'Select all';
+      case 'audiobook_studio_select_none':
+        return 'Select none';
+      case 'audiobook_studio_verify':
+        return 'Check with speech recognition';
+      case 'audiobook_studio_verify_hint':
+        return 'Transcribe the result and flag misread or skipped sentences';
+      case 'audiobook_studio_verify_unavailable':
+        return 'No speech recognition model is installed';
+      case 'audiobook_studio_start':
+        return 'Start';
+      case 'audiobook_studio_replace_warning':
+        return 'This book already has an audiobook; it will be replaced when done';
+      case 'audiobook_studio_online_warning':
+        return 'Online services may rate-limit whole-book synthesis';
+      case 'audiobook_studio_summary':
+        return ({required Object sentences, required Object chars}) =>
+            '${sentences} sentences, ${chars} characters';
+      case 'audiobook_studio_phase_planning':
+        return 'Preparing';
+      case 'audiobook_studio_phase_synthesizing':
+        return ({required Object done, required Object total}) =>
+            'Synthesizing ${done}/${total}';
+      case 'audiobook_studio_phase_encoding':
+        return ({required Object done, required Object total}) =>
+            'Encoding chapters ${done}/${total}';
+      case 'audiobook_studio_phase_verifying':
+        return ({required Object done, required Object total}) =>
+            'Checking ${done}/${total}';
+      case 'audiobook_studio_phase_importing':
+        return 'Importing';
+      case 'audiobook_studio_status_queued':
+        return 'Queued';
+      case 'audiobook_studio_status_done':
+        return 'Done, imported as the audiobook';
+      case 'audiobook_studio_status_failed':
+        return ({required Object reason}) => 'Failed: ${reason}';
+      case 'audiobook_studio_status_cancelled':
+        return 'Cancelled';
+      case 'audiobook_studio_cancel':
+        return 'Cancel';
+      case 'audiobook_studio_retry':
+        return 'Retry';
+      case 'audiobook_studio_flags_title':
+        return ({required Object n}) => 'Sentences to review (${n})';
+      case 'audiobook_studio_flags_none':
+        return 'No misread sentences found';
+      case 'audiobook_studio_flags_unverified':
+        return 'Not checked with speech recognition';
+      case 'audiobook_studio_heard':
+        return ({required Object text}) => 'Heard: ${text}';
+      case 'audiobook_studio_regenerate_selected':
+        return ({required Object n}) => 'Regenerate selected (${n})';
+      case 'audiobook_studio_play':
+        return 'Play';
+      case 'audiobook_studio_pronunciation':
+        return 'Pronunciation dictionary';
+      case 'audiobook_studio_pronunciation_hint':
+        return 'Change how words are read, e.g. 今日 → きょう';
+      case 'audiobook_studio_pronunciation_add':
+        return 'Add rule';
+      case 'audiobook_studio_pronunciation_written':
+        return 'Written';
+      case 'audiobook_studio_pronunciation_spoken':
+        return 'Reading';
+      case 'audiobook_studio_failure_voice_missing':
+        return 'The voice no longer exists';
+      case 'audiobook_studio_failure_voice_unavailable':
+        return 'The voice is not available on this device';
+      case 'audiobook_studio_failure_book_missing':
+        return 'The book file could not be opened';
+      case 'audiobook_studio_failure_encode_failed':
+        return 'Audio encoding failed';
+      case 'audiobook_studio_failure_internal':
+        return 'Unexpected error';
+      case 'audiobook_studio_no_voice':
+        return 'Add a read-aloud voice first';
+      case 'audiobook_tts_provider_ms_translator':
+        return 'Microsoft Translator';
+      case 'audiobook_tts_provider_google_translate':
+        return 'Google Translate';
+      case 'audiobook_tts_unofficial_free_hint':
+        return 'Free, unofficial interface';
+      case 'audiobook_tts_voice_pick':
+        return 'Choose a voice';
+      case 'ai_feature_audiobook_cast':
+        return 'Audiobook casting';
+      case 'ai_feature_audiobook_cast_summary':
+        return 'Mark which character speaks each line so different voices can read them';
+      case 'audiobook_studio_cast':
+        return 'Characters and voices';
+      case 'audiobook_studio_cast_hint':
+        return 'Use AI to mark who speaks each line, then give each character a voice';
+      case 'audiobook_studio_cast_annotate':
+        return 'Mark speakers with AI';
+      case 'audiobook_studio_cast_reannotate':
+        return 'Annotate again';
+      case 'audiobook_studio_cast_progress':
+        return ({required Object done, required Object total}) =>
+            'Annotating ${done}/${total}';
+      case 'audiobook_studio_cast_narrator':
+        return 'Narrator';
+      case 'audiobook_studio_cast_lines':
+        return ({required Object n}) => '${n} lines';
+      case 'audiobook_studio_cast_default_voice':
+        return 'Default voice';
+      case 'audiobook_studio_cast_no_ai':
+        return 'Assign an AI provider to audiobook casting in AI settings first';
+      case 'audiobook_studio_cast_failed':
+        return ({required Object reason}) => 'Annotation failed: ${reason}';
+      case 'audiobook_studio_cast_rename':
+        return 'Rename or merge';
+      case 'audiobook_studio_cast_rename_title':
+        return 'Rename character';
+      case 'audiobook_studio_cast_empty':
+        return 'No characters marked yet';
+      case 'audiobook_studio_cast_annotated':
+        return ({required Object done, required Object total}) =>
+            '${done} of ${total} chapters annotated';
+      case 'audiobook_studio_cast_lines_title':
+        return 'Lines';
+      case 'audiobook_studio_cast_line_speaker':
+        return 'Speaker';
+      case 'audiobook_studio_cast_failure_bad_output':
+        return 'The AI reply could not be understood';
+      case 'audiobook_studio_failure_cache_busy':
+        return 'Some sentences are playing and could not be regenerated';
+      case 'audiobook_studio_failure_verify_failed':
+        return 'Speech recognition failed';
+      case 'audiobook_studio_cast_new_speaker':
+        return 'New name…';
+      case 'audiobook_studio_cast_reannotate_confirm':
+        return 'AI labels in the selected chapters will be replaced; your manual changes are kept';
+      case 'audiobook_studio_cast_unknown':
+        return 'Unknown speaker';
+      case 'audiobook_studio_cast_review':
+        return ({required Object n}) => 'To review (${n})';
+      case 'audiobook_studio_cast_review_hint':
+        return 'Unclear, low-confidence or unattributed lines; check these first';
+      case 'audiobook_studio_cast_review_only':
+        return 'Only lines to review';
+      case 'audiobook_studio_cast_assign_all':
+        return 'Assign all to…';
+      case 'audiobook_studio_cast_confidence':
+        return ({required Object pct}) => '${pct}% sure';
+      case 'audiobook_studio_cast_evidence_explicit':
+        return 'Named in the text';
+      case 'audiobook_studio_cast_evidence_anaphoric':
+        return 'Inferred from a pronoun or title';
+      case 'audiobook_studio_cast_evidence_implicit':
+        return 'Inferred from turn-taking';
+      case 'audiobook_studio_cast_gender_female':
+        return 'Female';
+      case 'audiobook_studio_cast_gender_male':
+        return 'Male';
+      case 'audiobook_studio_cast_age_child':
+        return 'Child';
+      case 'audiobook_studio_cast_age_teen':
+        return 'Teen';
+      case 'audiobook_studio_cast_age_adult':
+        return 'Adult';
+      case 'audiobook_studio_cast_age_elderly':
+        return 'Elderly';
+      case 'audiobook_studio_cast_aliases':
+        return ({required Object names}) => 'Also called: ${names}';
+      case 'audiobook_studio_cast_phase_roster':
+        return ({required Object done, required Object total}) =>
+            'Finding characters ${done}/${total}';
+      case 'audiobook_studio_pause':
+        return 'Pauses';
+      case 'audiobook_studio_pause_hint':
+        return 'Extra silence between sentences, paragraphs, scenes and chapters';
+      case 'audiobook_studio_pause_none':
+        return 'None';
+      case 'audiobook_studio_pause_standard':
+        return 'Standard';
+      case 'audiobook_studio_pause_literary':
+        return 'Literary (slower)';
+      case 'audiobook_studio_pause_brisk':
+        return 'Brisk';
+      case 'audiobook_studio_loudness':
+        return 'Normalize loudness';
+      case 'audiobook_studio_loudness_hint':
+        return 'Even out volume across voices and chapters (audiobook loudness targets)';
+      case 'audiobook_studio_loudness_skipped':
+        return 'Loudness was not normalized: this ffmpeg build lacks the loudnorm filter';
+      case 'audiobook_studio_export':
+        return 'Export audiobook';
+      case 'audiobook_studio_export_hint':
+        return 'One M4B file with chapters, cover and subtitles';
+      case 'audiobook_studio_export_done':
+        return ({required Object path}) => 'Exported to ${path}';
+      case 'audiobook_studio_export_failed':
+        return ({required Object reason}) => 'Export failed: ${reason}';
+      case 'audiobook_studio_export_unsupported':
+        return 'This ffmpeg build cannot write M4B chapters';
+      case 'audiobook_studio_export_running':
+        return 'Exporting…';
+      case 'audiobook_tts_concurrency':
+        return 'Parallel requests';
+      case 'audiobook_tts_concurrency_hint':
+        return 'Sending more requests at once synthesizes faster if the server and GPU can keep up; online services may rate-limit';
+      case 'audiobook_tts_concurrency_default':
+        return ({required Object n}) => 'Default (${n})';
       default:
         return null;
     }
