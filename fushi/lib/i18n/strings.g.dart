@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120173 (7069 per locale)
+/// Strings: 120343 (7079 per locale)
 ///
-/// Built on 2026-10-13 at 09:28 UTC
+/// Built on 2026-10-13 at 09:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10183,6 +10183,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get leaderboard_summary_total_month => 'Characters this month';
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  String get ai_provider_api_key_enable => 'Use this key';
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  String get ai_provider_api_key_remove => 'Remove this key';
+  String get ai_provider_api_keys_add => 'Add another API key';
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -27228,6 +27245,33 @@ class _StringsAr extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -44663,6 +44707,33 @@ class _StringsDe extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -62158,6 +62229,33 @@ class _StringsEs extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -79732,6 +79830,33 @@ class _StringsFr extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -96961,6 +97086,33 @@ class _StringsId extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -114355,6 +114507,33 @@ class _StringsIt extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -130750,6 +130929,33 @@ class _StringsJa extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -147180,6 +147386,33 @@ class _StringsKo extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -164522,6 +164755,33 @@ class _StringsNl extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -181933,6 +182193,33 @@ class _StringsPtBr extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -199290,6 +199577,33 @@ class _StringsRu extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -216325,6 +216639,33 @@ class _StringsTh extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -233563,6 +233904,33 @@ class _StringsTr extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -250728,6 +251096,33 @@ class _StringsVi extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 // Path: <root>
@@ -266430,6 +266825,32 @@ class _StringsZhCn extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '占总数 ${pct}';
+  @override
+  String get ai_error_quota_exhausted => '余额或额度不足';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API 密钥 ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) => '末尾 ${tail} · 正常';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => '末尾 ${tail} · 冷却中，${time} 后再用（${reason}）';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      '末尾 ${tail} · 已停用';
+  @override
+  String get ai_provider_api_key_enable => '启用此密钥';
+  @override
+  String get ai_provider_api_key_disable => '停用此密钥';
+  @override
+  String get ai_provider_api_key_remove => '删除此密钥';
+  @override
+  String get ai_provider_api_keys_add => '再添加一个 API 密钥';
+  @override
+  String get ai_provider_api_keys_summary =>
+      '配置多个密钥时，某个密钥被拒绝、限流或额度用尽，会自动换下一个重试；失败的密钥进入冷却，到期后再用。';
 }
 
 // Path: <root>
@@ -282275,6 +282696,33 @@ class _StringsZhHk extends _StringsEn {
   @override
   String leaderboard_summary_window_share({required Object pct}) =>
       '${pct} of your total';
+  @override
+  String get ai_error_quota_exhausted => 'Out of credit or quota';
+  @override
+  String ai_provider_api_key_numbered({required Object n}) => 'API key ${n}';
+  @override
+  String ai_provider_api_key_ok({required Object tail}) =>
+      'Ends in ${tail} · OK';
+  @override
+  String ai_provider_api_key_cooling({
+    required Object tail,
+    required Object time,
+    required Object reason,
+  }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+  @override
+  String ai_provider_api_key_disabled({required Object tail}) =>
+      'Ends in ${tail} · disabled';
+  @override
+  String get ai_provider_api_key_enable => 'Use this key';
+  @override
+  String get ai_provider_api_key_disable => 'Stop using this key';
+  @override
+  String get ai_provider_api_key_remove => 'Remove this key';
+  @override
+  String get ai_provider_api_keys_add => 'Add another API key';
+  @override
+  String get ai_provider_api_keys_summary =>
+      'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
 }
 
 /// Flat map(s) containing all translations.
@@ -296934,6 +297382,30 @@ extension on _StringsEn {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -311588,6 +312060,30 @@ extension on _StringsAr {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -326318,6 +326814,30 @@ extension on _StringsDe {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -341030,6 +341550,30 @@ extension on _StringsEs {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -355760,6 +356304,30 @@ extension on _StringsFr {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -370434,6 +371002,30 @@ extension on _StringsId {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -385144,6 +385736,30 @@ extension on _StringsIt {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -399728,6 +400344,30 @@ extension on _StringsJa {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -414319,6 +414959,30 @@ extension on _StringsKo {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -429024,6 +429688,30 @@ extension on _StringsNl {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -443721,6 +444409,30 @@ extension on _StringsPtBr {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -458423,6 +459135,30 @@ extension on _StringsRu {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -473081,6 +473817,30 @@ extension on _StringsTh {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -487770,6 +488530,30 @@ extension on _StringsTr {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -502442,6 +503226,30 @@ extension on _StringsVi {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
@@ -516950,6 +517758,30 @@ extension on _StringsZhCn {
         return '本月字数';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '占总数 ${pct}';
+      case 'ai_error_quota_exhausted':
+        return '余额或额度不足';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API 密钥 ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => '末尾 ${tail} · 正常';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => '末尾 ${tail} · 冷却中，${time} 后再用（${reason}）';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => '末尾 ${tail} · 已停用';
+      case 'ai_provider_api_key_enable':
+        return '启用此密钥';
+      case 'ai_provider_api_key_disable':
+        return '停用此密钥';
+      case 'ai_provider_api_key_remove':
+        return '删除此密钥';
+      case 'ai_provider_api_keys_add':
+        return '再添加一个 API 密钥';
+      case 'ai_provider_api_keys_summary':
+        return '配置多个密钥时，某个密钥被拒绝、限流或额度用尽，会自动换下一个重试；失败的密钥进入冷却，到期后再用。';
       default:
         return null;
     }
@@ -531479,6 +532311,30 @@ extension on _StringsZhHk {
         return 'Characters this month';
       case 'leaderboard_summary_window_share':
         return ({required Object pct}) => '${pct} of your total';
+      case 'ai_error_quota_exhausted':
+        return 'Out of credit or quota';
+      case 'ai_provider_api_key_numbered':
+        return ({required Object n}) => 'API key ${n}';
+      case 'ai_provider_api_key_ok':
+        return ({required Object tail}) => 'Ends in ${tail} · OK';
+      case 'ai_provider_api_key_cooling':
+        return ({
+          required Object tail,
+          required Object time,
+          required Object reason,
+        }) => 'Ends in ${tail} · cooling down until ${time} (${reason})';
+      case 'ai_provider_api_key_disabled':
+        return ({required Object tail}) => 'Ends in ${tail} · disabled';
+      case 'ai_provider_api_key_enable':
+        return 'Use this key';
+      case 'ai_provider_api_key_disable':
+        return 'Stop using this key';
+      case 'ai_provider_api_key_remove':
+        return 'Remove this key';
+      case 'ai_provider_api_keys_add':
+        return 'Add another API key';
+      case 'ai_provider_api_keys_summary':
+        return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       default:
         return null;
     }
