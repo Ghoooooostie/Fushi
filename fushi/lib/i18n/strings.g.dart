@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119782 (7046 per locale)
+/// Strings: 120853 (7109 per locale)
 ///
-/// Built on 2026-10-12 at 18:01 UTC
+/// Built on 2026-10-13 at 03:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10138,6 +10138,97 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  String get video_remote_title => 'Video remote';
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  String get video_remote_retry => 'Reconnect';
+  String get video_remote_favorites => 'Favorites';
+  String get video_remote_subtitles => 'Subtitles';
+  String get video_remote_all => 'All videos';
+  String get video_remote_remove => 'Remove selected favorites';
+  String get video_remote_current => 'Return to current subtitle';
+  String get video_remote_previous => 'Previous subtitle';
+  String get video_remote_next => 'Next subtitle';
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  String get video_remote_mine => 'Preview and create card';
+  String get video_remote_mined => 'Card created on computer';
+  String get video_remote_no_results => 'No dictionary entries found';
+  String get video_remote_expression => 'Expression';
+  String get video_remote_reading => 'Reading';
+  String get video_remote_meaning => 'Meaning';
+  String get video_remote_sentence => 'Sentence';
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  String get video_remote_control_replay => 'Replay this line';
+  String get video_remote_control_favorite => 'Favorite this line';
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  String get video_remote_control_mine => 'Create card';
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  String get video_remote_control_customize => 'Customize buttons';
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  String get video_remote_control_slot_primary => 'Main controls';
+  String get video_remote_control_slot_secondary => 'More buttons';
+  String get video_remote_control_slot_hidden => 'Removed';
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  String get video_remote_favorites_scope_current => 'This video';
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  String get video_remote_favorites_empty => 'No favorites yet';
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  String get video_remote_favorites_select => 'Select';
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  String get video_remote_line_actions => 'Line actions';
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
 }
@@ -27116,6 +27207,160 @@ class _StringsAr extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
@@ -44485,6 +44730,160 @@ class _StringsDe extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
@@ -61914,6 +62313,160 @@ class _StringsEs extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
@@ -79423,6 +79976,160 @@ class _StringsFr extends _StringsEn {
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
   @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
+  @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
 }
@@ -96585,6 +97292,160 @@ class _StringsId extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
@@ -113914,6 +114775,160 @@ class _StringsIt extends _StringsEn {
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
   @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
+  @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
 }
@@ -130241,6 +131256,160 @@ class _StringsJa extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
@@ -146605,6 +147774,160 @@ class _StringsKo extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
@@ -163881,6 +165204,160 @@ class _StringsNl extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
@@ -181227,6 +182704,160 @@ class _StringsPtBr extends _StringsEn {
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
   @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
+  @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
 }
@@ -198518,6 +200149,160 @@ class _StringsRu extends _StringsEn {
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
   @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
+  @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
 }
@@ -215486,6 +217271,160 @@ class _StringsTh extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
+  @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
@@ -232659,6 +234598,160 @@ class _StringsTr extends _StringsEn {
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
   @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
+  @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
 }
@@ -249758,6 +251851,160 @@ class _StringsVi extends _StringsEn {
   String get book_import_no_book_transcribe_action =>
       'Transcribe and generate book';
   @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
+  @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
 }
@@ -265399,6 +267646,135 @@ class _StringsZhCn extends _StringsEn {
       '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
   @override
   String get book_import_no_book_transcribe_action => '转录并生成书籍';
+  @override
+  String get video_remote_title => '视频遥控器';
+  @override
+  String get video_remote_unsupported => '此设备不支持视频遥控';
+  @override
+  String get video_remote_waiting => '等待电脑打开视频';
+  @override
+  String get video_remote_retry => '重新连接';
+  @override
+  String get video_remote_favorites => '收藏';
+  @override
+  String get video_remote_subtitles => '字幕';
+  @override
+  String get video_remote_all => '全部视频';
+  @override
+  String get video_remote_remove => '取消选中收藏';
+  @override
+  String get video_remote_current => '回到当前字幕';
+  @override
+  String get video_remote_previous => '上一句';
+  @override
+  String get video_remote_next => '下一句';
+  @override
+  String get video_remote_open_favorite => '在电脑打开此收藏？';
+  @override
+  String get video_remote_mine => '预览并制卡';
+  @override
+  String get video_remote_mined => '已在电脑制卡';
+  @override
+  String get video_remote_no_results => '没有查到词条';
+  @override
+  String get video_remote_expression => '词语';
+  @override
+  String get video_remote_reading => '读音';
+  @override
+  String get video_remote_meaning => '释义';
+  @override
+  String get video_remote_sentence => '例句';
+  @override
+  String get video_remote_error_controller_busy => '另一台设备正在遥控这个视频';
+  @override
+  String get video_remote_error_controller_lease_lost => '遥控已超时或被接管，正在重新连接';
+  @override
+  String get video_remote_error_subtitles_changed => '电脑上的字幕已变化，正在刷新';
+  @override
+  String get video_remote_error_favorite_missing => '这条收藏已不存在';
+  @override
+  String get video_remote_error_favorite_ambiguous => '有多条字幕与这条收藏匹配，无法确定';
+  @override
+  String get video_remote_error_favorite_source_unavailable => '这条收藏对应的视频已不可用';
+  @override
+  String get video_remote_error_lookup_expired => '查词已过期，请重新点选句子';
+  @override
+  String get video_remote_error_mining_busy => '电脑仍在制作上一张卡片';
+  @override
+  String get video_remote_error_mining_failed => '电脑制卡失败';
+  @override
+  String get video_remote_error_requests_busy => '电脑忙，请稍后再试';
+  @override
+  String get video_remote_error_no_video => '电脑上没有打开视频';
+  @override
+  String get video_remote_error_remote_closed => '电脑已关闭遥控';
+  @override
+  String get video_remote_error_task_missing => '电脑上找不到这次制卡任务';
+  @override
+  String get video_remote_error_internal_error => '电脑端出错';
+  @override
+  String get video_remote_error_pairing_rejected => '电脑拒绝了本设备的配对凭据，请重新配对';
+  @override
+  String get video_remote_error_unreachable => '连接不到电脑';
+  @override
+  String get video_remote_error_certificate_mismatch => '电脑证书与配对时不一致，请重新配对';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      '电脑拒绝了请求（${code}），请把两台设备的 Fushi 都更新到最新版';
+  @override
+  String video_remote_error_unknown({required Object code}) => '遥控失败（${code}）';
+  @override
+  String get video_remote_error_favorite_subtitle_missing => '视频里找不到这条收藏对应的字幕';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      '电脑无法为卡片提取音频或画面';
+  @override
+  String get video_remote_control_replay => '重播本句';
+  @override
+  String get video_remote_control_favorite => '收藏本句';
+  @override
+  String get video_remote_control_unfavorite => '取消收藏';
+  @override
+  String get video_remote_control_mine => '制卡';
+  @override
+  String get video_remote_control_subtitle_visibility => '显示或隐藏字幕';
+  @override
+  String get video_remote_control_seek_back => '后退 10 秒';
+  @override
+  String get video_remote_control_seek_forward => '前进 10 秒';
+  @override
+  String get video_remote_control_customize => '自定义按钮';
+  @override
+  String get video_remote_control_editor_hint =>
+      '在主控制组与更多按钮之间拖动按钮。播放 / 暂停始终保留。';
+  @override
+  String get video_remote_control_slot_primary => '主控制组';
+  @override
+  String get video_remote_control_slot_secondary => '更多按钮';
+  @override
+  String get video_remote_control_slot_hidden => '已移出';
+  @override
+  String get video_remote_control_reject_pinned => '播放 / 暂停不能移出';
+  @override
+  String get video_remote_favorites_scope_current => '当前视频';
+  @override
+  String get video_remote_favorites_search_hint => '搜索收藏';
+  @override
+  String get video_remote_favorites_empty => '还没有收藏';
+  @override
+  String get video_remote_favorites_empty_hint => '长按字幕行即可收藏到这里。';
+  @override
+  String get video_remote_favorites_search_empty => '没有匹配的收藏';
+  @override
+  String video_remote_favorites_selected({required Object n}) => '已选 ${n} 条';
+  @override
+  String get video_remote_favorites_select => '多选';
+  @override
+  String get video_remote_transcript_empty => '暂无字幕';
+  @override
+  String video_remote_host_connected({required Object name}) => '已连接 ${name}';
+  @override
+  String get video_remote_line_actions => '句子操作';
   @override
   String get onboarding_anki_auto_reposition_hint =>
       '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。需要电脑版 Anki + AnkiConnect（手机可改连电脑上的 AnkiConnect）；AnkiDroid / AnkiMobile 无法重排。';
@@ -281178,6 +283554,160 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get book_import_no_book_transcribe_action => '轉錄並生成書籍';
   @override
+  String get video_remote_title => 'Video remote';
+  @override
+  String get video_remote_unsupported =>
+      'This device does not support video remote control';
+  @override
+  String get video_remote_waiting => 'Waiting for a video on the computer';
+  @override
+  String get video_remote_retry => 'Reconnect';
+  @override
+  String get video_remote_favorites => 'Favorites';
+  @override
+  String get video_remote_subtitles => 'Subtitles';
+  @override
+  String get video_remote_all => 'All videos';
+  @override
+  String get video_remote_remove => 'Remove selected favorites';
+  @override
+  String get video_remote_current => 'Return to current subtitle';
+  @override
+  String get video_remote_previous => 'Previous subtitle';
+  @override
+  String get video_remote_next => 'Next subtitle';
+  @override
+  String get video_remote_open_favorite =>
+      'Open this favorite on the computer?';
+  @override
+  String get video_remote_mine => 'Preview and create card';
+  @override
+  String get video_remote_mined => 'Card created on computer';
+  @override
+  String get video_remote_no_results => 'No dictionary entries found';
+  @override
+  String get video_remote_expression => 'Expression';
+  @override
+  String get video_remote_reading => 'Reading';
+  @override
+  String get video_remote_meaning => 'Meaning';
+  @override
+  String get video_remote_sentence => 'Sentence';
+  @override
+  String get video_remote_error_controller_busy =>
+      'Another device is controlling this video';
+  @override
+  String get video_remote_error_controller_lease_lost =>
+      'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_subtitles_changed =>
+      'Subtitles on the computer changed; refreshing';
+  @override
+  String get video_remote_error_favorite_missing =>
+      'This favorite no longer exists';
+  @override
+  String get video_remote_error_favorite_ambiguous =>
+      'Several subtitle lines match this favorite';
+  @override
+  String get video_remote_error_favorite_source_unavailable =>
+      'The video for this favorite is no longer available';
+  @override
+  String get video_remote_error_lookup_expired =>
+      'The lookup expired; tap the sentence again';
+  @override
+  String get video_remote_error_mining_busy =>
+      'The computer is still creating the previous card';
+  @override
+  String get video_remote_error_mining_failed =>
+      'Card creation failed on the computer';
+  @override
+  String get video_remote_error_requests_busy =>
+      'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_no_video => 'No video is open on the computer';
+  @override
+  String get video_remote_error_remote_closed =>
+      'Remote control was closed on the computer';
+  @override
+  String get video_remote_error_task_missing =>
+      'The card task was not found on the computer';
+  @override
+  String get video_remote_error_internal_error =>
+      'Something went wrong on the computer';
+  @override
+  String get video_remote_error_pairing_rejected =>
+      'The computer rejected this device\'s pairing; pair again';
+  @override
+  String get video_remote_error_unreachable => 'Can\'t reach the computer';
+  @override
+  String get video_remote_error_certificate_mismatch =>
+      'The computer\'s certificate doesn\'t match the paired one; pair again';
+  @override
+  String video_remote_error_invalid_request({required Object code}) =>
+      'The computer rejected the request (${code}); update Fushi on both devices';
+  @override
+  String video_remote_error_unknown({required Object code}) =>
+      'Remote control failed (${code})';
+  @override
+  String get video_remote_error_favorite_subtitle_missing =>
+      'This favorite\'s subtitle line was not found in the video';
+  @override
+  String get video_remote_error_video_extraction_unavailable =>
+      'The computer couldn\'t extract audio or images for the card';
+  @override
+  String get video_remote_control_replay => 'Replay this line';
+  @override
+  String get video_remote_control_favorite => 'Favorite this line';
+  @override
+  String get video_remote_control_unfavorite => 'Remove from favorites';
+  @override
+  String get video_remote_control_mine => 'Create card';
+  @override
+  String get video_remote_control_subtitle_visibility =>
+      'Show or hide subtitles';
+  @override
+  String get video_remote_control_seek_back => 'Back 10 seconds';
+  @override
+  String get video_remote_control_seek_forward => 'Forward 10 seconds';
+  @override
+  String get video_remote_control_customize => 'Customize buttons';
+  @override
+  String get video_remote_control_editor_hint =>
+      'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+  @override
+  String get video_remote_control_slot_primary => 'Main controls';
+  @override
+  String get video_remote_control_slot_secondary => 'More buttons';
+  @override
+  String get video_remote_control_slot_hidden => 'Removed';
+  @override
+  String get video_remote_control_reject_pinned =>
+      'Play/pause can\'t be removed';
+  @override
+  String get video_remote_favorites_scope_current => 'This video';
+  @override
+  String get video_remote_favorites_search_hint => 'Search favorites';
+  @override
+  String get video_remote_favorites_empty => 'No favorites yet';
+  @override
+  String get video_remote_favorites_empty_hint =>
+      'Long-press a subtitle line to save it here.';
+  @override
+  String get video_remote_favorites_search_empty =>
+      'No favorites match your search';
+  @override
+  String video_remote_favorites_selected({required Object n}) =>
+      '${n} selected';
+  @override
+  String get video_remote_favorites_select => 'Select';
+  @override
+  String get video_remote_transcript_empty => 'No subtitles yet';
+  @override
+  String video_remote_host_connected({required Object name}) =>
+      'Connected to ${name}';
+  @override
+  String get video_remote_line_actions => 'Line actions';
+  @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
 }
@@ -295782,6 +298312,133 @@ extension on _StringsEn {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -310381,6 +313038,133 @@ extension on _StringsAr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -325056,6 +327840,133 @@ extension on _StringsDe {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -339713,6 +342624,133 @@ extension on _StringsEs {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -354388,6 +357426,133 @@ extension on _StringsFr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -369007,6 +372172,133 @@ extension on _StringsId {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -383662,6 +386954,133 @@ extension on _StringsIt {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -398191,6 +401610,133 @@ extension on _StringsJa {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -412727,6 +416273,133 @@ extension on _StringsKo {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -427377,6 +431050,133 @@ extension on _StringsNl {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -442019,6 +445819,133 @@ extension on _StringsPtBr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -456666,6 +460593,133 @@ extension on _StringsRu {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -471269,6 +475323,133 @@ extension on _StringsTh {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -485903,6 +490084,133 @@ extension on _StringsTr {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -500520,6 +504828,133 @@ extension on _StringsVi {
         return 'You can import with audio alone: pick a subtitle file for it and a book is generated from the subtitles when you import.';
       case 'book_import_no_book_transcribe_action':
         return 'Transcribe and generate book';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
@@ -514977,6 +519412,133 @@ extension on _StringsZhCn {
         return '没有书也能导入：为这段音频选一个字幕文件，导入时会据此自动生成一本书。';
       case 'book_import_no_book_transcribe_action':
         return '转录并生成书籍';
+      case 'video_remote_title':
+        return '视频遥控器';
+      case 'video_remote_unsupported':
+        return '此设备不支持视频遥控';
+      case 'video_remote_waiting':
+        return '等待电脑打开视频';
+      case 'video_remote_retry':
+        return '重新连接';
+      case 'video_remote_favorites':
+        return '收藏';
+      case 'video_remote_subtitles':
+        return '字幕';
+      case 'video_remote_all':
+        return '全部视频';
+      case 'video_remote_remove':
+        return '取消选中收藏';
+      case 'video_remote_current':
+        return '回到当前字幕';
+      case 'video_remote_previous':
+        return '上一句';
+      case 'video_remote_next':
+        return '下一句';
+      case 'video_remote_open_favorite':
+        return '在电脑打开此收藏？';
+      case 'video_remote_mine':
+        return '预览并制卡';
+      case 'video_remote_mined':
+        return '已在电脑制卡';
+      case 'video_remote_no_results':
+        return '没有查到词条';
+      case 'video_remote_expression':
+        return '词语';
+      case 'video_remote_reading':
+        return '读音';
+      case 'video_remote_meaning':
+        return '释义';
+      case 'video_remote_sentence':
+        return '例句';
+      case 'video_remote_error_controller_busy':
+        return '另一台设备正在遥控这个视频';
+      case 'video_remote_error_controller_lease_lost':
+        return '遥控已超时或被接管，正在重新连接';
+      case 'video_remote_error_subtitles_changed':
+        return '电脑上的字幕已变化，正在刷新';
+      case 'video_remote_error_favorite_missing':
+        return '这条收藏已不存在';
+      case 'video_remote_error_favorite_ambiguous':
+        return '有多条字幕与这条收藏匹配，无法确定';
+      case 'video_remote_error_favorite_source_unavailable':
+        return '这条收藏对应的视频已不可用';
+      case 'video_remote_error_lookup_expired':
+        return '查词已过期，请重新点选句子';
+      case 'video_remote_error_mining_busy':
+        return '电脑仍在制作上一张卡片';
+      case 'video_remote_error_mining_failed':
+        return '电脑制卡失败';
+      case 'video_remote_error_requests_busy':
+        return '电脑忙，请稍后再试';
+      case 'video_remote_error_no_video':
+        return '电脑上没有打开视频';
+      case 'video_remote_error_remote_closed':
+        return '电脑已关闭遥控';
+      case 'video_remote_error_task_missing':
+        return '电脑上找不到这次制卡任务';
+      case 'video_remote_error_internal_error':
+        return '电脑端出错';
+      case 'video_remote_error_pairing_rejected':
+        return '电脑拒绝了本设备的配对凭据，请重新配对';
+      case 'video_remote_error_unreachable':
+        return '连接不到电脑';
+      case 'video_remote_error_certificate_mismatch':
+        return '电脑证书与配对时不一致，请重新配对';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            '电脑拒绝了请求（${code}），请把两台设备的 Fushi 都更新到最新版';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => '遥控失败（${code}）';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return '视频里找不到这条收藏对应的字幕';
+      case 'video_remote_error_video_extraction_unavailable':
+        return '电脑无法为卡片提取音频或画面';
+      case 'video_remote_control_replay':
+        return '重播本句';
+      case 'video_remote_control_favorite':
+        return '收藏本句';
+      case 'video_remote_control_unfavorite':
+        return '取消收藏';
+      case 'video_remote_control_mine':
+        return '制卡';
+      case 'video_remote_control_subtitle_visibility':
+        return '显示或隐藏字幕';
+      case 'video_remote_control_seek_back':
+        return '后退 10 秒';
+      case 'video_remote_control_seek_forward':
+        return '前进 10 秒';
+      case 'video_remote_control_customize':
+        return '自定义按钮';
+      case 'video_remote_control_editor_hint':
+        return '在主控制组与更多按钮之间拖动按钮。播放 / 暂停始终保留。';
+      case 'video_remote_control_slot_primary':
+        return '主控制组';
+      case 'video_remote_control_slot_secondary':
+        return '更多按钮';
+      case 'video_remote_control_slot_hidden':
+        return '已移出';
+      case 'video_remote_control_reject_pinned':
+        return '播放 / 暂停不能移出';
+      case 'video_remote_favorites_scope_current':
+        return '当前视频';
+      case 'video_remote_favorites_search_hint':
+        return '搜索收藏';
+      case 'video_remote_favorites_empty':
+        return '还没有收藏';
+      case 'video_remote_favorites_empty_hint':
+        return '长按字幕行即可收藏到这里。';
+      case 'video_remote_favorites_search_empty':
+        return '没有匹配的收藏';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '已选 ${n} 条';
+      case 'video_remote_favorites_select':
+        return '多选';
+      case 'video_remote_transcript_empty':
+        return '暂无字幕';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => '已连接 ${name}';
+      case 'video_remote_line_actions':
+        return '句子操作';
       case 'onboarding_anki_auto_reposition_hint':
         return '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。需要电脑版 Anki + AnkiConnect（手机可改连电脑上的 AnkiConnect）；AnkiDroid / AnkiMobile 无法重排。';
       default:
@@ -529451,6 +534013,133 @@ extension on _StringsZhHk {
         return '沒有書也能匯入：為這段音訊選一個字幕檔，匯入時會據此自動生成一本書。';
       case 'book_import_no_book_transcribe_action':
         return '轉錄並生成書籍';
+      case 'video_remote_title':
+        return 'Video remote';
+      case 'video_remote_unsupported':
+        return 'This device does not support video remote control';
+      case 'video_remote_waiting':
+        return 'Waiting for a video on the computer';
+      case 'video_remote_retry':
+        return 'Reconnect';
+      case 'video_remote_favorites':
+        return 'Favorites';
+      case 'video_remote_subtitles':
+        return 'Subtitles';
+      case 'video_remote_all':
+        return 'All videos';
+      case 'video_remote_remove':
+        return 'Remove selected favorites';
+      case 'video_remote_current':
+        return 'Return to current subtitle';
+      case 'video_remote_previous':
+        return 'Previous subtitle';
+      case 'video_remote_next':
+        return 'Next subtitle';
+      case 'video_remote_open_favorite':
+        return 'Open this favorite on the computer?';
+      case 'video_remote_mine':
+        return 'Preview and create card';
+      case 'video_remote_mined':
+        return 'Card created on computer';
+      case 'video_remote_no_results':
+        return 'No dictionary entries found';
+      case 'video_remote_expression':
+        return 'Expression';
+      case 'video_remote_reading':
+        return 'Reading';
+      case 'video_remote_meaning':
+        return 'Meaning';
+      case 'video_remote_sentence':
+        return 'Sentence';
+      case 'video_remote_error_controller_busy':
+        return 'Another device is controlling this video';
+      case 'video_remote_error_controller_lease_lost':
+        return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_subtitles_changed':
+        return 'Subtitles on the computer changed; refreshing';
+      case 'video_remote_error_favorite_missing':
+        return 'This favorite no longer exists';
+      case 'video_remote_error_favorite_ambiguous':
+        return 'Several subtitle lines match this favorite';
+      case 'video_remote_error_favorite_source_unavailable':
+        return 'The video for this favorite is no longer available';
+      case 'video_remote_error_lookup_expired':
+        return 'The lookup expired; tap the sentence again';
+      case 'video_remote_error_mining_busy':
+        return 'The computer is still creating the previous card';
+      case 'video_remote_error_mining_failed':
+        return 'Card creation failed on the computer';
+      case 'video_remote_error_requests_busy':
+        return 'The computer is busy; try again shortly';
+      case 'video_remote_error_no_video':
+        return 'No video is open on the computer';
+      case 'video_remote_error_remote_closed':
+        return 'Remote control was closed on the computer';
+      case 'video_remote_error_task_missing':
+        return 'The card task was not found on the computer';
+      case 'video_remote_error_internal_error':
+        return 'Something went wrong on the computer';
+      case 'video_remote_error_pairing_rejected':
+        return 'The computer rejected this device\'s pairing; pair again';
+      case 'video_remote_error_unreachable':
+        return 'Can\'t reach the computer';
+      case 'video_remote_error_certificate_mismatch':
+        return 'The computer\'s certificate doesn\'t match the paired one; pair again';
+      case 'video_remote_error_invalid_request':
+        return ({required Object code}) =>
+            'The computer rejected the request (${code}); update Fushi on both devices';
+      case 'video_remote_error_unknown':
+        return ({required Object code}) => 'Remote control failed (${code})';
+      case 'video_remote_error_favorite_subtitle_missing':
+        return 'This favorite\'s subtitle line was not found in the video';
+      case 'video_remote_error_video_extraction_unavailable':
+        return 'The computer couldn\'t extract audio or images for the card';
+      case 'video_remote_control_replay':
+        return 'Replay this line';
+      case 'video_remote_control_favorite':
+        return 'Favorite this line';
+      case 'video_remote_control_unfavorite':
+        return 'Remove from favorites';
+      case 'video_remote_control_mine':
+        return 'Create card';
+      case 'video_remote_control_subtitle_visibility':
+        return 'Show or hide subtitles';
+      case 'video_remote_control_seek_back':
+        return 'Back 10 seconds';
+      case 'video_remote_control_seek_forward':
+        return 'Forward 10 seconds';
+      case 'video_remote_control_customize':
+        return 'Customize buttons';
+      case 'video_remote_control_editor_hint':
+        return 'Drag buttons between the main controls and more buttons. Play/pause always stays.';
+      case 'video_remote_control_slot_primary':
+        return 'Main controls';
+      case 'video_remote_control_slot_secondary':
+        return 'More buttons';
+      case 'video_remote_control_slot_hidden':
+        return 'Removed';
+      case 'video_remote_control_reject_pinned':
+        return 'Play/pause can\'t be removed';
+      case 'video_remote_favorites_scope_current':
+        return 'This video';
+      case 'video_remote_favorites_search_hint':
+        return 'Search favorites';
+      case 'video_remote_favorites_empty':
+        return 'No favorites yet';
+      case 'video_remote_favorites_empty_hint':
+        return 'Long-press a subtitle line to save it here.';
+      case 'video_remote_favorites_search_empty':
+        return 'No favorites match your search';
+      case 'video_remote_favorites_selected':
+        return ({required Object n}) => '${n} selected';
+      case 'video_remote_favorites_select':
+        return 'Select';
+      case 'video_remote_transcript_empty':
+        return 'No subtitles yet';
+      case 'video_remote_host_connected':
+        return ({required Object name}) => 'Connected to ${name}';
+      case 'video_remote_line_actions':
+        return 'Line actions';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
       default:
