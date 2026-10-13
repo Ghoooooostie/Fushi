@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 125715 (7395 per locale)
+/// Strings: 125766 (7398 per locale)
 ///
-/// Built on 2026-10-13 at 10:24 UTC
+/// Built on 2026-10-13 at 11:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10682,6 +10682,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -28551,6 +28556,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -46810,6 +46823,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -65129,6 +65150,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -83527,6 +83556,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -101580,6 +101617,14 @@ class _StringsId extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -119798,6 +119843,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -137016,6 +137069,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -154270,6 +154331,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -172436,6 +172505,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -190671,6 +190748,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -208852,6 +208937,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -226711,6 +226804,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -244773,6 +244874,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -262762,6 +262871,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 // Path: <root>
@@ -279192,6 +279309,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       '本平台不随官方渠道更新，无法判断你的版本何时包含这个修复。';
+  @override
+  String get feedback_reply_notification_title => '开发者回复了你的反馈';
+  @override
+  String get feedback_reply_notify_setting => '反馈有新回复时通知我';
+  @override
+  String get feedback_reply_notify_setting_hint => '在后台检查你提交的反馈有没有新回复，有就发系统通知';
 }
 
 // Path: <root>
@@ -295860,6 +295983,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get feedback_fix_platform_not_tracked =>
       'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+  @override
+  String get feedback_reply_notification_title =>
+      'A developer replied to your feedback';
+  @override
+  String get feedback_reply_notify_setting => 'Notify me of feedback replies';
+  @override
+  String get feedback_reply_notify_setting_hint =>
+      'Checks in the background for replies to feedback you submitted and shows a system notification';
 }
 
 /// Flat map(s) containing all translations.
@@ -311195,6 +311326,12 @@ extension on _StringsEn {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -326525,6 +326662,12 @@ extension on _StringsAr {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -341931,6 +342074,12 @@ extension on _StringsDe {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -357319,6 +357468,12 @@ extension on _StringsEs {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -372725,6 +372880,12 @@ extension on _StringsFr {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -388075,6 +388236,12 @@ extension on _StringsId {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -403461,6 +403628,12 @@ extension on _StringsIt {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -418721,6 +418894,12 @@ extension on _StringsJa {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -433988,6 +434167,12 @@ extension on _StringsKo {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -449369,6 +449554,12 @@ extension on _StringsNl {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -464742,6 +464933,12 @@ extension on _StringsPtBr {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -480120,6 +480317,12 @@ extension on _StringsRu {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -495454,6 +495657,12 @@ extension on _StringsTh {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -510819,6 +511028,12 @@ extension on _StringsTr {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -526167,6 +526382,12 @@ extension on _StringsVi {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
@@ -541346,6 +541567,12 @@ extension on _StringsZhCn {
         return '还没有发布包含它';
       case 'feedback_fix_platform_not_tracked':
         return '本平台不随官方渠道更新，无法判断你的版本何时包含这个修复。';
+      case 'feedback_reply_notification_title':
+        return '开发者回复了你的反馈';
+      case 'feedback_reply_notify_setting':
+        return '反馈有新回复时通知我';
+      case 'feedback_reply_notify_setting_hint':
+        return '在后台检查你提交的反馈有没有新回复，有就发系统通知';
       default:
         return null;
     }
@@ -556551,6 +556778,12 @@ extension on _StringsZhHk {
         return 'Not in any release yet';
       case 'feedback_fix_platform_not_tracked':
         return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
+      case 'feedback_reply_notification_title':
+        return 'A developer replied to your feedback';
+      case 'feedback_reply_notify_setting':
+        return 'Notify me of feedback replies';
+      case 'feedback_reply_notify_setting_hint':
+        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
       default:
         return null;
     }
