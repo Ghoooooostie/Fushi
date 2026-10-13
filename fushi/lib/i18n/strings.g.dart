@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120037 (7061 per locale)
+/// Strings: 120071 (7063 per locale)
 ///
-/// Built on 2026-10-13 at 09:22 UTC
+/// Built on 2026-10-13 at 09:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10169,6 +10169,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_quick_spread_shift => 'Offset by one page';
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -27192,6 +27195,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -44605,6 +44613,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -62078,6 +62091,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -79630,6 +79648,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -96837,6 +96860,11 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -114209,6 +114237,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -130581,6 +130614,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -146989,6 +147027,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -164309,6 +164352,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -181698,6 +181746,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -199033,6 +199086,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -216046,6 +216104,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -233262,6 +233325,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -250405,6 +250473,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 // Path: <root>
@@ -266086,6 +266159,10 @@ class _StringsZhCn extends _StringsEn {
   String get manga_quick_spread_shift => '错开一页';
   @override
   String get manga_quick_spread_shift_subtitle => '封面单独成页，其余两两配对；关闭则从第一页起配对。';
+  @override
+  String feedback_reply_notice({required Object n}) => '开发者更新了 ${n} 条你的反馈';
+  @override
+  String get feedback_reply_notice_open => '查看';
 }
 
 // Path: <root>
@@ -281908,6 +281985,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_quick_spread_shift_subtitle =>
       'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+  @override
+  String feedback_reply_notice({required Object n}) =>
+      'Developers updated ${n} of your feedback item(s)';
+  @override
+  String get feedback_reply_notice_open => 'View';
 }
 
 /// Flat map(s) containing all translations.
@@ -296548,6 +296630,11 @@ extension on _StringsEn {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -311183,6 +311270,11 @@ extension on _StringsAr {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -325894,6 +325986,11 @@ extension on _StringsDe {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -340587,6 +340684,11 @@ extension on _StringsEs {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -355298,6 +355400,11 @@ extension on _StringsFr {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -369953,6 +370060,11 @@ extension on _StringsId {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -384644,6 +384756,11 @@ extension on _StringsIt {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -399209,6 +399326,11 @@ extension on _StringsJa {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -413781,6 +413903,11 @@ extension on _StringsKo {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -428467,6 +428594,11 @@ extension on _StringsNl {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -443145,6 +443277,11 @@ extension on _StringsPtBr {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -457828,6 +457965,11 @@ extension on _StringsRu {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -472467,6 +472609,11 @@ extension on _StringsTh {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -487137,6 +487284,11 @@ extension on _StringsTr {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -501790,6 +501942,11 @@ extension on _StringsVi {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
@@ -516282,6 +516439,10 @@ extension on _StringsZhCn {
         return '错开一页';
       case 'manga_quick_spread_shift_subtitle':
         return '封面单独成页，其余两两配对；关闭则从第一页起配对。';
+      case 'feedback_reply_notice':
+        return ({required Object n}) => '开发者更新了 ${n} 条你的反馈';
+      case 'feedback_reply_notice_open':
+        return '查看';
       default:
         return null;
     }
@@ -530792,6 +530953,11 @@ extension on _StringsZhHk {
         return 'Offset by one page';
       case 'manga_quick_spread_shift_subtitle':
         return 'Cover on its own page, then pair pages two by two. Turn off to pair from page 1.';
+      case 'feedback_reply_notice':
+        return ({required Object n}) =>
+            'Developers updated ${n} of your feedback item(s)';
+      case 'feedback_reply_notice_open':
+        return 'View';
       default:
         return null;
     }
