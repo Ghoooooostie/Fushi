@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119782 (7046 per locale)
+/// Strings: 119816 (7048 per locale)
 ///
-/// Built on 2026-10-12 at 18:01 UTC
+/// Built on 2026-10-13 at 03:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10140,6 +10140,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Transcribe and generate book';
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -27119,6 +27128,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -44488,6 +44508,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -61917,6 +61948,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -79425,6 +79467,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -96588,6 +96641,17 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -113916,6 +113980,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -130244,6 +130319,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -146608,6 +146694,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -163884,6 +163981,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -181229,6 +181337,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -198520,6 +198639,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -215489,6 +215619,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -232661,6 +232802,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -249760,6 +249912,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -265402,6 +265565,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。需要电脑版 Anki + AnkiConnect（手机可改连电脑上的 AnkiConnect）；AnkiDroid / AnkiMobile 无法重排。';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => '边读边识别：已读 ${percent}% · 已识别 ${done} 条';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI 重读：${provider} · ${done}/${total}';
 }
 
 // Path: <root>
@@ -281180,6 +281354,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String video_subtitle_graphic_ocr_job_extracting_live({
+    required Object percent,
+    required Object done,
+  }) => 'Reading ${percent}% · ${done} lines ready, playing along';
+  @override
+  String video_subtitle_graphic_ocr_job_ai_progress({
+    required Object provider,
+    required Object done,
+    required Object total,
+  }) => 'AI re-read: ${provider} · ${done}/${total}';
 }
 
 /// Flat map(s) containing all translations.
@@ -295784,6 +295969,15 @@ extension on _StringsEn {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -310383,6 +310577,15 @@ extension on _StringsAr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -325058,6 +325261,15 @@ extension on _StringsDe {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -339715,6 +339927,15 @@ extension on _StringsEs {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -354390,6 +354611,15 @@ extension on _StringsFr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -369009,6 +369239,15 @@ extension on _StringsId {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -383664,6 +383903,15 @@ extension on _StringsIt {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -398193,6 +398441,15 @@ extension on _StringsJa {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -412729,6 +412986,15 @@ extension on _StringsKo {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -427379,6 +427645,15 @@ extension on _StringsNl {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -442021,6 +442296,15 @@ extension on _StringsPtBr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -456668,6 +456952,15 @@ extension on _StringsRu {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -471271,6 +471564,15 @@ extension on _StringsTh {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -485905,6 +486207,15 @@ extension on _StringsTr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -500522,6 +500833,15 @@ extension on _StringsVi {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -514979,6 +515299,15 @@ extension on _StringsZhCn {
         return '转录并生成书籍';
       case 'onboarding_anki_auto_reposition_hint':
         return '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。需要电脑版 Anki + AnkiConnect（手机可改连电脑上的 AnkiConnect）；AnkiDroid / AnkiMobile 无法重排。';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            '边读边识别：已读 ${percent}% · 已识别 ${done} 条';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI 重读：${provider} · ${done}/${total}';
       default:
         return null;
     }
@@ -529453,6 +529782,15 @@ extension on _StringsZhHk {
         return '轉錄並生成書籍';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'video_subtitle_graphic_ocr_job_extracting_live':
+        return ({required Object percent, required Object done}) =>
+            'Reading ${percent}% · ${done} lines ready, playing along';
+      case 'video_subtitle_graphic_ocr_job_ai_progress':
+        return ({
+          required Object provider,
+          required Object done,
+          required Object total,
+        }) => 'AI re-read: ${provider} · ${done}/${total}';
       default:
         return null;
     }
