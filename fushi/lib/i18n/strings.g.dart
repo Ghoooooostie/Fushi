@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119901 (7053 per locale)
+/// Strings: 119952 (7056 per locale)
 ///
-/// Built on 2026-10-13 at 09:15 UTC
+/// Built on 2026-10-13 at 09:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10156,6 +10156,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'OCR on pause without subtitle track';
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -27158,6 +27163,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -44550,6 +44563,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -62002,6 +62023,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -79533,6 +79562,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -96719,6 +96756,14 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -114070,6 +114115,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -130421,6 +130474,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -146808,6 +146869,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -164107,6 +164176,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -181475,6 +181552,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -198789,6 +198874,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -215781,6 +215874,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -232976,6 +233077,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -250098,6 +250207,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 // Path: <root>
@@ -265762,6 +265879,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       '适用于烧录在画面里的硬字幕：没有加载文本字幕时，暂停后识别画面文字，点字即可查词';
+  @override
+  String resource_version_select_all({required Object n}) => '全选本组 ${n} 个文件';
+  @override
+  String anime_download_filter_episode({required Object n}) => '仅第 ${n} 集';
+  @override
+  String get anime_download_filter_single => '单集';
 }
 
 // Path: <root>
@@ -281563,6 +281686,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_pause_ocr_hard_subtitle_hint =>
       'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+  @override
+  String resource_version_select_all({required Object n}) =>
+      'Select all ${n} files';
+  @override
+  String anime_download_filter_episode({required Object n}) =>
+      'Episode ${n} only';
+  @override
+  String get anime_download_filter_single => 'Single episodes';
 }
 
 /// Flat map(s) containing all translations.
@@ -296186,6 +296317,12 @@ extension on _StringsEn {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -310804,6 +310941,12 @@ extension on _StringsAr {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -325498,6 +325641,12 @@ extension on _StringsDe {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -340174,6 +340323,12 @@ extension on _StringsEs {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -354868,6 +355023,12 @@ extension on _StringsFr {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -369506,6 +369667,12 @@ extension on _StringsId {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -384180,6 +384347,12 @@ extension on _StringsIt {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -398728,6 +398901,12 @@ extension on _StringsJa {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -413283,6 +413462,12 @@ extension on _StringsKo {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -427952,6 +428137,12 @@ extension on _StringsNl {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -442613,6 +442804,12 @@ extension on _StringsPtBr {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -457279,6 +457476,12 @@ extension on _StringsRu {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -471901,6 +472104,12 @@ extension on _StringsTh {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -486554,6 +486763,12 @@ extension on _StringsTr {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -501190,6 +501405,12 @@ extension on _StringsVi {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
@@ -515666,6 +515887,12 @@ extension on _StringsZhCn {
         return '无字幕轨时暂停也识别画面文字';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return '适用于烧录在画面里的硬字幕：没有加载文本字幕时，暂停后识别画面文字，点字即可查词';
+      case 'resource_version_select_all':
+        return ({required Object n}) => '全选本组 ${n} 个文件';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => '仅第 ${n} 集';
+      case 'anime_download_filter_single':
+        return '单集';
       default:
         return null;
     }
@@ -530159,6 +530386,12 @@ extension on _StringsZhHk {
         return 'OCR on pause without subtitle track';
       case 'video_setting_pause_ocr_hard_subtitle_hint':
         return 'For hardcoded subtitles: when no text subtitle is loaded, recognize the paused frame so you can tap words to look them up';
+      case 'resource_version_select_all':
+        return ({required Object n}) => 'Select all ${n} files';
+      case 'anime_download_filter_episode':
+        return ({required Object n}) => 'Episode ${n} only';
+      case 'anime_download_filter_single':
+        return 'Single episodes';
       default:
         return null;
     }
