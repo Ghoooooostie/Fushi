@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 125698 (7394 per locale)
+/// Strings: 125715 (7395 per locale)
 ///
-/// Built on 2026-10-13 at 10:21 UTC
+/// Built on 2026-10-13 at 10:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10680,6 +10680,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_dev_fix_title => 'Fix';
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -28546,6 +28548,9 @@ class _StringsAr extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -46802,6 +46807,9 @@ class _StringsDe extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -65118,6 +65126,9 @@ class _StringsEs extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -83513,6 +83524,9 @@ class _StringsFr extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -101563,6 +101577,9 @@ class _StringsId extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -119778,6 +119795,9 @@ class _StringsIt extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -136993,6 +137013,9 @@ class _StringsJa extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -154244,6 +154267,9 @@ class _StringsKo extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -172407,6 +172433,9 @@ class _StringsNl extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -190639,6 +190668,9 @@ class _StringsPtBr extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -208817,6 +208849,9 @@ class _StringsRu extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -226673,6 +226708,9 @@ class _StringsTh extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -244732,6 +244770,9 @@ class _StringsTr extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -262718,6 +262759,9 @@ class _StringsVi extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 // Path: <root>
@@ -279145,6 +279189,9 @@ class _StringsZhCn extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => '提交 ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => '还没有发布包含它';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      '本平台不随官方渠道更新，无法判断你的版本何时包含这个修复。';
 }
 
 // Path: <root>
@@ -295810,6 +295857,9 @@ class _StringsZhHk extends _StringsEn {
   String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
   @override
   String get feedback_dev_fix_releases_empty => 'Not in any release yet';
+  @override
+  String get feedback_fix_platform_not_tracked =>
+      'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
 }
 
 /// Flat map(s) containing all translations.
@@ -311143,6 +311193,8 @@ extension on _StringsEn {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -326471,6 +326523,8 @@ extension on _StringsAr {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -341875,6 +341929,8 @@ extension on _StringsDe {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -357261,6 +357317,8 @@ extension on _StringsEs {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -372665,6 +372723,8 @@ extension on _StringsFr {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -388013,6 +388073,8 @@ extension on _StringsId {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -403397,6 +403459,8 @@ extension on _StringsIt {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -418655,6 +418719,8 @@ extension on _StringsJa {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -433920,6 +433986,8 @@ extension on _StringsKo {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -449299,6 +449367,8 @@ extension on _StringsNl {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -464670,6 +464740,8 @@ extension on _StringsPtBr {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -480046,6 +480118,8 @@ extension on _StringsRu {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -495378,6 +495452,8 @@ extension on _StringsTh {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -510741,6 +510817,8 @@ extension on _StringsTr {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -526087,6 +526165,8 @@ extension on _StringsVi {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
@@ -541264,6 +541344,8 @@ extension on _StringsZhCn {
         return ({required Object sha}) => '提交 ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return '还没有发布包含它';
+      case 'feedback_fix_platform_not_tracked':
+        return '本平台不随官方渠道更新，无法判断你的版本何时包含这个修复。';
       default:
         return null;
     }
@@ -556467,6 +556549,8 @@ extension on _StringsZhHk {
         return ({required Object sha}) => 'Commit ${sha}';
       case 'feedback_dev_fix_releases_empty':
         return 'Not in any release yet';
+      case 'feedback_fix_platform_not_tracked':
+        return 'This platform doesn\'t get official update builds, so we can\'t tell when this fix reaches your version.';
       default:
         return null;
     }
