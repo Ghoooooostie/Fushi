@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119952 (7056 per locale)
+/// Strings: 119986 (7058 per locale)
 ///
-/// Built on 2026-10-13 at 09:17 UTC
+/// Built on 2026-10-13 at 09:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10161,6 +10161,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anime_download_filter_episode({required Object n}) =>
       'Episode ${n} only';
   String get anime_download_filter_single => 'Single episodes';
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -27171,6 +27174,11 @@ class _StringsAr extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -44571,6 +44579,11 @@ class _StringsDe extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -62031,6 +62044,11 @@ class _StringsEs extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -79570,6 +79588,11 @@ class _StringsFr extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -96764,6 +96787,11 @@ class _StringsId extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -114123,6 +114151,11 @@ class _StringsIt extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -130482,6 +130515,11 @@ class _StringsJa extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -146877,6 +146915,11 @@ class _StringsKo extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -164184,6 +164227,11 @@ class _StringsNl extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -181560,6 +181608,11 @@ class _StringsPtBr extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -198882,6 +198935,11 @@ class _StringsRu extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -215882,6 +215940,11 @@ class _StringsTh extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -233085,6 +233148,11 @@ class _StringsTr extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -250215,6 +250283,11 @@ class _StringsVi extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 // Path: <root>
@@ -265885,6 +265958,10 @@ class _StringsZhCn extends _StringsEn {
   String anime_download_filter_episode({required Object n}) => '仅第 ${n} 集';
   @override
   String get anime_download_filter_single => '单集';
+  @override
+  String get popup_mining_target_switch => '切换配置或牌组';
+  @override
+  String get popup_mining_target_empty => '还没有可选的配置或牌组，请先在设置里连接 Anki。';
 }
 
 // Path: <root>
@@ -281694,6 +281771,11 @@ class _StringsZhHk extends _StringsEn {
       'Episode ${n} only';
   @override
   String get anime_download_filter_single => 'Single episodes';
+  @override
+  String get popup_mining_target_switch => 'Switch profile or deck';
+  @override
+  String get popup_mining_target_empty =>
+      'No profiles or decks yet. Connect Anki in settings first.';
 }
 
 /// Flat map(s) containing all translations.
@@ -296323,6 +296405,10 @@ extension on _StringsEn {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -310947,6 +311033,10 @@ extension on _StringsAr {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -325647,6 +325737,10 @@ extension on _StringsDe {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -340329,6 +340423,10 @@ extension on _StringsEs {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -355029,6 +355127,10 @@ extension on _StringsFr {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -369673,6 +369775,10 @@ extension on _StringsId {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -384353,6 +384459,10 @@ extension on _StringsIt {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -398907,6 +399017,10 @@ extension on _StringsJa {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -413468,6 +413582,10 @@ extension on _StringsKo {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -428143,6 +428261,10 @@ extension on _StringsNl {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -442810,6 +442932,10 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -457482,6 +457608,10 @@ extension on _StringsRu {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -472110,6 +472240,10 @@ extension on _StringsTh {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -486769,6 +486903,10 @@ extension on _StringsTr {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -501411,6 +501549,10 @@ extension on _StringsVi {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
@@ -515893,6 +516035,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '仅第 ${n} 集';
       case 'anime_download_filter_single':
         return '单集';
+      case 'popup_mining_target_switch':
+        return '切换配置或牌组';
+      case 'popup_mining_target_empty':
+        return '还没有可选的配置或牌组，请先在设置里连接 Anki。';
       default:
         return null;
     }
@@ -530392,6 +530538,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Episode ${n} only';
       case 'anime_download_filter_single':
         return 'Single episodes';
+      case 'popup_mining_target_switch':
+        return 'Switch profile or deck';
+      case 'popup_mining_target_empty':
+        return 'No profiles or decks yet. Connect Anki in settings first.';
       default:
         return null;
     }
