@@ -2,6 +2,14 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart' show immutable;
 
+/// 译文的默认字色。中性灰是有意的：这是**对照**翻译，正文永远是主角、译文是辅助，
+/// 任何时候都不能盖过原文的存在感。具体值用户在设置里可调。
+const String kDefaultTranslationColor = '#8A8F98';
+
+/// 译文的默认不透明度。留 0.85 而不是 1.0：视觉权重退后一层，让眼睛先落在原文上。
+/// 用户可以在设置里拉到 1.0（完全实色）。
+const double kDefaultTranslationOpacity = 0.85;
+
 /// BUG-1140 第二阶段①：阅读器引擎 JS 的**每次导航参数**。
 ///
 /// 背景：此前整份引擎脚本（selection + 三种 shell + caret + furigana + 手势，压缩后
@@ -59,6 +67,10 @@ class ReaderEngineConfig {
     required this.vnPreserveDialogue,
     required this.vnMergeCrossScreenSentenceAudioCues,
     this.sentenceAudioCuesJson,
+    this.translationEnabled = false,
+    this.translationVisible = true,
+    this.translationColor = kDefaultTranslationColor,
+    this.translationOpacity = kDefaultTranslationOpacity,
   });
 
   /// Immutable token identifying the document/navigation that owns this
@@ -132,6 +144,16 @@ class ReaderEngineConfig {
   /// 产物）。原样嵌进 config 字面量，避免「解码再编码」多走一遍。`null` = 本章无 cue。
   final String? sentenceAudioCuesJson;
 
+  // ── 段落对照翻译 ──────────────────────────────────────────────────
+  //
+  // 只放「译文的存在与外观」，**不放任何待译正文**：config 是每次导航下发一小份的
+  // per-nav 参数，塞正文进去会让它随章节体量一起膨胀。正文由 JS 侧按视口收集
+  // （`ReaderTranslationScripts.collectVisibleTargetsInvocation`）。
+  final bool translationEnabled;
+  final bool translationVisible;
+  final String translationColor;
+  final double translationOpacity;
+
   /// 除 [sasayakiCuesJson] 外的全部字段（它是已编码的 JSON 片段，见 [toJsLiteral]）。
   Map<String, Object?> toJson() => <String, Object?>{
     'navigationGeneration': navigationGeneration,
@@ -172,6 +194,10 @@ class ReaderEngineConfig {
     'vnSentencesPerScreen': vnSentencesPerScreen,
     'vnPreserveDialogue': vnPreserveDialogue,
     'vnMergeCrossScreenSentenceAudioCues': vnMergeCrossScreenSentenceAudioCues,
+    'translationEnabled': translationEnabled,
+    'translationVisible': translationVisible,
+    'translationColor': translationColor,
+    'translationOpacity': translationOpacity,
   };
 
   /// 运行时可**热更新**的那一小份（BUG-2471）：`window.__fushiEngine.updateLive(patch)`
@@ -188,6 +214,9 @@ class ReaderEngineConfig {
   ///
   /// 只放「引擎运行时按值读取、不需要重跑 install」的键；需要整章重载的
   /// （view / writing mode、模糊图）仍走 `notifyReaderLayoutChanged`。
+  ///
+  /// 三个 translation 参数是后加的，刻意做成**可选**：`null` = 「这一项不在 patch 里」，
+  /// 既不动现有的一批必填参数调用点，也允许「只改颜色、不动显隐」这种局部下发。
   static String liveUpdateInvocation({
     required double marginTop,
     required double marginBottom,

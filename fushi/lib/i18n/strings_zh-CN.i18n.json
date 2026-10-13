@@ -7416,5 +7416,18 @@
   "video_setting_pause_ocr_scope_hint": "暂停时对画面做文字识别，识别出的字可直接点按查词。画面上已有 Fushi 显示的文字字幕时以字幕为准。",
   "video_setting_pause_ocr_scope_all": "所有视频",
   "video_setting_pause_ocr_scope_graphic": "仅图片字幕",
-  "video_setting_pause_ocr_scope_off": "关闭"
+  "video_setting_pause_ocr_scope_off": "关闭",
+  "reader_translation_enabled": "显示译文",
+  "reader_translation_visible": "显示译文行",
+  "reader_translation_opacity": "译文不透明度",
+  "reader_translation_engine": "翻译引擎",
+  "reader_translation_engine_caiyun": "彩云（免密钥）",
+  "reader_translation_engine_llm": "LLM（自备密钥）",
+  "reader_translation_target_language": "目标语言",
+  "reader_translation_lang_zh": "中文",
+  "reader_translation_lang_en": "英语",
+  "reader_translation_lang_ja": "日语",
+  "reader_translation_color": "译文颜色",
+  "ai_feature_translation": "段落翻译",
+  "ai_feature_translation_summary": "在每段原文下方插入译文"
 }

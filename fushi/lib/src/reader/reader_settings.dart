@@ -6,10 +6,14 @@ import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi/src/media/media_source.dart' show dbSourcePrefKey;
 import 'package:fushi/src/reader/font_catalog.dart';
 import 'package:fushi/src/reader/reader_chrome_floating.dart';
+import 'package:fushi/src/reader/reader_engine_config.dart'
+    show kDefaultTranslationColor, kDefaultTranslationOpacity;
 import 'package:fushi/src/utils/misc/error_log_service.dart';
 import 'package:path/path.dart' as p;
 import 'package:fushi/src/media/sources/reader_fushi_source.dart';
 import 'package:fushi_engine/epub/reader_resource_host.dart' as engine_host;
+import 'package:fushi_engine/translation/translation_models.dart'
+    show TranslationEngineId, TranslationTargetLanguage;
 
 /// The independent font targets a user can configure (TODO-049 / TODO-864):
 /// 软件系统字体 ([appUi]) / 小说正文字体 ([body]) / 词典字体 ([dictionary]) /
@@ -185,6 +189,54 @@ class ReaderSettings {
 
   double get fontSize => _get<double>('font_size', 22);
   Future<void> setFontSize(double v) => _set<double>('font_size', v);
+
+  // ── 段落对照翻译 ──────────────────────────────────────────────────
+
+  /// 是否在原文下面插入译文。默认关：这是主动打开的模式，不是默认阅读体验，
+  /// 而且开着就要联网。
+  bool get translationEnabled => _get<bool>('translation_enabled', false);
+  Future<void> setTranslationEnabled(bool v) =>
+      _set<bool>('translation_enabled', v);
+
+  /// 当前翻译引擎（[TranslationEngineId.storageValue]）。默认彩云——唯一零配置可用的。
+  ///
+  /// 存**字符串键**而非枚举名：认不出的旧值/坏值要能回落，枚举改名不能让老用户丢设置。
+  String get translationEngineId => _get<String>(
+    'translation_engine_id',
+    TranslationEngineId.caiyun.storageValue,
+  );
+  Future<void> setTranslationEngineId(String v) =>
+      _set<String>('translation_engine_id', v);
+
+  /// 译文的目标语言（[TranslationTargetLanguage.storageValue]），默认简体中文。
+  String get translationTargetLanguage => _get<String>(
+    'translation_target_language',
+    TranslationTargetLanguage.simplifiedChinese.storageValue,
+  );
+  Future<void> setTranslationTargetLanguage(String v) =>
+      _set<String>('translation_target_language', v);
+
+  /// 译文的文字颜色（CSS 颜色串）。经 CSS 变量 `--fushi-translation-color` 生效，
+  /// 改完立刻见效、不需要翻章（见 `ReaderTranslationScripts.liveUpdateInvocation`）。
+  String get translationColor =>
+      _get<String>('translation_color', kDefaultTranslationColor);
+  Future<void> setTranslationColor(String v) =>
+      _set<String>('translation_color', v);
+
+  /// 译文的不透明度 0~1，与 [translationColor] 同走热更新通道。
+  ///
+  /// 这里**不**在 getter 里 clamp：悄悄改写只会让「用户存了个越界值」这件事消失，
+  /// 反而更难查。取值侧（滑杆）天然限制在区间内。
+  double get translationOpacity =>
+      _get<double>('translation_opacity', kDefaultTranslationOpacity);
+  Future<void> setTranslationOpacity(double v) =>
+      _set<double>('translation_opacity', v);
+
+  /// 译文当前是否可见（对照 vs 只看原文）。要持久化：这是用户主动选的阅读姿态，
+  /// 退出再进应当保持，而不是每次重开都要重切一次。
+  bool get translationVisible => _get<bool>('translation_visible', true);
+  Future<void> setTranslationVisible(bool v) =>
+      _set<bool>('translation_visible', v);
 
   /// 正文字重（CSS `font-weight` 数值轴 100~900，步进 100）。默认 400 = CSS
   /// `normal`，此时 [ReaderContentStyles] **不发** `font-weight` 声明——书自带

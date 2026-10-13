@@ -1352,7 +1352,18 @@ window.__fushiInstallShell = function(C) {
   createWalker: function(rootNode) {
     var root = rootNode || document.body;
     return document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-      acceptNode: (n) => this.isFurigana(n) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+      acceptNode: (n) => {
+        if (this.isFurigana(n)) return NodeFilter.FILTER_REJECT;
+        // 排除整段对照译文块（.fushi-reader-translation）：译文是源段落的兄弟
+        // 节点，其文本若被字符偏移 / 进度计算计入，会导致「含译文」与「纯原文」
+        // 两态下锚点基准不一致 → 恢复时进度跳变（跳到很后面）。译文本身不
+        // 参与原文定位，必须跳过。
+        var p = n.parentElement;
+        if (p && p.closest('.fushi-reader-translation')) {
+          return NodeFilter.FILTER_REJECT;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      }
     });
   },
   getRect: function(target) {

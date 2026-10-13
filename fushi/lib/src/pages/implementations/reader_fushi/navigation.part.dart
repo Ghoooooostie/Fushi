@@ -156,6 +156,11 @@ extension _ReaderNavigation on _ReaderFushiPageState {
       ReaderChapterPerfTrace.end();
     }
 
+    // 段落对照翻译：这里是「新文档已经可读」的唯一权威信号（两条分支都成立——
+    // 首次就绪要撤遮罩，同章重恢复则是 déjà prêt），此刻才轮到翻译侧：让 JS
+    // 按当前 config 装一次样式与显隐，再排一次首屏扫描。
+    _onTranslationDocumentReady();
+
     _audiobookController?.notifySectionRestoreCompleted(
       currentReaderSection: _currentChapter,
       success: true,
@@ -358,6 +363,12 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     // v92 阅读空闲门：滚动 / 翻页回传 = 用户输入（听书自动翻页也经此），喂时钟。
     // 10s 进度轮询走 [_refreshProgress] 不经这里，不会把挂机伪装成输入。
     _studyClock?.touch();
+
+    // 段落对照翻译：排一次「当前可见段落」扫描。这里只**排**，不 await——
+    // scheduler 内部有 350ms 尾沿去抖，一次连贯滚动期间会合并成一次收集；
+    // 扫的是 DOM 上的几何信息，必须落在滚动回传这条路径上才有意义。
+    _translation?.scheduleVisibleScan();
+
     if (_scrollProgressInFlight) {
       _scrollProgressPending = true;
       return;
@@ -402,6 +413,81 @@ extension _ReaderNavigation on _ReaderFushiPageState {
         _refreshProgressFromScroll();
       }
     });
+  }
+
+  // ── 段落对照翻译 ──────────────────────────────────────────────────
+
+  /// 确保 [_translation] 存在且与当前设置一致。幂等，可重复调用。
+  ///
+  /// **关着就不建**：每个 translator 都持有一个出站 http.Client，而翻译默认关闭——
+  /// 开书即建等于让**每一个读者**（包括从不打开翻译的）都白占一份资源。真要打开时
+  /// 再建，代价只是一次对象分配；关掉时置 null，下次打开又是干净的。
+  void _ensureTranslation(ReaderSettings settings) {
+    if (!settings.translationEnabled) {
+      _translation = null;
+      return;
+    }
+    final InAppWebViewController? controller = _controller;
+    if (controller == null) return;
+
+    // 用户为翻译指派的 AI 提供商；没单独指派则跟随默认提供商。拿到 null（没配）
+    // 时 TranslationClient.standard 不会装配 llm 引擎，选 LLM 会自然落到
+    // engine_not_configured——一眼能懂的失败，而非崩。
+    final llmProvider =
+        appModelNoUpdate.prefsRepo.resolveAiFeatureProvider(AiFeature.translation);
+
+    // 阅读器生命周期内调用频率极低（换章 / 设置变更），每次重建换取「永远用最新
+    // provider」：用户在 AI 设置里换 key / 换家即时生效，不必重进阅读器。旧 client
+    // 持有的出站连接在此关掉，不关会攒空闲连接。
+    final TranslationClient client = TranslationClient.standard(llmProvider: llmProvider);
+    unawaited(_translationClient?.close() ?? Future<void>.value());
+    _translationClient = client;
+
+    final ReaderTranslationScheduler scheduler =
+        _translation ??
+        ReaderTranslationScheduler(
+          evaluate: (String source) =>
+              controller.evaluateJavascript(source: source),
+          client: client,
+        );
+    _translation = scheduler;
+    scheduler.applySettings(
+      enabled: settings.translationEnabled,
+      engineId: TranslationEngineId.fromStorage(settings.translationEngineId),
+      target: TranslationTargetLanguage.fromStorage(
+        settings.translationTargetLanguage,
+      ),
+    );
+  }
+
+  /// 文档已就绪 → 翻译侧在此睁眼。调用点见 [_onRestoreComplete]，那是「新文档已经
+  /// 可读」的唯一权威信号（换章节页、重恢复、平移重排都走那里）。
+  ///
+  /// 三步：按设置对齐 scheduler → 让 JS 侧按 config 装一次样式/显隐 → 排首屏扫描。
+  ///
+  /// 全程吞异常：翻译是**增强**功能。走到这里时阅读器已经恢复完成、用户可以读了，
+  /// 任何一步出错都不该连可用性一起赔进去，也不该污染这次 restore 的结果。
+  Future<void> _onTranslationDocumentReady() async {
+    final ReaderSettings? settings = _settings;
+    if (settings == null) return;
+    try {
+      _ensureTranslation(settings);
+      final ReaderTranslationScheduler? scheduler = _translation;
+      if (scheduler == null || !scheduler.enabled) return;
+      await scheduler.installForDocument();
+      await scheduler.applyStyleLive(
+        color: settings.translationColor,
+        opacity: settings.translationOpacity,
+        visible: settings.translationVisible,
+      );
+      scheduler.scheduleVisibleScan();
+    } catch (error) {
+      assert(() {
+        // 只暴露给开发期：Release 里静默。翻译挂了不影响读书。
+        debugPrint('[translation] document-ready hook failed: $error');
+        return true;
+      }());
+    }
   }
 
   // ── Chapter Navigation ────────────────────────────────────────────
@@ -450,6 +536,9 @@ extension _ReaderNavigation on _ReaderFushiPageState {
     String? fragment,
     String? preciseLocateJs,
   }) {
+    // 换章：作废上一章还没发出去的翻译请求与待执行扫描。同一个段落滚回来时会命中
+    // scheduler 的译文缓存，所以不必重译——这里只是不让旧请求插到新文档上。
+    _translation?.cancelForNavigation();
     _restoreExpectedGeneration = ++_navigateGeneration;
     // BUG-2225 / BUG-2226：所有导航都经过这里，所以这也是「离开当前单元」的唯一
     // 采样点——翻走即计：此刻把用户正读的那页结算进账本，跳过的区间从未成为当前

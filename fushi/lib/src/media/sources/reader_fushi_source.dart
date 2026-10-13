@@ -2060,6 +2060,73 @@ class ReaderFushiSource extends ReaderMediaSource {
         setPreference<bool>(key: 'vn_preserve_dialogue', value: v));
   }
 
+  // ── 段落对照翻译 ──────────────────────────────────────────────────
+  //
+  // 与 [ReaderSettings] 同走一份 SQLite key-value 表（`translation_*` 键），这里只是
+  // 另一套读写入口：设置面板通过 `ctx.readerSource` 拿到的是本类，而不是
+  // [ReaderSettings] 本身。默认值的字面量必须与 [ReaderSettings] 侧保持一致——否则
+  // 两套入口读出来的初值会不一致。
+
+  bool get translationEnabled =>
+      readerSettings?.translationEnabled ??
+      getPreference<bool>(key: 'translation_enabled', defaultValue: false);
+
+  Future<void> setTranslationEnabled(bool v) async {
+    await (readerSettings?.setTranslationEnabled(v) ??
+        setPreference<bool>(key: 'translation_enabled', value: v));
+  }
+
+  bool get translationVisible =>
+      readerSettings?.translationVisible ??
+      getPreference<bool>(key: 'translation_visible', defaultValue: true);
+
+  Future<void> setTranslationVisible(bool v) async {
+    await (readerSettings?.setTranslationVisible(v) ??
+        setPreference<bool>(key: 'translation_visible', value: v));
+  }
+
+  String get translationEngineId =>
+      readerSettings?.translationEngineId ??
+      getPreference<String>(
+        key: 'translation_engine_id',
+        defaultValue: 'caiyun',
+      );
+
+  Future<void> setTranslationEngineId(String v) async {
+    await (readerSettings?.setTranslationEngineId(v) ??
+        setPreference<String>(key: 'translation_engine_id', value: v));
+  }
+
+  String get translationTargetLanguage =>
+      readerSettings?.translationTargetLanguage ??
+      getPreference<String>(
+        key: 'translation_target_language',
+        defaultValue: 'zh',
+      );
+
+  Future<void> setTranslationTargetLanguage(String v) async {
+    await (readerSettings?.setTranslationTargetLanguage(v) ??
+        setPreference<String>(key: 'translation_target_language', value: v));
+  }
+
+  String get translationColor =>
+      readerSettings?.translationColor ??
+      getPreference<String>(key: 'translation_color', defaultValue: '#8A8F98');
+
+  Future<void> setTranslationColor(String v) async {
+    await (readerSettings?.setTranslationColor(v) ??
+        setPreference<String>(key: 'translation_color', value: v));
+  }
+
+  double get translationOpacity =>
+      readerSettings?.translationOpacity ??
+      getPreference<double>(key: 'translation_opacity', defaultValue: 0.85);
+
+  Future<void> setTranslationOpacity(double v) async {
+    await (readerSettings?.setTranslationOpacity(v) ??
+        setPreference<double>(key: 'translation_opacity', value: v));
+  }
+
   bool get readerVisualNovelClickAdvance =>
       readerSettings?.visualNovelClickAdvance ??
       getPreference<bool>(key: 'vn_click_advance', defaultValue: false);
