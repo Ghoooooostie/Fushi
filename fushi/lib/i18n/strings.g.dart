@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 120377 (7081 per locale)
 ///
-/// Built on 2026-10-13 at 09:30 UTC
+/// Built on 2026-10-13 at 09:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -130997,11 +130997,10 @@ class _StringsJa extends _StringsEn {
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
   @override
-  String get video_setting_double_tap_toggles_playback =>
-      'Double-tap video to play/pause';
+  String get video_setting_double_tap_toggles_playback => 'ダブルタップで再生/一時停止';
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
-      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      'タッチ画面で動画の中央をダブルタップ（ダブルタップでのシークがオフのときはどこでも）すると再生/一時停止を切り替えます';
 }
 
 // Path: <root>
@@ -282817,11 +282816,10 @@ class _StringsZhHk extends _StringsEn {
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
   @override
-  String get video_setting_double_tap_toggles_playback =>
-      'Double-tap video to play/pause';
+  String get video_setting_double_tap_toggles_playback => '雙擊畫面播放/暫停';
   @override
   String get video_setting_double_tap_toggles_playback_hint =>
-      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+      '觸控螢幕雙擊畫面中間（或關閉雙擊快退快進時的任意位置）切換播放/暫停';
 }
 
 /// Flat map(s) containing all translations.
@@ -400496,9 +400494,9 @@ extension on _StringsJa {
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       case 'video_setting_double_tap_toggles_playback':
-        return 'Double-tap video to play/pause';
+        return 'ダブルタップで再生/一時停止';
       case 'video_setting_double_tap_toggles_playback_hint':
-        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+        return 'タッチ画面で動画の中央をダブルタップ（ダブルタップでのシークがオフのときはどこでも）すると再生/一時停止を切り替えます';
       default:
         return null;
     }
@@ -532499,9 +532497,9 @@ extension on _StringsZhHk {
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
       case 'video_setting_double_tap_toggles_playback':
-        return 'Double-tap video to play/pause';
+        return '雙擊畫面播放/暫停';
       case 'video_setting_double_tap_toggles_playback_hint':
-        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
+        return '觸控螢幕雙擊畫面中間（或關閉雙擊快退快進時的任意位置）切換播放/暫停';
       default:
         return null;
     }
