@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126055 (7415 per locale)
+/// Strings: 126140 (7420 per locale)
 ///
 /// Built on 2026-10-13 at 11:24 UTC
 
@@ -10711,6 +10711,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_provider_rate_limit => 'Requests per minute';
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -28629,6 +28636,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -46937,6 +46956,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -65305,6 +65336,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -83752,6 +83795,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -101854,6 +101909,18 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -120121,6 +120188,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -137389,6 +137468,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope => '一時停止時に画面の文字を認識';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      '一時停止した画面の文字を OCR で認識し、タップで辞書を引けるようにします。Fushi が表示しているテキスト字幕がある場合はそちらを優先します。';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'すべての動画';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => '画像字幕のみ';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'オフ';
 }
 
 // Path: <root>
@@ -154692,6 +154782,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -172907,6 +173009,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -191191,6 +191305,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -209421,6 +209547,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -227329,6 +227467,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -245440,6 +245590,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -263478,6 +263640,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_provider_rate_limit_hint =>
       'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+  @override
+  String get video_setting_pause_ocr_scope =>
+      'Recognize on-screen text when paused';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+  @override
+  String get video_setting_pause_ocr_scope_all => 'All videos';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
+  @override
+  String get video_setting_pause_ocr_scope_off => 'Off';
 }
 
 // Path: <root>
@@ -279949,6 +280123,17 @@ class _StringsZhCn extends _StringsEn {
   String get ai_provider_rate_limit => '每分钟请求上限';
   @override
   String get ai_provider_rate_limit_hint => '留空表示不限。按套餐限额填写，避免请求太快被拦截。';
+  @override
+  String get video_setting_pause_ocr_scope => '暂停时识别画面文字';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      '暂停时对画面做文字识别，识别出的字可直接点按查词。画面上已有 Fushi 显示的文字字幕时以字幕为准。';
+  @override
+  String get video_setting_pause_ocr_scope_all => '所有视频';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => '仅图片字幕';
+  @override
+  String get video_setting_pause_ocr_scope_off => '关闭';
 }
 
 // Path: <root>
@@ -296660,6 +296845,17 @@ class _StringsZhHk extends _StringsEn {
   String get ai_provider_rate_limit => '每分鐘請求上限';
   @override
   String get ai_provider_rate_limit_hint => '留空表示不限。按方案限額填寫，避免請求太快被攔截。';
+  @override
+  String get video_setting_pause_ocr_scope => '暫停時辨識畫面文字';
+  @override
+  String get video_setting_pause_ocr_scope_hint =>
+      '暫停時對畫面做文字辨識，辨識出的字可直接點按查詞。畫面上已有 Fushi 顯示的文字字幕時以字幕為準。';
+  @override
+  String get video_setting_pause_ocr_scope_all => '所有影片';
+  @override
+  String get video_setting_pause_ocr_scope_graphic => '僅圖片字幕';
+  @override
+  String get video_setting_pause_ocr_scope_off => '關閉';
 }
 
 /// Flat map(s) containing all translations.
@@ -312036,6 +312232,16 @@ extension on _StringsEn {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -327407,6 +327613,16 @@ extension on _StringsAr {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -342854,6 +343070,16 @@ extension on _StringsDe {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -358283,6 +358509,16 @@ extension on _StringsEs {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -373730,6 +373966,16 @@ extension on _StringsFr {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -389121,6 +389367,16 @@ extension on _StringsId {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -404548,6 +404804,16 @@ extension on _StringsIt {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -419849,6 +420115,16 @@ extension on _StringsJa {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return '一時停止時に画面の文字を認識';
+      case 'video_setting_pause_ocr_scope_hint':
+        return '一時停止した画面の文字を OCR で認識し、タップで辞書を引けるようにします。Fushi が表示しているテキスト字幕がある場合はそちらを優先します。';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'すべての動画';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return '画像字幕のみ';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'オフ';
       default:
         return null;
     }
@@ -435157,6 +435433,16 @@ extension on _StringsKo {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -450579,6 +450865,16 @@ extension on _StringsNl {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -465993,6 +466289,16 @@ extension on _StringsPtBr {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -481412,6 +481718,16 @@ extension on _StringsRu {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -496787,6 +497103,16 @@ extension on _StringsTh {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -512193,6 +512519,16 @@ extension on _StringsTr {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -527582,6 +527918,16 @@ extension on _StringsVi {
         return 'Requests per minute';
       case 'ai_provider_rate_limit_hint':
         return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
+      case 'video_setting_pause_ocr_scope':
+        return 'Recognize on-screen text when paused';
+      case 'video_setting_pause_ocr_scope_hint':
+        return 'OCR the paused frame so its text can be tapped for lookup. Text subtitles already shown by Fushi take priority.';
+      case 'video_setting_pause_ocr_scope_all':
+        return 'All videos';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return 'Image subtitles only';
+      case 'video_setting_pause_ocr_scope_off':
+        return 'Off';
       default:
         return null;
     }
@@ -542802,6 +543148,16 @@ extension on _StringsZhCn {
         return '每分钟请求上限';
       case 'ai_provider_rate_limit_hint':
         return '留空表示不限。按套餐限额填写，避免请求太快被拦截。';
+      case 'video_setting_pause_ocr_scope':
+        return '暂停时识别画面文字';
+      case 'video_setting_pause_ocr_scope_hint':
+        return '暂停时对画面做文字识别，识别出的字可直接点按查词。画面上已有 Fushi 显示的文字字幕时以字幕为准。';
+      case 'video_setting_pause_ocr_scope_all':
+        return '所有视频';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return '仅图片字幕';
+      case 'video_setting_pause_ocr_scope_off':
+        return '关闭';
       default:
         return null;
     }
@@ -558048,6 +558404,16 @@ extension on _StringsZhHk {
         return '每分鐘請求上限';
       case 'ai_provider_rate_limit_hint':
         return '留空表示不限。按方案限額填寫，避免請求太快被攔截。';
+      case 'video_setting_pause_ocr_scope':
+        return '暫停時辨識畫面文字';
+      case 'video_setting_pause_ocr_scope_hint':
+        return '暫停時對畫面做文字辨識，辨識出的字可直接點按查詞。畫面上已有 Fushi 顯示的文字字幕時以字幕為準。';
+      case 'video_setting_pause_ocr_scope_all':
+        return '所有影片';
+      case 'video_setting_pause_ocr_scope_graphic':
+        return '僅圖片字幕';
+      case 'video_setting_pause_ocr_scope_off':
+        return '關閉';
       default:
         return null;
     }
