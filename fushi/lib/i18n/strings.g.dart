@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 126106 (7418 per locale)
 ///
-/// Built on 2026-10-13 at 11:28 UTC
+/// Built on 2026-10-13 at 11:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10681,7 +10681,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'A developer replied to your feedback';
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   String get settings_destination_models => 'Models';
   String get settings_destination_models_summary =>
       'LLM, OCR, speech recognition, speech synthesis and model files';
@@ -28582,7 +28582,7 @@ class _StringsAr extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'النماذج';
   @override
@@ -46896,7 +46896,7 @@ class _StringsDe extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'Modelle';
   @override
@@ -65270,7 +65270,7 @@ class _StringsEs extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'Modelos';
   @override
@@ -83723,7 +83723,7 @@ class _StringsFr extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'Modèles';
   @override
@@ -101831,7 +101831,7 @@ class _StringsId extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'Model';
   @override
@@ -120104,7 +120104,7 @@ class _StringsIt extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'Modelli';
   @override
@@ -137378,7 +137378,7 @@ class _StringsJa extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'この端末から送信したフィードバックへの返信をバックグラウンドで確認し、システム通知でお知らせします（他の端末から送信したものはアプリを開いたときに確認します）';
   @override
   String get settings_destination_models => 'モデル';
   @override
@@ -154686,7 +154686,7 @@ class _StringsKo extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => '모델';
   @override
@@ -172907,7 +172907,7 @@ class _StringsNl extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'Modellen';
   @override
@@ -191197,7 +191197,7 @@ class _StringsPtBr extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'Modelos';
   @override
@@ -209433,7 +209433,7 @@ class _StringsRu extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'Модели';
   @override
@@ -227347,7 +227347,7 @@ class _StringsTh extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'โมเดล';
   @override
@@ -245464,7 +245464,7 @@ class _StringsTr extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'Modeller';
   @override
@@ -263508,7 +263508,7 @@ class _StringsVi extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
   @override
   String get settings_destination_models => 'Mô hình';
   @override
@@ -279992,7 +279992,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get feedback_reply_notify_setting => '反馈有新回复时通知我';
   @override
-  String get feedback_reply_notify_setting_hint => '在后台检查你提交的反馈有没有新回复，有就发系统通知';
+  String get feedback_reply_notify_setting_hint =>
+      '在后台检查这台设备提交的反馈有没有新回复，有就发系统通知（其他设备提交的在打开 App 时检查）';
   @override
   String get settings_destination_models => '模型';
   @override
@@ -296708,7 +296709,7 @@ class _StringsZhHk extends _StringsEn {
   String get feedback_reply_notify_setting => 'Notify me of feedback replies';
   @override
   String get feedback_reply_notify_setting_hint =>
-      'Checks in the background for replies to feedback you submitted and shows a system notification';
+      '在背景檢查這部裝置提交的回饋有沒有新回覆，有就發系統通知（其他裝置提交的在開啟 App 時檢查）';
   @override
   String get settings_destination_models => '模型';
   @override
@@ -312091,7 +312092,7 @@ extension on _StringsEn {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'Models';
       case 'settings_destination_models_summary':
@@ -327468,7 +327469,7 @@ extension on _StringsAr {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'النماذج';
       case 'settings_destination_models_summary':
@@ -342921,7 +342922,7 @@ extension on _StringsDe {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'Modelle';
       case 'settings_destination_models_summary':
@@ -358356,7 +358357,7 @@ extension on _StringsEs {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'Modelos';
       case 'settings_destination_models_summary':
@@ -373809,7 +373810,7 @@ extension on _StringsFr {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'Modèles';
       case 'settings_destination_models_summary':
@@ -389206,7 +389207,7 @@ extension on _StringsId {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'Model';
       case 'settings_destination_models_summary':
@@ -404639,7 +404640,7 @@ extension on _StringsIt {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'Modelli';
       case 'settings_destination_models_summary':
@@ -419946,7 +419947,7 @@ extension on _StringsJa {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'この端末から送信したフィードバックへの返信をバックグラウンドで確認し、システム通知でお知らせします（他の端末から送信したものはアプリを開いたときに確認します）';
       case 'settings_destination_models':
         return 'モデル';
       case 'settings_destination_models_summary':
@@ -435260,7 +435261,7 @@ extension on _StringsKo {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return '모델';
       case 'settings_destination_models_summary':
@@ -450688,7 +450689,7 @@ extension on _StringsNl {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'Modellen';
       case 'settings_destination_models_summary':
@@ -466108,7 +466109,7 @@ extension on _StringsPtBr {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'Modelos';
       case 'settings_destination_models_summary':
@@ -481533,7 +481534,7 @@ extension on _StringsRu {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'Модели';
       case 'settings_destination_models_summary':
@@ -496914,7 +496915,7 @@ extension on _StringsTh {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'โมเดล';
       case 'settings_destination_models_summary':
@@ -512326,7 +512327,7 @@ extension on _StringsTr {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'Modeller';
       case 'settings_destination_models_summary':
@@ -527721,7 +527722,7 @@ extension on _StringsVi {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return 'Checks in the background for replies to feedback submitted from this device and shows a system notification (feedback from other devices is checked when you open the app)';
       case 'settings_destination_models':
         return 'Mô hình';
       case 'settings_destination_models_summary':
@@ -542947,7 +542948,7 @@ extension on _StringsZhCn {
       case 'feedback_reply_notify_setting':
         return '反馈有新回复时通知我';
       case 'feedback_reply_notify_setting_hint':
-        return '在后台检查你提交的反馈有没有新回复，有就发系统通知';
+        return '在后台检查这台设备提交的反馈有没有新回复，有就发系统通知（其他设备提交的在打开 App 时检查）';
       case 'settings_destination_models':
         return '模型';
       case 'settings_destination_models_summary':
@@ -558199,7 +558200,7 @@ extension on _StringsZhHk {
       case 'feedback_reply_notify_setting':
         return 'Notify me of feedback replies';
       case 'feedback_reply_notify_setting_hint':
-        return 'Checks in the background for replies to feedback you submitted and shows a system notification';
+        return '在背景檢查這部裝置提交的回饋有沒有新回覆，有就發系統通知（其他裝置提交的在開啟 App 時檢查）';
       case 'settings_destination_models':
         return '模型';
       case 'settings_destination_models_summary':
