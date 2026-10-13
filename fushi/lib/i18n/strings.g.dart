@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119969 (7057 per locale)
+/// Strings: 120037 (7061 per locale)
 ///
-/// Built on 2026-10-13 at 03:52 UTC
+/// Built on 2026-10-13 at 04:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8940,7 +8940,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_ai_mode_low_confidence => 'Only uncertain text';
   String get manga_ocr_ai_mode_all => 'All text';
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
   String get manga_ocr_ai_mode_open_settings => 'Open AI settings';
@@ -8968,7 +8968,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ocr_system_model_play_services_unavailable =>
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   String get glass_material_frosted => 'Frosted';
   String get glass_material_liquid => 'Liquid';
   String get design_system_glass => 'Apple';
@@ -10162,6 +10162,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get models_tts_usage_title => 'Used for';
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  String get ocr_llm_default_accept => 'Turn on';
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -25091,7 +25096,7 @@ class _StringsAr extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › النماذج › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -25137,7 +25142,7 @@ class _StringsAr extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -27174,6 +27179,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -42491,7 +42505,7 @@ class _StringsDe extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelle › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -42537,7 +42551,7 @@ class _StringsDe extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -44576,6 +44590,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -59953,7 +59976,7 @@ class _StringsEs extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelos › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -59999,7 +60022,7 @@ class _StringsEs extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -62038,6 +62061,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -77494,7 +77526,7 @@ class _StringsFr extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modèles › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -77540,7 +77572,7 @@ class _StringsFr extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -79579,6 +79611,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -94692,7 +94733,7 @@ class _StringsId extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Model › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -94738,7 +94779,7 @@ class _StringsId extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -96775,6 +96816,15 @@ class _StringsId extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -112051,7 +112101,7 @@ class _StringsIt extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelli › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -112097,7 +112147,7 @@ class _StringsIt extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -114136,6 +114186,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -128447,7 +128506,7 @@ class _StringsJa extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'すべての文字';
   @override
   String get manga_ocr_ai_mode_desc =>
-      '文字枠の検出はこれまでどおり端末内で行い、枠の中の文字を画像対応モデルが読み直します。切り出した文字枠は「設定 › モデル › LLM」で割り当てたプロバイダーに送信され、その料金が発生します。「自信のない文字だけ」は端末内モデル専用です。ほかのエンジンは確信度を出さないので「すべての文字」を使ってください。';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       '漫画 OCR に AI プロバイダーが割り当てられていないため、今は何も送信されません。';
@@ -128491,7 +128550,7 @@ class _StringsJa extends _StringsEn {
       'この端末には利用できる Google Play 開発者サービスがないため、システム OCR は使えません。';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -130498,6 +130557,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -144815,7 +144883,7 @@ class _StringsKo extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › 모델 › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -144861,7 +144929,7 @@ class _StringsKo extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -146895,6 +146963,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -162120,7 +162197,7 @@ class _StringsNl extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modellen › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -162166,7 +162243,7 @@ class _StringsNl extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -164204,6 +164281,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -179497,7 +179583,7 @@ class _StringsPtBr extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelos › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -179543,7 +179629,7 @@ class _StringsPtBr extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -181582,6 +181668,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -196822,7 +196917,7 @@ class _StringsRu extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Модели › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -196868,7 +196963,7 @@ class _StringsRu extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -198906,6 +199001,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -213824,7 +213928,7 @@ class _StringsTh extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › โมเดล › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -213870,7 +213974,7 @@ class _StringsTh extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -215908,6 +216012,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -231028,7 +231141,7 @@ class _StringsTr extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modeller › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -231074,7 +231187,7 @@ class _StringsTr extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -233113,6 +233226,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -248161,7 +248283,7 @@ class _StringsVi extends _StringsEn {
   String get manga_ocr_ai_mode_all => 'All text';
   @override
   String get manga_ocr_ai_mode_desc =>
-      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Mô hình › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+      'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       'No AI provider is assigned to manga OCR yet, so nothing is sent.';
@@ -248207,7 +248329,7 @@ class _StringsVi extends _StringsEn {
       'This device has no usable Google Play services, so system OCR can\'t run here.';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -250245,6 +250367,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get models_tts_usage =>
       'Generates word audio for cards only when no local or online audio is found';
+  @override
+  String get ocr_llm_default_title => 'Let an LLM fix uncertain OCR?';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+  @override
+  String get ocr_llm_default_accept => 'Turn on';
+  @override
+  String get ocr_llm_default_decline => 'Not now';
 }
 
 // Path: <root>
@@ -263999,7 +264130,7 @@ class _StringsZhCn extends _StringsEn {
   String get manga_ocr_ai_mode_all => '全部交给大模型';
   @override
   String get manga_ocr_ai_mode_desc =>
-      '文字框仍在本机检测，框里的字交给视觉大模型重读。裁出的文字框会上传给「设置 › 模型 › LLM」里指派的提供商并由其计费。「只重读没把握的字」需要本机模型；其他引擎不给置信度，请用「全部交给大模型」。';
+      '文字框仍在本机检测，框里的字交给视觉大模型重读。裁出的文字框会连同本地识别结果与附近文字一起上传给「设置 › 模型 › LLM」里指派的提供商，并由其计费。「只重读没把握的字」：本机模型按置信度挑；不给置信度的引擎（Google Lens、系统 OCR）按明显误认挑，如乱码、文字与语言对不上。想全部重读请选「全部交给大模型」。';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       '还没有给漫画 OCR 指派 AI 提供商，目前不会发送任何内容。';
@@ -264042,7 +264173,7 @@ class _StringsZhCn extends _StringsEn {
       '本机没有可用的 Google Play 服务，无法使用系统 OCR。';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      '启用本选项之前识别的卷没有置信度记录，此档位不会动它们。想让大模型重读这类卷里没把握的字，请用本机模型对该卷重新识别。';
+      '启用置信度记录之前识别的卷只按明显误认挑选。想按置信度挑没把握的字，请用本机模型对该卷重新识别。';
   @override
   String get glass_material_frosted => '毛玻璃';
   @override
@@ -265916,6 +266047,15 @@ class _StringsZhCn extends _StringsEn {
   String get models_tts_usage_title => '用途';
   @override
   String get models_tts_usage => '只在本地与在线音频都找不到时，为制卡生成单词发音';
+  @override
+  String get ocr_llm_default_title => '让 LLM 纠正没把握的 OCR 结果？';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'OCR 没把握的文字框会裁图上传给 ${provider} 重读，并由其计费；本地识别结果与附近文字会一并附上帮助判断。可随时在「设置 › 模型 › OCR」里更改。';
+  @override
+  String get ocr_llm_default_accept => '开启';
+  @override
+  String get ocr_llm_default_decline => '不用';
 }
 
 // Path: <root>
@@ -279703,7 +279843,7 @@ class _StringsZhHk extends _StringsEn {
   String get manga_ocr_ai_mode_all => '全部交給大模型';
   @override
   String get manga_ocr_ai_mode_desc =>
-      '文字框仍在本機偵測，框裡的字交給視覺大模型重讀。裁出的文字框會上傳給「設定 › 模型 › LLM」裡指派的供應商並由其計費。「只重讀沒把握的字」需要本機模型；其他引擎不提供置信度，請用「全部交給大模型」。';
+      '文字框仍在本機偵測，框裡的字交給視覺大模型重讀。裁出的文字框會連同本地識別結果與附近文字一起上傳給「設定 › 模型 › LLM」裡指派的提供者，並由其計費。「只重讀沒把握的字」：本機模型按信心度挑；不給信心度的引擎（Google Lens、系統 OCR）按明顯誤認挑，如亂碼、文字與語言對不上。想全部重讀請選「全部交給大模型」。';
   @override
   String get manga_ocr_ai_mode_no_provider =>
       '還沒有給漫畫 OCR 指派 AI 供應商，目前不會傳送任何內容。';
@@ -279746,7 +279886,7 @@ class _StringsZhHk extends _StringsEn {
       '本機沒有可用的 Google Play 服務，無法使用系統 OCR。';
   @override
   String get manga_ocr_ai_mode_low_confidence_legacy =>
-      'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+      '啟用信心度記錄之前識別的卷只按明顯誤認挑選。想按信心度挑沒把握的字，請用本機模型對該卷重新識別。';
   @override
   String get glass_material_frosted => 'Frosted';
   @override
@@ -281723,6 +281863,15 @@ class _StringsZhHk extends _StringsEn {
   String get models_tts_usage_title => '用途';
   @override
   String get models_tts_usage => '只在本地與線上音訊都找不到時，為製卡產生單字發音';
+  @override
+  String get ocr_llm_default_title => '讓 LLM 糾正沒把握的 OCR 結果？';
+  @override
+  String ocr_llm_default_body({required Object provider}) =>
+      'OCR 沒把握的文字框會裁圖上傳給 ${provider} 重讀，並由其計費；本地識別結果與附近文字會一併附上幫助判斷。可隨時在「設定 › 模型 › OCR」裡更改。';
+  @override
+  String get ocr_llm_default_accept => '開啟';
+  @override
+  String get ocr_llm_default_decline => '不用';
 }
 
 /// Flat map(s) containing all translations.
@@ -294561,7 +294710,7 @@ extension on _StringsEn {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -294598,7 +294747,7 @@ extension on _StringsEn {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -296354,6 +296503,15 @@ extension on _StringsEn {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -309187,7 +309345,7 @@ extension on _StringsAr {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › النماذج › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -309224,7 +309382,7 @@ extension on _StringsAr {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -310980,6 +311138,15 @@ extension on _StringsAr {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -323889,7 +324056,7 @@ extension on _StringsDe {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelle › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -323926,7 +324093,7 @@ extension on _StringsDe {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -325682,6 +325849,15 @@ extension on _StringsDe {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -338573,7 +338749,7 @@ extension on _StringsEs {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelos › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -338610,7 +338786,7 @@ extension on _StringsEs {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -340366,6 +340542,15 @@ extension on _StringsEs {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -353275,7 +353460,7 @@ extension on _StringsFr {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modèles › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -353312,7 +353497,7 @@ extension on _StringsFr {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -355068,6 +355253,15 @@ extension on _StringsFr {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -367921,7 +368115,7 @@ extension on _StringsId {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Model › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -367958,7 +368152,7 @@ extension on _StringsId {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -369714,6 +369908,15 @@ extension on _StringsId {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -382603,7 +382806,7 @@ extension on _StringsIt {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelli › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -382640,7 +382843,7 @@ extension on _StringsIt {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -384396,6 +384599,15 @@ extension on _StringsIt {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -397162,7 +397374,7 @@ extension on _StringsJa {
       case 'manga_ocr_ai_mode_all':
         return 'すべての文字';
       case 'manga_ocr_ai_mode_desc':
-        return '文字枠の検出はこれまでどおり端末内で行い、枠の中の文字を画像対応モデルが読み直します。切り出した文字枠は「設定 › モデル › LLM」で割り当てたプロバイダーに送信され、その料金が発生します。「自信のない文字だけ」は端末内モデル専用です。ほかのエンジンは確信度を出さないので「すべての文字」を使ってください。';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return '漫画 OCR に AI プロバイダーが割り当てられていないため、今は何も送信されません。';
       case 'manga_ocr_ai_mode_open_settings':
@@ -397198,7 +397410,7 @@ extension on _StringsJa {
       case 'ocr_system_model_play_services_unavailable':
         return 'この端末には利用できる Google Play 開発者サービスがないため、システム OCR は使えません。';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -398952,6 +399164,15 @@ extension on _StringsJa {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -411722,7 +411943,7 @@ extension on _StringsKo {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › 모델 › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -411759,7 +411980,7 @@ extension on _StringsKo {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -413515,6 +413736,15 @@ extension on _StringsKo {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -426399,7 +426629,7 @@ extension on _StringsNl {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modellen › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -426436,7 +426666,7 @@ extension on _StringsNl {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -428192,6 +428422,15 @@ extension on _StringsNl {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -441068,7 +441307,7 @@ extension on _StringsPtBr {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modelos › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -441105,7 +441344,7 @@ extension on _StringsPtBr {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -442861,6 +443100,15 @@ extension on _StringsPtBr {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -455742,7 +455990,7 @@ extension on _StringsRu {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Модели › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -455779,7 +456027,7 @@ extension on _StringsRu {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -457535,6 +457783,15 @@ extension on _StringsRu {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -470372,7 +470629,7 @@ extension on _StringsTh {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › โมเดล › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -470409,7 +470666,7 @@ extension on _StringsTh {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -472165,6 +472422,15 @@ extension on _StringsTh {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -485033,7 +485299,7 @@ extension on _StringsTr {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Modeller › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -485070,7 +485336,7 @@ extension on _StringsTr {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -486826,6 +487092,15 @@ extension on _StringsTr {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -499677,7 +499952,7 @@ extension on _StringsVi {
       case 'manga_ocr_ai_mode_all':
         return 'All text';
       case 'manga_ocr_ai_mode_desc':
-        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Mô hình › LLM and billed by it. "Only uncertain text" needs a local model; other engines report no confidence, so use "All text" with them.';
+        return 'Text boxes are still found on this device; a vision model re-reads the text inside them. Cropped text boxes are uploaded to the provider assigned in Settings › Models › LLM and billed by it, together with the local result and nearby text to help it decide. "Only uncertain text" picks boxes by the local model\'s confidence; engines without a confidence score (Google Lens, system OCR) are judged by obvious misreads such as garbled characters or text in the wrong script. Choose "All text" to re-read everything.';
       case 'manga_ocr_ai_mode_no_provider':
         return 'No AI provider is assigned to manga OCR yet, so nothing is sent.';
       case 'manga_ocr_ai_mode_open_settings':
@@ -499714,7 +499989,7 @@ extension on _StringsVi {
       case 'ocr_system_model_play_services_unavailable':
         return 'This device has no usable Google Play services, so system OCR can\'t run here.';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return 'Volumes recognized before confidence was recorded are judged by obvious misreads only. To pick uncertain text by confidence, recognize the volume again with a local model.';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -501470,6 +501745,15 @@ extension on _StringsVi {
         return 'Used for';
       case 'models_tts_usage':
         return 'Generates word audio for cards only when no local or online audio is found';
+      case 'ocr_llm_default_title':
+        return 'Let an LLM fix uncertain OCR?';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
+      case 'ocr_llm_default_accept':
+        return 'Turn on';
+      case 'ocr_llm_default_decline':
+        return 'Not now';
       default:
         return null;
     }
@@ -514186,7 +514470,7 @@ extension on _StringsZhCn {
       case 'manga_ocr_ai_mode_all':
         return '全部交给大模型';
       case 'manga_ocr_ai_mode_desc':
-        return '文字框仍在本机检测，框里的字交给视觉大模型重读。裁出的文字框会上传给「设置 › 模型 › LLM」里指派的提供商并由其计费。「只重读没把握的字」需要本机模型；其他引擎不给置信度，请用「全部交给大模型」。';
+        return '文字框仍在本机检测，框里的字交给视觉大模型重读。裁出的文字框会连同本地识别结果与附近文字一起上传给「设置 › 模型 › LLM」里指派的提供商，并由其计费。「只重读没把握的字」：本机模型按置信度挑；不给置信度的引擎（Google Lens、系统 OCR）按明显误认挑，如乱码、文字与语言对不上。想全部重读请选「全部交给大模型」。';
       case 'manga_ocr_ai_mode_no_provider':
         return '还没有给漫画 OCR 指派 AI 提供商，目前不会发送任何内容。';
       case 'manga_ocr_ai_mode_open_settings':
@@ -514222,7 +514506,7 @@ extension on _StringsZhCn {
       case 'ocr_system_model_play_services_unavailable':
         return '本机没有可用的 Google Play 服务，无法使用系统 OCR。';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return '启用本选项之前识别的卷没有置信度记录，此档位不会动它们。想让大模型重读这类卷里没把握的字，请用本机模型对该卷重新识别。';
+        return '启用置信度记录之前识别的卷只按明显误认挑选。想按置信度挑没把握的字，请用本机模型对该卷重新识别。';
       case 'glass_material_frosted':
         return '毛玻璃';
       case 'glass_material_liquid':
@@ -515954,6 +516238,15 @@ extension on _StringsZhCn {
         return '用途';
       case 'models_tts_usage':
         return '只在本地与在线音频都找不到时，为制卡生成单词发音';
+      case 'ocr_llm_default_title':
+        return '让 LLM 纠正没把握的 OCR 结果？';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'OCR 没把握的文字框会裁图上传给 ${provider} 重读，并由其计费；本地识别结果与附近文字会一并附上帮助判断。可随时在「设置 › 模型 › OCR」里更改。';
+      case 'ocr_llm_default_accept':
+        return '开启';
+      case 'ocr_llm_default_decline':
+        return '不用';
       default:
         return null;
     }
@@ -528672,7 +528965,7 @@ extension on _StringsZhHk {
       case 'manga_ocr_ai_mode_all':
         return '全部交給大模型';
       case 'manga_ocr_ai_mode_desc':
-        return '文字框仍在本機偵測，框裡的字交給視覺大模型重讀。裁出的文字框會上傳給「設定 › 模型 › LLM」裡指派的供應商並由其計費。「只重讀沒把握的字」需要本機模型；其他引擎不提供置信度，請用「全部交給大模型」。';
+        return '文字框仍在本機偵測，框裡的字交給視覺大模型重讀。裁出的文字框會連同本地識別結果與附近文字一起上傳給「設定 › 模型 › LLM」裡指派的提供者，並由其計費。「只重讀沒把握的字」：本機模型按信心度挑；不給信心度的引擎（Google Lens、系統 OCR）按明顯誤認挑，如亂碼、文字與語言對不上。想全部重讀請選「全部交給大模型」。';
       case 'manga_ocr_ai_mode_no_provider':
         return '還沒有給漫畫 OCR 指派 AI 供應商，目前不會傳送任何內容。';
       case 'manga_ocr_ai_mode_open_settings':
@@ -528708,7 +529001,7 @@ extension on _StringsZhHk {
       case 'ocr_system_model_play_services_unavailable':
         return '本機沒有可用的 Google Play 服務，無法使用系統 OCR。';
       case 'manga_ocr_ai_mode_low_confidence_legacy':
-        return 'Volumes recognized before this option existed carry no confidence scores, so this mode leaves them untouched. Re-run OCR on such a volume (with an on-device model) to let the AI re-read its uncertain text.';
+        return '啟用信心度記錄之前識別的卷只按明顯誤認挑選。想按信心度挑沒把握的字，請用本機模型對該卷重新識別。';
       case 'glass_material_frosted':
         return 'Frosted';
       case 'glass_material_liquid':
@@ -530455,6 +530748,15 @@ extension on _StringsZhHk {
         return '用途';
       case 'models_tts_usage':
         return '只在本地與線上音訊都找不到時，為製卡產生單字發音';
+      case 'ocr_llm_default_title':
+        return '讓 LLM 糾正沒把握的 OCR 結果？';
+      case 'ocr_llm_default_body':
+        return ({required Object provider}) =>
+            'OCR 沒把握的文字框會裁圖上傳給 ${provider} 重讀，並由其計費；本地識別結果與附近文字會一併附上幫助判斷。可隨時在「設定 › 模型 › OCR」裡更改。';
+      case 'ocr_llm_default_accept':
+        return '開啟';
+      case 'ocr_llm_default_decline':
+        return '不用';
       default:
         return null;
     }
