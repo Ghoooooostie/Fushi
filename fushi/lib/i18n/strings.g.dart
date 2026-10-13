@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 121125 (7125 per locale)
+/// Strings: 121142 (7126 per locale)
 ///
-/// Built on 2026-10-13 at 09:44 UTC
+/// Built on 2026-10-13 at 09:46 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10283,6 +10283,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_dev_video_play => 'Play video';
   String get feedback_dev_video_save => 'Save video';
   String get feedback_dev_video_saved => 'Video saved.';
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -27484,6 +27485,8 @@ class _StringsAr extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -45075,6 +45078,8 @@ class _StringsDe extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -62726,6 +62731,8 @@ class _StringsEs extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -80456,6 +80463,8 @@ class _StringsFr extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -97841,6 +97850,8 @@ class _StringsId extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -115391,6 +115402,8 @@ class _StringsIt extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -131941,6 +131954,8 @@ class _StringsJa extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -148527,6 +148542,8 @@ class _StringsKo extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -166025,6 +166042,8 @@ class _StringsNl extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -183592,6 +183611,8 @@ class _StringsPtBr extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -201105,6 +201126,8 @@ class _StringsRu extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -218296,6 +218319,8 @@ class _StringsTh extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -235690,6 +235715,8 @@ class _StringsTr extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -253011,6 +253038,8 @@ class _StringsVi extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 // Path: <root>
@@ -268851,6 +268880,8 @@ class _StringsZhCn extends _StringsEn {
   String get feedback_dev_video_save => '保存视频';
   @override
   String get feedback_dev_video_saved => '视频已保存。';
+  @override
+  String get media_server_search_all => '搜索所有服务器';
 }
 
 // Path: <root>
@@ -284851,6 +284882,8 @@ class _StringsZhHk extends _StringsEn {
   String get feedback_dev_video_save => 'Save video';
   @override
   String get feedback_dev_video_saved => 'Video saved.';
+  @override
+  String get media_server_search_all => 'Search all servers';
 }
 
 /// Flat map(s) containing all translations.
@@ -299631,6 +299664,8 @@ extension on _StringsEn {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -314406,6 +314441,8 @@ extension on _StringsAr {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -329257,6 +329294,8 @@ extension on _StringsDe {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -344090,6 +344129,8 @@ extension on _StringsEs {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -358941,6 +358982,8 @@ extension on _StringsFr {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -373736,6 +373779,8 @@ extension on _StringsId {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -388567,6 +388612,8 @@ extension on _StringsIt {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -403272,6 +403319,8 @@ extension on _StringsJa {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -417984,6 +418033,8 @@ extension on _StringsKo {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -432810,6 +432861,8 @@ extension on _StringsNl {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -447628,6 +447681,8 @@ extension on _StringsPtBr {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -462451,6 +462506,8 @@ extension on _StringsRu {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -477230,6 +477287,8 @@ extension on _StringsTh {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -492040,6 +492099,8 @@ extension on _StringsTr {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -506833,6 +506894,8 @@ extension on _StringsVi {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
@@ -521461,6 +521524,8 @@ extension on _StringsZhCn {
         return '保存视频';
       case 'feedback_dev_video_saved':
         return '视频已保存。';
+      case 'media_server_search_all':
+        return '搜索所有服务器';
       default:
         return null;
     }
@@ -536111,6 +536176,8 @@ extension on _StringsZhHk {
         return 'Save video';
       case 'feedback_dev_video_saved':
         return 'Video saved.';
+      case 'media_server_search_all':
+        return 'Search all servers';
       default:
         return null;
     }
