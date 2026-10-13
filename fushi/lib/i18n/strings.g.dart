@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119816 (7048 per locale)
+/// Strings: 119867 (7051 per locale)
 ///
-/// Built on 2026-10-13 at 08:05 UTC
+/// Built on 2026-10-13 at 09:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10149,6 +10149,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  String get video_setting_subtitle_outline => 'Outline width';
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -27139,6 +27142,12 @@ class _StringsAr extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -44519,6 +44528,12 @@ class _StringsDe extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -61959,6 +61974,12 @@ class _StringsEs extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -79478,6 +79499,12 @@ class _StringsFr extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -96652,6 +96679,12 @@ class _StringsId extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -113991,6 +114024,12 @@ class _StringsIt extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -130330,6 +130369,12 @@ class _StringsJa extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -146705,6 +146750,12 @@ class _StringsKo extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -163992,6 +164043,12 @@ class _StringsNl extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -181348,6 +181405,12 @@ class _StringsPtBr extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -198650,6 +198713,12 @@ class _StringsRu extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -215630,6 +215699,12 @@ class _StringsTh extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -232813,6 +232888,12 @@ class _StringsTr extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -249923,6 +250004,12 @@ class _StringsVi extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 // Path: <root>
@@ -265576,6 +265663,12 @@ class _StringsZhCn extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI 重读：${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => '阴影颜色';
+  @override
+  String get video_setting_subtitle_outline => '描边粗细';
+  @override
+  String get video_setting_subtitle_outline_color => '描边颜色';
 }
 
 // Path: <root>
@@ -281365,6 +281458,12 @@ class _StringsZhHk extends _StringsEn {
     required Object done,
     required Object total,
   }) => 'AI re-read: ${provider} · ${done}/${total}';
+  @override
+  String get video_setting_subtitle_shadow_color => 'Shadow color';
+  @override
+  String get video_setting_subtitle_outline => 'Outline width';
+  @override
+  String get video_setting_subtitle_outline_color => 'Outline color';
 }
 
 /// Flat map(s) containing all translations.
@@ -295978,6 +296077,12 @@ extension on _StringsEn {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -310586,6 +310691,12 @@ extension on _StringsAr {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -325270,6 +325381,12 @@ extension on _StringsDe {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -339936,6 +340053,12 @@ extension on _StringsEs {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -354620,6 +354743,12 @@ extension on _StringsFr {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -369248,6 +369377,12 @@ extension on _StringsId {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -383912,6 +384047,12 @@ extension on _StringsIt {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -398450,6 +398591,12 @@ extension on _StringsJa {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -412995,6 +413142,12 @@ extension on _StringsKo {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -427654,6 +427807,12 @@ extension on _StringsNl {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -442305,6 +442464,12 @@ extension on _StringsPtBr {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -456961,6 +457126,12 @@ extension on _StringsRu {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -471573,6 +471744,12 @@ extension on _StringsTh {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -486216,6 +486393,12 @@ extension on _StringsTr {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -500842,6 +501025,12 @@ extension on _StringsVi {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
@@ -515308,6 +515497,12 @@ extension on _StringsZhCn {
           required Object done,
           required Object total,
         }) => 'AI 重读：${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return '阴影颜色';
+      case 'video_setting_subtitle_outline':
+        return '描边粗细';
+      case 'video_setting_subtitle_outline_color':
+        return '描边颜色';
       default:
         return null;
     }
@@ -529791,6 +529986,12 @@ extension on _StringsZhHk {
           required Object done,
           required Object total,
         }) => 'AI re-read: ${provider} · ${done}/${total}';
+      case 'video_setting_subtitle_shadow_color':
+        return 'Shadow color';
+      case 'video_setting_subtitle_outline':
+        return 'Outline width';
+      case 'video_setting_subtitle_outline_color':
+        return 'Outline color';
       default:
         return null;
     }
