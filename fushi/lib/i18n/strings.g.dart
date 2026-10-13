@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120071 (7063 per locale)
+/// Strings: 120105 (7065 per locale)
 ///
-/// Built on 2026-10-13 at 04:20 UTC
+/// Built on 2026-10-13 at 05:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10170,6 +10170,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_ai_mode_pending =>
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  String get ai_provider_rate_limit => 'Requests per minute';
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -27196,6 +27199,11 @@ class _StringsAr extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -44612,6 +44620,11 @@ class _StringsDe extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -62088,6 +62101,11 @@ class _StringsEs extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -79643,6 +79661,11 @@ class _StringsFr extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -96853,6 +96876,11 @@ class _StringsId extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -114228,6 +114256,11 @@ class _StringsIt extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -130604,6 +130637,11 @@ class _StringsJa extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -147015,6 +147053,11 @@ class _StringsKo extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -164338,6 +164381,11 @@ class _StringsNl extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -181730,6 +181778,11 @@ class _StringsPtBr extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -199068,6 +199121,11 @@ class _StringsRu extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -216084,6 +216142,11 @@ class _StringsTh extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -233303,6 +233366,11 @@ class _StringsTr extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -250449,6 +250517,11 @@ class _StringsVi extends _StringsEn {
       'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
   @override
   String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
+  @override
+  String get ai_provider_rate_limit => 'Requests per minute';
+  @override
+  String get ai_provider_rate_limit_hint =>
+      'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
 }
 
 // Path: <root>
@@ -266133,6 +266206,10 @@ class _StringsZhCn extends _StringsEn {
   String get manga_ocr_ai_mode_pending => '尚未决定：第一次要发送没把握的文字时会询问。';
   @override
   String get manga_ocr_ai_mode_confirm_default => '现在开启';
+  @override
+  String get ai_provider_rate_limit => '每分钟请求上限';
+  @override
+  String get ai_provider_rate_limit_hint => '留空表示不限。按套餐限额填写，避免请求太快被拦截。';
 }
 
 // Path: <root>
@@ -281953,6 +282030,10 @@ class _StringsZhHk extends _StringsEn {
   String get manga_ocr_ai_mode_pending => '尚未決定：第一次要傳送沒把握的文字時會詢問。';
   @override
   String get manga_ocr_ai_mode_confirm_default => '現在開啟';
+  @override
+  String get ai_provider_rate_limit => '每分鐘請求上限';
+  @override
+  String get ai_provider_rate_limit_hint => '留空表示不限。按方案限額填寫，避免請求太快被攔截。';
 }
 
 /// Flat map(s) containing all translations.
@@ -296597,6 +296678,10 @@ extension on _StringsEn {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -311236,6 +311321,10 @@ extension on _StringsAr {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -325951,6 +326040,10 @@ extension on _StringsDe {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -340648,6 +340741,10 @@ extension on _StringsEs {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -355363,6 +355460,10 @@ extension on _StringsFr {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -370022,6 +370123,10 @@ extension on _StringsId {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -384717,6 +384822,10 @@ extension on _StringsIt {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -399286,6 +399395,10 @@ extension on _StringsJa {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -413862,6 +413975,10 @@ extension on _StringsKo {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -428552,6 +428669,10 @@ extension on _StringsNl {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -443234,6 +443355,10 @@ extension on _StringsPtBr {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -457921,6 +458046,10 @@ extension on _StringsRu {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -472564,6 +472693,10 @@ extension on _StringsTh {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -487238,6 +487371,10 @@ extension on _StringsTr {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -501895,6 +502032,10 @@ extension on _StringsVi {
         return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
       case 'manga_ocr_ai_mode_confirm_default':
         return 'Turn on now';
+      case 'ai_provider_rate_limit':
+        return 'Requests per minute';
+      case 'ai_provider_rate_limit_hint':
+        return 'Empty = no limit. Use your plan\'s limit so requests aren\'t rejected for going too fast.';
       default:
         return null;
     }
@@ -516392,6 +516533,10 @@ extension on _StringsZhCn {
         return '尚未决定：第一次要发送没把握的文字时会询问。';
       case 'manga_ocr_ai_mode_confirm_default':
         return '现在开启';
+      case 'ai_provider_rate_limit':
+        return '每分钟请求上限';
+      case 'ai_provider_rate_limit_hint':
+        return '留空表示不限。按套餐限额填写，避免请求太快被拦截。';
       default:
         return null;
     }
@@ -530906,6 +531051,10 @@ extension on _StringsZhHk {
         return '尚未決定：第一次要傳送沒把握的文字時會詢問。';
       case 'manga_ocr_ai_mode_confirm_default':
         return '現在開啟';
+      case 'ai_provider_rate_limit':
+        return '每分鐘請求上限';
+      case 'ai_provider_rate_limit_hint':
+        return '留空表示不限。按方案限額填寫，避免請求太快被攔截。';
       default:
         return null;
     }
