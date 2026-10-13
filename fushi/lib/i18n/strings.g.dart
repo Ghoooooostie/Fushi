@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120071 (7063 per locale)
+/// Strings: 120003 (7059 per locale)
 ///
-/// Built on 2026-10-13 at 09:24 UTC
+/// Built on 2026-10-13 at 09:25 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9293,10 +9293,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reading_stats_clock_start_on_open => 'On open';
   String get reading_stats_clock_start_on_page_turn => 'After page turn';
   String get home_updates_dismiss => 'Dismiss';
-  String get shelf_collection_layout_title => 'Collections';
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  String get shelf_collection_layout_cards => 'One tile each';
-  String get shelf_sort_and_view => 'Sort & view';
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   String get shelf_collection_series_label => 'Series';
   String collection_name_taken_other_library({required Object name}) =>
@@ -9867,7 +9863,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Previous word (word sweep)';
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-  String get library_sort_filter_view => 'Sort, filter and view';
   String get library_filter_active => 'Filtered';
   String get settings_module_keep_one_navigation =>
       'Keep at least one page in the navigation bar';
@@ -10172,6 +10167,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String feedback_reply_notice({required Object n}) =>
       'Developers updated ${n} of your feedback item(s)';
   String get feedback_reply_notice_open => 'View';
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -25678,14 +25674,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get home_updates_dismiss => 'إخفاء';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -26704,8 +26692,6 @@ class _StringsAr extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -27200,6 +27186,8 @@ class _StringsAr extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -43095,14 +43083,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get home_updates_dismiss => 'Ausblenden';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -44121,8 +44101,6 @@ class _StringsDe extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -44618,6 +44596,8 @@ class _StringsDe extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -60573,14 +60553,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get home_updates_dismiss => 'Descartar';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -61599,8 +61571,6 @@ class _StringsEs extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -62096,6 +62066,8 @@ class _StringsEs extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -78130,14 +78102,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get home_updates_dismiss => 'Masquer';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -79156,8 +79120,6 @@ class _StringsFr extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -79653,6 +79615,8 @@ class _StringsFr extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -95343,14 +95307,6 @@ class _StringsId extends _StringsEn {
   @override
   String get home_updates_dismiss => 'Tutup';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -96369,8 +96325,6 @@ class _StringsId extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -96865,6 +96819,8 @@ class _StringsId extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -112719,14 +112675,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get home_updates_dismiss => 'Ignora';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -113745,8 +113693,6 @@ class _StringsIt extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -114242,6 +114188,8 @@ class _StringsIt extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -129119,14 +129067,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get home_updates_dismiss => '閉じる';
   @override
-  String get shelf_collection_layout_title => 'コレクションの表示';
-  @override
-  String get shelf_collection_layout_rows => '行で展開';
-  @override
-  String get shelf_collection_layout_cards => '1 マスにまとめる';
-  @override
-  String get shelf_sort_and_view => '並べ替えと表示';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} 冊';
   @override
   String get shelf_collection_series_label => 'シリーズ';
@@ -130128,8 +130068,6 @@ class _StringsJa extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => '並べ替え・絞り込み・表示';
-  @override
   String get library_filter_active => '絞り込み中';
   @override
   String get settings_module_keep_one_navigation =>
@@ -130619,6 +130557,8 @@ class _StringsJa extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -145511,14 +145451,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get home_updates_dismiss => '닫기';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -146537,8 +146469,6 @@ class _StringsKo extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -147032,6 +146962,8 @@ class _StringsKo extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -162835,14 +162767,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get home_updates_dismiss => 'Sluiten';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -163861,8 +163785,6 @@ class _StringsNl extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -164357,6 +164279,8 @@ class _StringsNl extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -180228,14 +180152,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get home_updates_dismiss => 'Dispensar';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -181254,8 +181170,6 @@ class _StringsPtBr extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -181751,6 +181665,8 @@ class _StringsPtBr extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -197569,14 +197485,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get home_updates_dismiss => 'Скрыть';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -198595,8 +198503,6 @@ class _StringsRu extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -199091,6 +198997,8 @@ class _StringsRu extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -214587,14 +214495,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get home_updates_dismiss => 'ปิด';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -215613,8 +215513,6 @@ class _StringsTh extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -216109,6 +216007,8 @@ class _StringsTh extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -231807,14 +231707,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get home_updates_dismiss => 'Kapat';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -232833,8 +232725,6 @@ class _StringsTr extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -233330,6 +233220,8 @@ class _StringsTr extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -248956,14 +248848,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get home_updates_dismiss => 'Đóng';
   @override
-  String get shelf_collection_layout_title => 'Collections';
-  @override
-  String get shelf_collection_layout_rows => 'Expanded rows';
-  @override
-  String get shelf_collection_layout_cards => 'One tile each';
-  @override
-  String get shelf_sort_and_view => 'Sort & view';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} vols';
   @override
   String get shelf_collection_series_label => 'Series';
@@ -249982,8 +249866,6 @@ class _StringsVi extends _StringsEn {
   String get media_source_open_folder_failed =>
       'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
   @override
-  String get library_sort_filter_view => 'Sort, filter and view';
-  @override
   String get library_filter_active => 'Filtered';
   @override
   String get settings_module_keep_one_navigation =>
@@ -250478,6 +250360,8 @@ class _StringsVi extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 // Path: <root>
@@ -264756,14 +264640,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get home_updates_dismiss => '关闭';
   @override
-  String get shelf_collection_layout_title => '合集显示';
-  @override
-  String get shelf_collection_layout_rows => '整行展开';
-  @override
-  String get shelf_collection_layout_cards => '单个格子';
-  @override
-  String get shelf_sort_and_view => '排序与显示';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} 册';
   @override
   String get shelf_collection_series_label => '系列';
@@ -265711,8 +265587,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get media_source_open_folder_failed => '无法打开文件夹，它可能已被移动、删除或断开连接。';
   @override
-  String get library_sort_filter_view => '排序、筛选与显示';
-  @override
   String get library_filter_active => '已筛选';
   @override
   String get settings_module_keep_one_navigation => '导航栏里至少要保留一个页面';
@@ -266163,6 +266037,8 @@ class _StringsZhCn extends _StringsEn {
   String feedback_reply_notice({required Object n}) => '开发者更新了 ${n} 条你的反馈';
   @override
   String get feedback_reply_notice_open => '查看';
+  @override
+  String get library_sort_filter => '排序与筛选';
 }
 
 // Path: <root>
@@ -280510,14 +280386,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get home_updates_dismiss => '關閉';
   @override
-  String get shelf_collection_layout_title => '合集顯示';
-  @override
-  String get shelf_collection_layout_rows => '整行展開';
-  @override
-  String get shelf_collection_layout_cards => '單個格子';
-  @override
-  String get shelf_sort_and_view => '排序與顯示';
-  @override
   String shelf_collection_volume_count({required Object n}) => '${n} 冊';
   @override
   String get shelf_collection_series_label => '系列';
@@ -281505,8 +281373,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_source_open_folder_failed => '無法開啟資料夾，可能已被移動、刪除或中斷連線。';
   @override
-  String get library_sort_filter_view => '排序、篩選與顯示';
-  @override
   String get library_filter_active => '已篩選';
   @override
   String get settings_module_keep_one_navigation =>
@@ -281990,6 +281856,8 @@ class _StringsZhHk extends _StringsEn {
       'Developers updated ${n} of your feedback item(s)';
   @override
   String get feedback_reply_notice_open => 'View';
+  @override
+  String get library_sort_filter => 'Sort and filter';
 }
 
 /// Flat map(s) containing all translations.
@@ -295304,14 +295172,6 @@ extension on _StringsEn {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'Dismiss';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -296223,8 +296083,6 @@ extension on _StringsEn {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -296635,6 +296493,8 @@ extension on _StringsEn {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -309944,14 +309804,6 @@ extension on _StringsAr {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'إخفاء';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -310863,8 +310715,6 @@ extension on _StringsAr {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -311275,6 +311125,8 @@ extension on _StringsAr {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -324660,14 +324512,6 @@ extension on _StringsDe {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'Ausblenden';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -325579,8 +325423,6 @@ extension on _StringsDe {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -325991,6 +325833,8 @@ extension on _StringsDe {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -339358,14 +339202,6 @@ extension on _StringsEs {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'Descartar';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -340277,8 +340113,6 @@ extension on _StringsEs {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -340689,6 +340523,8 @@ extension on _StringsEs {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -354074,14 +353910,6 @@ extension on _StringsFr {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'Masquer';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -354993,8 +354821,6 @@ extension on _StringsFr {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -355405,6 +355231,8 @@ extension on _StringsFr {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -368734,14 +368562,6 @@ extension on _StringsId {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'Tutup';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -369653,8 +369473,6 @@ extension on _StringsId {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -370065,6 +369883,8 @@ extension on _StringsId {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -383430,14 +383250,6 @@ extension on _StringsIt {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'Ignora';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -384349,8 +384161,6 @@ extension on _StringsIt {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -384761,6 +384571,8 @@ extension on _StringsIt {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -398002,14 +397814,6 @@ extension on _StringsJa {
         return 'After page turn';
       case 'home_updates_dismiss':
         return '閉じる';
-      case 'shelf_collection_layout_title':
-        return 'コレクションの表示';
-      case 'shelf_collection_layout_rows':
-        return '行で展開';
-      case 'shelf_collection_layout_cards':
-        return '1 マスにまとめる';
-      case 'shelf_sort_and_view':
-        return '並べ替えと表示';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} 冊';
       case 'shelf_collection_series_label':
@@ -398919,8 +398723,6 @@ extension on _StringsJa {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return '並べ替え・絞り込み・表示';
       case 'library_filter_active':
         return '絞り込み中';
       case 'settings_module_keep_one_navigation':
@@ -399331,6 +399133,8 @@ extension on _StringsJa {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -412577,14 +412381,6 @@ extension on _StringsKo {
         return 'After page turn';
       case 'home_updates_dismiss':
         return '닫기';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -413496,8 +413292,6 @@ extension on _StringsKo {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -413908,6 +413702,8 @@ extension on _StringsKo {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -427268,14 +427064,6 @@ extension on _StringsNl {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'Sluiten';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -428187,8 +427975,6 @@ extension on _StringsNl {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -428599,6 +428385,8 @@ extension on _StringsNl {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -441951,14 +441739,6 @@ extension on _StringsPtBr {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'Dispensar';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -442870,8 +442650,6 @@ extension on _StringsPtBr {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -443282,6 +443060,8 @@ extension on _StringsPtBr {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -456639,14 +456419,6 @@ extension on _StringsRu {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'Скрыть';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -457558,8 +457330,6 @@ extension on _StringsRu {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -457970,6 +457740,8 @@ extension on _StringsRu {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -471283,14 +471055,6 @@ extension on _StringsTh {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'ปิด';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -472202,8 +471966,6 @@ extension on _StringsTh {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -472614,6 +472376,8 @@ extension on _StringsTh {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -485958,14 +485722,6 @@ extension on _StringsTr {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'Kapat';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -486877,8 +486633,6 @@ extension on _StringsTr {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -487289,6 +487043,8 @@ extension on _StringsTr {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -500616,14 +500372,6 @@ extension on _StringsVi {
         return 'After page turn';
       case 'home_updates_dismiss':
         return 'Đóng';
-      case 'shelf_collection_layout_title':
-        return 'Collections';
-      case 'shelf_collection_layout_rows':
-        return 'Expanded rows';
-      case 'shelf_collection_layout_cards':
-        return 'One tile each';
-      case 'shelf_sort_and_view':
-        return 'Sort & view';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} vols';
       case 'shelf_collection_series_label':
@@ -501535,8 +501283,6 @@ extension on _StringsVi {
         return 'Previous word (word sweep)';
       case 'media_source_open_folder_failed':
         return 'Couldn\'t open the folder. It may have been moved, deleted, or disconnected.';
-      case 'library_sort_filter_view':
-        return 'Sort, filter and view';
       case 'library_filter_active':
         return 'Filtered';
       case 'settings_module_keep_one_navigation':
@@ -501947,6 +501693,8 @@ extension on _StringsVi {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
@@ -515125,14 +514873,6 @@ extension on _StringsZhCn {
         return '翻页后开始';
       case 'home_updates_dismiss':
         return '关闭';
-      case 'shelf_collection_layout_title':
-        return '合集显示';
-      case 'shelf_collection_layout_rows':
-        return '整行展开';
-      case 'shelf_collection_layout_cards':
-        return '单个格子';
-      case 'shelf_sort_and_view':
-        return '排序与显示';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} 册';
       case 'shelf_collection_series_label':
@@ -516040,8 +515780,6 @@ extension on _StringsZhCn {
         return '上一个词（扫词）';
       case 'media_source_open_folder_failed':
         return '无法打开文件夹，它可能已被移动、删除或断开连接。';
-      case 'library_sort_filter_view':
-        return '排序、筛选与显示';
       case 'library_filter_active':
         return '已筛选';
       case 'settings_module_keep_one_navigation':
@@ -516443,6 +516181,8 @@ extension on _StringsZhCn {
         return ({required Object n}) => '开发者更新了 ${n} 条你的反馈';
       case 'feedback_reply_notice_open':
         return '查看';
+      case 'library_sort_filter':
+        return '排序与筛选';
       default:
         return null;
     }
@@ -529631,14 +529371,6 @@ extension on _StringsZhHk {
         return 'After page turn';
       case 'home_updates_dismiss':
         return '關閉';
-      case 'shelf_collection_layout_title':
-        return '合集顯示';
-      case 'shelf_collection_layout_rows':
-        return '整行展開';
-      case 'shelf_collection_layout_cards':
-        return '單個格子';
-      case 'shelf_sort_and_view':
-        return '排序與顯示';
       case 'shelf_collection_volume_count':
         return ({required Object n}) => '${n} 冊';
       case 'shelf_collection_series_label':
@@ -530546,8 +530278,6 @@ extension on _StringsZhHk {
         return '上一個詞（掃詞）';
       case 'media_source_open_folder_failed':
         return '無法開啟資料夾，可能已被移動、刪除或中斷連線。';
-      case 'library_sort_filter_view':
-        return '排序、篩選與顯示';
       case 'library_filter_active':
         return '已篩選';
       case 'settings_module_keep_one_navigation':
@@ -530958,6 +530688,8 @@ extension on _StringsZhHk {
             'Developers updated ${n} of your feedback item(s)';
       case 'feedback_reply_notice_open':
         return 'View';
+      case 'library_sort_filter':
+        return 'Sort and filter';
       default:
         return null;
     }
