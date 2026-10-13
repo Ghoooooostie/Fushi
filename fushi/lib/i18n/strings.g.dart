@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120853 (7109 per locale)
+/// Strings: 121125 (7125 per locale)
 ///
-/// Built on 2026-10-13 at 09:37 UTC
+/// Built on 2026-10-13 at 09:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10257,6 +10257,32 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'A paired device started updating this app';
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  String get feedback_compose_add_video => 'Add video';
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String get feedback_compose_remove_video => 'Remove video';
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  String get feedback_detail_video_add => 'Attach a video';
+  String get feedback_detail_video_added => 'Video uploaded.';
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  String get feedback_dev_video => 'Video';
+  String get feedback_dev_video_play => 'Play video';
+  String get feedback_dev_video_save => 'Save video';
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -27416,6 +27442,48 @@ class _StringsAr extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -44965,6 +45033,48 @@ class _StringsDe extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -62574,6 +62684,48 @@ class _StringsEs extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -80262,6 +80414,48 @@ class _StringsFr extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -97605,6 +97799,48 @@ class _StringsId extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -115113,6 +115349,48 @@ class _StringsIt extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -131621,6 +131899,48 @@ class _StringsJa extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -148165,6 +148485,48 @@ class _StringsKo extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -165621,6 +165983,48 @@ class _StringsNl extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -183146,6 +183550,48 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -200617,6 +201063,48 @@ class _StringsRu extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -217766,6 +218254,48 @@ class _StringsTh extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -235118,6 +235648,48 @@ class _StringsTr extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -252397,6 +252969,48 @@ class _StringsVi extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 // Path: <root>
@@ -268198,6 +268812,45 @@ class _StringsZhCn extends _StringsEn {
   String get interconnect_host_update_remote_started => '已配对设备让本机开始更新';
   @override
   String get interconnect_host_update_cancelled => '主机上取消了这次更新';
+  @override
+  String get feedback_compose_add_video => '添加视频';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 720p。';
+  @override
+  String get feedback_compose_remove_video => '移除视频';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      '正在压缩视频… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      '正在上传视频… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) => '视频太大（${size}），压缩后仍超过 ${max} 上限，请剪短后再试。';
+  @override
+  String get feedback_video_unsupported =>
+      '这个文件不是支持的视频格式（MP4 / WebM / MOV），也无法转换。';
+  @override
+  String feedback_detail_video({required Object size}) => '视频（${size}）';
+  @override
+  String get feedback_detail_video_hint => '视频只有开发者能播放。';
+  @override
+  String get feedback_detail_video_add => '追加视频';
+  @override
+  String get feedback_detail_video_added => '视频已上传。';
+  @override
+  String get feedback_from_other_device => '用本账户在其他设备提交';
+  @override
+  String get feedback_dev_video => '视频';
+  @override
+  String get feedback_dev_video_play => '播放视频';
+  @override
+  String get feedback_dev_video_save => '保存视频';
+  @override
+  String get feedback_dev_video_saved => '视频已保存。';
 }
 
 // Path: <root>
@@ -284156,6 +284809,48 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get interconnect_host_update_cancelled =>
       'The update was cancelled on the host';
+  @override
+  String get feedback_compose_add_video => 'Add video';
+  @override
+  String feedback_compose_video_hint({required Object max}) =>
+      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  @override
+  String get feedback_compose_remove_video => 'Remove video';
+  @override
+  String feedback_stage_video_prepare({required Object percent}) =>
+      'Compressing video… ${percent}';
+  @override
+  String feedback_stage_video({required Object percent}) =>
+      'Uploading video… ${percent}';
+  @override
+  String feedback_video_too_large({
+    required Object size,
+    required Object max,
+  }) =>
+      'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+  @override
+  String get feedback_video_unsupported =>
+      'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+  @override
+  String feedback_detail_video({required Object size}) => 'Video (${size})';
+  @override
+  String get feedback_detail_video_hint =>
+      'Only developers can play the video.';
+  @override
+  String get feedback_detail_video_add => 'Attach a video';
+  @override
+  String get feedback_detail_video_added => 'Video uploaded.';
+  @override
+  String get feedback_from_other_device =>
+      'Submitted from another device with your account';
+  @override
+  String get feedback_dev_video => 'Video';
+  @override
+  String get feedback_dev_video_play => 'Play video';
+  @override
+  String get feedback_dev_video_save => 'Save video';
+  @override
+  String get feedback_dev_video_saved => 'Video saved.';
 }
 
 /// Flat map(s) containing all translations.
@@ -298902,6 +299597,40 @@ extension on _StringsEn {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -313643,6 +314372,40 @@ extension on _StringsAr {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -328460,6 +329223,40 @@ extension on _StringsDe {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -343259,6 +344056,40 @@ extension on _StringsEs {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -358076,6 +358907,40 @@ extension on _StringsFr {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -372837,6 +373702,40 @@ extension on _StringsId {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -387634,6 +388533,40 @@ extension on _StringsIt {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -402305,6 +403238,40 @@ extension on _StringsJa {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -416983,6 +417950,40 @@ extension on _StringsKo {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -431775,6 +432776,40 @@ extension on _StringsNl {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -446559,6 +447594,40 @@ extension on _StringsPtBr {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -461348,6 +462417,40 @@ extension on _StringsRu {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -476093,6 +477196,40 @@ extension on _StringsTh {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -490869,6 +492006,40 @@ extension on _StringsTr {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -505628,6 +506799,40 @@ extension on _StringsVi {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
@@ -520222,6 +521427,40 @@ extension on _StringsZhCn {
         return '已配对设备让本机开始更新';
       case 'interconnect_host_update_cancelled':
         return '主机上取消了这次更新';
+      case 'feedback_compose_add_video':
+        return '添加视频';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 720p。';
+      case 'feedback_compose_remove_video':
+        return '移除视频';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => '正在压缩视频… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => '正在上传视频… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            '视频太大（${size}），压缩后仍超过 ${max} 上限，请剪短后再试。';
+      case 'feedback_video_unsupported':
+        return '这个文件不是支持的视频格式（MP4 / WebM / MOV），也无法转换。';
+      case 'feedback_detail_video':
+        return ({required Object size}) => '视频（${size}）';
+      case 'feedback_detail_video_hint':
+        return '视频只有开发者能播放。';
+      case 'feedback_detail_video_add':
+        return '追加视频';
+      case 'feedback_detail_video_added':
+        return '视频已上传。';
+      case 'feedback_from_other_device':
+        return '用本账户在其他设备提交';
+      case 'feedback_dev_video':
+        return '视频';
+      case 'feedback_dev_video_play':
+        return '播放视频';
+      case 'feedback_dev_video_save':
+        return '保存视频';
+      case 'feedback_dev_video_saved':
+        return '视频已保存。';
       default:
         return null;
     }
@@ -534838,6 +536077,40 @@ extension on _StringsZhHk {
         return 'A paired device started updating this app';
       case 'interconnect_host_update_cancelled':
         return 'The update was cancelled on the host';
+      case 'feedback_compose_add_video':
+        return 'Add video';
+      case 'feedback_compose_video_hint':
+        return ({required Object max}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+      case 'feedback_compose_remove_video':
+        return 'Remove video';
+      case 'feedback_stage_video_prepare':
+        return ({required Object percent}) => 'Compressing video… ${percent}';
+      case 'feedback_stage_video':
+        return ({required Object percent}) => 'Uploading video… ${percent}';
+      case 'feedback_video_too_large':
+        return ({required Object size, required Object max}) =>
+            'The video is too large (${size}). Even after compression it exceeds the ${max} limit — please trim it and try again.';
+      case 'feedback_video_unsupported':
+        return 'This file isn\'t a supported video (MP4 / WebM / MOV) and couldn\'t be converted.';
+      case 'feedback_detail_video':
+        return ({required Object size}) => 'Video (${size})';
+      case 'feedback_detail_video_hint':
+        return 'Only developers can play the video.';
+      case 'feedback_detail_video_add':
+        return 'Attach a video';
+      case 'feedback_detail_video_added':
+        return 'Video uploaded.';
+      case 'feedback_from_other_device':
+        return 'Submitted from another device with your account';
+      case 'feedback_dev_video':
+        return 'Video';
+      case 'feedback_dev_video_play':
+        return 'Play video';
+      case 'feedback_dev_video_save':
+        return 'Save video';
+      case 'feedback_dev_video_saved':
+        return 'Video saved.';
       default:
         return null;
     }
