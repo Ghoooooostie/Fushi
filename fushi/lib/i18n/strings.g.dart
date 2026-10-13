@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119986 (7058 per locale)
+/// Strings: 120003 (7059 per locale)
 ///
-/// Built on 2026-10-13 at 09:19 UTC
+/// Built on 2026-10-13 at 09:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10164,6 +10164,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get popup_mining_target_switch => 'Switch profile or deck';
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -27179,6 +27181,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -44584,6 +44589,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -62049,6 +62057,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -79593,6 +79604,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -96792,6 +96806,9 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -114156,6 +114173,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -130520,6 +130540,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -146920,6 +146943,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -164232,6 +164258,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -181613,6 +181642,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -198940,6 +198972,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -215945,6 +215980,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -233153,6 +233191,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -250288,6 +250329,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 // Path: <root>
@@ -265962,6 +266006,9 @@ class _StringsZhCn extends _StringsEn {
   String get popup_mining_target_switch => '切换配置或牌组';
   @override
   String get popup_mining_target_empty => '还没有可选的配置或牌组，请先在设置里连接 Anki。';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      '切换制卡目标失败：${error}';
 }
 
 // Path: <root>
@@ -281776,6 +281823,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
+  @override
+  String popup_mining_target_switch_failed({required Object error}) =>
+      'Could not switch the mining target: ${error}';
 }
 
 /// Flat map(s) containing all translations.
@@ -296409,6 +296459,9 @@ extension on _StringsEn {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -311037,6 +311090,9 @@ extension on _StringsAr {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -325741,6 +325797,9 @@ extension on _StringsDe {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -340427,6 +340486,9 @@ extension on _StringsEs {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -355131,6 +355193,9 @@ extension on _StringsFr {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -369779,6 +369844,9 @@ extension on _StringsId {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -384463,6 +384531,9 @@ extension on _StringsIt {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -399021,6 +399092,9 @@ extension on _StringsJa {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -413586,6 +413660,9 @@ extension on _StringsKo {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -428265,6 +428342,9 @@ extension on _StringsNl {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -442936,6 +443016,9 @@ extension on _StringsPtBr {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -457612,6 +457695,9 @@ extension on _StringsRu {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -472244,6 +472330,9 @@ extension on _StringsTh {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -486907,6 +486996,9 @@ extension on _StringsTr {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -501553,6 +501645,9 @@ extension on _StringsVi {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
@@ -516039,6 +516134,8 @@ extension on _StringsZhCn {
         return '切换配置或牌组';
       case 'popup_mining_target_empty':
         return '还没有可选的配置或牌组，请先在设置里连接 Anki。';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) => '切换制卡目标失败：${error}';
       default:
         return null;
     }
@@ -530542,6 +530639,9 @@ extension on _StringsZhHk {
         return 'Switch profile or deck';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
+      case 'popup_mining_target_switch_failed':
+        return ({required Object error}) =>
+            'Could not switch the mining target: ${error}';
       default:
         return null;
     }
