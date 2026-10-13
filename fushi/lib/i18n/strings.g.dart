@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 122213 (7189 per locale)
+/// Strings: 122315 (7195 per locale)
 ///
-/// Built on 2026-10-13 at 09:50 UTC
+/// Built on 2026-10-13 at 10:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10375,6 +10375,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_remote_host_connected({required Object name}) =>
       'Connected to ${name}';
   String get video_remote_line_actions => 'Line actions';
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -27732,6 +27744,24 @@ class _StringsAr extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -45479,6 +45509,24 @@ class _StringsDe extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -63286,6 +63334,24 @@ class _StringsEs extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -81172,6 +81238,24 @@ class _StringsFr extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -98713,6 +98797,24 @@ class _StringsId extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -116419,6 +116521,24 @@ class _StringsIt extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -133125,6 +133245,24 @@ class _StringsJa extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -149867,6 +150005,24 @@ class _StringsKo extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -167521,6 +167677,24 @@ class _StringsNl extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -185244,6 +185418,24 @@ class _StringsPtBr extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -202913,6 +203105,24 @@ class _StringsRu extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -220260,6 +220470,24 @@ class _StringsTh extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -237810,6 +238038,24 @@ class _StringsTr extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -255287,6 +255533,24 @@ class _StringsVi extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 // Path: <root>
@@ -271258,6 +271522,24 @@ class _StringsZhCn extends _StringsEn {
   String video_remote_host_connected({required Object name}) => '已连接 ${name}';
   @override
   String get video_remote_line_actions => '句子操作';
+  @override
+  String get media_audio_cd_rip_title => '正在抓取音频 CD';
+  @override
+  String get media_audio_cd_rip_reading => '正在读取光盘…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => '第 ${current} / ${total} 轨';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      '音频 CD 抓轨失败：${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '有 ${n} 个损坏扇区读不出来，已用静音填充';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda 只是光盘音轨的快捷方式，里面没有音频。Windows 上请放入光盘后直接选择光驱；其他平台请先把 CD 转成音频文件再导入。';
 }
 
 // Path: <root>
@@ -287414,6 +287696,24 @@ class _StringsZhHk extends _StringsEn {
       'Connected to ${name}';
   @override
   String get video_remote_line_actions => 'Line actions';
+  @override
+  String get media_audio_cd_rip_title => 'Ripping audio CD';
+  @override
+  String get media_audio_cd_rip_reading => 'Reading the disc…';
+  @override
+  String media_audio_cd_rip_progress({
+    required Object current,
+    required Object total,
+  }) => 'Track ${current} of ${total}';
+  @override
+  String media_audio_cd_rip_failed({required Object error}) =>
+      'Couldn\'t rip the audio CD: ${error}';
+  @override
+  String media_audio_cd_rip_unreadable({required Object n}) =>
+      '${n} damaged sectors could not be read and were filled with silence';
+  @override
+  String get media_audio_cd_cda_unsupported =>
+      '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
 }
 
 /// Flat map(s) containing all translations.
@@ -302323,6 +302623,21 @@ extension on _StringsEn {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -317227,6 +317542,21 @@ extension on _StringsAr {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -332207,6 +332537,21 @@ extension on _StringsDe {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -347169,6 +347514,21 @@ extension on _StringsEs {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -362149,6 +362509,21 @@ extension on _StringsFr {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -377073,6 +377448,21 @@ extension on _StringsId {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -392033,6 +392423,21 @@ extension on _StringsIt {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -406867,6 +407272,21 @@ extension on _StringsJa {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -421708,6 +422128,21 @@ extension on _StringsKo {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -436663,6 +437098,21 @@ extension on _StringsNl {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -451610,6 +452060,21 @@ extension on _StringsPtBr {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -466562,6 +467027,21 @@ extension on _StringsRu {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -481470,6 +481950,21 @@ extension on _StringsTh {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -496409,6 +496904,21 @@ extension on _StringsTr {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -511331,6 +511841,21 @@ extension on _StringsVi {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
@@ -526088,6 +526613,19 @@ extension on _StringsZhCn {
         return ({required Object name}) => '已连接 ${name}';
       case 'video_remote_line_actions':
         return '句子操作';
+      case 'media_audio_cd_rip_title':
+        return '正在抓取音频 CD';
+      case 'media_audio_cd_rip_reading':
+        return '正在读取光盘…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            '第 ${current} / ${total} 轨';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) => '音频 CD 抓轨失败：${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) => '有 ${n} 个损坏扇区读不出来，已用静音填充';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda 只是光盘音轨的快捷方式，里面没有音频。Windows 上请放入光盘后直接选择光驱；其他平台请先把 CD 转成音频文件再导入。';
       default:
         return null;
     }
@@ -540867,6 +541405,21 @@ extension on _StringsZhHk {
         return ({required Object name}) => 'Connected to ${name}';
       case 'video_remote_line_actions':
         return 'Line actions';
+      case 'media_audio_cd_rip_title':
+        return 'Ripping audio CD';
+      case 'media_audio_cd_rip_reading':
+        return 'Reading the disc…';
+      case 'media_audio_cd_rip_progress':
+        return ({required Object current, required Object total}) =>
+            'Track ${current} of ${total}';
+      case 'media_audio_cd_rip_failed':
+        return ({required Object error}) =>
+            'Couldn\'t rip the audio CD: ${error}';
+      case 'media_audio_cd_rip_unreadable':
+        return ({required Object n}) =>
+            '${n} damaged sectors could not be read and were filled with silence';
+      case 'media_audio_cd_cda_unsupported':
+        return '.cda files are only CD track shortcuts and contain no audio. On Windows, insert the disc and choose the disc drive; elsewhere, rip the CD to audio files first.';
       default:
         return null;
     }
