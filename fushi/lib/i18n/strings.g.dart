@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120037 (7061 per locale)
+/// Strings: 120071 (7063 per locale)
 ///
-/// Built on 2026-10-13 at 04:03 UTC
+/// Built on 2026-10-13 at 04:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10167,6 +10167,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Text boxes the OCR isn\'t sure about will be cropped and sent to ${provider} to re-read, billed by that provider. The local OCR result and nearby text go along to help it decide. You can change this anytime in Settings › Models › OCR.';
   String get ocr_llm_default_accept => 'Turn on';
   String get ocr_llm_default_decline => 'Not now';
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -27188,6 +27191,11 @@ class _StringsAr extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -44599,6 +44607,11 @@ class _StringsDe extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -62070,6 +62083,11 @@ class _StringsEs extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -79620,6 +79638,11 @@ class _StringsFr extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -96825,6 +96848,11 @@ class _StringsId extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -114195,6 +114223,11 @@ class _StringsIt extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -130566,6 +130599,11 @@ class _StringsJa extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -146972,6 +147010,11 @@ class _StringsKo extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -164290,6 +164333,11 @@ class _StringsNl extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -181677,6 +181725,11 @@ class _StringsPtBr extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -199010,6 +199063,11 @@ class _StringsRu extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -216021,6 +216079,11 @@ class _StringsTh extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -233235,6 +233298,11 @@ class _StringsTr extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -250376,6 +250444,11 @@ class _StringsVi extends _StringsEn {
   String get ocr_llm_default_accept => 'Turn on';
   @override
   String get ocr_llm_default_decline => 'Not now';
+  @override
+  String get manga_ocr_ai_mode_pending =>
+      'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => 'Turn on now';
 }
 
 // Path: <root>
@@ -266056,6 +266129,10 @@ class _StringsZhCn extends _StringsEn {
   String get ocr_llm_default_accept => '开启';
   @override
   String get ocr_llm_default_decline => '不用';
+  @override
+  String get manga_ocr_ai_mode_pending => '尚未决定：第一次要发送没把握的文字时会询问。';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => '现在开启';
 }
 
 // Path: <root>
@@ -281872,6 +281949,10 @@ class _StringsZhHk extends _StringsEn {
   String get ocr_llm_default_accept => '開啟';
   @override
   String get ocr_llm_default_decline => '不用';
+  @override
+  String get manga_ocr_ai_mode_pending => '尚未決定：第一次要傳送沒把握的文字時會詢問。';
+  @override
+  String get manga_ocr_ai_mode_confirm_default => '現在開啟';
 }
 
 /// Flat map(s) containing all translations.
@@ -296512,6 +296593,10 @@ extension on _StringsEn {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -311147,6 +311232,10 @@ extension on _StringsAr {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -325858,6 +325947,10 @@ extension on _StringsDe {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -340551,6 +340644,10 @@ extension on _StringsEs {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -355262,6 +355359,10 @@ extension on _StringsFr {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -369917,6 +370018,10 @@ extension on _StringsId {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -384608,6 +384713,10 @@ extension on _StringsIt {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -399173,6 +399282,10 @@ extension on _StringsJa {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -413745,6 +413858,10 @@ extension on _StringsKo {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -428431,6 +428548,10 @@ extension on _StringsNl {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -443109,6 +443230,10 @@ extension on _StringsPtBr {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -457792,6 +457917,10 @@ extension on _StringsRu {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -472431,6 +472560,10 @@ extension on _StringsTh {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -487101,6 +487234,10 @@ extension on _StringsTr {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -501754,6 +501891,10 @@ extension on _StringsVi {
         return 'Turn on';
       case 'ocr_llm_default_decline':
         return 'Not now';
+      case 'manga_ocr_ai_mode_pending':
+        return 'Not decided yet: you\'ll be asked the first time uncertain text would be sent.';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return 'Turn on now';
       default:
         return null;
     }
@@ -516247,6 +516388,10 @@ extension on _StringsZhCn {
         return '开启';
       case 'ocr_llm_default_decline':
         return '不用';
+      case 'manga_ocr_ai_mode_pending':
+        return '尚未决定：第一次要发送没把握的文字时会询问。';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return '现在开启';
       default:
         return null;
     }
@@ -530757,6 +530902,10 @@ extension on _StringsZhHk {
         return '開啟';
       case 'ocr_llm_default_decline':
         return '不用';
+      case 'manga_ocr_ai_mode_pending':
+        return '尚未決定：第一次要傳送沒把握的文字時會詢問。';
+      case 'manga_ocr_ai_mode_confirm_default':
+        return '現在開啟';
       default:
         return null;
     }
