@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 119782 (7046 per locale)
+/// Strings: 120088 (7064 per locale)
 ///
-/// Built on 2026-10-12 at 18:01 UTC
+/// Built on 2026-10-13 at 05:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10140,6 +10140,32 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Transcribe and generate book';
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  String get feedback_fix_label => 'Fixed';
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  String get feedback_dev_fix_title => 'Fix';
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -27119,6 +27145,50 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -44488,6 +44558,50 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -61917,6 +62031,50 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -79425,6 +79583,50 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -96588,6 +96790,50 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -113916,6 +114162,50 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -130244,6 +130534,50 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -146608,6 +146942,50 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -163884,6 +164262,50 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -181229,6 +181651,50 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -198520,6 +198986,50 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -215489,6 +215999,50 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -232661,6 +233215,50 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -249760,6 +250358,50 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 // Path: <root>
@@ -265402,6 +266044,45 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。需要电脑版 Anki + AnkiConnect（手机可改连电脑上的 AnkiConnect）；AnkiDroid / AnkiMobile 无法重排。';
+  @override
+  String get feedback_fix_no_update_needed => '已修复，无需更新 App';
+  @override
+  String get feedback_fix_installed => '你当前的版本已包含这个修复';
+  @override
+  String get feedback_fix_installed_label => '当前版本已修复';
+  @override
+  String feedback_fix_released({required Object version}) => '已在 ${version} 修复';
+  @override
+  String get feedback_fix_next_stable => '已修复，将随下个正式版发布';
+  @override
+  String get feedback_fix_next_beta => '已修复，将随下个测试版发布';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      '调试版 ${version} 已包含，可切换到调试通道提前体验';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      '测试版 ${version} 已包含，可切换到测试通道提前体验';
+  @override
+  String get feedback_fix_building => '已修复，正在打包';
+  @override
+  String get feedback_fix_pending => '已修复，等待下个版本发布';
+  @override
+  String get feedback_fix_pending_stable => '已修复，等待下个正式版';
+  @override
+  String get feedback_fix_label => '已修复';
+  @override
+  String get feedback_fix_channel_debug_switch => '切换到调试通道';
+  @override
+  String get feedback_fix_channel_beta_switch => '切换到测试通道';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      '测试版没有正式版测试充分，可能有问题。切换到测试通道？';
+  @override
+  String get feedback_dev_fix_title => '修复';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => '提交 ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => '还没有发布包含它';
 }
 
 // Path: <root>
@@ -281180,6 +281861,50 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_anki_auto_reposition_hint =>
       'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+  @override
+  String get feedback_fix_no_update_needed => 'Fixed, no app update needed';
+  @override
+  String get feedback_fix_installed =>
+      'Your current version already includes this fix';
+  @override
+  String get feedback_fix_installed_label => 'Fixed in your version';
+  @override
+  String feedback_fix_released({required Object version}) =>
+      'Fixed in ${version}';
+  @override
+  String get feedback_fix_next_stable =>
+      'Fixed, will ship with the next stable release';
+  @override
+  String get feedback_fix_next_beta =>
+      'Fixed, will ship with the next beta release';
+  @override
+  String feedback_fix_faster_debug_available({required Object version}) =>
+      'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+  @override
+  String feedback_fix_faster_beta_available({required Object version}) =>
+      'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+  @override
+  String get feedback_fix_building => 'Fixed, the new build is being packaged';
+  @override
+  String get feedback_fix_pending => 'Fixed, waiting for the next release';
+  @override
+  String get feedback_fix_pending_stable =>
+      'Fixed, waiting for the next stable release';
+  @override
+  String get feedback_fix_label => 'Fixed';
+  @override
+  String get feedback_fix_channel_debug_switch => 'Switch to debug channel';
+  @override
+  String get feedback_fix_channel_beta_switch => 'Switch to beta channel';
+  @override
+  String get feedback_fix_channel_beta_switch_confirm =>
+      'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+  @override
+  String get feedback_dev_fix_title => 'Fix';
+  @override
+  String feedback_dev_fix_commit({required Object sha}) => 'Commit ${sha}';
+  @override
+  String get feedback_dev_fix_releases_empty => 'Not in any release yet';
 }
 
 /// Flat map(s) containing all translations.
@@ -295784,6 +296509,44 @@ extension on _StringsEn {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -310383,6 +311146,44 @@ extension on _StringsAr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -325058,6 +325859,44 @@ extension on _StringsDe {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -339715,6 +340554,44 @@ extension on _StringsEs {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -354390,6 +355267,44 @@ extension on _StringsFr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -369009,6 +369924,44 @@ extension on _StringsId {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -383664,6 +384617,44 @@ extension on _StringsIt {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -398193,6 +399184,44 @@ extension on _StringsJa {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -412729,6 +413758,44 @@ extension on _StringsKo {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -427379,6 +428446,44 @@ extension on _StringsNl {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -442021,6 +443126,44 @@ extension on _StringsPtBr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -456668,6 +457811,44 @@ extension on _StringsRu {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -471271,6 +472452,44 @@ extension on _StringsTh {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -485905,6 +487124,44 @@ extension on _StringsTr {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -500522,6 +501779,44 @@ extension on _StringsVi {
         return 'Transcribe and generate book';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
@@ -514979,6 +516274,42 @@ extension on _StringsZhCn {
         return '转录并生成书籍';
       case 'onboarding_anki_auto_reposition_hint':
         return '制卡约 30 秒后，自动把该牌组的新卡按词频排序，常见词先学，不动复习卡。需要电脑版 Anki + AnkiConnect（手机可改连电脑上的 AnkiConnect）；AnkiDroid / AnkiMobile 无法重排。';
+      case 'feedback_fix_no_update_needed':
+        return '已修复，无需更新 App';
+      case 'feedback_fix_installed':
+        return '你当前的版本已包含这个修复';
+      case 'feedback_fix_installed_label':
+        return '当前版本已修复';
+      case 'feedback_fix_released':
+        return ({required Object version}) => '已在 ${version} 修复';
+      case 'feedback_fix_next_stable':
+        return '已修复，将随下个正式版发布';
+      case 'feedback_fix_next_beta':
+        return '已修复，将随下个测试版发布';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) => '调试版 ${version} 已包含，可切换到调试通道提前体验';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) => '测试版 ${version} 已包含，可切换到测试通道提前体验';
+      case 'feedback_fix_building':
+        return '已修复，正在打包';
+      case 'feedback_fix_pending':
+        return '已修复，等待下个版本发布';
+      case 'feedback_fix_pending_stable':
+        return '已修复，等待下个正式版';
+      case 'feedback_fix_label':
+        return '已修复';
+      case 'feedback_fix_channel_debug_switch':
+        return '切换到调试通道';
+      case 'feedback_fix_channel_beta_switch':
+        return '切换到测试通道';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return '测试版没有正式版测试充分，可能有问题。切换到测试通道？';
+      case 'feedback_dev_fix_title':
+        return '修复';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => '提交 ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return '还没有发布包含它';
       default:
         return null;
     }
@@ -529453,6 +530784,44 @@ extension on _StringsZhHk {
         return '轉錄並生成書籍';
       case 'onboarding_anki_auto_reposition_hint':
         return 'About 30 seconds after you mine, new cards in that deck are reordered by word frequency so common words come first. Review cards are never touched. Needs desktop Anki with AnkiConnect (a phone can use it by connecting to AnkiConnect on a computer); AnkiDroid and AnkiMobile can\'t reorder cards.';
+      case 'feedback_fix_no_update_needed':
+        return 'Fixed, no app update needed';
+      case 'feedback_fix_installed':
+        return 'Your current version already includes this fix';
+      case 'feedback_fix_installed_label':
+        return 'Fixed in your version';
+      case 'feedback_fix_released':
+        return ({required Object version}) => 'Fixed in ${version}';
+      case 'feedback_fix_next_stable':
+        return 'Fixed, will ship with the next stable release';
+      case 'feedback_fix_next_beta':
+        return 'Fixed, will ship with the next beta release';
+      case 'feedback_fix_faster_debug_available':
+        return ({required Object version}) =>
+            'Debug build ${version} already includes it. Switch to the debug channel to try it early.';
+      case 'feedback_fix_faster_beta_available':
+        return ({required Object version}) =>
+            'Beta build ${version} already includes it. Switch to the beta channel to try it early.';
+      case 'feedback_fix_building':
+        return 'Fixed, the new build is being packaged';
+      case 'feedback_fix_pending':
+        return 'Fixed, waiting for the next release';
+      case 'feedback_fix_pending_stable':
+        return 'Fixed, waiting for the next stable release';
+      case 'feedback_fix_label':
+        return 'Fixed';
+      case 'feedback_fix_channel_debug_switch':
+        return 'Switch to debug channel';
+      case 'feedback_fix_channel_beta_switch':
+        return 'Switch to beta channel';
+      case 'feedback_fix_channel_beta_switch_confirm':
+        return 'Beta builds get less testing than stable releases and may have problems. Switch to the beta channel?';
+      case 'feedback_dev_fix_title':
+        return 'Fix';
+      case 'feedback_dev_fix_commit':
+        return ({required Object sha}) => 'Commit ${sha}';
+      case 'feedback_dev_fix_releases_empty':
+        return 'Not in any release yet';
       default:
         return null;
     }
