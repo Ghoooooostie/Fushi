@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 120343 (7079 per locale)
+/// Strings: 120377 (7081 per locale)
 ///
-/// Built on 2026-10-13 at 09:29 UTC
+/// Built on 2026-10-13 at 09:30 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10200,6 +10200,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_provider_api_keys_add => 'Add another API key';
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -27272,6 +27276,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -44734,6 +44744,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -62256,6 +62272,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -79857,6 +79879,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -97113,6 +97141,12 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -114534,6 +114568,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -130956,6 +130996,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -147413,6 +147459,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -164782,6 +164834,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -182220,6 +182278,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -199604,6 +199668,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -216666,6 +216736,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -233931,6 +234007,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -251123,6 +251205,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 // Path: <root>
@@ -266851,6 +266939,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       '配置多个密钥时，某个密钥被拒绝、限流或额度用尽，会自动换下一个重试；失败的密钥进入冷却，到期后再用。';
+  @override
+  String get video_setting_double_tap_toggles_playback => '双击画面播放/暂停';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      '触屏双击画面中间（或关闭双击快退快进时的任意位置）切换播放/暂停';
 }
 
 // Path: <root>
@@ -282723,6 +282816,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_provider_api_keys_summary =>
       'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+  @override
+  String get video_setting_double_tap_toggles_playback =>
+      'Double-tap video to play/pause';
+  @override
+  String get video_setting_double_tap_toggles_playback_hint =>
+      'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
 }
 
 /// Flat map(s) containing all translations.
@@ -297406,6 +297505,10 @@ extension on _StringsEn {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -312084,6 +312187,10 @@ extension on _StringsAr {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -326838,6 +326945,10 @@ extension on _StringsDe {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -341574,6 +341685,10 @@ extension on _StringsEs {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -356328,6 +356443,10 @@ extension on _StringsFr {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -371026,6 +371145,10 @@ extension on _StringsId {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -385760,6 +385883,10 @@ extension on _StringsIt {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -400368,6 +400495,10 @@ extension on _StringsJa {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -414983,6 +415114,10 @@ extension on _StringsKo {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -429712,6 +429847,10 @@ extension on _StringsNl {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -444433,6 +444572,10 @@ extension on _StringsPtBr {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -459159,6 +459302,10 @@ extension on _StringsRu {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -473841,6 +473988,10 @@ extension on _StringsTh {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -488554,6 +488705,10 @@ extension on _StringsTr {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -503250,6 +503405,10 @@ extension on _StringsVi {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
@@ -517782,6 +517941,10 @@ extension on _StringsZhCn {
         return '再添加一个 API 密钥';
       case 'ai_provider_api_keys_summary':
         return '配置多个密钥时，某个密钥被拒绝、限流或额度用尽，会自动换下一个重试；失败的密钥进入冷却，到期后再用。';
+      case 'video_setting_double_tap_toggles_playback':
+        return '双击画面播放/暂停';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return '触屏双击画面中间（或关闭双击快退快进时的任意位置）切换播放/暂停';
       default:
         return null;
     }
@@ -532335,6 +532498,10 @@ extension on _StringsZhHk {
         return 'Add another API key';
       case 'ai_provider_api_keys_summary':
         return 'With several keys, a request that is rejected, rate-limited or out of credit switches to the next key and retries; the failing key cools down and is tried again later.';
+      case 'video_setting_double_tap_toggles_playback':
+        return 'Double-tap video to play/pause';
+      case 'video_setting_double_tap_toggles_playback_hint':
+        return 'On touch screens, double-tapping the middle of the video (or anywhere when double-tap seek is off) toggles playback';
       default:
         return null;
     }
