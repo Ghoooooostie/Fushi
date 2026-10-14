@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126140 (7420 per locale)
+/// Strings: 126191 (7423 per locale)
 ///
-/// Built on 2026-10-14 at 05:12 UTC
+/// Built on 2026-10-14 at 05:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10718,6 +10718,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  String get external_book_open_existing => 'Open existing';
+  String get external_book_open_import_new => 'Import as new';
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -28648,6 +28652,13 @@ class _StringsAr extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -46968,6 +46979,13 @@ class _StringsDe extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -65348,6 +65366,13 @@ class _StringsEs extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -83807,6 +83832,13 @@ class _StringsFr extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -101921,6 +101953,13 @@ class _StringsId extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -120200,6 +120239,13 @@ class _StringsIt extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -137479,6 +137525,13 @@ class _StringsJa extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -154794,6 +154847,13 @@ class _StringsKo extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -173021,6 +173081,13 @@ class _StringsNl extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -191317,6 +191384,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -209559,6 +209633,13 @@ class _StringsRu extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -227479,6 +227560,13 @@ class _StringsTh extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -245602,6 +245690,13 @@ class _StringsTr extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -263652,6 +263747,13 @@ class _StringsVi extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 // Path: <root>
@@ -280136,6 +280238,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       '无法打开 ${name}，请改从书架导入。';
+  @override
+  String get external_book_open_existing => '打开已有';
+  @override
+  String get external_book_open_import_new => '作为新书导入';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      '书架中已有《${name}》。打开已有的那本，还是把这个文件作为新书导入（加序号后缀）？';
 }
 
 // Path: <root>
@@ -296858,6 +296967,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String external_book_open_failed({required Object name}) =>
       'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
 }
 
 /// Flat map(s) containing all translations.
@@ -312246,6 +312362,13 @@ extension on _StringsEn {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -327629,6 +327752,13 @@ extension on _StringsAr {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -343088,6 +343218,13 @@ extension on _StringsDe {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -358529,6 +358666,13 @@ extension on _StringsEs {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -373988,6 +374132,13 @@ extension on _StringsFr {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -389391,6 +389542,13 @@ extension on _StringsId {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -404830,6 +404988,13 @@ extension on _StringsIt {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -420143,6 +420308,13 @@ extension on _StringsJa {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -435463,6 +435635,13 @@ extension on _StringsKo {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -450897,6 +451076,13 @@ extension on _StringsNl {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -466323,6 +466509,13 @@ extension on _StringsPtBr {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -481754,6 +481947,13 @@ extension on _StringsRu {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -497141,6 +497341,13 @@ extension on _StringsTh {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -512559,6 +512766,13 @@ extension on _StringsTr {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -527960,6 +528174,13 @@ extension on _StringsVi {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
@@ -543190,6 +543411,13 @@ extension on _StringsZhCn {
         return ({required Object n}) => '已选中 ${n} 卷，将逐卷各导入为一本，书名取各自的文件名或文件夹名。';
       case 'external_book_open_failed':
         return ({required Object name}) => '无法打开 ${name}，请改从书架导入。';
+      case 'external_book_open_existing':
+        return '打开已有';
+      case 'external_book_open_import_new':
+        return '作为新书导入';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            '书架中已有《${name}》。打开已有的那本，还是把这个文件作为新书导入（加序号后缀）？';
       default:
         return null;
     }
@@ -558448,6 +558676,13 @@ extension on _StringsZhHk {
       case 'external_book_open_failed':
         return ({required Object name}) =>
             'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
       default:
         return null;
     }
