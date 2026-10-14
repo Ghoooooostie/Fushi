@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126106 (7418 per locale)
+/// Strings: 126208 (7424 per locale)
 ///
-/// Built on 2026-10-13 at 12:06 UTC
+/// Built on 2026-10-14 at 04:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10714,6 +10714,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_pause_ocr_scope_all => 'All videos';
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   String get video_setting_pause_ocr_scope_off => 'Off';
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -28638,6 +28649,23 @@ class _StringsAr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -46952,6 +46980,23 @@ class _StringsDe extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -65326,6 +65371,23 @@ class _StringsEs extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -83779,6 +83841,23 @@ class _StringsFr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -101887,6 +101966,23 @@ class _StringsId extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -120160,6 +120256,23 @@ class _StringsIt extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -137433,6 +137546,23 @@ class _StringsJa extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '画像字幕のみ';
   @override
   String get video_setting_pause_ocr_scope_off => 'オフ';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -154742,6 +154872,23 @@ class _StringsKo extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -172963,6 +173110,23 @@ class _StringsNl extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -191253,6 +191417,23 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -209489,6 +209670,23 @@ class _StringsRu extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -227403,6 +227601,23 @@ class _StringsTh extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -245520,6 +245735,23 @@ class _StringsTr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -263564,6 +263796,23 @@ class _StringsVi extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 // Path: <root>
@@ -280042,6 +280291,19 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '仅图片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '关闭';
+  @override
+  String get video_google_lens_disclosure_title => '将视频画面发送到 Google Lens？';
+  @override
+  String get video_google_lens_disclosure_body =>
+      '识别视频文字会把暂停的画面（含图片字幕）缩小为 JPEG 后发送给 Google。该接口并非官方公开 API，可能随时失效。只有同意后才会上传。';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint => '图片字幕需开启 OCR 识别才能点字查词';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => '开启';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing => '正在识别画面文字…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready => '已识别画面文字 · 点字查词';
 }
 
 // Path: <root>
@@ -296758,6 +297020,23 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '僅圖片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '關閉';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
 }
 
 /// Flat map(s) containing all translations.
@@ -312140,6 +312419,18 @@ extension on _StringsEn {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -327517,6 +327808,18 @@ extension on _StringsAr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -342970,6 +343273,18 @@ extension on _StringsDe {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -358405,6 +358720,18 @@ extension on _StringsEs {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -373858,6 +374185,18 @@ extension on _StringsFr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -389255,6 +389594,18 @@ extension on _StringsId {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -404688,6 +405039,18 @@ extension on _StringsIt {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -419995,6 +420358,18 @@ extension on _StringsJa {
         return '画像字幕のみ';
       case 'video_setting_pause_ocr_scope_off':
         return 'オフ';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -435309,6 +435684,18 @@ extension on _StringsKo {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -450737,6 +451124,18 @@ extension on _StringsNl {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -466157,6 +466556,18 @@ extension on _StringsPtBr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -481582,6 +481993,18 @@ extension on _StringsRu {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -496963,6 +497386,18 @@ extension on _StringsTh {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -512375,6 +512810,18 @@ extension on _StringsTr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -527770,6 +528217,18 @@ extension on _StringsVi {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
@@ -542996,6 +543455,18 @@ extension on _StringsZhCn {
         return '仅图片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '关闭';
+      case 'video_google_lens_disclosure_title':
+        return '将视频画面发送到 Google Lens？';
+      case 'video_google_lens_disclosure_body':
+        return '识别视频文字会把暂停的画面（含图片字幕）缩小为 JPEG 后发送给 Google。该接口并非官方公开 API，可能随时失效。只有同意后才会上传。';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return '图片字幕需开启 OCR 识别才能点字查词';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return '开启';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return '正在识别画面文字…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return '已识别画面文字 · 点字查词';
       default:
         return null;
     }
@@ -558248,6 +558719,18 @@ extension on _StringsZhHk {
         return '僅圖片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '關閉';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
       default:
         return null;
     }
