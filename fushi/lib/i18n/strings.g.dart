@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 126106 (7418 per locale)
 ///
-/// Built on 2026-10-13 at 12:06 UTC
+/// Built on 2026-10-14 at 04:30 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -885,7 +885,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_transcribe_unavailable =>
       'On-device transcription is not available on this platform';
   String get audiobook_transcribe_use_result => 'Use subtitles';
-  String get auto_add_book_name_to_tags => 'Auto-add book title to tags';
+  String get auto_add_book_name_to_tags => 'Auto-add work title to tags';
   String auto_chapter({required Object n}) => 'Chapter ${n}';
   String get auto_read_on_lookup => 'Auto read word on lookup';
   String get auto_search => 'Auto search';
@@ -121283,7 +121283,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_transcribe_use_result => '字幕を使用';
   @override
-  String get auto_add_book_name_to_tags => 'タグに本のタイトルを自動追加';
+  String get auto_add_book_name_to_tags => 'タグに作品名を自動追加';
   @override
   String auto_chapter({required Object n}) => '第 ${n} 章';
   @override
@@ -264635,7 +264635,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_transcribe_use_result => '使用字幕';
   @override
-  String get auto_add_book_name_to_tags => '自动添加书名到标签';
+  String get auto_add_book_name_to_tags => '自动添加作品名到标签';
   @override
   String auto_chapter({required Object n}) => '第 ${n} 章';
   @override
@@ -281117,7 +281117,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_use_result => '使用字幕';
   @override
-  String get auto_add_book_name_to_tags => '自動將書名加入標籤';
+  String get auto_add_book_name_to_tags => '自動將作品名加入標籤';
   @override
   String auto_chapter({required Object n}) => '第 ${n} 章';
   @override
@@ -297712,7 +297712,7 @@ extension on _StringsEn {
       case 'audiobook_transcribe_use_result':
         return 'Use subtitles';
       case 'auto_add_book_name_to_tags':
-        return 'Auto-add book title to tags';
+        return 'Auto-add work title to tags';
       case 'auto_chapter':
         return ({required Object n}) => 'Chapter ${n}';
       case 'auto_read_on_lookup':
@@ -405636,7 +405636,7 @@ extension on _StringsJa {
       case 'audiobook_transcribe_use_result':
         return '字幕を使用';
       case 'auto_add_book_name_to_tags':
-        return 'タグに本のタイトルを自動追加';
+        return 'タグに作品名を自動追加';
       case 'auto_chapter':
         return ({required Object n}) => '第 ${n} 章';
       case 'auto_read_on_lookup':
@@ -528712,7 +528712,7 @@ extension on _StringsZhCn {
       case 'audiobook_transcribe_use_result':
         return '使用字幕';
       case 'auto_add_book_name_to_tags':
-        return '自动添加书名到标签';
+        return '自动添加作品名到标签';
       case 'auto_chapter':
         return ({required Object n}) => '第 ${n} 章';
       case 'auto_read_on_lookup':
@@ -543938,7 +543938,7 @@ extension on _StringsZhHk {
       case 'audiobook_transcribe_use_result':
         return '使用字幕';
       case 'auto_add_book_name_to_tags':
-        return '自動將書名加入標籤';
+        return '自動將作品名加入標籤';
       case 'auto_chapter':
         return ({required Object n}) => '第 ${n} 章';
       case 'auto_read_on_lookup':
