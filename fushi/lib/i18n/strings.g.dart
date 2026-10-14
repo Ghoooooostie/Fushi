@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 129574 (7622 per locale)
+/// Strings: 130526 (7678 per locale)
 ///
-/// Built on 2026-10-14 at 15:58 UTC
+/// Built on 2026-10-14 at 18:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10816,7 +10816,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get nav_srs => 'Review';
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-  String get srs_import_coming_soon => 'Import is coming soon';
   String get srs_import => 'Import';
   String get srs_count_new => 'New';
   String get srs_count_learn => 'Learning';
@@ -10988,6 +10987,102 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Add your first card from the deck list';
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  String get srs_status_suspended => 'Suspended';
+  String get srs_status_new => 'New card';
+  String get srs_status_learning => 'Learning';
+  String get srs_status_due => 'Due today';
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  String get srs_mining_target_title => 'Mining target';
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  String get srs_mining_target_anki => 'Anki';
+  String get srs_mining_target_srs => 'Fushi review';
+  String get srs_mining_target_both => 'Both';
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  String get srs_sync_now => 'Sync now';
+  String get srs_sync_done => 'Review data synced';
+  String get srs_sync_no_backend => 'No sync service is set up';
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  String get srs_history_import => 'Import from mining history';
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  String get srs_export_done => 'Exported';
+  String get srs_export_failed => 'Export failed';
+  String get srs_import_pick_title => 'Import Anki package';
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  String get srs_import_running => 'Importing…';
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  String get srs_import_report_title => 'Import finished';
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  String get srs_settings_optimize_now => 'Optimize now';
+  String get srs_settings_optimize_running => 'Optimizing…';
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  String get srs_settings_reset_params => 'Restore default parameters';
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -29083,8 +29178,6 @@ class _StringsAr extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -29391,6 +29484,159 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -47876,8 +48122,6 @@ class _StringsDe extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -48184,6 +48428,159 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -66729,8 +67126,6 @@ class _StringsEs extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -67037,6 +67432,159 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -85662,8 +86210,6 @@ class _StringsFr extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -85970,6 +86516,159 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -104248,8 +104947,6 @@ class _StringsId extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -104556,6 +105253,159 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -123000,8 +123850,6 @@ class _StringsIt extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -123308,6 +124156,159 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -140752,8 +141753,6 @@ class _StringsJa extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -141060,6 +142059,159 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -158539,8 +159691,6 @@ class _StringsKo extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -158847,6 +159997,159 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -177239,8 +178542,6 @@ class _StringsNl extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -177547,6 +178848,159 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -196008,8 +197462,6 @@ class _StringsPtBr extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -196316,6 +197768,159 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -214722,8 +216327,6 @@ class _StringsRu extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -215030,6 +216633,159 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -233114,8 +234870,6 @@ class _StringsTh extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -233422,6 +235176,159 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -251709,8 +253616,6 @@ class _StringsTr extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -252017,6 +253922,159 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -270231,8 +272289,6 @@ class _StringsVi extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -270539,6 +272595,159 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 // Path: <root>
@@ -287169,8 +289378,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_module_switch_hint => 'Fushi 内置间隔复习：牌组、FSRS-7 排程、多设备复习';
   @override
-  String get srs_import_coming_soon => '导入即将提供';
-  @override
   String get srs_import => '导入';
   @override
   String get srs_count_new => '新卡';
@@ -287451,6 +289658,146 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi 内置复习已默认使用 FSRS-7。只有你还要在 Anki 里复习时，才需要下面这几步。';
+  @override
+  String srs_media_missing({required Object name}) => '找不到媒体文件：${name}';
+  @override
+  String get srs_status_suspended => '已暂停';
+  @override
+  String get srs_status_new => '新卡';
+  @override
+  String get srs_status_learning => '学习中';
+  @override
+  String get srs_status_due => '今天到期';
+  @override
+  String srs_status_review_in({required Object n}) => '复习中 · ${n}天后';
+  @override
+  String get srs_status_open_tooltip => '在 Fushi 复习中打开';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      '在 Fushi 复习中打开（${n} 张卡）';
+  @override
+  String get srs_mining_target_title => '挖词目标';
+  @override
+  String get srs_mining_target_hint => '制卡时卡片发往哪里';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi 复习';
+  @override
+  String get srs_mining_target_both => '两者都推';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki 与 Fushi 复习会各自为同一个词安排复习（重复排程）。';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
+  @override
+  String get srs_sync_now => '立即同步';
+  @override
+  String get srs_sync_done => '复习数据已同步';
+  @override
+  String get srs_sync_no_backend => '还没有配置同步服务';
+  @override
+  String get srs_sync_backend_unsupported => '当前同步后端不支持复习数据同步';
+  @override
+  String get srs_sync_clock_skew => '系统时间不准（偏差超过 10 分钟），复习记录改按同步服务器的时间记。';
+  @override
+  String get srs_history_import => '从制卡历史导入';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      '将把以前的制卡记录（词、读音、释义、例句）导入到当前 profile「${profile}」的默认牌组。已导入过的不会重复导入。';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => '已导入 ${n} 条，跳过 ${skipped} 条';
+  @override
+  String get srs_export_apkg => '导出到 Anki（.apkg）';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki 里会改用 FSRS-6，建议导入后在 Anki 的牌组选项里点一次「优化」。';
+  @override
+  String get srs_export_done => '已导出';
+  @override
+  String get srs_export_failed => '导出失败';
+  @override
+  String get srs_import_pick_title => '导入 Anki 包';
+  @override
+  String get srs_import_update_existing => '用导入内容更新已有笔记';
+  @override
+  String get srs_import_update_existing_hint => '关闭时，已存在的笔记保留本地内容';
+  @override
+  String get srs_import_running => '正在导入…';
+  @override
+  String get srs_import_needs_kernel => '这个包是 Anki 新格式，需要排程内核；本设备上排程内核不可用。';
+  @override
+  String srs_import_failed({required Object error}) => '导入失败：${error}';
+  @override
+  String get srs_import_report_title => '导入完成';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => '笔记：新增 ${added}，更新 ${updated}，未改动 ${skipped}';
+  @override
+  String srs_import_report_cards({required Object n}) => '新增卡片：${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) => '导入复习记录：${n} 条';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      '恢复 Fushi 复习记录：${n} 条';
+  @override
+  String srs_import_report_media({required Object n}) => '存入媒体文件：${n} 个';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '有 ${n} 个被引用的媒体文件不在包里';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) => '牌组「${preset}」的步长 ${removed} 已移除，改由 FSRS 安排';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      '预设「${preset}」原用 RWKV，已改用 FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      '预设「${preset}」的参数无效，未导入';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '有 ${n} 条笔记因笔记类型冲突未导入';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '来源里删掉的 ${n} 个字段 / 模板在本机保留';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '有 ${n} 张卡的排程时间在未来，导入时没带排程';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => '上次优化：${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never => '尚未优化，正在使用默认参数';
+  @override
+  String get srs_settings_optimize_now => '立即优化';
+  @override
+  String get srs_settings_optimize_running => '正在优化…';
+  @override
+  String get srs_settings_optimize_done => '排程参数已更新';
+  @override
+  String get srs_settings_optimize_kept => '当前参数已经最合适，没有改动';
+  @override
+  String get srs_settings_optimize_not_enough => '复习记录还不够，暂时无法优化';
+  @override
+  String get srs_settings_reset_params => '恢复默认参数';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      '这个牌组改用默认排程参数？自动优化会等积累更多复习之后再跑。';
+  @override
+  String get srs_settings_reset_params_done => '已恢复默认参数';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect（Fushi 复习）';
 }
 
 // Path: <root>
@@ -304338,8 +306685,6 @@ class _StringsZhHk extends _StringsEn {
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
   @override
-  String get srs_import_coming_soon => 'Import is coming soon';
-  @override
   String get srs_import => 'Import';
   @override
   String get srs_count_new => 'New';
@@ -304646,6 +306991,159 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_anki_fsrs_srs_note =>
       'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+  @override
+  String srs_media_missing({required Object name}) =>
+      'Media file not found: ${name}';
+  @override
+  String get srs_status_suspended => 'Suspended';
+  @override
+  String get srs_status_new => 'New card';
+  @override
+  String get srs_status_learning => 'Learning';
+  @override
+  String get srs_status_due => 'Due today';
+  @override
+  String srs_status_review_in({required Object n}) => 'Review in ${n} days';
+  @override
+  String get srs_status_open_tooltip => 'Open in Fushi review';
+  @override
+  String srs_status_open_tooltip_many({required Object n}) =>
+      'Open in Fushi review (${n} cards)';
+  @override
+  String get srs_mining_target_title => 'Mining target';
+  @override
+  String get srs_mining_target_hint => 'Where a card goes when you mine a word';
+  @override
+  String get srs_mining_target_anki => 'Anki';
+  @override
+  String get srs_mining_target_srs => 'Fushi review';
+  @override
+  String get srs_mining_target_both => 'Both';
+  @override
+  String get srs_mining_target_both_warning =>
+      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+  @override
+  String srs_ankiconnect_hint({required Object port}) =>
+      'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+  @override
+  String get srs_sync_now => 'Sync now';
+  @override
+  String get srs_sync_done => 'Review data synced';
+  @override
+  String get srs_sync_no_backend => 'No sync service is set up';
+  @override
+  String get srs_sync_backend_unsupported =>
+      'The current sync service doesn\'t support syncing review data';
+  @override
+  String get srs_sync_clock_skew =>
+      'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+  @override
+  String get srs_history_import => 'Import from mining history';
+  @override
+  String srs_history_import_confirm({required Object profile}) =>
+      'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+  @override
+  String srs_history_import_done({
+    required Object n,
+    required Object skipped,
+  }) => 'Imported ${n}, skipped ${skipped}';
+  @override
+  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  @override
+  String get srs_export_fsrs7_note =>
+      'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+  @override
+  String get srs_export_done => 'Exported';
+  @override
+  String get srs_export_failed => 'Export failed';
+  @override
+  String get srs_import_pick_title => 'Import Anki package';
+  @override
+  String get srs_import_update_existing =>
+      'Update existing notes with imported content';
+  @override
+  String get srs_import_update_existing_hint =>
+      'When off, notes that already exist keep your local changes';
+  @override
+  String get srs_import_running => 'Importing…';
+  @override
+  String get srs_import_needs_kernel =>
+      'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+  @override
+  String srs_import_failed({required Object error}) =>
+      'Import failed: ${error}';
+  @override
+  String get srs_import_report_title => 'Import finished';
+  @override
+  String srs_import_report_notes({
+    required Object added,
+    required Object updated,
+    required Object skipped,
+  }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+  @override
+  String srs_import_report_cards({required Object n}) => 'Cards added: ${n}';
+  @override
+  String srs_import_report_reviews({required Object n}) =>
+      'Review history imported: ${n} entries';
+  @override
+  String srs_import_report_fushi_restored({required Object n}) =>
+      'Fushi review history restored: ${n} entries';
+  @override
+  String srs_import_report_media({required Object n}) =>
+      'Media files stored: ${n}';
+  @override
+  String srs_import_report_media_missing({required Object n}) =>
+      '${n} referenced media files are missing from the package';
+  @override
+  String srs_import_report_steps_removed({
+    required Object preset,
+    required Object removed,
+  }) =>
+      'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+  @override
+  String srs_import_report_rwkv({required Object preset}) =>
+      'Preset "${preset}" used RWKV and now uses FSRS';
+  @override
+  String srs_import_report_invalid_params({required Object preset}) =>
+      'Preset "${preset}": its parameters were invalid and were not imported';
+  @override
+  String srs_import_report_conflicts({required Object n}) =>
+      '${n} notes were not imported because their note type conflicts';
+  @override
+  String srs_import_report_removed({required Object n}) =>
+      '${n} fields or templates deleted in the source are kept here';
+  @override
+  String srs_import_report_future({required Object n}) =>
+      '${n} cards have times in the future and were imported without their schedule';
+  @override
+  String srs_settings_optimize_last({
+    required Object time,
+    required Object loss,
+  }) => 'Last optimized ${time} · log loss ${loss}';
+  @override
+  String get srs_settings_optimize_never =>
+      'Not optimized yet; using the default parameters';
+  @override
+  String get srs_settings_optimize_now => 'Optimize now';
+  @override
+  String get srs_settings_optimize_running => 'Optimizing…';
+  @override
+  String get srs_settings_optimize_done => 'Scheduling parameters updated';
+  @override
+  String get srs_settings_optimize_kept =>
+      'The current parameters already fit best; nothing changed';
+  @override
+  String get srs_settings_optimize_not_enough =>
+      'Not enough review history to optimize yet';
+  @override
+  String get srs_settings_reset_params => 'Restore default parameters';
+  @override
+  String get srs_settings_reset_params_confirm =>
+      'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+  @override
+  String get srs_settings_reset_params_done => 'Default parameters restored';
+  @override
+  String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
 }
 
 /// Flat map(s) containing all translations.
@@ -320166,8 +322664,6 @@ extension on _StringsEn {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -320446,6 +322942,136 @@ extension on _StringsEn {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -335961,8 +338587,6 @@ extension on _StringsAr {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -336241,6 +338865,136 @@ extension on _StringsAr {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -351832,8 +354586,6 @@ extension on _StringsDe {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -352112,6 +354864,136 @@ extension on _StringsDe {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -367685,8 +370567,6 @@ extension on _StringsEs {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -367965,6 +370845,136 @@ extension on _StringsEs {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -383556,8 +386566,6 @@ extension on _StringsFr {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -383836,6 +386844,136 @@ extension on _StringsFr {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -399371,8 +402509,6 @@ extension on _StringsId {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -399651,6 +402787,136 @@ extension on _StringsId {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -415222,8 +418488,6 @@ extension on _StringsIt {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -415502,6 +418766,136 @@ extension on _StringsIt {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -430947,8 +434341,6 @@ extension on _StringsJa {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -431227,6 +434619,136 @@ extension on _StringsJa {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -446679,8 +450201,6 @@ extension on _StringsKo {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -446959,6 +450479,136 @@ extension on _StringsKo {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -462525,8 +466175,6 @@ extension on _StringsNl {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -462805,6 +466453,136 @@ extension on _StringsNl {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -478363,8 +482141,6 @@ extension on _StringsPtBr {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -478643,6 +482419,136 @@ extension on _StringsPtBr {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -494206,8 +498112,6 @@ extension on _StringsRu {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -494486,6 +498390,136 @@ extension on _StringsRu {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -510005,8 +514039,6 @@ extension on _StringsTh {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -510285,6 +514317,136 @@ extension on _StringsTh {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -525835,8 +529997,6 @@ extension on _StringsTr {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -526115,6 +530275,136 @@ extension on _StringsTr {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -541648,8 +545938,6 @@ extension on _StringsVi {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -541928,6 +546216,136 @@ extension on _StringsVi {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
@@ -557290,8 +561708,6 @@ extension on _StringsZhCn {
         return '复习';
       case 'srs_module_switch_hint':
         return 'Fushi 内置间隔复习：牌组、FSRS-7 排程、多设备复习';
-      case 'srs_import_coming_soon':
-        return '导入即将提供';
       case 'srs_import':
         return '导入';
       case 'srs_count_new':
@@ -557567,6 +561983,129 @@ extension on _StringsZhCn {
         return '从牌组列表添加第一张卡';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi 内置复习已默认使用 FSRS-7。只有你还要在 Anki 里复习时，才需要下面这几步。';
+      case 'srs_media_missing':
+        return ({required Object name}) => '找不到媒体文件：${name}';
+      case 'srs_status_suspended':
+        return '已暂停';
+      case 'srs_status_new':
+        return '新卡';
+      case 'srs_status_learning':
+        return '学习中';
+      case 'srs_status_due':
+        return '今天到期';
+      case 'srs_status_review_in':
+        return ({required Object n}) => '复习中 · ${n}天后';
+      case 'srs_status_open_tooltip':
+        return '在 Fushi 复习中打开';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => '在 Fushi 复习中打开（${n} 张卡）';
+      case 'srs_mining_target_title':
+        return '挖词目标';
+      case 'srs_mining_target_hint':
+        return '制卡时卡片发往哪里';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi 复习';
+      case 'srs_mining_target_both':
+        return '两者都推';
+      case 'srs_mining_target_both_warning':
+        return 'Anki 与 Fushi 复习会各自为同一个词安排复习（重复排程）。';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
+      case 'srs_sync_now':
+        return '立即同步';
+      case 'srs_sync_done':
+        return '复习数据已同步';
+      case 'srs_sync_no_backend':
+        return '还没有配置同步服务';
+      case 'srs_sync_backend_unsupported':
+        return '当前同步后端不支持复习数据同步';
+      case 'srs_sync_clock_skew':
+        return '系统时间不准（偏差超过 10 分钟），复习记录改按同步服务器的时间记。';
+      case 'srs_history_import':
+        return '从制卡历史导入';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            '将把以前的制卡记录（词、读音、释义、例句）导入到当前 profile「${profile}」的默认牌组。已导入过的不会重复导入。';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            '已导入 ${n} 条，跳过 ${skipped} 条';
+      case 'srs_export_apkg':
+        return '导出到 Anki（.apkg）';
+      case 'srs_export_fsrs7_note':
+        return 'Anki 里会改用 FSRS-6，建议导入后在 Anki 的牌组选项里点一次「优化」。';
+      case 'srs_export_done':
+        return '已导出';
+      case 'srs_export_failed':
+        return '导出失败';
+      case 'srs_import_pick_title':
+        return '导入 Anki 包';
+      case 'srs_import_update_existing':
+        return '用导入内容更新已有笔记';
+      case 'srs_import_update_existing_hint':
+        return '关闭时，已存在的笔记保留本地内容';
+      case 'srs_import_running':
+        return '正在导入…';
+      case 'srs_import_needs_kernel':
+        return '这个包是 Anki 新格式，需要排程内核；本设备上排程内核不可用。';
+      case 'srs_import_failed':
+        return ({required Object error}) => '导入失败：${error}';
+      case 'srs_import_report_title':
+        return '导入完成';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => '笔记：新增 ${added}，更新 ${updated}，未改动 ${skipped}';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => '新增卡片：${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => '导入复习记录：${n} 条';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) => '恢复 Fushi 复习记录：${n} 条';
+      case 'srs_import_report_media':
+        return ({required Object n}) => '存入媒体文件：${n} 个';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) => '有 ${n} 个被引用的媒体文件不在包里';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            '牌组「${preset}」的步长 ${removed} 已移除，改由 FSRS 安排';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) => '预设「${preset}」原用 RWKV，已改用 FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) => '预设「${preset}」的参数无效，未导入';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) => '有 ${n} 条笔记因笔记类型冲突未导入';
+      case 'srs_import_report_removed':
+        return ({required Object n}) => '来源里删掉的 ${n} 个字段 / 模板在本机保留';
+      case 'srs_import_report_future':
+        return ({required Object n}) => '有 ${n} 张卡的排程时间在未来，导入时没带排程';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            '上次优化：${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return '尚未优化，正在使用默认参数';
+      case 'srs_settings_optimize_now':
+        return '立即优化';
+      case 'srs_settings_optimize_running':
+        return '正在优化…';
+      case 'srs_settings_optimize_done':
+        return '排程参数已更新';
+      case 'srs_settings_optimize_kept':
+        return '当前参数已经最合适，没有改动';
+      case 'srs_settings_optimize_not_enough':
+        return '复习记录还不够，暂时无法优化';
+      case 'srs_settings_reset_params':
+        return '恢复默认参数';
+      case 'srs_settings_reset_params_confirm':
+        return '这个牌组改用默认排程参数？自动优化会等积累更多复习之后再跑。';
+      case 'srs_settings_reset_params_done':
+        return '已恢复默认参数';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect（Fushi 复习）';
       default:
         return null;
     }
@@ -572957,8 +577496,6 @@ extension on _StringsZhHk {
         return 'Review';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
-      case 'srs_import_coming_soon':
-        return 'Import is coming soon';
       case 'srs_import':
         return 'Import';
       case 'srs_count_new':
@@ -573237,6 +577774,136 @@ extension on _StringsZhHk {
         return 'Add your first card from the deck list';
       case 'onboarding_anki_fsrs_srs_note':
         return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
+      case 'srs_media_missing':
+        return ({required Object name}) => 'Media file not found: ${name}';
+      case 'srs_status_suspended':
+        return 'Suspended';
+      case 'srs_status_new':
+        return 'New card';
+      case 'srs_status_learning':
+        return 'Learning';
+      case 'srs_status_due':
+        return 'Due today';
+      case 'srs_status_review_in':
+        return ({required Object n}) => 'Review in ${n} days';
+      case 'srs_status_open_tooltip':
+        return 'Open in Fushi review';
+      case 'srs_status_open_tooltip_many':
+        return ({required Object n}) => 'Open in Fushi review (${n} cards)';
+      case 'srs_mining_target_title':
+        return 'Mining target';
+      case 'srs_mining_target_hint':
+        return 'Where a card goes when you mine a word';
+      case 'srs_mining_target_anki':
+        return 'Anki';
+      case 'srs_mining_target_srs':
+        return 'Fushi review';
+      case 'srs_mining_target_both':
+        return 'Both';
+      case 'srs_mining_target_both_warning':
+        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
+      case 'srs_ankiconnect_hint':
+        return ({required Object port}) =>
+            'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
+      case 'srs_sync_now':
+        return 'Sync now';
+      case 'srs_sync_done':
+        return 'Review data synced';
+      case 'srs_sync_no_backend':
+        return 'No sync service is set up';
+      case 'srs_sync_backend_unsupported':
+        return 'The current sync service doesn\'t support syncing review data';
+      case 'srs_sync_clock_skew':
+        return 'Your system clock is off by more than 10 minutes. Review times follow the sync server instead.';
+      case 'srs_history_import':
+        return 'Import from mining history';
+      case 'srs_history_import_confirm':
+        return ({required Object profile}) =>
+            'Words you mined before (word, reading, definition, sentence) will be added to the default deck of the current profile "${profile}". Words already imported are skipped.';
+      case 'srs_history_import_done':
+        return ({required Object n, required Object skipped}) =>
+            'Imported ${n}, skipped ${skipped}';
+      case 'srs_export_apkg':
+        return 'Export to Anki (.apkg)';
+      case 'srs_export_fsrs7_note':
+        return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
+      case 'srs_export_done':
+        return 'Exported';
+      case 'srs_export_failed':
+        return 'Export failed';
+      case 'srs_import_pick_title':
+        return 'Import Anki package';
+      case 'srs_import_update_existing':
+        return 'Update existing notes with imported content';
+      case 'srs_import_update_existing_hint':
+        return 'When off, notes that already exist keep your local changes';
+      case 'srs_import_running':
+        return 'Importing…';
+      case 'srs_import_needs_kernel':
+        return 'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
+      case 'srs_import_failed':
+        return ({required Object error}) => 'Import failed: ${error}';
+      case 'srs_import_report_title':
+        return 'Import finished';
+      case 'srs_import_report_notes':
+        return ({
+          required Object added,
+          required Object updated,
+          required Object skipped,
+        }) => 'Notes: ${added} added, ${updated} updated, ${skipped} unchanged';
+      case 'srs_import_report_cards':
+        return ({required Object n}) => 'Cards added: ${n}';
+      case 'srs_import_report_reviews':
+        return ({required Object n}) => 'Review history imported: ${n} entries';
+      case 'srs_import_report_fushi_restored':
+        return ({required Object n}) =>
+            'Fushi review history restored: ${n} entries';
+      case 'srs_import_report_media':
+        return ({required Object n}) => 'Media files stored: ${n}';
+      case 'srs_import_report_media_missing':
+        return ({required Object n}) =>
+            '${n} referenced media files are missing from the package';
+      case 'srs_import_report_steps_removed':
+        return ({required Object preset, required Object removed}) =>
+            'Deck "${preset}": steps ${removed} were removed and are now scheduled by FSRS';
+      case 'srs_import_report_rwkv':
+        return ({required Object preset}) =>
+            'Preset "${preset}" used RWKV and now uses FSRS';
+      case 'srs_import_report_invalid_params':
+        return ({required Object preset}) =>
+            'Preset "${preset}": its parameters were invalid and were not imported';
+      case 'srs_import_report_conflicts':
+        return ({required Object n}) =>
+            '${n} notes were not imported because their note type conflicts';
+      case 'srs_import_report_removed':
+        return ({required Object n}) =>
+            '${n} fields or templates deleted in the source are kept here';
+      case 'srs_import_report_future':
+        return ({required Object n}) =>
+            '${n} cards have times in the future and were imported without their schedule';
+      case 'srs_settings_optimize_last':
+        return ({required Object time, required Object loss}) =>
+            'Last optimized ${time} · log loss ${loss}';
+      case 'srs_settings_optimize_never':
+        return 'Not optimized yet; using the default parameters';
+      case 'srs_settings_optimize_now':
+        return 'Optimize now';
+      case 'srs_settings_optimize_running':
+        return 'Optimizing…';
+      case 'srs_settings_optimize_done':
+        return 'Scheduling parameters updated';
+      case 'srs_settings_optimize_kept':
+        return 'The current parameters already fit best; nothing changed';
+      case 'srs_settings_optimize_not_enough':
+        return 'Not enough review history to optimize yet';
+      case 'srs_settings_reset_params':
+        return 'Restore default parameters';
+      case 'srs_settings_reset_params_confirm':
+        return 'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
+      case 'srs_settings_reset_params_done':
+        return 'Default parameters restored';
+      case 'srs_ankiconnect_title':
+        return 'AnkiConnect for Fushi review';
       default:
         return null;
     }
