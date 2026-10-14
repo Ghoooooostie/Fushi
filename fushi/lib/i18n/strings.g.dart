@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126106 (7418 per locale)
+/// Strings: 126157 (7421 per locale)
 ///
-/// Built on 2026-10-13 at 12:06 UTC
+/// Built on 2026-10-14 at 04:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10714,6 +10714,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_pause_ocr_scope_all => 'All videos';
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   String get video_setting_pause_ocr_scope_off => 'Off';
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -28638,6 +28643,14 @@ class _StringsAr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -46952,6 +46965,14 @@ class _StringsDe extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -65326,6 +65347,14 @@ class _StringsEs extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -83779,6 +83808,14 @@ class _StringsFr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -101887,6 +101924,14 @@ class _StringsId extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -120160,6 +120205,14 @@ class _StringsIt extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -137433,6 +137486,14 @@ class _StringsJa extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '画像字幕のみ';
   @override
   String get video_setting_pause_ocr_scope_off => 'オフ';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -154742,6 +154803,14 @@ class _StringsKo extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -172963,6 +173032,14 @@ class _StringsNl extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -191253,6 +191330,14 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -209489,6 +209574,14 @@ class _StringsRu extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -227403,6 +227496,14 @@ class _StringsTh extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -245520,6 +245621,14 @@ class _StringsTr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -263564,6 +263673,14 @@ class _StringsVi extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 // Path: <root>
@@ -280042,6 +280159,13 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '仅图片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '关闭';
+  @override
+  String get lyrics_sentence_replay => '重播当前句';
+  @override
+  String get lookup_popup_close_after_mining => '制卡后关闭查词弹窗';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      '制卡成功（或进入待发队列）后关掉整个查词弹窗，不再挡住正文';
 }
 
 // Path: <root>
@@ -296758,6 +296882,14 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '僅圖片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '關閉';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
 }
 
 /// Flat map(s) containing all translations.
@@ -312140,6 +312272,12 @@ extension on _StringsEn {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -327517,6 +327655,12 @@ extension on _StringsAr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -342970,6 +343114,12 @@ extension on _StringsDe {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -358405,6 +358555,12 @@ extension on _StringsEs {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -373858,6 +374014,12 @@ extension on _StringsFr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -389255,6 +389417,12 @@ extension on _StringsId {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -404688,6 +404856,12 @@ extension on _StringsIt {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -419995,6 +420169,12 @@ extension on _StringsJa {
         return '画像字幕のみ';
       case 'video_setting_pause_ocr_scope_off':
         return 'オフ';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -435309,6 +435489,12 @@ extension on _StringsKo {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -450737,6 +450923,12 @@ extension on _StringsNl {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -466157,6 +466349,12 @@ extension on _StringsPtBr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -481582,6 +481780,12 @@ extension on _StringsRu {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -496963,6 +497167,12 @@ extension on _StringsTh {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -512375,6 +512585,12 @@ extension on _StringsTr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -527770,6 +527986,12 @@ extension on _StringsVi {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
@@ -542996,6 +543218,12 @@ extension on _StringsZhCn {
         return '仅图片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '关闭';
+      case 'lyrics_sentence_replay':
+        return '重播当前句';
+      case 'lookup_popup_close_after_mining':
+        return '制卡后关闭查词弹窗';
+      case 'lookup_popup_close_after_mining_hint':
+        return '制卡成功（或进入待发队列）后关掉整个查词弹窗，不再挡住正文';
       default:
         return null;
     }
@@ -558248,6 +558476,12 @@ extension on _StringsZhHk {
         return '僅圖片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '關閉';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
       default:
         return null;
     }
