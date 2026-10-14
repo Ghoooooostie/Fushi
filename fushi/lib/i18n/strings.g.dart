@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126106 (7418 per locale)
+/// Strings: 126888 (7464 per locale)
 ///
-/// Built on 2026-10-13 at 12:06 UTC
+/// Built on 2026-10-14 at 04:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10714,6 +10714,72 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_pause_ocr_scope_all => 'All videos';
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   String get video_setting_pause_ocr_scope_off => 'Off';
+  String get popup_advanced_mining_button => 'Advanced mining';
+  String get popup_advanced_mining_title => 'Advanced mining';
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  String get popup_advanced_mining_deck_section => 'Deck';
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  String get popup_advanced_mining_audio_none => 'None';
+  String get popup_advanced_mining_audio_start => 'Start';
+  String get popup_advanced_mining_audio_end => 'End';
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  String get popup_advanced_mining_audio_later => 'Later';
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  String get popup_advanced_mining_image_section => 'Image';
+  String get popup_advanced_mining_image_none => 'None';
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -28638,6 +28704,118 @@ class _StringsAr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -46952,6 +47130,118 @@ class _StringsDe extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -65326,6 +65616,118 @@ class _StringsEs extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -83779,6 +84181,118 @@ class _StringsFr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -101887,6 +102401,118 @@ class _StringsId extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -120160,6 +120786,118 @@ class _StringsIt extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -137433,6 +138171,118 @@ class _StringsJa extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '画像字幕のみ';
   @override
   String get video_setting_pause_ocr_scope_off => 'オフ';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -154742,6 +155592,118 @@ class _StringsKo extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -172963,6 +173925,118 @@ class _StringsNl extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -191253,6 +192327,118 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -209489,6 +210675,118 @@ class _StringsRu extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -227403,6 +228701,118 @@ class _StringsTh extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -245520,6 +246930,118 @@ class _StringsTr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -263564,6 +265086,118 @@ class _StringsVi extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 // Path: <root>
@@ -280042,6 +281676,107 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '仅图片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '关闭';
+  @override
+  String get popup_advanced_mining_button => '高级制卡';
+  @override
+  String get popup_advanced_mining_title => '高级制卡';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      '查词 · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => '句子';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '已选 ${count} 句';
+  @override
+  String get popup_advanced_mining_deck_section => '卡组';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => '只对这张卡生效';
+  @override
+  String get popup_advanced_mining_deck_set_default => '同时设为默认卡组';
+  @override
+  String get popup_advanced_mining_deck_unavailable => '连上 Anki 后才能选择卡组';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint => '覆写已有卡时卡片留在原卡组';
+  @override
+  String get popup_advanced_mining_audio_section => '句子音频';
+  @override
+  String get popup_advanced_mining_audio_follow => '跟随句子';
+  @override
+  String get popup_advanced_mining_audio_none => '不要';
+  @override
+  String get popup_advanced_mining_audio_start => '起点';
+  @override
+  String get popup_advanced_mining_audio_end => '终点';
+  @override
+  String get popup_advanced_mining_audio_earlier => '提前';
+  @override
+  String get popup_advanced_mining_audio_later => '推后';
+  @override
+  String get popup_advanced_mining_audio_unavailable => '这几句没有可用的音频';
+  @override
+  String get popup_advanced_mining_audio_range_hint => '区间随所选句子自动重算';
+  @override
+  String get popup_advanced_mining_image_section => '图片';
+  @override
+  String get popup_advanced_mining_image_none => '不要';
+  @override
+  String get popup_advanced_mining_image_mode_animated => '动图';
+  @override
+  String get popup_advanced_mining_image_mode_clip => '视频片段';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => '查词时画面';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start => '字幕开头';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      '首帧 ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      '尾帧 ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => '上一帧';
+  @override
+  String get popup_advanced_mining_image_frame_forward => '下一帧';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio => '视频片段需要句子音频';
+  @override
+  String get popup_advanced_mining_crop_whole_page => '整页';
+  @override
+  String get popup_advanced_mining_crop_panel => '所在分镜';
+  @override
+  String get popup_advanced_mining_crop_text_area => '文字周围';
+  @override
+  String get popup_advanced_mining_crop_custom => '自定义';
+  @override
+  String get popup_advanced_mining_crop_hint => '在图上拖动直接画新框 · Tab 切换分镜 · 方向键微调';
+  @override
+  String get popup_advanced_mining_crop_no_model => '未下载分镜模型，已按文字位置外扩预选。';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      '下载分镜模型（${size}）';
+  @override
+  String get popup_advanced_mining_crop_downloading => '正在下载分镜模型…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => '输出 ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => '卡片上的样子';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => '检测到的分镜';
+  @override
+  String get popup_advanced_mining_crop_legend_text => '这句话的位置';
+  @override
+  String get popup_advanced_mining_reset => '恢复为一键制卡的默认';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      '制卡到 ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => '一键制卡默认裁到所在分镜';
+  @override
+  String get manga_mining_crop_to_panel_hint => '需要分镜模型；没有模型时使用整页。';
 }
 
 // Path: <root>
@@ -296758,6 +298493,118 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '僅圖片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '關閉';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
 }
 
 /// Flat map(s) containing all translations.
@@ -312140,6 +313987,99 @@ extension on _StringsEn {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -327517,6 +329457,99 @@ extension on _StringsAr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -342970,6 +345003,99 @@ extension on _StringsDe {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -358405,6 +360531,99 @@ extension on _StringsEs {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -373858,6 +376077,99 @@ extension on _StringsFr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -389255,6 +391567,99 @@ extension on _StringsId {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -404688,6 +407093,99 @@ extension on _StringsIt {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -419995,6 +422493,99 @@ extension on _StringsJa {
         return '画像字幕のみ';
       case 'video_setting_pause_ocr_scope_off':
         return 'オフ';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -435309,6 +437900,99 @@ extension on _StringsKo {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -450737,6 +453421,99 @@ extension on _StringsNl {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -466157,6 +468934,99 @@ extension on _StringsPtBr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -481582,6 +484452,99 @@ extension on _StringsRu {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -496963,6 +499926,99 @@ extension on _StringsTh {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -512375,6 +515431,99 @@ extension on _StringsTr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -527770,6 +530919,99 @@ extension on _StringsVi {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
@@ -542996,6 +546238,99 @@ extension on _StringsZhCn {
         return '仅图片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '关闭';
+      case 'popup_advanced_mining_button':
+        return '高级制卡';
+      case 'popup_advanced_mining_title':
+        return '高级制卡';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => '查词 · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return '句子';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '已选 ${count} 句';
+      case 'popup_advanced_mining_deck_section':
+        return '卡组';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return '只对这张卡生效';
+      case 'popup_advanced_mining_deck_set_default':
+        return '同时设为默认卡组';
+      case 'popup_advanced_mining_deck_unavailable':
+        return '连上 Anki 后才能选择卡组';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return '覆写已有卡时卡片留在原卡组';
+      case 'popup_advanced_mining_audio_section':
+        return '句子音频';
+      case 'popup_advanced_mining_audio_follow':
+        return '跟随句子';
+      case 'popup_advanced_mining_audio_none':
+        return '不要';
+      case 'popup_advanced_mining_audio_start':
+        return '起点';
+      case 'popup_advanced_mining_audio_end':
+        return '终点';
+      case 'popup_advanced_mining_audio_earlier':
+        return '提前';
+      case 'popup_advanced_mining_audio_later':
+        return '推后';
+      case 'popup_advanced_mining_audio_unavailable':
+        return '这几句没有可用的音频';
+      case 'popup_advanced_mining_audio_range_hint':
+        return '区间随所选句子自动重算';
+      case 'popup_advanced_mining_image_section':
+        return '图片';
+      case 'popup_advanced_mining_image_none':
+        return '不要';
+      case 'popup_advanced_mining_image_mode_animated':
+        return '动图';
+      case 'popup_advanced_mining_image_mode_clip':
+        return '视频片段';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return '查词时画面';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return '字幕开头';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => '首帧 ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => '尾帧 ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return '上一帧';
+      case 'popup_advanced_mining_image_frame_forward':
+        return '下一帧';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return '视频片段需要句子音频';
+      case 'popup_advanced_mining_crop_whole_page':
+        return '整页';
+      case 'popup_advanced_mining_crop_panel':
+        return '所在分镜';
+      case 'popup_advanced_mining_crop_text_area':
+        return '文字周围';
+      case 'popup_advanced_mining_crop_custom':
+        return '自定义';
+      case 'popup_advanced_mining_crop_hint':
+        return '在图上拖动直接画新框 · Tab 切换分镜 · 方向键微调';
+      case 'popup_advanced_mining_crop_no_model':
+        return '未下载分镜模型，已按文字位置外扩预选。';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => '下载分镜模型（${size}）';
+      case 'popup_advanced_mining_crop_downloading':
+        return '正在下载分镜模型…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            '输出 ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return '卡片上的样子';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return '检测到的分镜';
+      case 'popup_advanced_mining_crop_legend_text':
+        return '这句话的位置';
+      case 'popup_advanced_mining_reset':
+        return '恢复为一键制卡的默认';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => '制卡到 ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return '一键制卡默认裁到所在分镜';
+      case 'manga_mining_crop_to_panel_hint':
+        return '需要分镜模型；没有模型时使用整页。';
       default:
         return null;
     }
@@ -558248,6 +561583,99 @@ extension on _StringsZhHk {
         return '僅圖片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '關閉';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
       default:
         return null;
     }
