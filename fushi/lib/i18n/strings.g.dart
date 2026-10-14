@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127211 (7483 per locale)
+/// Strings: 127245 (7485 per locale)
 ///
-/// Built on 2026-10-14 at 12:49 UTC
+/// Built on 2026-10-14 at 14:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10813,6 +10813,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -28902,6 +28907,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -47381,6 +47393,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -65920,6 +65939,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -84539,6 +84565,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -102811,6 +102844,13 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -121249,6 +121289,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -138687,6 +138734,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => '${page} / ${total} ページ';
+  @override
+  String sync_compare_page({required Object page}) => '${page} ページ';
 }
 
 // Path: <root>
@@ -156160,6 +156214,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -174546,6 +174607,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -193001,6 +193069,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -211401,6 +211476,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -229479,6 +229561,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -247760,6 +247849,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -265968,6 +266064,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => 'Page ${page} / ${total}';
+  @override
+  String sync_compare_page({required Object page}) => 'Page ${page}';
 }
 
 // Path: <root>
@@ -282593,6 +282696,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       '本次播放未装载（重新打开视频后生效）';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => '第 ${page} / ${total} 页';
+  @override
+  String sync_compare_page({required Object page}) => '第 ${page} 页';
 }
 
 // Path: <root>
@@ -299474,6 +299584,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String sync_compare_page_of_total({
+    required Object page,
+    required Object total,
+  }) => '第 ${page} / ${total} 頁';
+  @override
+  String sync_compare_page({required Object page}) => '第 ${page} 頁';
 }
 
 /// Flat map(s) containing all translations.
@@ -314990,6 +315107,11 @@ extension on _StringsEn {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -330501,6 +330623,11 @@ extension on _StringsAr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -346088,6 +346215,11 @@ extension on _StringsDe {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -361657,6 +361789,11 @@ extension on _StringsEs {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -377244,6 +377381,11 @@ extension on _StringsFr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -392775,6 +392917,11 @@ extension on _StringsId {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -408342,6 +408489,11 @@ extension on _StringsIt {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -423783,6 +423935,11 @@ extension on _StringsJa {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            '${page} / ${total} ページ';
+      case 'sync_compare_page':
+        return ({required Object page}) => '${page} ページ';
       default:
         return null;
     }
@@ -439231,6 +439388,11 @@ extension on _StringsKo {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -454793,6 +454955,11 @@ extension on _StringsNl {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -470347,6 +470514,11 @@ extension on _StringsPtBr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -485906,6 +486078,11 @@ extension on _StringsRu {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -501421,6 +501598,11 @@ extension on _StringsTh {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -516967,6 +517149,11 @@ extension on _StringsTr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -532496,6 +532683,11 @@ extension on _StringsVi {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            'Page ${page} / ${total}';
+      case 'sync_compare_page':
+        return ({required Object page}) => 'Page ${page}';
       default:
         return null;
     }
@@ -547854,6 +548046,11 @@ extension on _StringsZhCn {
         return '播放视频时装载 mpv_scripts 目录里的全部 .lua 脚本。删除脚本在下次打开视频时生效。';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return '本次播放未装载（重新打开视频后生效）';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            '第 ${page} / ${total} 页';
+      case 'sync_compare_page':
+        return ({required Object page}) => '第 ${page} 页';
       default:
         return null;
     }
@@ -563240,6 +563437,11 @@ extension on _StringsZhHk {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_compare_page_of_total':
+        return ({required Object page, required Object total}) =>
+            '第 ${page} / ${total} 頁';
+      case 'sync_compare_page':
+        return ({required Object page}) => '第 ${page} 頁';
       default:
         return null;
     }
