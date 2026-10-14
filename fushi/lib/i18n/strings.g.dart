@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127228 (7484 per locale)
+/// Strings: 127296 (7488 per locale)
 ///
-/// Built on 2026-10-14 at 15:04 UTC
+/// Built on 2026-10-14 at 16:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10813,7 +10813,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  String get home_nav_bar_style_flat => 'Flat';
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -28904,7 +28908,15 @@ class _StringsAr extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -47385,7 +47397,15 @@ class _StringsDe extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -65926,7 +65946,15 @@ class _StringsEs extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -84547,7 +84575,15 @@ class _StringsFr extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -102821,7 +102857,15 @@ class _StringsId extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -121261,7 +121305,15 @@ class _StringsIt extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -138701,7 +138753,15 @@ class _StringsJa extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -156176,7 +156236,15 @@ class _StringsKo extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -174564,7 +174632,15 @@ class _StringsNl extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -193021,7 +193097,15 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -211423,7 +211507,15 @@ class _StringsRu extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -229503,7 +229595,15 @@ class _StringsTh extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -247786,7 +247886,15 @@ class _StringsTr extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -265996,7 +266104,15 @@ class _StringsVi extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -282623,7 +282739,15 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       '本次播放未装载（重新打开视频后生效）';
   @override
-  String get home_nav_bar_center_launcher => '底栏中央展开';
+  String get home_nav_bar_style => '底栏样式';
+  @override
+  String get home_nav_bar_style_flat => '平铺';
+  @override
+  String get home_nav_bar_style_launcher => '中央展开';
+  @override
+  String get home_nav_bar_style_pager => '分页滑动';
+  @override
+  String get home_nav_bar_style_launcher_pager => '中央展开 + 翻页';
 }
 
 // Path: <root>
@@ -299506,7 +299630,15 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   @override
-  String get home_nav_bar_center_launcher => 'Bottom bar: center launcher';
+  String get home_nav_bar_style => 'Bottom bar style';
+  @override
+  String get home_nav_bar_style_flat => 'Flat';
+  @override
+  String get home_nav_bar_style_launcher => 'Center launcher';
+  @override
+  String get home_nav_bar_style_pager => 'Paged swipe';
+  @override
+  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 /// Flat map(s) containing all translations.
@@ -315023,8 +315155,16 @@ extension on _StringsEn {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -330536,8 +330676,16 @@ extension on _StringsAr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -346125,8 +346273,16 @@ extension on _StringsDe {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -361696,8 +361852,16 @@ extension on _StringsEs {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -377285,8 +377449,16 @@ extension on _StringsFr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -392818,8 +392990,16 @@ extension on _StringsId {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -408387,8 +408567,16 @@ extension on _StringsIt {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -423830,8 +424018,16 @@ extension on _StringsJa {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -439280,8 +439476,16 @@ extension on _StringsKo {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -454844,8 +455048,16 @@ extension on _StringsNl {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -470400,8 +470612,16 @@ extension on _StringsPtBr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -485961,8 +486181,16 @@ extension on _StringsRu {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -501478,8 +501706,16 @@ extension on _StringsTh {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -517026,8 +517262,16 @@ extension on _StringsTr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -532557,8 +532801,16 @@ extension on _StringsVi {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -547917,8 +548169,16 @@ extension on _StringsZhCn {
         return '播放视频时装载 mpv_scripts 目录里的全部 .lua 脚本。删除脚本在下次打开视频时生效。';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return '本次播放未装载（重新打开视频后生效）';
-      case 'home_nav_bar_center_launcher':
-        return '底栏中央展开';
+      case 'home_nav_bar_style':
+        return '底栏样式';
+      case 'home_nav_bar_style_flat':
+        return '平铺';
+      case 'home_nav_bar_style_launcher':
+        return '中央展开';
+      case 'home_nav_bar_style_pager':
+        return '分页滑动';
+      case 'home_nav_bar_style_launcher_pager':
+        return '中央展开 + 翻页';
       default:
         return null;
     }
@@ -563305,8 +563565,16 @@ extension on _StringsZhHk {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
-      case 'home_nav_bar_center_launcher':
-        return 'Bottom bar: center launcher';
+      case 'home_nav_bar_style':
+        return 'Bottom bar style';
+      case 'home_nav_bar_style_flat':
+        return 'Flat';
+      case 'home_nav_bar_style_launcher':
+        return 'Center launcher';
+      case 'home_nav_bar_style_pager':
+        return 'Paged swipe';
+      case 'home_nav_bar_style_launcher_pager':
+        return 'Center launcher + paging';
       default:
         return null;
     }
