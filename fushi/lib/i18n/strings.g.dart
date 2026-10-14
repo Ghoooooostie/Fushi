@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126106 (7418 per locale)
+/// Strings: 126123 (7419 per locale)
 ///
-/// Built on 2026-10-13 at 12:06 UTC
+/// Built on 2026-10-14 at 06:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -594,7 +594,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_lapis_visual_target_inside_definition => 'Inside definition';
   String get anki_mine_to_server => 'Mine to Fushi Interconnect server';
   String get anki_mine_to_server_hint =>
-      'Send mined cards to the Fushi Interconnect server\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      'Send mined cards to the Fushi Interconnect server\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing. If the server is offline, cards wait on this device and are sent once it\'s back.';
   String get anki_mined_action_add_duplicate => 'Add as a new card';
   String get anki_mined_action_overwrite => 'Overwrite this card';
   String get anki_mined_action_view => 'View / open in Anki';
@@ -8591,7 +8591,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object remaining,
   }) => 'Sent ${delivered}, failed ${failed}, remaining ${remaining}';
   String get anki_pending_mine_landing_title =>
-      'Deliver cards from other devices';
+      'Receive cards from other devices';
   String get anki_error_sync_signed_out =>
       'Sign in to your Anki sync server first (Anki settings › Anki sync).';
   String get anki_error_sync_unavailable =>
@@ -8632,7 +8632,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anki_sync_client_sign_in_failed({required Object error}) =>
       'Sign-in failed: ${error}';
   String get anki_pending_mine_landing_hint =>
-      'Cards saved on devices without Anki travel through your sync service (cloud storage, or interconnect when this device syncs to a host) and are added to Anki on this device. Only one device does this at a time. A computer acting as an interconnect host doesn\'t take this role: phones paired with it should turn on Mine to Fushi Interconnect server instead (cards wait on the phone while the computer is off). A Fushi server can take this role.';
+      'Cards mined on devices without Anki reach this device through sync and are added to Anki here. Only one device receives them at a time.';
   String get anki_sync_client_relogin => 'Sign in again';
   String anki_sync_client_discard_confirm({required Object count}) =>
       '${count} card(s) haven\'t synced to Anki yet. Discard them and sign out? They can\'t be recovered.';
@@ -10714,6 +10714,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_pause_ocr_scope_all => 'All videos';
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   String get video_setting_pause_ocr_scope_off => 'Off';
+  String get anki_pending_mine_landing_host_note =>
+      'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
 }
 
 // Path: <root>
@@ -11404,7 +11406,7 @@ class _StringsAr extends _StringsEn {
   String get anki_mine_to_server => 'إرسال إلى الجهاز المقترن';
   @override
   String get anki_mine_to_server_hint =>
-      'أرسل البطاقات المستخرجة إلى Anki على الجهاز المضيف المقترن (رزمه وإعداداته) بدلاً من هذا الجهاز. يتطلب اقتراناً عبر الربط.';
+      'أرسل البطاقات المستخرجة إلى Anki على الجهاز المضيف المقترن (رزمه وإعداداته) بدلاً من هذا الجهاز. يتطلب اقتراناً عبر الربط. إذا كان الخادم غير متصل، تنتظر البطاقات على هذا الجهاز وتُرسل عند عودته.';
   @override
   String get anki_mined_action_add_duplicate => 'إضافة كبطاقة جديدة';
   @override
@@ -25087,7 +25089,7 @@ class _StringsAr extends _StringsEn {
   }) => 'أُرسل ${delivered}، وفشل ${failed}، وتبقى ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'تسليم البطاقات من الأجهزة الأخرى';
+      'استلام البطاقات من الأجهزة الأخرى';
   @override
   String get anki_error_sync_signed_out =>
       'سجّل الدخول إلى خادم مزامنة Anki أولًا (إعدادات Anki › مزامنة Anki).';
@@ -25155,7 +25157,7 @@ class _StringsAr extends _StringsEn {
       'فشل تسجيل الدخول: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'تنتقل البطاقات المحفوظة على الأجهزة التي بلا Anki عبر خدمة المزامنة لديك (التخزين السحابي، أو الربط عندما يزامن هذا الجهاز مع مضيف) وتُضاف إلى Anki على هذا الجهاز. جهاز واحد فقط يفعل ذلك في كل مرة. الحاسوب الذي يعمل كمضيف ربط لا يتولى هذا الدور: الهواتف المقترنة به ينبغي أن تفعّل «الاستخراج إلى خادم Fushi Interconnect» بدلًا من ذلك (تنتظر البطاقات على الهاتف أثناء إيقاف الحاسوب). يمكن لخادم Fushi تولي هذا الدور.';
+      'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
   @override
   String get anki_sync_client_relogin => 'تسجيل الدخول مرة أخرى';
   @override
@@ -28638,6 +28640,9 @@ class _StringsAr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
 }
 
 // Path: <root>
@@ -29343,7 +29348,7 @@ class _StringsDe extends _StringsEn {
   String get anki_mine_to_server => 'An gekoppeltes Gerät senden';
   @override
   String get anki_mine_to_server_hint =>
-      'Erstellte Karten an das Anki des gekoppelten Hosts senden (dessen Decks und Einstellungen) statt an dieses Gerät. Erfordert eine Interconnect-Kopplung.';
+      'Erstellte Karten an das Anki des gekoppelten Hosts senden (dessen Decks und Einstellungen) statt an dieses Gerät. Erfordert eine Interconnect-Kopplung. Ist der Server offline, warten die Karten auf diesem Gerät und werden gesendet, sobald er wieder erreichbar ist.';
   @override
   String get anki_mined_action_add_duplicate => 'Als neue Karte hinzufügen';
   @override
@@ -43388,7 +43393,7 @@ class _StringsDe extends _StringsEn {
       '${delivered} gesendet, ${failed} fehlgeschlagen, ${remaining} verbleibend';
   @override
   String get anki_pending_mine_landing_title =>
-      'Karten von anderen Geräten zustellen';
+      'Karten anderer Geräte empfangen';
   @override
   String get anki_error_sync_signed_out =>
       'Melde dich zuerst bei deinem Anki-Sync-Server an (Anki-Einstellungen › Anki-Sync).';
@@ -43456,7 +43461,7 @@ class _StringsDe extends _StringsEn {
       'Anmeldung fehlgeschlagen: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Karten, die auf Geräten ohne Anki gespeichert wurden, laufen über deinen Sync-Dienst (Cloud-Speicher oder Interconnect, wenn dieses Gerät mit einem Host synchronisiert) und werden auf diesem Gerät zu Anki hinzugefügt. Das macht immer nur ein Gerät. Ein Computer, der als Interconnect-Host fungiert, übernimmt diese Rolle nicht: Mit ihm gekoppelte Smartphones sollten stattdessen „Auf Fushi-Interconnect-Server minen“ aktivieren (Karten warten auf dem Smartphone, solange der Computer aus ist). Ein Fushi-Server kann diese Rolle übernehmen.';
+      'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
   @override
   String get anki_sync_client_relogin => 'Erneut anmelden';
   @override
@@ -46952,6 +46957,9 @@ class _StringsDe extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
 }
 
 // Path: <root>
@@ -47661,7 +47669,7 @@ class _StringsEs extends _StringsEn {
   String get anki_mine_to_server => 'Enviar al dispositivo emparejado';
   @override
   String get anki_mine_to_server_hint =>
-      'Envía las tarjetas creadas al Anki del dispositivo emparejado (sus mazos y ajustes) en lugar de este dispositivo. Requiere emparejamiento por Interconnect.';
+      'Envía las tarjetas creadas al Anki del dispositivo emparejado (sus mazos y ajustes) en lugar de este dispositivo. Requiere emparejamiento por Interconnect. Si el servidor está desconectado, las tarjetas esperan en este dispositivo y se envían cuando vuelve.';
   @override
   String get anki_mined_action_add_duplicate => 'Añadir como tarjeta nueva';
   @override
@@ -61761,7 +61769,7 @@ class _StringsEs extends _StringsEn {
   }) => 'Enviadas ${delivered}, fallidas ${failed}, restantes ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'Entregar tarjetas de otros dispositivos';
+      'Recibir tarjetas de otros dispositivos';
   @override
   String get anki_error_sync_signed_out =>
       'Inicia primero sesión en tu servidor de sincronización de Anki (ajustes de Anki › Sincronización de Anki).';
@@ -61832,7 +61840,7 @@ class _StringsEs extends _StringsEn {
       'Error al iniciar sesión: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Las tarjetas guardadas en dispositivos sin Anki viajan por tu servicio de sincronización (almacenamiento en la nube o interconexión cuando este dispositivo sincroniza con un anfitrión) y se añaden a Anki en este dispositivo. Solo un dispositivo hace esto a la vez. Un ordenador que actúa como anfitrión de interconexión no asume este papel: los móviles emparejados con él deben activar Crear tarjetas en el servidor Fushi Interconnect (las tarjetas esperan en el móvil mientras el ordenador está apagado). Un servidor Fushi sí puede asumir este papel.';
+      'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
   @override
   String get anki_sync_client_relogin => 'Iniciar sesión de nuevo';
   @override
@@ -65326,6 +65334,9 @@ class _StringsEs extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
 }
 
 // Path: <root>
@@ -66035,7 +66046,7 @@ class _StringsFr extends _StringsEn {
   String get anki_mine_to_server => 'Envoyer au périphérique apparié';
   @override
   String get anki_mine_to_server_hint =>
-      'Envoyer les cartes créées vers l\'Anki de l\'hôte apparié (ses paquets et paramètres) au lieu de cet appareil. Nécessite un appairage d\'interconnexion.';
+      'Envoyer les cartes créées vers l\'Anki de l\'hôte apparié (ses paquets et paramètres) au lieu de cet appareil. Nécessite un appairage d\'interconnexion. Si le serveur est hors ligne, les cartes restent sur cet appareil et sont envoyées dès son retour.';
   @override
   String get anki_mined_action_add_duplicate => 'Ajouter comme nouvelle carte';
   @override
@@ -80210,7 +80221,7 @@ class _StringsFr extends _StringsEn {
   }) => '${delivered} envoyées, ${failed} en échec, ${remaining} restantes';
   @override
   String get anki_pending_mine_landing_title =>
-      'Livrer les cartes d\'autres appareils';
+      'Recevoir les cartes des autres appareils';
   @override
   String get anki_error_sync_signed_out =>
       'Connectez-vous d\'abord à votre serveur de synchronisation Anki (réglages Anki › Synchronisation Anki).';
@@ -80281,7 +80292,7 @@ class _StringsFr extends _StringsEn {
       'Échec de la connexion : ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Les cartes enregistrées sur des appareils sans Anki transitent par votre service de synchronisation (stockage cloud, ou interconnexion quand cet appareil se synchronise avec un hôte) et sont ajoutées à Anki sur cet appareil. Un seul appareil joue ce rôle à la fois. Un ordinateur faisant office d\'hôte d\'interconnexion ne prend pas ce rôle : les téléphones appairés avec lui doivent plutôt activer Créer vers le serveur Fushi Interconnect (les cartes attendent sur le téléphone tant que l\'ordinateur est éteint). Un serveur Fushi peut prendre ce rôle.';
+      'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
   @override
   String get anki_sync_client_relogin => 'Se reconnecter';
   @override
@@ -83779,6 +83790,9 @@ class _StringsFr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
 }
 
 // Path: <root>
@@ -84478,7 +84492,7 @@ class _StringsId extends _StringsEn {
   String get anki_mine_to_server => 'Kirim kartu ke perangkat berpasangan';
   @override
   String get anki_mine_to_server_hint =>
-      'Kirim kartu yang ditambang ke Anki perangkat host berpasangan (dek dan pengaturannya) alih-alih perangkat ini. Memerlukan koneksi Interconnect.';
+      'Kirim kartu yang ditambang ke Anki perangkat host berpasangan (dek dan pengaturannya) alih-alih perangkat ini. Memerlukan koneksi Interconnect. Jika server sedang offline, kartu menunggu di perangkat ini dan dikirim setelah tersambung kembali.';
   @override
   String get anki_mined_action_add_duplicate => 'Tambah sebagai kartu baru';
   @override
@@ -98329,7 +98343,7 @@ class _StringsId extends _StringsEn {
   }) => 'Terkirim ${delivered}, gagal ${failed}, tersisa ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'Antarkan kartu dari perangkat lain';
+      'Terima kartu dari perangkat lain';
   @override
   String get anki_error_sync_signed_out =>
       'Masuk ke server sinkronisasi Anki Anda dulu (pengaturan Anki › sinkronisasi Anki).';
@@ -98396,7 +98410,7 @@ class _StringsId extends _StringsEn {
       'Login gagal: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Kartu yang disimpan di perangkat tanpa Anki melewati layanan sinkronisasi Anda (penyimpanan cloud, atau interconnect saat perangkat ini menyinkronkan ke host) dan ditambahkan ke Anki di perangkat ini. Hanya satu perangkat yang melakukannya dalam satu waktu. Komputer yang bertindak sebagai host interconnect tidak mengambil peran ini: ponsel yang dipasangkan dengannya sebaiknya mengaktifkan Mining ke server Fushi Interconnect (kartu menunggu di ponsel saat komputer mati). Server Fushi dapat mengambil peran ini.';
+      'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
   @override
   String get anki_sync_client_relogin => 'Masuk lagi';
   @override
@@ -101887,6 +101901,9 @@ class _StringsId extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
 }
 
 // Path: <root>
@@ -102590,7 +102607,7 @@ class _StringsIt extends _StringsEn {
   String get anki_mine_to_server => 'Invia al dispositivo accoppiato';
   @override
   String get anki_mine_to_server_hint =>
-      'Invia le carte estratte all\'Anki dell\'host accoppiato (i suoi mazzi e impostazioni) invece di questo dispositivo. Richiede un accoppiamento interconnect.';
+      'Invia le carte estratte all\'Anki dell\'host accoppiato (i suoi mazzi e impostazioni) invece di questo dispositivo. Richiede un accoppiamento interconnect. Se il server è offline, le carte restano su questo dispositivo e vengono inviate quando torna disponibile.';
   @override
   String get anki_mined_action_add_duplicate => 'Aggiungi come nuova carta';
   @override
@@ -116595,7 +116612,7 @@ class _StringsIt extends _StringsEn {
   }) => 'Inviate ${delivered}, non riuscite ${failed}, rimanenti ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'Consegna le carte da altri dispositivi';
+      'Ricevi le carte da altri dispositivi';
   @override
   String get anki_error_sync_signed_out =>
       'Accedi prima al tuo server di sincronizzazione di Anki (impostazioni di Anki › Sincronizzazione Anki).';
@@ -116665,7 +116682,7 @@ class _StringsIt extends _StringsEn {
       'Accesso non riuscito: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Le carte salvate su dispositivi senza Anki passano dal tuo servizio di sincronizzazione (archiviazione cloud, o interconnect quando questo dispositivo sincronizza con un host) e vengono aggiunte ad Anki su questo dispositivo. Lo fa un solo dispositivo alla volta. Un computer che fa da host interconnect non assume questo ruolo: i telefoni abbinati ad esso devono invece attivare Mining sul server Fushi Interconnect (le carte restano sul telefono mentre il computer è spento). Un server Fushi può assumere questo ruolo.';
+      'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
   @override
   String get anki_sync_client_relogin => 'Accedi di nuovo';
   @override
@@ -120160,6 +120177,9 @@ class _StringsIt extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
 }
 
 // Path: <root>
@@ -120829,7 +120849,7 @@ class _StringsJa extends _StringsEn {
   String get anki_mine_to_server => 'ペアリングデバイスに制カード';
   @override
   String get anki_mine_to_server_hint =>
-      '制カードをこのデバイスではなく、ペアリングしたホストの Anki（そのデッキと設定）に送信します。互連ペアリングが必要です。';
+      '制カードをこのデバイスではなく、ペアリングしたホストの Anki（そのデッキと設定）に送信します。互連ペアリングが必要です。サーバーがオフラインの間、カードはこのデバイスに保存され、接続が戻ると送信されます。';
   @override
   String get anki_mined_action_add_duplicate => '新しいカードとして追加';
   @override
@@ -133993,7 +134013,7 @@ class _StringsJa extends _StringsEn {
       'サインインに失敗しました: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki のないデバイスで保存されたカードは、同期サービス（クラウドストレージ、またはこのデバイスがホストと同期している場合は Interconnect）を経由して、このデバイスで Anki に追加されます。同時にこれを行うデバイスは 1 台だけです。Interconnect ホストとして動作しているコンピューターはこの役割を担いません。ペアリングしているスマートフォンで代わりに「Fushi Interconnect サーバーへマイニング」をオンにしてください（コンピューターの電源が切れている間、カードはスマートフォンで待機します）。Fushi サーバーはこの役割を担えます。';
+      'Anki のないデバイスで作ったカードは、同期を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
   @override
   String get anki_sync_client_relogin => '再度サインイン';
   @override
@@ -137433,6 +137453,9 @@ class _StringsJa extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '画像字幕のみ';
   @override
   String get video_setting_pause_ocr_scope_off => 'オフ';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
 }
 
 // Path: <root>
@@ -138098,7 +138121,7 @@ class _StringsKo extends _StringsEn {
   String get anki_mine_to_server => '페어링된 기기로 채굴';
   @override
   String get anki_mine_to_server_hint =>
-      '채굴한 카드를 이 기기 대신 페어링된 호스트의 Anki(해당 덱 및 설정)로 전송합니다. 인터커넥트 페어링이 필요합니다.';
+      '채굴한 카드를 이 기기 대신 페어링된 호스트의 Anki(해당 덱 및 설정)로 전송합니다. 인터커넥트 페어링이 필요합니다. 서버가 오프라인이면 카드는 이 기기에 보관되었다가 연결되면 전송됩니다.';
   @override
   String get anki_mined_action_add_duplicate => '새 카드로 추가';
   @override
@@ -151205,7 +151228,7 @@ class _StringsKo extends _StringsEn {
     required Object remaining,
   }) => '전송 ${delivered}장, 실패 ${failed}장, 남음 ${remaining}장';
   @override
-  String get anki_pending_mine_landing_title => '다른 기기의 카드 전달';
+  String get anki_pending_mine_landing_title => '다른 기기의 카드 받기';
   @override
   String get anki_error_sync_signed_out =>
       '먼저 Anki 동기화 서버에 로그인하세요(Anki 설정 › Anki 동기화).';
@@ -151272,7 +151295,7 @@ class _StringsKo extends _StringsEn {
       '로그인 실패: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki가 없는 기기에서 저장한 카드는 동기화 서비스(클라우드 저장소, 또는 이 기기가 호스트와 동기화하는 경우 연동)를 통해 전달되어 이 기기의 Anki에 추가됩니다. 한 번에 한 기기만 이 역할을 합니다. 연동 호스트로 동작하는 컴퓨터는 이 역할을 맡지 않습니다. 그 컴퓨터와 페어링한 휴대폰은 대신 \'Fushi 연동 서버로 마이닝\'을 켜세요(컴퓨터가 꺼져 있는 동안 카드는 휴대폰에서 대기합니다). Fushi 서버는 이 역할을 맡을 수 있습니다.';
+      'Anki가 없는 기기에서 만든 카드는 동기화를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
   @override
   String get anki_sync_client_relogin => '다시 로그인';
   @override
@@ -154742,6 +154765,9 @@ class _StringsKo extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
 }
 
 // Path: <root>
@@ -155443,7 +155469,7 @@ class _StringsNl extends _StringsEn {
   String get anki_mine_to_server => 'Kaarten naar gekoppeld apparaat sturen';
   @override
   String get anki_mine_to_server_hint =>
-      'Stuur gedolven kaarten naar de Anki van het gekoppelde apparaat (diens dekken en instellingen) in plaats van dit apparaat. Vereist een interconnectkoppeling.';
+      'Stuur gedolven kaarten naar de Anki van het gekoppelde apparaat (diens dekken en instellingen) in plaats van dit apparaat. Vereist een interconnectkoppeling. Is de server offline, dan wachten kaarten op dit apparaat en worden ze verzonden zodra hij terug is.';
   @override
   String get anki_mined_action_add_duplicate => 'Als nieuwe kaart toevoegen';
   @override
@@ -169401,7 +169427,7 @@ class _StringsNl extends _StringsEn {
   }) => '${delivered} verzonden, ${failed} mislukt, ${remaining} resterend';
   @override
   String get anki_pending_mine_landing_title =>
-      'Kaarten van andere apparaten afleveren';
+      'Kaarten van andere apparaten ontvangen';
   @override
   String get anki_error_sync_signed_out =>
       'Meld je eerst aan bij je Anki-synchronisatieserver (Anki-instellingen › Anki-synchronisatie).';
@@ -169471,7 +169497,7 @@ class _StringsNl extends _StringsEn {
       'Aanmelden mislukt: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Kaarten die zijn opgeslagen op apparaten zonder Anki reizen via je synchronisatieservice (cloudopslag, of interconnect wanneer dit apparaat met een host synchroniseert) en worden op dit apparaat aan Anki toegevoegd. Slechts één apparaat doet dit tegelijk. Een computer die als interconnect-host fungeert, neemt deze rol niet op zich: telefoons die ermee zijn gekoppeld, moeten in plaats daarvan Minen naar Fushi Interconnect-server inschakelen (kaarten wachten op de telefoon terwijl de computer uit staat). Een Fushi-server kan deze rol wel op zich nemen.';
+      'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
   @override
   String get anki_sync_client_relogin => 'Opnieuw aanmelden';
   @override
@@ -172963,6 +172989,9 @@ class _StringsNl extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
 }
 
 // Path: <root>
@@ -173672,7 +173701,7 @@ class _StringsPtBr extends _StringsEn {
   String get anki_mine_to_server => 'Minerar para dispositivo pareado';
   @override
   String get anki_mine_to_server_hint =>
-      'Enviar cartões minerados para o Anki do dispositivo pareado (seus baralhos e configurações) em vez deste dispositivo. Requer um pareamento Interconnect.';
+      'Enviar cartões minerados para o Anki do dispositivo pareado (seus baralhos e configurações) em vez deste dispositivo. Requer um pareamento Interconnect. Se o servidor estiver offline, os cartões aguardam neste dispositivo e são enviados quando ele voltar.';
   @override
   String get anki_mined_action_add_duplicate => 'Adicionar como novo cartão';
   @override
@@ -187688,7 +187717,7 @@ class _StringsPtBr extends _StringsEn {
   }) => '${delivered} enviados, ${failed} com falha, ${remaining} restantes';
   @override
   String get anki_pending_mine_landing_title =>
-      'Entregar cartões de outros dispositivos';
+      'Receber cartões de outros dispositivos';
   @override
   String get anki_error_sync_signed_out =>
       'Primeiro entre no seu servidor de sincronização do Anki (configurações do Anki › Sincronização do Anki).';
@@ -187758,7 +187787,7 @@ class _StringsPtBr extends _StringsEn {
       'Falha no login: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Os cartões salvos em dispositivos sem Anki viajam pelo seu serviço de sincronização (armazenamento em nuvem, ou interconexão quando este dispositivo sincroniza com um host) e são adicionados ao Anki neste dispositivo. Apenas um dispositivo faz isso por vez. Um computador que atua como host de interconexão não assume esse papel: os celulares pareados com ele devem ativar Minerar para o servidor Fushi Interconnect (os cartões esperam no celular enquanto o computador está desligado). Um servidor Fushi pode assumir esse papel.';
+      'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
   @override
   String get anki_sync_client_relogin => 'Entrar novamente';
   @override
@@ -191253,6 +191282,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
 }
 
 // Path: <root>
@@ -191954,7 +191986,7 @@ class _StringsRu extends _StringsEn {
   String get anki_mine_to_server => 'Добывать на сопряжённое устройство';
   @override
   String get anki_mine_to_server_hint =>
-      'Отправлять добытые карточки в Anki сопряжённого хоста (его колоды и настройки) вместо этого устройства. Требуется сопряжение через Interconnect.';
+      'Отправлять добытые карточки в Anki сопряжённого хоста (его колоды и настройки) вместо этого устройства. Требуется сопряжение через Interconnect. Если сервер недоступен, карточки ждут на этом устройстве и отправляются, когда он снова в сети.';
   @override
   String get anki_mined_action_add_duplicate => 'Добавить как новую карточку';
   @override
@@ -205927,7 +205959,7 @@ class _StringsRu extends _StringsEn {
       'Отправлено: ${delivered}, с ошибкой: ${failed}, осталось: ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'Доставка карточек с других устройств';
+      'Принимать карточки с других устройств';
   @override
   String get anki_error_sync_signed_out =>
       'Сначала войдите на свой сервер синхронизации Anki (настройки Anki › Синхронизация Anki).';
@@ -205998,7 +206030,7 @@ class _StringsRu extends _StringsEn {
       'Не удалось войти: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Карточки, сохранённые на устройствах без Anki, проходят через вашу службу синхронизации (облачное хранилище или interconnect, когда это устройство синхронизируется с хостом) и добавляются в Anki на этом устройстве. Одновременно это делает только одно устройство. Компьютер в роли хоста interconnect эту роль не берёт: сопряжённым с ним телефонам следует включить «Создавать карточки на сервере Fushi Interconnect» (карточки ждут на телефоне, пока компьютер выключен). Эту роль может взять сервер Fushi.';
+      'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
   @override
   String get anki_sync_client_relogin => 'Войти снова';
   @override
@@ -209489,6 +209521,9 @@ class _StringsRu extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
 }
 
 // Path: <root>
@@ -210176,7 +210211,7 @@ class _StringsTh extends _StringsEn {
   String get anki_mine_to_server => 'สร้างบัตรไปยังอุปกรณ์ที่จับคู่';
   @override
   String get anki_mine_to_server_hint =>
-      'ส่งบัตรที่สร้างไปยัง Anki ของโฮสต์ที่จับคู่ (สำรับและการตั้งค่าของโฮสต์) แทนที่จะเป็นอุปกรณ์นี้ ต้องมีการจับคู่ Interconnect';
+      'ส่งบัตรที่สร้างไปยัง Anki ของโฮสต์ที่จับคู่ (สำรับและการตั้งค่าของโฮสต์) แทนที่จะเป็นอุปกรณ์นี้ ต้องมีการจับคู่ Interconnect หากเซิร์ฟเวอร์ออฟไลน์ การ์ดจะรออยู่บนอุปกรณ์นี้และส่งเมื่อกลับมาเชื่อมต่อ';
   @override
   String get anki_mined_action_add_duplicate => 'เพิ่มเป็นบัตรใหม่';
   @override
@@ -223853,7 +223888,7 @@ class _StringsTh extends _StringsEn {
     required Object remaining,
   }) => 'ส่งแล้ว ${delivered} ล้มเหลว ${failed} เหลือ ${remaining}';
   @override
-  String get anki_pending_mine_landing_title => 'ส่งการ์ดจากอุปกรณ์อื่น';
+  String get anki_pending_mine_landing_title => 'รับการ์ดจากอุปกรณ์อื่น';
   @override
   String get anki_error_sync_signed_out =>
       'ลงชื่อเข้าใช้เซิร์ฟเวอร์ซิงค์ Anki ของคุณก่อน (การตั้งค่า Anki › ซิงค์ Anki)';
@@ -223920,7 +223955,7 @@ class _StringsTh extends _StringsEn {
       'ลงชื่อเข้าใช้ไม่สำเร็จ: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'การ์ดที่บันทึกบนอุปกรณ์ที่ไม่มี Anki จะส่งผ่านบริการซิงค์ของคุณ (ที่เก็บข้อมูลคลาวด์ หรืออินเทอร์คอนเนกต์เมื่ออุปกรณ์นี้ซิงค์กับโฮสต์) และเพิ่มลงใน Anki บนอุปกรณ์นี้ มีเพียงอุปกรณ์เดียวที่ทำหน้าที่นี้ในแต่ละครั้ง คอมพิวเตอร์ที่เป็นโฮสต์อินเทอร์คอนเนกต์ไม่ทำหน้าที่นี้ โทรศัพท์ที่จับคู่กับโฮสต์ควรเปิด สร้างการ์ดไปยังเซิร์ฟเวอร์ Fushi Interconnect แทน (การ์ดจะรออยู่บนโทรศัพท์ขณะคอมพิวเตอร์ปิด) เซิร์ฟเวอร์ Fushi ทำหน้าที่นี้ได้';
+      'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงค์ และเพิ่มลงใน Anki ที่นี่ รับได้ครั้งละหนึ่งอุปกรณ์เท่านั้น';
   @override
   String get anki_sync_client_relogin => 'ลงชื่อเข้าใช้อีกครั้ง';
   @override
@@ -227403,6 +227438,9 @@ class _StringsTh extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
 }
 
 // Path: <root>
@@ -228101,7 +228139,7 @@ class _StringsTr extends _StringsEn {
   String get anki_mine_to_server => 'Eşleştirilmiş cihaza çıkar';
   @override
   String get anki_mine_to_server_hint =>
-      'Çıkarılan kartları bu cihaz yerine eşleştirilmiş ana bilgisayarın Anki\'sine (onun desteleri ve ayarları) gönderir. Bir interconnect eşleştirmesi gerektirir.';
+      'Çıkarılan kartları bu cihaz yerine eşleştirilmiş ana bilgisayarın Anki\'sine (onun desteleri ve ayarları) gönderir. Bir interconnect eşleştirmesi gerektirir. Sunucu çevrimdışıysa kartlar bu cihazda bekler ve bağlantı geri geldiğinde gönderilir.';
   @override
   String get anki_mined_action_add_duplicate => 'Yeni kart olarak ekle';
   @override
@@ -241961,7 +241999,7 @@ class _StringsTr extends _StringsEn {
   }) => 'Gönderilen ${delivered}, başarısız ${failed}, kalan ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'Diğer cihazlardan gelen kartları teslim et';
+      'Diğer cihazların kartlarını al';
   @override
   String get anki_error_sync_signed_out =>
       'Önce Anki eşitleme sunucunuzda oturum açın (Anki ayarları › Anki eşitleme).';
@@ -242028,7 +242066,7 @@ class _StringsTr extends _StringsEn {
       'Oturum açma başarısız oldu: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki\'si olmayan cihazlarda kaydedilen kartlar eşitleme hizmetiniz (bulut depolama veya bu cihaz bir ana makineyle eşitleniyorsa interconnect) üzerinden gider ve bu cihazda Anki\'ye eklenir. Aynı anda yalnızca bir cihaz bunu yapar. Interconnect ana makinesi olarak çalışan bir bilgisayar bu rolü üstlenmez: onunla eşleştirilmiş telefonlar bunun yerine Fushi Interconnect sunucusuna kart oluştur seçeneğini açmalıdır (bilgisayar kapalıyken kartlar telefonda bekler). Bir Fushi sunucusu bu rolü üstlenebilir.';
+      'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
   @override
   String get anki_sync_client_relogin => 'Yeniden oturum aç';
   @override
@@ -245520,6 +245558,9 @@ class _StringsTr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
 }
 
 // Path: <root>
@@ -246218,7 +246259,7 @@ class _StringsVi extends _StringsEn {
   String get anki_mine_to_server => 'Gửi thẻ đến thiết bị đã ghép nối';
   @override
   String get anki_mine_to_server_hint =>
-      'Gửi thẻ đã khai thác đến Anki của thiết bị chủ đã ghép nối (bộ thẻ và cài đặt của nó) thay vì thiết bị này. Yêu cầu ghép nối kết nối.';
+      'Gửi thẻ đã khai thác đến Anki của thiết bị chủ đã ghép nối (bộ thẻ và cài đặt của nó) thay vì thiết bị này. Yêu cầu ghép nối kết nối. Nếu máy chủ ngoại tuyến, thẻ sẽ chờ trên thiết bị này và được gửi khi kết nối lại.';
   @override
   String get anki_mined_action_add_duplicate => 'Thêm như thẻ mới';
   @override
@@ -260006,7 +260047,7 @@ class _StringsVi extends _StringsEn {
     required Object remaining,
   }) => 'Đã gửi ${delivered}, thất bại ${failed}, còn lại ${remaining}';
   @override
-  String get anki_pending_mine_landing_title => 'Chuyển thẻ từ thiết bị khác';
+  String get anki_pending_mine_landing_title => 'Nhận thẻ từ thiết bị khác';
   @override
   String get anki_error_sync_signed_out =>
       'Hãy đăng nhập máy chủ đồng bộ Anki trước (Cài đặt Anki › Đồng bộ Anki).';
@@ -260073,7 +260114,7 @@ class _StringsVi extends _StringsEn {
       'Đăng nhập thất bại: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Các thẻ lưu trên thiết bị không có Anki sẽ đi qua dịch vụ đồng bộ của bạn (lưu trữ đám mây, hoặc interconnect khi thiết bị này đồng bộ tới máy chủ) và được thêm vào Anki trên thiết bị này. Mỗi lúc chỉ một thiết bị làm việc này. Máy tính đóng vai máy chủ interconnect không nhận vai trò này: điện thoại ghép nối với nó nên bật Tạo thẻ tới máy chủ Fushi Interconnect (thẻ chờ trên điện thoại khi máy tính tắt). Máy chủ Fushi có thể nhận vai trò này.';
+      'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
   @override
   String get anki_sync_client_relogin => 'Đăng nhập lại';
   @override
@@ -263564,6 +263605,9 @@ class _StringsVi extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
 }
 
 // Path: <root>
@@ -264202,7 +264246,7 @@ class _StringsZhCn extends _StringsEn {
   String get anki_mine_to_server => '制卡到 Fushi 互联服务端';
   @override
   String get anki_mine_to_server_hint =>
-      '把制卡发送到 Fushi 互联服务端的 Anki（用服务端的牌组与设置），而非本机。需先在互联/同步里完成配对。';
+      '把制卡发送到 Fushi 互联服务端的 Anki（用服务端的牌组与设置），而非本机。需先在互联/同步里完成配对。服务端离线时卡片先存在本机，连上后自动发送。';
   @override
   String get anki_mined_action_add_duplicate => '新增为重复卡';
   @override
@@ -276808,7 +276852,7 @@ class _StringsZhCn extends _StringsEn {
     required Object remaining,
   }) => '已发送 ${delivered} 张，失败 ${failed} 张，剩余 ${remaining} 张';
   @override
-  String get anki_pending_mine_landing_title => '本机负责落地其他设备的卡片';
+  String get anki_pending_mine_landing_title => '接收其他设备的卡片';
   @override
   String get anki_error_sync_signed_out =>
       '请先登录 Anki 同步服务器（Anki 设置 › Anki 同步）。';
@@ -276875,7 +276919,7 @@ class _StringsZhCn extends _StringsEn {
       '登录失败：${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      '没装 Anki 的设备存下的卡片，经你配置的同步（云盘，或本机作为互联客户端时的互联）送到这台设备，由这里的 Anki 加卡。同一时间只有一台设备负责。作为互联主机的电脑不担任这个角色：与它配对的手机请改开「制卡到 Fushi 互联服务端」（电脑关机时卡片先存在手机上）。Fushi 服务端可以担任。';
+      '没装 Anki 的设备制的卡，会经同步送到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
   @override
   String get anki_sync_client_relogin => '重新登录';
   @override
@@ -280042,6 +280086,9 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '仅图片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '关闭';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
 }
 
 // Path: <root>
@@ -280683,7 +280730,7 @@ class _StringsZhHk extends _StringsEn {
   String get anki_mine_to_server => '製卡到 Fushi 互聯服務端';
   @override
   String get anki_mine_to_server_hint =>
-      '把製卡發送到 Fushi 互聯服務端的 Anki（用服務端的牌組與設定），而非本機。需先在互聯/同步裡完成配對。';
+      '把製卡發送到 Fushi 互聯服務端的 Anki（用服務端的牌組與設定），而非本機。需先在互聯/同步裡完成配對。服務端離線時卡片先存在本機，連上後自動發送。';
   @override
   String get anki_mined_action_add_duplicate => '新增為重復卡';
   @override
@@ -293301,7 +293348,7 @@ class _StringsZhHk extends _StringsEn {
     required Object remaining,
   }) => '已發送 ${delivered} 張，失敗 ${failed} 張，剩餘 ${remaining} 張';
   @override
-  String get anki_pending_mine_landing_title => '本機負責落地其他裝置的卡片';
+  String get anki_pending_mine_landing_title => '接收其他裝置的卡片';
   @override
   String get anki_error_sync_signed_out =>
       '請先登入 Anki 同步伺服器（Anki 設定 › Anki 同步）。';
@@ -293368,7 +293415,7 @@ class _StringsZhHk extends _StringsEn {
       '登入失敗：${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      '沒裝 Anki 的裝置存下的卡片，經你配置的同步（雲盤，或本機作為互聯客户端時的互聯）送到這台裝置，由這裡的 Anki 加卡。同一時間只有一台裝置負責。作為互聯主機的電腦不擔任這個角色：與它配對的手機請改開「制卡到 Fushi 互聯服務端」（電腦關機時卡片先存在手機上）。Fushi 服務端可以擔任。';
+      '沒裝 Anki 的裝置製的卡，會經同步送到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
   @override
   String get anki_sync_client_relogin => '重新登入';
   @override
@@ -296758,6 +296805,9 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '僅圖片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '關閉';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
 }
 
 /// Flat map(s) containing all translations.
@@ -297317,7 +297367,7 @@ extension on _StringsEn {
       case 'anki_mine_to_server':
         return 'Mine to Fushi Interconnect server';
       case 'anki_mine_to_server_hint':
-        return 'Send mined cards to the Fushi Interconnect server\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+        return 'Send mined cards to the Fushi Interconnect server\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing. If the server is offline, cards wait on this device and are sent once it\'s back.';
       case 'anki_mined_action_add_duplicate':
         return 'Add as a new card';
       case 'anki_mined_action_overwrite':
@@ -309157,7 +309207,7 @@ extension on _StringsEn {
           required Object remaining,
         }) => 'Sent ${delivered}, failed ${failed}, remaining ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Deliver cards from other devices';
+        return 'Receive cards from other devices';
       case 'anki_error_sync_signed_out':
         return 'Sign in to your Anki sync server first (Anki settings › Anki sync).';
       case 'anki_error_sync_unavailable':
@@ -309211,7 +309261,7 @@ extension on _StringsEn {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Sign-in failed: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Cards saved on devices without Anki travel through your sync service (cloud storage, or interconnect when this device syncs to a host) and are added to Anki on this device. Only one device does this at a time. A computer acting as an interconnect host doesn\'t take this role: phones paired with it should turn on Mine to Fushi Interconnect server instead (cards wait on the phone while the computer is off). A Fushi server can take this role.';
+        return 'Cards mined on devices without Anki reach this device through sync and are added to Anki here. Only one device receives them at a time.';
       case 'anki_sync_client_relogin':
         return 'Sign in again';
       case 'anki_sync_client_discard_confirm':
@@ -312140,6 +312190,8 @@ extension on _StringsEn {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
       default:
         return null;
     }
@@ -312699,7 +312751,7 @@ extension on _StringsAr {
       case 'anki_mine_to_server':
         return 'إرسال إلى الجهاز المقترن';
       case 'anki_mine_to_server_hint':
-        return 'أرسل البطاقات المستخرجة إلى Anki على الجهاز المضيف المقترن (رزمه وإعداداته) بدلاً من هذا الجهاز. يتطلب اقتراناً عبر الربط.';
+        return 'أرسل البطاقات المستخرجة إلى Anki على الجهاز المضيف المقترن (رزمه وإعداداته) بدلاً من هذا الجهاز. يتطلب اقتراناً عبر الربط. إذا كان الخادم غير متصل، تنتظر البطاقات على هذا الجهاز وتُرسل عند عودته.';
       case 'anki_mined_action_add_duplicate':
         return 'إضافة كبطاقة جديدة';
       case 'anki_mined_action_overwrite':
@@ -324534,7 +324586,7 @@ extension on _StringsAr {
           required Object remaining,
         }) => 'أُرسل ${delivered}، وفشل ${failed}، وتبقى ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'تسليم البطاقات من الأجهزة الأخرى';
+        return 'استلام البطاقات من الأجهزة الأخرى';
       case 'anki_error_sync_signed_out':
         return 'سجّل الدخول إلى خادم مزامنة Anki أولًا (إعدادات Anki › مزامنة Anki).';
       case 'anki_error_sync_unavailable':
@@ -324588,7 +324640,7 @@ extension on _StringsAr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'فشل تسجيل الدخول: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'تنتقل البطاقات المحفوظة على الأجهزة التي بلا Anki عبر خدمة المزامنة لديك (التخزين السحابي، أو الربط عندما يزامن هذا الجهاز مع مضيف) وتُضاف إلى Anki على هذا الجهاز. جهاز واحد فقط يفعل ذلك في كل مرة. الحاسوب الذي يعمل كمضيف ربط لا يتولى هذا الدور: الهواتف المقترنة به ينبغي أن تفعّل «الاستخراج إلى خادم Fushi Interconnect» بدلًا من ذلك (تنتظر البطاقات على الهاتف أثناء إيقاف الحاسوب). يمكن لخادم Fushi تولي هذا الدور.';
+        return 'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
       case 'anki_sync_client_relogin':
         return 'تسجيل الدخول مرة أخرى';
       case 'anki_sync_client_discard_confirm':
@@ -327517,6 +327569,8 @@ extension on _StringsAr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
       default:
         return null;
     }
@@ -328082,7 +328136,7 @@ extension on _StringsDe {
       case 'anki_mine_to_server':
         return 'An gekoppeltes Gerät senden';
       case 'anki_mine_to_server_hint':
-        return 'Erstellte Karten an das Anki des gekoppelten Hosts senden (dessen Decks und Einstellungen) statt an dieses Gerät. Erfordert eine Interconnect-Kopplung.';
+        return 'Erstellte Karten an das Anki des gekoppelten Hosts senden (dessen Decks und Einstellungen) statt an dieses Gerät. Erfordert eine Interconnect-Kopplung. Ist der Server offline, warten die Karten auf diesem Gerät und werden gesendet, sobald er wieder erreichbar ist.';
       case 'anki_mined_action_add_duplicate':
         return 'Als neue Karte hinzufügen';
       case 'anki_mined_action_overwrite':
@@ -339984,7 +340038,7 @@ extension on _StringsDe {
         }) =>
             '${delivered} gesendet, ${failed} fehlgeschlagen, ${remaining} verbleibend';
       case 'anki_pending_mine_landing_title':
-        return 'Karten von anderen Geräten zustellen';
+        return 'Karten anderer Geräte empfangen';
       case 'anki_error_sync_signed_out':
         return 'Melde dich zuerst bei deinem Anki-Sync-Server an (Anki-Einstellungen › Anki-Sync).';
       case 'anki_error_sync_unavailable':
@@ -340041,7 +340095,7 @@ extension on _StringsDe {
         return ({required Object error}) =>
             'Anmeldung fehlgeschlagen: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Karten, die auf Geräten ohne Anki gespeichert wurden, laufen über deinen Sync-Dienst (Cloud-Speicher oder Interconnect, wenn dieses Gerät mit einem Host synchronisiert) und werden auf diesem Gerät zu Anki hinzugefügt. Das macht immer nur ein Gerät. Ein Computer, der als Interconnect-Host fungiert, übernimmt diese Rolle nicht: Mit ihm gekoppelte Smartphones sollten stattdessen „Auf Fushi-Interconnect-Server minen“ aktivieren (Karten warten auf dem Smartphone, solange der Computer aus ist). Ein Fushi-Server kann diese Rolle übernehmen.';
+        return 'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
       case 'anki_sync_client_relogin':
         return 'Erneut anmelden';
       case 'anki_sync_client_discard_confirm':
@@ -342970,6 +343024,8 @@ extension on _StringsDe {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
       default:
         return null;
     }
@@ -343530,7 +343586,7 @@ extension on _StringsEs {
       case 'anki_mine_to_server':
         return 'Enviar al dispositivo emparejado';
       case 'anki_mine_to_server_hint':
-        return 'Envía las tarjetas creadas al Anki del dispositivo emparejado (sus mazos y ajustes) en lugar de este dispositivo. Requiere emparejamiento por Interconnect.';
+        return 'Envía las tarjetas creadas al Anki del dispositivo emparejado (sus mazos y ajustes) en lugar de este dispositivo. Requiere emparejamiento por Interconnect. Si el servidor está desconectado, las tarjetas esperan en este dispositivo y se envían cuando vuelve.';
       case 'anki_mined_action_add_duplicate':
         return 'Añadir como tarjeta nueva';
       case 'anki_mined_action_overwrite':
@@ -355420,7 +355476,7 @@ extension on _StringsEs {
         }) =>
             'Enviadas ${delivered}, fallidas ${failed}, restantes ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Entregar tarjetas de otros dispositivos';
+        return 'Recibir tarjetas de otros dispositivos';
       case 'anki_error_sync_signed_out':
         return 'Inicia primero sesión en tu servidor de sincronización de Anki (ajustes de Anki › Sincronización de Anki).';
       case 'anki_error_sync_unavailable':
@@ -355476,7 +355532,7 @@ extension on _StringsEs {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Error al iniciar sesión: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Las tarjetas guardadas en dispositivos sin Anki viajan por tu servicio de sincronización (almacenamiento en la nube o interconexión cuando este dispositivo sincroniza con un anfitrión) y se añaden a Anki en este dispositivo. Solo un dispositivo hace esto a la vez. Un ordenador que actúa como anfitrión de interconexión no asume este papel: los móviles emparejados con él deben activar Crear tarjetas en el servidor Fushi Interconnect (las tarjetas esperan en el móvil mientras el ordenador está apagado). Un servidor Fushi sí puede asumir este papel.';
+        return 'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
       case 'anki_sync_client_relogin':
         return 'Iniciar sesión de nuevo';
       case 'anki_sync_client_discard_confirm':
@@ -358405,6 +358461,8 @@ extension on _StringsEs {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
       default:
         return null;
     }
@@ -358966,7 +359024,7 @@ extension on _StringsFr {
       case 'anki_mine_to_server':
         return 'Envoyer au périphérique apparié';
       case 'anki_mine_to_server_hint':
-        return 'Envoyer les cartes créées vers l\'Anki de l\'hôte apparié (ses paquets et paramètres) au lieu de cet appareil. Nécessite un appairage d\'interconnexion.';
+        return 'Envoyer les cartes créées vers l\'Anki de l\'hôte apparié (ses paquets et paramètres) au lieu de cet appareil. Nécessite un appairage d\'interconnexion. Si le serveur est hors ligne, les cartes restent sur cet appareil et sont envoyées dès son retour.';
       case 'anki_mined_action_add_duplicate':
         return 'Ajouter comme nouvelle carte';
       case 'anki_mined_action_overwrite':
@@ -370873,7 +370931,7 @@ extension on _StringsFr {
         }) =>
             '${delivered} envoyées, ${failed} en échec, ${remaining} restantes';
       case 'anki_pending_mine_landing_title':
-        return 'Livrer les cartes d\'autres appareils';
+        return 'Recevoir les cartes des autres appareils';
       case 'anki_error_sync_signed_out':
         return 'Connectez-vous d\'abord à votre serveur de synchronisation Anki (réglages Anki › Synchronisation Anki).';
       case 'anki_error_sync_unavailable':
@@ -370929,7 +370987,7 @@ extension on _StringsFr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Échec de la connexion : ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Les cartes enregistrées sur des appareils sans Anki transitent par votre service de synchronisation (stockage cloud, ou interconnexion quand cet appareil se synchronise avec un hôte) et sont ajoutées à Anki sur cet appareil. Un seul appareil joue ce rôle à la fois. Un ordinateur faisant office d\'hôte d\'interconnexion ne prend pas ce rôle : les téléphones appairés avec lui doivent plutôt activer Créer vers le serveur Fushi Interconnect (les cartes attendent sur le téléphone tant que l\'ordinateur est éteint). Un serveur Fushi peut prendre ce rôle.';
+        return 'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
       case 'anki_sync_client_relogin':
         return 'Se reconnecter';
       case 'anki_sync_client_discard_confirm':
@@ -373858,6 +373916,8 @@ extension on _StringsFr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
       default:
         return null;
     }
@@ -374419,7 +374479,7 @@ extension on _StringsId {
       case 'anki_mine_to_server':
         return 'Kirim kartu ke perangkat berpasangan';
       case 'anki_mine_to_server_hint':
-        return 'Kirim kartu yang ditambang ke Anki perangkat host berpasangan (dek dan pengaturannya) alih-alih perangkat ini. Memerlukan koneksi Interconnect.';
+        return 'Kirim kartu yang ditambang ke Anki perangkat host berpasangan (dek dan pengaturannya) alih-alih perangkat ini. Memerlukan koneksi Interconnect. Jika server sedang offline, kartu menunggu di perangkat ini dan dikirim setelah tersambung kembali.';
       case 'anki_mined_action_add_duplicate':
         return 'Tambah sebagai kartu baru';
       case 'anki_mined_action_overwrite':
@@ -386271,7 +386331,7 @@ extension on _StringsId {
           required Object remaining,
         }) => 'Terkirim ${delivered}, gagal ${failed}, tersisa ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Antarkan kartu dari perangkat lain';
+        return 'Terima kartu dari perangkat lain';
       case 'anki_error_sync_signed_out':
         return 'Masuk ke server sinkronisasi Anki Anda dulu (pengaturan Anki › sinkronisasi Anki).';
       case 'anki_error_sync_unavailable':
@@ -386326,7 +386386,7 @@ extension on _StringsId {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Login gagal: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Kartu yang disimpan di perangkat tanpa Anki melewati layanan sinkronisasi Anda (penyimpanan cloud, atau interconnect saat perangkat ini menyinkronkan ke host) dan ditambahkan ke Anki di perangkat ini. Hanya satu perangkat yang melakukannya dalam satu waktu. Komputer yang bertindak sebagai host interconnect tidak mengambil peran ini: ponsel yang dipasangkan dengannya sebaiknya mengaktifkan Mining ke server Fushi Interconnect (kartu menunggu di ponsel saat komputer mati). Server Fushi dapat mengambil peran ini.';
+        return 'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
       case 'anki_sync_client_relogin':
         return 'Masuk lagi';
       case 'anki_sync_client_discard_confirm':
@@ -389255,6 +389315,8 @@ extension on _StringsId {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
       default:
         return null;
     }
@@ -389816,7 +389878,7 @@ extension on _StringsIt {
       case 'anki_mine_to_server':
         return 'Invia al dispositivo accoppiato';
       case 'anki_mine_to_server_hint':
-        return 'Invia le carte estratte all\'Anki dell\'host accoppiato (i suoi mazzi e impostazioni) invece di questo dispositivo. Richiede un accoppiamento interconnect.';
+        return 'Invia le carte estratte all\'Anki dell\'host accoppiato (i suoi mazzi e impostazioni) invece di questo dispositivo. Richiede un accoppiamento interconnect. Se il server è offline, le carte restano su questo dispositivo e vengono inviate quando torna disponibile.';
       case 'anki_mined_action_add_duplicate':
         return 'Aggiungi come nuova carta';
       case 'anki_mined_action_overwrite':
@@ -401703,7 +401765,7 @@ extension on _StringsIt {
         }) =>
             'Inviate ${delivered}, non riuscite ${failed}, rimanenti ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Consegna le carte da altri dispositivi';
+        return 'Ricevi le carte da altri dispositivi';
       case 'anki_error_sync_signed_out':
         return 'Accedi prima al tuo server di sincronizzazione di Anki (impostazioni di Anki › Sincronizzazione Anki).';
       case 'anki_error_sync_unavailable':
@@ -401759,7 +401821,7 @@ extension on _StringsIt {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Accesso non riuscito: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Le carte salvate su dispositivi senza Anki passano dal tuo servizio di sincronizzazione (archiviazione cloud, o interconnect quando questo dispositivo sincronizza con un host) e vengono aggiunte ad Anki su questo dispositivo. Lo fa un solo dispositivo alla volta. Un computer che fa da host interconnect non assume questo ruolo: i telefoni abbinati ad esso devono invece attivare Mining sul server Fushi Interconnect (le carte restano sul telefono mentre il computer è spento). Un server Fushi può assumere questo ruolo.';
+        return 'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
       case 'anki_sync_client_relogin':
         return 'Accedi di nuovo';
       case 'anki_sync_client_discard_confirm':
@@ -404688,6 +404750,8 @@ extension on _StringsIt {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
       default:
         return null;
     }
@@ -405244,7 +405308,7 @@ extension on _StringsJa {
       case 'anki_mine_to_server':
         return 'ペアリングデバイスに制カード';
       case 'anki_mine_to_server_hint':
-        return '制カードをこのデバイスではなく、ペアリングしたホストの Anki（そのデッキと設定）に送信します。互連ペアリングが必要です。';
+        return '制カードをこのデバイスではなく、ペアリングしたホストの Anki（そのデッキと設定）に送信します。互連ペアリングが必要です。サーバーがオフラインの間、カードはこのデバイスに保存され、接続が戻ると送信されます。';
       case 'anki_mined_action_add_duplicate':
         return '新しいカードとして追加';
       case 'anki_mined_action_overwrite':
@@ -417070,7 +417134,7 @@ extension on _StringsJa {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'サインインに失敗しました: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki のないデバイスで保存されたカードは、同期サービス（クラウドストレージ、またはこのデバイスがホストと同期している場合は Interconnect）を経由して、このデバイスで Anki に追加されます。同時にこれを行うデバイスは 1 台だけです。Interconnect ホストとして動作しているコンピューターはこの役割を担いません。ペアリングしているスマートフォンで代わりに「Fushi Interconnect サーバーへマイニング」をオンにしてください（コンピューターの電源が切れている間、カードはスマートフォンで待機します）。Fushi サーバーはこの役割を担えます。';
+        return 'Anki のないデバイスで作ったカードは、同期を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
       case 'anki_sync_client_relogin':
         return '再度サインイン';
       case 'anki_sync_client_discard_confirm':
@@ -419995,6 +420059,8 @@ extension on _StringsJa {
         return '画像字幕のみ';
       case 'video_setting_pause_ocr_scope_off':
         return 'オフ';
+      case 'anki_pending_mine_landing_host_note':
+        return 'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
       default:
         return null;
     }
@@ -420550,7 +420616,7 @@ extension on _StringsKo {
       case 'anki_mine_to_server':
         return '페어링된 기기로 채굴';
       case 'anki_mine_to_server_hint':
-        return '채굴한 카드를 이 기기 대신 페어링된 호스트의 Anki(해당 덱 및 설정)로 전송합니다. 인터커넥트 페어링이 필요합니다.';
+        return '채굴한 카드를 이 기기 대신 페어링된 호스트의 Anki(해당 덱 및 설정)로 전송합니다. 인터커넥트 페어링이 필요합니다. 서버가 오프라인이면 카드는 이 기기에 보관되었다가 연결되면 전송됩니다.';
       case 'anki_mined_action_add_duplicate':
         return '새 카드로 추가';
       case 'anki_mined_action_overwrite':
@@ -432327,7 +432393,7 @@ extension on _StringsKo {
           required Object remaining,
         }) => '전송 ${delivered}장, 실패 ${failed}장, 남음 ${remaining}장';
       case 'anki_pending_mine_landing_title':
-        return '다른 기기의 카드 전달';
+        return '다른 기기의 카드 받기';
       case 'anki_error_sync_signed_out':
         return '먼저 Anki 동기화 서버에 로그인하세요(Anki 설정 › Anki 동기화).';
       case 'anki_error_sync_unavailable':
@@ -432381,7 +432447,7 @@ extension on _StringsKo {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '로그인 실패: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki가 없는 기기에서 저장한 카드는 동기화 서비스(클라우드 저장소, 또는 이 기기가 호스트와 동기화하는 경우 연동)를 통해 전달되어 이 기기의 Anki에 추가됩니다. 한 번에 한 기기만 이 역할을 합니다. 연동 호스트로 동작하는 컴퓨터는 이 역할을 맡지 않습니다. 그 컴퓨터와 페어링한 휴대폰은 대신 \'Fushi 연동 서버로 마이닝\'을 켜세요(컴퓨터가 꺼져 있는 동안 카드는 휴대폰에서 대기합니다). Fushi 서버는 이 역할을 맡을 수 있습니다.';
+        return 'Anki가 없는 기기에서 만든 카드는 동기화를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
       case 'anki_sync_client_relogin':
         return '다시 로그인';
       case 'anki_sync_client_discard_confirm':
@@ -435309,6 +435375,8 @@ extension on _StringsKo {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
       default:
         return null;
     }
@@ -435870,7 +435938,7 @@ extension on _StringsNl {
       case 'anki_mine_to_server':
         return 'Kaarten naar gekoppeld apparaat sturen';
       case 'anki_mine_to_server_hint':
-        return 'Stuur gedolven kaarten naar de Anki van het gekoppelde apparaat (diens dekken en instellingen) in plaats van dit apparaat. Vereist een interconnectkoppeling.';
+        return 'Stuur gedolven kaarten naar de Anki van het gekoppelde apparaat (diens dekken en instellingen) in plaats van dit apparaat. Vereist een interconnectkoppeling. Is de server offline, dan wachten kaarten op dit apparaat en worden ze verzonden zodra hij terug is.';
       case 'anki_mined_action_add_duplicate':
         return 'Als nieuwe kaart toevoegen';
       case 'anki_mined_action_overwrite':
@@ -447752,7 +447820,7 @@ extension on _StringsNl {
         }) =>
             '${delivered} verzonden, ${failed} mislukt, ${remaining} resterend';
       case 'anki_pending_mine_landing_title':
-        return 'Kaarten van andere apparaten afleveren';
+        return 'Kaarten van andere apparaten ontvangen';
       case 'anki_error_sync_signed_out':
         return 'Meld je eerst aan bij je Anki-synchronisatieserver (Anki-instellingen › Anki-synchronisatie).';
       case 'anki_error_sync_unavailable':
@@ -447808,7 +447876,7 @@ extension on _StringsNl {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Aanmelden mislukt: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Kaarten die zijn opgeslagen op apparaten zonder Anki reizen via je synchronisatieservice (cloudopslag, of interconnect wanneer dit apparaat met een host synchroniseert) en worden op dit apparaat aan Anki toegevoegd. Slechts één apparaat doet dit tegelijk. Een computer die als interconnect-host fungeert, neemt deze rol niet op zich: telefoons die ermee zijn gekoppeld, moeten in plaats daarvan Minen naar Fushi Interconnect-server inschakelen (kaarten wachten op de telefoon terwijl de computer uit staat). Een Fushi-server kan deze rol wel op zich nemen.';
+        return 'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
       case 'anki_sync_client_relogin':
         return 'Opnieuw aanmelden';
       case 'anki_sync_client_discard_confirm':
@@ -450737,6 +450805,8 @@ extension on _StringsNl {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
       default:
         return null;
     }
@@ -451298,7 +451368,7 @@ extension on _StringsPtBr {
       case 'anki_mine_to_server':
         return 'Minerar para dispositivo pareado';
       case 'anki_mine_to_server_hint':
-        return 'Enviar cartões minerados para o Anki do dispositivo pareado (seus baralhos e configurações) em vez deste dispositivo. Requer um pareamento Interconnect.';
+        return 'Enviar cartões minerados para o Anki do dispositivo pareado (seus baralhos e configurações) em vez deste dispositivo. Requer um pareamento Interconnect. Se o servidor estiver offline, os cartões aguardam neste dispositivo e são enviados quando ele voltar.';
       case 'anki_mined_action_add_duplicate':
         return 'Adicionar como novo cartão';
       case 'anki_mined_action_overwrite':
@@ -463172,7 +463242,7 @@ extension on _StringsPtBr {
         }) =>
             '${delivered} enviados, ${failed} com falha, ${remaining} restantes';
       case 'anki_pending_mine_landing_title':
-        return 'Entregar cartões de outros dispositivos';
+        return 'Receber cartões de outros dispositivos';
       case 'anki_error_sync_signed_out':
         return 'Primeiro entre no seu servidor de sincronização do Anki (configurações do Anki › Sincronização do Anki).';
       case 'anki_error_sync_unavailable':
@@ -463228,7 +463298,7 @@ extension on _StringsPtBr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Falha no login: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Os cartões salvos em dispositivos sem Anki viajam pelo seu serviço de sincronização (armazenamento em nuvem, ou interconexão quando este dispositivo sincroniza com um host) e são adicionados ao Anki neste dispositivo. Apenas um dispositivo faz isso por vez. Um computador que atua como host de interconexão não assume esse papel: os celulares pareados com ele devem ativar Minerar para o servidor Fushi Interconnect (os cartões esperam no celular enquanto o computador está desligado). Um servidor Fushi pode assumir esse papel.';
+        return 'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
       case 'anki_sync_client_relogin':
         return 'Entrar novamente';
       case 'anki_sync_client_discard_confirm':
@@ -466157,6 +466227,8 @@ extension on _StringsPtBr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
       default:
         return null;
     }
@@ -466720,7 +466792,7 @@ extension on _StringsRu {
       case 'anki_mine_to_server':
         return 'Добывать на сопряжённое устройство';
       case 'anki_mine_to_server_hint':
-        return 'Отправлять добытые карточки в Anki сопряжённого хоста (его колоды и настройки) вместо этого устройства. Требуется сопряжение через Interconnect.';
+        return 'Отправлять добытые карточки в Anki сопряжённого хоста (его колоды и настройки) вместо этого устройства. Требуется сопряжение через Interconnect. Если сервер недоступен, карточки ждут на этом устройстве и отправляются, когда он снова в сети.';
       case 'anki_mined_action_add_duplicate':
         return 'Добавить как новую карточку';
       case 'anki_mined_action_overwrite':
@@ -478597,7 +478669,7 @@ extension on _StringsRu {
         }) =>
             'Отправлено: ${delivered}, с ошибкой: ${failed}, осталось: ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Доставка карточек с других устройств';
+        return 'Принимать карточки с других устройств';
       case 'anki_error_sync_signed_out':
         return 'Сначала войдите на свой сервер синхронизации Anki (настройки Anki › Синхронизация Anki).';
       case 'anki_error_sync_unavailable':
@@ -478653,7 +478725,7 @@ extension on _StringsRu {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Не удалось войти: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Карточки, сохранённые на устройствах без Anki, проходят через вашу службу синхронизации (облачное хранилище или interconnect, когда это устройство синхронизируется с хостом) и добавляются в Anki на этом устройстве. Одновременно это делает только одно устройство. Компьютер в роли хоста interconnect эту роль не берёт: сопряжённым с ним телефонам следует включить «Создавать карточки на сервере Fushi Interconnect» (карточки ждут на телефоне, пока компьютер выключен). Эту роль может взять сервер Fushi.';
+        return 'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
       case 'anki_sync_client_relogin':
         return 'Войти снова';
       case 'anki_sync_client_discard_confirm':
@@ -481582,6 +481654,8 @@ extension on _StringsRu {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
       default:
         return null;
     }
@@ -482141,7 +482215,7 @@ extension on _StringsTh {
       case 'anki_mine_to_server':
         return 'สร้างบัตรไปยังอุปกรณ์ที่จับคู่';
       case 'anki_mine_to_server_hint':
-        return 'ส่งบัตรที่สร้างไปยัง Anki ของโฮสต์ที่จับคู่ (สำรับและการตั้งค่าของโฮสต์) แทนที่จะเป็นอุปกรณ์นี้ ต้องมีการจับคู่ Interconnect';
+        return 'ส่งบัตรที่สร้างไปยัง Anki ของโฮสต์ที่จับคู่ (สำรับและการตั้งค่าของโฮสต์) แทนที่จะเป็นอุปกรณ์นี้ ต้องมีการจับคู่ Interconnect หากเซิร์ฟเวอร์ออฟไลน์ การ์ดจะรออยู่บนอุปกรณ์นี้และส่งเมื่อกลับมาเชื่อมต่อ';
       case 'anki_mined_action_add_duplicate':
         return 'เพิ่มเป็นบัตรใหม่';
       case 'anki_mined_action_overwrite':
@@ -493980,7 +494054,7 @@ extension on _StringsTh {
           required Object remaining,
         }) => 'ส่งแล้ว ${delivered} ล้มเหลว ${failed} เหลือ ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'ส่งการ์ดจากอุปกรณ์อื่น';
+        return 'รับการ์ดจากอุปกรณ์อื่น';
       case 'anki_error_sync_signed_out':
         return 'ลงชื่อเข้าใช้เซิร์ฟเวอร์ซิงค์ Anki ของคุณก่อน (การตั้งค่า Anki › ซิงค์ Anki)';
       case 'anki_error_sync_unavailable':
@@ -494034,7 +494108,7 @@ extension on _StringsTh {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'ลงชื่อเข้าใช้ไม่สำเร็จ: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'การ์ดที่บันทึกบนอุปกรณ์ที่ไม่มี Anki จะส่งผ่านบริการซิงค์ของคุณ (ที่เก็บข้อมูลคลาวด์ หรืออินเทอร์คอนเนกต์เมื่ออุปกรณ์นี้ซิงค์กับโฮสต์) และเพิ่มลงใน Anki บนอุปกรณ์นี้ มีเพียงอุปกรณ์เดียวที่ทำหน้าที่นี้ในแต่ละครั้ง คอมพิวเตอร์ที่เป็นโฮสต์อินเทอร์คอนเนกต์ไม่ทำหน้าที่นี้ โทรศัพท์ที่จับคู่กับโฮสต์ควรเปิด สร้างการ์ดไปยังเซิร์ฟเวอร์ Fushi Interconnect แทน (การ์ดจะรออยู่บนโทรศัพท์ขณะคอมพิวเตอร์ปิด) เซิร์ฟเวอร์ Fushi ทำหน้าที่นี้ได้';
+        return 'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงค์ และเพิ่มลงใน Anki ที่นี่ รับได้ครั้งละหนึ่งอุปกรณ์เท่านั้น';
       case 'anki_sync_client_relogin':
         return 'ลงชื่อเข้าใช้อีกครั้ง';
       case 'anki_sync_client_discard_confirm':
@@ -496963,6 +497037,8 @@ extension on _StringsTh {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
       default:
         return null;
     }
@@ -497525,7 +497601,7 @@ extension on _StringsTr {
       case 'anki_mine_to_server':
         return 'Eşleştirilmiş cihaza çıkar';
       case 'anki_mine_to_server_hint':
-        return 'Çıkarılan kartları bu cihaz yerine eşleştirilmiş ana bilgisayarın Anki\'sine (onun desteleri ve ayarları) gönderir. Bir interconnect eşleştirmesi gerektirir.';
+        return 'Çıkarılan kartları bu cihaz yerine eşleştirilmiş ana bilgisayarın Anki\'sine (onun desteleri ve ayarları) gönderir. Bir interconnect eşleştirmesi gerektirir. Sunucu çevrimdışıysa kartlar bu cihazda bekler ve bağlantı geri geldiğinde gönderilir.';
       case 'anki_mined_action_add_duplicate':
         return 'Yeni kart olarak ekle';
       case 'anki_mined_action_overwrite':
@@ -509390,7 +509466,7 @@ extension on _StringsTr {
         }) =>
             'Gönderilen ${delivered}, başarısız ${failed}, kalan ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Diğer cihazlardan gelen kartları teslim et';
+        return 'Diğer cihazların kartlarını al';
       case 'anki_error_sync_signed_out':
         return 'Önce Anki eşitleme sunucunuzda oturum açın (Anki ayarları › Anki eşitleme).';
       case 'anki_error_sync_unavailable':
@@ -509446,7 +509522,7 @@ extension on _StringsTr {
         return ({required Object error}) =>
             'Oturum açma başarısız oldu: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki\'si olmayan cihazlarda kaydedilen kartlar eşitleme hizmetiniz (bulut depolama veya bu cihaz bir ana makineyle eşitleniyorsa interconnect) üzerinden gider ve bu cihazda Anki\'ye eklenir. Aynı anda yalnızca bir cihaz bunu yapar. Interconnect ana makinesi olarak çalışan bir bilgisayar bu rolü üstlenmez: onunla eşleştirilmiş telefonlar bunun yerine Fushi Interconnect sunucusuna kart oluştur seçeneğini açmalıdır (bilgisayar kapalıyken kartlar telefonda bekler). Bir Fushi sunucusu bu rolü üstlenebilir.';
+        return 'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
       case 'anki_sync_client_relogin':
         return 'Yeniden oturum aç';
       case 'anki_sync_client_discard_confirm':
@@ -512375,6 +512451,8 @@ extension on _StringsTr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
       default:
         return null;
     }
@@ -512936,7 +513014,7 @@ extension on _StringsVi {
       case 'anki_mine_to_server':
         return 'Gửi thẻ đến thiết bị đã ghép nối';
       case 'anki_mine_to_server_hint':
-        return 'Gửi thẻ đã khai thác đến Anki của thiết bị chủ đã ghép nối (bộ thẻ và cài đặt của nó) thay vì thiết bị này. Yêu cầu ghép nối kết nối.';
+        return 'Gửi thẻ đã khai thác đến Anki của thiết bị chủ đã ghép nối (bộ thẻ và cài đặt của nó) thay vì thiết bị này. Yêu cầu ghép nối kết nối. Nếu máy chủ ngoại tuyến, thẻ sẽ chờ trên thiết bị này và được gửi khi kết nối lại.';
       case 'anki_mined_action_add_duplicate':
         return 'Thêm như thẻ mới';
       case 'anki_mined_action_overwrite':
@@ -524786,7 +524864,7 @@ extension on _StringsVi {
           required Object remaining,
         }) => 'Đã gửi ${delivered}, thất bại ${failed}, còn lại ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Chuyển thẻ từ thiết bị khác';
+        return 'Nhận thẻ từ thiết bị khác';
       case 'anki_error_sync_signed_out':
         return 'Hãy đăng nhập máy chủ đồng bộ Anki trước (Cài đặt Anki › Đồng bộ Anki).';
       case 'anki_error_sync_unavailable':
@@ -524841,7 +524919,7 @@ extension on _StringsVi {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Đăng nhập thất bại: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Các thẻ lưu trên thiết bị không có Anki sẽ đi qua dịch vụ đồng bộ của bạn (lưu trữ đám mây, hoặc interconnect khi thiết bị này đồng bộ tới máy chủ) và được thêm vào Anki trên thiết bị này. Mỗi lúc chỉ một thiết bị làm việc này. Máy tính đóng vai máy chủ interconnect không nhận vai trò này: điện thoại ghép nối với nó nên bật Tạo thẻ tới máy chủ Fushi Interconnect (thẻ chờ trên điện thoại khi máy tính tắt). Máy chủ Fushi có thể nhận vai trò này.';
+        return 'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
       case 'anki_sync_client_relogin':
         return 'Đăng nhập lại';
       case 'anki_sync_client_discard_confirm':
@@ -527770,6 +527848,8 @@ extension on _StringsVi {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
       default:
         return null;
     }
@@ -528323,7 +528403,7 @@ extension on _StringsZhCn {
       case 'anki_mine_to_server':
         return '制卡到 Fushi 互联服务端';
       case 'anki_mine_to_server_hint':
-        return '把制卡发送到 Fushi 互联服务端的 Anki（用服务端的牌组与设置），而非本机。需先在互联/同步里完成配对。';
+        return '把制卡发送到 Fushi 互联服务端的 Anki（用服务端的牌组与设置），而非本机。需先在互联/同步里完成配对。服务端离线时卡片先存在本机，连上后自动发送。';
       case 'anki_mined_action_add_duplicate':
         return '新增为重复卡';
       case 'anki_mined_action_overwrite':
@@ -540050,7 +540130,7 @@ extension on _StringsZhCn {
           required Object remaining,
         }) => '已发送 ${delivered} 张，失败 ${failed} 张，剩余 ${remaining} 张';
       case 'anki_pending_mine_landing_title':
-        return '本机负责落地其他设备的卡片';
+        return '接收其他设备的卡片';
       case 'anki_error_sync_signed_out':
         return '请先登录 Anki 同步服务器（Anki 设置 › Anki 同步）。';
       case 'anki_error_sync_unavailable':
@@ -540104,7 +540184,7 @@ extension on _StringsZhCn {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '登录失败：${error}';
       case 'anki_pending_mine_landing_hint':
-        return '没装 Anki 的设备存下的卡片，经你配置的同步（云盘，或本机作为互联客户端时的互联）送到这台设备，由这里的 Anki 加卡。同一时间只有一台设备负责。作为互联主机的电脑不担任这个角色：与它配对的手机请改开「制卡到 Fushi 互联服务端」（电脑关机时卡片先存在手机上）。Fushi 服务端可以担任。';
+        return '没装 Anki 的设备制的卡，会经同步送到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
       case 'anki_sync_client_relogin':
         return '重新登录';
       case 'anki_sync_client_discard_confirm':
@@ -542996,6 +543076,8 @@ extension on _StringsZhCn {
         return '仅图片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '关闭';
+      case 'anki_pending_mine_landing_host_note':
+        return '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
       default:
         return null;
     }
@@ -543549,7 +543631,7 @@ extension on _StringsZhHk {
       case 'anki_mine_to_server':
         return '製卡到 Fushi 互聯服務端';
       case 'anki_mine_to_server_hint':
-        return '把製卡發送到 Fushi 互聯服務端的 Anki（用服務端的牌組與設定），而非本機。需先在互聯/同步裡完成配對。';
+        return '把製卡發送到 Fushi 互聯服務端的 Anki（用服務端的牌組與設定），而非本機。需先在互聯/同步裡完成配對。服務端離線時卡片先存在本機，連上後自動發送。';
       case 'anki_mined_action_add_duplicate':
         return '新增為重復卡';
       case 'anki_mined_action_overwrite':
@@ -555277,7 +555359,7 @@ extension on _StringsZhHk {
           required Object remaining,
         }) => '已發送 ${delivered} 張，失敗 ${failed} 張，剩餘 ${remaining} 張';
       case 'anki_pending_mine_landing_title':
-        return '本機負責落地其他裝置的卡片';
+        return '接收其他裝置的卡片';
       case 'anki_error_sync_signed_out':
         return '請先登入 Anki 同步伺服器（Anki 設定 › Anki 同步）。';
       case 'anki_error_sync_unavailable':
@@ -555331,7 +555413,7 @@ extension on _StringsZhHk {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '登入失敗：${error}';
       case 'anki_pending_mine_landing_hint':
-        return '沒裝 Anki 的裝置存下的卡片，經你配置的同步（雲盤，或本機作為互聯客户端時的互聯）送到這台裝置，由這裡的 Anki 加卡。同一時間只有一台裝置負責。作為互聯主機的電腦不擔任這個角色：與它配對的手機請改開「制卡到 Fushi 互聯服務端」（電腦關機時卡片先存在手機上）。Fushi 服務端可以擔任。';
+        return '沒裝 Anki 的裝置製的卡，會經同步送到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
       case 'anki_sync_client_relogin':
         return '重新登入';
       case 'anki_sync_client_discard_confirm':
@@ -558248,6 +558330,8 @@ extension on _StringsZhHk {
         return '僅圖片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '關閉';
+      case 'anki_pending_mine_landing_host_note':
+        return '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
       default:
         return null;
     }
