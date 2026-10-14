@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127211 (7483 per locale)
+/// Strings: 127177 (7481 per locale)
 ///
-/// Built on 2026-10-14 at 12:49 UTC
+/// Built on 2026-10-14 at 18:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7627,11 +7627,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_parallel_tasks_desc =>
       'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
   String get manga_ocr_local_model => 'Local OCR model';
-  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
   String get manga_ocr_engine_local_onnx_desc =>
       'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
-  String get manga_ocr_baberu_desc =>
-      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
   String get game_lookup_samples_advanced => 'Advanced options';
   String get game_lookup_samples_advanced_hint => 'Fine-tune the cells by hand';
   String get game_lookup_samples_apply => 'Apply to game';
@@ -23629,14 +23626,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'نموذج OCR المحلي';
   @override
-  String get manga_ocr_baberu_model =>
-      'Baberu (سريع، وحدة الرسومات عند توفرها)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'دون اتصال بالكامل. نزّل النموذج المحدد مرة واحدة؛ وتعتمد السرعة والدقة على النموذج والعتاد.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'نحو 284 ميغابايت شاملة نماذج الأسطر الأفقية. يستخدم Windows ترميز الصور على وحدة الرسومات مع فك ترميز النص على المعالج عند التوفر، وإلا فالمعالج. قد تقل الدقة في بعض الأسماء والخط اليدوي. ينطبق على مهام OCR الجديدة.';
   @override
   String get game_lookup_samples_advanced => 'خيارات متقدمة';
   @override
@@ -42049,13 +42040,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'Lokales OCR-Modell';
   @override
-  String get manga_ocr_baberu_model => 'Baberu (schnell, GPU wenn verfügbar)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'Vollständig offline. Lade das gewählte Modell einmal herunter; Geschwindigkeit und Genauigkeit hängen von Modell und Hardware ab.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'Etwa 284 MB einschließlich Modellen für horizontale Zeilen. Unter Windows wird, wenn verfügbar, GPU-Bildkodierung mit CPU-Textdekodierung verwendet, sonst CPU. Einige Namen und Handschrift sind möglicherweise weniger genau. Gilt für neue OCR-Aufgaben.';
   @override
   String get game_lookup_samples_advanced => 'Erweiterte Optionen';
   @override
@@ -60581,14 +60567,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'Modelo de OCR local';
   @override
-  String get manga_ocr_baberu_model =>
-      'Baberu (rápido, GPU si está disponible)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'Totalmente sin conexión. Descarga una vez el modelo seleccionado; la velocidad y la precisión dependen del modelo y del hardware.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'Unos 284 MB incluidos los modelos de líneas horizontales. En Windows usa codificación de imagen en GPU con decodificación de texto en CPU cuando es posible; si no, CPU. Algunos nombres y escritura a mano pueden ser menos precisos. Se aplica a las nuevas tareas de OCR.';
   @override
   String get game_lookup_samples_advanced => 'Opciones avanzadas';
   @override
@@ -79195,13 +79175,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'Modèle OCR local';
   @override
-  String get manga_ocr_baberu_model => 'Baberu (rapide, GPU si disponible)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'Entièrement hors ligne. Téléchargez une fois le modèle sélectionné ; la vitesse et la précision dépendent du modèle et du matériel.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'Environ 284 Mo avec les modèles de lignes horizontales. Sous Windows, utilise l\'encodage d\'image sur GPU avec décodage du texte sur CPU si possible, sinon le CPU. Certains noms et écritures manuscrites peuvent être moins précis. S\'applique aux nouvelles tâches OCR.';
   @override
   String get game_lookup_samples_advanced => 'Options avancées';
   @override
@@ -97506,13 +97481,8 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'Model OCR lokal';
   @override
-  String get manga_ocr_baberu_model => 'Baberu (cepat, GPU jika tersedia)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'Sepenuhnya offline. Unduh model yang dipilih sekali; kecepatan dan akurasi bergantung pada model dan perangkat keras.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'Sekitar 284 MB termasuk model baris horizontal. Windows menggunakan penyandian gambar GPU dengan dekode teks CPU jika tersedia, jika tidak CPU. Beberapa nama dan tulisan tangan mungkin kurang akurat. Berlaku untuk tugas OCR baru.';
   @override
   String get game_lookup_samples_advanced => 'Opsi lanjutan';
   @override
@@ -115931,13 +115901,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'Modello OCR locale';
   @override
-  String get manga_ocr_baberu_model => 'Baberu (veloce, GPU se disponibile)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'Completamente offline. Scarica una volta il modello selezionato; velocità e precisione dipendono dal modello e dall\'hardware.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'Circa 284 MB inclusi i modelli per righe orizzontali. Windows usa la codifica delle immagini su GPU con decodifica del testo su CPU quando disponibile, altrimenti CPU. Alcuni nomi e la scrittura a mano possono essere meno accurati. Si applica alle nuove attività OCR.';
   @override
   String get game_lookup_samples_advanced => 'Opzioni avanzate';
   @override
@@ -133515,13 +133480,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'ローカル OCR モデル';
   @override
-  String get manga_ocr_baberu_model => 'Baberu（高速、利用可能なら GPU）';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       '完全オフライン。選択したモデルを一度ダウンロードしてください。速度と精度はモデルとハードウェアによって変わります。';
-  @override
-  String get manga_ocr_baberu_desc =>
-      '横書きモデルを含めて約 284 MB。Windows では、利用可能なら画像エンコードに GPU、テキストデコードに CPU を使い、そうでなければ CPU のみを使います。一部の名前や手書き文字は精度が下がる場合があります。新しい OCR タスクに適用されます。';
   @override
   String get game_lookup_samples_advanced => '詳細オプション';
   @override
@@ -150955,13 +150915,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_ocr_local_model => '로컬 OCR 모델';
   @override
-  String get manga_ocr_baberu_model => 'Baberu (빠름, 가능하면 GPU)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       '완전 오프라인입니다. 선택한 모델을 한 번 다운로드하세요. 속도와 정확도는 모델과 하드웨어에 따라 달라집니다.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      '가로줄 모델 포함 약 284 MB입니다. Windows에서는 가능하면 GPU 이미지 인코딩과 CPU 텍스트 디코딩을 사용하며, 그렇지 않으면 CPU를 사용합니다. 일부 이름과 손글씨는 정확도가 낮을 수 있습니다. 새 OCR 작업에 적용됩니다.';
   @override
   String get game_lookup_samples_advanced => '고급 옵션';
   @override
@@ -169224,13 +169179,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'Lokaal OCR-model';
   @override
-  String get manga_ocr_baberu_model => 'Baberu (snel, GPU indien beschikbaar)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'Volledig offline. Download het geselecteerde model één keer; snelheid en nauwkeurigheid hangen af van het model en de hardware.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'Ongeveer 284 MB inclusief modellen voor horizontale regels. Windows gebruikt GPU-beeldcodering met CPU-tekstdecodering indien beschikbaar, anders CPU. Sommige namen en handschrift kunnen minder nauwkeurig zijn. Geldt voor nieuwe OCR-taken.';
   @override
   String get game_lookup_samples_advanced => 'Geavanceerde opties';
   @override
@@ -187667,13 +187617,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'Modelo de OCR local';
   @override
-  String get manga_ocr_baberu_model => 'Baberu (rápido, GPU quando disponível)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'Totalmente offline. Baixe o modelo selecionado uma vez; velocidade e precisão dependem do modelo e do hardware.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'Cerca de 284 MB, incluindo modelos de linhas horizontais. O Windows usa codificação de imagem na GPU com decodificação de texto na CPU quando disponível, caso contrário CPU. Alguns nomes e escrita à mão podem ser menos precisos. Vale para novas tarefas de OCR.';
   @override
   String get game_lookup_samples_advanced => 'Opções avançadas';
   @override
@@ -206080,13 +206025,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'Локальная модель OCR';
   @override
-  String get manga_ocr_baberu_model => 'Baberu (быстрая, GPU при наличии)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'Полностью офлайн. Выбранную модель нужно скачать один раз; скорость и точность зависят от модели и оборудования.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'Около 284 МБ, включая модели горизонтальных строк. На Windows при наличии используется кодирование изображений на GPU с декодированием текста на CPU, иначе CPU. Некоторые имена и рукописный текст могут распознаваться менее точно. Применяется к новым задачам OCR.';
   @override
   String get game_lookup_samples_advanced => 'Дополнительные параметры';
   @override
@@ -224206,13 +224146,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'โมเดล OCR ในเครื่อง';
   @override
-  String get manga_ocr_baberu_model => 'Baberu (เร็ว ใช้ GPU เมื่อมี)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'ออฟไลน์ทั้งหมด ดาวน์โหลดโมเดลที่เลือกหนึ่งครั้ง ความเร็วและความแม่นยำขึ้นกับโมเดลและฮาร์ดแวร์';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'ประมาณ 284 MB รวมโมเดลบรรทัดแนวนอน บน Windows ใช้ GPU เข้ารหัสภาพและ CPU ถอดรหัสข้อความเมื่อมี มิฉะนั้นใช้ CPU บางชื่อและลายมืออาจแม่นยำน้อยลง มีผลกับงาน OCR ใหม่';
   @override
   String get game_lookup_samples_advanced => 'ตัวเลือกขั้นสูง';
   @override
@@ -242455,13 +242390,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'Yerel OCR modeli';
   @override
-  String get manga_ocr_baberu_model => 'Baberu (hızlı, varsa GPU)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'Tamamen çevrimdışı. Seçilen modeli bir kez indirin; hız ve doğruluk modele ve donanıma bağlıdır.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'Yatay satır modelleri dahil yaklaşık 284 MB. Windows, varsa görüntü kodlamada GPU, metin çözmede CPU kullanır; yoksa CPU. Bazı isimler ve el yazısı daha az doğru olabilir. Yeni OCR görevlerine uygulanır.';
   @override
   String get game_lookup_samples_advanced => 'Gelişmiş seçenekler';
   @override
@@ -260679,13 +260609,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_ocr_local_model => 'Mô hình OCR cục bộ';
   @override
-  String get manga_ocr_baberu_model => 'Baberu (nhanh, dùng GPU khi có)';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       'Hoàn toàn ngoại tuyến. Tải mô hình đã chọn một lần; tốc độ và độ chính xác phụ thuộc vào mô hình và phần cứng.';
-  @override
-  String get manga_ocr_baberu_desc =>
-      'Khoảng 284 MB gồm cả các mô hình dòng ngang. Windows dùng GPU để mã hóa ảnh và CPU để giải mã văn bản khi có, nếu không thì dùng CPU. Một số tên riêng và chữ viết tay có thể kém chính xác hơn. Áp dụng cho các tác vụ OCR mới.';
   @override
   String get game_lookup_samples_advanced => 'Tùy chọn nâng cao';
   @override
@@ -277780,13 +277705,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_ocr_local_model => '本机 OCR 模型';
   @override
-  String get manga_ocr_baberu_model => 'Baberu（快速，可用时使用 GPU）';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       '完全离线。首次使用需下载所选模型，速度和准确度取决于模型与硬件。';
-  @override
-  String get manga_ocr_baberu_desc =>
-      '含横排文字模型约 284 MB。在 Windows 上自动使用 GPU 图像编码与 CPU 文字解码，不可用时使用 CPU。部分名字和手写文字可能更不准确。对新启动的 OCR 任务生效。';
   @override
   String get game_lookup_samples_advanced => '高级选项';
   @override
@@ -294420,13 +294340,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_ocr_local_model => '本機 OCR 模型';
   @override
-  String get manga_ocr_baberu_model => 'Baberu（快速，可用時使用 GPU）';
-  @override
   String get manga_ocr_engine_local_onnx_desc =>
       '完全離線。首次使用需下載所選模型，速度和準確度取決於模型與硬件。';
-  @override
-  String get manga_ocr_baberu_desc =>
-      '含橫排文字模型約 284 MB。在 Windows 上自動使用 GPU 圖像編碼與 CPU 文字解碼，不可用時使用 CPU。部分名字和手寫文字可能更不準確。對新啟動的 OCR 任務生效。';
   @override
   String get game_lookup_samples_advanced => '高級選項';
   @override
@@ -310570,12 +310485,8 @@ extension on _StringsEn {
         return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
       case 'manga_ocr_local_model':
         return 'Local OCR model';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (fast, GPU when available)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
-      case 'manga_ocr_baberu_desc':
-        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
       case 'game_lookup_samples_advanced':
         return 'Advanced options';
       case 'game_lookup_samples_advanced_hint':
@@ -326082,12 +325993,8 @@ extension on _StringsAr {
         return 'التعرف على كتب مختلفة في وقت واحد. تبقى فصول الكتاب الواحد بالترتيب. القيم الأعلى تستهلك ذاكرة أكثر؛ ووضع الذاكرة المنخفضة يحدّها بمهمة واحدة.';
       case 'manga_ocr_local_model':
         return 'نموذج OCR المحلي';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (سريع، وحدة الرسومات عند توفرها)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'دون اتصال بالكامل. نزّل النموذج المحدد مرة واحدة؛ وتعتمد السرعة والدقة على النموذج والعتاد.';
-      case 'manga_ocr_baberu_desc':
-        return 'نحو 284 ميغابايت شاملة نماذج الأسطر الأفقية. يستخدم Windows ترميز الصور على وحدة الرسومات مع فك ترميز النص على المعالج عند التوفر، وإلا فالمعالج. قد تقل الدقة في بعض الأسماء والخط اليدوي. ينطبق على مهام OCR الجديدة.';
       case 'game_lookup_samples_advanced':
         return 'خيارات متقدمة';
       case 'game_lookup_samples_advanced_hint':
@@ -341658,12 +341565,8 @@ extension on _StringsDe {
         return 'Verschiedene Bücher gleichzeitig erkennen. Kapitel desselben Buchs bleiben in Reihenfolge. Höhere Werte benötigen mehr Speicher; der Modus für wenig Speicher beschränkt dies auf eine Aufgabe.';
       case 'manga_ocr_local_model':
         return 'Lokales OCR-Modell';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (schnell, GPU wenn verfügbar)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'Vollständig offline. Lade das gewählte Modell einmal herunter; Geschwindigkeit und Genauigkeit hängen von Modell und Hardware ab.';
-      case 'manga_ocr_baberu_desc':
-        return 'Etwa 284 MB einschließlich Modellen für horizontale Zeilen. Unter Windows wird, wenn verfügbar, GPU-Bildkodierung mit CPU-Textdekodierung verwendet, sonst CPU. Einige Namen und Handschrift sind möglicherweise weniger genau. Gilt für neue OCR-Aufgaben.';
       case 'game_lookup_samples_advanced':
         return 'Erweiterte Optionen';
       case 'game_lookup_samples_advanced_hint':
@@ -357231,12 +357134,8 @@ extension on _StringsEs {
         return 'Reconoce varios libros a la vez. Los capítulos de un mismo libro se mantienen en orden. Valores más altos usan más memoria; el modo de poca memoria lo limita a uno.';
       case 'manga_ocr_local_model':
         return 'Modelo de OCR local';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (rápido, GPU si está disponible)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'Totalmente sin conexión. Descarga una vez el modelo seleccionado; la velocidad y la precisión dependen del modelo y del hardware.';
-      case 'manga_ocr_baberu_desc':
-        return 'Unos 284 MB incluidos los modelos de líneas horizontales. En Windows usa codificación de imagen en GPU con decodificación de texto en CPU cuando es posible; si no, CPU. Algunos nombres y escritura a mano pueden ser menos precisos. Se aplica a las nuevas tareas de OCR.';
       case 'game_lookup_samples_advanced':
         return 'Opciones avanzadas';
       case 'game_lookup_samples_advanced_hint':
@@ -372815,12 +372714,8 @@ extension on _StringsFr {
         return 'Reconnaît plusieurs livres à la fois. Les chapitres d\'un même livre restent dans l\'ordre. Des valeurs plus élevées utilisent plus de mémoire ; le mode mémoire faible limite à une.';
       case 'manga_ocr_local_model':
         return 'Modèle OCR local';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (rapide, GPU si disponible)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'Entièrement hors ligne. Téléchargez une fois le modèle sélectionné ; la vitesse et la précision dépendent du modèle et du matériel.';
-      case 'manga_ocr_baberu_desc':
-        return 'Environ 284 Mo avec les modèles de lignes horizontales. Sous Windows, utilise l\'encodage d\'image sur GPU avec décodage du texte sur CPU si possible, sinon le CPU. Certains noms et écritures manuscrites peuvent être moins précis. S\'applique aux nouvelles tâches OCR.';
       case 'game_lookup_samples_advanced':
         return 'Options avancées';
       case 'game_lookup_samples_advanced_hint':
@@ -388353,12 +388248,8 @@ extension on _StringsId {
         return 'Kenali buku berbeda sekaligus. Bab dari buku yang sama tetap berurutan. Nilai lebih tinggi memakai lebih banyak memori; mode memori rendah membatasi ke satu.';
       case 'manga_ocr_local_model':
         return 'Model OCR lokal';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (cepat, GPU jika tersedia)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'Sepenuhnya offline. Unduh model yang dipilih sekali; kecepatan dan akurasi bergantung pada model dan perangkat keras.';
-      case 'manga_ocr_baberu_desc':
-        return 'Sekitar 284 MB termasuk model baris horizontal. Windows menggunakan penyandian gambar GPU dengan dekode teks CPU jika tersedia, jika tidak CPU. Beberapa nama dan tulisan tangan mungkin kurang akurat. Berlaku untuk tugas OCR baru.';
       case 'game_lookup_samples_advanced':
         return 'Opsi lanjutan';
       case 'game_lookup_samples_advanced_hint':
@@ -403917,12 +403808,8 @@ extension on _StringsIt {
         return 'Riconosci libri diversi contemporaneamente. I capitoli dello stesso libro restano in ordine. Valori più alti usano più memoria; la modalità a bassa memoria lo limita a uno.';
       case 'manga_ocr_local_model':
         return 'Modello OCR locale';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (veloce, GPU se disponibile)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'Completamente offline. Scarica una volta il modello selezionato; velocità e precisione dipendono dal modello e dall\'hardware.';
-      case 'manga_ocr_baberu_desc':
-        return 'Circa 284 MB inclusi i modelli per righe orizzontali. Windows usa la codifica delle immagini su GPU con decodifica del testo su CPU quando disponibile, altrimenti CPU. Alcuni nomi e la scrittura a mano possono essere meno accurati. Si applica alle nuove attività OCR.';
       case 'game_lookup_samples_advanced':
         return 'Opzioni avanzate';
       case 'game_lookup_samples_advanced_hint':
@@ -419379,12 +419266,8 @@ extension on _StringsJa {
         return '異なる本を同時に認識します。同じ本の章は順番どおりに処理されます。値を大きくするとメモリ使用量が増え、低メモリモードでは 1 に制限されます。';
       case 'manga_ocr_local_model':
         return 'ローカル OCR モデル';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu（高速、利用可能なら GPU）';
       case 'manga_ocr_engine_local_onnx_desc':
         return '完全オフライン。選択したモデルを一度ダウンロードしてください。速度と精度はモデルとハードウェアによって変わります。';
-      case 'manga_ocr_baberu_desc':
-        return '横書きモデルを含めて約 284 MB。Windows では、利用可能なら画像エンコードに GPU、テキストデコードに CPU を使い、そうでなければ CPU のみを使います。一部の名前や手書き文字は精度が下がる場合があります。新しい OCR タスクに適用されます。';
       case 'game_lookup_samples_advanced':
         return '詳細オプション';
       case 'game_lookup_samples_advanced_hint':
@@ -434823,12 +434706,8 @@ extension on _StringsKo {
         return '서로 다른 책을 동시에 인식합니다. 같은 책의 챕터는 순서를 유지합니다. 값이 높을수록 메모리를 더 사용하며, 저메모리 모드에서는 1개로 제한됩니다.';
       case 'manga_ocr_local_model':
         return '로컬 OCR 모델';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (빠름, 가능하면 GPU)';
       case 'manga_ocr_engine_local_onnx_desc':
         return '완전 오프라인입니다. 선택한 모델을 한 번 다운로드하세요. 속도와 정확도는 모델과 하드웨어에 따라 달라집니다.';
-      case 'manga_ocr_baberu_desc':
-        return '가로줄 모델 포함 약 284 MB입니다. Windows에서는 가능하면 GPU 이미지 인코딩과 CPU 텍스트 디코딩을 사용하며, 그렇지 않으면 CPU를 사용합니다. 일부 이름과 손글씨는 정확도가 낮을 수 있습니다. 새 OCR 작업에 적용됩니다.';
       case 'game_lookup_samples_advanced':
         return '고급 옵션';
       case 'game_lookup_samples_advanced_hint':
@@ -450367,12 +450246,8 @@ extension on _StringsNl {
         return 'Herken verschillende boeken tegelijk. Hoofdstukken van hetzelfde boek blijven op volgorde. Hogere waarden gebruiken meer geheugen; de modus voor weinig geheugen beperkt dit tot één.';
       case 'manga_ocr_local_model':
         return 'Lokaal OCR-model';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (snel, GPU indien beschikbaar)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'Volledig offline. Download het geselecteerde model één keer; snelheid en nauwkeurigheid hangen af van het model en de hardware.';
-      case 'manga_ocr_baberu_desc':
-        return 'Ongeveer 284 MB inclusief modellen voor horizontale regels. Windows gebruikt GPU-beeldcodering met CPU-tekstdecodering indien beschikbaar, anders CPU. Sommige namen en handschrift kunnen minder nauwkeurig zijn. Geldt voor nieuwe OCR-taken.';
       case 'game_lookup_samples_advanced':
         return 'Geavanceerde opties';
       case 'game_lookup_samples_advanced_hint':
@@ -465923,12 +465798,8 @@ extension on _StringsPtBr {
         return 'Reconhece livros diferentes ao mesmo tempo. Os capítulos do mesmo livro permanecem em ordem. Valores maiores usam mais memória; o modo de pouca memória limita isso a um.';
       case 'manga_ocr_local_model':
         return 'Modelo de OCR local';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (rápido, GPU quando disponível)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'Totalmente offline. Baixe o modelo selecionado uma vez; velocidade e precisão dependem do modelo e do hardware.';
-      case 'manga_ocr_baberu_desc':
-        return 'Cerca de 284 MB, incluindo modelos de linhas horizontais. O Windows usa codificação de imagem na GPU com decodificação de texto na CPU quando disponível, caso contrário CPU. Alguns nomes e escrita à mão podem ser menos precisos. Vale para novas tarefas de OCR.';
       case 'game_lookup_samples_advanced':
         return 'Opções avançadas';
       case 'game_lookup_samples_advanced_hint':
@@ -481483,12 +481354,8 @@ extension on _StringsRu {
         return 'Распознавать разные книги одновременно. Главы одной книги остаются по порядку. Большие значения расходуют больше памяти; режим малой памяти ограничивает это одной задачей.';
       case 'manga_ocr_local_model':
         return 'Локальная модель OCR';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (быстрая, GPU при наличии)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'Полностью офлайн. Выбранную модель нужно скачать один раз; скорость и точность зависят от модели и оборудования.';
-      case 'manga_ocr_baberu_desc':
-        return 'Около 284 МБ, включая модели горизонтальных строк. На Windows при наличии используется кодирование изображений на GPU с декодированием текста на CPU, иначе CPU. Некоторые имена и рукописный текст могут распознаваться менее точно. Применяется к новым задачам OCR.';
       case 'game_lookup_samples_advanced':
         return 'Дополнительные параметры';
       case 'game_lookup_samples_advanced_hint':
@@ -497003,12 +496870,8 @@ extension on _StringsTh {
         return 'จดจำหนังสือต่างเล่มพร้อมกัน ตอนของหนังสือเล่มเดียวกันยังเรียงตามลำดับ ค่าสูงใช้หน่วยความจำมากขึ้น โหมดหน่วยความจำต่ำจำกัดไว้ที่หนึ่งงาน';
       case 'manga_ocr_local_model':
         return 'โมเดล OCR ในเครื่อง';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (เร็ว ใช้ GPU เมื่อมี)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'ออฟไลน์ทั้งหมด ดาวน์โหลดโมเดลที่เลือกหนึ่งครั้ง ความเร็วและความแม่นยำขึ้นกับโมเดลและฮาร์ดแวร์';
-      case 'manga_ocr_baberu_desc':
-        return 'ประมาณ 284 MB รวมโมเดลบรรทัดแนวนอน บน Windows ใช้ GPU เข้ารหัสภาพและ CPU ถอดรหัสข้อความเมื่อมี มิฉะนั้นใช้ CPU บางชื่อและลายมืออาจแม่นยำน้อยลง มีผลกับงาน OCR ใหม่';
       case 'game_lookup_samples_advanced':
         return 'ตัวเลือกขั้นสูง';
       case 'game_lookup_samples_advanced_hint':
@@ -512543,12 +512406,8 @@ extension on _StringsTr {
         return 'Farklı kitapları aynı anda tanıyın. Aynı kitabın bölümleri sırayla kalır. Yüksek değerler daha fazla bellek kullanır; düşük bellek modu bunu bire sınırlar.';
       case 'manga_ocr_local_model':
         return 'Yerel OCR modeli';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (hızlı, varsa GPU)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'Tamamen çevrimdışı. Seçilen modeli bir kez indirin; hız ve doğruluk modele ve donanıma bağlıdır.';
-      case 'manga_ocr_baberu_desc':
-        return 'Yatay satır modelleri dahil yaklaşık 284 MB. Windows, varsa görüntü kodlamada GPU, metin çözmede CPU kullanır; yoksa CPU. Bazı isimler ve el yazısı daha az doğru olabilir. Yeni OCR görevlerine uygulanır.';
       case 'game_lookup_samples_advanced':
         return 'Gelişmiş seçenekler';
       case 'game_lookup_samples_advanced_hint':
@@ -528077,12 +527936,8 @@ extension on _StringsVi {
         return 'Nhận dạng nhiều sách cùng lúc. Các chương của cùng một sách vẫn theo thứ tự. Giá trị cao hơn dùng nhiều bộ nhớ hơn; chế độ ít bộ nhớ giới hạn ở một.';
       case 'manga_ocr_local_model':
         return 'Mô hình OCR cục bộ';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu (nhanh, dùng GPU khi có)';
       case 'manga_ocr_engine_local_onnx_desc':
         return 'Hoàn toàn ngoại tuyến. Tải mô hình đã chọn một lần; tốc độ và độ chính xác phụ thuộc vào mô hình và phần cứng.';
-      case 'manga_ocr_baberu_desc':
-        return 'Khoảng 284 MB gồm cả các mô hình dòng ngang. Windows dùng GPU để mã hóa ảnh và CPU để giải mã văn bản khi có, nếu không thì dùng CPU. Một số tên riêng và chữ viết tay có thể kém chính xác hơn. Áp dụng cho các tác vụ OCR mới.';
       case 'game_lookup_samples_advanced':
         return 'Tùy chọn nâng cao';
       case 'game_lookup_samples_advanced_hint':
@@ -543493,12 +543348,8 @@ extension on _StringsZhCn {
         return '同时识别不同书籍，同一本书的章节按顺序处理。数量越大占用内存越多；低内存模式下最多运行一个任务。';
       case 'manga_ocr_local_model':
         return '本机 OCR 模型';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu（快速，可用时使用 GPU）';
       case 'manga_ocr_engine_local_onnx_desc':
         return '完全离线。首次使用需下载所选模型，速度和准确度取决于模型与硬件。';
-      case 'manga_ocr_baberu_desc':
-        return '含横排文字模型约 284 MB。在 Windows 上自动使用 GPU 图像编码与 CPU 文字解码，不可用时使用 CPU。部分名字和手写文字可能更不准确。对新启动的 OCR 任务生效。';
       case 'game_lookup_samples_advanced':
         return '高级选项';
       case 'game_lookup_samples_advanced_hint':
@@ -558852,12 +558703,8 @@ extension on _StringsZhHk {
         return '同時識別不同書籍，同一本書的章節按順序處理。數量越大佔用記憶體越多；低記憶體模式下最多運行一個任務。';
       case 'manga_ocr_local_model':
         return '本機 OCR 模型';
-      case 'manga_ocr_baberu_model':
-        return 'Baberu（快速，可用時使用 GPU）';
       case 'manga_ocr_engine_local_onnx_desc':
         return '完全離線。首次使用需下載所選模型，速度和準確度取決於模型與硬件。';
-      case 'manga_ocr_baberu_desc':
-        return '含橫排文字模型約 284 MB。在 Windows 上自動使用 GPU 圖像編碼與 CPU 文字解碼，不可用時使用 CPU。部分名字和手寫文字可能更不準確。對新啟動的 OCR 任務生效。';
       case 'game_lookup_samples_advanced':
         return '高級選項';
       case 'game_lookup_samples_advanced_hint':
