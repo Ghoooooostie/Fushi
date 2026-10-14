@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126106 (7418 per locale)
+/// Strings: 126123 (7419 per locale)
 ///
-/// Built on 2026-10-13 at 12:06 UTC
+/// Built on 2026-10-14 at 04:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9786,8 +9786,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_compose_privacy =>
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   String get feedback_compose_submit => 'Send';
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   String get feedback_stage_sending => 'Sending…';
   String get feedback_stage_screenshots => 'Uploading screenshots…';
   String get feedback_stage_logs => 'Uploading logs…';
@@ -10714,6 +10712,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_pause_ocr_scope_all => 'All videos';
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   String get video_setting_pause_ocr_scope_off => 'Off';
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -27105,9 +27106,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -28638,6 +28636,11 @@ class _StringsAr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -45418,9 +45421,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -46952,6 +46952,11 @@ class _StringsDe extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -63792,9 +63797,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -65326,6 +65328,11 @@ class _StringsEs extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -82245,9 +82252,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -83779,6 +83783,11 @@ class _StringsFr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -100354,9 +100363,6 @@ class _StringsId extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -101887,6 +101893,11 @@ class _StringsId extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -118626,9 +118637,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -120160,6 +120168,11 @@ class _StringsIt extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -135919,8 +135932,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get feedback_compose_submit => '送信';
   @override
-  String get feedback_compose_missing => 'タイトルと詳細を入力してください。';
-  @override
   String get feedback_stage_sending => '送信中…';
   @override
   String get feedback_stage_screenshots => 'スクリーンショットをアップロード中…';
@@ -137433,6 +137444,11 @@ class _StringsJa extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '画像字幕のみ';
   @override
   String get video_setting_pause_ocr_scope_off => 'オフ';
+  @override
+  String get feedback_compose_title_missing => 'タイトルを入力してください。';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -153210,9 +153226,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -154742,6 +154755,11 @@ class _StringsKo extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -171430,9 +171448,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -172963,6 +172978,11 @@ class _StringsNl extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -189719,9 +189739,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -191253,6 +191270,11 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -207956,9 +207978,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -209489,6 +209508,11 @@ class _StringsRu extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -225870,9 +225894,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -227403,6 +227424,11 @@ class _StringsTh extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -243986,9 +244012,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -245520,6 +245543,11 @@ class _StringsTr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -262031,9 +262059,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get feedback_compose_submit => 'Send';
   @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
-  @override
   String get feedback_stage_sending => 'Sending…';
   @override
   String get feedback_stage_screenshots => 'Uploading screenshots…';
@@ -263564,6 +263589,11 @@ class _StringsVi extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 // Path: <root>
@@ -278673,8 +278703,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get feedback_compose_submit => '提交';
   @override
-  String get feedback_compose_missing => '请填写标题和详细描述。';
-  @override
   String get feedback_stage_sending => '正在提交…';
   @override
   String get feedback_stage_screenshots => '正在上传截图…';
@@ -280042,6 +280070,11 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '仅图片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '关闭';
+  @override
+  String get feedback_compose_title_missing => '请填写标题。';
+  @override
+  String get online_source_error_webview_unavailable =>
+      '这个来源需要内置浏览器（WebView），桌面版暂不支持。';
 }
 
 // Path: <root>
@@ -295259,8 +295292,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get feedback_compose_submit => '提交';
   @override
-  String get feedback_compose_missing => '請填寫標題和詳細描述。';
-  @override
   String get feedback_stage_sending => '正在提交…';
   @override
   String get feedback_stage_screenshots => '正在上傳截圖…';
@@ -296758,6 +296789,11 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '僅圖片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '關閉';
+  @override
+  String get feedback_compose_title_missing => '請填寫標題。';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
 }
 
 /// Flat map(s) containing all translations.
@@ -310869,8 +310905,6 @@ extension on _StringsEn {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -312140,6 +312174,10 @@ extension on _StringsEn {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -326246,8 +326284,6 @@ extension on _StringsAr {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -327517,6 +327553,10 @@ extension on _StringsAr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -341699,8 +341739,6 @@ extension on _StringsDe {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -342970,6 +343008,10 @@ extension on _StringsDe {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -357134,8 +357176,6 @@ extension on _StringsEs {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -358405,6 +358445,10 @@ extension on _StringsEs {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -372587,8 +372631,6 @@ extension on _StringsFr {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -373858,6 +373900,10 @@ extension on _StringsFr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -387984,8 +388030,6 @@ extension on _StringsId {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -389255,6 +389299,10 @@ extension on _StringsId {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -403417,8 +403465,6 @@ extension on _StringsIt {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -404688,6 +404734,10 @@ extension on _StringsIt {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -418726,8 +418776,6 @@ extension on _StringsJa {
         return 'フィードバックは fushi.moe の Fushi 開発者に送られ、不具合の調査と改善にのみ使われます。';
       case 'feedback_compose_submit':
         return '送信';
-      case 'feedback_compose_missing':
-        return 'タイトルと詳細を入力してください。';
       case 'feedback_stage_sending':
         return '送信中…';
       case 'feedback_stage_screenshots':
@@ -419995,6 +420043,10 @@ extension on _StringsJa {
         return '画像字幕のみ';
       case 'video_setting_pause_ocr_scope_off':
         return 'オフ';
+      case 'feedback_compose_title_missing':
+        return 'タイトルを入力してください。';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -434038,8 +434090,6 @@ extension on _StringsKo {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -435309,6 +435359,10 @@ extension on _StringsKo {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -449466,8 +449520,6 @@ extension on _StringsNl {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -450737,6 +450789,10 @@ extension on _StringsNl {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -464886,8 +464942,6 @@ extension on _StringsPtBr {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -466157,6 +466211,10 @@ extension on _StringsPtBr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -480311,8 +480369,6 @@ extension on _StringsRu {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -481582,6 +481638,10 @@ extension on _StringsRu {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -495692,8 +495752,6 @@ extension on _StringsTh {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -496963,6 +497021,10 @@ extension on _StringsTh {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -511104,8 +511166,6 @@ extension on _StringsTr {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -512375,6 +512435,10 @@ extension on _StringsTr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -526499,8 +526563,6 @@ extension on _StringsVi {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -527770,6 +527832,10 @@ extension on _StringsVi {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
@@ -541743,8 +541809,6 @@ extension on _StringsZhCn {
         return '反馈会发送给 fushi.moe 上的 Fushi 开发者，仅用于排查与改进。';
       case 'feedback_compose_submit':
         return '提交';
-      case 'feedback_compose_missing':
-        return '请填写标题和详细描述。';
       case 'feedback_stage_sending':
         return '正在提交…';
       case 'feedback_stage_screenshots':
@@ -542996,6 +543060,10 @@ extension on _StringsZhCn {
         return '仅图片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '关闭';
+      case 'feedback_compose_title_missing':
+        return '请填写标题。';
+      case 'online_source_error_webview_unavailable':
+        return '这个来源需要内置浏览器（WebView），桌面版暂不支持。';
       default:
         return null;
     }
@@ -556979,8 +557047,6 @@ extension on _StringsZhHk {
         return '回饋會傳送給 fushi.moe 上的 Fushi 開發者，只用於排查與改進。';
       case 'feedback_compose_submit':
         return '提交';
-      case 'feedback_compose_missing':
-        return '請填寫標題和詳細描述。';
       case 'feedback_stage_sending':
         return '正在提交…';
       case 'feedback_stage_screenshots':
@@ -558248,6 +558314,10 @@ extension on _StringsZhHk {
         return '僅圖片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '關閉';
+      case 'feedback_compose_title_missing':
+        return '請填寫標題。';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
       default:
         return null;
     }
