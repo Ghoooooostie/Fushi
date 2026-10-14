@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127177 (7481 per locale)
+/// Strings: 127211 (7483 per locale)
 ///
-/// Built on 2026-10-14 at 18:12 UTC
+/// Built on 2026-10-14 at 19:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10810,6 +10810,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  String get sync_position_conflict_title => 'Playback position conflict';
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -28893,6 +28896,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -47367,6 +47375,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -65900,6 +65913,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -84514,6 +84532,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -102781,6 +102804,11 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -121214,6 +121242,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -138647,6 +138680,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -156115,6 +156153,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -174496,6 +174539,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -192946,6 +192994,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -211341,6 +211394,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -229414,6 +229472,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -247690,6 +247753,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -265893,6 +265961,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 // Path: <root>
@@ -282513,6 +282586,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       '本次播放未装载（重新打开视频后生效）';
+  @override
+  String get sync_position_conflict_title => '播放进度冲突';
+  @override
+  String get sync_position_conflict_message =>
+      '这些条目在上次同步后，本机和配对设备上都播放过。请选择要保留哪一端的进度。';
 }
 
 // Path: <root>
@@ -299389,6 +299467,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 }
 
 /// Flat map(s) containing all translations.
@@ -314901,6 +314984,10 @@ extension on _StringsEn {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -330408,6 +330495,10 @@ extension on _StringsAr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -345991,6 +346082,10 @@ extension on _StringsDe {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -361556,6 +361651,10 @@ extension on _StringsEs {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -377139,6 +377238,10 @@ extension on _StringsFr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -392666,6 +392769,10 @@ extension on _StringsId {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -408229,6 +408336,10 @@ extension on _StringsIt {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -423666,6 +423777,10 @@ extension on _StringsJa {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -439110,6 +439225,10 @@ extension on _StringsKo {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -454668,6 +454787,10 @@ extension on _StringsNl {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -470218,6 +470341,10 @@ extension on _StringsPtBr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -485773,6 +485900,10 @@ extension on _StringsRu {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -501284,6 +501415,10 @@ extension on _StringsTh {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -516826,6 +516961,10 @@ extension on _StringsTr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -532351,6 +532490,10 @@ extension on _StringsVi {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
@@ -547705,6 +547848,10 @@ extension on _StringsZhCn {
         return '播放视频时装载 mpv_scripts 目录里的全部 .lua 脚本。删除脚本在下次打开视频时生效。';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return '本次播放未装载（重新打开视频后生效）';
+      case 'sync_position_conflict_title':
+        return '播放进度冲突';
+      case 'sync_position_conflict_message':
+        return '这些条目在上次同步后，本机和配对设备上都播放过。请选择要保留哪一端的进度。';
       default:
         return null;
     }
@@ -563087,6 +563234,10 @@ extension on _StringsZhHk {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       default:
         return null;
     }
