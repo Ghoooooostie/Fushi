@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126956 (7468 per locale)
+/// Strings: 126837 (7461 per locale)
 ///
-/// Built on 2026-10-14 at 04:51 UTC
+/// Built on 2026-10-14 at 05:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3842,19 +3842,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get popup_compact_glossaries => 'Compact glossaries';
   String get popup_compact_glossaries_hint =>
       'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
-  String get popup_ctx_adjust_button => 'Adjust context';
   String get popup_ctx_box_current => 'Current sentence';
-  String get popup_ctx_box_empty => '(none)';
   String get popup_ctx_box_next => 'Next context';
   String get popup_ctx_box_prev => 'Previous context';
   String get popup_ctx_cancel => 'Cancel';
   String get popup_ctx_confirm => 'Confirm mining';
-  String get popup_ctx_modal_count => 'Selected %d sentences';
-  String get popup_ctx_modal_eyebrow => 'Adjust before mining';
-  String get popup_ctx_modal_title => 'Select sentence context';
-  String get popup_ctx_next_minus => 'Remove next';
   String get popup_ctx_next_plus => 'Add next';
-  String get popup_ctx_prev_minus => 'Remove previous';
   String get popup_ctx_prev_plus => 'Add previous';
   String get popup_ctx_preview_audio => 'Preview audio';
   String get popup_ctx_preview_stop => 'Stop';
@@ -17070,11 +17063,7 @@ class _StringsAr extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'عرض مدخلات معاني القاموس في سطر واحد مفصولة بـ \' | \' بدلًا من مدخل لكل سطر في نافذة البحث.';
   @override
-  String get popup_ctx_adjust_button => 'تعديل السياق';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(لا شيء)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -17084,17 +17073,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'اختيار سياق الجملة';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -35272,11 +35251,7 @@ class _StringsDe extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Wörterbuch-Glossareinträge im Nachschlage-Popup inline, getrennt durch \' | \', statt einen pro Zeile anzeigen.';
   @override
-  String get popup_ctx_adjust_button => 'Kontext anpassen';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(leer)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -35286,17 +35261,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Satzkontext auswählen';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -53725,11 +53690,7 @@ class _StringsEs extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Muestra las entradas de glosario del diccionario en línea, separadas por \' | \', en lugar de una por línea en la ventana de consulta.';
   @override
-  String get popup_ctx_adjust_button => 'Ajustar contexto';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(ninguno)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -53739,17 +53700,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Seleccionar contexto de oración';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -72250,11 +72201,7 @@ class _StringsFr extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Affiche les entrées de glossaire des dictionnaires sur une seule ligne, séparées par \' | \', au lieu d\'une par ligne dans la fenêtre de recherche.';
   @override
-  String get popup_ctx_adjust_button => 'Ajuster le contexte';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(aucun)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -72264,17 +72211,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Sélectionner le contexte de phrase';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -90693,11 +90630,7 @@ class _StringsId extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Tampilkan entri glosarium kamus sebaris, dipisahkan oleh \' | \', bukan satu per baris di popup pencarian.';
   @override
-  String get popup_ctx_adjust_button => 'Sesuaikan konteks';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(tidak ada)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -90707,17 +90640,7 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Pilih konteks kalimat';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -108981,11 +108904,7 @@ class _StringsIt extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Mostra le voci di glossario del dizionario in linea, separate da \' | \', invece di una per riga nel popup di ricerca.';
   @override
-  String get popup_ctx_adjust_button => 'Regola contesto';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(nessuno)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -108995,17 +108914,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Seleziona contesto della frase';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -126992,11 +126901,7 @@ class _StringsJa extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'ポップアップの釈義項目を1行ずつではなく「 | 」区切りで同じ行に表示します。';
   @override
-  String get popup_ctx_adjust_button => '文脈を調整';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '（なし）';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -127006,17 +126911,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => '文脈の範囲を選択';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -144388,11 +144283,7 @@ class _StringsKo extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       '검색 팝업에서 사전 풀이 항목을 한 줄에 하나씩 표시하는 대신 \' | \'로 구분해 한 줄에 이어서 표시합니다.';
   @override
-  String get popup_ctx_adjust_button => '문맥 조정';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(없음)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -144402,17 +144293,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => '문장 문맥 선택';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -162179,11 +162060,7 @@ class _StringsNl extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Toon woordenboekverklaringen inline, gescheiden door \' | \', in plaats van één per regel in de opzoekpopup.';
   @override
-  String get popup_ctx_adjust_button => 'Context aanpassen';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(geen)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -162193,17 +162070,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Zinscontext selecteren';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -180552,11 +180419,7 @@ class _StringsPtBr extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Mostra as entradas de glossário do dicionário em linha, separadas por \' | \', em vez de uma por linha no pop-up de consulta.';
   @override
-  String get popup_ctx_adjust_button => 'Ajustar contexto';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(nenhum)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -180566,17 +180429,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Selecionar contexto da frase';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -198944,11 +198797,7 @@ class _StringsRu extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Показывать статьи глоссариев словаря в одну строку, разделяя их « | », вместо одной на строку во всплывающем окне поиска.';
   @override
-  String get popup_ctx_adjust_button => 'Изменить контекст';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(нет)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -198958,17 +198807,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Выберите контекст предложения';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -217176,11 +217015,7 @@ class _StringsTh extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'แสดงรายการคำจำกัดความของพจนานุกรมต่อเนื่องในบรรทัดเดียว คั่นด้วย \' | \' แทนการแสดงทีละบรรทัดในป๊อปอัปค้นหา';
   @override
-  String get popup_ctx_adjust_button => 'ปรับบริบท';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(ไม่มี)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -217190,17 +217025,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'เลือกบริบทประโยค';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -235298,11 +235123,7 @@ class _StringsTr extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Arama açılır penceresinde sözlük tanım girdilerini satır başına bir tane yerine \' | \' ile ayrılmış şekilde satır içinde göster.';
   @override
-  String get popup_ctx_adjust_button => 'Bağlamı ayarla';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(yok)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -235312,17 +235133,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Cümle bağlamını seçin';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -253510,11 +253321,7 @@ class _StringsVi extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Hiển thị các mục nghĩa của từ điển nối tiếp nhau, ngăn cách bằng \' | \', thay vì mỗi mục một dòng trong cửa sổ tra từ.';
   @override
-  String get popup_ctx_adjust_button => 'Điều chỉnh ngữ cảnh';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(không có)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -253524,17 +253331,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Chọn ngữ cảnh câu';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -271147,11 +270944,7 @@ class _StringsZhCn extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       '查词弹窗里的释义条目改为同行显示、用「 | 」分隔，不再每条占一行。';
   @override
-  String get popup_ctx_adjust_button => '调整上下文';
-  @override
   String get popup_ctx_box_current => '当前句';
-  @override
-  String get popup_ctx_box_empty => '（无）';
   @override
   String get popup_ctx_box_next => '后文';
   @override
@@ -271161,17 +270954,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_ctx_confirm => '确认制卡';
   @override
-  String get popup_ctx_modal_count => '已选择 %d 句';
-  @override
-  String get popup_ctx_modal_eyebrow => '制卡前调整';
-  @override
-  String get popup_ctx_modal_title => '选择句子上下文';
-  @override
-  String get popup_ctx_next_minus => '后退一句';
-  @override
   String get popup_ctx_next_plus => '后加一句';
-  @override
-  String get popup_ctx_prev_minus => '前退一句';
   @override
   String get popup_ctx_prev_plus => '前加一句';
   @override
@@ -287744,11 +287527,7 @@ class _StringsZhHk extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       '查詞彈窗裡的釋義條目改為同行顯示、用「 | 」分隔，不再每條佔一行。';
   @override
-  String get popup_ctx_adjust_button => '調整上下文';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '（無）';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -287758,17 +287537,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => '選擇句子上下文';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -304186,12 +303955,8 @@ extension on _StringsEn {
         return 'Compact glossaries';
       case 'popup_compact_glossaries_hint':
         return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
-      case 'popup_ctx_adjust_button':
-        return 'Adjust context';
       case 'popup_ctx_box_current':
         return 'Current sentence';
-      case 'popup_ctx_box_empty':
-        return '(none)';
       case 'popup_ctx_box_next':
         return 'Next context';
       case 'popup_ctx_box_prev':
@@ -304200,18 +303965,8 @@ extension on _StringsEn {
         return 'Cancel';
       case 'popup_ctx_confirm':
         return 'Confirm mining';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d sentences';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Adjust before mining';
-      case 'popup_ctx_modal_title':
-        return 'Select sentence context';
-      case 'popup_ctx_next_minus':
-        return 'Remove next';
       case 'popup_ctx_next_plus':
         return 'Add next';
-      case 'popup_ctx_prev_minus':
-        return 'Remove previous';
       case 'popup_ctx_prev_plus':
         return 'Add previous';
       case 'popup_ctx_preview_audio':
@@ -319666,12 +319421,8 @@ extension on _StringsAr {
         return 'معاني مدمجة';
       case 'popup_compact_glossaries_hint':
         return 'عرض مدخلات معاني القاموس في سطر واحد مفصولة بـ \' | \' بدلًا من مدخل لكل سطر في نافذة البحث.';
-      case 'popup_ctx_adjust_button':
-        return 'تعديل السياق';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(لا شيء)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -319680,18 +319431,8 @@ extension on _StringsAr {
         return 'إلغاء';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'اختيار سياق الجملة';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -335184,12 +334925,8 @@ extension on _StringsDe {
         return 'Kompakte Glossare';
       case 'popup_compact_glossaries_hint':
         return 'Wörterbuch-Glossareinträge im Nachschlage-Popup inline, getrennt durch \' | \', statt einen pro Zeile anzeigen.';
-      case 'popup_ctx_adjust_button':
-        return 'Kontext anpassen';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(leer)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -335198,18 +334935,8 @@ extension on _StringsDe {
         return 'Abbrechen';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Satzkontext auswählen';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -350725,12 +350452,8 @@ extension on _StringsEs {
         return 'Glosarios compactos';
       case 'popup_compact_glossaries_hint':
         return 'Muestra las entradas de glosario del diccionario en línea, separadas por \' | \', en lugar de una por línea en la ventana de consulta.';
-      case 'popup_ctx_adjust_button':
-        return 'Ajustar contexto';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(ninguno)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -350739,18 +350462,8 @@ extension on _StringsEs {
         return 'Cancelar';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Seleccionar contexto de oración';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -366270,12 +365983,8 @@ extension on _StringsFr {
         return 'Glossaires compacts';
       case 'popup_compact_glossaries_hint':
         return 'Affiche les entrées de glossaire des dictionnaires sur une seule ligne, séparées par \' | \', au lieu d\'une par ligne dans la fenêtre de recherche.';
-      case 'popup_ctx_adjust_button':
-        return 'Ajuster le contexte';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(aucun)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -366284,18 +365993,8 @@ extension on _StringsFr {
         return 'Annuler';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Sélectionner le contexte de phrase';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -381800,12 +381499,8 @@ extension on _StringsId {
         return 'Glosarium ringkas';
       case 'popup_compact_glossaries_hint':
         return 'Tampilkan entri glosarium kamus sebaris, dipisahkan oleh \' | \', bukan satu per baris di popup pencarian.';
-      case 'popup_ctx_adjust_button':
-        return 'Sesuaikan konteks';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(tidak ada)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -381814,18 +381509,8 @@ extension on _StringsId {
         return 'Batal';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Pilih konteks kalimat';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -397310,12 +396995,8 @@ extension on _StringsIt {
         return 'Glossari compatti';
       case 'popup_compact_glossaries_hint':
         return 'Mostra le voci di glossario del dizionario in linea, separate da \' | \', invece di una per riga nel popup di ricerca.';
-      case 'popup_ctx_adjust_button':
-        return 'Regola contesto';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(nessuno)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -397324,18 +397005,8 @@ extension on _StringsIt {
         return 'Annulla';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Seleziona contesto della frase';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -412800,12 +412471,8 @@ extension on _StringsJa {
         return 'コンパクト釈義';
       case 'popup_compact_glossaries_hint':
         return 'ポップアップの釈義項目を1行ずつではなく「 | 」区切りで同じ行に表示します。';
-      case 'popup_ctx_adjust_button':
-        return '文脈を調整';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '（なし）';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -412814,18 +412481,8 @@ extension on _StringsJa {
         return 'キャンセル';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return '文脈の範囲を選択';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -428208,12 +427865,8 @@ extension on _StringsKo {
         return '간략한 풀이';
       case 'popup_compact_glossaries_hint':
         return '검색 팝업에서 사전 풀이 항목을 한 줄에 하나씩 표시하는 대신 \' | \'로 구분해 한 줄에 이어서 표시합니다.';
-      case 'popup_ctx_adjust_button':
-        return '문맥 조정';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(없음)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -428222,18 +427875,8 @@ extension on _StringsKo {
         return '취소';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return '문장 문맥 선택';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -443668,12 +443311,8 @@ extension on _StringsNl {
         return 'Compacte verklaringen';
       case 'popup_compact_glossaries_hint':
         return 'Toon woordenboekverklaringen inline, gescheiden door \' | \', in plaats van één per regel in de opzoekpopup.';
-      case 'popup_ctx_adjust_button':
-        return 'Context aanpassen';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(geen)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -443682,18 +443321,8 @@ extension on _StringsNl {
         return 'Annuleren';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Zinscontext selecteren';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -459195,12 +458824,8 @@ extension on _StringsPtBr {
         return 'Glossários compactos';
       case 'popup_compact_glossaries_hint':
         return 'Mostra as entradas de glossário do dicionário em linha, separadas por \' | \', em vez de uma por linha no pop-up de consulta.';
-      case 'popup_ctx_adjust_button':
-        return 'Ajustar contexto';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(nenhum)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -459209,18 +458834,8 @@ extension on _StringsPtBr {
         return 'Cancelar';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Selecionar contexto da frase';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -474724,12 +474339,8 @@ extension on _StringsRu {
         return 'Компактные глоссарии';
       case 'popup_compact_glossaries_hint':
         return 'Показывать статьи глоссариев словаря в одну строку, разделяя их « | », вместо одной на строку во всплывающем окне поиска.';
-      case 'popup_ctx_adjust_button':
-        return 'Изменить контекст';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(нет)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -474738,18 +474349,8 @@ extension on _StringsRu {
         return 'Отмена';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Выберите контекст предложения';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -490223,12 +489824,8 @@ extension on _StringsTh {
         return 'ย่อพจนานุกรมให้กระชับ';
       case 'popup_compact_glossaries_hint':
         return 'แสดงรายการคำจำกัดความของพจนานุกรมต่อเนื่องในบรรทัดเดียว คั่นด้วย \' | \' แทนการแสดงทีละบรรทัดในป๊อปอัปค้นหา';
-      case 'popup_ctx_adjust_button':
-        return 'ปรับบริบท';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(ไม่มี)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -490237,18 +489834,8 @@ extension on _StringsTh {
         return 'ยกเลิก';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'เลือกบริบทประโยค';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -505719,12 +505306,8 @@ extension on _StringsTr {
         return 'Kompakt sözlük tanımları';
       case 'popup_compact_glossaries_hint':
         return 'Arama açılır penceresinde sözlük tanım girdilerini satır başına bir tane yerine \' | \' ile ayrılmış şekilde satır içinde göster.';
-      case 'popup_ctx_adjust_button':
-        return 'Bağlamı ayarla';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(yok)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -505733,18 +505316,8 @@ extension on _StringsTr {
         return 'İptal';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Cümle bağlamını seçin';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -521227,12 +520800,8 @@ extension on _StringsVi {
         return 'Gọn bảng nghĩa';
       case 'popup_compact_glossaries_hint':
         return 'Hiển thị các mục nghĩa của từ điển nối tiếp nhau, ngăn cách bằng \' | \', thay vì mỗi mục một dòng trong cửa sổ tra từ.';
-      case 'popup_ctx_adjust_button':
-        return 'Điều chỉnh ngữ cảnh';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(không có)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -521241,18 +520810,8 @@ extension on _StringsVi {
         return 'Hủy';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Chọn ngữ cảnh câu';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -536676,12 +536235,8 @@ extension on _StringsZhCn {
         return '紧凑释义';
       case 'popup_compact_glossaries_hint':
         return '查词弹窗里的释义条目改为同行显示、用「 | 」分隔，不再每条占一行。';
-      case 'popup_ctx_adjust_button':
-        return '调整上下文';
       case 'popup_ctx_box_current':
         return '当前句';
-      case 'popup_ctx_box_empty':
-        return '（无）';
       case 'popup_ctx_box_next':
         return '后文';
       case 'popup_ctx_box_prev':
@@ -536690,18 +536245,8 @@ extension on _StringsZhCn {
         return '取消';
       case 'popup_ctx_confirm':
         return '确认制卡';
-      case 'popup_ctx_modal_count':
-        return '已选择 %d 句';
-      case 'popup_ctx_modal_eyebrow':
-        return '制卡前调整';
-      case 'popup_ctx_modal_title':
-        return '选择句子上下文';
-      case 'popup_ctx_next_minus':
-        return '后退一句';
       case 'popup_ctx_next_plus':
         return '后加一句';
-      case 'popup_ctx_prev_minus':
-        return '前退一句';
       case 'popup_ctx_prev_plus':
         return '前加一句';
       case 'popup_ctx_preview_audio':
@@ -552003,12 +551548,8 @@ extension on _StringsZhHk {
         return '緊湊釋義';
       case 'popup_compact_glossaries_hint':
         return '查詞彈窗裡的釋義條目改為同行顯示、用「 | 」分隔，不再每條佔一行。';
-      case 'popup_ctx_adjust_button':
-        return '調整上下文';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '（無）';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -552017,18 +551558,8 @@ extension on _StringsZhHk {
         return '取消';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return '選擇句子上下文';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
