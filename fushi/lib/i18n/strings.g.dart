@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127211 (7483 per locale)
+/// Strings: 127398 (7494 per locale)
 ///
-/// Built on 2026-10-14 at 11:01 UTC
+/// Built on 2026-10-14 at 13:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1987,9 +1987,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get floating_lyric_click_lookup_hint =>
       'Keep this on with position lock if you still want word lookup.';
   String get floating_lyric_close => 'Close';
-  String get floating_lyric_context_lines => 'Floating subtitle context lines';
-  String get floating_lyric_context_lines_hint =>
-      '0 shows only the current line (single-line, unchanged); set 1-3 to show that many lines before and after it';
   String get floating_lyric_corner_radius => 'Floating subtitle corner radius';
   String get floating_lyric_corner_radius_hint =>
       '0 keeps each platform\'s default corners; raise it to round the bar and buttons more';
@@ -10813,6 +10810,24 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  String get floating_lyric_font => 'Floating subtitle font';
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  String get font_target_floating_lyric => 'Floating subtitles';
+  String get font_target_floating_lyric_short => 'Subtitles';
+  String get floating_lyric_vertical => 'Vertical text';
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -13897,11 +13912,6 @@ class _StringsAr extends _StringsEn {
       'أبقِ هذا مفعّلًا مع قفل الموضع إن كنت لا تزال تريد البحث عن الكلمات.';
   @override
   String get floating_lyric_close => 'إغلاق';
-  @override
-  String get floating_lyric_context_lines => 'أسطر سياق الترجمة العائمة';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 يعرض السطر الحالي فقط (سطر واحد، بدون تغيير)؛ عيّن 1-3 لعرض هذا العدد من الأسطر قبله وبعده';
   @override
   String get floating_lyric_corner_radius => 'نصف قطر زوايا الترجمة العائمة';
   @override
@@ -28902,6 +28912,37 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -32064,12 +32105,6 @@ class _StringsDe extends _StringsEn {
       'Lass dies bei gesperrter Position an, wenn du weiterhin Wörter nachschlagen möchtest.';
   @override
   String get floating_lyric_close => 'Schließen';
-  @override
-  String get floating_lyric_context_lines =>
-      'Kontextzeilen der schwebenden Untertitel';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 zeigt nur die aktuelle Zeile (einzeilig, unverändert); 1–3 zeigt so viele Zeilen davor und danach';
   @override
   String get floating_lyric_corner_radius =>
       'Eckenradius der schwebenden Untertitel';
@@ -47381,6 +47416,37 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -50558,12 +50624,6 @@ class _StringsEs extends _StringsEn {
       'Mantén esto activado con el bloqueo de posición si aún quieres consultar palabras.';
   @override
   String get floating_lyric_close => 'Cerrar';
-  @override
-  String get floating_lyric_context_lines =>
-      'Líneas de contexto del subtítulo flotante';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 muestra solo la línea actual (una sola línea, sin cambios); establezca 1-3 para mostrar esas líneas antes y después';
   @override
   String get floating_lyric_corner_radius =>
       'Radio de esquinas del subtítulo flotante';
@@ -65920,6 +65980,37 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -69114,12 +69205,6 @@ class _StringsFr extends _StringsEn {
       'Gardez cette option activée avec le verrouillage de position si vous voulez conserver la recherche de mots.';
   @override
   String get floating_lyric_close => 'Fermer';
-  @override
-  String get floating_lyric_context_lines =>
-      'Lignes de contexte du sous-titre flottant';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 n\'affiche que la ligne actuelle (une seule ligne, inchangée) ; réglez 1-3 pour afficher ce nombre de lignes avant et après';
   @override
   String get floating_lyric_corner_radius =>
       'Rayon des coins du sous-titre flottant';
@@ -84539,6 +84624,37 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -87656,12 +87772,6 @@ class _StringsId extends _StringsEn {
       'Biarkan ini aktif dengan kunci posisi jika kamu masih ingin pencarian kata.';
   @override
   String get floating_lyric_close => 'Tutup';
-  @override
-  String get floating_lyric_context_lines =>
-      'Baris konteks subtitle mengambang';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 hanya menampilkan baris saat ini (satu baris, tidak berubah); atur 1-3 untuk menampilkan sebanyak itu baris sebelum dan sesudahnya';
   @override
   String get floating_lyric_corner_radius => 'Radius sudut subtitle mengambang';
   @override
@@ -102811,6 +102921,37 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -105962,12 +106103,6 @@ class _StringsIt extends _StringsEn {
       'Tienilo attivo con il blocco posizione se vuoi comunque la ricerca parole.';
   @override
   String get floating_lyric_close => 'Chiudi';
-  @override
-  String get floating_lyric_context_lines =>
-      'Righe di contesto sottotitoli flottanti';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 mostra solo la riga corrente (riga singola, invariata); imposta 1-3 per mostrare quel numero di righe prima e dopo';
   @override
   String get floating_lyric_corner_radius =>
       'Raggio angoli sottotitoli flottanti';
@@ -121249,6 +121384,37 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -124220,11 +124386,6 @@ class _StringsJa extends _StringsEn {
       '位置を固定したままでも辞書引きを使いたい場合はオンにしてください。';
   @override
   String get floating_lyric_close => '閉じる';
-  @override
-  String get floating_lyric_context_lines => 'フローティング字幕の前後行数';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 は現在の行のみ表示（1行、変更なし）。1〜3 に設定すると前後にその行数を表示します';
   @override
   String get floating_lyric_corner_radius => 'フローティング字幕の角丸';
   @override
@@ -138687,6 +138848,37 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -141652,11 +141844,6 @@ class _StringsKo extends _StringsEn {
       '위치를 고정해도 단어 찾기를 쓰려면 이 옵션을 켜 두세요.';
   @override
   String get floating_lyric_close => '닫기';
-  @override
-  String get floating_lyric_context_lines => '플로팅 자막 전후 줄 수';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0은 현재 줄만 표시 (한 줄, 변경 없음); 1-3으로 설정하면 앞뒤로 해당 줄 수를 표시합니다';
   @override
   String get floating_lyric_corner_radius => '플로팅 자막 모서리 둥글기';
   @override
@@ -156160,6 +156347,37 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -159302,12 +159520,6 @@ class _StringsNl extends _StringsEn {
       'Houd dit aan met positievergrendeling als je nog steeds woorden wilt opzoeken.';
   @override
   String get floating_lyric_close => 'Sluiten';
-  @override
-  String get floating_lyric_context_lines =>
-      'Zwevende ondertitel contextregels';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 toont alleen de huidige regel (enkel, ongewijzigd); stel 1-3 in om zoveel regels ervoor en erna te tonen';
   @override
   String get floating_lyric_corner_radius => 'Zwevende ondertitel hoekradius';
   @override
@@ -174546,6 +174758,37 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -177703,12 +177946,6 @@ class _StringsPtBr extends _StringsEn {
       'Mantenha isto ativado com a posição travada se ainda quiser consultar palavras.';
   @override
   String get floating_lyric_close => 'Fechar';
-  @override
-  String get floating_lyric_context_lines =>
-      'Linhas de contexto da legenda flutuante';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 mostra apenas a linha atual (linha única, sem alteração); defina 1-3 para mostrar essas linhas antes e depois';
   @override
   String get floating_lyric_corner_radius =>
       'Raio dos cantos da legenda flutuante';
@@ -193001,6 +193238,37 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -196134,12 +196402,6 @@ class _StringsRu extends _StringsEn {
       'Оставьте включённым с фиксацией положения, если хотите сохранить поиск слов.';
   @override
   String get floating_lyric_close => 'Закрыть';
-  @override
-  String get floating_lyric_context_lines =>
-      'Контекстные строки плавающих субтитров';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 показывает только текущую строку (одна строка, без изменений); 1-3 показывают столько строк до и после';
   @override
   String get floating_lyric_corner_radius =>
       'Скругление углов плавающих субтитров';
@@ -211401,6 +211663,37 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -214478,11 +214771,6 @@ class _StringsTh extends _StringsEn {
       'เปิดไว้พร้อมล็อกตำแหน่งถ้ายังต้องการค้นคำได้';
   @override
   String get floating_lyric_close => 'ปิด';
-  @override
-  String get floating_lyric_context_lines => 'จำนวนบรรทัดบริบทคำบรรยายลอย';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 แสดงเฉพาะบรรทัดปัจจุบัน (บรรทัดเดียว ไม่เปลี่ยนแปลง); ตั้ง 1-3 เพื่อแสดงจำนวนบรรทัดนั้นก่อนและหลัง';
   @override
   String get floating_lyric_corner_radius => 'ความโค้งมุมคำบรรยายลอย';
   @override
@@ -229479,6 +229767,37 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -232606,11 +232925,6 @@ class _StringsTr extends _StringsEn {
       'Sözcük aramasını korumak isterseniz konum kilidiyle birlikte bunu açık tutun.';
   @override
   String get floating_lyric_close => 'Kapat';
-  @override
-  String get floating_lyric_context_lines => 'Kayan altyazı bağlam satırları';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 yalnızca geçerli satırı gösterir (tek satır, değişmez); 1-3 ayarlayarak öncesinde ve sonrasında o kadar satır gösterin';
   @override
   String get floating_lyric_corner_radius => 'Kayan altyazı köşe yarıçapı';
   @override
@@ -247760,6 +248074,37 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -250870,11 +251215,6 @@ class _StringsVi extends _StringsEn {
       'Bật mục này cùng với khóa vị trí nếu bạn vẫn muốn tra từ.';
   @override
   String get floating_lyric_close => 'Đóng';
-  @override
-  String get floating_lyric_context_lines => 'Số dòng ngữ cảnh phụ đề nổi';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 chỉ hiển thị dòng hiện tại (một dòng, không thay đổi); đặt 1-3 để hiển thị số dòng đó trước và sau';
   @override
   String get floating_lyric_corner_radius => 'Bán kính bo góc phụ đề nổi';
   @override
@@ -265968,6 +266308,37 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => 'Sentences shown';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+  @override
+  String get floating_lyric_visible_lines_auto => 'Auto';
+  @override
+  String get floating_lyric_current_line_color => 'Current sentence color';
+  @override
+  String get floating_lyric_context_opacity => 'Other sentences opacity';
+  @override
+  String get floating_lyric_context_opacity_hint =>
+      'How strongly sentences other than the current one are dimmed when several are shown.';
+  @override
+  String get floating_lyric_font => 'Floating subtitle font';
+  @override
+  String get floating_lyric_font_hint =>
+      'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+  @override
+  String get floating_lyric_appearance_section =>
+      'Floating subtitle appearance';
+  @override
+  String get font_target_floating_lyric => 'Floating subtitles';
+  @override
+  String get font_target_floating_lyric_short => 'Subtitles';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 // Path: <root>
@@ -268839,11 +269210,6 @@ class _StringsZhCn extends _StringsEn {
   String get floating_lyric_click_lookup_hint => '锁定悬浮字幕位置时仍可保留点击查词。';
   @override
   String get floating_lyric_close => '关闭';
-  @override
-  String get floating_lyric_context_lines => '悬浮字幕上下文行数';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 只显示当前行(单行,与今天一致);设 1-3 在当前行上下各显示这么多行上下文';
   @override
   String get floating_lyric_corner_radius => '悬浮字幕圆角';
   @override
@@ -282593,6 +282959,34 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       '本次播放未装载（重新打开视频后生效）';
+  @override
+  String get floating_lyric_visible_lines => '同时显示句数';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      '当前句居中显示，与歌词模式一致。自动＝按窗口高度显示，拖高悬浮窗即可看到更多句。';
+  @override
+  String get floating_lyric_visible_lines_auto => '自动';
+  @override
+  String get floating_lyric_current_line_color => '当前句颜色';
+  @override
+  String get floating_lyric_context_opacity => '其余句不透明度';
+  @override
+  String get floating_lyric_context_opacity_hint => '同时显示多句时，非当前句的淡化程度。';
+  @override
+  String get floating_lyric_font => '悬浮字幕字体';
+  @override
+  String get floating_lyric_font_hint => '从管理字体库中选择，按顺序使用第一个启用的 TTF/OTF 字体。';
+  @override
+  String get floating_lyric_appearance_section => '悬浮字幕外观与排版';
+  @override
+  String get font_target_floating_lyric => '悬浮字幕';
+  @override
+  String get font_target_floating_lyric_short => '悬浮字幕';
+  @override
+  String get floating_lyric_vertical => '竖排';
+  @override
+  String get floating_lyric_vertical_hint =>
+      '字从上往下、行从右往左排列，与竖排歌词一致。拉宽悬浮窗即可看到更多句。';
 }
 
 // Path: <root>
@@ -285470,11 +285864,6 @@ class _StringsZhHk extends _StringsEn {
   String get floating_lyric_click_lookup_hint => '鎖定懸浮字幕位置時若仍想查詞，請保持開啟。';
   @override
   String get floating_lyric_close => '關閉';
-  @override
-  String get floating_lyric_context_lines => '懸浮字幕上下文行數';
-  @override
-  String get floating_lyric_context_lines_hint =>
-      '0 只顯示當前行(單行,與今天一致);設 1-3 在當前行上下各顯示這麼多行上下文';
   @override
   String get floating_lyric_corner_radius => '懸浮字幕圓角';
   @override
@@ -299474,6 +299863,34 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get floating_lyric_visible_lines => '同時顯示句數';
+  @override
+  String get floating_lyric_visible_lines_hint =>
+      '目前句置中顯示，與歌詞模式一致。自動＝依視窗高度顯示，拉高懸浮窗即可看到更多句。';
+  @override
+  String get floating_lyric_visible_lines_auto => '自動';
+  @override
+  String get floating_lyric_current_line_color => '目前句顏色';
+  @override
+  String get floating_lyric_context_opacity => '其餘句不透明度';
+  @override
+  String get floating_lyric_context_opacity_hint => '同時顯示多句時，非目前句的淡化程度。';
+  @override
+  String get floating_lyric_font => '懸浮字幕字型';
+  @override
+  String get floating_lyric_font_hint => '從管理字型庫中選擇，依序使用第一個啟用的 TTF/OTF 字型。';
+  @override
+  String get floating_lyric_appearance_section => '懸浮字幕外觀與排版';
+  @override
+  String get font_target_floating_lyric => '懸浮字幕';
+  @override
+  String get font_target_floating_lyric_short => '懸浮字幕';
+  @override
+  String get floating_lyric_vertical => 'Vertical text';
+  @override
+  String get floating_lyric_vertical_hint =>
+      'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
 }
 
 /// Flat map(s) containing all translations.
@@ -302145,10 +302562,6 @@ extension on _StringsEn {
         return 'Keep this on with position lock if you still want word lookup.';
       case 'floating_lyric_close':
         return 'Close';
-      case 'floating_lyric_context_lines':
-        return 'Floating subtitle context lines';
-      case 'floating_lyric_context_lines_hint':
-        return '0 shows only the current line (single-line, unchanged); set 1-3 to show that many lines before and after it';
       case 'floating_lyric_corner_radius':
         return 'Floating subtitle corner radius';
       case 'floating_lyric_corner_radius_hint':
@@ -314990,6 +315403,32 @@ extension on _StringsEn {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -317661,10 +318100,6 @@ extension on _StringsAr {
         return 'أبقِ هذا مفعّلًا مع قفل الموضع إن كنت لا تزال تريد البحث عن الكلمات.';
       case 'floating_lyric_close':
         return 'إغلاق';
-      case 'floating_lyric_context_lines':
-        return 'أسطر سياق الترجمة العائمة';
-      case 'floating_lyric_context_lines_hint':
-        return '0 يعرض السطر الحالي فقط (سطر واحد، بدون تغيير)؛ عيّن 1-3 لعرض هذا العدد من الأسطر قبله وبعده';
       case 'floating_lyric_corner_radius':
         return 'نصف قطر زوايا الترجمة العائمة';
       case 'floating_lyric_corner_radius_hint':
@@ -330501,6 +330936,32 @@ extension on _StringsAr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -333197,10 +333658,6 @@ extension on _StringsDe {
         return 'Lass dies bei gesperrter Position an, wenn du weiterhin Wörter nachschlagen möchtest.';
       case 'floating_lyric_close':
         return 'Schließen';
-      case 'floating_lyric_context_lines':
-        return 'Kontextzeilen der schwebenden Untertitel';
-      case 'floating_lyric_context_lines_hint':
-        return '0 zeigt nur die aktuelle Zeile (einzeilig, unverändert); 1–3 zeigt so viele Zeilen davor und danach';
       case 'floating_lyric_corner_radius':
         return 'Eckenradius der schwebenden Untertitel';
       case 'floating_lyric_corner_radius_hint':
@@ -346088,6 +346545,32 @@ extension on _StringsDe {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -348774,10 +349257,6 @@ extension on _StringsEs {
         return 'Mantén esto activado con el bloqueo de posición si aún quieres consultar palabras.';
       case 'floating_lyric_close':
         return 'Cerrar';
-      case 'floating_lyric_context_lines':
-        return 'Líneas de contexto del subtítulo flotante';
-      case 'floating_lyric_context_lines_hint':
-        return '0 muestra solo la línea actual (una sola línea, sin cambios); establezca 1-3 para mostrar esas líneas antes y después';
       case 'floating_lyric_corner_radius':
         return 'Radio de esquinas del subtítulo flotante';
       case 'floating_lyric_corner_radius_hint':
@@ -361657,6 +362136,32 @@ extension on _StringsEs {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -364351,10 +364856,6 @@ extension on _StringsFr {
         return 'Gardez cette option activée avec le verrouillage de position si vous voulez conserver la recherche de mots.';
       case 'floating_lyric_close':
         return 'Fermer';
-      case 'floating_lyric_context_lines':
-        return 'Lignes de contexte du sous-titre flottant';
-      case 'floating_lyric_context_lines_hint':
-        return '0 n\'affiche que la ligne actuelle (une seule ligne, inchangée) ; réglez 1-3 pour afficher ce nombre de lignes avant et après';
       case 'floating_lyric_corner_radius':
         return 'Rayon des coins du sous-titre flottant';
       case 'floating_lyric_corner_radius_hint':
@@ -377244,6 +377745,32 @@ extension on _StringsFr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -379923,10 +380450,6 @@ extension on _StringsId {
         return 'Biarkan ini aktif dengan kunci posisi jika kamu masih ingin pencarian kata.';
       case 'floating_lyric_close':
         return 'Tutup';
-      case 'floating_lyric_context_lines':
-        return 'Baris konteks subtitle mengambang';
-      case 'floating_lyric_context_lines_hint':
-        return '0 hanya menampilkan baris saat ini (satu baris, tidak berubah); atur 1-3 untuk menampilkan sebanyak itu baris sebelum dan sesudahnya';
       case 'floating_lyric_corner_radius':
         return 'Radius sudut subtitle mengambang';
       case 'floating_lyric_corner_radius_hint':
@@ -392775,6 +393298,32 @@ extension on _StringsId {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -395461,10 +396010,6 @@ extension on _StringsIt {
         return 'Tienilo attivo con il blocco posizione se vuoi comunque la ricerca parole.';
       case 'floating_lyric_close':
         return 'Chiudi';
-      case 'floating_lyric_context_lines':
-        return 'Righe di contesto sottotitoli flottanti';
-      case 'floating_lyric_context_lines_hint':
-        return '0 mostra solo la riga corrente (riga singola, invariata); imposta 1-3 per mostrare quel numero di righe prima e dopo';
       case 'floating_lyric_corner_radius':
         return 'Raggio angoli sottotitoli flottanti';
       case 'floating_lyric_corner_radius_hint':
@@ -408342,6 +408887,32 @@ extension on _StringsIt {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -410998,10 +411569,6 @@ extension on _StringsJa {
         return '位置を固定したままでも辞書引きを使いたい場合はオンにしてください。';
       case 'floating_lyric_close':
         return '閉じる';
-      case 'floating_lyric_context_lines':
-        return 'フローティング字幕の前後行数';
-      case 'floating_lyric_context_lines_hint':
-        return '0 は現在の行のみ表示（1行、変更なし）。1〜3 に設定すると前後にその行数を表示します';
       case 'floating_lyric_corner_radius':
         return 'フローティング字幕の角丸';
       case 'floating_lyric_corner_radius_hint':
@@ -423783,6 +424350,32 @@ extension on _StringsJa {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -426439,10 +427032,6 @@ extension on _StringsKo {
         return '위치를 고정해도 단어 찾기를 쓰려면 이 옵션을 켜 두세요.';
       case 'floating_lyric_close':
         return '닫기';
-      case 'floating_lyric_context_lines':
-        return '플로팅 자막 전후 줄 수';
-      case 'floating_lyric_context_lines_hint':
-        return '0은 현재 줄만 표시 (한 줄, 변경 없음); 1-3으로 설정하면 앞뒤로 해당 줄 수를 표시합니다';
       case 'floating_lyric_corner_radius':
         return '플로팅 자막 모서리 둥글기';
       case 'floating_lyric_corner_radius_hint':
@@ -439231,6 +439820,32 @@ extension on _StringsKo {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -441915,10 +442530,6 @@ extension on _StringsNl {
         return 'Houd dit aan met positievergrendeling als je nog steeds woorden wilt opzoeken.';
       case 'floating_lyric_close':
         return 'Sluiten';
-      case 'floating_lyric_context_lines':
-        return 'Zwevende ondertitel contextregels';
-      case 'floating_lyric_context_lines_hint':
-        return '0 toont alleen de huidige regel (enkel, ongewijzigd); stel 1-3 in om zoveel regels ervoor en erna te tonen';
       case 'floating_lyric_corner_radius':
         return 'Zwevende ondertitel hoekradius';
       case 'floating_lyric_corner_radius_hint':
@@ -454793,6 +455404,32 @@ extension on _StringsNl {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -457477,10 +458114,6 @@ extension on _StringsPtBr {
         return 'Mantenha isto ativado com a posição travada se ainda quiser consultar palavras.';
       case 'floating_lyric_close':
         return 'Fechar';
-      case 'floating_lyric_context_lines':
-        return 'Linhas de contexto da legenda flutuante';
-      case 'floating_lyric_context_lines_hint':
-        return '0 mostra apenas a linha atual (linha única, sem alteração); defina 1-3 para mostrar essas linhas antes e depois';
       case 'floating_lyric_corner_radius':
         return 'Raio dos cantos da legenda flutuante';
       case 'floating_lyric_corner_radius_hint':
@@ -470347,6 +470980,32 @@ extension on _StringsPtBr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -473039,10 +473698,6 @@ extension on _StringsRu {
         return 'Оставьте включённым с фиксацией положения, если хотите сохранить поиск слов.';
       case 'floating_lyric_close':
         return 'Закрыть';
-      case 'floating_lyric_context_lines':
-        return 'Контекстные строки плавающих субтитров';
-      case 'floating_lyric_context_lines_hint':
-        return '0 показывает только текущую строку (одна строка, без изменений); 1-3 показывают столько строк до и после';
       case 'floating_lyric_corner_radius':
         return 'Скругление углов плавающих субтитров';
       case 'floating_lyric_corner_radius_hint':
@@ -485906,6 +486561,32 @@ extension on _StringsRu {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -488579,10 +489260,6 @@ extension on _StringsTh {
         return 'เปิดไว้พร้อมล็อกตำแหน่งถ้ายังต้องการค้นคำได้';
       case 'floating_lyric_close':
         return 'ปิด';
-      case 'floating_lyric_context_lines':
-        return 'จำนวนบรรทัดบริบทคำบรรยายลอย';
-      case 'floating_lyric_context_lines_hint':
-        return '0 แสดงเฉพาะบรรทัดปัจจุบัน (บรรทัดเดียว ไม่เปลี่ยนแปลง); ตั้ง 1-3 เพื่อแสดงจำนวนบรรทัดนั้นก่อนและหลัง';
       case 'floating_lyric_corner_radius':
         return 'ความโค้งมุมคำบรรยายลอย';
       case 'floating_lyric_corner_radius_hint':
@@ -501421,6 +502098,32 @@ extension on _StringsTh {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -504104,10 +504807,6 @@ extension on _StringsTr {
         return 'Sözcük aramasını korumak isterseniz konum kilidiyle birlikte bunu açık tutun.';
       case 'floating_lyric_close':
         return 'Kapat';
-      case 'floating_lyric_context_lines':
-        return 'Kayan altyazı bağlam satırları';
-      case 'floating_lyric_context_lines_hint':
-        return '0 yalnızca geçerli satırı gösterir (tek satır, değişmez); 1-3 ayarlayarak öncesinde ve sonrasında o kadar satır gösterin';
       case 'floating_lyric_corner_radius':
         return 'Kayan altyazı köşe yarıçapı';
       case 'floating_lyric_corner_radius_hint':
@@ -516967,6 +517666,32 @@ extension on _StringsTr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -519648,10 +520373,6 @@ extension on _StringsVi {
         return 'Bật mục này cùng với khóa vị trí nếu bạn vẫn muốn tra từ.';
       case 'floating_lyric_close':
         return 'Đóng';
-      case 'floating_lyric_context_lines':
-        return 'Số dòng ngữ cảnh phụ đề nổi';
-      case 'floating_lyric_context_lines_hint':
-        return '0 chỉ hiển thị dòng hiện tại (một dòng, không thay đổi); đặt 1-3 để hiển thị số dòng đó trước và sau';
       case 'floating_lyric_corner_radius':
         return 'Bán kính bo góc phụ đề nổi';
       case 'floating_lyric_corner_radius_hint':
@@ -532496,6 +533217,32 @@ extension on _StringsVi {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return 'Sentences shown';
+      case 'floating_lyric_visible_lines_hint':
+        return 'The current sentence stays in the middle, like lyrics mode. Auto fills the window height: drag the window taller to see more.';
+      case 'floating_lyric_visible_lines_auto':
+        return 'Auto';
+      case 'floating_lyric_current_line_color':
+        return 'Current sentence color';
+      case 'floating_lyric_context_opacity':
+        return 'Other sentences opacity';
+      case 'floating_lyric_context_opacity_hint':
+        return 'How strongly sentences other than the current one are dimmed when several are shown.';
+      case 'floating_lyric_font':
+        return 'Floating subtitle font';
+      case 'floating_lyric_font_hint':
+        return 'Pick from the managed font library; the first enabled TTF/OTF font is used.';
+      case 'floating_lyric_appearance_section':
+        return 'Floating subtitle appearance';
+      case 'font_target_floating_lyric':
+        return 'Floating subtitles';
+      case 'font_target_floating_lyric_short':
+        return 'Subtitles';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
@@ -535140,10 +535887,6 @@ extension on _StringsZhCn {
         return '锁定悬浮字幕位置时仍可保留点击查词。';
       case 'floating_lyric_close':
         return '关闭';
-      case 'floating_lyric_context_lines':
-        return '悬浮字幕上下文行数';
-      case 'floating_lyric_context_lines_hint':
-        return '0 只显示当前行(单行,与今天一致);设 1-3 在当前行上下各显示这么多行上下文';
       case 'floating_lyric_corner_radius':
         return '悬浮字幕圆角';
       case 'floating_lyric_corner_radius_hint':
@@ -547854,6 +548597,32 @@ extension on _StringsZhCn {
         return '播放视频时装载 mpv_scripts 目录里的全部 .lua 脚本。删除脚本在下次打开视频时生效。';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return '本次播放未装载（重新打开视频后生效）';
+      case 'floating_lyric_visible_lines':
+        return '同时显示句数';
+      case 'floating_lyric_visible_lines_hint':
+        return '当前句居中显示，与歌词模式一致。自动＝按窗口高度显示，拖高悬浮窗即可看到更多句。';
+      case 'floating_lyric_visible_lines_auto':
+        return '自动';
+      case 'floating_lyric_current_line_color':
+        return '当前句颜色';
+      case 'floating_lyric_context_opacity':
+        return '其余句不透明度';
+      case 'floating_lyric_context_opacity_hint':
+        return '同时显示多句时，非当前句的淡化程度。';
+      case 'floating_lyric_font':
+        return '悬浮字幕字体';
+      case 'floating_lyric_font_hint':
+        return '从管理字体库中选择，按顺序使用第一个启用的 TTF/OTF 字体。';
+      case 'floating_lyric_appearance_section':
+        return '悬浮字幕外观与排版';
+      case 'font_target_floating_lyric':
+        return '悬浮字幕';
+      case 'font_target_floating_lyric_short':
+        return '悬浮字幕';
+      case 'floating_lyric_vertical':
+        return '竖排';
+      case 'floating_lyric_vertical_hint':
+        return '字从上往下、行从右往左排列，与竖排歌词一致。拉宽悬浮窗即可看到更多句。';
       default:
         return null;
     }
@@ -550498,10 +551267,6 @@ extension on _StringsZhHk {
         return '鎖定懸浮字幕位置時若仍想查詞，請保持開啟。';
       case 'floating_lyric_close':
         return '關閉';
-      case 'floating_lyric_context_lines':
-        return '懸浮字幕上下文行數';
-      case 'floating_lyric_context_lines_hint':
-        return '0 只顯示當前行(單行,與今天一致);設 1-3 在當前行上下各顯示這麼多行上下文';
       case 'floating_lyric_corner_radius':
         return '懸浮字幕圓角';
       case 'floating_lyric_corner_radius_hint':
@@ -563240,6 +564005,32 @@ extension on _StringsZhHk {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'floating_lyric_visible_lines':
+        return '同時顯示句數';
+      case 'floating_lyric_visible_lines_hint':
+        return '目前句置中顯示，與歌詞模式一致。自動＝依視窗高度顯示，拉高懸浮窗即可看到更多句。';
+      case 'floating_lyric_visible_lines_auto':
+        return '自動';
+      case 'floating_lyric_current_line_color':
+        return '目前句顏色';
+      case 'floating_lyric_context_opacity':
+        return '其餘句不透明度';
+      case 'floating_lyric_context_opacity_hint':
+        return '同時顯示多句時，非目前句的淡化程度。';
+      case 'floating_lyric_font':
+        return '懸浮字幕字型';
+      case 'floating_lyric_font_hint':
+        return '從管理字型庫中選擇，依序使用第一個啟用的 TTF/OTF 字型。';
+      case 'floating_lyric_appearance_section':
+        return '懸浮字幕外觀與排版';
+      case 'font_target_floating_lyric':
+        return '懸浮字幕';
+      case 'font_target_floating_lyric_short':
+        return '懸浮字幕';
+      case 'floating_lyric_vertical':
+        return 'Vertical text';
+      case 'floating_lyric_vertical_hint':
+        return 'Lay the subtitle out top-to-bottom with lines flowing right-to-left, like vertical lyrics. Widen the window to see more sentences.';
       default:
         return null;
     }
