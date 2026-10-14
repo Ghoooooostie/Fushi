@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127211 (7483 per locale)
+/// Strings: 127262 (7486 per locale)
 ///
-/// Built on 2026-10-14 at 11:01 UTC
+/// Built on 2026-10-14 at 12:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10813,6 +10813,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -28902,6 +28907,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -47381,6 +47394,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -65920,6 +65941,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -84539,6 +84568,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -102811,6 +102848,14 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -121249,6 +121294,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -138687,6 +138740,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -156160,6 +156221,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -174546,6 +174615,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -193001,6 +193078,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -211401,6 +211486,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -229479,6 +229572,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -247760,6 +247861,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -265968,6 +266077,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => 'Old data needs an upgrade first';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
 }
 
 // Path: <root>
@@ -282593,6 +282710,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       '本次播放未装载（重新打开视频后生效）';
+  @override
+  String get db_legacy_schema_title => '旧数据需要先升级';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      '此数据库来自较早版本的 Fushi，当前版本已无法直接升级它。你的数据没有被改动。请先安装 Fushi v${version}，打开一次完成数据升级，再安装当前版本。';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      '此备份来自较早版本的 Fushi，当前版本已无法直接导入。你当前的数据没有任何改动。请先安装 Fushi v${version} 导入此备份，再更新到当前版本。';
 }
 
 // Path: <root>
@@ -299474,6 +299599,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get db_legacy_schema_title => '舊資料需要先升級';
+  @override
+  String db_legacy_schema_message({required Object version}) =>
+      '此資料庫來自較早版本的 Fushi，目前版本已無法直接升級它。你的資料沒有被改動。請先安裝 Fushi v${version}，開啟一次完成資料升級，再安裝目前版本。';
+  @override
+  String backup_legacy_schema({required Object version}) =>
+      '此備份來自較早版本的 Fushi，目前版本已無法直接匯入。你目前的資料沒有任何改動。請先安裝 Fushi v${version} 匯入此備份，再更新到目前版本。';
 }
 
 /// Flat map(s) containing all translations.
@@ -314990,6 +315123,14 @@ extension on _StringsEn {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -330501,6 +330642,14 @@ extension on _StringsAr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -346088,6 +346237,14 @@ extension on _StringsDe {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -361657,6 +361814,14 @@ extension on _StringsEs {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -377244,6 +377409,14 @@ extension on _StringsFr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -392775,6 +392948,14 @@ extension on _StringsId {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -408342,6 +408523,14 @@ extension on _StringsIt {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -423783,6 +423972,14 @@ extension on _StringsJa {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -439231,6 +439428,14 @@ extension on _StringsKo {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -454793,6 +454998,14 @@ extension on _StringsNl {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -470347,6 +470560,14 @@ extension on _StringsPtBr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -485906,6 +486127,14 @@ extension on _StringsRu {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -501421,6 +501650,14 @@ extension on _StringsTh {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -516967,6 +517204,14 @@ extension on _StringsTr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -532496,6 +532741,14 @@ extension on _StringsVi {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return 'Old data needs an upgrade first';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
       default:
         return null;
     }
@@ -547854,6 +548107,14 @@ extension on _StringsZhCn {
         return '播放视频时装载 mpv_scripts 目录里的全部 .lua 脚本。删除脚本在下次打开视频时生效。';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return '本次播放未装载（重新打开视频后生效）';
+      case 'db_legacy_schema_title':
+        return '旧数据需要先升级';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            '此数据库来自较早版本的 Fushi，当前版本已无法直接升级它。你的数据没有被改动。请先安装 Fushi v${version}，打开一次完成数据升级，再安装当前版本。';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            '此备份来自较早版本的 Fushi，当前版本已无法直接导入。你当前的数据没有任何改动。请先安装 Fushi v${version} 导入此备份，再更新到当前版本。';
       default:
         return null;
     }
@@ -563240,6 +563501,14 @@ extension on _StringsZhHk {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'db_legacy_schema_title':
+        return '舊資料需要先升級';
+      case 'db_legacy_schema_message':
+        return ({required Object version}) =>
+            '此資料庫來自較早版本的 Fushi，目前版本已無法直接升級它。你的資料沒有被改動。請先安裝 Fushi v${version}，開啟一次完成資料升級，再安裝目前版本。';
+      case 'backup_legacy_schema':
+        return ({required Object version}) =>
+            '此備份來自較早版本的 Fushi，目前版本已無法直接匯入。你目前的資料沒有任何改動。請先安裝 Fushi v${version} 匯入此備份，再更新到目前版本。';
       default:
         return null;
     }
