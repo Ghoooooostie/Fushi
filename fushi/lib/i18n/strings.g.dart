@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 128435 (7555 per locale)
+/// Strings: 128418 (7554 per locale)
 ///
-/// Built on 2026-10-14 at 11:42 UTC
+/// Built on 2026-10-14 at 14:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5592,14 +5592,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_mpv_hwdec_off => 'Off';
   String get video_setting_mpv_interpolation => 'Motion interpolation';
   String get video_setting_mpv_loop => 'Loop file';
-  String get video_setting_mpv_lua_scripts => 'Load Lua scripts';
   String get video_setting_mpv_lua_scripts_dir_copied => 'Folder path copied';
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Copy scripts folder path';
   String get video_setting_mpv_lua_scripts_empty =>
       'No scripts in the mpv_scripts folder yet';
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Load all .lua files in the mpv_scripts folder into the player. Turning off takes effect the next time a video is opened.';
   String get video_setting_mpv_lua_scripts_import => 'Import Lua scripts';
   String get video_setting_mpv_lua_scripts_imported => 'Scripts imported';
   String get video_setting_mpv_lua_scripts_input_note =>
@@ -5607,8 +5604,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_mpv_lua_scripts_status_error => 'Error';
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Loaded, no errors reported';
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Not loaded in this player yet (turn on the switch or reopen the video)';
   String get video_setting_mpv_lua_scripts_unavailable =>
       'The bundled libmpv on this platform was built without Lua (-Dlua=disabled), so scripts cannot run here.';
   String get video_setting_mpv_normalize => 'Normalize downmix loudness';
@@ -8625,7 +8620,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anki_sync_client_sign_in_failed({required Object error}) =>
       'Sign-in failed: ${error}';
   String get anki_pending_mine_landing_hint =>
-      'Cards mined on devices without Anki reach this device through sync and are added to Anki here. Only one device receives them at a time.';
+      'Cards mined on devices without Anki are passed to this device through sync (such as Google Drive or WebDAV) and added to Anki here. Only one device receives them at a time.';
   String get anki_sync_client_relogin => 'Sign in again';
   String anki_sync_client_discard_confirm({required Object count}) =>
       '${count} card(s) haven\'t synced to Anki yet. Discard them and sign out? They can\'t be recovered.';
@@ -10812,8 +10807,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_filter_closed => 'Finished';
   String get feedback_filter_unread => 'New replies';
   String get anki_pending_mine_landing_host_note =>
-      'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
+      'This device is an interconnect host, so paired devices don\'t need this. Turn on "Mine to Fushi Interconnect server" on those devices and their cards go straight to Anki here.';
   String get manga_series_manage_volume => 'Manage volume';
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -20307,8 +20306,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'تكرار الملف';
   @override
-  String get video_setting_mpv_lua_scripts => 'تحميل سكربتات Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => 'تم نسخ مسار المجلد';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
@@ -20316,9 +20313,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'لا توجد سكربتات في مجلد mpv_scripts بعد';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'تحميل جميع ملفات .lua في مجلد mpv_scripts إلى المشغّل. الإيقاف يسري عند فتح فيديو جديد.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'استيراد سكربتات Lua';
   @override
@@ -20331,9 +20325,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'تم التحميل، لا أخطاء';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'لم يُحمَّل في هذا المشغّل بعد (فعّل المفتاح أو أعد فتح الفيديو)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'نسخة libmpv المضمّنة على هذه المنصة بُنيت بدون Lua (-Dlua=disabled)، لذا لا يمكن تشغيل السكربتات هنا.';
@@ -25350,7 +25341,7 @@ class _StringsAr extends _StringsEn {
       'فشل تسجيل الدخول: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
+      'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة (مثل Google Drive أو WebDAV) وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
   @override
   String get anki_sync_client_relogin => 'تسجيل الدخول مرة أخرى';
   @override
@@ -29010,9 +29001,15 @@ class _StringsAr extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
+      'هذا الجهاز مضيف للربط البيني، لذا لا تحتاج الأجهزة المقترنة إلى هذا الخيار. فعّل «إرسال إلى الجهاز المقترن» على تلك الأجهزة لتصل بطاقاتها مباشرة إلى Anki على هذا الجهاز.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -38801,8 +38798,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Datei wiederholen';
   @override
-  String get video_setting_mpv_lua_scripts => 'Lua-Skripte laden';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => 'Ordnerpfad kopiert';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
@@ -38810,9 +38805,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Noch keine Skripte im Ordner mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Alle .lua-Dateien im Ordner mpv_scripts in den Player laden. Das Deaktivieren wird beim nächsten Öffnen eines Videos wirksam.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Lua-Skripte importieren';
   @override
@@ -38825,9 +38817,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Geladen, keine Fehler gemeldet';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'In diesem Player noch nicht geladen (Schalter einschalten oder Video erneut öffnen)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'Das mitgelieferte libmpv auf dieser Plattform wurde ohne Lua gebaut (-Dlua=disabled), Skripte können hier nicht laufen.';
@@ -43997,7 +43986,7 @@ class _StringsDe extends _StringsEn {
       'Anmeldung fehlgeschlagen: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
+      'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync (z. B. Google Drive oder WebDAV) auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
   @override
   String get anki_sync_client_relogin => 'Erneut anmelden';
   @override
@@ -47670,9 +47659,15 @@ class _StringsDe extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
+      'Dieses Gerät ist ein Interconnect-Host, gekoppelte Geräte brauchen diese Option daher nicht. Schalte auf diesen Geräten „An gekoppeltes Gerät senden“ ein, dann landen ihre Karten direkt im Anki dieses Geräts.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -57500,8 +57495,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Repetir archivo';
   @override
-  String get video_setting_mpv_lua_scripts => 'Cargar scripts Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Ruta de carpeta copiada';
   @override
@@ -57510,9 +57503,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Aún no hay scripts en la carpeta mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Carga todos los archivos .lua en la carpeta mpv_scripts en el reproductor. Desactivar toma efecto la próxima vez que se abra un vídeo.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importar scripts Lua';
   @override
@@ -57525,9 +57515,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Cargado, sin errores';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Aún no cargado en este reproductor (activa el interruptor o vuelve a abrir el vídeo)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'El libmpv incluido en esta plataforma se compiló sin Lua (-Dlua=disabled), por lo que los scripts no pueden ejecutarse aquí.';
@@ -62719,7 +62706,7 @@ class _StringsEs extends _StringsEn {
       'Error al iniciar sesión: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
+      'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización (como Google Drive o WebDAV) y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
   @override
   String get anki_sync_client_relogin => 'Iniciar sesión de nuevo';
   @override
@@ -66390,9 +66377,15 @@ class _StringsEs extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
+      'Este dispositivo es un host de interconexión, así que los dispositivos emparejados no necesitan esta opción. Activa «Enviar al dispositivo emparejado» en esos dispositivos y sus tarjetas irán directamente al Anki de este.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -76255,8 +76248,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Lecture en boucle du fichier';
   @override
-  String get video_setting_mpv_lua_scripts => 'Charger les scripts Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Chemin du dossier copié';
   @override
@@ -76265,9 +76256,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Aucun script dans le dossier mpv_scripts pour l\'instant';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Charger tous les fichiers .lua du dossier mpv_scripts dans le lecteur. La désactivation prend effet à la prochaine ouverture d\'une vidéo.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importer des scripts Lua';
   @override
@@ -76280,9 +76268,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Chargé, aucune erreur signalée';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Pas encore chargé dans ce lecteur (activez l\'interrupteur ou rouvrez la vidéo)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'Le libmpv fourni sur cette plateforme a été compilé sans Lua (-Dlua=disabled) : les scripts ne peuvent pas s\'exécuter ici.';
@@ -81514,7 +81499,7 @@ class _StringsFr extends _StringsEn {
       'Échec de la connexion : ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
+      'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation (Google Drive, WebDAV…) et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
   @override
   String get anki_sync_client_relogin => 'Se reconnecter';
   @override
@@ -85190,9 +85175,15 @@ class _StringsFr extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
+      'Cet appareil est un hôte d\'interconnexion : les appareils appairés n\'ont pas besoin de cette option. Activez « Envoyer au périphérique apparié » sur ces appareils et leurs cartes iront directement dans l\'Anki de celui-ci.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -94864,8 +94855,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Ulang file';
   @override
-  String get video_setting_mpv_lua_scripts => 'Muat skrip Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => 'Path folder disalin';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
@@ -94873,9 +94862,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Belum ada skrip di folder mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Muat semua file .lua di folder mpv_scripts ke pemutar. Mematikan berlaku saat video berikutnya dibuka.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Impor skrip Lua';
   @override
@@ -94888,9 +94874,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Dimuat, tidak ada kesalahan';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Belum dimuat di pemutar ini (nyalakan sakelar atau buka ulang video)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'libmpv bawaan di platform ini dibangun tanpa Lua (-Dlua=disabled), sehingga skrip tidak dapat berjalan di sini.';
@@ -99975,7 +99958,7 @@ class _StringsId extends _StringsEn {
       'Login gagal: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
+      'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi (seperti Google Drive atau WebDAV) dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
   @override
   String get anki_sync_client_relogin => 'Masuk lagi';
   @override
@@ -103643,9 +103626,15 @@ class _StringsId extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
+      'Perangkat ini adalah host interkoneksi, jadi perangkat yang dipasangkan tidak memerlukan opsi ini. Aktifkan "Kirim kartu ke perangkat berpasangan" di perangkat tersebut, dan kartunya langsung masuk ke Anki di perangkat ini.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -113406,8 +113395,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Ripeti file';
   @override
-  String get video_setting_mpv_lua_scripts => 'Carica script Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Percorso cartella copiato';
   @override
@@ -113416,9 +113403,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Nessuno script nella cartella mpv_scripts per ora';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Carica tutti i file .lua nella cartella mpv_scripts nel player. La disattivazione ha effetto alla prossima apertura di un video.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importa script Lua';
   @override
@@ -113431,9 +113415,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Caricato, nessun errore segnalato';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Non ancora caricato in questo player (attiva l\'interruttore o riapri il video)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'Il libmpv incluso su questa piattaforma è stato compilato senza Lua (-Dlua=disabled), quindi gli script non possono essere eseguiti qui.';
@@ -118590,7 +118571,7 @@ class _StringsIt extends _StringsEn {
       'Accesso non riuscito: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
+      'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione (ad es. Google Drive o WebDAV) e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
   @override
   String get anki_sync_client_relogin => 'Accedi di nuovo';
   @override
@@ -122262,9 +122243,15 @@ class _StringsIt extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
+      'Questo dispositivo è un host di interconnessione, quindi ai dispositivi associati questa opzione non serve. Attiva «Invia al dispositivo accoppiato» su quei dispositivi e le loro carte andranno direttamente nell\'Anki di questo.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -131440,17 +131427,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'ファイルをループ再生';
   @override
-  String get video_setting_mpv_lua_scripts => 'Luaスクリプトを読み込む';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => 'フォルダパスをコピーしました';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => 'スクリプトフォルダのパスをコピー';
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'mpv_scripts フォルダーにスクリプトはまだありません';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'mpv_scriptsフォルダ内のすべての.luaファイルをプレーヤーに読み込みます。オフにすると次回動画を開いたときに反映されます。';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Luaスクリプトをインポート';
   @override
@@ -131462,9 +131444,6 @@ class _StringsJa extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_error => 'エラー';
   @override
   String get video_setting_mpv_lua_scripts_status_loaded => '読み込み済み、エラーなし';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'このプレーヤーではまだ読み込まれていません（スイッチをオンにするか動画を開き直してください）';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'このプラットフォームに同梱の libmpv は Lua なしでビルドされています（-Dlua=disabled）。ここではスクリプトを実行できません。';
@@ -136263,7 +136242,7 @@ class _StringsJa extends _StringsEn {
       'サインインに失敗しました: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki のないデバイスで作ったカードは、同期を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
+      'Anki のないデバイスで作ったカードは、同期（Google Drive、WebDAV など）を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
   @override
   String get anki_sync_client_relogin => '再度サインイン';
   @override
@@ -139880,9 +139859,15 @@ class _StringsJa extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
+      'このデバイスは Interconnect ホストなので、ペアリングしたデバイスではこの設定は不要です。それらのデバイスで「ペアリングデバイスに制カード」をオンにすると、カードはこのデバイスの Anki に直接追加されます。';
   @override
   String get manga_series_manage_volume => 'この巻を管理';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -149062,17 +149047,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_loop => '파일 반복';
   @override
-  String get video_setting_mpv_lua_scripts => 'Lua 스크립트 로드';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => '폴더 경로 복사됨';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => '스크립트 폴더 경로 복사';
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'mpv_scripts 폴더에 아직 스크립트가 없습니다';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'mpv_scripts 폴더의 모든 .lua 파일을 플레이어에 로드합니다. 끄면 다음에 동영상을 열 때 적용됩니다.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Lua 스크립트 가져오기';
   @override
@@ -149084,9 +149064,6 @@ class _StringsKo extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_error => '오류';
   @override
   String get video_setting_mpv_lua_scripts_status_loaded => '로드됨, 오류 없음';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      '이 플레이어에 아직 로드되지 않았습니다(스위치를 켜거나 동영상을 다시 여세요)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       '이 플랫폼에 포함된 libmpv는 Lua 없이 빌드되어(-Dlua=disabled) 여기서는 스크립트를 실행할 수 없습니다.';
@@ -153887,7 +153864,7 @@ class _StringsKo extends _StringsEn {
       '로그인 실패: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki가 없는 기기에서 만든 카드는 동기화를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
+      'Anki가 없는 기기에서 만든 카드는 동기화(Google Drive, WebDAV 등)를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
   @override
   String get anki_sync_client_relogin => '다시 로그인';
   @override
@@ -157534,9 +157511,15 @@ class _StringsKo extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
+      '이 기기는 인터커넥트 호스트이므로 페어링된 기기에는 이 설정이 필요 없습니다. 해당 기기에서 \'페어링된 기기로 채굴\'을 켜면 카드가 이 기기의 Anki로 바로 추가됩니다.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -167264,17 +167247,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Bestand herhalen';
   @override
-  String get video_setting_mpv_lua_scripts => 'Lua-scripts laden';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => 'Mappad gekopieerd';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => 'Scriptmappad kopiëren';
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Nog geen scripts in de map mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Laad alle .lua-bestanden in de mpv_scripts-map in de speler. Uitschakelen wordt pas van kracht bij het volgende geopende video.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Lua-scripts importeren';
   @override
@@ -167287,9 +167265,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Geladen, geen fouten gemeld';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Nog niet geladen in deze speler (zet de schakelaar aan of open de video opnieuw)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'De meegeleverde libmpv op dit platform is zonder Lua gebouwd (-Dlua=disabled), dus scripts kunnen hier niet draaien.';
@@ -172432,7 +172407,7 @@ class _StringsNl extends _StringsEn {
       'Aanmelden mislukt: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
+      'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie (zoals Google Drive of WebDAV) op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
   @override
   String get anki_sync_client_relogin => 'Opnieuw aanmelden';
   @override
@@ -176101,9 +176076,15 @@ class _StringsNl extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
+      'Dit apparaat is een interconnect-host, dus gekoppelde apparaten hebben deze optie niet nodig. Zet op die apparaten \'Kaarten naar gekoppeld apparaat sturen\' aan, dan gaan hun kaarten rechtstreeks naar Anki op dit apparaat.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -185872,8 +185853,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Repetir arquivo';
   @override
-  String get video_setting_mpv_lua_scripts => 'Carregar scripts Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Caminho da pasta copiado';
   @override
@@ -185882,9 +185861,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Ainda não há scripts na pasta mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Carregar todos os arquivos .lua na pasta mpv_scripts no player. Desativar entra em vigor na próxima vez que um vídeo for aberto.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importar scripts Lua';
   @override
@@ -185897,9 +185873,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Carregado, nenhum erro relatado';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Ainda não carregado neste player (ative a chave ou reabra o vídeo)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'O libmpv incluído nesta plataforma foi compilado sem Lua (-Dlua=disabled), então os scripts não podem ser executados aqui.';
@@ -191065,7 +191038,7 @@ class _StringsPtBr extends _StringsEn {
       'Falha no login: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
+      'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização (como Google Drive ou WebDAV) e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
   @override
   String get anki_sync_client_relogin => 'Entrar novamente';
   @override
@@ -194737,9 +194710,15 @@ class _StringsPtBr extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
+      'Este dispositivo é um host de interconexão, então dispositivos pareados não precisam desta opção. Ative "Minerar para dispositivo pareado" nesses dispositivos e os cartões irão direto para o Anki deste.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -204478,8 +204457,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Повтор файла';
   @override
-  String get video_setting_mpv_lua_scripts => 'Загрузить Lua-скрипты';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Путь к папке скопирован';
   @override
@@ -204488,9 +204465,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'В папке mpv_scripts пока нет скриптов';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Загружать все файлы .lua из папки mpv_scripts в плеер. Отключение вступит в силу при следующем открытии видео.';
   @override
   String get video_setting_mpv_lua_scripts_import =>
       'Импортировать Lua-скрипты';
@@ -204504,9 +204478,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Загружен, ошибок нет';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Ещё не загружен в этом плеере (включите переключатель или откройте видео заново)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'Встроенный libmpv на этой платформе собран без Lua (-Dlua=disabled), поэтому скрипты здесь работать не могут.';
@@ -209650,7 +209621,7 @@ class _StringsRu extends _StringsEn {
       'Не удалось войти: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
+      'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию (например, Google Drive или WebDAV) и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
   @override
   String get anki_sync_client_relogin => 'Войти снова';
   @override
@@ -213318,9 +213289,15 @@ class _StringsRu extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
+      'Это устройство — хост взаимосвязи, поэтому сопряжённым устройствам эта опция не нужна. Включите на них «Добывать на сопряжённое устройство», и их карточки будут сразу попадать в Anki на этом устройстве.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -222876,8 +222853,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'เล่นวนไฟล์เดียว';
   @override
-  String get video_setting_mpv_lua_scripts => 'โหลดสคริปต์ Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'คัดลอกเส้นทางโฟลเดอร์แล้ว';
   @override
@@ -222886,9 +222861,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'ยังไม่มีสคริปต์ในโฟลเดอร์ mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'โหลดไฟล์ .lua ทั้งหมดในโฟลเดอร์ mpv_scripts เข้าสู่เครื่องเล่น การปิดจะมีผลเมื่อเปิดวิดีโอครั้งถัดไป';
   @override
   String get video_setting_mpv_lua_scripts_import => 'นำเข้าสคริปต์ Lua';
   @override
@@ -222901,9 +222873,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'โหลดแล้ว ไม่มีข้อผิดพลาด';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'ยังไม่ได้โหลดในตัวเล่นนี้ (เปิดสวิตช์หรือเปิดวิดีโอใหม่)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'libmpv ที่มาพร้อมแอปบนแพลตฟอร์มนี้ถูกสร้างโดยไม่มี Lua (-Dlua=disabled) จึงรันสคริปต์ที่นี่ไม่ได้';
@@ -227917,7 +227886,7 @@ class _StringsTh extends _StringsEn {
       'ลงชื่อเข้าใช้ไม่สำเร็จ: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงค์ และเพิ่มลงใน Anki ที่นี่ รับได้ครั้งละหนึ่งอุปกรณ์เท่านั้น';
+      'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงก์ (เช่น Google Drive หรือ WebDAV) และเพิ่มลงใน Anki ที่นี่ รับได้ทีละหนึ่งอุปกรณ์เท่านั้น';
   @override
   String get anki_sync_client_relogin => 'ลงชื่อเข้าใช้อีกครั้ง';
   @override
@@ -231577,9 +231546,15 @@ class _StringsTh extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
+      'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ อุปกรณ์ที่จับคู่ไว้จึงไม่ต้องใช้ตัวเลือกนี้ เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนอุปกรณ์เหล่านั้น แล้วการ์ดจะถูกเพิ่มลงใน Anki ของอุปกรณ์นี้โดยตรง';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -241250,8 +241225,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Dosyayı döngüye al';
   @override
-  String get video_setting_mpv_lua_scripts => 'Lua betiklerini yükle';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Klasör yolu kopyalandı';
   @override
@@ -241260,9 +241233,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'mpv_scripts klasöründe henüz betik yok';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'mpv_scripts klasöründeki tüm .lua dosyalarını oynatıcıya yükle. Kapatma, bir sonraki video açıldığında geçerli olur.';
   @override
   String get video_setting_mpv_lua_scripts_import =>
       'Lua betiklerini içe aktar';
@@ -241276,9 +241246,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Yüklendi, hata bildirilmedi';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Bu oynatıcıda henüz yüklenmedi (anahtarı açın veya videoyu yeniden açın)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'Bu platformdaki paketlenmiş libmpv, Lua olmadan derlenmiştir (-Dlua=disabled); betikler burada çalışamaz.';
@@ -246370,7 +246337,7 @@ class _StringsTr extends _StringsEn {
       'Oturum açma başarısız oldu: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
+      'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla (Google Drive, WebDAV gibi) bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
   @override
   String get anki_sync_client_relogin => 'Yeniden oturum aç';
   @override
@@ -250039,9 +250006,15 @@ class _StringsTr extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
+      'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş cihazların bu seçeneğe ihtiyacı yok. O cihazlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın; kartları doğrudan bu cihazdaki Anki\'ye gider.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -259674,8 +259647,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Lặp tệp';
   @override
-  String get video_setting_mpv_lua_scripts => 'Tải tập lệnh Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Đã sao chép đường dẫn thư mục';
   @override
@@ -259684,9 +259655,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Chưa có tập lệnh trong thư mục mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Tải tất cả tệp .lua trong thư mục mpv_scripts vào trình phát. Tắt sẽ có hiệu lực lần tiếp theo mở video.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Nhập tập lệnh Lua';
   @override
@@ -259699,9 +259667,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Đã tải, không có lỗi';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Chưa tải trong trình phát này (bật công tắc hoặc mở lại video)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'libmpv đi kèm trên nền tảng này được biên dịch không có Lua (-Dlua=disabled), nên tập lệnh không thể chạy ở đây.';
@@ -264760,7 +264725,7 @@ class _StringsVi extends _StringsEn {
       'Đăng nhập thất bại: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
+      'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ (như Google Drive hoặc WebDAV) và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
   @override
   String get anki_sync_client_relogin => 'Đăng nhập lại';
   @override
@@ -268428,9 +268393,15 @@ class _StringsVi extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
+      'Thiết bị này là máy chủ kết nối, nên các thiết bị đã ghép nối không cần tùy chọn này. Hãy bật "Gửi thẻ đến thiết bị đã ghép nối" trên các thiết bị đó, thẻ của chúng sẽ được thêm thẳng vào Anki trên thiết bị này.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -277287,16 +277258,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_mpv_loop => '单文件循环';
   @override
-  String get video_setting_mpv_lua_scripts => '加载 Lua 脚本';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => '已复制目录路径';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => '复制脚本目录路径';
   @override
   String get video_setting_mpv_lua_scripts_empty => 'mpv_scripts 目录里还没有脚本';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      '装载 mpv_scripts 目录里的全部 .lua 脚本。关闭在下次打开视频时生效。';
   @override
   String get video_setting_mpv_lua_scripts_import => '导入 Lua 脚本';
   @override
@@ -277308,9 +277274,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_error => '报错';
   @override
   String get video_setting_mpv_lua_scripts_status_loaded => '已装载，无报错';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      '本次播放未装载（开启开关或重新打开视频）';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       '本平台随包 libmpv 未编入 Lua（-Dlua=disabled），脚本在此无法运行。';
@@ -281907,7 +281870,7 @@ class _StringsZhCn extends _StringsEn {
       '登录失败：${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      '没装 Anki 的设备制的卡，会经同步送到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
+      '没装 Anki 的设备制的卡，会经同步（如 Google Drive、WebDAV）转交到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
   @override
   String get anki_sync_client_relogin => '重新登录';
   @override
@@ -285234,9 +285197,15 @@ class _StringsZhCn extends _StringsEn {
   String get feedback_filter_unread => '有新回复';
   @override
   String get anki_pending_mine_landing_host_note =>
-      '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
+      '本机是互联主机，配对设备不需要这一项：在那些设备上打开「制卡到 Fushi 互联服务端」，它们制的卡就会直接交给本机的 Anki。';
   @override
   String get manga_series_manage_volume => '管理本卷';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      '播放视频时装载 mpv_scripts 目录里的全部 .lua 脚本。删除脚本在下次打开视频时生效。';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      '本次播放未装载（重新打开视频后生效）';
   @override
   String get audiobook_tts_lang_ja => '日语（夹杂的英文按英文读）';
   @override
@@ -294081,16 +294050,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_mpv_loop => '單檔循環';
   @override
-  String get video_setting_mpv_lua_scripts => '加載 Lua 腳本';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => '已復製目錄路徑';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => '復製腳本目錄路徑';
   @override
   String get video_setting_mpv_lua_scripts_empty => 'mpv_scripts 目錄裡還沒有腳本';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      '裝載 mpv_scripts 目錄裡的全部 .lua 腳本。關閉在下次打開影片時生效。';
   @override
   String get video_setting_mpv_lua_scripts_import => '導入 Lua 腳本';
   @override
@@ -294102,9 +294066,6 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_error => '報錯';
   @override
   String get video_setting_mpv_lua_scripts_status_loaded => '已載入，無報錯';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      '本次播放未載入（開啟開關或重新開啟影片）';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       '本平台隨附的 libmpv 未編入 Lua（-Dlua=disabled），腳本在此無法運行。';
@@ -298703,7 +298664,7 @@ class _StringsZhHk extends _StringsEn {
       '登入失敗：${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      '沒裝 Anki 的裝置製的卡，會經同步送到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
+      '沒裝 Anki 的裝置製的卡，會經同步（如 Google Drive、WebDAV）轉交到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
   @override
   String get anki_sync_client_relogin => '重新登入';
   @override
@@ -302271,9 +302232,15 @@ class _StringsZhHk extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
+      '本機是互聯主機，配對裝置不需要這一項：在那些裝置上開啟「製卡到 Fushi 互聯服務端」，它們製的卡就會直接交給本機的 Anki。';
   @override
   String get manga_series_manage_volume => '管理本卷';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
   @override
   String get audiobook_tts_lang_ja =>
       'Japanese (English words read as English)';
@@ -310635,16 +310602,12 @@ extension on _StringsEn {
         return 'Motion interpolation';
       case 'video_setting_mpv_loop':
         return 'Loop file';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Load Lua scripts';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Folder path copied';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copy scripts folder path';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'No scripts in the mpv_scripts folder yet';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Load all .lua files in the mpv_scripts folder into the player. Turning off takes effect the next time a video is opened.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Import Lua scripts';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -310655,8 +310618,6 @@ extension on _StringsEn {
         return 'Error';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Loaded, no errors reported';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Not loaded in this player yet (turn on the switch or reopen the video)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'The bundled libmpv on this platform was built without Lua (-Dlua=disabled), so scripts cannot run here.';
       case 'video_setting_mpv_normalize':
@@ -314892,7 +314853,7 @@ extension on _StringsEn {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Sign-in failed: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Cards mined on devices without Anki reach this device through sync and are added to Anki here. Only one device receives them at a time.';
+        return 'Cards mined on devices without Anki are passed to this device through sync (such as Google Drive or WebDAV) and added to Anki here. Only one device receives them at a time.';
       case 'anki_sync_client_relogin':
         return 'Sign in again';
       case 'anki_sync_client_discard_confirm':
@@ -317968,9 +317929,13 @@ extension on _StringsEn {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
+        return 'This device is an interconnect host, so paired devices don\'t need this. Turn on "Mine to Fushi Interconnect server" on those devices and their cards go straight to Anki here.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -326290,16 +326255,12 @@ extension on _StringsAr {
         return 'استيفاء الحركة';
       case 'video_setting_mpv_loop':
         return 'تكرار الملف';
-      case 'video_setting_mpv_lua_scripts':
-        return 'تحميل سكربتات Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'تم نسخ مسار المجلد';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'نسخ مسار مجلد السكربتات';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'لا توجد سكربتات في مجلد mpv_scripts بعد';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'تحميل جميع ملفات .lua في مجلد mpv_scripts إلى المشغّل. الإيقاف يسري عند فتح فيديو جديد.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'استيراد سكربتات Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -326310,8 +326271,6 @@ extension on _StringsAr {
         return 'خطأ';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'تم التحميل، لا أخطاء';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'لم يُحمَّل في هذا المشغّل بعد (فعّل المفتاح أو أعد فتح الفيديو)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'نسخة libmpv المضمّنة على هذه المنصة بُنيت بدون Lua (-Dlua=disabled)، لذا لا يمكن تشغيل السكربتات هنا.';
       case 'video_setting_mpv_normalize':
@@ -330549,7 +330508,7 @@ extension on _StringsAr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'فشل تسجيل الدخول: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
+        return 'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة (مثل Google Drive أو WebDAV) وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
       case 'anki_sync_client_relogin':
         return 'تسجيل الدخول مرة أخرى';
       case 'anki_sync_client_discard_confirm':
@@ -333625,9 +333584,13 @@ extension on _StringsAr {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
+        return 'هذا الجهاز مضيف للربط البيني، لذا لا تحتاج الأجهزة المقترنة إلى هذا الخيار. فعّل «إرسال إلى الجهاز المقترن» على تلك الأجهزة لتصل بطاقاتها مباشرة إلى Anki على هذا الجهاز.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -342002,16 +341965,12 @@ extension on _StringsDe {
         return 'Bewegungsinterpolation';
       case 'video_setting_mpv_loop':
         return 'Datei wiederholen';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Lua-Skripte laden';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Ordnerpfad kopiert';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Skript-Ordnerpfad kopieren';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Noch keine Skripte im Ordner mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Alle .lua-Dateien im Ordner mpv_scripts in den Player laden. Das Deaktivieren wird beim nächsten Öffnen eines Videos wirksam.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua-Skripte importieren';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -342022,8 +341981,6 @@ extension on _StringsDe {
         return 'Fehler';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Geladen, keine Fehler gemeldet';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'In diesem Player noch nicht geladen (Schalter einschalten oder Video erneut öffnen)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'Das mitgelieferte libmpv auf dieser Plattform wurde ohne Lua gebaut (-Dlua=disabled), Skripte können hier nicht laufen.';
       case 'video_setting_mpv_normalize':
@@ -346282,7 +346239,7 @@ extension on _StringsDe {
         return ({required Object error}) =>
             'Anmeldung fehlgeschlagen: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
+        return 'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync (z. B. Google Drive oder WebDAV) auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
       case 'anki_sync_client_relogin':
         return 'Erneut anmelden';
       case 'anki_sync_client_discard_confirm':
@@ -349358,9 +349315,13 @@ extension on _StringsDe {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
+        return 'Dieses Gerät ist ein Interconnect-Host, gekoppelte Geräte brauchen diese Option daher nicht. Schalte auf diesen Geräten „An gekoppeltes Gerät senden“ ein, dann landen ihre Karten direkt im Anki dieses Geräts.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -357722,16 +357683,12 @@ extension on _StringsEs {
         return 'Interpolación de movimiento';
       case 'video_setting_mpv_loop':
         return 'Repetir archivo';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Cargar scripts Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Ruta de carpeta copiada';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copiar ruta de carpeta de scripts';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Aún no hay scripts en la carpeta mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Carga todos los archivos .lua en la carpeta mpv_scripts en el reproductor. Desactivar toma efecto la próxima vez que se abra un vídeo.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importar scripts Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -357742,8 +357699,6 @@ extension on _StringsEs {
         return 'Error';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Cargado, sin errores';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Aún no cargado en este reproductor (activa el interruptor o vuelve a abrir el vídeo)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'El libmpv incluido en esta plataforma se compiló sin Lua (-Dlua=disabled), por lo que los scripts no pueden ejecutarse aquí.';
       case 'video_setting_mpv_normalize':
@@ -361997,7 +361952,7 @@ extension on _StringsEs {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Error al iniciar sesión: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
+        return 'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización (como Google Drive o WebDAV) y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
       case 'anki_sync_client_relogin':
         return 'Iniciar sesión de nuevo';
       case 'anki_sync_client_discard_confirm':
@@ -365073,9 +365028,13 @@ extension on _StringsEs {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
+        return 'Este dispositivo es un host de interconexión, así que los dispositivos emparejados no necesitan esta opción. Activa «Enviar al dispositivo emparejado» en esos dispositivos y sus tarjetas irán directamente al Anki de este.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -373448,16 +373407,12 @@ extension on _StringsFr {
         return 'Interpolation de mouvement';
       case 'video_setting_mpv_loop':
         return 'Lecture en boucle du fichier';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Charger les scripts Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Chemin du dossier copié';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copier le chemin du dossier de scripts';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Aucun script dans le dossier mpv_scripts pour l\'instant';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Charger tous les fichiers .lua du dossier mpv_scripts dans le lecteur. La désactivation prend effet à la prochaine ouverture d\'une vidéo.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importer des scripts Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -373468,8 +373423,6 @@ extension on _StringsFr {
         return 'Erreur';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Chargé, aucune erreur signalée';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Pas encore chargé dans ce lecteur (activez l\'interrupteur ou rouvrez la vidéo)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'Le libmpv fourni sur cette plateforme a été compilé sans Lua (-Dlua=disabled) : les scripts ne peuvent pas s\'exécuter ici.';
       case 'video_setting_mpv_normalize':
@@ -377730,7 +377683,7 @@ extension on _StringsFr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Échec de la connexion : ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
+        return 'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation (Google Drive, WebDAV…) et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
       case 'anki_sync_client_relogin':
         return 'Se reconnecter';
       case 'anki_sync_client_discard_confirm':
@@ -380806,9 +380759,13 @@ extension on _StringsFr {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
+        return 'Cet appareil est un hôte d\'interconnexion : les appareils appairés n\'ont pas besoin de cette option. Activez « Envoyer au périphérique apparié » sur ces appareils et leurs cartes iront directement dans l\'Anki de celui-ci.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -389145,16 +389102,12 @@ extension on _StringsId {
         return 'Interpolasi gerak';
       case 'video_setting_mpv_loop':
         return 'Ulang file';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Muat skrip Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Path folder disalin';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Salin path folder skrip';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Belum ada skrip di folder mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Muat semua file .lua di folder mpv_scripts ke pemutar. Mematikan berlaku saat video berikutnya dibuka.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Impor skrip Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -389165,8 +389118,6 @@ extension on _StringsId {
         return 'Kesalahan';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Dimuat, tidak ada kesalahan';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Belum dimuat di pemutar ini (nyalakan sakelar atau buka ulang video)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'libmpv bawaan di platform ini dibangun tanpa Lua (-Dlua=disabled), sehingga skrip tidak dapat berjalan di sini.';
       case 'video_setting_mpv_normalize':
@@ -393407,7 +393358,7 @@ extension on _StringsId {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Login gagal: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
+        return 'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi (seperti Google Drive atau WebDAV) dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
       case 'anki_sync_client_relogin':
         return 'Masuk lagi';
       case 'anki_sync_client_discard_confirm':
@@ -396483,9 +396434,13 @@ extension on _StringsId {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
+        return 'Perangkat ini adalah host interkoneksi, jadi perangkat yang dipasangkan tidak memerlukan opsi ini. Aktifkan "Kirim kartu ke perangkat berpasangan" di perangkat tersebut, dan kartunya langsung masuk ke Anki di perangkat ini.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -404846,16 +404801,12 @@ extension on _StringsIt {
         return 'Interpolazione del movimento';
       case 'video_setting_mpv_loop':
         return 'Ripeti file';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Carica script Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Percorso cartella copiato';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copia percorso cartella script';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Nessuno script nella cartella mpv_scripts per ora';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Carica tutti i file .lua nella cartella mpv_scripts nel player. La disattivazione ha effetto alla prossima apertura di un video.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importa script Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -404866,8 +404817,6 @@ extension on _StringsIt {
         return 'Errore';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Caricato, nessun errore segnalato';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Non ancora caricato in questo player (attiva l\'interruttore o riapri il video)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'Il libmpv incluso su questa piattaforma è stato compilato senza Lua (-Dlua=disabled), quindi gli script non possono essere eseguiti qui.';
       case 'video_setting_mpv_normalize':
@@ -409120,7 +409069,7 @@ extension on _StringsIt {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Accesso non riuscito: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
+        return 'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione (ad es. Google Drive o WebDAV) e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
       case 'anki_sync_client_relogin':
         return 'Accedi di nuovo';
       case 'anki_sync_client_discard_confirm':
@@ -412196,9 +412145,13 @@ extension on _StringsIt {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
+        return 'Questo dispositivo è un host di interconnessione, quindi ai dispositivi associati questa opzione non serve. Attiva «Invia al dispositivo accoppiato» su quei dispositivi e le loro carte andranno direttamente nell\'Anki di questo.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -420483,16 +420436,12 @@ extension on _StringsJa {
         return 'フレーム補間';
       case 'video_setting_mpv_loop':
         return 'ファイルをループ再生';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Luaスクリプトを読み込む';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'フォルダパスをコピーしました';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'スクリプトフォルダのパスをコピー';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'mpv_scripts フォルダーにスクリプトはまだありません';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'mpv_scriptsフォルダ内のすべての.luaファイルをプレーヤーに読み込みます。オフにすると次回動画を開いたときに反映されます。';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Luaスクリプトをインポート';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -420503,8 +420452,6 @@ extension on _StringsJa {
         return 'エラー';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return '読み込み済み、エラーなし';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'このプレーヤーではまだ読み込まれていません（スイッチをオンにするか動画を開き直してください）';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'このプラットフォームに同梱の libmpv は Lua なしでビルドされています（-Dlua=disabled）。ここではスクリプトを実行できません。';
       case 'video_setting_mpv_normalize':
@@ -424711,7 +424658,7 @@ extension on _StringsJa {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'サインインに失敗しました: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki のないデバイスで作ったカードは、同期を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
+        return 'Anki のないデバイスで作ったカードは、同期（Google Drive、WebDAV など）を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
       case 'anki_sync_client_relogin':
         return '再度サインイン';
       case 'anki_sync_client_discard_confirm':
@@ -427783,9 +427730,13 @@ extension on _StringsJa {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
+        return 'このデバイスは Interconnect ホストなので、ペアリングしたデバイスではこの設定は不要です。それらのデバイスで「ペアリングデバイスに制カード」をオンにすると、カードはこのデバイスの Anki に直接追加されます。';
       case 'manga_series_manage_volume':
         return 'この巻を管理';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -436073,16 +436024,12 @@ extension on _StringsKo {
         return '모션 보간';
       case 'video_setting_mpv_loop':
         return '파일 반복';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Lua 스크립트 로드';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return '폴더 경로 복사됨';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return '스크립트 폴더 경로 복사';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'mpv_scripts 폴더에 아직 스크립트가 없습니다';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'mpv_scripts 폴더의 모든 .lua 파일을 플레이어에 로드합니다. 끄면 다음에 동영상을 열 때 적용됩니다.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua 스크립트 가져오기';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -436093,8 +436040,6 @@ extension on _StringsKo {
         return '오류';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return '로드됨, 오류 없음';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return '이 플레이어에 아직 로드되지 않았습니다(스위치를 켜거나 동영상을 다시 여세요)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return '이 플랫폼에 포함된 libmpv는 Lua 없이 빌드되어(-Dlua=disabled) 여기서는 스크립트를 실행할 수 없습니다.';
       case 'video_setting_mpv_normalize':
@@ -440302,7 +440247,7 @@ extension on _StringsKo {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '로그인 실패: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki가 없는 기기에서 만든 카드는 동기화를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
+        return 'Anki가 없는 기기에서 만든 카드는 동기화(Google Drive, WebDAV 등)를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
       case 'anki_sync_client_relogin':
         return '다시 로그인';
       case 'anki_sync_client_discard_confirm':
@@ -443377,9 +443322,13 @@ extension on _StringsKo {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
+        return '이 기기는 인터커넥트 호스트이므로 페어링된 기기에는 이 설정이 필요 없습니다. 해당 기기에서 \'페어링된 기기로 채굴\'을 켜면 카드가 이 기기의 Anki로 바로 추가됩니다.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -451736,16 +451685,12 @@ extension on _StringsNl {
         return 'Bewegingsinterpolatie';
       case 'video_setting_mpv_loop':
         return 'Bestand herhalen';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Lua-scripts laden';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Mappad gekopieerd';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Scriptmappad kopiëren';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Nog geen scripts in de map mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Laad alle .lua-bestanden in de mpv_scripts-map in de speler. Uitschakelen wordt pas van kracht bij het volgende geopende video.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua-scripts importeren';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -451756,8 +451701,6 @@ extension on _StringsNl {
         return 'Fout';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Geladen, geen fouten gemeld';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Nog niet geladen in deze speler (zet de schakelaar aan of open de video opnieuw)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'De meegeleverde libmpv op dit platform is zonder Lua gebouwd (-Dlua=disabled), dus scripts kunnen hier niet draaien.';
       case 'video_setting_mpv_normalize':
@@ -456009,7 +455952,7 @@ extension on _StringsNl {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Aanmelden mislukt: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
+        return 'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie (zoals Google Drive of WebDAV) op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
       case 'anki_sync_client_relogin':
         return 'Opnieuw aanmelden';
       case 'anki_sync_client_discard_confirm':
@@ -459085,9 +459028,13 @@ extension on _StringsNl {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
+        return 'Dit apparaat is een interconnect-host, dus gekoppelde apparaten hebben deze optie niet nodig. Zet op die apparaten \'Kaarten naar gekoppeld apparaat sturen\' aan, dan gaan hun kaarten rechtstreeks naar Anki op dit apparaat.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -467439,16 +467386,12 @@ extension on _StringsPtBr {
         return 'Interpolação de movimento';
       case 'video_setting_mpv_loop':
         return 'Repetir arquivo';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Carregar scripts Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Caminho da pasta copiado';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copiar caminho da pasta de scripts';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Ainda não há scripts na pasta mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Carregar todos os arquivos .lua na pasta mpv_scripts no player. Desativar entra em vigor na próxima vez que um vídeo for aberto.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importar scripts Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -467459,8 +467402,6 @@ extension on _StringsPtBr {
         return 'Erro';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Carregado, nenhum erro relatado';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Ainda não carregado neste player (ative a chave ou reabra o vídeo)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'O libmpv incluído nesta plataforma foi compilado sem Lua (-Dlua=disabled), então os scripts não podem ser executados aqui.';
       case 'video_setting_mpv_normalize':
@@ -471709,7 +471650,7 @@ extension on _StringsPtBr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Falha no login: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
+        return 'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização (como Google Drive ou WebDAV) e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
       case 'anki_sync_client_relogin':
         return 'Entrar novamente';
       case 'anki_sync_client_discard_confirm':
@@ -474785,9 +474726,13 @@ extension on _StringsPtBr {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
+        return 'Este dispositivo é um host de interconexão, então dispositivos pareados não precisam desta opção. Ative "Minerar para dispositivo pareado" nesses dispositivos e os cartões irão direto para o Anki deste.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -483147,16 +483092,12 @@ extension on _StringsRu {
         return 'Интерполяция движения';
       case 'video_setting_mpv_loop':
         return 'Повтор файла';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Загрузить Lua-скрипты';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Путь к папке скопирован';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Скопировать путь к папке скриптов';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'В папке mpv_scripts пока нет скриптов';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Загружать все файлы .lua из папки mpv_scripts в плеер. Отключение вступит в силу при следующем открытии видео.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Импортировать Lua-скрипты';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -483167,8 +483108,6 @@ extension on _StringsRu {
         return 'Ошибка';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Загружен, ошибок нет';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Ещё не загружен в этом плеере (включите переключатель или откройте видео заново)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'Встроенный libmpv на этой платформе собран без Lua (-Dlua=disabled), поэтому скрипты здесь работать не могут.';
       case 'video_setting_mpv_normalize':
@@ -487414,7 +487353,7 @@ extension on _StringsRu {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Не удалось войти: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
+        return 'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию (например, Google Drive или WebDAV) и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
       case 'anki_sync_client_relogin':
         return 'Войти снова';
       case 'anki_sync_client_discard_confirm':
@@ -490490,9 +490429,13 @@ extension on _StringsRu {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
+        return 'Это устройство — хост взаимосвязи, поэтому сопряжённым устройствам эта опция не нужна. Включите на них «Добывать на сопряжённое устройство», и их карточки будут сразу попадать в Anki на этом устройстве.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -498819,16 +498762,12 @@ extension on _StringsTh {
         return 'เพิ่มเฟรมการเคลื่อนไหว';
       case 'video_setting_mpv_loop':
         return 'เล่นวนไฟล์เดียว';
-      case 'video_setting_mpv_lua_scripts':
-        return 'โหลดสคริปต์ Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'คัดลอกเส้นทางโฟลเดอร์แล้ว';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'คัดลอกเส้นทางโฟลเดอร์สคริปต์';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'ยังไม่มีสคริปต์ในโฟลเดอร์ mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'โหลดไฟล์ .lua ทั้งหมดในโฟลเดอร์ mpv_scripts เข้าสู่เครื่องเล่น การปิดจะมีผลเมื่อเปิดวิดีโอครั้งถัดไป';
       case 'video_setting_mpv_lua_scripts_import':
         return 'นำเข้าสคริปต์ Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -498839,8 +498778,6 @@ extension on _StringsTh {
         return 'ข้อผิดพลาด';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'โหลดแล้ว ไม่มีข้อผิดพลาด';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'ยังไม่ได้โหลดในตัวเล่นนี้ (เปิดสวิตช์หรือเปิดวิดีโอใหม่)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'libmpv ที่มาพร้อมแอปบนแพลตฟอร์มนี้ถูกสร้างโดยไม่มี Lua (-Dlua=disabled) จึงรันสคริปต์ที่นี่ไม่ได้';
       case 'video_setting_mpv_normalize':
@@ -503075,7 +503012,7 @@ extension on _StringsTh {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'ลงชื่อเข้าใช้ไม่สำเร็จ: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงค์ และเพิ่มลงใน Anki ที่นี่ รับได้ครั้งละหนึ่งอุปกรณ์เท่านั้น';
+        return 'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงก์ (เช่น Google Drive หรือ WebDAV) และเพิ่มลงใน Anki ที่นี่ รับได้ทีละหนึ่งอุปกรณ์เท่านั้น';
       case 'anki_sync_client_relogin':
         return 'ลงชื่อเข้าใช้อีกครั้ง';
       case 'anki_sync_client_discard_confirm':
@@ -506151,9 +506088,13 @@ extension on _StringsTh {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
+        return 'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ อุปกรณ์ที่จับคู่ไว้จึงไม่ต้องใช้ตัวเลือกนี้ เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนอุปกรณ์เหล่านั้น แล้วการ์ดจะถูกเพิ่มลงใน Anki ของอุปกรณ์นี้โดยตรง';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -514498,16 +514439,12 @@ extension on _StringsTr {
         return 'Hareket ara değerlemesi';
       case 'video_setting_mpv_loop':
         return 'Dosyayı döngüye al';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Lua betiklerini yükle';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Klasör yolu kopyalandı';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Betik klasör yolunu kopyala';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'mpv_scripts klasöründe henüz betik yok';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'mpv_scripts klasöründeki tüm .lua dosyalarını oynatıcıya yükle. Kapatma, bir sonraki video açıldığında geçerli olur.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua betiklerini içe aktar';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -514518,8 +514455,6 @@ extension on _StringsTr {
         return 'Hata';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Yüklendi, hata bildirilmedi';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Bu oynatıcıda henüz yüklenmedi (anahtarı açın veya videoyu yeniden açın)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'Bu platformdaki paketlenmiş libmpv, Lua olmadan derlenmiştir (-Dlua=disabled); betikler burada çalışamaz.';
       case 'video_setting_mpv_normalize':
@@ -518767,7 +518702,7 @@ extension on _StringsTr {
         return ({required Object error}) =>
             'Oturum açma başarısız oldu: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
+        return 'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla (Google Drive, WebDAV gibi) bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
       case 'anki_sync_client_relogin':
         return 'Yeniden oturum aç';
       case 'anki_sync_client_discard_confirm':
@@ -521843,9 +521778,13 @@ extension on _StringsTr {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
+        return 'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş cihazların bu seçeneğe ihtiyacı yok. O cihazlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın; kartları doğrudan bu cihazdaki Anki\'ye gider.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -530185,16 +530124,12 @@ extension on _StringsVi {
         return 'Nội suy chuyển động';
       case 'video_setting_mpv_loop':
         return 'Lặp tệp';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Tải tập lệnh Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Đã sao chép đường dẫn thư mục';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Sao chép đường dẫn thư mục tập lệnh';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Chưa có tập lệnh trong thư mục mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Tải tất cả tệp .lua trong thư mục mpv_scripts vào trình phát. Tắt sẽ có hiệu lực lần tiếp theo mở video.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Nhập tập lệnh Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -530205,8 +530140,6 @@ extension on _StringsVi {
         return 'Lỗi';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Đã tải, không có lỗi';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Chưa tải trong trình phát này (bật công tắc hoặc mở lại video)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'libmpv đi kèm trên nền tảng này được biên dịch không có Lua (-Dlua=disabled), nên tập lệnh không thể chạy ở đây.';
       case 'video_setting_mpv_normalize':
@@ -534442,7 +534375,7 @@ extension on _StringsVi {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Đăng nhập thất bại: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
+        return 'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ (như Google Drive hoặc WebDAV) và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
       case 'anki_sync_client_relogin':
         return 'Đăng nhập lại';
       case 'anki_sync_client_discard_confirm':
@@ -537518,9 +537451,13 @@ extension on _StringsVi {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
+        return 'Thiết bị này là máy chủ kết nối, nên các thiết bị đã ghép nối không cần tùy chọn này. Hãy bật "Gửi thẻ đến thiết bị đã ghép nối" trên các thiết bị đó, thẻ của chúng sẽ được thêm thẳng vào Anki trên thiết bị này.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
@@ -545785,16 +545722,12 @@ extension on _StringsZhCn {
         return '运动插帧';
       case 'video_setting_mpv_loop':
         return '单文件循环';
-      case 'video_setting_mpv_lua_scripts':
-        return '加载 Lua 脚本';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return '已复制目录路径';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return '复制脚本目录路径';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'mpv_scripts 目录里还没有脚本';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return '装载 mpv_scripts 目录里的全部 .lua 脚本。关闭在下次打开视频时生效。';
       case 'video_setting_mpv_lua_scripts_import':
         return '导入 Lua 脚本';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -545805,8 +545738,6 @@ extension on _StringsZhCn {
         return '报错';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return '已装载，无报错';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return '本次播放未装载（开启开关或重新打开视频）';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return '本平台随包 libmpv 未编入 Lua（-Dlua=disabled），脚本在此无法运行。';
       case 'video_setting_mpv_normalize':
@@ -549985,7 +549916,7 @@ extension on _StringsZhCn {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '登录失败：${error}';
       case 'anki_pending_mine_landing_hint':
-        return '没装 Anki 的设备制的卡，会经同步送到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
+        return '没装 Anki 的设备制的卡，会经同步（如 Google Drive、WebDAV）转交到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
       case 'anki_sync_client_relogin':
         return '重新登录';
       case 'anki_sync_client_discard_confirm':
@@ -553022,9 +552953,13 @@ extension on _StringsZhCn {
       case 'feedback_filter_unread':
         return '有新回复';
       case 'anki_pending_mine_landing_host_note':
-        return '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
+        return '本机是互联主机，配对设备不需要这一项：在那些设备上打开「制卡到 Fushi 互联服务端」，它们制的卡就会直接交给本机的 Anki。';
       case 'manga_series_manage_volume':
         return '管理本卷';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return '播放视频时装载 mpv_scripts 目录里的全部 .lua 脚本。删除脚本在下次打开视频时生效。';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return '本次播放未装载（重新打开视频后生效）';
       case 'audiobook_tts_lang_ja':
         return '日语（夹杂的英文按英文读）';
       case 'audiobook_tts_lang_all_ja':
@@ -561288,16 +561223,12 @@ extension on _StringsZhHk {
         return '動態插幀';
       case 'video_setting_mpv_loop':
         return '單檔循環';
-      case 'video_setting_mpv_lua_scripts':
-        return '加載 Lua 腳本';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return '已復製目錄路徑';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return '復製腳本目錄路徑';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'mpv_scripts 目錄裡還沒有腳本';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return '裝載 mpv_scripts 目錄裡的全部 .lua 腳本。關閉在下次打開影片時生效。';
       case 'video_setting_mpv_lua_scripts_import':
         return '導入 Lua 腳本';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -561308,8 +561239,6 @@ extension on _StringsZhHk {
         return '報錯';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return '已載入，無報錯';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return '本次播放未載入（開啟開關或重新開啟影片）';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return '本平台隨附的 libmpv 未編入 Lua（-Dlua=disabled），腳本在此無法運行。';
       case 'video_setting_mpv_normalize':
@@ -565488,7 +565417,7 @@ extension on _StringsZhHk {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '登入失敗：${error}';
       case 'anki_pending_mine_landing_hint':
-        return '沒裝 Anki 的裝置製的卡，會經同步送到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
+        return '沒裝 Anki 的裝置製的卡，會經同步（如 Google Drive、WebDAV）轉交到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
       case 'anki_sync_client_relogin':
         return '重新登入';
       case 'anki_sync_client_discard_confirm':
@@ -568552,9 +568481,13 @@ extension on _StringsZhHk {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
+        return '本機是互聯主機，配對裝置不需要這一項：在那些裝置上開啟「製卡到 Fushi 互聯服務端」，它們製的卡就會直接交給本機的 Anki。';
       case 'manga_series_manage_volume':
         return '管理本卷';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       case 'audiobook_tts_lang_ja':
         return 'Japanese (English words read as English)';
       case 'audiobook_tts_lang_all_ja':
