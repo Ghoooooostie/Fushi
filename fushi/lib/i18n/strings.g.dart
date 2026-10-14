@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 126123 (7419 per locale)
 ///
-/// Built on 2026-10-14 at 05:45 UTC
+/// Built on 2026-10-14 at 05:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4161,7 +4161,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Scroll down one screen';
   String get shortcut_action_global_scroll_page_up => 'Scroll up one screen';
   String get shortcut_action_global_toggle_fullscreen => 'Toggle fullscreen';
-  String get shortcut_action_home_focus_search => 'Focus search';
+  String get shortcut_action_home_focus_search => 'Jump to dictionary search';
   String get shortcut_action_home_tab_books => 'Books tab';
   String get shortcut_action_home_tab_dict => 'Dictionary tab';
   String get shortcut_action_home_tab_next => 'Next tab';
@@ -17591,7 +17591,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'تبديل ملء الشاشة';
   @override
-  String get shortcut_action_home_focus_search => 'التركيز على البحث';
+  String get shortcut_action_home_focus_search =>
+      'الانتقال إلى البحث في القاموس';
   @override
   String get shortcut_action_home_tab_books => 'تبويب الكتب';
   @override
@@ -28640,7 +28641,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'البحث في المكتبة';
 }
 
 // Path: <root>
@@ -35681,7 +35682,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'Vollbild umschalten';
   @override
-  String get shortcut_action_home_focus_search => 'Suche fokussieren';
+  String get shortcut_action_home_focus_search =>
+      'Zur Wörterbuchsuche springen';
   @override
   String get shortcut_action_home_tab_books => 'Tab „Bücher“';
   @override
@@ -46956,7 +46958,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'In der Bibliothek suchen';
 }
 
 // Path: <root>
@@ -54024,7 +54026,8 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_global_toggle_fullscreen =>
       'Alternar pantalla completa';
   @override
-  String get shortcut_action_home_focus_search => 'Enfocar búsqueda';
+  String get shortcut_action_home_focus_search =>
+      'Ir a la búsqueda del diccionario';
   @override
   String get shortcut_action_home_tab_books => 'Pestaña de libros';
   @override
@@ -65332,7 +65335,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'Buscar en la biblioteca';
 }
 
 // Path: <root>
@@ -72427,7 +72430,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'Plein écran';
   @override
-  String get shortcut_action_home_focus_search => 'Focus sur la recherche';
+  String get shortcut_action_home_focus_search =>
+      'Aller à la recherche dans le dictionnaire';
   @override
   String get shortcut_action_home_tab_books => 'Onglet Livres';
   @override
@@ -83787,7 +83791,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search =>
+      'Rechercher dans la bibliothèque';
 }
 
 // Path: <root>
@@ -90743,7 +90748,7 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'Alihkan layar penuh';
   @override
-  String get shortcut_action_home_focus_search => 'Fokus Pencarian';
+  String get shortcut_action_home_focus_search => 'Lompat ke pencarian kamus';
   @override
   String get shortcut_action_home_tab_books => 'Tab Buku';
   @override
@@ -101897,7 +101902,7 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'Cari di pustaka';
 }
 
 // Path: <root>
@@ -108917,7 +108922,8 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_global_toggle_fullscreen =>
       'Attiva/disattiva schermo intero';
   @override
-  String get shortcut_action_home_focus_search => 'Vai alla ricerca';
+  String get shortcut_action_home_focus_search =>
+      'Vai alla ricerca nel dizionario';
   @override
   String get shortcut_action_home_tab_books => 'Scheda Libri';
   @override
@@ -120172,7 +120178,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'Cerca nella libreria';
 }
 
 // Path: <root>
@@ -126778,7 +126784,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => '全画面表示の切り替え';
   @override
-  String get shortcut_action_home_focus_search => '検索にフォーカス';
+  String get shortcut_action_home_focus_search => '辞書検索へ移動';
   @override
   String get shortcut_action_home_tab_books => '書籍タブ';
   @override
@@ -137447,7 +137453,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'オフ';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'ライブラリ内を検索';
 }
 
 // Path: <root>
@@ -144054,7 +144060,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => '전체 화면 전환';
   @override
-  String get shortcut_action_home_focus_search => '검색 포커스';
+  String get shortcut_action_home_focus_search => '사전 검색으로 이동';
   @override
   String get shortcut_action_home_tab_books => '책 탭';
   @override
@@ -154758,7 +154764,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => '라이브러리에서 검색';
 }
 
 // Path: <root>
@@ -161751,7 +161757,8 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_global_toggle_fullscreen =>
       'Volledig scherm wisselen';
   @override
-  String get shortcut_action_home_focus_search => 'Zoeken focussen';
+  String get shortcut_action_home_focus_search =>
+      'Naar woordenboek zoeken springen';
   @override
   String get shortcut_action_home_tab_books => 'Tabblad Boeken';
   @override
@@ -172981,7 +172988,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'Zoeken in bibliotheek';
 }
 
 // Path: <root>
@@ -180004,7 +180011,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'Alternar tela cheia';
   @override
-  String get shortcut_action_home_focus_search => 'Focar na busca';
+  String get shortcut_action_home_focus_search =>
+      'Ir para a busca no dicionário';
   @override
   String get shortcut_action_home_tab_books => 'Aba Livros';
   @override
@@ -191273,7 +191281,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'Buscar na biblioteca';
 }
 
 // Path: <root>
@@ -198278,7 +198286,7 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_global_toggle_fullscreen =>
       'Переключить полноэкранный режим';
   @override
-  String get shortcut_action_home_focus_search => 'Фокус на поиск';
+  String get shortcut_action_home_focus_search => 'Перейти к поиску по словарю';
   @override
   String get shortcut_action_home_tab_books => 'Вкладка «Книги»';
   @override
@@ -209511,7 +209519,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'Поиск в библиотеке';
 }
 
 // Path: <root>
@@ -216378,7 +216386,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'สลับเต็มหน้าจอ';
   @override
-  String get shortcut_action_home_focus_search => 'โฟกัสช่องค้นหา';
+  String get shortcut_action_home_focus_search => 'ไปที่การค้นหาพจนานุกรม';
   @override
   String get shortcut_action_home_tab_books => 'แท็บหนังสือ';
   @override
@@ -227427,7 +227435,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'ค้นหาในคลัง';
 }
 
 // Path: <root>
@@ -234385,7 +234393,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'Tam ekranı aç/kapat';
   @override
-  String get shortcut_action_home_focus_search => 'Aramaya Odaklan';
+  String get shortcut_action_home_focus_search => 'Sözlük aramasına git';
   @override
   String get shortcut_action_home_tab_books => 'Kitaplar Sekmesi';
   @override
@@ -245546,7 +245554,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'Kütüphanede ara';
 }
 
 // Path: <root>
@@ -252477,7 +252485,7 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_global_toggle_fullscreen =>
       'Bật/tắt toàn màn hình';
   @override
-  String get shortcut_action_home_focus_search => 'Tập trung tìm kiếm';
+  String get shortcut_action_home_focus_search => 'Chuyển đến tìm kiếm từ điển';
   @override
   String get shortcut_action_home_tab_books => 'Tab Sách';
   @override
@@ -263592,7 +263600,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => 'Tìm trong thư viện';
 }
 
 // Path: <root>
@@ -269960,7 +269968,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => '全屏切换';
   @override
-  String get shortcut_action_home_focus_search => '聚焦搜索';
+  String get shortcut_action_home_focus_search => '跳到查词搜索';
   @override
   String get shortcut_action_home_tab_books => '书架标签';
   @override
@@ -280072,7 +280080,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => '关闭';
   @override
-  String get shortcut_action_library_search => '在库页中搜索';
+  String get shortcut_action_library_search => '在书架 / 媒体库中搜索';
 }
 
 // Path: <root>
@@ -286449,7 +286457,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => '全屏切換';
   @override
-  String get shortcut_action_home_focus_search => '聚焦搜尋';
+  String get shortcut_action_home_focus_search => '跳到查詞搜尋';
   @override
   String get shortcut_action_home_tab_books => '書架分頁';
   @override
@@ -296790,7 +296798,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_pause_ocr_scope_off => '關閉';
   @override
-  String get shortcut_action_library_search => 'Search in library';
+  String get shortcut_action_library_search => '在書架 / 媒體庫中搜尋';
 }
 
 /// Flat map(s) containing all translations.
@@ -302766,7 +302774,7 @@ extension on _StringsEn {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Toggle fullscreen';
       case 'shortcut_action_home_focus_search':
-        return 'Focus search';
+        return 'Jump to dictionary search';
       case 'shortcut_action_home_tab_books':
         return 'Books tab';
       case 'shortcut_action_home_tab_dict':
@@ -318147,7 +318155,7 @@ extension on _StringsAr {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'تبديل ملء الشاشة';
       case 'shortcut_action_home_focus_search':
-        return 'التركيز على البحث';
+        return 'الانتقال إلى البحث في القاموس';
       case 'shortcut_action_home_tab_books':
         return 'تبويب الكتب';
       case 'shortcut_action_home_tab_dict':
@@ -327553,7 +327561,7 @@ extension on _StringsAr {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'البحث في المكتبة';
       default:
         return null;
     }
@@ -333568,7 +333576,7 @@ extension on _StringsDe {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Vollbild umschalten';
       case 'shortcut_action_home_focus_search':
-        return 'Suche fokussieren';
+        return 'Zur Wörterbuchsuche springen';
       case 'shortcut_action_home_tab_books':
         return 'Tab „Bücher“';
       case 'shortcut_action_home_tab_dict':
@@ -343008,7 +343016,7 @@ extension on _StringsDe {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'In der Bibliothek suchen';
       default:
         return null;
     }
@@ -349011,7 +349019,7 @@ extension on _StringsEs {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Alternar pantalla completa';
       case 'shortcut_action_home_focus_search':
-        return 'Enfocar búsqueda';
+        return 'Ir a la búsqueda del diccionario';
       case 'shortcut_action_home_tab_books':
         return 'Pestaña de libros';
       case 'shortcut_action_home_tab_dict':
@@ -358445,7 +358453,7 @@ extension on _StringsEs {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'Buscar en la biblioteca';
       default:
         return null;
     }
@@ -364457,7 +364465,7 @@ extension on _StringsFr {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Plein écran';
       case 'shortcut_action_home_focus_search':
-        return 'Focus sur la recherche';
+        return 'Aller à la recherche dans le dictionnaire';
       case 'shortcut_action_home_tab_books':
         return 'Onglet Livres';
       case 'shortcut_action_home_tab_dict':
@@ -373900,7 +373908,7 @@ extension on _StringsFr {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'Rechercher dans la bibliothèque';
       default:
         return null;
     }
@@ -379885,7 +379893,7 @@ extension on _StringsId {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Alihkan layar penuh';
       case 'shortcut_action_home_focus_search':
-        return 'Fokus Pencarian';
+        return 'Lompat ke pencarian kamus';
       case 'shortcut_action_home_tab_books':
         return 'Tab Buku';
       case 'shortcut_action_home_tab_dict':
@@ -389299,7 +389307,7 @@ extension on _StringsId {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'Cari di pustaka';
       default:
         return null;
     }
@@ -395298,7 +395306,7 @@ extension on _StringsIt {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Attiva/disattiva schermo intero';
       case 'shortcut_action_home_focus_search':
-        return 'Vai alla ricerca';
+        return 'Vai alla ricerca nel dizionario';
       case 'shortcut_action_home_tab_books':
         return 'Scheda Libri';
       case 'shortcut_action_home_tab_dict':
@@ -404734,7 +404742,7 @@ extension on _StringsIt {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'Cerca nella libreria';
       default:
         return null;
     }
@@ -410686,7 +410694,7 @@ extension on _StringsJa {
       case 'shortcut_action_global_toggle_fullscreen':
         return '全画面表示の切り替え';
       case 'shortcut_action_home_focus_search':
-        return '検索にフォーカス';
+        return '辞書検索へ移動';
       case 'shortcut_action_home_tab_books':
         return '書籍タブ';
       case 'shortcut_action_home_tab_dict':
@@ -420043,7 +420051,7 @@ extension on _StringsJa {
       case 'video_setting_pause_ocr_scope_off':
         return 'オフ';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'ライブラリ内を検索';
       default:
         return null;
     }
@@ -425996,7 +426004,7 @@ extension on _StringsKo {
       case 'shortcut_action_global_toggle_fullscreen':
         return '전체 화면 전환';
       case 'shortcut_action_home_focus_search':
-        return '검색 포커스';
+        return '사전 검색으로 이동';
       case 'shortcut_action_home_tab_books':
         return '책 탭';
       case 'shortcut_action_home_tab_dict':
@@ -435359,7 +435367,7 @@ extension on _StringsKo {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return '라이브러리에서 검색';
       default:
         return null;
     }
@@ -441359,7 +441367,7 @@ extension on _StringsNl {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Volledig scherm wisselen';
       case 'shortcut_action_home_focus_search':
-        return 'Zoeken focussen';
+        return 'Naar woordenboek zoeken springen';
       case 'shortcut_action_home_tab_books':
         return 'Tabblad Boeken';
       case 'shortcut_action_home_tab_dict':
@@ -450789,7 +450797,7 @@ extension on _StringsNl {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'Zoeken in bibliotheek';
       default:
         return null;
     }
@@ -456787,7 +456795,7 @@ extension on _StringsPtBr {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Alternar tela cheia';
       case 'shortcut_action_home_focus_search':
-        return 'Focar na busca';
+        return 'Ir para a busca no dicionário';
       case 'shortcut_action_home_tab_books':
         return 'Aba Livros';
       case 'shortcut_action_home_tab_dict':
@@ -466211,7 +466219,7 @@ extension on _StringsPtBr {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'Buscar na biblioteca';
       default:
         return null;
     }
@@ -472217,7 +472225,7 @@ extension on _StringsRu {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Переключить полноэкранный режим';
       case 'shortcut_action_home_focus_search':
-        return 'Фокус на поиск';
+        return 'Перейти к поиску по словарю';
       case 'shortcut_action_home_tab_books':
         return 'Вкладка «Книги»';
       case 'shortcut_action_home_tab_dict':
@@ -481638,7 +481646,7 @@ extension on _StringsRu {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'Поиск в библиотеке';
       default:
         return null;
     }
@@ -487615,7 +487623,7 @@ extension on _StringsTh {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'สลับเต็มหน้าจอ';
       case 'shortcut_action_home_focus_search':
-        return 'โฟกัสช่องค้นหา';
+        return 'ไปที่การค้นหาพจนานุกรม';
       case 'shortcut_action_home_tab_books':
         return 'แท็บหนังสือ';
       case 'shortcut_action_home_tab_dict':
@@ -497021,7 +497029,7 @@ extension on _StringsTh {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'ค้นหาในคลัง';
       default:
         return null;
     }
@@ -503012,7 +503020,7 @@ extension on _StringsTr {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Tam ekranı aç/kapat';
       case 'shortcut_action_home_focus_search':
-        return 'Aramaya Odaklan';
+        return 'Sözlük aramasına git';
       case 'shortcut_action_home_tab_books':
         return 'Kitaplar Sekmesi';
       case 'shortcut_action_home_tab_dict':
@@ -512435,7 +512443,7 @@ extension on _StringsTr {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'Kütüphanede ara';
       default:
         return null;
     }
@@ -518423,7 +518431,7 @@ extension on _StringsVi {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Bật/tắt toàn màn hình';
       case 'shortcut_action_home_focus_search':
-        return 'Tập trung tìm kiếm';
+        return 'Chuyển đến tìm kiếm từ điển';
       case 'shortcut_action_home_tab_books':
         return 'Tab Sách';
       case 'shortcut_action_home_tab_dict':
@@ -527832,7 +527840,7 @@ extension on _StringsVi {
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return 'Tìm trong thư viện';
       default:
         return null;
     }
@@ -533771,7 +533779,7 @@ extension on _StringsZhCn {
       case 'shortcut_action_global_toggle_fullscreen':
         return '全屏切换';
       case 'shortcut_action_home_focus_search':
-        return '聚焦搜索';
+        return '跳到查词搜索';
       case 'shortcut_action_home_tab_books':
         return '书架标签';
       case 'shortcut_action_home_tab_dict':
@@ -543060,7 +543068,7 @@ extension on _StringsZhCn {
       case 'video_setting_pause_ocr_scope_off':
         return '关闭';
       case 'shortcut_action_library_search':
-        return '在库页中搜索';
+        return '在书架 / 媒体库中搜索';
       default:
         return null;
     }
@@ -548999,7 +549007,7 @@ extension on _StringsZhHk {
       case 'shortcut_action_global_toggle_fullscreen':
         return '全屏切換';
       case 'shortcut_action_home_focus_search':
-        return '聚焦搜尋';
+        return '跳到查詞搜尋';
       case 'shortcut_action_home_tab_books':
         return '書架分頁';
       case 'shortcut_action_home_tab_dict':
@@ -558314,7 +558322,7 @@ extension on _StringsZhHk {
       case 'video_setting_pause_ocr_scope_off':
         return '關閉';
       case 'shortcut_action_library_search':
-        return 'Search in library';
+        return '在書架 / 媒體庫中搜尋';
       default:
         return null;
     }
