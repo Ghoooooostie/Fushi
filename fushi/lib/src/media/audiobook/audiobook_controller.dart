@@ -117,6 +117,11 @@ class AudiobookPlayerController extends ChangeNotifier {
   /// （[_fileCueSpan]），不能对整表二分。
   List<AudioCue> _chapterCues = [];
 
+  /// 按 audioFileIndex 缓存「该文件的 cue 段」。TTS 朗读的 cue 表有几十万条，
+  /// 每次 tick 都整表 `where` 会把主线程拖死（真机 ANR 实锤）；段内容只在
+  /// [setChapterCues] / [refreshCueTimings] 时可能变，那时整体失效。
+  final Map<int, List<AudioCue>> _fileCueCache = <int, List<AudioCue>>{};
+
   /// 与 [_chapterCues] 同序的播放顺序视图（章尾未匹配 cue 的跨章判据
   /// [unmatchedCueCrossChapterTargetForTesting] 要的是播放邻居）。
   List<AudioCue> _playbackOrderedCues = const <AudioCue>[];
@@ -215,6 +220,13 @@ class AudiobookPlayerController extends ChangeNotifier {
 
   @visibleForTesting
   int fileIndexAtForTesting(int? playerIndex) => _fileIndexAt(playerIndex);
+
+  @visibleForTesting
+  List<AudioCue> fileCuesForAudioFileForTesting(int audioFileIndex) =>
+      _chapterCuesForAudioFile(audioFileIndex);
+
+  @visibleForTesting
+  int chapterCueIndexOfForTesting(AudioCue cue) => _chapterCueIndexOf(cue);
 
   @visibleForTesting
   Future<void> maybeRollWindowForTesting(int fileIndex) =>
@@ -324,10 +336,17 @@ class AudiobookPlayerController extends ChangeNotifier {
     final int audioFileIndex = _fileIndexAt(_player.currentIndex);
     final int effectiveMs =
         (_player.position.inMilliseconds - delayMs.value).clamp(0, 1 << 30);
+    // 只扫当前文件那一段：TTS 朗读的 allBookCues 是「全书每句一条」，整表扫会在
+    // 几十万条上每个 tick 跑一遍（真机 ANR 的主线程 busy-loop）。表按
+    // (audioFileIndex, startMs) 排好，一段是连续的，用二分取 span。
+    final ({int start, int end}) span = _fileCueSpan(
+      _allBookCues,
+      audioFileIndex,
+    );
     AudioCue? best;
     int bestStart = -1;
-    for (final AudioCue cue in _allBookCues) {
-      if (cue.audioFileIndex != audioFileIndex) continue;
+    for (int i = span.start; i < span.end; i++) {
+      final AudioCue cue = _allBookCues[i];
       final int start = cue.startMs;
       final int end = cue.endMs;
       if (start <= effectiveMs && end > effectiveMs) return cue;
@@ -1237,6 +1256,7 @@ class AudiobookPlayerController extends ChangeNotifier {
 
     _chapterCues = List<AudioCue>.from(cues)..sort(playbackOrder);
     _playbackOrderedCues = List<AudioCue>.from(cues)..sort(playbackOrder);
+    _fileCueCache.clear();
     // 跨章守卫期间只替换 cue 列表，不清 _currentCue 也不重算——
     // 否则 _updateCurrentCue 被 guard 挡住，_currentCue 卡 null，
     // 守卫放下后第一次 tick 会匹配到 cue[0] 导致进度清零。
@@ -1282,6 +1302,8 @@ class AudiobookPlayerController extends ChangeNotifier {
   /// cue 的 [AudioCue.endMs] 被就地更新后（TTS 朗读：一句合成完才知道真实时长）
   /// 重算各文件时长与全书时间轴。cue 对象身份不变，阅读器 / 歌词持有的引用照常有效。
   void refreshCueTimings() {
+    // endMs 变了：文件段的顺序没变，但缓存里装的是同一批对象，清掉最稳。
+    _fileCueCache.clear();
     _rebuildFileDurations();
     notifyListeners();
   }
@@ -1853,7 +1875,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     // 用 index 而非 textFragmentId 比较，防止重复短句 id 相同时短路。
     if (idx < 0) return;
     final AudioCue cue = fileCues[idx];
-    final int chapterIdx = _chapterCues.indexOf(cue);
+    final int chapterIdx = _chapterCueIndexOf(cue);
     if (chapterIdx == _currentCueIndex) {
       // cue 未变但 reader 章可能仍不同步（BUG-069）：skipToCue 跨章时会预置
       // _currentCueIndex 到目标 cue，但其 _maybeEmitCrossChapter 可能因
@@ -2215,9 +2237,32 @@ class AudiobookPlayerController extends ChangeNotifier {
   }
 
   List<AudioCue> _chapterCuesForAudioFile(int audioFileIndex) {
-    return _chapterCues
-        .where((AudioCue cue) => cue.audioFileIndex == audioFileIndex)
-        .toList();
+    final List<AudioCue>? cached = _fileCueCache[audioFileIndex];
+    if (cached != null) return cached;
+    // 表按 (audioFileIndex, startMs) 排好（见 [setChapterCues]），所以一个文件的
+    // cue 是连续一段，用二分取 span，别整表 where。
+    final ({int start, int end}) span = _fileCueSpan(_chapterCues, audioFileIndex);
+    final List<AudioCue> out = List<AudioCue>.of(
+      _chapterCues.getRange(span.start, span.end),
+      growable: false,
+    );
+    _fileCueCache[audioFileIndex] = out;
+    return out;
+  }
+
+  /// [AudioCue] 在 [_chapterCues] 里的下标。TTS 朗读的 cue 表是「全书每句一条」
+  /// （见 reader_fushi/audiobook.part.dart 的 setChapterCues），几十万条；逐 tick
+  /// 调 [List.indexOf] 是 O(N) 全表扫，直接把主线程拖死（真机 ANR：main 线程
+  /// state=R、104% user CPU、栈顶 [anon:dart-code]）。改成先按文件定位到 span，
+  /// 只在文件内那一小段里找。
+  int _chapterCueIndexOf(AudioCue cue) {
+    final ({int start, int end}) span = _fileCueSpan(
+      _chapterCues,
+      cue.audioFileIndex,
+    );
+    if (span.start == span.end) return -1;
+    final int at = _chapterCuesForAudioFile(cue.audioFileIndex).indexOf(cue);
+    return at < 0 ? -1 : span.start + at;
   }
 
   static int? _positionMsForCue({
