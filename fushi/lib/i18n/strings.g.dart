@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126106 (7418 per locale)
+/// Strings: 126089 (7417 per locale)
 ///
-/// Built on 2026-10-13 at 12:06 UTC
+/// Built on 2026-10-14 at 08:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9583,7 +9583,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get import_drop_zone_hint =>
       'Choose files or a folder. You can also drag files straight onto the library page.';
   String get import_supported_formats => 'Supported formats';
-  String get import_methods_title => 'Ways to import';
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   String get online_sources_pinned_header => 'Pinned';
@@ -26743,8 +26742,6 @@ class _StringsAr extends _StringsEn {
       'Choose files or a folder. You can also drag files straight onto the library page.';
   @override
   String get import_supported_formats => 'Supported formats';
-  @override
-  String get import_methods_title => 'Ways to import';
   @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
@@ -45056,8 +45053,6 @@ class _StringsDe extends _StringsEn {
       'Choose files or a folder. You can also drag files straight onto the library page.';
   @override
   String get import_supported_formats => 'Supported formats';
-  @override
-  String get import_methods_title => 'Ways to import';
   @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
@@ -63430,8 +63425,6 @@ class _StringsEs extends _StringsEn {
       'Choose files or a folder. You can also drag files straight onto the library page.';
   @override
   String get import_supported_formats => 'Supported formats';
-  @override
-  String get import_methods_title => 'Ways to import';
   @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
@@ -81884,8 +81877,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -99992,8 +99983,6 @@ class _StringsId extends _StringsEn {
       'Choose files or a folder. You can also drag files straight onto the library page.';
   @override
   String get import_supported_formats => 'Supported formats';
-  @override
-  String get import_methods_title => 'Ways to import';
   @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
@@ -118265,8 +118254,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -135563,8 +135550,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -152848,8 +152833,6 @@ class _StringsKo extends _StringsEn {
       'Choose files or a folder. You can also drag files straight onto the library page.';
   @override
   String get import_supported_formats => 'Supported formats';
-  @override
-  String get import_methods_title => 'Ways to import';
   @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
@@ -171068,8 +171051,6 @@ class _StringsNl extends _StringsEn {
       'Choose files or a folder. You can also drag files straight onto the library page.';
   @override
   String get import_supported_formats => 'Supported formats';
-  @override
-  String get import_methods_title => 'Ways to import';
   @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
@@ -189358,8 +189339,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -207595,8 +207574,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -225508,8 +225485,6 @@ class _StringsTh extends _StringsEn {
       'Choose files or a folder. You can also drag files straight onto the library page.';
   @override
   String get import_supported_formats => 'Supported formats';
-  @override
-  String get import_methods_title => 'Ways to import';
   @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
@@ -243625,8 +243600,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -261670,8 +261643,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -278332,8 +278303,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get import_supported_formats => '支持格式';
   @override
-  String get import_methods_title => '导入方式';
-  @override
   String get media_source_list_empty => '还没有常驻来源。添加文件夹或网络共享后会自动扫描。';
   @override
   String get online_sources_pinned_header => '已置顶';
@@ -294905,8 +294874,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -310548,8 +310515,6 @@ extension on _StringsEn {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -325925,8 +325890,6 @@ extension on _StringsAr {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -341378,8 +341341,6 @@ extension on _StringsDe {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -356813,8 +356774,6 @@ extension on _StringsEs {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -372266,8 +372225,6 @@ extension on _StringsFr {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -387663,8 +387620,6 @@ extension on _StringsId {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -403096,8 +403051,6 @@ extension on _StringsIt {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -418405,8 +418358,6 @@ extension on _StringsJa {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -433717,8 +433668,6 @@ extension on _StringsKo {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -449145,8 +449094,6 @@ extension on _StringsNl {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -464565,8 +464512,6 @@ extension on _StringsPtBr {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -479990,8 +479935,6 @@ extension on _StringsRu {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -495371,8 +495314,6 @@ extension on _StringsTh {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -510783,8 +510724,6 @@ extension on _StringsTr {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -526178,8 +526117,6 @@ extension on _StringsVi {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -541423,8 +541360,6 @@ extension on _StringsZhCn {
         return '选择文件或文件夹；也可以把文件直接拖进库页。';
       case 'import_supported_formats':
         return '支持格式';
-      case 'import_methods_title':
-        return '导入方式';
       case 'media_source_list_empty':
         return '还没有常驻来源。添加文件夹或网络共享后会自动扫描。';
       case 'online_sources_pinned_header':
@@ -556659,8 +556594,6 @@ extension on _StringsZhHk {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
