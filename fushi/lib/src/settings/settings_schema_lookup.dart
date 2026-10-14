@@ -24,20 +24,14 @@ import 'package:fushi/src/settings/port_kill_confirm.dart';
 import 'package:fushi/src/settings/settings_destination.dart';
 import 'package:fushi_engine/sync/deletion_propagation.dart';
 import 'package:fushi/src/sync/desktop_lookup_service.dart';
+import 'package:fushi/src/sync/fushi_api_port_conflict_notice.dart'
+    show fushiApiPortInUseMessage;
 import 'package:fushi_engine/sync/fushi_sync_server.dart';
 import 'package:fushi/src/sync/port_process_terminator.dart';
 import 'package:fushi/src/sync/texthooker_ws_client_manager.dart';
-import 'package:fushi/src/sync/yomitan_api_server.dart'
-    show kYomitanApiDefaultPort;
 import 'package:fushi/src/utils/fushi_icons.dart';
 import 'package:fushi/utils.dart';
 import 'package:path/path.dart' as p;
-
-String _yomitanApiPortInUseMessage(int port) {
-  return port == kYomitanApiDefaultPort
-      ? t.browser_extension_yomitan_port_conflict(port: port)
-      : t.sync_server_port_in_use(port: port);
-}
 
 void _showSettingsSnackBar(SettingsContext settingsContext, String message) {
   final BuildContext ctx = settingsContext.context;
@@ -48,13 +42,13 @@ void _showSettingsSnackBar(SettingsContext settingsContext, String message) {
 /// 端口冲突提示：说明占用者（默认端口时通常是浏览器拉起的 yomitan-api Python
 /// 进程），并在支持的桌面平台附「结束进程并重试」action——直接结束占用进程后
 /// 自动重试开启，免去用户去 Yomitan 高级设置绕一圈。
-void _showYomitanPortConflictSnackBar(SettingsContext settingsContext) {
+void _showFushiApiPortConflictSnackBar(SettingsContext settingsContext) {
   final BuildContext ctx = settingsContext.context;
   if (!ctx.mounted) return;
-  final int port = settingsContext.appModel.yomitanApiPort;
+  final int port = settingsContext.appModel.fushiApiPort;
   ScaffoldMessenger.of(ctx).showSnackBar(
     FushiSnackBar(
-      content: Text(_yomitanApiPortInUseMessage(port)),
+      content: Text(fushiApiPortInUseMessage(port)),
       duration: const Duration(seconds: 10),
       action: PortProcessTerminator.isSupported
           ? SnackBarAction(
@@ -92,7 +86,7 @@ Future<void> _terminatePortOwnerAndRetry(
       return;
     case PortKillDecisionKind.listenerChanged:
       // 占用者换人：重走冲突提示，让用户对新占用者重新发起并确认。
-      _showYomitanPortConflictSnackBar(settingsContext);
+      _showFushiApiPortConflictSnackBar(settingsContext);
       return;
     case PortKillDecisionKind.confirmed:
       final PortListenerInfo listener = decision.listener!;
@@ -109,26 +103,26 @@ Future<void> _terminatePortOwnerAndRetry(
   }
   // 占用进程已结束（或本就已退出）：重试开启。进程退出后 OS 释放端口可能有极短
   // 延迟，端口仍占时再等一拍重试一次，仍失败按端口冲突报出。
-  await appModel.setYomitanApiServerEnabled(true);
+  await appModel.setFushiApiServerEnabled(true);
   for (int attempt = 0;; attempt++) {
     try {
-      await appModel.startYomitanApiServer();
+      await appModel.startFushiApiServer();
       break;
     } on SyncServerPortInUseException {
       if (attempt >= 1) {
         _showSettingsSnackBar(
           settingsContext,
-          _yomitanApiPortInUseMessage(port),
+          fushiApiPortInUseMessage(port),
         );
         settingsContext.refresh();
         return;
       }
       await Future<void>.delayed(const Duration(milliseconds: 500));
-      // startYomitanApiServer 抛出前把开关复位成 false，重试前需重新置位。
-      await appModel.setYomitanApiServerEnabled(true);
+      // startFushiApiServer 抛出前把开关复位成 false，重试前需重新置位。
+      await appModel.setFushiApiServerEnabled(true);
     }
   }
-  _showSettingsSnackBar(settingsContext, t.yomitan_api_server_started);
+  _showSettingsSnackBar(settingsContext, t.fushi_api_server_started);
   settingsContext.refresh();
 }
 
@@ -1095,6 +1089,24 @@ SettingsDestination buildLookupDestination() {
             },
             defaultValue: true,
           ),
+          // 用户建议 q16Apecgbg（2026-10-13）：制卡后查词弹窗直接消失，不再挡住正文。
+          // 默认关 = 制卡后弹窗照旧留着（既有行为）。
+          SettingsSwitchItem(
+            id: 'reading_controls.close_popup_after_mining',
+            title: t.lookup_popup_close_after_mining,
+            subtitle: t.lookup_popup_close_after_mining_hint,
+            icon: Icons.playlist_add_check_outlined,
+            reader: const ReaderPlacement(group: ReaderGroup.lookup, order: 25),
+            value: (SettingsContext settingsContext) =>
+                settingsContext.readerSource.closePopupAfterMining,
+            onChanged: (SettingsContext settingsContext, bool value) async {
+              await settingsContext.readerSource.setClosePopupAfterMining(
+                value,
+              );
+              notifyReaderSettingsChanged(settingsContext);
+            },
+            defaultValue: false,
+          ),
           // 防截屏（用户诉求）：桌面查词浮窗经 native
           // SetWindowDisplayAffinity(WDA_EXCLUDEFROMCAPTURE) 从截图/录屏/串流中
           // 排除。默认关（用户要求，2026-07）。仅 Windows——display affinity 是 Win32 能力。
@@ -1147,23 +1159,23 @@ SettingsDestination buildLookupDestination() {
           // 互联对端的词典，逻辑上属互联，故互联分类也提供入口）。
           buildRemoteDictionaryLookupItem(),
           SettingsSwitchItem(
-            id: 'lookup.yomitan_api_server',
-            title: t.yomitan_api_server,
-            subtitle: t.yomitan_api_server_hint,
+            id: 'lookup.fushi_api_server',
+            title: t.fushi_api_server,
+            subtitle: t.fushi_api_server_hint,
             icon: Icons.api_outlined,
             value: (SettingsContext settingsContext) =>
-                settingsContext.appModel.yomitanApiServerEnabled,
+                settingsContext.appModel.fushiApiServerEnabled,
             onChanged: (SettingsContext settingsContext, bool value) async {
-              await settingsContext.appModel.setYomitanApiServerEnabled(value);
+              await settingsContext.appModel.setFushiApiServerEnabled(value);
               if (value) {
                 try {
-                  await settingsContext.appModel.startYomitanApiServer();
+                  await settingsContext.appModel.startFushiApiServer();
                 } on SyncServerPortInUseException {
-                  // startYomitanApiServer 已在抛出前把开关复位为 false。
-                  _showYomitanPortConflictSnackBar(settingsContext);
+                  // startFushiApiServer 已在抛出前把开关复位为 false。
+                  _showFushiApiPortConflictSnackBar(settingsContext);
                 }
               } else {
-                await settingsContext.appModel.stopYomitanApiServer();
+                await settingsContext.appModel.stopFushiApiServer();
               }
               settingsContext.refresh();
             },
@@ -1171,16 +1183,16 @@ SettingsDestination buildLookupDestination() {
           // 一等文本项（secret）：行尾自动获得眼睛显隐切换。写穿后重启 Yomitan
           // API 服务（若已开启）。
           SettingsTextItem(
-            id: 'lookup.yomitan_api_key',
-            visible: (SettingsContext c) => c.appModel.yomitanApiServerEnabled,
-            title: t.yomitan_api_key,
+            id: 'lookup.fushi_api_key',
+            visible: (SettingsContext c) => c.appModel.fushiApiServerEnabled,
+            title: t.fushi_api_key,
             icon: Icons.key_outlined,
             secret: true,
             value: (SettingsContext settingsContext) =>
-                settingsContext.appModel.yomitanApiKey,
+                settingsContext.appModel.fushiApiKey,
             onChanged: (SettingsContext settingsContext, String value) async {
-              await settingsContext.appModel.setYomitanApiKey(value);
-              await _restartYomitanApiServerIfEnabled(settingsContext);
+              await settingsContext.appModel.setFushiApiKey(value);
+              await _restartFushiApiServerIfEnabled(settingsContext);
             },
           ),
           SettingsSwitchItem(
@@ -1353,14 +1365,14 @@ SettingsItem buildRemoteDictionaryLookupItem() {
   );
 }
 
-Future<void> _restartYomitanApiServerIfEnabled(
+Future<void> _restartFushiApiServerIfEnabled(
   SettingsContext settingsContext,
 ) async {
-  if (!settingsContext.appModel.yomitanApiServerEnabled) return;
-  await settingsContext.appModel.stopYomitanApiServer();
+  if (!settingsContext.appModel.fushiApiServerEnabled) return;
+  await settingsContext.appModel.stopFushiApiServer();
   try {
-    await settingsContext.appModel.startYomitanApiServer();
+    await settingsContext.appModel.startFushiApiServer();
   } on SyncServerPortInUseException {
-    _showYomitanPortConflictSnackBar(settingsContext);
+    _showFushiApiPortConflictSnackBar(settingsContext);
   }
 }

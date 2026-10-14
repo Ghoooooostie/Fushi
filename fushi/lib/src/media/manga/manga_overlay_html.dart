@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import 'dart:ui' show Rect;
 
 import 'package:characters/characters.dart';
 import 'package:flutter/foundation.dart' show visibleForTesting;
@@ -99,6 +100,50 @@ List<String> mangaBlockSentenceTexts(MokuroImage page) {
   return _mangaBlockSentenceAssignments(page)
       .map((({int group, String sentence}) assignment) => assignment.sentence)
       .toList(growable: false);
+}
+
+/// 句子分组 [group]（即 overlay 写进 `data-manga-sentence-group` 的那个组号）里全部
+/// OCR 块的下标。组号与 [mangaOcrBoxesHtml] 同一次分组算出，所以 JS 回传的组号能
+/// 原样映射回块。
+List<int> mangaSentenceGroupBlockIndices(MokuroImage page, int group) {
+  final List<({int group, String sentence})> assignments =
+      _mangaBlockSentenceAssignments(page);
+  return <int>[
+    for (int i = 0; i < assignments.length; i++)
+      if (assignments[i].group == group) i,
+  ];
+}
+
+/// 这句话（句子分组 [group]）的 OCR 文本块并集，按 `page.size` 归一化到 0..1。
+///
+/// 制卡裁切要的是**相对原页图**的坐标；JS 回传的选区矩形是 WebView 视口 CSS 像素，
+/// 宽页旋转 / 拆页 / 裁边都会让它和原页对不上，所以真值只能在 Dart 侧从 OCR 块算。
+/// 组号不存在 / 页尺寸非法时返回 null。
+Rect? mangaSentenceGroupNormalizedRect(MokuroImage page, int group) {
+  final double pageWidth = page.size.width;
+  final double pageHeight = page.size.height;
+  if (pageWidth <= 0 || pageHeight <= 0) return null;
+  final List<int> indices = mangaSentenceGroupBlockIndices(page, group);
+  if (indices.isEmpty) return null;
+  double left = double.infinity;
+  double top = double.infinity;
+  double right = double.negativeInfinity;
+  double bottom = double.negativeInfinity;
+  for (final int index in indices) {
+    final MokuroRect r = page.blocks[index].rectangle;
+    left = math.min(left, r.left);
+    top = math.min(top, r.top);
+    right = math.max(right, r.right);
+    bottom = math.max(bottom, r.bottom);
+  }
+  double unit(double v) => v < 0 ? 0 : (v > 1 ? 1 : v);
+  final Rect rect = Rect.fromLTRB(
+    unit(left / pageWidth),
+    unit(top / pageHeight),
+    unit(right / pageWidth),
+    unit(bottom / pageHeight),
+  );
+  return rect.width > 0 && rect.height > 0 ? rect : null;
 }
 
 List<({int group, String sentence})> _mangaBlockSentenceAssignments(
@@ -343,15 +388,60 @@ bool _mangaEndsSentence(String text) =>
 /// available and the block rectangle otherwise. This mirrors Niratan's native
 /// reader: hit testing is based on explicit character geometry instead of
 /// asking browser typography to approximate where transparent text landed.
+///
+/// Supplied regions are used only when they match the block text as a whole:
+/// every region lies on grapheme boundaries inside the sentence and every
+/// visible grapheme is covered ([mangaTextRegionsMatchSentence]). Otherwise —
+/// for example a manga.json whose text was rewritten while the regions still
+/// carry the old offsets — the whole block falls back to line geometry.
+/// Dropping the mismatched regions one by one would leave characters with no
+/// hit target (or, when all of them miss, a block that cannot be clicked).
 List<MangaOcrTextRegion> mangaEffectiveTextRegions(MokuroBlock block) {
   final List<MangaOcrTextRegion>? supplied = block.regions;
-  if (supplied != null && supplied.isNotEmpty) {
+  if (supplied != null &&
+      supplied.isNotEmpty &&
+      mangaTextRegionsMatchSentence(supplied, block.lines.join())) {
     return supplied;
   }
+  return _mangaGeometryTextRegions(block);
+}
+
+/// Whether [regions] can stand for [sentence] character by character.
+///
+/// Each region must be a non-empty UTF-16 range on grapheme boundaries inside
+/// the sentence, and together they must cover every non-whitespace grapheme.
+/// A single miss makes the whole set unusable: the caller then re-derives
+/// regions from line geometry instead of keeping a partial set.
+bool mangaTextRegionsMatchSentence(
+  List<MangaOcrTextRegion> regions,
+  String sentence,
+) {
+  final Set<int> boundaries = <int>{0};
+  final List<({int start, int end})> visible = <({int start, int end})>[];
+  int offset = 0;
+  for (final String grapheme in sentence.characters) {
+    final int end = offset + grapheme.length;
+    if (grapheme.trim().isNotEmpty) visible.add((start: offset, end: end));
+    boundaries.add(end);
+    offset = end;
+  }
+  final List<bool> covered = List<bool>.filled(sentence.length, false);
+  for (final MangaOcrTextRegion region in regions) {
+    final int start = region.utf16Start;
+    final int end = region.utf16End;
+    if (start < 0 || end <= start || end > sentence.length) return false;
+    if (!boundaries.contains(start) || !boundaries.contains(end)) return false;
+    covered.fillRange(start, end, true);
+  }
+  return visible.every((({int start, int end}) g) => covered[g.start]);
+}
+
+/// Character regions derived from `lines_coords` (or the block rectangle).
+List<MangaOcrTextRegion> _mangaGeometryTextRegions(MokuroBlock block) {
   if (block.lines.isEmpty || block.rectangle.isEmpty) {
     return const <MangaOcrTextRegion>[];
   }
-  final List<MokuroRect> lineRects = _mangaLineRects(block);
+  final List<MokuroOrientedRect> lineRects = _mangaLineRects(block);
   final List<MangaOcrTextRegion> result = <MangaOcrTextRegion>[];
   int utf16Base = 0;
   for (int lineIndex = 0; lineIndex < block.lines.length; lineIndex++) {
@@ -367,9 +457,12 @@ List<MangaOcrTextRegion> mangaEffectiveTextRegions(MokuroBlock block) {
       offset = end;
     }
     if (characters.isNotEmpty) {
-      final MokuroRect lineRect = lineRects[lineIndex];
+      final MokuroOrientedRect line = lineRects[lineIndex];
+      final MokuroRect lineRect = line.unrotated;
       for (int index = 0; index < characters.length; index++) {
-        final MokuroRect characterRect = block.isVertical
+        // 先在摆正的行里均分字格，再把字格中心转回行的倾角：斜行上的字格
+        // 沿着斜线排，而不是在外接框里横平竖直地铺。
+        final MokuroRect upright = block.isVertical
             ? MokuroRect.fromLTWH(
                 lineRect.left,
                 lineRect.top + index * lineRect.height / characters.length,
@@ -382,11 +475,27 @@ List<MangaOcrTextRegion> mangaEffectiveTextRegions(MokuroBlock block) {
                 lineRect.width / characters.length,
                 lineRect.height,
               );
+        final MokuroRect characterRect;
+        if (line.rotation == 0) {
+          characterRect = upright;
+        } else {
+          final MokuroPoint center = line.toPage(
+            upright.center.dx - line.center.dx,
+            upright.center.dy - line.center.dy,
+          );
+          characterRect = MokuroRect.fromLTWH(
+            center.dx - upright.width / 2,
+            center.dy - upright.height / 2,
+            upright.width,
+            upright.height,
+          );
+        }
         result.add(
           MangaOcrTextRegion(
             rectangle: characterRect,
             utf16Start: characters[index].start,
             utf16End: characters[index].end,
+            rotation: line.rotation,
           ),
         );
       }
@@ -396,10 +505,12 @@ List<MangaOcrTextRegion> mangaEffectiveTextRegions(MokuroBlock block) {
   return result;
 }
 
-List<MokuroRect> _mangaLineRects(MokuroBlock block) {
+/// 每行的几何：`lines_coords` 齐全时逐行取，四点矩形保留旋转
+/// （[mokuroOrientedRectFromQuad]），其它多边形取外接框；否则按块均分。
+List<MokuroOrientedRect> _mangaLineRects(MokuroBlock block) {
   final List<List<List<double>>>? coordinates = block.linesCoords;
   if (coordinates != null && coordinates.length == block.lines.length) {
-    final List<MokuroRect> parsed = <MokuroRect>[];
+    final List<MokuroOrientedRect> parsed = <MokuroOrientedRect>[];
     for (final List<List<double>> polygon in coordinates) {
       if (polygon.isEmpty ||
           polygon.any((List<double> point) => point.length < 2)) {
@@ -420,7 +531,12 @@ List<MokuroRect> _mangaLineRects(MokuroBlock block) {
         parsed.clear();
         break;
       }
-      parsed.add(MokuroRect.fromLTRB(left, top, right, bottom));
+      final MokuroOrientedRect? oriented = mokuroOrientedRectFromQuad(polygon);
+      parsed.add(
+        oriented != null && oriented.rotation != 0
+            ? oriented
+            : _uprightLine(MokuroRect.fromLTRB(left, top, right, bottom)),
+      );
     }
     if (parsed.length == block.lines.length) {
       return parsed;
@@ -431,27 +547,37 @@ List<MokuroRect> _mangaLineRects(MokuroBlock block) {
   final int count = block.lines.length;
   if (block.isVertical) {
     final double width = rect.width / count;
-    return <MokuroRect>[
+    return <MokuroOrientedRect>[
       for (int index = 0; index < count; index++)
-        MokuroRect.fromLTWH(
-          rect.right - (index + 1) * width,
-          rect.top,
-          width,
-          rect.height,
+        _uprightLine(
+          MokuroRect.fromLTWH(
+            rect.right - (index + 1) * width,
+            rect.top,
+            width,
+            rect.height,
+          ),
         ),
     ];
   }
   final double height = rect.height / count;
-  return <MokuroRect>[
+  return <MokuroOrientedRect>[
     for (int index = 0; index < count; index++)
-      MokuroRect.fromLTWH(
-        rect.left,
-        rect.top + index * height,
-        rect.width,
-        height,
+      _uprightLine(
+        MokuroRect.fromLTWH(
+          rect.left,
+          rect.top + index * height,
+          rect.width,
+          height,
+        ),
       ),
   ];
 }
+
+MokuroOrientedRect _uprightLine(MokuroRect rect) => MokuroOrientedRect(
+  center: rect.center,
+  width: rect.width,
+  height: rect.height,
+);
 
 String _mangaCharacterRegionsHtml({
   required MokuroBlock block,
@@ -462,18 +588,20 @@ String _mangaCharacterRegionsHtml({
   final double parentWidth = parent.width <= 0 ? 1 : parent.width;
   final double parentHeight = parent.height <= 0 ? 1 : parent.height;
   final StringBuffer buffer = StringBuffer();
+  // [regions] comes from [mangaEffectiveTextRegions]: every range is already
+  // known to lie inside the sentence, so nothing is filtered here.
   for (final MangaOcrTextRegion region in regions) {
-    if (region.utf16Start < 0 ||
-        region.utf16End <= region.utf16Start ||
-        region.utf16End > sentence.length) {
-      continue;
-    }
     final MokuroRect r = region.rectangle;
     final double leftPct = ((r.left - parent.left) / parentWidth) * 100;
     final double topPct = ((r.top - parent.top) / parentHeight) * 100;
     final double widthPct = (r.width / parentWidth) * 100;
     final double heightPct = (r.height / parentHeight) * 100;
     final String text = sentence.substring(region.utf16Start, region.utf16End);
+    // 斜行字格绕自身中心旋转（transform-origin 默认即中心）；elementsFromPoint
+    // 按变换后的形状命中，所以点击判定跟着字格一起转。
+    final String rotate = region.rotation == 0
+        ? ''
+        : 'transform:rotate(${_num(region.rotation * 180 / math.pi)}deg);';
     buffer.write(
       '<span class="ocr-char" '
       'data-utf16-start="${region.utf16Start}" '
@@ -481,7 +609,8 @@ String _mangaCharacterRegionsHtml({
       'style="left:${_pct(leftPct)};'
       'top:${_pct(topPct)};'
       'width:${_pct(widthPct)};'
-      'height:${_pct(heightPct)};">'
+      'height:${_pct(heightPct)};'
+      '$rotate">'
       '${_escapeHtml(text)}</span>',
     );
   }

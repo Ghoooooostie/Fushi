@@ -1,7 +1,7 @@
 # Fushi 浏览器扩展（Fushi Reader Bridge）
 
 在任意网页上用 Fushi 的词典查词、采集/加载流媒体字幕、批量制卡。扩展本身没有词典和
-Anki 能力——一切经本机 Fushi 桌面 App 内置的 yomitan API server（默认
+Anki 能力——一切经本机 Fushi 桌面 App 内置的 Fushi API 服务器（兼容 yomitan-api，默认
 `http://127.0.0.1:19633`，HTTP + Basic auth）完成。**没有构建步骤**：纯 JS 散文件，MV3。
 
 ## 文件地图
@@ -88,7 +88,7 @@ app 升级
 查词 `/api/lookup/dictionary` · 单词音频 `/api/lookup/audio` · 制卡 `/api/mine` · 查重
 `/api/duplicate` · 收藏 `/api/extension/favorite` · 状态/心跳 `/api/extension/status` · 弹窗尺寸 `/api/extension/popup-size` ·
 YouTube 整集字幕 `/api/youtube/captions` · 外挂字幕解析 `/api/subtitle/parse`。
-服务端实现：`fushi/lib/src/sync/yomitan_api_server.dart`。
+服务端实现：`fushi/lib/src/sync/fushi_api_server.dart`。
 
 ## 侧边栏查词跨出面板
 

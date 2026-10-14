@@ -32,6 +32,8 @@ import 'package:fushi/src/media/manga/mihon/mihon_cover_cache.dart'
         kMangaCoverCacheMaxDays,
         kMangaCoverCacheMinDays;
 import 'package:fushi/src/media/manga/ocr/manga_ocr_engine.dart';
+import 'package:fushi/src/media/manga/ocr/manga_ocr_job_registry.dart'
+    show kMangaOcrMaxSelectableTasks;
 import 'package:fushi_engine/ocr/manga_ocr_local_model.dart'
     show kDefaultMangaOcrLocalModel, MangaOcrLocalModel;
 import 'package:fushi_engine/media/torrent/anime_download_config.dart';
@@ -388,6 +390,21 @@ class PreferencesRepository extends ChangeNotifier
 
   Future<void> setAudiobookBackgroundPlay({required bool value}) async {
     await setPref('audiobook_background_play', value);
+    notifyListeners();
+  }
+
+  /// 有声书 / 书籍导入对话框「引用原文件（不复制）」开关的上次选择（仅桌面有这个
+  /// 开关）。默认 false = 复制进应用目录（原有行为）。两个导入对话框共用这一个键：
+  /// 同一个用户对「音频要不要复制」的取向不随入口变（反馈 qLuedSmAnt：每次打开都
+  /// 回到关，像被回退了）。
+  bool get audiobookImportReferenceOriginal =>
+      getPref('audiobook_import_reference_original', defaultValue: false)
+          as bool;
+
+  Future<void> setAudiobookImportReferenceOriginal({
+    required bool value,
+  }) async {
+    await setPref('audiobook_import_reference_original', value);
     notifyListeners();
   }
 
@@ -808,26 +825,26 @@ class PreferencesRepository extends ChangeNotifier
 
   // ── yomitan-api server ───────────────────────────────────────────────
 
-  bool get yomitanApiServerEnabled =>
+  bool get fushiApiServerEnabled =>
       getPref('yomitan_api_server_enabled', defaultValue: false) as bool;
 
-  Future<void> setYomitanApiServerEnabled(bool value) async {
+  Future<void> setFushiApiServerEnabled(bool value) async {
     await setPref('yomitan_api_server_enabled', value);
     notifyListeners();
   }
 
-  int get yomitanApiPort =>
+  int get fushiApiPort =>
       getPref('yomitan_api_port', defaultValue: 19633) as int;
 
-  Future<void> setYomitanApiPort(int value) async {
+  Future<void> setFushiApiPort(int value) async {
     await setPref('yomitan_api_port', value);
     notifyListeners();
   }
 
-  String get yomitanApiKey =>
+  String get fushiApiKey =>
       getPref('yomitan_api_key', defaultValue: '') as String;
 
-  Future<void> setYomitanApiKey(String value) async {
+  Future<void> setFushiApiKey(String value) async {
     await setPref('yomitan_api_key', value);
     notifyListeners();
   }
@@ -987,10 +1004,14 @@ class PreferencesRepository extends ChangeNotifier
         final Set<String> kept = legacy == '-'
             ? <String>{}
             : legacy.split(',').map((String s) => s.trim()).toSet();
+        // 专属按钮按出厂，全局按钮完全按旧勾选：它是用户明确选过的，不能被
+        // 按场景收窄的出厂值（[FloatingBallGlobalAction.onByDefaultIn]）筛掉。
+        final Set<String> sceneDefaults = scope.defaultButtons.toSet();
         return <String>[
-          for (final String id in scope.defaultButtons)
-            if (FloatingBallGlobalAction.fromStorage(id) == null ||
-                kept.contains(id))
+          for (final String id in scope.catalog)
+            if (FloatingBallGlobalAction.fromStorage(id) == null
+                ? sceneDefaults.contains(id)
+                : kept.contains(id))
               id,
         ];
       }
@@ -1477,18 +1498,6 @@ class PreferencesRepository extends ChangeNotifier
 
   Future<void> setVideoShadersEnabled(String json) async {
     await setPref('video_shaders_enabled', json);
-    notifyListeners();
-  }
-
-  /// mpv Lua 脚本装载开关（默认关）。开时视频播放器创建后把
-  /// `<documents>/mpv_scripts` 目录里的全部 `.lua` 经 `load-script` 装载
-  /// （见 video_lua_script_manager.dart）；mpv 无 unload-script，关闭只对
-  /// 之后新建的播放器生效。
-  bool get videoMpvLuaScriptsEnabled =>
-      getPref('video_mpv_lua_scripts_enabled', defaultValue: false) as bool;
-
-  Future<void> setVideoMpvLuaScriptsEnabled(bool value) async {
-    await setPref('video_mpv_lua_scripts_enabled', value);
     notifyListeners();
   }
 
@@ -2839,7 +2848,8 @@ class PreferencesRepository extends ChangeNotifier
     notifyListeners();
   }
 
-  // 暂停时识别画面文字的范围（见 [VideoPauseOcrScope]）。默认 all。
+  // 暂停时识别画面文字的范围（见 [VideoPauseOcrScope]）。默认 off（BUG-3342：用户
+  // 手动开启；存过 all / graphic_subtitles 的用户照旧）。
   VideoPauseOcrScope get videoPauseOcrScope => VideoPauseOcrScope.fromWireName(
       getPref('video_pause_ocr_scope', defaultValue: null) as String?);
 
@@ -3917,12 +3927,18 @@ class PreferencesRepository extends ChangeNotifier
     notifyListeners();
   }
 
-  /// 0 自动；桌面可手动选择 1～4 个跨书 OCR 任务。
+  /// 0 自动；桌面可手动选择跨书 OCR 任务数。存储只按硬顶截断，本机实际上限
+  /// （按核数推导）由 `resolveMangaOcrJobConcurrency` 在排队时再收——偏好会随
+  /// 备份 / 同步到核数更少的机器上，不能在这里按本机核数截掉。
   int get mangaOcrParallelTasks =>
-      (getPref('manga_ocr_parallel_tasks', defaultValue: 0) as int).clamp(0, 4);
+      (getPref('manga_ocr_parallel_tasks', defaultValue: 0) as int)
+          .clamp(0, kMangaOcrMaxSelectableTasks);
 
   Future<void> setMangaOcrParallelTasks(int value) async {
-    await setPref('manga_ocr_parallel_tasks', value.clamp(0, 4));
+    await setPref(
+      'manga_ocr_parallel_tasks',
+      value.clamp(0, kMangaOcrMaxSelectableTasks),
+    );
     notifyListeners();
   }
 
@@ -4119,6 +4135,17 @@ class PreferencesRepository extends ChangeNotifier
   }
 
   bool get mangaPanelNavigationEnabled => mangaPanelNavigation;
+
+  /// 一键制卡的卡图默认裁到所在分镜（只在分镜模型可用且非条漫时生效）。
+  bool get mangaMiningCropToPanel => getPref(
+        'manga_mining_crop_to_panel',
+        defaultValue: kMangaMiningCropToPanelDefault,
+      ) as bool;
+
+  Future<void> setMangaMiningCropToPanel(bool value) async {
+    await setPref('manga_mining_crop_to_panel', value);
+    notifyListeners();
+  }
 
   Future<void> setMangaPanelNavigationEnabled(bool value) =>
       setMangaPanelNavigation(value);
