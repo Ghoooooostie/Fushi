@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127211 (7483 per locale)
+/// Strings: 127194 (7482 per locale)
 ///
-/// Built on 2026-10-14 at 12:49 UTC
+/// Built on 2026-10-14 at 17:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3829,7 +3829,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get pick_image => 'Pick image';
   String get play => 'Play';
   String get play_from_cue => 'Play from sentence';
-  String get playback_auto_pause => 'Subtitle pause playback mode';
   String get playback_speed => 'Speed';
   String get popup_append_sentence_tooltip => 'Add this sentence to the card';
   String get popup_auto_expand_dictionaries => 'Auto-expand rows';
@@ -17073,8 +17072,6 @@ class _StringsAr extends _StringsEn {
   String get play => 'تشغيل';
   @override
   String get play_from_cue => 'تشغيل من الجملة';
-  @override
-  String get playback_auto_pause => 'وضع الإيقاف عند الترجمة';
   @override
   String get playback_speed => 'السرعة';
   @override
@@ -35317,8 +35314,6 @@ class _StringsDe extends _StringsEn {
   String get play => 'Abspielen';
   @override
   String get play_from_cue => 'Ab diesem Satz abspielen';
-  @override
-  String get playback_auto_pause => 'Untertitel-Pause-Wiedergabemodus';
   @override
   String get playback_speed => 'Geschwindigkeit';
   @override
@@ -53814,8 +53809,6 @@ class _StringsEs extends _StringsEn {
   String get play => 'Reproducir';
   @override
   String get play_from_cue => 'Reproducir desde la oración';
-  @override
-  String get playback_auto_pause => 'Modo de pausa en subtítulos';
   @override
   String get playback_speed => 'Velocidad';
   @override
@@ -72381,8 +72374,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get play_from_cue => 'Lire depuis cette phrase';
   @override
-  String get playback_auto_pause => 'Mode pause sur sous-titre';
-  @override
   String get playback_speed => 'Vitesse';
   @override
   String get popup_append_sentence_tooltip => 'Ajouter cette phrase à la carte';
@@ -90869,8 +90860,6 @@ class _StringsId extends _StringsEn {
   @override
   String get play_from_cue => 'Putar dari kalimat';
   @override
-  String get playback_auto_pause => 'Mode Jeda Subtitle';
-  @override
   String get playback_speed => 'Kecepatan';
   @override
   String get popup_append_sentence_tooltip => 'Tambahkan kalimat ini ke kartu';
@@ -109199,8 +109188,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get play_from_cue => 'Riproduci dalla frase';
   @override
-  String get playback_auto_pause => 'Modalità pausa sui sottotitoli';
-  @override
   String get playback_speed => 'Velocità';
   @override
   String get popup_append_sentence_tooltip =>
@@ -127254,8 +127241,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get play_from_cue => 'この文から再生';
   @override
-  String get playback_auto_pause => '字幕一時停止再生モード';
-  @override
   String get playback_speed => '速度';
   @override
   String get popup_append_sentence_tooltip => 'この文をカードに追加';
@@ -144692,8 +144677,6 @@ class _StringsKo extends _StringsEn {
   String get play => '재생';
   @override
   String get play_from_cue => '이 문장부터 재생';
-  @override
-  String get playback_auto_pause => '자막 일시정지 재생 모드';
   @override
   String get playback_speed => '속도';
   @override
@@ -162525,8 +162508,6 @@ class _StringsNl extends _StringsEn {
   String get play => 'Afspelen';
   @override
   String get play_from_cue => 'Afspelen vanaf zin';
-  @override
-  String get playback_auto_pause => 'Ondertitelpauze-modus';
   @override
   String get playback_speed => 'Snelheid';
   @override
@@ -180940,8 +180921,6 @@ class _StringsPtBr extends _StringsEn {
   String get play => 'Reproduzir';
   @override
   String get play_from_cue => 'Reproduzir a partir da frase';
-  @override
-  String get playback_auto_pause => 'Modo de Pausa por Legenda';
   @override
   String get playback_speed => 'Velocidade';
   @override
@@ -199375,8 +199354,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get play_from_cue => 'Воспроизвести с предложения';
   @override
-  String get playback_auto_pause => 'Режим паузы на субтитрах';
-  @override
   String get playback_speed => 'Скорость';
   @override
   String get popup_append_sentence_tooltip =>
@@ -217651,8 +217628,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get play_from_cue => 'เล่นจากประโยค';
   @override
-  String get playback_auto_pause => 'เล่นแบบหยุดที่ซับไตเติล';
-  @override
   String get playback_speed => 'ความเร็ว';
   @override
   String get popup_append_sentence_tooltip => 'เพิ่มประโยคนี้ลงในการ์ด';
@@ -235814,8 +235789,6 @@ class _StringsTr extends _StringsEn {
   String get play => 'Oynat';
   @override
   String get play_from_cue => 'Cümleden itibaren oynat';
-  @override
-  String get playback_auto_pause => 'Altyazıda duraklatma modu';
   @override
   String get playback_speed => 'Hız';
   @override
@@ -254069,8 +254042,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get play_from_cue => 'Phát từ câu';
   @override
-  String get playback_auto_pause => 'Chế độ tạm dừng theo phụ đề';
-  @override
   String get playback_speed => 'Tốc độ';
   @override
   String get popup_append_sentence_tooltip => 'Thêm câu này vào thẻ';
@@ -271749,8 +271720,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get play_from_cue => '从本句播放';
   @override
-  String get playback_auto_pause => '字幕暂停播放模式';
-  @override
   String get playback_speed => '倍速';
   @override
   String get popup_append_sentence_tooltip => '加入制卡句子';
@@ -288383,8 +288352,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get play_from_cue => '從本句播放';
   @override
-  String get playback_auto_pause => '字幕暫停播放模式';
-  @override
   String get playback_speed => '倍速';
   @override
   String get popup_append_sentence_tooltip => '把此句加入卡片';
@@ -304870,8 +304837,6 @@ extension on _StringsEn {
         return 'Play';
       case 'play_from_cue':
         return 'Play from sentence';
-      case 'playback_auto_pause':
-        return 'Subtitle pause playback mode';
       case 'playback_speed':
         return 'Speed';
       case 'popup_append_sentence_tooltip':
@@ -320383,8 +320348,6 @@ extension on _StringsAr {
         return 'تشغيل';
       case 'play_from_cue':
         return 'تشغيل من الجملة';
-      case 'playback_auto_pause':
-        return 'وضع الإيقاف عند الترجمة';
       case 'playback_speed':
         return 'السرعة';
       case 'popup_append_sentence_tooltip':
@@ -335934,8 +335897,6 @@ extension on _StringsDe {
         return 'Abspielen';
       case 'play_from_cue':
         return 'Ab diesem Satz abspielen';
-      case 'playback_auto_pause':
-        return 'Untertitel-Pause-Wiedergabemodus';
       case 'playback_speed':
         return 'Geschwindigkeit';
       case 'popup_append_sentence_tooltip':
@@ -351508,8 +351469,6 @@ extension on _StringsEs {
         return 'Reproducir';
       case 'play_from_cue':
         return 'Reproducir desde la oración';
-      case 'playback_auto_pause':
-        return 'Modo de pausa en subtítulos';
       case 'playback_speed':
         return 'Velocidad';
       case 'popup_append_sentence_tooltip':
@@ -367086,8 +367045,6 @@ extension on _StringsFr {
         return 'Lecture';
       case 'play_from_cue':
         return 'Lire depuis cette phrase';
-      case 'playback_auto_pause':
-        return 'Mode pause sur sous-titre';
       case 'playback_speed':
         return 'Vitesse';
       case 'popup_append_sentence_tooltip':
@@ -382649,8 +382606,6 @@ extension on _StringsId {
         return 'Putar';
       case 'play_from_cue':
         return 'Putar dari kalimat';
-      case 'playback_auto_pause':
-        return 'Mode Jeda Subtitle';
       case 'playback_speed':
         return 'Kecepatan';
       case 'popup_append_sentence_tooltip':
@@ -398192,8 +398147,6 @@ extension on _StringsIt {
         return 'Riproduci';
       case 'play_from_cue':
         return 'Riproduci dalla frase';
-      case 'playback_auto_pause':
-        return 'Modalità pausa sui sottotitoli';
       case 'playback_speed':
         return 'Velocità';
       case 'popup_append_sentence_tooltip':
@@ -413715,8 +413668,6 @@ extension on _StringsJa {
         return '再生';
       case 'play_from_cue':
         return 'この文から再生';
-      case 'playback_auto_pause':
-        return '字幕一時停止再生モード';
       case 'playback_speed':
         return '速度';
       case 'popup_append_sentence_tooltip':
@@ -429156,8 +429107,6 @@ extension on _StringsKo {
         return '재생';
       case 'play_from_cue':
         return '이 문장부터 재생';
-      case 'playback_auto_pause':
-        return '자막 일시정지 재생 모드';
       case 'playback_speed':
         return '속도';
       case 'popup_append_sentence_tooltip':
@@ -444649,8 +444598,6 @@ extension on _StringsNl {
         return 'Afspelen';
       case 'play_from_cue':
         return 'Afspelen vanaf zin';
-      case 'playback_auto_pause':
-        return 'Ondertitelpauze-modus';
       case 'playback_speed':
         return 'Snelheid';
       case 'popup_append_sentence_tooltip':
@@ -460209,8 +460156,6 @@ extension on _StringsPtBr {
         return 'Reproduzir';
       case 'play_from_cue':
         return 'Reproduzir a partir da frase';
-      case 'playback_auto_pause':
-        return 'Modo de Pausa por Legenda';
       case 'playback_speed':
         return 'Velocidade';
       case 'popup_append_sentence_tooltip':
@@ -475771,8 +475716,6 @@ extension on _StringsRu {
         return 'Воспроизвести';
       case 'play_from_cue':
         return 'Воспроизвести с предложения';
-      case 'playback_auto_pause':
-        return 'Режим паузы на субтитрах';
       case 'playback_speed':
         return 'Скорость';
       case 'popup_append_sentence_tooltip':
@@ -491303,8 +491246,6 @@ extension on _StringsTh {
         return 'เล่น';
       case 'play_from_cue':
         return 'เล่นจากประโยค';
-      case 'playback_auto_pause':
-        return 'เล่นแบบหยุดที่ซับไตเติล';
       case 'playback_speed':
         return 'ความเร็ว';
       case 'popup_append_sentence_tooltip':
@@ -506832,8 +506773,6 @@ extension on _StringsTr {
         return 'Oynat';
       case 'play_from_cue':
         return 'Cümleden itibaren oynat';
-      case 'playback_auto_pause':
-        return 'Altyazıda duraklatma modu';
       case 'playback_speed':
         return 'Hız';
       case 'popup_append_sentence_tooltip':
@@ -522373,8 +522312,6 @@ extension on _StringsVi {
         return 'Phát';
       case 'play_from_cue':
         return 'Phát từ câu';
-      case 'playback_auto_pause':
-        return 'Chế độ tạm dừng theo phụ đề';
       case 'playback_speed':
         return 'Tốc độ';
       case 'popup_append_sentence_tooltip':
@@ -537855,8 +537792,6 @@ extension on _StringsZhCn {
         return '播放';
       case 'play_from_cue':
         return '从本句播放';
-      case 'playback_auto_pause':
-        return '字幕暂停播放模式';
       case 'playback_speed':
         return '倍速';
       case 'popup_append_sentence_tooltip':
@@ -553213,8 +553148,6 @@ extension on _StringsZhHk {
         return '播放';
       case 'play_from_cue':
         return '從本句播放';
-      case 'playback_auto_pause':
-        return '字幕暫停播放模式';
       case 'playback_speed':
         return '倍速';
       case 'popup_append_sentence_tooltip':
