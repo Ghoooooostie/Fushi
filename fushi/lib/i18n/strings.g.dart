@@ -342,9 +342,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anki_connect_port_auto_fix_done({required Object port}) =>
       'Switched AnkiConnect to port ${port}. Restart Anki to apply.';
   String get anki_connect_port_auto_fix_hint =>
-      'Picks a free port and writes it to both Hibiki and the AnkiConnect add-on config. Restart Anki to apply.';
+      'Picks a free port and writes it to both Fushi and the AnkiConnect add-on config. Restart Anki to apply.';
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
+      'Fushi now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
   String get anki_connect_port_auto_fix_none =>
       'No free port found on this machine.';
   String get anki_connect_use_on_mobile => 'Use AnkiConnect instead';
@@ -6265,10 +6265,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_err_not_paired =>
       'No paired device yet — set up pairing in Fushi Interconnect first.';
   String get anki_create_lapis_not_found =>
-      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      'Anki said the Lapis deck and note type were created, but they are still missing when Fushi reads the collection back. Open Anki, make sure it is not busy, and try again.';
   String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
   String get anki_lapis_suggest_body =>
-      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      'The selected deck and note type can\'t produce a card Anki will accept. Fushi can add its Lapis note type and deck and select them for you.';
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
   String get reader_vn_settings => 'Visual novel settings';
   String get reader_vn_reveal_speed => 'Text reveal speed';
@@ -6345,7 +6345,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
   String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
+      'Point Fushi at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   String get audiobook_transcribe_model_custom_name => 'Model name';
   String get audiobook_transcribe_model_custom_blank => 'Blank token';
@@ -11087,10 +11087,10 @@ class _StringsAr extends _StringsEn {
       'تم تغيير منفذ AnkiConnect إلى ${port}. أعد تشغيل Anki ثم حاول مجددًا.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'يختار منفذًا حرًا ويكتبه في Hibiki وفي إعدادات إضافة AnkiConnect معًا. أعد تشغيل Anki لتطبيق التغيير.';
+      'يختار منفذًا حرًا ويكتبه في Fushi وفي إعدادات إضافة AnkiConnect معًا. أعد تشغيل Anki لتطبيق التغيير.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'يستخدم Hibiki الآن المنفذ ${port}، لكن لم يُعثر على إعدادات إضافة AnkiConnect. اضبط webBindPort على ${port} في Anki (أدوات ← الإضافات ← AnkiConnect ← إعداد) ثم أعد تشغيل Anki.';
+      'يستخدم Fushi الآن المنفذ ${port}، لكن لم يُعثر على إعدادات إضافة AnkiConnect. اضبط webBindPort على ${port} في Anki (أدوات ← الإضافات ← AnkiConnect ← إعداد) ثم أعد تشغيل Anki.';
   @override
   String get anki_connect_port_auto_fix_none =>
       'لم يُعثر على أي منفذ حر على هذا الجهاز.';
@@ -21347,12 +21347,12 @@ class _StringsAr extends _StringsEn {
       'لم يتم إقران أي جهاز بعد — أعدّ الإقتران أولاً من «Fushi Interconnect».';
   @override
   String get anki_create_lapis_not_found =>
-      'ذكر Anki أنه أنشأ مجموعة Lapis ونوع الملاحظة، لكنهما لا يزالان مفقودين عندما يقرأ Hibiki المجموعة مجددًا. افتح Anki وتأكد من أنه ليس مشغولًا ثم حاول مرة أخرى.';
+      'ذكر Anki أنه أنشأ مجموعة Lapis ونوع الملاحظة، لكنهما لا يزالان مفقودين عندما يقرأ Fushi المجموعة مجددًا. افتح Anki وتأكد من أنه ليس مشغولًا ثم حاول مرة أخرى.';
   @override
   String get anki_lapis_suggest_title => 'لا يستطيع Anki إنشاء البطاقات بعد';
   @override
   String get anki_lapis_suggest_body =>
-      'لا يمكن للمجموعة ونوع الملاحظة المحددين إنتاج بطاقة يقبلها Anki. يستطيع Hibiki إضافة نوع ملاحظة Lapis ومجموعته وتحديدهما لك.';
+      'لا يمكن للمجموعة ونوع الملاحظة المحددين إنتاج بطاقة يقبلها Anki. يستطيع Fushi إضافة نوع ملاحظة Lapis ومجموعته وتحديدهما لك.';
   @override
   String get anki_lapis_suggest_dismiss => 'الإبقاء على الإعداد الحالي';
   @override
@@ -21482,7 +21482,7 @@ class _StringsAr extends _StringsEn {
   String get audiobook_transcribe_model_custom_title => 'إضافة نموذج محلي';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'وجّه Hibiki إلى مجلد يحتوي تصدير sherpa-onnx (المشفّر / المفكك / الرابط، أو نموذج CTC واحد، مع tokens.txt). تبقى الملفات في مكانها — يُجلب فقط نموذج VAD الصغير (640 كيلوبايت) إذا لم يكن في المجلد.';
+      'وجّه Fushi إلى مجلد يحتوي تصدير sherpa-onnx (المشفّر / المفكك / الرابط، أو نموذج CTC واحد، مع tokens.txt). تبقى الملفات في مكانها — يُجلب فقط نموذج VAD الصغير (640 كيلوبايت) إذا لم يكن في المجلد.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'اختيار مجلد';
   @override
@@ -29181,10 +29181,10 @@ class _StringsDe extends _StringsEn {
       'AnkiConnect nutzt jetzt Port ${port}. Starte Anki neu und versuche es erneut.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'Wählt einen freien Port und trägt ihn sowohl in Hibiki als auch in die AnkiConnect-Add-on-Konfiguration ein. Starte Anki neu, damit es wirkt.';
+      'Wählt einen freien Port und trägt ihn sowohl in Fushi als auch in die AnkiConnect-Add-on-Konfiguration ein. Starte Anki neu, damit es wirkt.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki nutzt jetzt Port ${port}, aber die AnkiConnect-Add-on-Konfiguration wurde nicht gefunden. Setze webBindPort in Anki (Werkzeuge → Add-ons → AnkiConnect → Konfiguration) ebenfalls auf ${port} und starte Anki neu.';
+      'Fushi nutzt jetzt Port ${port}, aber die AnkiConnect-Add-on-Konfiguration wurde nicht gefunden. Setze webBindPort in Anki (Werkzeuge → Add-ons → AnkiConnect → Konfiguration) ebenfalls auf ${port} und starte Anki neu.';
   @override
   String get anki_connect_port_auto_fix_none =>
       'Auf diesem Rechner wurde kein freier Port gefunden.';
@@ -39686,13 +39686,13 @@ class _StringsDe extends _StringsEn {
       'Noch kein Gerät gekoppelt — richten Sie die Kopplung zuerst unter „Fushi Interconnect“ ein.';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki meldete, dass der Lapis-Stapel und -Notiztyp erstellt wurden, doch beim erneuten Lesen der Sammlung durch Hibiki fehlen sie noch. Öffne Anki, stelle sicher, dass es nicht beschäftigt ist, und versuche es erneut.';
+      'Anki meldete, dass der Lapis-Stapel und -Notiztyp erstellt wurden, doch beim erneuten Lesen der Sammlung durch Fushi fehlen sie noch. Öffne Anki, stelle sicher, dass es nicht beschäftigt ist, und versuche es erneut.';
   @override
   String get anki_lapis_suggest_title =>
       'Anki kann noch keine Karten erstellen';
   @override
   String get anki_lapis_suggest_body =>
-      'Mit dem gewählten Stapel und Notiztyp lässt sich keine Karte erzeugen, die Anki akzeptiert. Hibiki kann seinen Lapis-Notiztyp und -Stapel hinzufügen und für dich auswählen.';
+      'Mit dem gewählten Stapel und Notiztyp lässt sich keine Karte erzeugen, die Anki akzeptiert. Fushi kann seinen Lapis-Notiztyp und -Stapel hinzufügen und für dich auswählen.';
   @override
   String get anki_lapis_suggest_dismiss => 'Aktuelle Einrichtung beibehalten';
   @override
@@ -39827,7 +39827,7 @@ class _StringsDe extends _StringsEn {
       'Lokales Modell hinzufügen';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'Verweise Hibiki auf einen Ordner mit einem sherpa-onnx-Export (Encoder / Decoder / Joiner oder ein einzelnes CTC-Modell, plus tokens.txt). Die Dateien bleiben, wo sie sind – nur das kleine VAD-Modell (640 KB) wird geladen, falls der Ordner keines enthält.';
+      'Verweise Fushi auf einen Ordner mit einem sherpa-onnx-Export (Encoder / Decoder / Joiner oder ein einzelnes CTC-Modell, plus tokens.txt). Die Dateien bleiben, wo sie sind – nur das kleine VAD-Modell (640 KB) wird geladen, falls der Ordner keines enthält.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Ordner wählen';
   @override
@@ -47659,10 +47659,10 @@ class _StringsEs extends _StringsEn {
       'AnkiConnect ahora usa el puerto ${port}. Reinicia Anki y vuelve a intentarlo.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'Elige un puerto libre y lo escribe tanto en Hibiki como en la configuración del complemento AnkiConnect. Reinicia Anki para aplicarlo.';
+      'Elige un puerto libre y lo escribe tanto en Fushi como en la configuración del complemento AnkiConnect. Reinicia Anki para aplicarlo.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki ahora usa el puerto ${port}, pero no se encontró la configuración del complemento AnkiConnect. Pon webBindPort en ${port} dentro de Anki (Herramientas → Complementos → AnkiConnect → Configuración) y reinicia Anki.';
+      'Fushi ahora usa el puerto ${port}, pero no se encontró la configuración del complemento AnkiConnect. Pon webBindPort en ${port} dentro de Anki (Herramientas → Complementos → AnkiConnect → Configuración) y reinicia Anki.';
   @override
   String get anki_connect_port_auto_fix_none =>
       'No se encontró ningún puerto libre en este equipo.';
@@ -58220,12 +58220,12 @@ class _StringsEs extends _StringsEn {
       'Aún no hay ningún dispositivo emparejado: configura el emparejamiento en «Fushi Interconnect» primero.';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki indicó que se crearon el mazo y el tipo de nota Lapis, pero siguen sin aparecer cuando Hibiki vuelve a leer la colección. Abre Anki, asegúrate de que no esté ocupado e inténtalo de nuevo.';
+      'Anki indicó que se crearon el mazo y el tipo de nota Lapis, pero siguen sin aparecer cuando Fushi vuelve a leer la colección. Abre Anki, asegúrate de que no esté ocupado e inténtalo de nuevo.';
   @override
   String get anki_lapis_suggest_title => 'Anki aún no puede crear tarjetas';
   @override
   String get anki_lapis_suggest_body =>
-      'El mazo y el tipo de nota seleccionados no pueden producir una tarjeta que Anki acepte. Hibiki puede añadir su tipo de nota y mazo Lapis y seleccionarlos por ti.';
+      'El mazo y el tipo de nota seleccionados no pueden producir una tarjeta que Anki acepte. Fushi puede añadir su tipo de nota y mazo Lapis y seleccionarlos por ti.';
   @override
   String get anki_lapis_suggest_dismiss => 'Mantener la configuración actual';
   @override
@@ -58357,7 +58357,7 @@ class _StringsEs extends _StringsEn {
       'Añadir un modelo local';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'Indica a Hibiki una carpeta con una exportación de sherpa-onnx (encoder / decoder / joiner, o un único modelo CTC, más tokens.txt). Los archivos se quedan donde están; solo se descarga el pequeño modelo VAD (640 KB) si la carpeta no tiene ninguno.';
+      'Indica a Fushi una carpeta con una exportación de sherpa-onnx (encoder / decoder / joiner, o un único modelo CTC, más tokens.txt). Los archivos se quedan donde están; solo se descarga el pequeño modelo VAD (640 KB) si la carpeta no tiene ninguno.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Elegir carpeta';
   @override
@@ -66199,10 +66199,10 @@ class _StringsFr extends _StringsEn {
       'AnkiConnect utilise désormais le port ${port}. Redémarrez Anki puis réessayez.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'Choisit un port libre et l\'écrit à la fois dans Hibiki et dans la configuration du module AnkiConnect. Redémarrez Anki pour l\'appliquer.';
+      'Choisit un port libre et l\'écrit à la fois dans Fushi et dans la configuration du module AnkiConnect. Redémarrez Anki pour l\'appliquer.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki utilise désormais le port ${port}, mais la configuration du module AnkiConnect est introuvable. Définissez webBindPort sur ${port} dans Anki (Outils → Modules complémentaires → AnkiConnect → Configuration), puis redémarrez Anki.';
+      'Fushi utilise désormais le port ${port}, mais la configuration du module AnkiConnect est introuvable. Définissez webBindPort sur ${port} dans Anki (Outils → Modules complémentaires → AnkiConnect → Configuration), puis redémarrez Anki.';
   @override
   String get anki_connect_port_auto_fix_none =>
       'Aucun port libre trouvé sur cette machine.';
@@ -76805,13 +76805,13 @@ class _StringsFr extends _StringsEn {
       'Aucun appareil associé pour l\'instant — configurez d\'abord l\'association dans « Fushi Interconnect ».';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki a indiqué que le paquet et le type de note Lapis avaient été créés, mais ils sont toujours absents quand Hibiki relit la collection. Ouvrez Anki, assurez-vous qu\'il n\'est pas occupé, puis réessayez.';
+      'Anki a indiqué que le paquet et le type de note Lapis avaient été créés, mais ils sont toujours absents quand Fushi relit la collection. Ouvrez Anki, assurez-vous qu\'il n\'est pas occupé, puis réessayez.';
   @override
   String get anki_lapis_suggest_title =>
       'Anki ne peut pas encore créer de cartes';
   @override
   String get anki_lapis_suggest_body =>
-      'Le paquet et le type de note sélectionnés ne peuvent pas produire une carte qu\'Anki acceptera. Hibiki peut ajouter son type de note et son paquet Lapis et les sélectionner pour vous.';
+      'Le paquet et le type de note sélectionnés ne peuvent pas produire une carte qu\'Anki acceptera. Fushi peut ajouter son type de note et son paquet Lapis et les sélectionner pour vous.';
   @override
   String get anki_lapis_suggest_dismiss => 'Garder la configuration actuelle';
   @override
@@ -76945,7 +76945,7 @@ class _StringsFr extends _StringsEn {
       'Ajouter un modèle local';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'Indiquez à Hibiki un dossier contenant un export sherpa-onnx (encoder / decoder / joiner, ou un seul modèle CTC, plus tokens.txt). Les fichiers restent où ils sont — seul le petit modèle VAD (640 Ko) est téléchargé si le dossier n\'en contient pas.';
+      'Indiquez à Fushi un dossier contenant un export sherpa-onnx (encoder / decoder / joiner, ou un seul modèle CTC, plus tokens.txt). Les fichiers restent où ils sont — seul le petit modèle VAD (640 Ko) est téléchargé si le dossier n\'en contient pas.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choisir un dossier';
   @override
@@ -84816,10 +84816,10 @@ class _StringsId extends _StringsEn {
       'AnkiConnect kini memakai port ${port}. Mulai ulang Anki lalu coba lagi.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'Memilih port kosong lalu menuliskannya ke Hibiki dan ke konfigurasi add-on AnkiConnect. Mulai ulang Anki agar berlaku.';
+      'Memilih port kosong lalu menuliskannya ke Fushi dan ke konfigurasi add-on AnkiConnect. Mulai ulang Anki agar berlaku.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki kini memakai port ${port}, tetapi konfigurasi add-on AnkiConnect tidak ditemukan. Setel webBindPort ke ${port} di Anki (Alat → Add-on → AnkiConnect → Konfigurasi), lalu mulai ulang Anki.';
+      'Fushi kini memakai port ${port}, tetapi konfigurasi add-on AnkiConnect tidak ditemukan. Setel webBindPort ke ${port} di Anki (Alat → Add-on → AnkiConnect → Konfigurasi), lalu mulai ulang Anki.';
   @override
   String get anki_connect_port_auto_fix_none =>
       'Tidak ditemukan port kosong di komputer ini.';
@@ -95197,12 +95197,12 @@ class _StringsId extends _StringsEn {
       'Belum ada perangkat yang dipasangkan — atur pemasangan di "Fushi Interconnect" terlebih dahulu.';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki menyatakan dek dan tipe catatan Lapis telah dibuat, tetapi keduanya masih hilang saat Hibiki membaca koleksi kembali. Buka Anki, pastikan tidak sibuk, lalu coba lagi.';
+      'Anki menyatakan dek dan tipe catatan Lapis telah dibuat, tetapi keduanya masih hilang saat Fushi membaca koleksi kembali. Buka Anki, pastikan tidak sibuk, lalu coba lagi.';
   @override
   String get anki_lapis_suggest_title => 'Anki belum dapat membuat kartu';
   @override
   String get anki_lapis_suggest_body =>
-      'Dek dan tipe catatan yang dipilih tidak dapat menghasilkan kartu yang diterima Anki. Hibiki dapat menambahkan tipe catatan dan dek Lapis miliknya lalu memilihnya untuk Anda.';
+      'Dek dan tipe catatan yang dipilih tidak dapat menghasilkan kartu yang diterima Anki. Fushi dapat menambahkan tipe catatan dan dek Lapis miliknya lalu memilihnya untuk Anda.';
   @override
   String get anki_lapis_suggest_dismiss => 'Pertahankan pengaturan saat ini';
   @override
@@ -95333,7 +95333,7 @@ class _StringsId extends _StringsEn {
   String get audiobook_transcribe_model_custom_title => 'Tambah model lokal';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'Arahkan Hibiki ke folder berisi ekspor sherpa-onnx (encoder / decoder / joiner, atau satu model CTC, plus tokens.txt). File tetap di tempatnya — hanya model VAD kecil (640 KB) yang diambil jika folder tidak memilikinya.';
+      'Arahkan Fushi ke folder berisi ekspor sherpa-onnx (encoder / decoder / joiner, atau satu model CTC, plus tokens.txt). File tetap di tempatnya — hanya model VAD kecil (640 KB) yang diambil jika folder tidak memilikinya.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Pilih folder';
   @override
@@ -103089,10 +103089,10 @@ class _StringsIt extends _StringsEn {
       'AnkiConnect ora usa la porta ${port}. Riavvia Anki e riprova.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'Sceglie una porta libera e la scrive sia in Hibiki sia nella configurazione del componente aggiuntivo AnkiConnect. Riavvia Anki per applicarla.';
+      'Sceglie una porta libera e la scrive sia in Fushi sia nella configurazione del componente aggiuntivo AnkiConnect. Riavvia Anki per applicarla.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki ora usa la porta ${port}, ma la configurazione del componente aggiuntivo AnkiConnect non è stata trovata. Imposta webBindPort su ${port} in Anki (Strumenti → Componenti aggiuntivi → AnkiConnect → Configurazione) e riavvia Anki.';
+      'Fushi ora usa la porta ${port}, ma la configurazione del componente aggiuntivo AnkiConnect non è stata trovata. Imposta webBindPort su ${port} in Anki (Strumenti → Componenti aggiuntivi → AnkiConnect → Configurazione) e riavvia Anki.';
   @override
   String get anki_connect_port_auto_fix_none =>
       'Nessuna porta libera trovata su questo computer.';
@@ -113572,12 +113572,12 @@ class _StringsIt extends _StringsEn {
       'Nessun dispositivo associato: configura prima l\'associazione in «Fushi Interconnect».';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki ha detto che il mazzo e il tipo di nota Lapis sono stati creati, ma risultano ancora mancanti quando Hibiki rilegge la collezione. Apri Anki, assicurati che non sia occupato e riprova.';
+      'Anki ha detto che il mazzo e il tipo di nota Lapis sono stati creati, ma risultano ancora mancanti quando Fushi rilegge la collezione. Apri Anki, assicurati che non sia occupato e riprova.';
   @override
   String get anki_lapis_suggest_title => 'Anki non può ancora creare carte';
   @override
   String get anki_lapis_suggest_body =>
-      'Il mazzo e il tipo di nota selezionati non possono produrre una carta accettata da Anki. Hibiki può aggiungere il suo tipo di nota e mazzo Lapis e selezionarli per te.';
+      'Il mazzo e il tipo di nota selezionati non possono produrre una carta accettata da Anki. Fushi può aggiungere il suo tipo di nota e mazzo Lapis e selezionarli per te.';
   @override
   String get anki_lapis_suggest_dismiss => 'Mantieni la configurazione attuale';
   @override
@@ -113712,7 +113712,7 @@ class _StringsIt extends _StringsEn {
       'Aggiungi un modello locale';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'Indica a Hibiki una cartella con un\'esportazione sherpa-onnx (encoder / decoder / joiner, oppure un singolo modello CTC, più tokens.txt). I file restano dove sono: viene scaricato solo il piccolo modello VAD (640 KB) se la cartella non ne ha uno.';
+      'Indica a Fushi una cartella con un\'esportazione sherpa-onnx (encoder / decoder / joiner, oppure un singolo modello CTC, più tokens.txt). I file restano dove sono: viene scaricato solo il piccolo modello VAD (640 KB) se la cartella non ne ha uno.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Scegli cartella';
   @override
@@ -121514,10 +121514,10 @@ class _StringsJa extends _StringsEn {
       'AnkiConnect のポートを ${port} に変更しました。Anki を再起動してからもう一度お試しください。';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      '空いているポートを選び、Hibiki と Anki の AnkiConnect アドオン設定の両方に書き込みます。反映には Anki の再起動が必要です。';
+      '空いているポートを選び、Fushi と Anki の AnkiConnect アドオン設定の両方に書き込みます。反映には Anki の再起動が必要です。';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
+      'Fushi はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
   @override
   String get anki_connect_port_auto_fix_none => 'このマシンに空いているポートが見つかりませんでした。';
   @override
@@ -131346,12 +131346,12 @@ class _StringsJa extends _StringsEn {
       'ペアリング済みの端末がありません。まず「Fushi 互联」でペアリングを行ってください。';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki は Lapis デッキとノートタイプを作成したと報告しましたが、Hibiki がコレクションを読み戻してもまだ見つかりません。Anki を開いてビジー状態でないことを確認し、もう一度お試しください。';
+      'Anki は Lapis デッキとノートタイプを作成したと報告しましたが、Fushi がコレクションを読み戻してもまだ見つかりません。Anki を開いてビジー状態でないことを確認し、もう一度お試しください。';
   @override
   String get anki_lapis_suggest_title => 'まだ Anki でカードを作成できません';
   @override
   String get anki_lapis_suggest_body =>
-      '選択中のデッキとノートタイプでは、Anki が受け付けるカードを作成できません。Hibiki で Lapis ノートタイプとデッキを追加し、自動で選択できます。';
+      '選択中のデッキとノートタイプでは、Anki が受け付けるカードを作成できません。Fushi で Lapis ノートタイプとデッキを追加し、自動で選択できます。';
   @override
   String get anki_lapis_suggest_dismiss => '現在の設定のままにする';
   @override
@@ -131474,7 +131474,7 @@ class _StringsJa extends _StringsEn {
   String get audiobook_transcribe_model_custom_title => 'ローカルモデルを追加';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'sherpa-onnx のエクスポートモデル（encoder / decoder / joiner、または単一の CTC モデルと tokens.txt）が入ったフォルダーを Hibiki に指定します。ファイルは元の場所に残り、フォルダーに VAD モデルがない場合のみ小さな VAD モデル（640 KB）を取得します。';
+      'sherpa-onnx のエクスポートモデル（encoder / decoder / joiner、または単一の CTC モデルと tokens.txt）が入ったフォルダーを Fushi に指定します。ファイルは元の場所に残り、フォルダーに VAD モデルがない場合のみ小さな VAD モデル（640 KB）を取得します。';
   @override
   String get audiobook_transcribe_model_custom_pick => 'フォルダーを選択';
   @override
@@ -138951,10 +138951,10 @@ class _StringsKo extends _StringsEn {
       'AnkiConnect 포트를 ${port}(으)로 변경했습니다. Anki를 다시 시작한 뒤 다시 시도하세요.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      '비어 있는 포트를 골라 Hibiki와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
+      '비어 있는 포트를 골라 Fushi와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
+      'Fushi는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
   @override
   String get anki_connect_port_auto_fix_none => '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
   @override
@@ -148792,12 +148792,12 @@ class _StringsKo extends _StringsEn {
       '아직 페어링된 기기가 없습니다. 먼저 \'Fushi 互联\'에서 페어링을 완료하세요.';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki가 Lapis 덱과 노트 유형을 만들었다고 응답했지만, Hibiki가 컬렉션을 다시 읽을 때 여전히 없습니다. Anki를 열어 작업 중이 아닌지 확인한 다음 다시 시도하세요.';
+      'Anki가 Lapis 덱과 노트 유형을 만들었다고 응답했지만, Fushi가 컬렉션을 다시 읽을 때 여전히 없습니다. Anki를 열어 작업 중이 아닌지 확인한 다음 다시 시도하세요.';
   @override
   String get anki_lapis_suggest_title => 'Anki에서 아직 카드를 만들 수 없습니다';
   @override
   String get anki_lapis_suggest_body =>
-      '선택한 덱과 노트 유형으로는 Anki가 허용하는 카드를 만들 수 없습니다. Hibiki가 Lapis 노트 유형과 덱을 추가하고 자동으로 선택해 줄 수 있습니다.';
+      '선택한 덱과 노트 유형으로는 Anki가 허용하는 카드를 만들 수 없습니다. Fushi가 Lapis 노트 유형과 덱을 추가하고 자동으로 선택해 줄 수 있습니다.';
   @override
   String get anki_lapis_suggest_dismiss => '현재 설정 유지';
   @override
@@ -148920,7 +148920,7 @@ class _StringsKo extends _StringsEn {
   String get audiobook_transcribe_model_custom_title => '로컬 모델 추가';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'sherpa-onnx 내보내기 파일(encoder / decoder / joiner 또는 단일 CTC 모델과 tokens.txt)이 들어 있는 폴더를 Hibiki에 지정하세요. 파일은 원래 위치에 그대로 두며, 폴더에 VAD 모델이 없을 때만 작은 VAD 모델(640 KB)을 받아 옵니다.';
+      'sherpa-onnx 내보내기 파일(encoder / decoder / joiner 또는 단일 CTC 모델과 tokens.txt)이 들어 있는 폴더를 Fushi에 지정하세요. 파일은 원래 위치에 그대로 두며, 폴더에 VAD 모델이 없을 때만 작은 VAD 모델(640 KB)을 받아 옵니다.';
   @override
   String get audiobook_transcribe_model_custom_pick => '폴더 선택';
   @override
@@ -156440,10 +156440,10 @@ class _StringsNl extends _StringsEn {
       'AnkiConnect gebruikt nu poort ${port}. Herstart Anki en probeer het opnieuw.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'Kiest een vrije poort en schrijft die zowel in Hibiki als in de AnkiConnect-add-onconfiguratie. Herstart Anki om het toe te passen.';
+      'Kiest een vrije poort en schrijft die zowel in Fushi als in de AnkiConnect-add-onconfiguratie. Herstart Anki om het toe te passen.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki gebruikt nu poort ${port}, maar de AnkiConnect-add-onconfiguratie is niet gevonden. Zet webBindPort in Anki (Extra → Add-ons → AnkiConnect → Configuratie) ook op ${port} en herstart Anki.';
+      'Fushi gebruikt nu poort ${port}, maar de AnkiConnect-add-onconfiguratie is niet gevonden. Zet webBindPort in Anki (Extra → Add-ons → AnkiConnect → Configuratie) ook op ${port} en herstart Anki.';
   @override
   String get anki_connect_port_auto_fix_none =>
       'Geen vrije poort gevonden op deze machine.';
@@ -166880,12 +166880,12 @@ class _StringsNl extends _StringsEn {
       'Nog geen gekoppeld apparaat — stel het koppelen eerst in bij \'Fushi Interconnect\'.';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki meldde dat de Lapis-stapel en het notitietype zijn aangemaakt, maar ze ontbreken nog wanneer Hibiki de collectie teruglees. Open Anki, zorg dat het niet bezig is en probeer het opnieuw.';
+      'Anki meldde dat de Lapis-stapel en het notitietype zijn aangemaakt, maar ze ontbreken nog wanneer Fushi de collectie teruglees. Open Anki, zorg dat het niet bezig is en probeer het opnieuw.';
   @override
   String get anki_lapis_suggest_title => 'Anki kan nog geen kaarten maken';
   @override
   String get anki_lapis_suggest_body =>
-      'De geselecteerde stapel en het notitietype kunnen geen kaart opleveren die Anki accepteert. Hibiki kan zijn Lapis-notitietype en -stapel toevoegen en voor je selecteren.';
+      'De geselecteerde stapel en het notitietype kunnen geen kaart opleveren die Anki accepteert. Fushi kan zijn Lapis-notitietype en -stapel toevoegen en voor je selecteren.';
   @override
   String get anki_lapis_suggest_dismiss => 'Huidige opzet behouden';
   @override
@@ -167018,7 +167018,7 @@ class _StringsNl extends _StringsEn {
       'Lokaal model toevoegen';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'Wijs Hibiki naar een map met een sherpa-onnx-export (encoder / decoder / joiner, of één CTC-model, plus tokens.txt). De bestanden blijven waar ze zijn — alleen het kleine VAD-model (640 KB) wordt opgehaald als de map er geen heeft.';
+      'Wijs Fushi naar een map met een sherpa-onnx-export (encoder / decoder / joiner, of één CTC-model, plus tokens.txt). De bestanden blijven waar ze zijn — alleen het kleine VAD-model (640 KB) wordt opgehaald als de map er geen heeft.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Map kiezen';
   @override
@@ -174824,10 +174824,10 @@ class _StringsPtBr extends _StringsEn {
       'O AnkiConnect agora usa a porta ${port}. Reinicie o Anki e tente novamente.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'Escolhe uma porta livre e a grava tanto no Hibiki quanto na configuração do complemento AnkiConnect. Reinicie o Anki para aplicar.';
+      'Escolhe uma porta livre e a grava tanto no Fushi quanto na configuração do complemento AnkiConnect. Reinicie o Anki para aplicar.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'O Hibiki agora usa a porta ${port}, mas a configuração do complemento AnkiConnect não foi encontrada. Defina webBindPort como ${port} no Anki (Ferramentas → Complementos → AnkiConnect → Configuração) e reinicie o Anki.';
+      'O Fushi agora usa a porta ${port}, mas a configuração do complemento AnkiConnect não foi encontrada. Defina webBindPort como ${port} no Anki (Ferramentas → Complementos → AnkiConnect → Configuração) e reinicie o Anki.';
   @override
   String get anki_connect_port_auto_fix_none =>
       'Nenhuma porta livre encontrada nesta máquina.';
@@ -185318,13 +185318,13 @@ class _StringsPtBr extends _StringsEn {
       'Nenhum dispositivo pareado ainda — configure o pareamento em "Fushi Interconnect" primeiro.';
   @override
   String get anki_create_lapis_not_found =>
-      'O Anki disse que o baralho e o tipo de nota Lapis foram criados, mas eles ainda não aparecem quando o Hibiki relê a coleção. Abra o Anki, verifique se ele não está ocupado e tente novamente.';
+      'O Anki disse que o baralho e o tipo de nota Lapis foram criados, mas eles ainda não aparecem quando o Fushi relê a coleção. Abra o Anki, verifique se ele não está ocupado e tente novamente.';
   @override
   String get anki_lapis_suggest_title =>
       'O Anki ainda não consegue criar cartões';
   @override
   String get anki_lapis_suggest_body =>
-      'O baralho e o tipo de nota selecionados não conseguem gerar um cartão que o Anki aceite. O Hibiki pode adicionar o tipo de nota e o baralho Lapis e selecioná-los para você.';
+      'O baralho e o tipo de nota selecionados não conseguem gerar um cartão que o Anki aceite. O Fushi pode adicionar o tipo de nota e o baralho Lapis e selecioná-los para você.';
   @override
   String get anki_lapis_suggest_dismiss => 'Manter configuração atual';
   @override
@@ -185457,7 +185457,7 @@ class _StringsPtBr extends _StringsEn {
       'Adicionar modelo local';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'Aponte o Hibiki para uma pasta com uma exportação do sherpa-onnx (encoder / decoder / joiner, ou um único modelo CTC, mais tokens.txt). Os arquivos permanecem onde estão — apenas o pequeno modelo VAD (640 KB) é baixado se a pasta não tiver um.';
+      'Aponte o Fushi para uma pasta com uma exportação do sherpa-onnx (encoder / decoder / joiner, ou um único modelo CTC, mais tokens.txt). Os arquivos permanecem onde estão — apenas o pequeno modelo VAD (640 KB) é baixado se a pasta não tiver um.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Escolher pasta';
   @override
@@ -193280,10 +193280,10 @@ class _StringsRu extends _StringsEn {
       'AnkiConnect переключён на порт ${port}. Перезапустите Anki и повторите попытку.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'Подбирает свободный порт и записывает его и в Hibiki, и в настройки дополнения AnkiConnect. Перезапустите Anki, чтобы изменения вступили в силу.';
+      'Подбирает свободный порт и записывает его и в Fushi, и в настройки дополнения AnkiConnect. Перезапустите Anki, чтобы изменения вступили в силу.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki теперь использует порт ${port}, но настройки дополнения AnkiConnect не найдены. Укажите webBindPort равным ${port} в Anki (Инструменты → Дополнения → AnkiConnect → Настройка) и перезапустите Anki.';
+      'Fushi теперь использует порт ${port}, но настройки дополнения AnkiConnect не найдены. Укажите webBindPort равным ${port} в Anki (Инструменты → Дополнения → AnkiConnect → Настройка) и перезапустите Anki.';
   @override
   String get anki_connect_port_auto_fix_none =>
       'На этом компьютере не найдено свободных портов.';
@@ -203744,13 +203744,13 @@ class _StringsRu extends _StringsEn {
       'Пока нет сопряжённых устройств — сначала выполните сопряжение в «Fushi Interconnect».';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki сообщил, что колода и тип заметок Lapis созданы, но Hibiki не находит их при повторном чтении коллекции. Откройте Anki, убедитесь, что он не занят, и повторите попытку.';
+      'Anki сообщил, что колода и тип заметок Lapis созданы, но Fushi не находит их при повторном чтении коллекции. Откройте Anki, убедитесь, что он не занят, и повторите попытку.';
   @override
   String get anki_lapis_suggest_title =>
       'Anki пока не может создавать карточки';
   @override
   String get anki_lapis_suggest_body =>
-      'Выбранные колода и тип заметок не могут создать карточку, которую примет Anki. Hibiki может добавить свой тип заметок и колоду Lapis и выбрать их за вас.';
+      'Выбранные колода и тип заметок не могут создать карточку, которую примет Anki. Fushi может добавить свой тип заметок и колоду Lapis и выбрать их за вас.';
   @override
   String get anki_lapis_suggest_dismiss => 'Оставить текущие настройки';
   @override
@@ -203885,7 +203885,7 @@ class _StringsRu extends _StringsEn {
       'Добавить локальную модель';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'Укажите Hibiki папку с экспортом sherpa-onnx (encoder / decoder / joiner или одна модель CTC, плюс tokens.txt). Файлы остаются на месте — если в папке нет модели VAD, скачивается только небольшая модель VAD (640 КБ).';
+      'Укажите Fushi папку с экспортом sherpa-onnx (encoder / decoder / joiner или одна модель CTC, плюс tokens.txt). Файлы остаются на месте — если в папке нет модели VAD, скачивается только небольшая модель VAD (640 КБ).';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Выбрать папку';
   @override
@@ -211675,10 +211675,10 @@ class _StringsTh extends _StringsEn {
       'เปลี่ยนพอร์ตของ AnkiConnect เป็น ${port} แล้ว รีสตาร์ท Anki แล้วลองอีกครั้ง';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'เลือกพอร์ตที่ว่างแล้วเขียนลงทั้งใน Hibiki และการตั้งค่าส่วนเสริม AnkiConnect รีสตาร์ท Anki เพื่อให้มีผล';
+      'เลือกพอร์ตที่ว่างแล้วเขียนลงทั้งใน Fushi และการตั้งค่าส่วนเสริม AnkiConnect รีสตาร์ท Anki เพื่อให้มีผล';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'ตอนนี้ Hibiki ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
+      'ตอนนี้ Fushi ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
   @override
   String get anki_connect_port_auto_fix_none => 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
   @override
@@ -221927,12 +221927,12 @@ class _StringsTh extends _StringsEn {
       'ยังไม่มีอุปกรณ์ที่จับคู่ — โปรดตั้งค่าการจับคู่ใน «Fushi Interconnect» ก่อน';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki แจ้งว่าสร้างสำรับและประเภทโน้ต Lapis แล้ว แต่ยังไม่พบเมื่อ Hibiki อ่านคอลเลกชันกลับมา เปิด Anki ตรวจสอบว่าไม่ได้ยุ่งอยู่ แล้วลองอีกครั้ง';
+      'Anki แจ้งว่าสร้างสำรับและประเภทโน้ต Lapis แล้ว แต่ยังไม่พบเมื่อ Fushi อ่านคอลเลกชันกลับมา เปิด Anki ตรวจสอบว่าไม่ได้ยุ่งอยู่ แล้วลองอีกครั้ง';
   @override
   String get anki_lapis_suggest_title => 'Anki ยังสร้างการ์ดไม่ได้';
   @override
   String get anki_lapis_suggest_body =>
-      'สำรับและประเภทโน้ตที่เลือกไม่สามารถสร้างการ์ดที่ Anki ยอมรับได้ Hibiki เพิ่มประเภทโน้ตและสำรับ Lapis ให้และเลือกให้คุณได้';
+      'สำรับและประเภทโน้ตที่เลือกไม่สามารถสร้างการ์ดที่ Anki ยอมรับได้ Fushi เพิ่มประเภทโน้ตและสำรับ Lapis ให้และเลือกให้คุณได้';
   @override
   String get anki_lapis_suggest_dismiss => 'คงการตั้งค่าปัจจุบัน';
   @override
@@ -222064,7 +222064,7 @@ class _StringsTh extends _StringsEn {
   String get audiobook_transcribe_model_custom_title => 'เพิ่มโมเดลในเครื่อง';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'ชี้ Hibiki ไปยังโฟลเดอร์ที่มี sherpa-onnx export (encoder / decoder / joiner หรือโมเดล CTC เดี่ยว พร้อม tokens.txt) ไฟล์จะอยู่ที่เดิม — จะดึงเฉพาะโมเดล VAD ขนาดเล็ก (640 KB) หากโฟลเดอร์ไม่มี';
+      'ชี้ Fushi ไปยังโฟลเดอร์ที่มี sherpa-onnx export (encoder / decoder / joiner หรือโมเดล CTC เดี่ยว พร้อม tokens.txt) ไฟล์จะอยู่ที่เดิม — จะดึงเฉพาะโมเดล VAD ขนาดเล็ก (640 KB) หากโฟลเดอร์ไม่มี';
   @override
   String get audiobook_transcribe_model_custom_pick => 'เลือกโฟลเดอร์';
   @override
@@ -229757,10 +229757,10 @@ class _StringsTr extends _StringsEn {
       'AnkiConnect artık ${port} bağlantı noktasını kullanıyor. Anki\'yi yeniden başlatıp tekrar deneyin.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'Boş bir bağlantı noktası seçip hem Hibiki\'ye hem de AnkiConnect eklenti yapılandırmasına yazar. Uygulamak için Anki\'yi yeniden başlatın.';
+      'Boş bir bağlantı noktası seçip hem Fushi\'ye hem de AnkiConnect eklenti yapılandırmasına yazar. Uygulamak için Anki\'yi yeniden başlatın.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki artık ${port} bağlantı noktasını kullanıyor ancak AnkiConnect eklenti yapılandırması bulunamadı. Anki\'de (Araçlar → Eklentiler → AnkiConnect → Yapılandırma) webBindPort değerini de ${port} yapıp Anki\'yi yeniden başlatın.';
+      'Fushi artık ${port} bağlantı noktasını kullanıyor ancak AnkiConnect eklenti yapılandırması bulunamadı. Anki\'de (Araçlar → Eklentiler → AnkiConnect → Yapılandırma) webBindPort değerini de ${port} yapıp Anki\'yi yeniden başlatın.';
   @override
   String get anki_connect_port_auto_fix_none =>
       'Bu makinede boş bağlantı noktası bulunamadı.';
@@ -240137,12 +240137,12 @@ class _StringsTr extends _StringsEn {
       'Henüz eşleştirilmiş cihaz yok — önce "Fushi Interconnect" bölümünden eşleştirmeyi yapın.';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki, Lapis destesi ve not türünün oluşturulduğunu söyledi, ancak Hibiki koleksiyonu geri okuduğunda hâlâ eksikler. Anki\'yi açın, meşgul olmadığından emin olun ve tekrar deneyin.';
+      'Anki, Lapis destesi ve not türünün oluşturulduğunu söyledi, ancak Fushi koleksiyonu geri okuduğunda hâlâ eksikler. Anki\'yi açın, meşgul olmadığından emin olun ve tekrar deneyin.';
   @override
   String get anki_lapis_suggest_title => 'Anki henüz kart oluşturamıyor';
   @override
   String get anki_lapis_suggest_body =>
-      'Seçilen deste ve not türü, Anki\'nin kabul edeceği bir kart üretemiyor. Hibiki, Lapis not türünü ve destesini ekleyip sizin için seçebilir.';
+      'Seçilen deste ve not türü, Anki\'nin kabul edeceği bir kart üretemiyor. Fushi, Lapis not türünü ve destesini ekleyip sizin için seçebilir.';
   @override
   String get anki_lapis_suggest_dismiss => 'Mevcut kurulumu koru';
   @override
@@ -240273,7 +240273,7 @@ class _StringsTr extends _StringsEn {
   String get audiobook_transcribe_model_custom_title => 'Yerel model ekle';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'Hibiki\'yi bir sherpa-onnx dışa aktarımı içeren klasöre yönlendirin (encoder / decoder / joiner veya tek bir CTC modeli, artı tokens.txt). Dosyalar bulundukları yerde kalır — klasörde yoksa yalnızca küçük VAD modeli (640 KB) indirilir.';
+      'Fushi\'yi bir sherpa-onnx dışa aktarımı içeren klasöre yönlendirin (encoder / decoder / joiner veya tek bir CTC modeli, artı tokens.txt). Dosyalar bulundukları yerde kalır — klasörde yoksa yalnızca küçük VAD modeli (640 KB) indirilir.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Klasör seç';
   @override
@@ -248037,10 +248037,10 @@ class _StringsVi extends _StringsEn {
       'AnkiConnect đã chuyển sang cổng ${port}. Hãy khởi động lại Anki rồi thử lại.';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      'Chọn một cổng còn trống rồi ghi vào cả Hibiki lẫn cấu hình tiện ích AnkiConnect. Khởi động lại Anki để áp dụng.';
+      'Chọn một cổng còn trống rồi ghi vào cả Fushi lẫn cấu hình tiện ích AnkiConnect. Khởi động lại Anki để áp dụng.';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki hiện dùng cổng ${port}, nhưng không tìm thấy cấu hình tiện ích AnkiConnect. Hãy đặt webBindPort thành ${port} trong Anki (Công cụ → Tiện ích → AnkiConnect → Cấu hình) rồi khởi động lại Anki.';
+      'Fushi hiện dùng cổng ${port}, nhưng không tìm thấy cấu hình tiện ích AnkiConnect. Hãy đặt webBindPort thành ${port} trong Anki (Công cụ → Tiện ích → AnkiConnect → Cấu hình) rồi khởi động lại Anki.';
   @override
   String get anki_connect_port_auto_fix_none =>
       'Không tìm thấy cổng nào còn trống trên máy này.';
@@ -258371,12 +258371,12 @@ class _StringsVi extends _StringsEn {
       'Chưa ghép nối thiết bị nào — hãy thiết lập ghép nối trong «Fushi Interconnect» trước.';
   @override
   String get anki_create_lapis_not_found =>
-      'Anki báo đã tạo bộ thẻ và loại ghi chú Lapis, nhưng chúng vẫn bị thiếu khi Hibiki đọc lại bộ sưu tập. Hãy mở Anki, đảm bảo nó không bận, rồi thử lại.';
+      'Anki báo đã tạo bộ thẻ và loại ghi chú Lapis, nhưng chúng vẫn bị thiếu khi Fushi đọc lại bộ sưu tập. Hãy mở Anki, đảm bảo nó không bận, rồi thử lại.';
   @override
   String get anki_lapis_suggest_title => 'Anki chưa thể tạo thẻ';
   @override
   String get anki_lapis_suggest_body =>
-      'Bộ thẻ và loại ghi chú đã chọn không tạo được thẻ mà Anki chấp nhận. Hibiki có thể thêm loại ghi chú và bộ thẻ Lapis rồi chọn giúp bạn.';
+      'Bộ thẻ và loại ghi chú đã chọn không tạo được thẻ mà Anki chấp nhận. Fushi có thể thêm loại ghi chú và bộ thẻ Lapis rồi chọn giúp bạn.';
   @override
   String get anki_lapis_suggest_dismiss => 'Giữ thiết lập hiện tại';
   @override
@@ -258508,7 +258508,7 @@ class _StringsVi extends _StringsEn {
   String get audiobook_transcribe_model_custom_title => 'Thêm mô hình cục bộ';
   @override
   String get audiobook_transcribe_model_custom_intro =>
-      'Trỏ Hibiki tới một thư mục chứa bản xuất sherpa-onnx (encoder / decoder / joiner, hoặc một mô hình CTC duy nhất, cùng tokens.txt). Các tệp giữ nguyên tại chỗ — chỉ mô hình VAD nhỏ (640 KB) được tải về nếu thư mục chưa có.';
+      'Trỏ Fushi tới một thư mục chứa bản xuất sherpa-onnx (encoder / decoder / joiner, hoặc một mô hình CTC duy nhất, cùng tokens.txt). Các tệp giữ nguyên tại chỗ — chỉ mô hình VAD nhỏ (640 KB) được tải về nếu thư mục chưa có.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Chọn thư mục';
   @override
@@ -266220,10 +266220,10 @@ class _StringsZhCn extends _StringsEn {
       'AnkiConnect 端口已改为 ${port}。请重启 Anki 后重试。';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      '自动挑一个空闲端口，同时写进 Hibiki 和 Anki 的 AnkiConnect 插件配置。改完重启 Anki 生效。';
+      '自动挑一个空闲端口，同时写进 Fushi 和 Anki 的 AnkiConnect 插件配置。改完重启 Anki 生效。';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
+      'Fushi 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
   @override
   String get anki_connect_port_auto_fix_none => '本机没有找到空闲端口。';
   @override
@@ -275710,7 +275710,7 @@ class _StringsZhCn extends _StringsEn {
   String get anki_lapis_suggest_title => '现在还制不出卡';
   @override
   String get anki_lapis_suggest_body =>
-      '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
+      '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Fushi 添加 Lapis 笔记类型和卡组，并直接选用它们。';
   @override
   String get anki_lapis_suggest_dismiss => '保持当前设置';
   @override
@@ -282846,10 +282846,10 @@ class _StringsZhHk extends _StringsEn {
       'AnkiConnect 連接埠已改為 ${port}。請重啟 Anki 後再試。';
   @override
   String get anki_connect_port_auto_fix_hint =>
-      '自動挑一個空閒的連接埠，同時寫進 Hibiki 和 Anki 的 AnkiConnect 外掛設定。改完重啟 Anki 生效。';
+      '自動挑一個空閒的連接埠，同時寫進 Fushi 和 Anki 的 AnkiConnect 外掛設定。改完重啟 Anki 生效。';
   @override
   String anki_connect_port_auto_fix_manual({required Object port}) =>
-      'Hibiki 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
+      'Fushi 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
   @override
   String get anki_connect_port_auto_fix_none => '本機找不到空閒的連接埠。';
   @override
@@ -292348,7 +292348,7 @@ class _StringsZhHk extends _StringsEn {
   String get anki_lapis_suggest_title => '現在還制不出卡';
   @override
   String get anki_lapis_suggest_body =>
-      '當前選中的牌組和筆記類型做不出 Anki 會接收的卡片。可以讓 Hibiki 新增 Lapis 筆記類型和卡組，並直接選用它們。';
+      '當前選中的牌組和筆記類型做不出 Anki 會接收的卡片。可以讓 Fushi 新增 Lapis 筆記類型和卡組，並直接選用它們。';
   @override
   String get anki_lapis_suggest_dismiss => '保持當前設定';
   @override
@@ -299682,10 +299682,10 @@ extension on _StringsEn {
         return ({required Object port}) =>
             'Switched AnkiConnect to port ${port}. Restart Anki to apply.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'Picks a free port and writes it to both Hibiki and the AnkiConnect add-on config. Restart Anki to apply.';
+        return 'Picks a free port and writes it to both Fushi and the AnkiConnect add-on config. Restart Anki to apply.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
+            'Fushi now uses port ${port}, but the AnkiConnect add-on config was not found. Set webBindPort to ${port} in Anki (Tools -> Add-ons -> AnkiConnect -> Config), then restart Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'No free port found on this machine.';
       case 'anki_connect_use_on_mobile':
@@ -308642,11 +308642,11 @@ extension on _StringsEn {
       case 'sync_err_not_paired':
         return 'No paired device yet — set up pairing in Fushi Interconnect first.';
       case 'anki_create_lapis_not_found':
-        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Fushi reads the collection back. Open Anki, make sure it is not busy, and try again.';
       case 'anki_lapis_suggest_title':
         return 'Anki can\'t make cards yet';
       case 'anki_lapis_suggest_body':
-        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Fushi can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
       case 'reader_vn_settings':
@@ -308761,7 +308761,7 @@ extension on _StringsEn {
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
+        return 'Point Fushi at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -315198,10 +315198,10 @@ extension on _StringsAr {
         return ({required Object port}) =>
             'تم تغيير منفذ AnkiConnect إلى ${port}. أعد تشغيل Anki ثم حاول مجددًا.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'يختار منفذًا حرًا ويكتبه في Hibiki وفي إعدادات إضافة AnkiConnect معًا. أعد تشغيل Anki لتطبيق التغيير.';
+        return 'يختار منفذًا حرًا ويكتبه في Fushi وفي إعدادات إضافة AnkiConnect معًا. أعد تشغيل Anki لتطبيق التغيير.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'يستخدم Hibiki الآن المنفذ ${port}، لكن لم يُعثر على إعدادات إضافة AnkiConnect. اضبط webBindPort على ${port} في Anki (أدوات ← الإضافات ← AnkiConnect ← إعداد) ثم أعد تشغيل Anki.';
+            'يستخدم Fushi الآن المنفذ ${port}، لكن لم يُعثر على إعدادات إضافة AnkiConnect. اضبط webBindPort على ${port} في Anki (أدوات ← الإضافات ← AnkiConnect ← إعداد) ثم أعد تشغيل Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'لم يُعثر على أي منفذ حر على هذا الجهاز.';
       case 'anki_connect_use_on_mobile':
@@ -324152,11 +324152,11 @@ extension on _StringsAr {
       case 'sync_err_not_paired':
         return 'لم يتم إقران أي جهاز بعد — أعدّ الإقتران أولاً من «Fushi Interconnect».';
       case 'anki_create_lapis_not_found':
-        return 'ذكر Anki أنه أنشأ مجموعة Lapis ونوع الملاحظة، لكنهما لا يزالان مفقودين عندما يقرأ Hibiki المجموعة مجددًا. افتح Anki وتأكد من أنه ليس مشغولًا ثم حاول مرة أخرى.';
+        return 'ذكر Anki أنه أنشأ مجموعة Lapis ونوع الملاحظة، لكنهما لا يزالان مفقودين عندما يقرأ Fushi المجموعة مجددًا. افتح Anki وتأكد من أنه ليس مشغولًا ثم حاول مرة أخرى.';
       case 'anki_lapis_suggest_title':
         return 'لا يستطيع Anki إنشاء البطاقات بعد';
       case 'anki_lapis_suggest_body':
-        return 'لا يمكن للمجموعة ونوع الملاحظة المحددين إنتاج بطاقة يقبلها Anki. يستطيع Hibiki إضافة نوع ملاحظة Lapis ومجموعته وتحديدهما لك.';
+        return 'لا يمكن للمجموعة ونوع الملاحظة المحددين إنتاج بطاقة يقبلها Anki. يستطيع Fushi إضافة نوع ملاحظة Lapis ومجموعته وتحديدهما لك.';
       case 'anki_lapis_suggest_dismiss':
         return 'الإبقاء على الإعداد الحالي';
       case 'reader_vn_settings':
@@ -324272,7 +324272,7 @@ extension on _StringsAr {
       case 'audiobook_transcribe_model_custom_title':
         return 'إضافة نموذج محلي';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'وجّه Hibiki إلى مجلد يحتوي تصدير sherpa-onnx (المشفّر / المفكك / الرابط، أو نموذج CTC واحد، مع tokens.txt). تبقى الملفات في مكانها — يُجلب فقط نموذج VAD الصغير (640 كيلوبايت) إذا لم يكن في المجلد.';
+        return 'وجّه Fushi إلى مجلد يحتوي تصدير sherpa-onnx (المشفّر / المفكك / الرابط، أو نموذج CTC واحد، مع tokens.txt). تبقى الملفات في مكانها — يُجلب فقط نموذج VAD الصغير (640 كيلوبايت) إذا لم يكن في المجلد.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'اختيار مجلد';
       case 'audiobook_transcribe_model_custom_name':
@@ -330710,10 +330710,10 @@ extension on _StringsDe {
         return ({required Object port}) =>
             'AnkiConnect nutzt jetzt Port ${port}. Starte Anki neu und versuche es erneut.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'Wählt einen freien Port und trägt ihn sowohl in Hibiki als auch in die AnkiConnect-Add-on-Konfiguration ein. Starte Anki neu, damit es wirkt.';
+        return 'Wählt einen freien Port und trägt ihn sowohl in Fushi als auch in die AnkiConnect-Add-on-Konfiguration ein. Starte Anki neu, damit es wirkt.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki nutzt jetzt Port ${port}, aber die AnkiConnect-Add-on-Konfiguration wurde nicht gefunden. Setze webBindPort in Anki (Werkzeuge → Add-ons → AnkiConnect → Konfiguration) ebenfalls auf ${port} und starte Anki neu.';
+            'Fushi nutzt jetzt Port ${port}, aber die AnkiConnect-Add-on-Konfiguration wurde nicht gefunden. Setze webBindPort in Anki (Werkzeuge → Add-ons → AnkiConnect → Konfiguration) ebenfalls auf ${port} und starte Anki neu.';
       case 'anki_connect_port_auto_fix_none':
         return 'Auf diesem Rechner wurde kein freier Port gefunden.';
       case 'anki_connect_use_on_mobile':
@@ -339720,11 +339720,11 @@ extension on _StringsDe {
       case 'sync_err_not_paired':
         return 'Noch kein Gerät gekoppelt — richten Sie die Kopplung zuerst unter „Fushi Interconnect“ ein.';
       case 'anki_create_lapis_not_found':
-        return 'Anki meldete, dass der Lapis-Stapel und -Notiztyp erstellt wurden, doch beim erneuten Lesen der Sammlung durch Hibiki fehlen sie noch. Öffne Anki, stelle sicher, dass es nicht beschäftigt ist, und versuche es erneut.';
+        return 'Anki meldete, dass der Lapis-Stapel und -Notiztyp erstellt wurden, doch beim erneuten Lesen der Sammlung durch Fushi fehlen sie noch. Öffne Anki, stelle sicher, dass es nicht beschäftigt ist, und versuche es erneut.';
       case 'anki_lapis_suggest_title':
         return 'Anki kann noch keine Karten erstellen';
       case 'anki_lapis_suggest_body':
-        return 'Mit dem gewählten Stapel und Notiztyp lässt sich keine Karte erzeugen, die Anki akzeptiert. Hibiki kann seinen Lapis-Notiztyp und -Stapel hinzufügen und für dich auswählen.';
+        return 'Mit dem gewählten Stapel und Notiztyp lässt sich keine Karte erzeugen, die Anki akzeptiert. Fushi kann seinen Lapis-Notiztyp und -Stapel hinzufügen und für dich auswählen.';
       case 'anki_lapis_suggest_dismiss':
         return 'Aktuelle Einrichtung beibehalten';
       case 'reader_vn_settings':
@@ -339841,7 +339841,7 @@ extension on _StringsDe {
       case 'audiobook_transcribe_model_custom_title':
         return 'Lokales Modell hinzufügen';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'Verweise Hibiki auf einen Ordner mit einem sherpa-onnx-Export (Encoder / Decoder / Joiner oder ein einzelnes CTC-Modell, plus tokens.txt). Die Dateien bleiben, wo sie sind – nur das kleine VAD-Modell (640 KB) wird geladen, falls der Ordner keines enthält.';
+        return 'Verweise Fushi auf einen Ordner mit einem sherpa-onnx-Export (Encoder / Decoder / Joiner oder ein einzelnes CTC-Modell, plus tokens.txt). Die Dateien bleiben, wo sie sind – nur das kleine VAD-Modell (640 KB) wird geladen, falls der Ordner keines enthält.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Ordner wählen';
       case 'audiobook_transcribe_model_custom_name':
@@ -346296,10 +346296,10 @@ extension on _StringsEs {
         return ({required Object port}) =>
             'AnkiConnect ahora usa el puerto ${port}. Reinicia Anki y vuelve a intentarlo.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'Elige un puerto libre y lo escribe tanto en Hibiki como en la configuración del complemento AnkiConnect. Reinicia Anki para aplicarlo.';
+        return 'Elige un puerto libre y lo escribe tanto en Fushi como en la configuración del complemento AnkiConnect. Reinicia Anki para aplicarlo.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki ahora usa el puerto ${port}, pero no se encontró la configuración del complemento AnkiConnect. Pon webBindPort en ${port} dentro de Anki (Herramientas → Complementos → AnkiConnect → Configuración) y reinicia Anki.';
+            'Fushi ahora usa el puerto ${port}, pero no se encontró la configuración del complemento AnkiConnect. Pon webBindPort en ${port} dentro de Anki (Herramientas → Complementos → AnkiConnect → Configuración) y reinicia Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'No se encontró ningún puerto libre en este equipo.';
       case 'anki_connect_use_on_mobile':
@@ -355293,11 +355293,11 @@ extension on _StringsEs {
       case 'sync_err_not_paired':
         return 'Aún no hay ningún dispositivo emparejado: configura el emparejamiento en «Fushi Interconnect» primero.';
       case 'anki_create_lapis_not_found':
-        return 'Anki indicó que se crearon el mazo y el tipo de nota Lapis, pero siguen sin aparecer cuando Hibiki vuelve a leer la colección. Abre Anki, asegúrate de que no esté ocupado e inténtalo de nuevo.';
+        return 'Anki indicó que se crearon el mazo y el tipo de nota Lapis, pero siguen sin aparecer cuando Fushi vuelve a leer la colección. Abre Anki, asegúrate de que no esté ocupado e inténtalo de nuevo.';
       case 'anki_lapis_suggest_title':
         return 'Anki aún no puede crear tarjetas';
       case 'anki_lapis_suggest_body':
-        return 'El mazo y el tipo de nota seleccionados no pueden producir una tarjeta que Anki acepte. Hibiki puede añadir su tipo de nota y mazo Lapis y seleccionarlos por ti.';
+        return 'El mazo y el tipo de nota seleccionados no pueden producir una tarjeta que Anki acepte. Fushi puede añadir su tipo de nota y mazo Lapis y seleccionarlos por ti.';
       case 'anki_lapis_suggest_dismiss':
         return 'Mantener la configuración actual';
       case 'reader_vn_settings':
@@ -355414,7 +355414,7 @@ extension on _StringsEs {
       case 'audiobook_transcribe_model_custom_title':
         return 'Añadir un modelo local';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'Indica a Hibiki una carpeta con una exportación de sherpa-onnx (encoder / decoder / joiner, o un único modelo CTC, más tokens.txt). Los archivos se quedan donde están; solo se descarga el pequeño modelo VAD (640 KB) si la carpeta no tiene ninguno.';
+        return 'Indica a Fushi una carpeta con una exportación de sherpa-onnx (encoder / decoder / joiner, o un único modelo CTC, más tokens.txt). Los archivos se quedan donde están; solo se descarga el pequeño modelo VAD (640 KB) si la carpeta no tiene ninguno.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Elegir carpeta';
       case 'audiobook_transcribe_model_custom_name':
@@ -361866,10 +361866,10 @@ extension on _StringsFr {
         return ({required Object port}) =>
             'AnkiConnect utilise désormais le port ${port}. Redémarrez Anki puis réessayez.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'Choisit un port libre et l\'écrit à la fois dans Hibiki et dans la configuration du module AnkiConnect. Redémarrez Anki pour l\'appliquer.';
+        return 'Choisit un port libre et l\'écrit à la fois dans Fushi et dans la configuration du module AnkiConnect. Redémarrez Anki pour l\'appliquer.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki utilise désormais le port ${port}, mais la configuration du module AnkiConnect est introuvable. Définissez webBindPort sur ${port} dans Anki (Outils → Modules complémentaires → AnkiConnect → Configuration), puis redémarrez Anki.';
+            'Fushi utilise désormais le port ${port}, mais la configuration du module AnkiConnect est introuvable. Définissez webBindPort sur ${port} dans Anki (Outils → Modules complémentaires → AnkiConnect → Configuration), puis redémarrez Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Aucun port libre trouvé sur cette machine.';
       case 'anki_connect_use_on_mobile':
@@ -370875,11 +370875,11 @@ extension on _StringsFr {
       case 'sync_err_not_paired':
         return 'Aucun appareil associé pour l\'instant — configurez d\'abord l\'association dans « Fushi Interconnect ».';
       case 'anki_create_lapis_not_found':
-        return 'Anki a indiqué que le paquet et le type de note Lapis avaient été créés, mais ils sont toujours absents quand Hibiki relit la collection. Ouvrez Anki, assurez-vous qu\'il n\'est pas occupé, puis réessayez.';
+        return 'Anki a indiqué que le paquet et le type de note Lapis avaient été créés, mais ils sont toujours absents quand Fushi relit la collection. Ouvrez Anki, assurez-vous qu\'il n\'est pas occupé, puis réessayez.';
       case 'anki_lapis_suggest_title':
         return 'Anki ne peut pas encore créer de cartes';
       case 'anki_lapis_suggest_body':
-        return 'Le paquet et le type de note sélectionnés ne peuvent pas produire une carte qu\'Anki acceptera. Hibiki peut ajouter son type de note et son paquet Lapis et les sélectionner pour vous.';
+        return 'Le paquet et le type de note sélectionnés ne peuvent pas produire une carte qu\'Anki acceptera. Fushi peut ajouter son type de note et son paquet Lapis et les sélectionner pour vous.';
       case 'anki_lapis_suggest_dismiss':
         return 'Garder la configuration actuelle';
       case 'reader_vn_settings':
@@ -370996,7 +370996,7 @@ extension on _StringsFr {
       case 'audiobook_transcribe_model_custom_title':
         return 'Ajouter un modèle local';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'Indiquez à Hibiki un dossier contenant un export sherpa-onnx (encoder / decoder / joiner, ou un seul modèle CTC, plus tokens.txt). Les fichiers restent où ils sont — seul le petit modèle VAD (640 Ko) est téléchargé si le dossier n\'en contient pas.';
+        return 'Indiquez à Fushi un dossier contenant un export sherpa-onnx (encoder / decoder / joiner, ou un seul modèle CTC, plus tokens.txt). Les fichiers restent où ils sont — seul le petit modèle VAD (640 Ko) est téléchargé si le dossier n\'en contient pas.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choisir un dossier';
       case 'audiobook_transcribe_model_custom_name':
@@ -377453,10 +377453,10 @@ extension on _StringsId {
         return ({required Object port}) =>
             'AnkiConnect kini memakai port ${port}. Mulai ulang Anki lalu coba lagi.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'Memilih port kosong lalu menuliskannya ke Hibiki dan ke konfigurasi add-on AnkiConnect. Mulai ulang Anki agar berlaku.';
+        return 'Memilih port kosong lalu menuliskannya ke Fushi dan ke konfigurasi add-on AnkiConnect. Mulai ulang Anki agar berlaku.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki kini memakai port ${port}, tetapi konfigurasi add-on AnkiConnect tidak ditemukan. Setel webBindPort ke ${port} di Anki (Alat → Add-on → AnkiConnect → Konfigurasi), lalu mulai ulang Anki.';
+            'Fushi kini memakai port ${port}, tetapi konfigurasi add-on AnkiConnect tidak ditemukan. Setel webBindPort ke ${port} di Anki (Alat → Add-on → AnkiConnect → Konfigurasi), lalu mulai ulang Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Tidak ditemukan port kosong di komputer ini.';
       case 'anki_connect_use_on_mobile':
@@ -386423,11 +386423,11 @@ extension on _StringsId {
       case 'sync_err_not_paired':
         return 'Belum ada perangkat yang dipasangkan — atur pemasangan di "Fushi Interconnect" terlebih dahulu.';
       case 'anki_create_lapis_not_found':
-        return 'Anki menyatakan dek dan tipe catatan Lapis telah dibuat, tetapi keduanya masih hilang saat Hibiki membaca koleksi kembali. Buka Anki, pastikan tidak sibuk, lalu coba lagi.';
+        return 'Anki menyatakan dek dan tipe catatan Lapis telah dibuat, tetapi keduanya masih hilang saat Fushi membaca koleksi kembali. Buka Anki, pastikan tidak sibuk, lalu coba lagi.';
       case 'anki_lapis_suggest_title':
         return 'Anki belum dapat membuat kartu';
       case 'anki_lapis_suggest_body':
-        return 'Dek dan tipe catatan yang dipilih tidak dapat menghasilkan kartu yang diterima Anki. Hibiki dapat menambahkan tipe catatan dan dek Lapis miliknya lalu memilihnya untuk Anda.';
+        return 'Dek dan tipe catatan yang dipilih tidak dapat menghasilkan kartu yang diterima Anki. Fushi dapat menambahkan tipe catatan dan dek Lapis miliknya lalu memilihnya untuk Anda.';
       case 'anki_lapis_suggest_dismiss':
         return 'Pertahankan pengaturan saat ini';
       case 'reader_vn_settings':
@@ -386543,7 +386543,7 @@ extension on _StringsId {
       case 'audiobook_transcribe_model_custom_title':
         return 'Tambah model lokal';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'Arahkan Hibiki ke folder berisi ekspor sherpa-onnx (encoder / decoder / joiner, atau satu model CTC, plus tokens.txt). File tetap di tempatnya — hanya model VAD kecil (640 KB) yang diambil jika folder tidak memilikinya.';
+        return 'Arahkan Fushi ke folder berisi ekspor sherpa-onnx (encoder / decoder / joiner, atau satu model CTC, plus tokens.txt). File tetap di tempatnya — hanya model VAD kecil (640 KB) yang diambil jika folder tidak memilikinya.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Pilih folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -392984,10 +392984,10 @@ extension on _StringsIt {
         return ({required Object port}) =>
             'AnkiConnect ora usa la porta ${port}. Riavvia Anki e riprova.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'Sceglie una porta libera e la scrive sia in Hibiki sia nella configurazione del componente aggiuntivo AnkiConnect. Riavvia Anki per applicarla.';
+        return 'Sceglie una porta libera e la scrive sia in Fushi sia nella configurazione del componente aggiuntivo AnkiConnect. Riavvia Anki per applicarla.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki ora usa la porta ${port}, ma la configurazione del componente aggiuntivo AnkiConnect non è stata trovata. Imposta webBindPort su ${port} in Anki (Strumenti → Componenti aggiuntivi → AnkiConnect → Configurazione) e riavvia Anki.';
+            'Fushi ora usa la porta ${port}, ma la configurazione del componente aggiuntivo AnkiConnect non è stata trovata. Imposta webBindPort su ${port} in Anki (Strumenti → Componenti aggiuntivi → AnkiConnect → Configurazione) e riavvia Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Nessuna porta libera trovata su questo computer.';
       case 'anki_connect_use_on_mobile':
@@ -401980,11 +401980,11 @@ extension on _StringsIt {
       case 'sync_err_not_paired':
         return 'Nessun dispositivo associato: configura prima l\'associazione in «Fushi Interconnect».';
       case 'anki_create_lapis_not_found':
-        return 'Anki ha detto che il mazzo e il tipo di nota Lapis sono stati creati, ma risultano ancora mancanti quando Hibiki rilegge la collezione. Apri Anki, assicurati che non sia occupato e riprova.';
+        return 'Anki ha detto che il mazzo e il tipo di nota Lapis sono stati creati, ma risultano ancora mancanti quando Fushi rilegge la collezione. Apri Anki, assicurati che non sia occupato e riprova.';
       case 'anki_lapis_suggest_title':
         return 'Anki non può ancora creare carte';
       case 'anki_lapis_suggest_body':
-        return 'Il mazzo e il tipo di nota selezionati non possono produrre una carta accettata da Anki. Hibiki può aggiungere il suo tipo di nota e mazzo Lapis e selezionarli per te.';
+        return 'Il mazzo e il tipo di nota selezionati non possono produrre una carta accettata da Anki. Fushi può aggiungere il suo tipo di nota e mazzo Lapis e selezionarli per te.';
       case 'anki_lapis_suggest_dismiss':
         return 'Mantieni la configurazione attuale';
       case 'reader_vn_settings':
@@ -402101,7 +402101,7 @@ extension on _StringsIt {
       case 'audiobook_transcribe_model_custom_title':
         return 'Aggiungi un modello locale';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'Indica a Hibiki una cartella con un\'esportazione sherpa-onnx (encoder / decoder / joiner, oppure un singolo modello CTC, più tokens.txt). I file restano dove sono: viene scaricato solo il piccolo modello VAD (640 KB) se la cartella non ne ha uno.';
+        return 'Indica a Fushi una cartella con un\'esportazione sherpa-onnx (encoder / decoder / joiner, oppure un singolo modello CTC, più tokens.txt). I file restano dove sono: viene scaricato solo il piccolo modello VAD (640 KB) se la cartella non ne ha uno.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Scegli cartella';
       case 'audiobook_transcribe_model_custom_name':
@@ -408548,10 +408548,10 @@ extension on _StringsJa {
         return ({required Object port}) =>
             'AnkiConnect のポートを ${port} に変更しました。Anki を再起動してからもう一度お試しください。';
       case 'anki_connect_port_auto_fix_hint':
-        return '空いているポートを選び、Hibiki と Anki の AnkiConnect アドオン設定の両方に書き込みます。反映には Anki の再起動が必要です。';
+        return '空いているポートを選び、Fushi と Anki の AnkiConnect アドオン設定の両方に書き込みます。反映には Anki の再起動が必要です。';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
+            'Fushi はポート ${port} を使うようになりましたが、AnkiConnect のアドオン設定が見つかりませんでした。Anki の「ツール → アドオン → AnkiConnect → 設定」で webBindPort も ${port} にしてから、Anki を再起動してください。';
       case 'anki_connect_port_auto_fix_none':
         return 'このマシンに空いているポートが見つかりませんでした。';
       case 'anki_connect_use_on_mobile':
@@ -417462,11 +417462,11 @@ extension on _StringsJa {
       case 'sync_err_not_paired':
         return 'ペアリング済みの端末がありません。まず「Fushi 互联」でペアリングを行ってください。';
       case 'anki_create_lapis_not_found':
-        return 'Anki は Lapis デッキとノートタイプを作成したと報告しましたが、Hibiki がコレクションを読み戻してもまだ見つかりません。Anki を開いてビジー状態でないことを確認し、もう一度お試しください。';
+        return 'Anki は Lapis デッキとノートタイプを作成したと報告しましたが、Fushi がコレクションを読み戻してもまだ見つかりません。Anki を開いてビジー状態でないことを確認し、もう一度お試しください。';
       case 'anki_lapis_suggest_title':
         return 'まだ Anki でカードを作成できません';
       case 'anki_lapis_suggest_body':
-        return '選択中のデッキとノートタイプでは、Anki が受け付けるカードを作成できません。Hibiki で Lapis ノートタイプとデッキを追加し、自動で選択できます。';
+        return '選択中のデッキとノートタイプでは、Anki が受け付けるカードを作成できません。Fushi で Lapis ノートタイプとデッキを追加し、自動で選択できます。';
       case 'anki_lapis_suggest_dismiss':
         return '現在の設定のままにする';
       case 'reader_vn_settings':
@@ -417581,7 +417581,7 @@ extension on _StringsJa {
       case 'audiobook_transcribe_model_custom_title':
         return 'ローカルモデルを追加';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'sherpa-onnx のエクスポートモデル（encoder / decoder / joiner、または単一の CTC モデルと tokens.txt）が入ったフォルダーを Hibiki に指定します。ファイルは元の場所に残り、フォルダーに VAD モデルがない場合のみ小さな VAD モデル（640 KB）を取得します。';
+        return 'sherpa-onnx のエクスポートモデル（encoder / decoder / joiner、または単一の CTC モデルと tokens.txt）が入ったフォルダーを Fushi に指定します。ファイルは元の場所に残り、フォルダーに VAD モデルがない場合のみ小さな VAD モデル（640 KB）を取得します。';
       case 'audiobook_transcribe_model_custom_pick':
         return 'フォルダーを選択';
       case 'audiobook_transcribe_model_custom_name':
@@ -423989,10 +423989,10 @@ extension on _StringsKo {
         return ({required Object port}) =>
             'AnkiConnect 포트를 ${port}(으)로 변경했습니다. Anki를 다시 시작한 뒤 다시 시도하세요.';
       case 'anki_connect_port_auto_fix_hint':
-        return '비어 있는 포트를 골라 Hibiki와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
+        return '비어 있는 포트를 골라 Fushi와 AnkiConnect 애드온 설정 양쪽에 기록합니다. 적용하려면 Anki를 다시 시작하세요.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
+            'Fushi는 이제 포트 ${port}를 사용하지만 AnkiConnect 애드온 설정을 찾지 못했습니다. Anki의 [도구 → 애드온 → AnkiConnect → 설정]에서 webBindPort도 ${port}로 바꾼 뒤 Anki를 다시 시작하세요.';
       case 'anki_connect_port_auto_fix_none':
         return '이 컴퓨터에서 비어 있는 포트를 찾지 못했습니다.';
       case 'anki_connect_use_on_mobile':
@@ -432905,11 +432905,11 @@ extension on _StringsKo {
       case 'sync_err_not_paired':
         return '아직 페어링된 기기가 없습니다. 먼저 \'Fushi 互联\'에서 페어링을 완료하세요.';
       case 'anki_create_lapis_not_found':
-        return 'Anki가 Lapis 덱과 노트 유형을 만들었다고 응답했지만, Hibiki가 컬렉션을 다시 읽을 때 여전히 없습니다. Anki를 열어 작업 중이 아닌지 확인한 다음 다시 시도하세요.';
+        return 'Anki가 Lapis 덱과 노트 유형을 만들었다고 응답했지만, Fushi가 컬렉션을 다시 읽을 때 여전히 없습니다. Anki를 열어 작업 중이 아닌지 확인한 다음 다시 시도하세요.';
       case 'anki_lapis_suggest_title':
         return 'Anki에서 아직 카드를 만들 수 없습니다';
       case 'anki_lapis_suggest_body':
-        return '선택한 덱과 노트 유형으로는 Anki가 허용하는 카드를 만들 수 없습니다. Hibiki가 Lapis 노트 유형과 덱을 추가하고 자동으로 선택해 줄 수 있습니다.';
+        return '선택한 덱과 노트 유형으로는 Anki가 허용하는 카드를 만들 수 없습니다. Fushi가 Lapis 노트 유형과 덱을 추가하고 자동으로 선택해 줄 수 있습니다.';
       case 'anki_lapis_suggest_dismiss':
         return '현재 설정 유지';
       case 'reader_vn_settings':
@@ -433024,7 +433024,7 @@ extension on _StringsKo {
       case 'audiobook_transcribe_model_custom_title':
         return '로컬 모델 추가';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'sherpa-onnx 내보내기 파일(encoder / decoder / joiner 또는 단일 CTC 모델과 tokens.txt)이 들어 있는 폴더를 Hibiki에 지정하세요. 파일은 원래 위치에 그대로 두며, 폴더에 VAD 모델이 없을 때만 작은 VAD 모델(640 KB)을 받아 옵니다.';
+        return 'sherpa-onnx 내보내기 파일(encoder / decoder / joiner 또는 단일 CTC 모델과 tokens.txt)이 들어 있는 폴더를 Fushi에 지정하세요. 파일은 원래 위치에 그대로 두며, 폴더에 VAD 모델이 없을 때만 작은 VAD 모델(640 KB)을 받아 옵니다.';
       case 'audiobook_transcribe_model_custom_pick':
         return '폴더 선택';
       case 'audiobook_transcribe_model_custom_name':
@@ -439440,10 +439440,10 @@ extension on _StringsNl {
         return ({required Object port}) =>
             'AnkiConnect gebruikt nu poort ${port}. Herstart Anki en probeer het opnieuw.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'Kiest een vrije poort en schrijft die zowel in Hibiki als in de AnkiConnect-add-onconfiguratie. Herstart Anki om het toe te passen.';
+        return 'Kiest een vrije poort en schrijft die zowel in Fushi als in de AnkiConnect-add-onconfiguratie. Herstart Anki om het toe te passen.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki gebruikt nu poort ${port}, maar de AnkiConnect-add-onconfiguratie is niet gevonden. Zet webBindPort in Anki (Extra → Add-ons → AnkiConnect → Configuratie) ook op ${port} en herstart Anki.';
+            'Fushi gebruikt nu poort ${port}, maar de AnkiConnect-add-onconfiguratie is niet gevonden. Zet webBindPort in Anki (Extra → Add-ons → AnkiConnect → Configuratie) ook op ${port} en herstart Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Geen vrije poort gevonden op deze machine.';
       case 'anki_connect_use_on_mobile':
@@ -448432,11 +448432,11 @@ extension on _StringsNl {
       case 'sync_err_not_paired':
         return 'Nog geen gekoppeld apparaat — stel het koppelen eerst in bij \'Fushi Interconnect\'.';
       case 'anki_create_lapis_not_found':
-        return 'Anki meldde dat de Lapis-stapel en het notitietype zijn aangemaakt, maar ze ontbreken nog wanneer Hibiki de collectie teruglees. Open Anki, zorg dat het niet bezig is en probeer het opnieuw.';
+        return 'Anki meldde dat de Lapis-stapel en het notitietype zijn aangemaakt, maar ze ontbreken nog wanneer Fushi de collectie teruglees. Open Anki, zorg dat het niet bezig is en probeer het opnieuw.';
       case 'anki_lapis_suggest_title':
         return 'Anki kan nog geen kaarten maken';
       case 'anki_lapis_suggest_body':
-        return 'De geselecteerde stapel en het notitietype kunnen geen kaart opleveren die Anki accepteert. Hibiki kan zijn Lapis-notitietype en -stapel toevoegen en voor je selecteren.';
+        return 'De geselecteerde stapel en het notitietype kunnen geen kaart opleveren die Anki accepteert. Fushi kan zijn Lapis-notitietype en -stapel toevoegen en voor je selecteren.';
       case 'anki_lapis_suggest_dismiss':
         return 'Huidige opzet behouden';
       case 'reader_vn_settings':
@@ -448553,7 +448553,7 @@ extension on _StringsNl {
       case 'audiobook_transcribe_model_custom_title':
         return 'Lokaal model toevoegen';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'Wijs Hibiki naar een map met een sherpa-onnx-export (encoder / decoder / joiner, of één CTC-model, plus tokens.txt). De bestanden blijven waar ze zijn — alleen het kleine VAD-model (640 KB) wordt opgehaald als de map er geen heeft.';
+        return 'Wijs Fushi naar een map met een sherpa-onnx-export (encoder / decoder / joiner, of één CTC-model, plus tokens.txt). De bestanden blijven waar ze zijn — alleen het kleine VAD-model (640 KB) wordt opgehaald als de map er geen heeft.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Map kiezen';
       case 'audiobook_transcribe_model_custom_name':
@@ -455002,10 +455002,10 @@ extension on _StringsPtBr {
         return ({required Object port}) =>
             'O AnkiConnect agora usa a porta ${port}. Reinicie o Anki e tente novamente.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'Escolhe uma porta livre e a grava tanto no Hibiki quanto na configuração do complemento AnkiConnect. Reinicie o Anki para aplicar.';
+        return 'Escolhe uma porta livre e a grava tanto no Fushi quanto na configuração do complemento AnkiConnect. Reinicie o Anki para aplicar.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'O Hibiki agora usa a porta ${port}, mas a configuração do complemento AnkiConnect não foi encontrada. Defina webBindPort como ${port} no Anki (Ferramentas → Complementos → AnkiConnect → Configuração) e reinicie o Anki.';
+            'O Fushi agora usa a porta ${port}, mas a configuração do complemento AnkiConnect não foi encontrada. Defina webBindPort como ${port} no Anki (Ferramentas → Complementos → AnkiConnect → Configuração) e reinicie o Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Nenhuma porta livre encontrada nesta máquina.';
       case 'anki_connect_use_on_mobile':
@@ -463988,11 +463988,11 @@ extension on _StringsPtBr {
       case 'sync_err_not_paired':
         return 'Nenhum dispositivo pareado ainda — configure o pareamento em "Fushi Interconnect" primeiro.';
       case 'anki_create_lapis_not_found':
-        return 'O Anki disse que o baralho e o tipo de nota Lapis foram criados, mas eles ainda não aparecem quando o Hibiki relê a coleção. Abra o Anki, verifique se ele não está ocupado e tente novamente.';
+        return 'O Anki disse que o baralho e o tipo de nota Lapis foram criados, mas eles ainda não aparecem quando o Fushi relê a coleção. Abra o Anki, verifique se ele não está ocupado e tente novamente.';
       case 'anki_lapis_suggest_title':
         return 'O Anki ainda não consegue criar cartões';
       case 'anki_lapis_suggest_body':
-        return 'O baralho e o tipo de nota selecionados não conseguem gerar um cartão que o Anki aceite. O Hibiki pode adicionar o tipo de nota e o baralho Lapis e selecioná-los para você.';
+        return 'O baralho e o tipo de nota selecionados não conseguem gerar um cartão que o Anki aceite. O Fushi pode adicionar o tipo de nota e o baralho Lapis e selecioná-los para você.';
       case 'anki_lapis_suggest_dismiss':
         return 'Manter configuração atual';
       case 'reader_vn_settings':
@@ -464109,7 +464109,7 @@ extension on _StringsPtBr {
       case 'audiobook_transcribe_model_custom_title':
         return 'Adicionar modelo local';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'Aponte o Hibiki para uma pasta com uma exportação do sherpa-onnx (encoder / decoder / joiner, ou um único modelo CTC, mais tokens.txt). Os arquivos permanecem onde estão — apenas o pequeno modelo VAD (640 KB) é baixado se a pasta não tiver um.';
+        return 'Aponte o Fushi para uma pasta com uma exportação do sherpa-onnx (encoder / decoder / joiner, ou um único modelo CTC, mais tokens.txt). Os arquivos permanecem onde estão — apenas o pequeno modelo VAD (640 KB) é baixado se a pasta não tiver um.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Escolher pasta';
       case 'audiobook_transcribe_model_custom_name':
@@ -470556,10 +470556,10 @@ extension on _StringsRu {
         return ({required Object port}) =>
             'AnkiConnect переключён на порт ${port}. Перезапустите Anki и повторите попытку.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'Подбирает свободный порт и записывает его и в Hibiki, и в настройки дополнения AnkiConnect. Перезапустите Anki, чтобы изменения вступили в силу.';
+        return 'Подбирает свободный порт и записывает его и в Fushi, и в настройки дополнения AnkiConnect. Перезапустите Anki, чтобы изменения вступили в силу.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki теперь использует порт ${port}, но настройки дополнения AnkiConnect не найдены. Укажите webBindPort равным ${port} в Anki (Инструменты → Дополнения → AnkiConnect → Настройка) и перезапустите Anki.';
+            'Fushi теперь использует порт ${port}, но настройки дополнения AnkiConnect не найдены. Укажите webBindPort равным ${port} в Anki (Инструменты → Дополнения → AnkiConnect → Настройка) и перезапустите Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'На этом компьютере не найдено свободных портов.';
       case 'anki_connect_use_on_mobile':
@@ -479549,11 +479549,11 @@ extension on _StringsRu {
       case 'sync_err_not_paired':
         return 'Пока нет сопряжённых устройств — сначала выполните сопряжение в «Fushi Interconnect».';
       case 'anki_create_lapis_not_found':
-        return 'Anki сообщил, что колода и тип заметок Lapis созданы, но Hibiki не находит их при повторном чтении коллекции. Откройте Anki, убедитесь, что он не занят, и повторите попытку.';
+        return 'Anki сообщил, что колода и тип заметок Lapis созданы, но Fushi не находит их при повторном чтении коллекции. Откройте Anki, убедитесь, что он не занят, и повторите попытку.';
       case 'anki_lapis_suggest_title':
         return 'Anki пока не может создавать карточки';
       case 'anki_lapis_suggest_body':
-        return 'Выбранные колода и тип заметок не могут создать карточку, которую примет Anki. Hibiki может добавить свой тип заметок и колоду Lapis и выбрать их за вас.';
+        return 'Выбранные колода и тип заметок не могут создать карточку, которую примет Anki. Fushi может добавить свой тип заметок и колоду Lapis и выбрать их за вас.';
       case 'anki_lapis_suggest_dismiss':
         return 'Оставить текущие настройки';
       case 'reader_vn_settings':
@@ -479670,7 +479670,7 @@ extension on _StringsRu {
       case 'audiobook_transcribe_model_custom_title':
         return 'Добавить локальную модель';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'Укажите Hibiki папку с экспортом sherpa-onnx (encoder / decoder / joiner или одна модель CTC, плюс tokens.txt). Файлы остаются на месте — если в папке нет модели VAD, скачивается только небольшая модель VAD (640 КБ).';
+        return 'Укажите Fushi папку с экспортом sherpa-onnx (encoder / decoder / joiner или одна модель CTC, плюс tokens.txt). Файлы остаются на месте — если в папке нет модели VAD, скачивается только небольшая модель VAD (640 КБ).';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Выбрать папку';
       case 'audiobook_transcribe_model_custom_name':
@@ -486115,10 +486115,10 @@ extension on _StringsTh {
         return ({required Object port}) =>
             'เปลี่ยนพอร์ตของ AnkiConnect เป็น ${port} แล้ว รีสตาร์ท Anki แล้วลองอีกครั้ง';
       case 'anki_connect_port_auto_fix_hint':
-        return 'เลือกพอร์ตที่ว่างแล้วเขียนลงทั้งใน Hibiki และการตั้งค่าส่วนเสริม AnkiConnect รีสตาร์ท Anki เพื่อให้มีผล';
+        return 'เลือกพอร์ตที่ว่างแล้วเขียนลงทั้งใน Fushi และการตั้งค่าส่วนเสริม AnkiConnect รีสตาร์ท Anki เพื่อให้มีผล';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'ตอนนี้ Hibiki ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
+            'ตอนนี้ Fushi ใช้พอร์ต ${port} แล้ว แต่ไม่พบการตั้งค่าส่วนเสริม AnkiConnect โปรดตั้ง webBindPort เป็น ${port} ใน Anki (เครื่องมือ → ส่วนเสริม → AnkiConnect → การตั้งค่า) แล้วรีสตาร์ท Anki';
       case 'anki_connect_port_auto_fix_none':
         return 'ไม่พบพอร์ตที่ว่างบนเครื่องนี้';
       case 'anki_connect_use_on_mobile':
@@ -495074,11 +495074,11 @@ extension on _StringsTh {
       case 'sync_err_not_paired':
         return 'ยังไม่มีอุปกรณ์ที่จับคู่ — โปรดตั้งค่าการจับคู่ใน «Fushi Interconnect» ก่อน';
       case 'anki_create_lapis_not_found':
-        return 'Anki แจ้งว่าสร้างสำรับและประเภทโน้ต Lapis แล้ว แต่ยังไม่พบเมื่อ Hibiki อ่านคอลเลกชันกลับมา เปิด Anki ตรวจสอบว่าไม่ได้ยุ่งอยู่ แล้วลองอีกครั้ง';
+        return 'Anki แจ้งว่าสร้างสำรับและประเภทโน้ต Lapis แล้ว แต่ยังไม่พบเมื่อ Fushi อ่านคอลเลกชันกลับมา เปิด Anki ตรวจสอบว่าไม่ได้ยุ่งอยู่ แล้วลองอีกครั้ง';
       case 'anki_lapis_suggest_title':
         return 'Anki ยังสร้างการ์ดไม่ได้';
       case 'anki_lapis_suggest_body':
-        return 'สำรับและประเภทโน้ตที่เลือกไม่สามารถสร้างการ์ดที่ Anki ยอมรับได้ Hibiki เพิ่มประเภทโน้ตและสำรับ Lapis ให้และเลือกให้คุณได้';
+        return 'สำรับและประเภทโน้ตที่เลือกไม่สามารถสร้างการ์ดที่ Anki ยอมรับได้ Fushi เพิ่มประเภทโน้ตและสำรับ Lapis ให้และเลือกให้คุณได้';
       case 'anki_lapis_suggest_dismiss':
         return 'คงการตั้งค่าปัจจุบัน';
       case 'reader_vn_settings':
@@ -495194,7 +495194,7 @@ extension on _StringsTh {
       case 'audiobook_transcribe_model_custom_title':
         return 'เพิ่มโมเดลในเครื่อง';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'ชี้ Hibiki ไปยังโฟลเดอร์ที่มี sherpa-onnx export (encoder / decoder / joiner หรือโมเดล CTC เดี่ยว พร้อม tokens.txt) ไฟล์จะอยู่ที่เดิม — จะดึงเฉพาะโมเดล VAD ขนาดเล็ก (640 KB) หากโฟลเดอร์ไม่มี';
+        return 'ชี้ Fushi ไปยังโฟลเดอร์ที่มี sherpa-onnx export (encoder / decoder / joiner หรือโมเดล CTC เดี่ยว พร้อม tokens.txt) ไฟล์จะอยู่ที่เดิม — จะดึงเฉพาะโมเดล VAD ขนาดเล็ก (640 KB) หากโฟลเดอร์ไม่มี';
       case 'audiobook_transcribe_model_custom_pick':
         return 'เลือกโฟลเดอร์';
       case 'audiobook_transcribe_model_custom_name':
@@ -501630,10 +501630,10 @@ extension on _StringsTr {
         return ({required Object port}) =>
             'AnkiConnect artık ${port} bağlantı noktasını kullanıyor. Anki\'yi yeniden başlatıp tekrar deneyin.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'Boş bir bağlantı noktası seçip hem Hibiki\'ye hem de AnkiConnect eklenti yapılandırmasına yazar. Uygulamak için Anki\'yi yeniden başlatın.';
+        return 'Boş bir bağlantı noktası seçip hem Fushi\'ye hem de AnkiConnect eklenti yapılandırmasına yazar. Uygulamak için Anki\'yi yeniden başlatın.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki artık ${port} bağlantı noktasını kullanıyor ancak AnkiConnect eklenti yapılandırması bulunamadı. Anki\'de (Araçlar → Eklentiler → AnkiConnect → Yapılandırma) webBindPort değerini de ${port} yapıp Anki\'yi yeniden başlatın.';
+            'Fushi artık ${port} bağlantı noktasını kullanıyor ancak AnkiConnect eklenti yapılandırması bulunamadı. Anki\'de (Araçlar → Eklentiler → AnkiConnect → Yapılandırma) webBindPort değerini de ${port} yapıp Anki\'yi yeniden başlatın.';
       case 'anki_connect_port_auto_fix_none':
         return 'Bu makinede boş bağlantı noktası bulunamadı.';
       case 'anki_connect_use_on_mobile':
@@ -510608,11 +510608,11 @@ extension on _StringsTr {
       case 'sync_err_not_paired':
         return 'Henüz eşleştirilmiş cihaz yok — önce "Fushi Interconnect" bölümünden eşleştirmeyi yapın.';
       case 'anki_create_lapis_not_found':
-        return 'Anki, Lapis destesi ve not türünün oluşturulduğunu söyledi, ancak Hibiki koleksiyonu geri okuduğunda hâlâ eksikler. Anki\'yi açın, meşgul olmadığından emin olun ve tekrar deneyin.';
+        return 'Anki, Lapis destesi ve not türünün oluşturulduğunu söyledi, ancak Fushi koleksiyonu geri okuduğunda hâlâ eksikler. Anki\'yi açın, meşgul olmadığından emin olun ve tekrar deneyin.';
       case 'anki_lapis_suggest_title':
         return 'Anki henüz kart oluşturamıyor';
       case 'anki_lapis_suggest_body':
-        return 'Seçilen deste ve not türü, Anki\'nin kabul edeceği bir kart üretemiyor. Hibiki, Lapis not türünü ve destesini ekleyip sizin için seçebilir.';
+        return 'Seçilen deste ve not türü, Anki\'nin kabul edeceği bir kart üretemiyor. Fushi, Lapis not türünü ve destesini ekleyip sizin için seçebilir.';
       case 'anki_lapis_suggest_dismiss':
         return 'Mevcut kurulumu koru';
       case 'reader_vn_settings':
@@ -510729,7 +510729,7 @@ extension on _StringsTr {
       case 'audiobook_transcribe_model_custom_title':
         return 'Yerel model ekle';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'Hibiki\'yi bir sherpa-onnx dışa aktarımı içeren klasöre yönlendirin (encoder / decoder / joiner veya tek bir CTC modeli, artı tokens.txt). Dosyalar bulundukları yerde kalır — klasörde yoksa yalnızca küçük VAD modeli (640 KB) indirilir.';
+        return 'Fushi\'yi bir sherpa-onnx dışa aktarımı içeren klasöre yönlendirin (encoder / decoder / joiner veya tek bir CTC modeli, artı tokens.txt). Dosyalar bulundukları yerde kalır — klasörde yoksa yalnızca küçük VAD modeli (640 KB) indirilir.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Klasör seç';
       case 'audiobook_transcribe_model_custom_name':
@@ -517176,10 +517176,10 @@ extension on _StringsVi {
         return ({required Object port}) =>
             'AnkiConnect đã chuyển sang cổng ${port}. Hãy khởi động lại Anki rồi thử lại.';
       case 'anki_connect_port_auto_fix_hint':
-        return 'Chọn một cổng còn trống rồi ghi vào cả Hibiki lẫn cấu hình tiện ích AnkiConnect. Khởi động lại Anki để áp dụng.';
+        return 'Chọn một cổng còn trống rồi ghi vào cả Fushi lẫn cấu hình tiện ích AnkiConnect. Khởi động lại Anki để áp dụng.';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki hiện dùng cổng ${port}, nhưng không tìm thấy cấu hình tiện ích AnkiConnect. Hãy đặt webBindPort thành ${port} trong Anki (Công cụ → Tiện ích → AnkiConnect → Cấu hình) rồi khởi động lại Anki.';
+            'Fushi hiện dùng cổng ${port}, nhưng không tìm thấy cấu hình tiện ích AnkiConnect. Hãy đặt webBindPort thành ${port} trong Anki (Công cụ → Tiện ích → AnkiConnect → Cấu hình) rồi khởi động lại Anki.';
       case 'anki_connect_port_auto_fix_none':
         return 'Không tìm thấy cổng nào còn trống trên máy này.';
       case 'anki_connect_use_on_mobile':
@@ -526147,11 +526147,11 @@ extension on _StringsVi {
       case 'sync_err_not_paired':
         return 'Chưa ghép nối thiết bị nào — hãy thiết lập ghép nối trong «Fushi Interconnect» trước.';
       case 'anki_create_lapis_not_found':
-        return 'Anki báo đã tạo bộ thẻ và loại ghi chú Lapis, nhưng chúng vẫn bị thiếu khi Hibiki đọc lại bộ sưu tập. Hãy mở Anki, đảm bảo nó không bận, rồi thử lại.';
+        return 'Anki báo đã tạo bộ thẻ và loại ghi chú Lapis, nhưng chúng vẫn bị thiếu khi Fushi đọc lại bộ sưu tập. Hãy mở Anki, đảm bảo nó không bận, rồi thử lại.';
       case 'anki_lapis_suggest_title':
         return 'Anki chưa thể tạo thẻ';
       case 'anki_lapis_suggest_body':
-        return 'Bộ thẻ và loại ghi chú đã chọn không tạo được thẻ mà Anki chấp nhận. Hibiki có thể thêm loại ghi chú và bộ thẻ Lapis rồi chọn giúp bạn.';
+        return 'Bộ thẻ và loại ghi chú đã chọn không tạo được thẻ mà Anki chấp nhận. Fushi có thể thêm loại ghi chú và bộ thẻ Lapis rồi chọn giúp bạn.';
       case 'anki_lapis_suggest_dismiss':
         return 'Giữ thiết lập hiện tại';
       case 'reader_vn_settings':
@@ -526267,7 +526267,7 @@ extension on _StringsVi {
       case 'audiobook_transcribe_model_custom_title':
         return 'Thêm mô hình cục bộ';
       case 'audiobook_transcribe_model_custom_intro':
-        return 'Trỏ Hibiki tới một thư mục chứa bản xuất sherpa-onnx (encoder / decoder / joiner, hoặc một mô hình CTC duy nhất, cùng tokens.txt). Các tệp giữ nguyên tại chỗ — chỉ mô hình VAD nhỏ (640 KB) được tải về nếu thư mục chưa có.';
+        return 'Trỏ Fushi tới một thư mục chứa bản xuất sherpa-onnx (encoder / decoder / joiner, hoặc một mô hình CTC duy nhất, cùng tokens.txt). Các tệp giữ nguyên tại chỗ — chỉ mô hình VAD nhỏ (640 KB) được tải về nếu thư mục chưa có.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Chọn thư mục';
       case 'audiobook_transcribe_model_custom_name':
@@ -532700,10 +532700,10 @@ extension on _StringsZhCn {
         return ({required Object port}) =>
             'AnkiConnect 端口已改为 ${port}。请重启 Anki 后重试。';
       case 'anki_connect_port_auto_fix_hint':
-        return '自动挑一个空闲端口，同时写进 Hibiki 和 Anki 的 AnkiConnect 插件配置。改完重启 Anki 生效。';
+        return '自动挑一个空闲端口，同时写进 Fushi 和 Anki 的 AnkiConnect 插件配置。改完重启 Anki 生效。';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
+            'Fushi 已改用端口 ${port}，但没找到 AnkiConnect 的插件配置。请在 Anki 的「工具 → 插件 → AnkiConnect → 配置」里把 webBindPort 也改成 ${port}，然后重启 Anki。';
       case 'anki_connect_port_auto_fix_none':
         return '本机没有找到空闲端口。';
       case 'anki_connect_use_on_mobile':
@@ -541592,7 +541592,7 @@ extension on _StringsZhCn {
       case 'anki_lapis_suggest_title':
         return '现在还制不出卡';
       case 'anki_lapis_suggest_body':
-        return '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
+        return '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Fushi 添加 Lapis 笔记类型和卡组，并直接选用它们。';
       case 'anki_lapis_suggest_dismiss':
         return '保持当前设置';
       case 'reader_vn_settings':
@@ -548058,10 +548058,10 @@ extension on _StringsZhHk {
         return ({required Object port}) =>
             'AnkiConnect 連接埠已改為 ${port}。請重啟 Anki 後再試。';
       case 'anki_connect_port_auto_fix_hint':
-        return '自動挑一個空閒的連接埠，同時寫進 Hibiki 和 Anki 的 AnkiConnect 外掛設定。改完重啟 Anki 生效。';
+        return '自動挑一個空閒的連接埠，同時寫進 Fushi 和 Anki 的 AnkiConnect 外掛設定。改完重啟 Anki 生效。';
       case 'anki_connect_port_auto_fix_manual':
         return ({required Object port}) =>
-            'Hibiki 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
+            'Fushi 已改用連接埠 ${port}，但找不到 AnkiConnect 的外掛設定。請在 Anki 的「工具 → 外掛 → AnkiConnect → 設定」裡把 webBindPort 也改成 ${port}，然後重啟 Anki。';
       case 'anki_connect_port_auto_fix_none':
         return '本機找不到空閒的連接埠。';
       case 'anki_connect_use_on_mobile':
@@ -556951,7 +556951,7 @@ extension on _StringsZhHk {
       case 'anki_lapis_suggest_title':
         return '現在還制不出卡';
       case 'anki_lapis_suggest_body':
-        return '當前選中的牌組和筆記類型做不出 Anki 會接收的卡片。可以讓 Hibiki 新增 Lapis 筆記類型和卡組，並直接選用它們。';
+        return '當前選中的牌組和筆記類型做不出 Anki 會接收的卡片。可以讓 Fushi 新增 Lapis 筆記類型和卡組，並直接選用它們。';
       case 'anki_lapis_suggest_dismiss':
         return '保持當前設定';
       case 'reader_vn_settings':
