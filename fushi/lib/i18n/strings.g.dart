@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126106 (7418 per locale)
+/// Strings: 126174 (7422 per locale)
 ///
-/// Built on 2026-10-13 at 12:06 UTC
+/// Built on 2026-10-14 at 07:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10714,6 +10714,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_pause_ocr_scope_all => 'All videos';
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   String get video_setting_pause_ocr_scope_off => 'Off';
+  String get feedback_filter_all => 'All';
+  String get feedback_filter_active => 'Ongoing';
+  String get feedback_filter_closed => 'Finished';
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -28638,6 +28642,14 @@ class _StringsAr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -46952,6 +46964,14 @@ class _StringsDe extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -65326,6 +65346,14 @@ class _StringsEs extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -83779,6 +83807,14 @@ class _StringsFr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -101887,6 +101923,14 @@ class _StringsId extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -120160,6 +120204,14 @@ class _StringsIt extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -137433,6 +137485,14 @@ class _StringsJa extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '画像字幕のみ';
   @override
   String get video_setting_pause_ocr_scope_off => 'オフ';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -154742,6 +154802,14 @@ class _StringsKo extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -172963,6 +173031,14 @@ class _StringsNl extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -191253,6 +191329,14 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -209489,6 +209573,14 @@ class _StringsRu extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -227403,6 +227495,14 @@ class _StringsTh extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -245520,6 +245620,14 @@ class _StringsTr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -263564,6 +263672,14 @@ class _StringsVi extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 // Path: <root>
@@ -280042,6 +280158,14 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '仅图片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '关闭';
+  @override
+  String get feedback_filter_all => '全部';
+  @override
+  String get feedback_filter_active => '进行中';
+  @override
+  String get feedback_filter_closed => '已结案';
+  @override
+  String get feedback_filter_unread => '有新回复';
 }
 
 // Path: <root>
@@ -296758,6 +296882,14 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '僅圖片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '關閉';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
 }
 
 /// Flat map(s) containing all translations.
@@ -312140,6 +312272,14 @@ extension on _StringsEn {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -327517,6 +327657,14 @@ extension on _StringsAr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -342970,6 +343118,14 @@ extension on _StringsDe {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -358405,6 +358561,14 @@ extension on _StringsEs {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -373858,6 +374022,14 @@ extension on _StringsFr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -389255,6 +389427,14 @@ extension on _StringsId {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -404688,6 +404868,14 @@ extension on _StringsIt {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -419995,6 +420183,14 @@ extension on _StringsJa {
         return '画像字幕のみ';
       case 'video_setting_pause_ocr_scope_off':
         return 'オフ';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -435309,6 +435505,14 @@ extension on _StringsKo {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -450737,6 +450941,14 @@ extension on _StringsNl {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -466157,6 +466369,14 @@ extension on _StringsPtBr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -481582,6 +481802,14 @@ extension on _StringsRu {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -496963,6 +497191,14 @@ extension on _StringsTh {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -512375,6 +512611,14 @@ extension on _StringsTr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -527770,6 +528014,14 @@ extension on _StringsVi {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
@@ -542996,6 +543248,14 @@ extension on _StringsZhCn {
         return '仅图片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '关闭';
+      case 'feedback_filter_all':
+        return '全部';
+      case 'feedback_filter_active':
+        return '进行中';
+      case 'feedback_filter_closed':
+        return '已结案';
+      case 'feedback_filter_unread':
+        return '有新回复';
       default:
         return null;
     }
@@ -558248,6 +558508,14 @@ extension on _StringsZhHk {
         return '僅圖片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '關閉';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
       default:
         return null;
     }
