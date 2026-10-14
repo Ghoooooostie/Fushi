@@ -166,7 +166,64 @@ class DictionaryImportManager {
     required Function() onImportSuccess,
     required bool lowMemoryMode,
     VoidCallback? onMemoryError,
+
+    /// v117：true = **引用**这个目录，不打包、不复制，只把绝对路径登记给词典。
+    ///
+    /// 默认 false，保持既有行为（复制进资源目录）——桌面默认的「拖进来」语义不能
+    /// 因为加了新能力就变。
+    bool referenceOriginal = false,
   }) async {
+    // v117 引用模式：目录本身就是一本**已解压好**的 Yomitan 词典时，直接登记它。
+    //
+    // 只有含 `index.json` 的散文件目录能这么用：MDX / DSL 必须先经 native 转成
+    // 引擎要的结构，不存在「原地用」的形态，引用了也读不出来——那种照旧走复制。
+    if (referenceOriginal) {
+      if (!File(path.join(directory.path, 'index.json')).existsSync()) {
+        throw Exception(t.dictionary_unrecognized_format);
+      }
+      _dictRepo.clearDictionaryResultsCache();
+      progressNotifier.value = t.import_extract;
+
+      final String name = path.basename(directory.path);
+      final Dictionary? existing = _findByName(name);
+      final int order = existing?.order ?? _nextOrder();
+
+      // 这本若先前是**复制式**安装的，私有目录里还留着一份副本：换成引用之后那
+      // 份就成了孤儿，占着双倍空间且再也用不到。删的是 app 自己的文件，安全。
+      if (existing != null && !existing.isReferenced) {
+        await deleteDictionaryDirectory(
+          Directory(path.join(_resourceDirectory.path, name)),
+          reloadEngine: _dictRepo.rebuildEngine,
+        );
+      }
+
+      await _dictRepo.persistDictionary(
+        Dictionary(
+          order: order,
+          name: name,
+          formatKey: 'yomichan',
+          metadata: <String, String>{
+            ...readSourceMetadataFromIndex(directory),
+          },
+          hiddenLanguages: existing?.hiddenLanguages ?? const [],
+          collapsedLanguages: existing?.collapsedLanguages ?? const [],
+          expandedLanguages: existing?.expandedLanguages ?? const [],
+          languageOverride: existing?.languageOverride,
+          displayName: existing?.displayName,
+          // 关键：登记源目录。留空就退化成默认落点，而那里并没有数据。
+          resourcePath: directory.path,
+        ),
+      );
+
+      progressNotifier.value = t.import_complete;
+      onImportSuccess();
+      FushiToast.show(
+        msg: t.dict_import_success_summary(n: 1),
+        severity: ToastSeverity.success,
+      );
+      return;
+    }
+
     final entities = directory.listSync();
     // 逐个导入的次序是用户可见的（进度 i/N + failedNames 汇总），listSync
     // 的平台顺序不能当稳定输入——同文件 _importArchivedDictionaries 已经这么做。
@@ -707,6 +764,17 @@ class DictionaryImportManager {
   }
 
   // ── private helpers ──────────────────────────────────────────────────
+
+  /// 按真名找已安装的词典（找不到返回 null）。
+  ///
+  /// 引用式导入覆盖同名旧装时用它来继承 order / 语言设置 / 显示名——那几样是
+  /// 用户设置，重导不该丢，语义与复制式导入的 `preservedSettings` 一致。
+  Dictionary? _findByName(String name) {
+    for (final Dictionary d in _dictRepo.dictionaries) {
+      if (d.name == name) return d;
+    }
+    return null;
+  }
 
   int _nextOrder() {
     final dicts = _dictRepo.dictionaries;

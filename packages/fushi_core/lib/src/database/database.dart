@@ -738,7 +738,7 @@ class FushiDatabase extends _$FushiDatabase
   final bool _isMainProcess;
 
   @override
-  int get schemaVersion => 116;
+  int get schemaVersion => 117;
 
   /// BUG-2335: version 97 also exists in a parallel migration history without
   /// the v96 expansion column. Reuse the additive migration on open so a
@@ -3511,6 +3511,19 @@ class FushiDatabase extends _$FushiDatabase
             // 无 FK；fresh DB 已由 onCreate 的 createAll 建好，_tableExists 守卫幂等。
             if (!await _tableExists('pending_mine_queue')) {
               await m.createTable(pendingMineQueue);
+            }
+          }
+          if (from < 117) {
+            // v117（词典引用外部目录）：`dictionary_metadata.resource_path` 可空列。
+            // null 即沿用既有默认落点（`<dictionaryResourceDirectory>/<name>`），
+            // 所以老数据**不需要回填**——加列本身就完成了迁移。fresh DB 已由
+            // onCreate 的 createAll 建好，_tableExists / _columnExists 双守卫幂等。
+            if (await _tableExists('dictionary_metadata') &&
+                !await _columnExists('dictionary_metadata', 'resource_path')) {
+              await m.addColumn(
+                dictionaryMetadata,
+                dictionaryMetadata.resourcePath,
+              );
             }
           }
         },
