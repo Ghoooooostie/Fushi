@@ -42,6 +42,15 @@
       "version": "2.10.0-debug.19013",
       "size": 306333525,
       "sha256": "be87fa4a28f24413b1ad10065043f48a0ed36de9605053e3ecda84fa30ec9540"
+    },
+    {
+      "name": "fushi-2.9.1-debug.16948-macos.zip",
+      "browser_download_url": "https://github.com/Ghoooooostie/Fushi/releases/download/fushi-debug-rolling/fushi-2.9.1-debug.16948-macos.zip",
+      "releaseSequence": 16948,
+      "tag": "v2.9.1-debug.16948+5ad3920",
+      "version": "2.9.1-debug.16948",
+      "size": 376456050,
+      "sha256": "306058209ca932ce5f83cdc47ed6a1b1b06c4d0411cc58af1c84018b7e7b9b9f"
     }
   ]
 }
