@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126106 (7418 per locale)
+/// Strings: 126123 (7419 per locale)
 ///
-/// Built on 2026-10-13 at 12:06 UTC
+/// Built on 2026-10-14 at 09:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10714,6 +10714,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_pause_ocr_scope_all => 'All videos';
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   String get video_setting_pause_ocr_scope_off => 'Off';
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -28638,6 +28639,8 @@ class _StringsAr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -46952,6 +46955,8 @@ class _StringsDe extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -65326,6 +65331,8 @@ class _StringsEs extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -83779,6 +83786,8 @@ class _StringsFr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -101887,6 +101896,8 @@ class _StringsId extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -120160,6 +120171,8 @@ class _StringsIt extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -137433,6 +137446,8 @@ class _StringsJa extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '画像字幕のみ';
   @override
   String get video_setting_pause_ocr_scope_off => 'オフ';
+  @override
+  String get manga_series_manage_volume => 'この巻を管理';
 }
 
 // Path: <root>
@@ -154742,6 +154757,8 @@ class _StringsKo extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -172963,6 +172980,8 @@ class _StringsNl extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -191253,6 +191272,8 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -209489,6 +209510,8 @@ class _StringsRu extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -227403,6 +227426,8 @@ class _StringsTh extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -245520,6 +245545,8 @@ class _StringsTr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -263564,6 +263591,8 @@ class _StringsVi extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -280042,6 +280071,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '仅图片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '关闭';
+  @override
+  String get manga_series_manage_volume => '管理本卷';
 }
 
 // Path: <root>
@@ -296758,6 +296789,8 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '僅圖片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '關閉';
+  @override
+  String get manga_series_manage_volume => '管理本卷';
 }
 
 /// Flat map(s) containing all translations.
@@ -312140,6 +312173,8 @@ extension on _StringsEn {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -327517,6 +327552,8 @@ extension on _StringsAr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -342970,6 +343007,8 @@ extension on _StringsDe {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -358405,6 +358444,8 @@ extension on _StringsEs {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -373858,6 +373899,8 @@ extension on _StringsFr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -389255,6 +389298,8 @@ extension on _StringsId {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -404688,6 +404733,8 @@ extension on _StringsIt {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -419995,6 +420042,8 @@ extension on _StringsJa {
         return '画像字幕のみ';
       case 'video_setting_pause_ocr_scope_off':
         return 'オフ';
+      case 'manga_series_manage_volume':
+        return 'この巻を管理';
       default:
         return null;
     }
@@ -435309,6 +435358,8 @@ extension on _StringsKo {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -450737,6 +450788,8 @@ extension on _StringsNl {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -466157,6 +466210,8 @@ extension on _StringsPtBr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -481582,6 +481637,8 @@ extension on _StringsRu {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -496963,6 +497020,8 @@ extension on _StringsTh {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -512375,6 +512434,8 @@ extension on _StringsTr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -527770,6 +527831,8 @@ extension on _StringsVi {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -542996,6 +543059,8 @@ extension on _StringsZhCn {
         return '仅图片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '关闭';
+      case 'manga_series_manage_volume':
+        return '管理本卷';
       default:
         return null;
     }
@@ -558248,6 +558313,8 @@ extension on _StringsZhHk {
         return '僅圖片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '關閉';
+      case 'manga_series_manage_volume':
+        return '管理本卷';
       default:
         return null;
     }
