@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127228 (7484 per locale)
+/// Strings: 128435 (7555 per locale)
 ///
-/// Built on 2026-10-14 at 10:17 UTC
+/// Built on 2026-10-14 at 11:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10680,7 +10680,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Shared by manga and graphic subtitles: engine, local models and LLM correction';
   String get models_tts_title => 'Speech synthesis (TTS)';
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   String get models_tts_engine => 'Engine';
   String get models_tts_unavailable => 'No speech engine on this platform';
   String get models_tts_usage_title => 'Used for';
@@ -10814,6 +10814,114 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_pending_mine_landing_host_note =>
       'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
   String get manga_series_manage_volume => 'Manage volume';
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  String get audiobook_tts_lang_en => 'English';
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  String get audiobook_tts_local_variant => 'Package edition';
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  String get audiobook_tts_local_source => 'Download source';
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  String get audiobook_tts_local_dir => 'Install location';
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  String get audiobook_tts_local_install => 'Download and install';
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  String get audiobook_tts_local_cancel => 'Cancel';
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  String get audiobook_tts_local_server => 'Service';
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  String get audiobook_tts_local_start => 'Start';
+  String get audiobook_tts_local_stop => 'Stop';
+  String get audiobook_tts_local_log => 'Service log';
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  String get audiobook_tts_local_location => 'Package location';
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -28679,7 +28787,7 @@ class _StringsAr extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -28905,6 +29013,185 @@ class _StringsAr extends _StringsEn {
       'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -47160,7 +47447,7 @@ class _StringsDe extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -47386,6 +47673,185 @@ class _StringsDe extends _StringsEn {
       'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -65701,7 +66167,7 @@ class _StringsEs extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -65927,6 +66393,185 @@ class _StringsEs extends _StringsEn {
       'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -84321,7 +84966,7 @@ class _StringsFr extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -84548,6 +85193,185 @@ class _StringsFr extends _StringsEn {
       'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -102596,7 +103420,7 @@ class _StringsId extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -102822,6 +103646,185 @@ class _StringsId extends _StringsEn {
       'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -121036,7 +122039,7 @@ class _StringsIt extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -121262,6 +122265,185 @@ class _StringsIt extends _StringsEn {
       'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -138476,8 +139658,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
-  String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+  String get models_tts_summary => '読み上げ音声、ローカル GPT-SoVITS、カード音声の代替';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -138702,6 +139883,185 @@ class _StringsJa extends _StringsEn {
       'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
   @override
   String get manga_series_manage_volume => 'この巻を管理';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -155951,7 +157311,7 @@ class _StringsKo extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -156177,6 +157537,185 @@ class _StringsKo extends _StringsEn {
       '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -174339,7 +175878,7 @@ class _StringsNl extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -174565,6 +176104,185 @@ class _StringsNl extends _StringsEn {
       'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -192796,7 +194514,7 @@ class _StringsPtBr extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -193022,6 +194740,185 @@ class _StringsPtBr extends _StringsEn {
       'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -211198,7 +213095,7 @@ class _StringsRu extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -211424,6 +213321,185 @@ class _StringsRu extends _StringsEn {
       'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -229278,7 +231354,7 @@ class _StringsTh extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -229504,6 +231580,185 @@ class _StringsTh extends _StringsEn {
       'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -247561,7 +249816,7 @@ class _StringsTr extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -247787,6 +250042,185 @@ class _StringsTr extends _StringsEn {
       'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -265771,7 +268205,7 @@ class _StringsVi extends _StringsEn {
   String get models_tts_title => 'Speech synthesis (TTS)';
   @override
   String get models_tts_summary =>
-      'System voices; the last fallback for card audio';
+      'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   @override
   String get models_tts_engine => 'Engine';
   @override
@@ -265997,6 +268431,185 @@ class _StringsVi extends _StringsEn {
       'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 // Path: <root>
@@ -282420,7 +285033,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get models_tts_title => '语音合成（TTS）';
   @override
-  String get models_tts_summary => '系统语音，制卡发音的最后兜底';
+  String get models_tts_summary => '朗读声音、本机 GPT-SoVITS 与制卡发音兜底';
   @override
   String get models_tts_engine => '引擎';
   @override
@@ -282624,6 +285237,160 @@ class _StringsZhCn extends _StringsEn {
       '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
   @override
   String get manga_series_manage_volume => '管理本卷';
+  @override
+  String get audiobook_tts_lang_ja => '日语（夹杂的英文按英文读）';
+  @override
+  String get audiobook_tts_lang_all_ja => '全部按日语读';
+  @override
+  String get audiobook_tts_lang_zh => '中文（夹杂的英文按英文读）';
+  @override
+  String get audiobook_tts_lang_all_zh => '全部按中文读';
+  @override
+  String get audiobook_tts_lang_en => '英语';
+  @override
+  String get audiobook_tts_lang_ko => '韩语（夹杂的英文按英文读）';
+  @override
+  String get audiobook_tts_lang_all_ko => '全部按韩语读';
+  @override
+  String get audiobook_tts_lang_yue => '粤语（夹杂的英文按英文读）';
+  @override
+  String get audiobook_tts_lang_all_yue => '全部按粤语读';
+  @override
+  String get audiobook_tts_lang_auto => '自动识别语言';
+  @override
+  String get audiobook_tts_lang_auto_yue => '自动识别语言（粤语）';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => '选择音频文件';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3–10 秒的干净人声；文件会复制到 Fushi 的数据目录';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed => '无法复制参考音频';
+  @override
+  String get models_tts_card_fallback_section => '制卡发音兜底';
+  @override
+  String get audiobook_tts_local_title => '本机 GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS 整合包';
+  @override
+  String get audiobook_tts_local_add => '在本机一键部署 GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_add_hint => '下载官方整合包并在这台电脑上运行，不用命令行';
+  @override
+  String get audiobook_tts_local_status_not_installed => '未安装 · 点此下载部署';
+  @override
+  String get audiobook_tts_local_status_installed => '已安装 · 朗读时自动启动';
+  @override
+  String get audiobook_tts_local_intro =>
+      '下载 GPT-SoVITS 官方整合包（约 11 GB，解压后约 19 GB）。装好后只需一段 3–10 秒的参考音频，就能用这个音色朗读。朗读时自动启动，退出 Fushi 时自动停止。';
+  @override
+  String get audiobook_tts_local_gpu => '显卡';
+  @override
+  String get audiobook_tts_local_gpu_none => '未检测到 NVIDIA 显卡：将用 CPU 运行，速度慢很多';
+  @override
+  String get audiobook_tts_local_variant => '整合包版本';
+  @override
+  String get audiobook_tts_local_variant_standard => '标准版';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 系专用版';
+  @override
+  String get audiobook_tts_local_source => '下载源';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face（官方）';
+  @override
+  String get audiobook_tts_local_source_ms => 'ModelScope（国内镜像）';
+  @override
+  String get audiobook_tts_local_dir => '安装位置';
+  @override
+  String get audiobook_tts_local_dir_hint => '需要约 30 GB 空闲空间；解压完成后会删除安装包';
+  @override
+  String get audiobook_tts_local_install => '下载并安装';
+  @override
+  String get audiobook_tts_local_install_hint => '中断后再点会从断点继续下载';
+  @override
+  String get audiobook_tts_local_use_existing => '使用已解压的整合包';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      '选择 GPT-SoVITS 整合包文件夹（含 runtime 与 api_v2.py）';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      '这个文件夹里没有找到 GPT-SoVITS 整合包';
+  @override
+  String get audiobook_tts_local_step_listing => '正在获取最新版本…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      '正在下载 ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      '正在解压（已解出 ${n} 个文件）';
+  @override
+  String get audiobook_tts_local_step_configuring => '正在配置…';
+  @override
+  String get audiobook_tts_local_cancel => '取消';
+  @override
+  String get audiobook_tts_local_cancelled => '已取消，下次安装会从断点继续下载';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      '下载失败。请检查网络或换个下载源后重试，会从断点继续。';
+  @override
+  String get audiobook_tts_local_failure_corrupt => '下载的文件校验不通过，已删除，请重试';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      '这个版本的 Windows 不能解压 7z。请更新 Windows，或自行解压后选择「使用已解压的整合包」。';
+  @override
+  String get audiobook_tts_local_failure_extract => '解压失败，请确认磁盘空间充足';
+  @override
+  String get audiobook_tts_local_failure_layout => '解压后没有找到 GPT-SoVITS 整合包的内容';
+  @override
+  String get audiobook_tts_local_failure_disk => '无法写入安装位置';
+  @override
+  String get audiobook_tts_local_server => '服务';
+  @override
+  String get audiobook_tts_local_server_stopped => '未启动（朗读时会自动启动）';
+  @override
+  String get audiobook_tts_local_server_starting => '正在启动…首次加载模型可能需要一两分钟';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      '运行中 · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      '运行中 · ${endpoint}（由其它程序启动）';
+  @override
+  String get audiobook_tts_local_server_failed_exited => '服务启动后退出了，请查看日志';
+  @override
+  String get audiobook_tts_local_server_failed_timeout => '服务长时间没有就绪，请查看日志';
+  @override
+  String get audiobook_tts_local_server_failed_spawn => '无法启动服务进程';
+  @override
+  String get audiobook_tts_local_server_failed_missing => '整合包文件不完整，请重新安装';
+  @override
+  String get audiobook_tts_local_start => '启动';
+  @override
+  String get audiobook_tts_local_stop => '停止';
+  @override
+  String get audiobook_tts_local_log => '服务日志';
+  @override
+  String get audiobook_tts_local_log_empty => '暂无日志';
+  @override
+  String get audiobook_tts_local_location => '整合包位置';
+  @override
+  String get audiobook_tts_local_create_voice => '用本机服务新建声音';
+  @override
+  String get audiobook_tts_local_create_voice_hint => '新建后选一段参考音频即可试听';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS（本机）';
+  @override
+  String get audiobook_tts_local_delete => '删除本机 GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      '将停止服务并删除 ${path}（约 19 GB）。';
+  @override
+  String get audiobook_tts_local_remove => '不再使用这份整合包';
+  @override
+  String get audiobook_tts_local_remove_hint => '只是让 Fushi 忘掉它，不删除任何文件。';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      '还没有本机服务？在 Fushi 里一键部署 GPT-SoVITS';
 }
 
 // Path: <root>
@@ -299285,7 +302052,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get models_tts_title => '語音合成（TTS）';
   @override
-  String get models_tts_summary => '系統語音，製卡發音的最後備援';
+  String get models_tts_summary => '朗讀聲音、本機 GPT-SoVITS 與製卡發音備援';
   @override
   String get models_tts_engine => '引擎';
   @override
@@ -299507,6 +302274,185 @@ class _StringsZhHk extends _StringsEn {
       '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
   @override
   String get manga_series_manage_volume => '管理本卷';
+  @override
+  String get audiobook_tts_lang_ja =>
+      'Japanese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ja => 'Japanese only';
+  @override
+  String get audiobook_tts_lang_zh => 'Chinese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_zh => 'Chinese only';
+  @override
+  String get audiobook_tts_lang_en => 'English';
+  @override
+  String get audiobook_tts_lang_ko => 'Korean (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_ko => 'Korean only';
+  @override
+  String get audiobook_tts_lang_yue =>
+      'Cantonese (English words read as English)';
+  @override
+  String get audiobook_tts_lang_all_yue => 'Cantonese only';
+  @override
+  String get audiobook_tts_lang_auto => 'Detect automatically';
+  @override
+  String get audiobook_tts_lang_auto_yue => 'Detect automatically (Cantonese)';
+  @override
+  String get audiobook_tts_param_ref_audio_pick => 'Choose an audio file';
+  @override
+  String get audiobook_tts_param_ref_audio_local_hint =>
+      '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+  @override
+  String get audiobook_tts_param_ref_audio_copy_failed =>
+      'Could not copy the reference audio';
+  @override
+  String get models_tts_card_fallback_section => 'Card audio fallback';
+  @override
+  String get audiobook_tts_local_title => 'Local GPT-SoVITS';
+  @override
+  String get audiobook_tts_local_package => 'GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_add => 'Set up GPT-SoVITS on this computer';
+  @override
+  String get audiobook_tts_local_add_hint =>
+      'Download the official package and run it here, no command line needed';
+  @override
+  String get audiobook_tts_local_status_not_installed =>
+      'Not installed; tap to download and set up';
+  @override
+  String get audiobook_tts_local_status_installed =>
+      'Installed; starts automatically when reading aloud';
+  @override
+  String get audiobook_tts_local_intro =>
+      'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_local_gpu => 'Graphics card';
+  @override
+  String get audiobook_tts_local_gpu_none =>
+      'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+  @override
+  String get audiobook_tts_local_variant => 'Package edition';
+  @override
+  String get audiobook_tts_local_variant_standard => 'Standard';
+  @override
+  String get audiobook_tts_local_variant_nvidia50 => 'RTX 50 series';
+  @override
+  String get audiobook_tts_local_source => 'Download source';
+  @override
+  String get audiobook_tts_local_source_hf => 'Hugging Face (official)';
+  @override
+  String get audiobook_tts_local_source_ms =>
+      'ModelScope (mirror in mainland China)';
+  @override
+  String get audiobook_tts_local_dir => 'Install location';
+  @override
+  String get audiobook_tts_local_dir_hint =>
+      'Needs about 30 GB free; the download is deleted after extraction';
+  @override
+  String get audiobook_tts_local_install => 'Download and install';
+  @override
+  String get audiobook_tts_local_install_hint =>
+      'Interrupted downloads resume where they left off';
+  @override
+  String get audiobook_tts_local_use_existing => 'Use an extracted package';
+  @override
+  String get audiobook_tts_local_use_existing_hint =>
+      'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+  @override
+  String get audiobook_tts_local_use_existing_invalid =>
+      'No GPT-SoVITS package was found in that folder';
+  @override
+  String get audiobook_tts_local_step_listing =>
+      'Looking up the latest version…';
+  @override
+  String audiobook_tts_local_step_downloading({required Object name}) =>
+      'Downloading ${name}';
+  @override
+  String audiobook_tts_local_step_extracting({required Object n}) =>
+      'Extracting (${n} files so far)';
+  @override
+  String get audiobook_tts_local_step_configuring => 'Configuring…';
+  @override
+  String get audiobook_tts_local_cancel => 'Cancel';
+  @override
+  String get audiobook_tts_local_cancelled =>
+      'Cancelled. The next install resumes the download.';
+  @override
+  String get audiobook_tts_local_failure_network =>
+      'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+  @override
+  String get audiobook_tts_local_failure_corrupt =>
+      'The downloaded file failed verification and was deleted. Please try again.';
+  @override
+  String get audiobook_tts_local_failure_no_extractor =>
+      'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+  @override
+  String get audiobook_tts_local_failure_extract =>
+      'Extraction failed. Make sure the disk has enough free space.';
+  @override
+  String get audiobook_tts_local_failure_layout =>
+      'The extracted files do not look like a GPT-SoVITS package';
+  @override
+  String get audiobook_tts_local_failure_disk =>
+      'Cannot write to the install location';
+  @override
+  String get audiobook_tts_local_server => 'Service';
+  @override
+  String get audiobook_tts_local_server_stopped =>
+      'Not running (starts automatically when reading aloud)';
+  @override
+  String get audiobook_tts_local_server_starting =>
+      'Starting… loading the models can take a minute or two the first time';
+  @override
+  String audiobook_tts_local_server_running({required Object endpoint}) =>
+      'Running · ${endpoint}';
+  @override
+  String audiobook_tts_local_server_external({required Object endpoint}) =>
+      'Running · ${endpoint} (started by another program)';
+  @override
+  String get audiobook_tts_local_server_failed_exited =>
+      'The service stopped while starting. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_timeout =>
+      'The service did not become ready in time. Check the log.';
+  @override
+  String get audiobook_tts_local_server_failed_spawn =>
+      'Could not start the service process';
+  @override
+  String get audiobook_tts_local_server_failed_missing =>
+      'The package is incomplete. Please reinstall it.';
+  @override
+  String get audiobook_tts_local_start => 'Start';
+  @override
+  String get audiobook_tts_local_stop => 'Stop';
+  @override
+  String get audiobook_tts_local_log => 'Service log';
+  @override
+  String get audiobook_tts_local_log_empty => 'No log yet';
+  @override
+  String get audiobook_tts_local_location => 'Package location';
+  @override
+  String get audiobook_tts_local_create_voice =>
+      'Create a voice with this service';
+  @override
+  String get audiobook_tts_local_create_voice_hint =>
+      'Then pick a reference audio clip and play a test';
+  @override
+  String get audiobook_tts_local_voice_name => 'GPT-SoVITS (this computer)';
+  @override
+  String get audiobook_tts_local_delete => 'Delete local GPT-SoVITS';
+  @override
+  String audiobook_tts_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path} (about 19 GB).';
+  @override
+  String get audiobook_tts_local_remove => 'Stop using this package';
+  @override
+  String get audiobook_tts_local_remove_hint =>
+      'Fushi only forgets it; no files are deleted.';
+  @override
+  String get audiobook_tts_local_editor_not_installed =>
+      'No local service yet? Set up GPT-SoVITS on this computer in one step';
 }
 
 /// Flat map(s) containing all translations.
@@ -314835,7 +317781,7 @@ extension on _StringsEn {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -315025,6 +317971,150 @@ extension on _StringsEn {
         return 'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -330348,7 +333438,7 @@ extension on _StringsAr {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -330538,6 +333628,150 @@ extension on _StringsAr {
         return 'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -345937,7 +349171,7 @@ extension on _StringsDe {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -346127,6 +349361,150 @@ extension on _StringsDe {
         return 'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -361508,7 +364886,7 @@ extension on _StringsEs {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -361698,6 +365076,150 @@ extension on _StringsEs {
         return 'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -377097,7 +380619,7 @@ extension on _StringsFr {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -377287,6 +380809,150 @@ extension on _StringsFr {
         return 'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -392630,7 +396296,7 @@ extension on _StringsId {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -392820,6 +396486,150 @@ extension on _StringsId {
         return 'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -408199,7 +412009,7 @@ extension on _StringsIt {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -408389,6 +412199,150 @@ extension on _StringsIt {
         return 'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -423642,7 +427596,7 @@ extension on _StringsJa {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return '読み上げ音声、ローカル GPT-SoVITS、カード音声の代替';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -423832,6 +427786,150 @@ extension on _StringsJa {
         return 'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
       case 'manga_series_manage_volume':
         return 'この巻を管理';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -439092,7 +443190,7 @@ extension on _StringsKo {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -439282,6 +443380,150 @@ extension on _StringsKo {
         return '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -454656,7 +458898,7 @@ extension on _StringsNl {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -454846,6 +459088,150 @@ extension on _StringsNl {
         return 'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -470212,7 +474598,7 @@ extension on _StringsPtBr {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -470402,6 +474788,150 @@ extension on _StringsPtBr {
         return 'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -485773,7 +490303,7 @@ extension on _StringsRu {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -485963,6 +490493,150 @@ extension on _StringsRu {
         return 'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -501290,7 +505964,7 @@ extension on _StringsTh {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -501480,6 +506154,150 @@ extension on _StringsTh {
         return 'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -516838,7 +521656,7 @@ extension on _StringsTr {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -517028,6 +521846,150 @@ extension on _StringsTr {
         return 'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -532369,7 +537331,7 @@ extension on _StringsVi {
       case 'models_tts_title':
         return 'Speech synthesis (TTS)';
       case 'models_tts_summary':
-        return 'System voices; the last fallback for card audio';
+        return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_engine':
         return 'Engine';
       case 'models_tts_unavailable':
@@ -532559,6 +537521,150 @@ extension on _StringsVi {
         return 'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
@@ -547731,7 +552837,7 @@ extension on _StringsZhCn {
       case 'models_tts_title':
         return '语音合成（TTS）';
       case 'models_tts_summary':
-        return '系统语音，制卡发音的最后兜底';
+        return '朗读声音、本机 GPT-SoVITS 与制卡发音兜底';
       case 'models_tts_engine':
         return '引擎';
       case 'models_tts_unavailable':
@@ -547919,6 +553025,148 @@ extension on _StringsZhCn {
         return '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
       case 'manga_series_manage_volume':
         return '管理本卷';
+      case 'audiobook_tts_lang_ja':
+        return '日语（夹杂的英文按英文读）';
+      case 'audiobook_tts_lang_all_ja':
+        return '全部按日语读';
+      case 'audiobook_tts_lang_zh':
+        return '中文（夹杂的英文按英文读）';
+      case 'audiobook_tts_lang_all_zh':
+        return '全部按中文读';
+      case 'audiobook_tts_lang_en':
+        return '英语';
+      case 'audiobook_tts_lang_ko':
+        return '韩语（夹杂的英文按英文读）';
+      case 'audiobook_tts_lang_all_ko':
+        return '全部按韩语读';
+      case 'audiobook_tts_lang_yue':
+        return '粤语（夹杂的英文按英文读）';
+      case 'audiobook_tts_lang_all_yue':
+        return '全部按粤语读';
+      case 'audiobook_tts_lang_auto':
+        return '自动识别语言';
+      case 'audiobook_tts_lang_auto_yue':
+        return '自动识别语言（粤语）';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return '选择音频文件';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3–10 秒的干净人声；文件会复制到 Fushi 的数据目录';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return '无法复制参考音频';
+      case 'models_tts_card_fallback_section':
+        return '制卡发音兜底';
+      case 'audiobook_tts_local_title':
+        return '本机 GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS 整合包';
+      case 'audiobook_tts_local_add':
+        return '在本机一键部署 GPT-SoVITS';
+      case 'audiobook_tts_local_add_hint':
+        return '下载官方整合包并在这台电脑上运行，不用命令行';
+      case 'audiobook_tts_local_status_not_installed':
+        return '未安装 · 点此下载部署';
+      case 'audiobook_tts_local_status_installed':
+        return '已安装 · 朗读时自动启动';
+      case 'audiobook_tts_local_intro':
+        return '下载 GPT-SoVITS 官方整合包（约 11 GB，解压后约 19 GB）。装好后只需一段 3–10 秒的参考音频，就能用这个音色朗读。朗读时自动启动，退出 Fushi 时自动停止。';
+      case 'audiobook_tts_local_gpu':
+        return '显卡';
+      case 'audiobook_tts_local_gpu_none':
+        return '未检测到 NVIDIA 显卡：将用 CPU 运行，速度慢很多';
+      case 'audiobook_tts_local_variant':
+        return '整合包版本';
+      case 'audiobook_tts_local_variant_standard':
+        return '标准版';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 系专用版';
+      case 'audiobook_tts_local_source':
+        return '下载源';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face（官方）';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope（国内镜像）';
+      case 'audiobook_tts_local_dir':
+        return '安装位置';
+      case 'audiobook_tts_local_dir_hint':
+        return '需要约 30 GB 空闲空间；解压完成后会删除安装包';
+      case 'audiobook_tts_local_install':
+        return '下载并安装';
+      case 'audiobook_tts_local_install_hint':
+        return '中断后再点会从断点继续下载';
+      case 'audiobook_tts_local_use_existing':
+        return '使用已解压的整合包';
+      case 'audiobook_tts_local_use_existing_hint':
+        return '选择 GPT-SoVITS 整合包文件夹（含 runtime 与 api_v2.py）';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return '这个文件夹里没有找到 GPT-SoVITS 整合包';
+      case 'audiobook_tts_local_step_listing':
+        return '正在获取最新版本…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => '正在下载 ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => '正在解压（已解出 ${n} 个文件）';
+      case 'audiobook_tts_local_step_configuring':
+        return '正在配置…';
+      case 'audiobook_tts_local_cancel':
+        return '取消';
+      case 'audiobook_tts_local_cancelled':
+        return '已取消，下次安装会从断点继续下载';
+      case 'audiobook_tts_local_failure_network':
+        return '下载失败。请检查网络或换个下载源后重试，会从断点继续。';
+      case 'audiobook_tts_local_failure_corrupt':
+        return '下载的文件校验不通过，已删除，请重试';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return '这个版本的 Windows 不能解压 7z。请更新 Windows，或自行解压后选择「使用已解压的整合包」。';
+      case 'audiobook_tts_local_failure_extract':
+        return '解压失败，请确认磁盘空间充足';
+      case 'audiobook_tts_local_failure_layout':
+        return '解压后没有找到 GPT-SoVITS 整合包的内容';
+      case 'audiobook_tts_local_failure_disk':
+        return '无法写入安装位置';
+      case 'audiobook_tts_local_server':
+        return '服务';
+      case 'audiobook_tts_local_server_stopped':
+        return '未启动（朗读时会自动启动）';
+      case 'audiobook_tts_local_server_starting':
+        return '正在启动…首次加载模型可能需要一两分钟';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => '运行中 · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) => '运行中 · ${endpoint}（由其它程序启动）';
+      case 'audiobook_tts_local_server_failed_exited':
+        return '服务启动后退出了，请查看日志';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return '服务长时间没有就绪，请查看日志';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return '无法启动服务进程';
+      case 'audiobook_tts_local_server_failed_missing':
+        return '整合包文件不完整，请重新安装';
+      case 'audiobook_tts_local_start':
+        return '启动';
+      case 'audiobook_tts_local_stop':
+        return '停止';
+      case 'audiobook_tts_local_log':
+        return '服务日志';
+      case 'audiobook_tts_local_log_empty':
+        return '暂无日志';
+      case 'audiobook_tts_local_location':
+        return '整合包位置';
+      case 'audiobook_tts_local_create_voice':
+        return '用本机服务新建声音';
+      case 'audiobook_tts_local_create_voice_hint':
+        return '新建后选一段参考音频即可试听';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS（本机）';
+      case 'audiobook_tts_local_delete':
+        return '删除本机 GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) => '将停止服务并删除 ${path}（约 19 GB）。';
+      case 'audiobook_tts_local_remove':
+        return '不再使用这份整合包';
+      case 'audiobook_tts_local_remove_hint':
+        return '只是让 Fushi 忘掉它，不删除任何文件。';
+      case 'audiobook_tts_local_editor_not_installed':
+        return '还没有本机服务？在 Fushi 里一键部署 GPT-SoVITS';
       default:
         return null;
     }
@@ -563117,7 +568365,7 @@ extension on _StringsZhHk {
       case 'models_tts_title':
         return '語音合成（TTS）';
       case 'models_tts_summary':
-        return '系統語音，製卡發音的最後備援';
+        return '朗讀聲音、本機 GPT-SoVITS 與製卡發音備援';
       case 'models_tts_engine':
         return '引擎';
       case 'models_tts_unavailable':
@@ -563307,6 +568555,150 @@ extension on _StringsZhHk {
         return '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
       case 'manga_series_manage_volume':
         return '管理本卷';
+      case 'audiobook_tts_lang_ja':
+        return 'Japanese (English words read as English)';
+      case 'audiobook_tts_lang_all_ja':
+        return 'Japanese only';
+      case 'audiobook_tts_lang_zh':
+        return 'Chinese (English words read as English)';
+      case 'audiobook_tts_lang_all_zh':
+        return 'Chinese only';
+      case 'audiobook_tts_lang_en':
+        return 'English';
+      case 'audiobook_tts_lang_ko':
+        return 'Korean (English words read as English)';
+      case 'audiobook_tts_lang_all_ko':
+        return 'Korean only';
+      case 'audiobook_tts_lang_yue':
+        return 'Cantonese (English words read as English)';
+      case 'audiobook_tts_lang_all_yue':
+        return 'Cantonese only';
+      case 'audiobook_tts_lang_auto':
+        return 'Detect automatically';
+      case 'audiobook_tts_lang_auto_yue':
+        return 'Detect automatically (Cantonese)';
+      case 'audiobook_tts_param_ref_audio_pick':
+        return 'Choose an audio file';
+      case 'audiobook_tts_param_ref_audio_local_hint':
+        return '3-10 seconds of clean speech; the file is copied into Fushi\'s data folder';
+      case 'audiobook_tts_param_ref_audio_copy_failed':
+        return 'Could not copy the reference audio';
+      case 'models_tts_card_fallback_section':
+        return 'Card audio fallback';
+      case 'audiobook_tts_local_title':
+        return 'Local GPT-SoVITS';
+      case 'audiobook_tts_local_package':
+        return 'GPT-SoVITS package';
+      case 'audiobook_tts_local_add':
+        return 'Set up GPT-SoVITS on this computer';
+      case 'audiobook_tts_local_add_hint':
+        return 'Download the official package and run it here, no command line needed';
+      case 'audiobook_tts_local_status_not_installed':
+        return 'Not installed; tap to download and set up';
+      case 'audiobook_tts_local_status_installed':
+        return 'Installed; starts automatically when reading aloud';
+      case 'audiobook_tts_local_intro':
+        return 'Downloads the official GPT-SoVITS package (about 11 GB, about 19 GB once extracted). Once installed, a 3-10 second voice sample is all it needs to read in that voice. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_local_gpu':
+        return 'Graphics card';
+      case 'audiobook_tts_local_gpu_none':
+        return 'No NVIDIA graphics card found: it will run on the CPU, which is much slower';
+      case 'audiobook_tts_local_variant':
+        return 'Package edition';
+      case 'audiobook_tts_local_variant_standard':
+        return 'Standard';
+      case 'audiobook_tts_local_variant_nvidia50':
+        return 'RTX 50 series';
+      case 'audiobook_tts_local_source':
+        return 'Download source';
+      case 'audiobook_tts_local_source_hf':
+        return 'Hugging Face (official)';
+      case 'audiobook_tts_local_source_ms':
+        return 'ModelScope (mirror in mainland China)';
+      case 'audiobook_tts_local_dir':
+        return 'Install location';
+      case 'audiobook_tts_local_dir_hint':
+        return 'Needs about 30 GB free; the download is deleted after extraction';
+      case 'audiobook_tts_local_install':
+        return 'Download and install';
+      case 'audiobook_tts_local_install_hint':
+        return 'Interrupted downloads resume where they left off';
+      case 'audiobook_tts_local_use_existing':
+        return 'Use an extracted package';
+      case 'audiobook_tts_local_use_existing_hint':
+        return 'Choose the GPT-SoVITS package folder (with runtime and api_v2.py)';
+      case 'audiobook_tts_local_use_existing_invalid':
+        return 'No GPT-SoVITS package was found in that folder';
+      case 'audiobook_tts_local_step_listing':
+        return 'Looking up the latest version…';
+      case 'audiobook_tts_local_step_downloading':
+        return ({required Object name}) => 'Downloading ${name}';
+      case 'audiobook_tts_local_step_extracting':
+        return ({required Object n}) => 'Extracting (${n} files so far)';
+      case 'audiobook_tts_local_step_configuring':
+        return 'Configuring…';
+      case 'audiobook_tts_local_cancel':
+        return 'Cancel';
+      case 'audiobook_tts_local_cancelled':
+        return 'Cancelled. The next install resumes the download.';
+      case 'audiobook_tts_local_failure_network':
+        return 'The download failed. Check your network or switch the download source and try again; it resumes where it stopped.';
+      case 'audiobook_tts_local_failure_corrupt':
+        return 'The downloaded file failed verification and was deleted. Please try again.';
+      case 'audiobook_tts_local_failure_no_extractor':
+        return 'This version of Windows cannot extract 7z archives. Update Windows, or extract the package yourself and choose "Use an extracted package".';
+      case 'audiobook_tts_local_failure_extract':
+        return 'Extraction failed. Make sure the disk has enough free space.';
+      case 'audiobook_tts_local_failure_layout':
+        return 'The extracted files do not look like a GPT-SoVITS package';
+      case 'audiobook_tts_local_failure_disk':
+        return 'Cannot write to the install location';
+      case 'audiobook_tts_local_server':
+        return 'Service';
+      case 'audiobook_tts_local_server_stopped':
+        return 'Not running (starts automatically when reading aloud)';
+      case 'audiobook_tts_local_server_starting':
+        return 'Starting… loading the models can take a minute or two the first time';
+      case 'audiobook_tts_local_server_running':
+        return ({required Object endpoint}) => 'Running · ${endpoint}';
+      case 'audiobook_tts_local_server_external':
+        return ({required Object endpoint}) =>
+            'Running · ${endpoint} (started by another program)';
+      case 'audiobook_tts_local_server_failed_exited':
+        return 'The service stopped while starting. Check the log.';
+      case 'audiobook_tts_local_server_failed_timeout':
+        return 'The service did not become ready in time. Check the log.';
+      case 'audiobook_tts_local_server_failed_spawn':
+        return 'Could not start the service process';
+      case 'audiobook_tts_local_server_failed_missing':
+        return 'The package is incomplete. Please reinstall it.';
+      case 'audiobook_tts_local_start':
+        return 'Start';
+      case 'audiobook_tts_local_stop':
+        return 'Stop';
+      case 'audiobook_tts_local_log':
+        return 'Service log';
+      case 'audiobook_tts_local_log_empty':
+        return 'No log yet';
+      case 'audiobook_tts_local_location':
+        return 'Package location';
+      case 'audiobook_tts_local_create_voice':
+        return 'Create a voice with this service';
+      case 'audiobook_tts_local_create_voice_hint':
+        return 'Then pick a reference audio clip and play a test';
+      case 'audiobook_tts_local_voice_name':
+        return 'GPT-SoVITS (this computer)';
+      case 'audiobook_tts_local_delete':
+        return 'Delete local GPT-SoVITS';
+      case 'audiobook_tts_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path} (about 19 GB).';
+      case 'audiobook_tts_local_remove':
+        return 'Stop using this package';
+      case 'audiobook_tts_local_remove_hint':
+        return 'Fushi only forgets it; no files are deleted.';
+      case 'audiobook_tts_local_editor_not_installed':
+        return 'No local service yet? Set up GPT-SoVITS on this computer in one step';
       default:
         return null;
     }
