@@ -137,6 +137,181 @@ class AudiobookPlayerController extends ChangeNotifier {
   /// clip 播放前主播放器是否正在播放，clip 结束后恢复。
   bool _resumeMainAfterClip = false;
 
+  // ── 播放源窗口 ─────────────────────────────────────────────────────────────
+  //
+  // TTS 朗读是「一句一个 StreamAudioSource」，长篇轻小说有几千句。整列交给
+  // just_audio 时 ExoPlayer 会给**每个** child 建 MediaSourceHolder +
+  // MaskingMediaSource，Android 256MB 堆直接 OOM（实测 app.fushi.reader.dev
+  // 崩在 ConcatenatingMediaSource.<init> → MaskingMediaSource.<init>，
+  // "85KB until OOM"）。所以超过 [kSourceWindowSize] 时只维护一个滚动窗口，
+  // 播放器 child 下标不再等于全局文件下标，统一走下面的映射。
+  //
+  // 未窗口化（有声书，文件数天然有限）时 [_allSources] 为空、偏移恒为 0，
+  // 行为与改造前完全一致。
+
+  /// 同时交给播放器的源数量上限。
+  @visibleForTesting
+  static const int kSourceWindowSize = 30;
+
+  /// 定位 / 滚动后目标句**之前**保留几句：支持往回跳一句、重播当前句而不必重建。
+  static const int kSourceWindowLead = 8;
+
+  /// 窗口尾部只剩这几句时向前滚动。
+  static const int kSourceWindowTail = 6;
+
+  /// 全量源（窗口化时非空）。
+  List<AudioSource> _allSources = const <AudioSource>[];
+
+  /// 播放器 child 0 对应的全局文件下标。
+  int _sourceWindowStart = 0;
+
+  ConcatenatingAudioSource? _windowSource;
+
+  bool _rollingWindow = false;
+
+  bool get _isWindowed => _allSources.isNotEmpty;
+
+  /// player child 下标 → 全局文件下标。
+  int _fileIndexAt(int? playerIndex) =>
+      _sourceWindowStart + (playerIndex ?? 0);
+
+  /// 全局文件下标 → player child 下标。
+  int _playerIndexAt(int fileIndex) => fileIndex - _sourceWindowStart;
+
+  /// 让 [anchorFileIndex] 落在窗口偏前处时的窗口起点。纯函数，可单测。
+  @visibleForTesting
+  static int windowStartForTesting({
+    required int anchorFileIndex,
+    required int sourceCount,
+    int windowSize = kSourceWindowSize,
+    int lead = kSourceWindowLead,
+  }) {
+    final int maxStart = sourceCount - windowSize;
+    if (maxStart <= 0) return 0;
+    return (anchorFileIndex - lead).clamp(0, maxStart);
+  }
+
+  int _windowStartFor(int anchorFileIndex) => windowStartForTesting(
+    anchorFileIndex: anchorFileIndex,
+    sourceCount: _allSources.length,
+  );
+
+  /// 是否值得窗口化：源数量没超过窗口就走原来的整列路径（行为不变）。
+  @visibleForTesting
+  static bool shouldWindowSourcesTesting(int sourceCount) =>
+      sourceCount > kSourceWindowSize;
+
+  /// 当前窗口起点（播放器 child 0 的全局文件下标）。未窗口化时恒 0。
+  @visibleForTesting
+  int get sourceWindowStartForTesting => _sourceWindowStart;
+
+  /// 当前窗口里的 child 数。未窗口化时 0。
+  @visibleForTesting
+  int get sourceWindowLengthForTesting => _windowSource?.length ?? 0;
+
+  /// 播放器实际持有的源数（= 激活后会发给原生层的数量）。
+  @visibleForTesting
+  int get playerSequenceLengthForTesting => _player.sequence?.length ?? 0;
+
+  @visibleForTesting
+  int fileIndexAtForTesting(int? playerIndex) => _fileIndexAt(playerIndex);
+
+  @visibleForTesting
+  Future<void> maybeRollWindowForTesting(int fileIndex) =>
+      _maybeRollWindow(fileIndex);
+
+  List<AudioSource> _windowChildren(int start) => _allSources.sublist(
+    start,
+    (start + kSourceWindowSize).clamp(0, _allSources.length),
+  );
+
+  /// 整列重设成以 [start] 开头的窗口（用于载入 / 跳到窗口外 / 增量滚动失败兜底）。
+  Future<void> _setWindowSource({
+    required int start,
+    int? initialIndex,
+    int initialPositionMs = 0,
+  }) async {
+    _sourceWindowStart = start;
+    final ConcatenatingAudioSource source = ConcatenatingAudioSource(
+      children: _windowChildren(start),
+    );
+    _windowSource = source;
+    await _player
+        .setAudioSource(
+          source,
+          initialIndex: initialIndex,
+          initialPosition: Duration(milliseconds: initialPositionMs),
+          preload: false,
+        )
+        .timeout(const Duration(seconds: 60));
+  }
+
+  /// 目标句不在窗口内就重建窗口（跳章 / 断点续听落到很后面的句子）。
+  Future<void> _ensureWindowFor(int fileIndex) async {
+    if (!_isWindowed) return;
+    final int rel = fileIndex - _sourceWindowStart;
+    if (rel >= 0 && rel < (_windowSource?.length ?? 0)) return;
+    final int start = _windowStartFor(fileIndex);
+    final bool wasPlaying = _player.playing;
+    await _setWindowSource(start: start);
+    if (wasPlaying) await _player.play();
+  }
+
+  /// 播放推进到窗口尾部时向前滚动：先丢头部已播过的，再在尾部补新的。
+  /// 增量改列不动播放状态，失败才整列重建（代价是一次回位，但不至于卡死）。
+  Future<void> _maybeRollWindow(int fileIndex) async {
+    if (!_isWindowed || _rollingWindow) return;
+    final ConcatenatingAudioSource? source = _windowSource;
+    if (source == null) return;
+    final int rel = fileIndex - _sourceWindowStart;
+    if (rel < 0) return;
+    final int len = source.length;
+    if (rel < len - kSourceWindowTail) return;
+    final int drop = rel - kSourceWindowLead;
+    // 起点必须仍能让窗口填满：靠近书末时只能停在 `总数 - 窗口大小`。
+    final int maxStart = _allSources.length - kSourceWindowSize;
+    final int start = (_sourceWindowStart + (drop > 0 ? drop : 0)).clamp(
+      0,
+      maxStart < 0 ? 0 : maxStart,
+    );
+    final int want = (_allSources.length - start).clamp(0, kSourceWindowSize);
+    if (start == _sourceWindowStart && want <= len) return;
+    _rollingWindow = true;
+    try {
+      if (start != _sourceWindowStart) {
+        await source.removeRange(0, start - _sourceWindowStart);
+        _sourceWindowStart = start;
+      }
+      final int have = source.length;
+      if (want > have) {
+        await source.addAll(
+          _allSources.sublist(_sourceWindowStart + have, _sourceWindowStart + want),
+        );
+      }
+    } catch (e, stack) {
+      debugPrint('AudiobookController.rollWindow: $e\n$stack');
+      final bool wasPlaying = _player.playing;
+      final int posMs = _player.position.inMilliseconds;
+      await _setWindowSource(
+        start: _windowStartFor(fileIndex),
+        initialIndex: fileIndex - _windowStartFor(fileIndex),
+        initialPositionMs: posMs,
+      );
+      if (wasPlaying) await _player.play();
+    } finally {
+      _rollingWindow = false;
+    }
+  }
+
+  /// 跳到「全局文件下标 + 文件内毫秒」：必要时先把窗口挪过去。
+  Future<void> _seekToFile(int fileIndex, int positionMs) async {
+    await _ensureWindowFor(fileIndex);
+    await _player.seek(
+      Duration(milliseconds: positionMs),
+      index: _playerIndexAt(fileIndex),
+    );
+  }
+
   // ── 对外暴露的状态 ─────────────────────────────────────────────────────────
 
   /// 当前正在朗读的 cue，null = 未定位到句子。
@@ -146,7 +321,7 @@ class AudiobookPlayerController extends ChangeNotifier {
 
   AudioCue? cueAtCurrentPositionInBook() {
     if (_allBookCues.isEmpty) return _currentCue;
-    final int audioFileIndex = _player.currentIndex ?? 0;
+    final int audioFileIndex = _fileIndexAt(_player.currentIndex);
     final int effectiveMs =
         (_player.position.inMilliseconds - delayMs.value).clamp(0, 1 << 30);
     AudioCue? best;
@@ -184,7 +359,7 @@ class AudiobookPlayerController extends ChangeNotifier {
   /// 前瞻在 `effectiveMs = pos - delayMs` 空间计算，与用户音画同步偏移一致。
   /// 无 cue 数据时回退到 [currentCue]（可能为 null）。
   AudioCue? get displayCueForFloatingLyric {
-    final int audioFileIndex = _player.currentIndex ?? 0;
+    final int audioFileIndex = _fileIndexAt(_player.currentIndex);
     final List<AudioCue> fileCues = _chapterCuesForAudioFile(audioFileIndex);
     if (fileCues.isEmpty) return _currentCue;
     final int effectiveMs =
@@ -669,7 +844,7 @@ class AudiobookPlayerController extends ChangeNotifier {
   /// 二者精度不同，跨文件瞬间可能轻微抖动（真实文件长常 > 末句 endMs），
   /// 仅结尾几百毫秒的视觉抖动，不影响只读进度条的正确性。
   Duration get globalPosition {
-    final int idx = _player.currentIndex ?? 0;
+    final int idx = _fileIndexAt(_player.currentIndex);
     int base = 0;
     for (int i = 0; i < idx && i < _fileDurationsMs.length; i++) {
       base += _fileDurationsMs[i];
@@ -710,17 +885,14 @@ class AudiobookPlayerController extends ChangeNotifier {
       globalMs,
       _fileDurationsMs,
     );
-    final int currentIndex = _player.currentIndex ?? 0;
+    final int currentIndex = _fileIndexAt(_player.currentIndex);
     if (target.fileIndex == currentIndex) {
       await seekMs(target.offsetMs);
       return;
     }
     _clearExplicitSeekSuppression();
     _beginExplicitSeek(target.fileIndex, target.offsetMs);
-    await _player.seek(
-      Duration(milliseconds: target.offsetMs),
-      index: target.fileIndex,
-    );
+    await _seekToFile(target.fileIndex, target.offsetMs);
     notifyListeners();
   }
 
@@ -835,6 +1007,10 @@ class AudiobookPlayerController extends ChangeNotifier {
 
     _audiobook = audiobook;
     _audioFiles = audioFiles;
+    // 上一轮的源窗口作废（新列表可能不窗口化，或长度不同）。
+    _allSources = const <AudioSource>[];
+    _windowSource = null;
+    _sourceWindowStart = 0;
     // Follow audio / delay / speed 状态由调用方从持久层读出传入；不触发
     // persist 回调 —— 载入不是用户操作，又把同值写回 Hive 就是循环。
     followAudio.value = initialFollowAudio;
@@ -856,13 +1032,22 @@ class AudiobookPlayerController extends ChangeNotifier {
 
     if (audioSources != null) {
       assert(audioSources.length == audioFiles.length);
+      _windowSource = null;
+      _sourceWindowStart = 0;
       try {
-        await _player
-            .setAudioSource(
-              ConcatenatingAudioSource(children: audioSources),
-              preload: false,
-            )
-            .timeout(const Duration(seconds: 60));
+        if (audioSources.length > kSourceWindowSize) {
+          // TTS 朗读：几千句只送一窗进去，其余随播放滚动补齐。
+          _allSources = audioSources;
+          await _setWindowSource(start: 0);
+        } else {
+          _allSources = const <AudioSource>[];
+          await _player
+              .setAudioSource(
+                ConcatenatingAudioSource(children: audioSources),
+                preload: false,
+              )
+              .timeout(const Duration(seconds: 60));
+        }
       } catch (e, stack) {
         debugPrint('AudiobookController.setSource(stream): $e\n$stack');
         _loadReady.complete();
@@ -918,10 +1103,7 @@ class AudiobookPlayerController extends ChangeNotifier {
             savedMs,
             _fileDurationsMs,
           );
-          await _player.seek(
-            Duration(milliseconds: target.offsetMs),
-            index: target.fileIndex,
-          );
+          await _seekToFile(target.fileIndex, target.offsetMs);
         }
       } catch (e, stack) {
         debugPrint('AudiobookController.seekSaved: $e\n$stack');
@@ -1212,10 +1394,13 @@ class AudiobookPlayerController extends ChangeNotifier {
     if (positionMs < 0) {
       throw RangeError.value(positionMs, 'positionMs', 'Must be non-negative');
     }
+    // 窗口化时 player sequence 只覆盖窗口：按窗口内下标取（越界即未就绪，按
+    // 「时长未知」处理，与原语义一致）。
+    final int rel = _playerIndexAt(fileIndex);
     final List<IndexedAudioSource>? sequence = _player.sequence;
     final Duration? targetDuration =
-        sequence != null && fileIndex < sequence.length
-            ? sequence[fileIndex].duration
+        sequence != null && rel >= 0 && rel < sequence.length
+            ? sequence[rel].duration
             : null;
     if (targetDuration != null &&
         targetDuration.inMilliseconds > 0 &&
@@ -1231,7 +1416,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     _currentCueIndex = -1;
     _beginExplicitSeek(fileIndex, positionMs);
     try {
-      await _player.seek(Duration(milliseconds: positionMs), index: fileIndex);
+      await _seekToFile(fileIndex, positionMs);
     } catch (_) {
       if (_explicitSeekTargetFileIndex == fileIndex &&
           _explicitSeekTargetMs == positionMs) {
@@ -1276,14 +1461,24 @@ class AudiobookPlayerController extends ChangeNotifier {
     _currentCueIndex = -1;
     _beginExplicitSeek(fileIndex, 0);
     try {
-      await _player
-          .setAudioSource(
-            ConcatenatingAudioSource(children: audioSources),
-            initialIndex: fileIndex,
-            initialPosition: Duration.zero,
-            preload: false,
-          )
-          .timeout(const Duration(seconds: 60));
+      if (audioSources.length > kSourceWindowSize) {
+        _allSources = audioSources;
+        final int start = _windowStartFor(fileIndex);
+        await _setWindowSource(
+          start: start,
+          initialIndex: fileIndex - start,
+        );
+      } else {
+        _allSources = const <AudioSource>[];
+        await _player
+            .setAudioSource(
+              ConcatenatingAudioSource(children: audioSources),
+              initialIndex: fileIndex,
+              initialPosition: Duration.zero,
+              preload: false,
+            )
+            .timeout(const Duration(seconds: 60));
+      }
     } catch (_) {
       if (_explicitSeekTargetFileIndex == fileIndex &&
           _explicitSeekTargetMs == 0) {
@@ -1356,10 +1551,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     // （seek 落地触发的 WebView 跟随滚动 → _refreshProgress）之前就位。
     onExplicitCueJump?.call(cue);
     _beginExplicitSeek(mappedPosition.audioFileIndex, positionMs);
-    await _player.seek(
-      Duration(milliseconds: positionMs),
-      index: mappedPosition.audioFileIndex,
-    );
+    await _seekToFile(mappedPosition.audioFileIndex, positionMs);
     _chapterTransition = false;
     final int idx = _chapterCues.indexOf(cue);
     if (idx >= 0) {
@@ -1387,17 +1579,14 @@ class AudiobookPlayerController extends ChangeNotifier {
     if (startPosition == null) return;
 
     _returnToPosition = (
-      audioFileIndex: _player.currentIndex ?? 0,
+      audioFileIndex: _fileIndexAt(_player.currentIndex),
       positionMs: _player.position.inMilliseconds,
     );
     _stopAtPositionMs = cue.endMs;
 
     final int targetMs = _clampToKnownDuration(startPosition.positionMs);
     _beginExplicitSeek(startPosition.audioFileIndex, targetMs);
-    await _player.seek(
-      Duration(milliseconds: targetMs),
-      index: startPosition.audioFileIndex,
-    );
+    await _seekToFile(startPosition.audioFileIndex, targetMs);
     _chapterTransition = false;
     final int idx = _chapterCues.indexOf(cue);
     if (idx >= 0) {
@@ -1433,7 +1622,7 @@ class AudiobookPlayerController extends ChangeNotifier {
       cues: _chapterCues,
       currentCueIndex: _currentCueIndex,
       currentCue: _currentCue,
-      audioFileIndex: _player.currentIndex ?? 0,
+      audioFileIndex: _fileIndexAt(_player.currentIndex),
       positionMs: position.inMilliseconds,
     );
     if (target == null) {
@@ -1451,7 +1640,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     final int? target = _nextCueIndex(
       cues: _chapterCues,
       currentCueIndex: _currentCueIndex,
-      audioFileIndex: _player.currentIndex ?? 0,
+      audioFileIndex: _fileIndexAt(_player.currentIndex),
       positionMs: position.inMilliseconds,
     );
     if (target == null) {
@@ -1470,7 +1659,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     final int target = _replayCueIndex(
       cues: _chapterCues,
       currentCueIndex: _currentCueIndex,
-      audioFileIndex: _player.currentIndex ?? 0,
+      audioFileIndex: _fileIndexAt(_player.currentIndex),
       positionMs: position.inMilliseconds,
     );
     if (target < 0) return;
@@ -1517,7 +1706,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     if (idx < 0) {
       idx = _cueIndexAtFilePosition(
         cues: _chapterCues,
-        audioFileIndex: _player.currentIndex ?? 0,
+        audioFileIndex: _fileIndexAt(_player.currentIndex),
         positionMs: position.inMilliseconds,
       );
     }
@@ -1610,7 +1799,7 @@ class AudiobookPlayerController extends ChangeNotifier {
       // 不清旗；待用户按播放、首帧真实到达 target 后再走下面的正常落定逻辑。
       if (!_player.playing) return;
       if (reachedExplicitSeekTargetForTesting(
-        currentFileIndex: _player.currentIndex ?? 0,
+        currentFileIndex: _fileIndexAt(_player.currentIndex),
         posMs: posMs,
         targetFileIndex: _explicitSeekTargetFileIndex,
         targetMs: _explicitSeekTargetMs,
@@ -1620,6 +1809,9 @@ class AudiobookPlayerController extends ChangeNotifier {
         return;
       }
     }
+    // 播放推进到窗口尾部就把窗口往前滚，保证后面还有句子可播（TTS 朗读）。
+    // 放在 cue 相关守卫之前：滚动只依赖位置，与有没有 cue 无关。
+    unawaited(_maybeRollWindow(_fileIndexAt(_player.currentIndex)));
     // 位置持久化挪到 chapterTransition guard 之前，对齐 Sasayaki tick 的
     // 结构：位置保存在 tick() 主体，updateCue() 的 guard 不影响保存节奏。
     // 跨章 await 几秒内，如果 guard 把 save 一起卡住，用户此时杀进程会
@@ -1634,12 +1826,7 @@ class AudiobookPlayerController extends ChangeNotifier {
       _returnToPosition = null;
       unawaited(_player.pause());
       if (returnTo != null) {
-        unawaited(
-          _player.seek(
-            Duration(milliseconds: returnTo.positionMs),
-            index: returnTo.audioFileIndex,
-          ),
-        );
+        unawaited(_seekToFile(returnTo.audioFileIndex, returnTo.positionMs));
       }
       notifyListeners();
       return;
@@ -1654,7 +1841,7 @@ class AudiobookPlayerController extends ChangeNotifier {
     // cue 时要把位置往回拨；负值相反。下界 clamp 到 0 避免负位置查询。
     // 上界不 clamp（_player.duration 可能暂未就绪），超出时 findCueIndex
     // 自行返回最后一个 cue 即可。
-    final int audioFileIndex = _player.currentIndex ?? 0;
+    final int audioFileIndex = _fileIndexAt(_player.currentIndex);
     final List<AudioCue> fileCues = _chapterCuesForAudioFile(audioFileIndex);
     if (fileCues.isEmpty) return;
     final int effectiveMs = (posMs - delayMs.value).clamp(0, 1 << 30);
@@ -2495,6 +2682,10 @@ class AudiobookPlayerController extends ChangeNotifier {
     // TODO-2389：销毁是 reader 级作废；只 cancel Timer 会让在途
     // awaitImageChapterPause 永久挂起（且它的续体绝不能在 dispose 后 notify）。
     _invalidateReaderTransition();
+    // 释放全量源引用：TTS 朗读下这是几千个对象，不该挂到 dispose 之后。
+    _allSources = const <AudioSource>[];
+    _windowSource = null;
+    _sourceWindowStart = 0;
     _positionSub?.cancel();
     _playingSub?.cancel();
     _noisySub?.cancel();
