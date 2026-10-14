@@ -89,15 +89,32 @@ if (!window.fushiTranslation) {
       if (semantic.length) {
         return Array.prototype.slice.call(semantic);
       }
-      var kids = Array.prototype.slice.call(scope.children);
-      return kids.filter(function(el) {
-        var nodes = el.childNodes;
-        for (var i = 0; i < nodes.length; i++) {
-          var n = nodes[i];
-          if (n.nodeType === 3 && (n.textContent || '').trim()) return true;
+      // 退化分支必须**递归**，且只收最外层那一个。
+      //
+      // 只看 scope.children 一层是不够的：日式小说 epub 大量用 <div> 分段并套多层
+      // 容器（<body><div class="wrap"><div>正文…</div></div>），一层 filter 拿到的
+      // 是外层 wrap——它没有直达文本 → 过滤后为空 → 整章扫到 0 段，界面上表现为
+      // 「翻译开关开着却什么都没出现」（真机实测：raw=[]）。
+      //
+      // 只收最外层是为了不给每个 <span>/<ruby> 单独插一段译文：祖先里已经有人带
+      // 直达文本的，就交给那个祖先。
+      var all = scope.getElementsByTagName('*');
+      var out = [];
+      for (var i = 0; i < all.length; i++) {
+        var el = all[i];
+        if (!hasOwnText(el)) continue;
+        var p = el.parentElement;
+        var nested = false;
+        while (p && p !== scope) {
+          if (hasOwnText(p)) {
+            nested = true;
+            break;
+          }
+          p = p.parentElement;
         }
-        return false;
-      });
+        if (!nested) out.push(el);
+      }
+      return out;
     }
 
     function hasOwnText(el) {
@@ -170,15 +187,24 @@ if (!window.fushiTranslation) {
       collectVisibleTargets: function(ahead, limit) {
         var list = candidates(document.body);
         var out = [];
+        var winCount = 0;
+        var seen = 0;
+        var firstRect = null;
         for (var i = 0; i < list.length; i++) {
           if (out.length >= limit) break;
           var el = list[i];
           if (el.getAttribute(DONE_ATTR)) continue;
           if (!hasOwnText(el)) continue;
           if (!inWindow(el, ahead)) continue;
+          winCount++;
           var text = (el.textContent || '').trim();
           // 太短的片段（页码、分隔线、"…"）译出来也没有对照价值，纯浪费往返。
           if (text.length < 2) continue;
+          if (firstRect === null) {
+            var r0 = el.getBoundingClientRect();
+            firstRect = { t: Math.round(r0.top), b: Math.round(r0.bottom) };
+          }
+          seen++;
           out.push({ id: ensureId(el), text: text });
         }
         return JSON.stringify(out);

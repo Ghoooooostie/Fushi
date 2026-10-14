@@ -174,6 +174,13 @@ class ReaderTranslationScheduler {
     if (ownGeneration != _navGeneration) return;
 
     final List<ReaderTranslationTarget> targets = _parseTargets(raw);
+    // 诊断打点（排查期保留）：把 JS 侧回传如实打印，区分「没扫到段落」与
+    // 「扫到了但请求失败」——两者在界面上都是「什么都没出现」。
+    final String rawPreview = raw is String ? raw : '$raw';
+    debugPrint(
+      '[translation] scan: targets=${targets.length}, rawLen=${rawPreview.length}, '
+      'raw=${rawPreview.substring(0, rawPreview.length > 200 ? 200 : rawPreview.length)}',
+    );
     if (targets.isEmpty) return;
     await _coordinator.enqueue(targets);
   }

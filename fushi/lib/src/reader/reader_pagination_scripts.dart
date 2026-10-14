@@ -5,6 +5,10 @@ import 'package:flutter/foundation.dart' show visibleForTesting;
 import 'package:flutter/services.dart';
 import 'package:fushi/src/reader/reader_content_styles.dart';
 import 'package:fushi/src/reader/reader_sentence_audio_ownership_script.dart';
+// 段落对照翻译：随页面一起注入。它是 `window.fushiTranslation` 的**唯一**定义处——
+// 各 Invocation 只是调用它，且都有存在性守卫（兜底返回 "[]"），漏了这行就会变成
+// 「开关开着却什么都没有」，且没有任何报错。
+import 'package:fushi/src/reader/reader_translation_scripts.dart';
 import 'package:fushi/src/reader/reader_sentence_audio_ruby_gap_script.dart';
 import 'package:fushi/src/reader/reader_study_unit_script.dart';
 import 'package:fushi/src/reader/reader_visual_novel_scripts.dart';
@@ -971,6 +975,7 @@ class ReaderPaginationScripts {
     return '''<script>
 $kStudyUnitJs
 $kSentenceAudioOwnershipJs
+$kTranslationJs
 window.__fushiShells = {};
 ${_stripShellScriptTags(shell)}
 window.__fushiInstallShell = function(C) {

@@ -469,10 +469,23 @@ extension _ReaderNavigation on _ReaderFushiPageState {
   /// 任何一步出错都不该连可用性一起赔进去，也不该污染这次 restore 的结果。
   Future<void> _onTranslationDocumentReady() async {
     final ReaderSettings? settings = _settings;
+    // 诊断打点（排查期保留）：把「读到了什么」如实打出来。翻译默认关闭、且
+    // ReaderSettings 走内存缓存，只看 UI 上开关是开的并不能证明这里读到的就是 true。
+    debugPrint(
+      '[translation] hook: hasSettings=${settings != null}, '
+      'enabled=${settings?.translationEnabled}, '
+      'visible=${settings?.translationVisible}, '
+      'engine=${settings?.translationEngineId}, '
+      'target=${settings?.translationTargetLanguage}',
+    );
     if (settings == null) return;
     try {
       _ensureTranslation(settings);
       final ReaderTranslationScheduler? scheduler = _translation;
+      debugPrint(
+        '[translation] after ensure: scheduler=${scheduler != null}, '
+        'schedulerEnabled=${scheduler?.enabled}',
+      );
       if (scheduler == null || !scheduler.enabled) return;
       await scheduler.installForDocument();
       await scheduler.applyStyleLive(
@@ -481,12 +494,10 @@ extension _ReaderNavigation on _ReaderFushiPageState {
         visible: settings.translationVisible,
       );
       scheduler.scheduleVisibleScan();
-    } catch (error) {
-      assert(() {
-        // 只暴露给开发期：Release 里静默。翻译挂了不影响读书。
-        debugPrint('[translation] document-ready hook failed: $error');
-        return true;
-      }());
+    } catch (error, stack) {
+      // 排查期无条件打印：异常被吞掉正是这次「什么都没发生」最难查的地方。
+      debugPrint('[translation] document-ready hook failed: $error');
+      debugPrint('[translation] stack: $stack');
     }
   }
 
