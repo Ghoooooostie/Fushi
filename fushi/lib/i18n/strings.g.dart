@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126106 (7418 per locale)
+/// Strings: 127228 (7484 per locale)
 ///
-/// Built on 2026-10-14 at 04:30 UTC
+/// Built on 2026-10-14 at 10:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -594,7 +594,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_lapis_visual_target_inside_definition => 'Inside definition';
   String get anki_mine_to_server => 'Mine to Fushi Interconnect server';
   String get anki_mine_to_server_hint =>
-      'Send mined cards to the Fushi Interconnect server\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+      'Send mined cards to the Fushi Interconnect server\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing. If the server is offline, cards wait on this device and are sent once it\'s back.';
   String get anki_mined_action_add_duplicate => 'Add as a new card';
   String get anki_mined_action_overwrite => 'Overwrite this card';
   String get anki_mined_action_view => 'View / open in Anki';
@@ -1094,7 +1094,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String book_search_results({required Object n}) => '${n} result(s)';
   String get books => 'Books';
   String get browser_extension_enable_server_first =>
-      'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
+      'Tip: enable "Fushi API server" and set an API key above first, so the extension is auto-configured with a working connection.';
   String get browser_extension_mobile_unsupported =>
       'Mobile browsers cannot load this extension. Use in-app lookup in the reader or video player instead.';
   String get browser_extension_prepare_button => 'Prepare extension files';
@@ -1128,7 +1128,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Fushi again.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Fushi API server again.';
   String get cancel => 'Cancel';
   String card_cover_degraded_to_static({required Object reason}) =>
       'Card cover fell back to a still frame (animated clip unavailable): ${reason}';
@@ -3842,19 +3842,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get popup_compact_glossaries => 'Compact glossaries';
   String get popup_compact_glossaries_hint =>
       'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
-  String get popup_ctx_adjust_button => 'Adjust context';
   String get popup_ctx_box_current => 'Current sentence';
-  String get popup_ctx_box_empty => '(none)';
   String get popup_ctx_box_next => 'Next context';
   String get popup_ctx_box_prev => 'Previous context';
   String get popup_ctx_cancel => 'Cancel';
   String get popup_ctx_confirm => 'Confirm mining';
-  String get popup_ctx_modal_count => 'Selected %d sentences';
-  String get popup_ctx_modal_eyebrow => 'Adjust before mining';
-  String get popup_ctx_modal_title => 'Select sentence context';
-  String get popup_ctx_next_minus => 'Remove next';
   String get popup_ctx_next_plus => 'Add next';
-  String get popup_ctx_prev_minus => 'Remove previous';
   String get popup_ctx_prev_plus => 'Add previous';
   String get popup_ctx_preview_audio => 'Preview audio';
   String get popup_ctx_preview_stop => 'Stop';
@@ -4161,7 +4154,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Scroll down one screen';
   String get shortcut_action_global_scroll_page_up => 'Scroll up one screen';
   String get shortcut_action_global_toggle_fullscreen => 'Toggle fullscreen';
-  String get shortcut_action_home_focus_search => 'Focus search';
+  String get shortcut_action_home_focus_search => 'Jump to dictionary search';
   String get shortcut_action_home_tab_books => 'Books tab';
   String get shortcut_action_home_tab_dict => 'Dictionary tab';
   String get shortcut_action_home_tab_next => 'Next tab';
@@ -6155,11 +6148,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get wheel_page_turn_interval => 'Mouse wheel page-turn interval';
   String get word_favorite_added => 'Word saved to favorites';
   String get word_favorite_removed => 'Word removed from favorites';
-  String get yomitan_api_key => 'Yomitan API key (optional)';
-  String get yomitan_api_server => 'Yomitan API server';
+  String get yomitan_api_key => 'Fushi API key (optional)';
+  String get yomitan_api_server => 'Fushi API server';
   String get yomitan_api_server_hint =>
-      'Let yomitan-api clients query Fushi\'s dictionaries (port 19633)';
-  String get yomitan_api_server_started => 'Yomitan API server started';
+      'Let the browser extension and yomitan-api-compatible clients query Fushi\'s dictionaries (port 19633)';
+  String get yomitan_api_server_started => 'Fushi API server started';
   String get yomitan_port_kill_action => 'End process and retry';
   String get yomitan_port_kill_confirm => 'End process';
   String yomitan_port_kill_confirm_message({required Object process}) =>
@@ -8591,7 +8584,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object remaining,
   }) => 'Sent ${delivered}, failed ${failed}, remaining ${remaining}';
   String get anki_pending_mine_landing_title =>
-      'Deliver cards from other devices';
+      'Receive cards from other devices';
   String get anki_error_sync_signed_out =>
       'Sign in to your Anki sync server first (Anki settings › Anki sync).';
   String get anki_error_sync_unavailable =>
@@ -8632,7 +8625,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anki_sync_client_sign_in_failed({required Object error}) =>
       'Sign-in failed: ${error}';
   String get anki_pending_mine_landing_hint =>
-      'Cards saved on devices without Anki travel through your sync service (cloud storage, or interconnect when this device syncs to a host) and are added to Anki on this device. Only one device does this at a time. A computer acting as an interconnect host doesn\'t take this role: phones paired with it should turn on Mine to Fushi Interconnect server instead (cards wait on the phone while the computer is off). A Fushi server can take this role.';
+      'Cards mined on devices without Anki reach this device through sync and are added to Anki here. Only one device receives them at a time.';
   String get anki_sync_client_relogin => 'Sign in again';
   String anki_sync_client_discard_confirm({required Object count}) =>
       '${count} card(s) haven\'t synced to Anki yet. Discard them and sign out? They can\'t be recovered.';
@@ -9583,7 +9576,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get import_drop_zone_hint =>
       'Choose files or a folder. You can also drag files straight onto the library page.';
   String get import_supported_formats => 'Supported formats';
-  String get import_methods_title => 'Ways to import';
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   String get online_sources_pinned_header => 'Pinned';
@@ -9786,8 +9778,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_compose_privacy =>
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   String get feedback_compose_submit => 'Send';
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   String get feedback_stage_sending => 'Sending…';
   String get feedback_stage_screenshots => 'Uploading screenshots…';
   String get feedback_stage_logs => 'Uploading logs…';
@@ -10714,6 +10704,116 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_pause_ocr_scope_all => 'All videos';
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   String get video_setting_pause_ocr_scope_off => 'Off';
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  String get external_book_open_existing => 'Open existing';
+  String get external_book_open_import_new => 'Import as new';
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  String get popup_advanced_mining_button => 'Advanced mining';
+  String get popup_advanced_mining_title => 'Advanced mining';
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  String get popup_advanced_mining_deck_section => 'Deck';
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  String get popup_advanced_mining_audio_none => 'None';
+  String get popup_advanced_mining_audio_start => 'Start';
+  String get popup_advanced_mining_audio_end => 'End';
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  String get popup_advanced_mining_audio_later => 'Later';
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  String get popup_advanced_mining_image_section => 'Image';
+  String get popup_advanced_mining_image_none => 'None';
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  String get popup_advanced_mining_crop_done => 'Done';
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  String get shortcut_action_library_search => 'Search in library';
+  String get feedback_filter_all => 'All';
+  String get feedback_filter_active => 'Ongoing';
+  String get feedback_filter_closed => 'Finished';
+  String get feedback_filter_unread => 'New replies';
+  String get anki_pending_mine_landing_host_note =>
+      'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -11404,7 +11504,7 @@ class _StringsAr extends _StringsEn {
   String get anki_mine_to_server => 'إرسال إلى الجهاز المقترن';
   @override
   String get anki_mine_to_server_hint =>
-      'أرسل البطاقات المستخرجة إلى Anki على الجهاز المضيف المقترن (رزمه وإعداداته) بدلاً من هذا الجهاز. يتطلب اقتراناً عبر الربط.';
+      'أرسل البطاقات المستخرجة إلى Anki على الجهاز المضيف المقترن (رزمه وإعداداته) بدلاً من هذا الجهاز. يتطلب اقتراناً عبر الربط. إذا كان الخادم غير متصل، تنتظر البطاقات على هذا الجهاز وتُرسل عند عودته.';
   @override
   String get anki_mined_action_add_duplicate => 'إضافة كبطاقة جديدة';
   @override
@@ -12237,7 +12337,7 @@ class _StringsAr extends _StringsEn {
   String get books => 'الكتب';
   @override
   String get browser_extension_enable_server_first =>
-      'نصيحة: فعّل "خادم Yomitan API" وعيّن مفتاح API أعلاه أولاً، حتى يتم تكوين الإضافة تلقائياً باتصال يعمل.';
+      'نصيحة: فعّل "خادم Fushi API" وعيّن مفتاح API أعلاه أولاً، حتى يتم تكوين الإضافة تلقائياً باتصال يعمل.';
   @override
   String get browser_extension_mobile_unsupported =>
       'لا يمكن لمتصفحات الأجهزة المحمولة تحميل هذا الامتداد. استخدم البحث داخل التطبيق في القارئ أو مشغّل الفيديو بدلاً من ذلك.';
@@ -12293,7 +12393,7 @@ class _StringsAr extends _StringsEn {
       'الإضافة المحمّلة في متصفحك قديمة. أعد تجهيز الإضافة إذا لزم الأمر، ثم أعد تحميلها من صفحة إضافات متصفحك (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Yomitan API في Fushi مجدداً.';
+      'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Fushi API مجدداً.';
   @override
   String get cancel => 'إلغاء';
   @override
@@ -16998,11 +17098,7 @@ class _StringsAr extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'عرض مدخلات معاني القاموس في سطر واحد مفصولة بـ \' | \' بدلًا من مدخل لكل سطر في نافذة البحث.';
   @override
-  String get popup_ctx_adjust_button => 'تعديل السياق';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(لا شيء)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -17012,17 +17108,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'اختيار سياق الجملة';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -17590,7 +17676,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'تبديل ملء الشاشة';
   @override
-  String get shortcut_action_home_focus_search => 'التركيز على البحث';
+  String get shortcut_action_home_focus_search =>
+      'الانتقال إلى البحث في القاموس';
   @override
   String get shortcut_action_home_tab_books => 'تبويب الكتب';
   @override
@@ -21065,14 +21152,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get word_favorite_removed => 'تمت إزالة الكلمة من المفضلة';
   @override
-  String get yomitan_api_key => 'مفتاح Yomitan API (اختياري)';
+  String get yomitan_api_key => 'مفتاح Fushi API (اختياري)';
   @override
-  String get yomitan_api_server => 'خادم Yomitan API';
+  String get yomitan_api_server => 'خادم Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'السماح لعملاء yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
+      'السماح لإضافة المتصفح والعملاء المتوافقين مع yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
   @override
-  String get yomitan_api_server_started => 'تم تشغيل خادم Yomitan API';
+  String get yomitan_api_server_started => 'تم تشغيل خادم Fushi API';
   @override
   String get yomitan_port_kill_action => 'إنهاء العملية وإعادة المحاولة';
   @override
@@ -25087,7 +25174,7 @@ class _StringsAr extends _StringsEn {
   }) => 'أُرسل ${delivered}، وفشل ${failed}، وتبقى ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'تسليم البطاقات من الأجهزة الأخرى';
+      'استلام البطاقات من الأجهزة الأخرى';
   @override
   String get anki_error_sync_signed_out =>
       'سجّل الدخول إلى خادم مزامنة Anki أولًا (إعدادات Anki › مزامنة Anki).';
@@ -25155,7 +25242,7 @@ class _StringsAr extends _StringsEn {
       'فشل تسجيل الدخول: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'تنتقل البطاقات المحفوظة على الأجهزة التي بلا Anki عبر خدمة المزامنة لديك (التخزين السحابي، أو الربط عندما يزامن هذا الجهاز مع مضيف) وتُضاف إلى Anki على هذا الجهاز. جهاز واحد فقط يفعل ذلك في كل مرة. الحاسوب الذي يعمل كمضيف ربط لا يتولى هذا الدور: الهواتف المقترنة به ينبغي أن تفعّل «الاستخراج إلى خادم Fushi Interconnect» بدلًا من ذلك (تنتظر البطاقات على الهاتف أثناء إيقاف الحاسوب). يمكن لخادم Fushi تولي هذا الدور.';
+      'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
   @override
   String get anki_sync_client_relogin => 'تسجيل الدخول مرة أخرى';
   @override
@@ -26744,8 +26831,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -27104,9 +27189,6 @@ class _StringsAr extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -28638,6 +28720,191 @@ class _StringsAr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'البحث في المكتبة';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -29343,7 +29610,7 @@ class _StringsDe extends _StringsEn {
   String get anki_mine_to_server => 'An gekoppeltes Gerät senden';
   @override
   String get anki_mine_to_server_hint =>
-      'Erstellte Karten an das Anki des gekoppelten Hosts senden (dessen Decks und Einstellungen) statt an dieses Gerät. Erfordert eine Interconnect-Kopplung.';
+      'Erstellte Karten an das Anki des gekoppelten Hosts senden (dessen Decks und Einstellungen) statt an dieses Gerät. Erfordert eine Interconnect-Kopplung. Ist der Server offline, warten die Karten auf diesem Gerät und werden gesendet, sobald er wieder erreichbar ist.';
   @override
   String get anki_mined_action_add_duplicate => 'Als neue Karte hinzufügen';
   @override
@@ -30196,7 +30463,7 @@ class _StringsDe extends _StringsEn {
   String get books => 'Bücher';
   @override
   String get browser_extension_enable_server_first =>
-      'Tipp: Aktiviere zuerst oben den „Yomitan API-Server" und setze einen API-Schlüssel, damit die Erweiterung automatisch mit einer funktionierenden Verbindung konfiguriert wird.';
+      'Tipp: Aktiviere zuerst oben den „Fushi-API-Server" und setze einen API-Schlüssel, damit die Erweiterung automatisch mit einer funktionierenden Verbindung konfiguriert wird.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Mobile Browser können diese Erweiterung nicht laden. Nutze stattdessen die App-interne Suche im Reader oder Videoplayer.';
@@ -30256,7 +30523,7 @@ class _StringsDe extends _StringsEn {
       'Die im Browser geladene Erweiterung ist veraltet. Bereite die Erweiterung bei Bedarf erneut vor und lade sie dann über die Erweiterungsseite deines Browsers neu (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Yomitan-API-Server in Fushi erneut.';
+      'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Fushi-API-Server erneut.';
   @override
   String get cancel => 'Abbrechen';
   @override
@@ -35078,11 +35345,7 @@ class _StringsDe extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Wörterbuch-Glossareinträge im Nachschlage-Popup inline, getrennt durch \' | \', statt einen pro Zeile anzeigen.';
   @override
-  String get popup_ctx_adjust_button => 'Kontext anpassen';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(leer)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -35092,17 +35355,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Satzkontext auswählen';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -35678,7 +35931,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'Vollbild umschalten';
   @override
-  String get shortcut_action_home_focus_search => 'Suche fokussieren';
+  String get shortcut_action_home_focus_search =>
+      'Zur Wörterbuchsuche springen';
   @override
   String get shortcut_action_home_tab_books => 'Tab „Bücher“';
   @override
@@ -39236,14 +39490,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get word_favorite_removed => 'Wort aus Favoriten entfernt';
   @override
-  String get yomitan_api_key => 'Yomitan-API-Schlüssel (optional)';
+  String get yomitan_api_key => 'Fushi-API-Schlüssel (optional)';
   @override
-  String get yomitan_api_server => 'Yomitan-API-Server';
+  String get yomitan_api_server => 'Fushi-API-Server';
   @override
   String get yomitan_api_server_hint =>
-      'yomitan-api-Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
+      'Browsererweiterung und yomitan-api-kompatible Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
   @override
-  String get yomitan_api_server_started => 'Yomitan-API-Server gestartet';
+  String get yomitan_api_server_started => 'Fushi-API-Server gestartet';
   @override
   String get yomitan_port_kill_action => 'Prozess beenden und erneut versuchen';
   @override
@@ -43388,7 +43642,7 @@ class _StringsDe extends _StringsEn {
       '${delivered} gesendet, ${failed} fehlgeschlagen, ${remaining} verbleibend';
   @override
   String get anki_pending_mine_landing_title =>
-      'Karten von anderen Geräten zustellen';
+      'Karten anderer Geräte empfangen';
   @override
   String get anki_error_sync_signed_out =>
       'Melde dich zuerst bei deinem Anki-Sync-Server an (Anki-Einstellungen › Anki-Sync).';
@@ -43456,7 +43710,7 @@ class _StringsDe extends _StringsEn {
       'Anmeldung fehlgeschlagen: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Karten, die auf Geräten ohne Anki gespeichert wurden, laufen über deinen Sync-Dienst (Cloud-Speicher oder Interconnect, wenn dieses Gerät mit einem Host synchronisiert) und werden auf diesem Gerät zu Anki hinzugefügt. Das macht immer nur ein Gerät. Ein Computer, der als Interconnect-Host fungiert, übernimmt diese Rolle nicht: Mit ihm gekoppelte Smartphones sollten stattdessen „Auf Fushi-Interconnect-Server minen“ aktivieren (Karten warten auf dem Smartphone, solange der Computer aus ist). Ein Fushi-Server kann diese Rolle übernehmen.';
+      'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
   @override
   String get anki_sync_client_relogin => 'Erneut anmelden';
   @override
@@ -45057,8 +45311,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -45417,9 +45669,6 @@ class _StringsDe extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -46952,6 +47201,191 @@ class _StringsDe extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'In der Bibliothek suchen';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -47661,7 +48095,7 @@ class _StringsEs extends _StringsEn {
   String get anki_mine_to_server => 'Enviar al dispositivo emparejado';
   @override
   String get anki_mine_to_server_hint =>
-      'Envía las tarjetas creadas al Anki del dispositivo emparejado (sus mazos y ajustes) en lugar de este dispositivo. Requiere emparejamiento por Interconnect.';
+      'Envía las tarjetas creadas al Anki del dispositivo emparejado (sus mazos y ajustes) en lugar de este dispositivo. Requiere emparejamiento por Interconnect. Si el servidor está desconectado, las tarjetas esperan en este dispositivo y se envían cuando vuelve.';
   @override
   String get anki_mined_action_add_duplicate => 'Añadir como tarjeta nueva';
   @override
@@ -48516,7 +48950,7 @@ class _StringsEs extends _StringsEn {
   String get books => 'Libros';
   @override
   String get browser_extension_enable_server_first =>
-      'Consejo: active primero el "servidor API Yomitan" y establezca una clave API arriba, para que la extensión se configure automáticamente con una conexión funcional.';
+      'Consejo: active primero el "servidor Fushi API" y establezca una clave API arriba, para que la extensión se configure automáticamente con una conexión funcional.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Los navegadores móviles no pueden cargar esta extensión. Usa la búsqueda dentro de la app en el lector o el reproductor de vídeo.';
@@ -48576,7 +49010,7 @@ class _StringsEs extends _StringsEn {
       'La extensión cargada en su navegador está desactualizada. Prepare la extensión de nuevo si es necesario, luego recárguela desde la página de extensiones del navegador (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor API Yomitan en Fushi.';
+      'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor Fushi API.';
   @override
   String get cancel => 'Cancelar';
   @override
@@ -53409,11 +53843,7 @@ class _StringsEs extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Muestra las entradas de glosario del diccionario en línea, separadas por \' | \', en lugar de una por línea en la ventana de consulta.';
   @override
-  String get popup_ctx_adjust_button => 'Ajustar contexto';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(ninguno)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -53423,17 +53853,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Seleccionar contexto de oración';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -54019,7 +54439,8 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_global_toggle_fullscreen =>
       'Alternar pantalla completa';
   @override
-  String get shortcut_action_home_focus_search => 'Enfocar búsqueda';
+  String get shortcut_action_home_focus_search =>
+      'Ir a la búsqueda del diccionario';
   @override
   String get shortcut_action_home_tab_books => 'Pestaña de libros';
   @override
@@ -57604,14 +58025,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get word_favorite_removed => 'Palabra eliminada de favoritos';
   @override
-  String get yomitan_api_key => 'API key de Yomitan (opcional)';
+  String get yomitan_api_key => 'Clave de Fushi API (opcional)';
   @override
-  String get yomitan_api_server => 'Servidor API de Yomitan';
+  String get yomitan_api_server => 'Servidor Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Permite que los clientes de yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
+      'Permite que la extensión del navegador y los clientes compatibles con yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
   @override
-  String get yomitan_api_server_started => 'Servidor API Yomitan iniciado';
+  String get yomitan_api_server_started => 'Servidor Fushi API iniciado';
   @override
   String get yomitan_port_kill_action => 'Finalizar proceso y reintentar';
   @override
@@ -61761,7 +62182,7 @@ class _StringsEs extends _StringsEn {
   }) => 'Enviadas ${delivered}, fallidas ${failed}, restantes ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'Entregar tarjetas de otros dispositivos';
+      'Recibir tarjetas de otros dispositivos';
   @override
   String get anki_error_sync_signed_out =>
       'Inicia primero sesión en tu servidor de sincronización de Anki (ajustes de Anki › Sincronización de Anki).';
@@ -61832,7 +62253,7 @@ class _StringsEs extends _StringsEn {
       'Error al iniciar sesión: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Las tarjetas guardadas en dispositivos sin Anki viajan por tu servicio de sincronización (almacenamiento en la nube o interconexión cuando este dispositivo sincroniza con un anfitrión) y se añaden a Anki en este dispositivo. Solo un dispositivo hace esto a la vez. Un ordenador que actúa como anfitrión de interconexión no asume este papel: los móviles emparejados con él deben activar Crear tarjetas en el servidor Fushi Interconnect (las tarjetas esperan en el móvil mientras el ordenador está apagado). Un servidor Fushi sí puede asumir este papel.';
+      'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
   @override
   String get anki_sync_client_relogin => 'Iniciar sesión de nuevo';
   @override
@@ -63431,8 +63852,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -63791,9 +64210,6 @@ class _StringsEs extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -65326,6 +65742,191 @@ class _StringsEs extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'Buscar en la biblioteca';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -66035,7 +66636,7 @@ class _StringsFr extends _StringsEn {
   String get anki_mine_to_server => 'Envoyer au périphérique apparié';
   @override
   String get anki_mine_to_server_hint =>
-      'Envoyer les cartes créées vers l\'Anki de l\'hôte apparié (ses paquets et paramètres) au lieu de cet appareil. Nécessite un appairage d\'interconnexion.';
+      'Envoyer les cartes créées vers l\'Anki de l\'hôte apparié (ses paquets et paramètres) au lieu de cet appareil. Nécessite un appairage d\'interconnexion. Si le serveur est hors ligne, les cartes restent sur cet appareil et sont envoyées dès son retour.';
   @override
   String get anki_mined_action_add_duplicate => 'Ajouter comme nouvelle carte';
   @override
@@ -66901,7 +67502,7 @@ class _StringsFr extends _StringsEn {
   String get books => 'Livres';
   @override
   String get browser_extension_enable_server_first =>
-      'Conseil : activez d\'abord « Serveur API Yomitan » et définissez une clé API ci-dessus, pour que l\'extension soit configurée automatiquement avec une connexion fonctionnelle.';
+      'Conseil : activez d\'abord « Serveur Fushi API » et définissez une clé API ci-dessus, pour que l\'extension soit configurée automatiquement avec une connexion fonctionnelle.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Les navigateurs mobiles ne peuvent pas charger cette extension. Utilisez plutôt la recherche intégrée dans le lecteur ou le lecteur vidéo.';
@@ -66961,7 +67562,7 @@ class _StringsFr extends _StringsEn {
       'L\'extension chargée dans votre navigateur est obsolète. Repréparez l\'extension si nécessaire, puis rechargez-la depuis la page des extensions de votre navigateur (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur API Yomitan dans Fushi.';
+      'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur Fushi API.';
   @override
   String get cancel => 'Annuler';
   @override
@@ -71812,11 +72413,7 @@ class _StringsFr extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Affiche les entrées de glossaire des dictionnaires sur une seule ligne, séparées par \' | \', au lieu d\'une par ligne dans la fenêtre de recherche.';
   @override
-  String get popup_ctx_adjust_button => 'Ajuster le contexte';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(aucun)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -71826,17 +72423,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Sélectionner le contexte de phrase';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -72420,7 +73007,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'Plein écran';
   @override
-  String get shortcut_action_home_focus_search => 'Focus sur la recherche';
+  String get shortcut_action_home_focus_search =>
+      'Aller à la recherche dans le dictionnaire';
   @override
   String get shortcut_action_home_tab_books => 'Onglet Livres';
   @override
@@ -76021,14 +76609,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Mot retiré des favoris';
   @override
-  String get yomitan_api_key => 'Clé API Yomitan (facultatif)';
+  String get yomitan_api_key => 'Clé Fushi API (facultatif)';
   @override
-  String get yomitan_api_server => 'Serveur API Yomitan';
+  String get yomitan_api_server => 'Serveur Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Permet aux clients yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
+      'Permet à l\'extension de navigateur et aux clients compatibles yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
   @override
-  String get yomitan_api_server_started => 'Serveur API Yomitan démarré';
+  String get yomitan_api_server_started => 'Serveur Fushi API démarré';
   @override
   String get yomitan_port_kill_action => 'Arrêter le processus et réessayer';
   @override
@@ -80210,7 +80798,7 @@ class _StringsFr extends _StringsEn {
   }) => '${delivered} envoyées, ${failed} en échec, ${remaining} restantes';
   @override
   String get anki_pending_mine_landing_title =>
-      'Livrer les cartes d\'autres appareils';
+      'Recevoir les cartes des autres appareils';
   @override
   String get anki_error_sync_signed_out =>
       'Connectez-vous d\'abord à votre serveur de synchronisation Anki (réglages Anki › Synchronisation Anki).';
@@ -80281,7 +80869,7 @@ class _StringsFr extends _StringsEn {
       'Échec de la connexion : ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Les cartes enregistrées sur des appareils sans Anki transitent par votre service de synchronisation (stockage cloud, ou interconnexion quand cet appareil se synchronise avec un hôte) et sont ajoutées à Anki sur cet appareil. Un seul appareil joue ce rôle à la fois. Un ordinateur faisant office d\'hôte d\'interconnexion ne prend pas ce rôle : les téléphones appairés avec lui doivent plutôt activer Créer vers le serveur Fushi Interconnect (les cartes attendent sur le téléphone tant que l\'ordinateur est éteint). Un serveur Fushi peut prendre ce rôle.';
+      'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
   @override
   String get anki_sync_client_relogin => 'Se reconnecter';
   @override
@@ -81884,8 +82472,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -82244,9 +82830,6 @@ class _StringsFr extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -83779,6 +84362,192 @@ class _StringsFr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search =>
+      'Rechercher dans la bibliothèque';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -84478,7 +85247,7 @@ class _StringsId extends _StringsEn {
   String get anki_mine_to_server => 'Kirim kartu ke perangkat berpasangan';
   @override
   String get anki_mine_to_server_hint =>
-      'Kirim kartu yang ditambang ke Anki perangkat host berpasangan (dek dan pengaturannya) alih-alih perangkat ini. Memerlukan koneksi Interconnect.';
+      'Kirim kartu yang ditambang ke Anki perangkat host berpasangan (dek dan pengaturannya) alih-alih perangkat ini. Memerlukan koneksi Interconnect. Jika server sedang offline, kartu menunggu di perangkat ini dan dikirim setelah tersambung kembali.';
   @override
   String get anki_mined_action_add_duplicate => 'Tambah sebagai kartu baru';
   @override
@@ -85318,7 +86087,7 @@ class _StringsId extends _StringsEn {
   String get books => 'Buku';
   @override
   String get browser_extension_enable_server_first =>
-      'Tips: aktifkan "Server API Yomitan" dan atur kunci API di atas terlebih dahulu, agar ekstensi otomatis terkonfigurasi dengan koneksi yang berfungsi.';
+      'Tips: aktifkan "Server Fushi API" dan atur kunci API di atas terlebih dahulu, agar ekstensi otomatis terkonfigurasi dengan koneksi yang berfungsi.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Peramban seluler tidak dapat memuat ekstensi ini. Gunakan pencarian dalam aplikasi di pembaca atau pemutar video sebagai gantinya.';
@@ -85377,7 +86146,7 @@ class _StringsId extends _StringsEn {
       'Ekstensi yang dimuat di browser Anda sudah usang. Siapkan ulang ekstensi jika perlu, lalu muat ulang dari halaman ekstensi browser Anda (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server API Yomitan di Fushi.';
+      'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server Fushi API.';
   @override
   String get cancel => 'Batal';
   @override
@@ -90133,11 +90902,7 @@ class _StringsId extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Tampilkan entri glosarium kamus sebaris, dipisahkan oleh \' | \', bukan satu per baris di popup pencarian.';
   @override
-  String get popup_ctx_adjust_button => 'Sesuaikan konteks';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(tidak ada)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -90147,17 +90912,7 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Pilih konteks kalimat';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -90734,7 +91489,7 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'Alihkan layar penuh';
   @override
-  String get shortcut_action_home_focus_search => 'Fokus Pencarian';
+  String get shortcut_action_home_focus_search => 'Lompat ke pencarian kamus';
   @override
   String get shortcut_action_home_tab_books => 'Tab Buku';
   @override
@@ -94253,14 +95008,14 @@ class _StringsId extends _StringsEn {
   @override
   String get word_favorite_removed => 'Kata dihapus dari favorit';
   @override
-  String get yomitan_api_key => 'Yomitan API key (opsional)';
+  String get yomitan_api_key => 'Fushi API key (opsional)';
   @override
-  String get yomitan_api_server => 'Server Yomitan API';
+  String get yomitan_api_server => 'Server Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Izinkan klien yomitan-api mencari di kamus Fushi (port 19633)';
+      'Izinkan ekstensi browser dan klien yang kompatibel dengan yomitan-api mencari di kamus Fushi (port 19633)';
   @override
-  String get yomitan_api_server_started => 'Server API Yomitan dimulai';
+  String get yomitan_api_server_started => 'Server Fushi API dimulai';
   @override
   String get yomitan_port_kill_action => 'Akhiri proses dan coba lagi';
   @override
@@ -98329,7 +99084,7 @@ class _StringsId extends _StringsEn {
   }) => 'Terkirim ${delivered}, gagal ${failed}, tersisa ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'Antarkan kartu dari perangkat lain';
+      'Terima kartu dari perangkat lain';
   @override
   String get anki_error_sync_signed_out =>
       'Masuk ke server sinkronisasi Anki Anda dulu (pengaturan Anki › sinkronisasi Anki).';
@@ -98396,7 +99151,7 @@ class _StringsId extends _StringsEn {
       'Login gagal: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Kartu yang disimpan di perangkat tanpa Anki melewati layanan sinkronisasi Anda (penyimpanan cloud, atau interconnect saat perangkat ini menyinkronkan ke host) dan ditambahkan ke Anki di perangkat ini. Hanya satu perangkat yang melakukannya dalam satu waktu. Komputer yang bertindak sebagai host interconnect tidak mengambil peran ini: ponsel yang dipasangkan dengannya sebaiknya mengaktifkan Mining ke server Fushi Interconnect (kartu menunggu di ponsel saat komputer mati). Server Fushi dapat mengambil peran ini.';
+      'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
   @override
   String get anki_sync_client_relogin => 'Masuk lagi';
   @override
@@ -99993,8 +100748,6 @@ class _StringsId extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -100353,9 +101106,6 @@ class _StringsId extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -101887,6 +102637,191 @@ class _StringsId extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'Cari di pustaka';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -102590,7 +103525,7 @@ class _StringsIt extends _StringsEn {
   String get anki_mine_to_server => 'Invia al dispositivo accoppiato';
   @override
   String get anki_mine_to_server_hint =>
-      'Invia le carte estratte all\'Anki dell\'host accoppiato (i suoi mazzi e impostazioni) invece di questo dispositivo. Richiede un accoppiamento interconnect.';
+      'Invia le carte estratte all\'Anki dell\'host accoppiato (i suoi mazzi e impostazioni) invece di questo dispositivo. Richiede un accoppiamento interconnect. Se il server è offline, le carte restano su questo dispositivo e vengono inviate quando torna disponibile.';
   @override
   String get anki_mined_action_add_duplicate => 'Aggiungi come nuova carta';
   @override
@@ -103439,7 +104374,7 @@ class _StringsIt extends _StringsEn {
   String get books => 'Libri';
   @override
   String get browser_extension_enable_server_first =>
-      'Suggerimento: abilita prima "Server API Yomitan" e imposta una chiave API sopra, così l\'estensione viene configurata automaticamente con una connessione funzionante.';
+      'Suggerimento: abilita prima "Server Fushi API" e imposta una chiave API sopra, così l\'estensione viene configurata automaticamente con una connessione funzionante.';
   @override
   String get browser_extension_mobile_unsupported =>
       'I browser mobili non possono caricare questa estensione. Usa invece la ricerca nell\'app nel lettore o nel player video.';
@@ -103497,7 +104432,7 @@ class _StringsIt extends _StringsEn {
       'L\'estensione caricata nel browser è obsoleta. Ri-prepara l\'estensione se necessario, poi ricaricala dalla pagina estensioni del browser (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server API Yomitan in Fushi.';
+      'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server Fushi API.';
   @override
   String get cancel => 'Annulla';
   @override
@@ -108299,11 +109234,7 @@ class _StringsIt extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Mostra le voci di glossario del dizionario in linea, separate da \' | \', invece di una per riga nel popup di ricerca.';
   @override
-  String get popup_ctx_adjust_button => 'Regola contesto';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(nessuno)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -108313,17 +109244,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Seleziona contesto della frase';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -108906,7 +109827,8 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_global_toggle_fullscreen =>
       'Attiva/disattiva schermo intero';
   @override
-  String get shortcut_action_home_focus_search => 'Vai alla ricerca';
+  String get shortcut_action_home_focus_search =>
+      'Vai alla ricerca nel dizionario';
   @override
   String get shortcut_action_home_tab_books => 'Scheda Libri';
   @override
@@ -112462,14 +113384,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get word_favorite_removed => 'Parola rimossa dai preferiti';
   @override
-  String get yomitan_api_key => 'API key Yomitan (opzionale)';
+  String get yomitan_api_key => 'Chiave Fushi API (opzionale)';
   @override
-  String get yomitan_api_server => 'Server API Yomitan';
+  String get yomitan_api_server => 'Server Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Consenti ai client yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
+      'Consenti all\'estensione del browser e ai client compatibili con yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
   @override
-  String get yomitan_api_server_started => 'Server API Yomitan avviato';
+  String get yomitan_api_server_started => 'Server Fushi API avviato';
   @override
   String get yomitan_port_kill_action => 'Termina processo e riprova';
   @override
@@ -116595,7 +117517,7 @@ class _StringsIt extends _StringsEn {
   }) => 'Inviate ${delivered}, non riuscite ${failed}, rimanenti ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'Consegna le carte da altri dispositivi';
+      'Ricevi le carte da altri dispositivi';
   @override
   String get anki_error_sync_signed_out =>
       'Accedi prima al tuo server di sincronizzazione di Anki (impostazioni di Anki › Sincronizzazione Anki).';
@@ -116665,7 +117587,7 @@ class _StringsIt extends _StringsEn {
       'Accesso non riuscito: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Le carte salvate su dispositivi senza Anki passano dal tuo servizio di sincronizzazione (archiviazione cloud, o interconnect quando questo dispositivo sincronizza con un host) e vengono aggiunte ad Anki su questo dispositivo. Lo fa un solo dispositivo alla volta. Un computer che fa da host interconnect non assume questo ruolo: i telefoni abbinati ad esso devono invece attivare Mining sul server Fushi Interconnect (le carte restano sul telefono mentre il computer è spento). Un server Fushi può assumere questo ruolo.';
+      'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
   @override
   String get anki_sync_client_relogin => 'Accedi di nuovo';
   @override
@@ -118265,8 +119187,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -118625,9 +119545,6 @@ class _StringsIt extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -120160,6 +121077,191 @@ class _StringsIt extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'Cerca nella libreria';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -120829,7 +121931,7 @@ class _StringsJa extends _StringsEn {
   String get anki_mine_to_server => 'ペアリングデバイスに制カード';
   @override
   String get anki_mine_to_server_hint =>
-      '制カードをこのデバイスではなく、ペアリングしたホストの Anki（そのデッキと設定）に送信します。互連ペアリングが必要です。';
+      '制カードをこのデバイスではなく、ペアリングしたホストの Anki（そのデッキと設定）に送信します。互連ペアリングが必要です。サーバーがオフラインの間、カードはこのデバイスに保存され、接続が戻ると送信されます。';
   @override
   String get anki_mined_action_add_duplicate => '新しいカードとして追加';
   @override
@@ -121627,7 +122729,7 @@ class _StringsJa extends _StringsEn {
   String get books => '本';
   @override
   String get browser_extension_enable_server_first =>
-      'ヒント：先に「Yomitan API サーバー」を有効にし、上で API キーを設定すると、拡張機能が自動で接続設定されます。';
+      'ヒント：先に「Fushi API サーバー」を有効にし、上で API キーを設定すると、拡張機能が自動で接続設定されます。';
   @override
   String get browser_extension_mobile_unsupported =>
       'モバイルブラウザーではこの拡張機能を読み込めません。代わりにアプリ内のリーダーや動画プレーヤーで辞書引きしてください。';
@@ -121682,7 +122784,7 @@ class _StringsJa extends _StringsEn {
       'ブラウザに読み込まれた拡張機能が古くなっています。必要に応じて拡張機能を再度準備してから、ブラウザの拡張機能ページ（chrome://extensions）から再読み込みしてください。';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi で Yomitan API サーバーを再度有効にしてください。';
+      'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi API サーバーを再度有効にしてください。';
   @override
   String get cancel => 'キャンセル';
   @override
@@ -126188,11 +127290,7 @@ class _StringsJa extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'ポップアップの釈義項目を1行ずつではなく「 | 」区切りで同じ行に表示します。';
   @override
-  String get popup_ctx_adjust_button => '文脈を調整';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '（なし）';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -126202,17 +127300,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => '文脈の範囲を選択';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -126765,7 +127853,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => '全画面表示の切り替え';
   @override
-  String get shortcut_action_home_focus_search => '検索にフォーカス';
+  String get shortcut_action_home_focus_search => '辞書検索へ移動';
   @override
   String get shortcut_action_home_tab_books => '書籍タブ';
   @override
@@ -130080,14 +131168,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get word_favorite_removed => '単語をお気に入りから削除しました';
   @override
-  String get yomitan_api_key => 'Yomitan API キー（任意）';
+  String get yomitan_api_key => 'Fushi API キー（任意）';
   @override
-  String get yomitan_api_server => 'Yomitan API サーバー';
+  String get yomitan_api_server => 'Fushi API サーバー';
   @override
   String get yomitan_api_server_hint =>
-      'yomitan-api クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
+      'ブラウザ拡張機能や yomitan-api 互換クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
   @override
-  String get yomitan_api_server_started => 'Yomitan APIサーバーが起動しました';
+  String get yomitan_api_server_started => 'Fushi API サーバーが起動しました';
   @override
   String get yomitan_port_kill_action => 'プロセスを終了して再試行';
   @override
@@ -133993,7 +135081,7 @@ class _StringsJa extends _StringsEn {
       'サインインに失敗しました: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki のないデバイスで保存されたカードは、同期サービス（クラウドストレージ、またはこのデバイスがホストと同期している場合は Interconnect）を経由して、このデバイスで Anki に追加されます。同時にこれを行うデバイスは 1 台だけです。Interconnect ホストとして動作しているコンピューターはこの役割を担いません。ペアリングしているスマートフォンで代わりに「Fushi Interconnect サーバーへマイニング」をオンにしてください（コンピューターの電源が切れている間、カードはスマートフォンで待機します）。Fushi サーバーはこの役割を担えます。';
+      'Anki のないデバイスで作ったカードは、同期を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
   @override
   String get anki_sync_client_relogin => '再度サインイン';
   @override
@@ -135563,8 +136651,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -135918,8 +137004,6 @@ class _StringsJa extends _StringsEn {
       'フィードバックは fushi.moe の Fushi 開発者に送られ、不具合の調査と改善にのみ使われます。';
   @override
   String get feedback_compose_submit => '送信';
-  @override
-  String get feedback_compose_missing => 'タイトルと詳細を入力してください。';
   @override
   String get feedback_stage_sending => '送信中…';
   @override
@@ -137433,6 +138517,191 @@ class _StringsJa extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '画像字幕のみ';
   @override
   String get video_setting_pause_ocr_scope_off => 'オフ';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'タイトルを入力してください。';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'ライブラリ内を検索';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
+  @override
+  String get manga_series_manage_volume => 'この巻を管理';
 }
 
 // Path: <root>
@@ -138098,7 +139367,7 @@ class _StringsKo extends _StringsEn {
   String get anki_mine_to_server => '페어링된 기기로 채굴';
   @override
   String get anki_mine_to_server_hint =>
-      '채굴한 카드를 이 기기 대신 페어링된 호스트의 Anki(해당 덱 및 설정)로 전송합니다. 인터커넥트 페어링이 필요합니다.';
+      '채굴한 카드를 이 기기 대신 페어링된 호스트의 Anki(해당 덱 및 설정)로 전송합니다. 인터커넥트 페어링이 필요합니다. 서버가 오프라인이면 카드는 이 기기에 보관되었다가 연결되면 전송됩니다.';
   @override
   String get anki_mined_action_add_duplicate => '새 카드로 추가';
   @override
@@ -138895,7 +140164,7 @@ class _StringsKo extends _StringsEn {
   String get books => '책';
   @override
   String get browser_extension_enable_server_first =>
-      '팁: 먼저 위에서 "Yomitan API 서버"를 활성화하고 API 키를 설정하면 확장 프로그램이 자동으로 연결 구성됩니다.';
+      '팁: 먼저 위에서 "Fushi API 서버"를 활성화하고 API 키를 설정하면 확장 프로그램이 자동으로 연결 구성됩니다.';
   @override
   String get browser_extension_mobile_unsupported =>
       '모바일 브라우저에서는 이 확장 프로그램을 로드할 수 없습니다. 대신 앱 내 리더나 동영상 플레이어에서 사전 검색을 사용하세요.';
@@ -138949,7 +140218,7 @@ class _StringsKo extends _StringsEn {
       '브라우저에 로드된 확장 프로그램이 오래되었습니다. 필요한 경우 확장 프로그램을 다시 준비한 후 브라우저 확장 프로그램 페이지(chrome://extensions)에서 다시 로드하세요.';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi에서 Yomitan API 서버를 다시 활성화하세요.';
+      '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi API 서버를 다시 활성화하세요.';
   @override
   String get cancel => '취소';
   @override
@@ -143462,11 +144731,7 @@ class _StringsKo extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       '검색 팝업에서 사전 풀이 항목을 한 줄에 하나씩 표시하는 대신 \' | \'로 구분해 한 줄에 이어서 표시합니다.';
   @override
-  String get popup_ctx_adjust_button => '문맥 조정';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(없음)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -143476,17 +144741,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => '문장 문맥 선택';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -144039,7 +145294,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => '전체 화면 전환';
   @override
-  String get shortcut_action_home_focus_search => '검색 포커스';
+  String get shortcut_action_home_focus_search => '사전 검색으로 이동';
   @override
   String get shortcut_action_home_tab_books => '책 탭';
   @override
@@ -147360,14 +148615,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get word_favorite_removed => '단어가 즐겨찾기에서 삭제되었습니다';
   @override
-  String get yomitan_api_key => 'Yomitan API key(선택)';
+  String get yomitan_api_key => 'Fushi API key(선택)';
   @override
-  String get yomitan_api_server => 'Yomitan API 서버';
+  String get yomitan_api_server => 'Fushi API 서버';
   @override
   String get yomitan_api_server_hint =>
-      'yomitan-api 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
+      '브라우저 확장 프로그램과 yomitan-api 호환 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
   @override
-  String get yomitan_api_server_started => 'Yomitan API 서버가 시작되었습니다';
+  String get yomitan_api_server_started => 'Fushi API 서버가 시작되었습니다';
   @override
   String get yomitan_port_kill_action => '프로세스를 종료하고 재시도';
   @override
@@ -151205,7 +152460,7 @@ class _StringsKo extends _StringsEn {
     required Object remaining,
   }) => '전송 ${delivered}장, 실패 ${failed}장, 남음 ${remaining}장';
   @override
-  String get anki_pending_mine_landing_title => '다른 기기의 카드 전달';
+  String get anki_pending_mine_landing_title => '다른 기기의 카드 받기';
   @override
   String get anki_error_sync_signed_out =>
       '먼저 Anki 동기화 서버에 로그인하세요(Anki 설정 › Anki 동기화).';
@@ -151272,7 +152527,7 @@ class _StringsKo extends _StringsEn {
       '로그인 실패: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki가 없는 기기에서 저장한 카드는 동기화 서비스(클라우드 저장소, 또는 이 기기가 호스트와 동기화하는 경우 연동)를 통해 전달되어 이 기기의 Anki에 추가됩니다. 한 번에 한 기기만 이 역할을 합니다. 연동 호스트로 동작하는 컴퓨터는 이 역할을 맡지 않습니다. 그 컴퓨터와 페어링한 휴대폰은 대신 \'Fushi 연동 서버로 마이닝\'을 켜세요(컴퓨터가 꺼져 있는 동안 카드는 휴대폰에서 대기합니다). Fushi 서버는 이 역할을 맡을 수 있습니다.';
+      'Anki가 없는 기기에서 만든 카드는 동기화를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
   @override
   String get anki_sync_client_relogin => '다시 로그인';
   @override
@@ -152849,8 +154104,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -153209,9 +154462,6 @@ class _StringsKo extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -154742,6 +155992,191 @@ class _StringsKo extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => '라이브러리에서 검색';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -155443,7 +156878,7 @@ class _StringsNl extends _StringsEn {
   String get anki_mine_to_server => 'Kaarten naar gekoppeld apparaat sturen';
   @override
   String get anki_mine_to_server_hint =>
-      'Stuur gedolven kaarten naar de Anki van het gekoppelde apparaat (diens dekken en instellingen) in plaats van dit apparaat. Vereist een interconnectkoppeling.';
+      'Stuur gedolven kaarten naar de Anki van het gekoppelde apparaat (diens dekken en instellingen) in plaats van dit apparaat. Vereist een interconnectkoppeling. Is de server offline, dan wachten kaarten op dit apparaat en worden ze verzonden zodra hij terug is.';
   @override
   String get anki_mined_action_add_duplicate => 'Als nieuwe kaart toevoegen';
   @override
@@ -156291,7 +157726,7 @@ class _StringsNl extends _StringsEn {
   String get books => 'Boeken';
   @override
   String get browser_extension_enable_server_first =>
-      'Tip: schakel eerst "Yomitan API-server" in en stel hierboven een API-sleutel in, zodat de extensie automatisch geconfigureerd wordt met een werkende verbinding.';
+      'Tip: schakel eerst "Fushi API-server" in en stel hierboven een API-sleutel in, zodat de extensie automatisch geconfigureerd wordt met een werkende verbinding.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Mobiele browsers kunnen deze extensie niet laden. Gebruik in plaats daarvan het opzoeken in de app in de lezer of videospeler.';
@@ -156351,7 +157786,7 @@ class _StringsNl extends _StringsEn {
       'De extensie in je browser is verouderd. Bereid de extensie indien nodig opnieuw voor en herlaad deze vanuit je browser-extensiepagina (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Yomitan API-server in Fushi opnieuw in.';
+      'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Fushi API-server opnieuw in.';
   @override
   String get cancel => 'Annuleren';
   @override
@@ -161131,11 +162566,7 @@ class _StringsNl extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Toon woordenboekverklaringen inline, gescheiden door \' | \', in plaats van één per regel in de opzoekpopup.';
   @override
-  String get popup_ctx_adjust_button => 'Context aanpassen';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(geen)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -161145,17 +162576,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Zinscontext selecteren';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -161734,7 +163155,8 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_global_toggle_fullscreen =>
       'Volledig scherm wisselen';
   @override
-  String get shortcut_action_home_focus_search => 'Zoeken focussen';
+  String get shortcut_action_home_focus_search =>
+      'Naar woordenboek zoeken springen';
   @override
   String get shortcut_action_home_tab_books => 'Tabblad Boeken';
   @override
@@ -165277,14 +166699,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get word_favorite_removed => 'Woord verwijderd uit favorieten';
   @override
-  String get yomitan_api_key => 'Yomitan API-sleutel (optioneel)';
+  String get yomitan_api_key => 'Fushi API-sleutel (optioneel)';
   @override
-  String get yomitan_api_server => 'Yomitan API-server';
+  String get yomitan_api_server => 'Fushi API-server';
   @override
   String get yomitan_api_server_hint =>
-      'Laat yomitan-api-clients de woordenboeken van Fushi opvragen (poort 19633)';
+      'Laat de browserextensie en yomitan-api-compatibele clients de woordenboeken van Fushi opvragen (poort 19633)';
   @override
-  String get yomitan_api_server_started => 'Yomitan API-server gestart';
+  String get yomitan_api_server_started => 'Fushi API-server gestart';
   @override
   String get yomitan_port_kill_action =>
       'Proces beëindigen en opnieuw proberen';
@@ -169401,7 +170823,7 @@ class _StringsNl extends _StringsEn {
   }) => '${delivered} verzonden, ${failed} mislukt, ${remaining} resterend';
   @override
   String get anki_pending_mine_landing_title =>
-      'Kaarten van andere apparaten afleveren';
+      'Kaarten van andere apparaten ontvangen';
   @override
   String get anki_error_sync_signed_out =>
       'Meld je eerst aan bij je Anki-synchronisatieserver (Anki-instellingen › Anki-synchronisatie).';
@@ -169471,7 +170893,7 @@ class _StringsNl extends _StringsEn {
       'Aanmelden mislukt: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Kaarten die zijn opgeslagen op apparaten zonder Anki reizen via je synchronisatieservice (cloudopslag, of interconnect wanneer dit apparaat met een host synchroniseert) en worden op dit apparaat aan Anki toegevoegd. Slechts één apparaat doet dit tegelijk. Een computer die als interconnect-host fungeert, neemt deze rol niet op zich: telefoons die ermee zijn gekoppeld, moeten in plaats daarvan Minen naar Fushi Interconnect-server inschakelen (kaarten wachten op de telefoon terwijl de computer uit staat). Een Fushi-server kan deze rol wel op zich nemen.';
+      'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
   @override
   String get anki_sync_client_relogin => 'Opnieuw aanmelden';
   @override
@@ -171069,8 +172491,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -171429,9 +172849,6 @@ class _StringsNl extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -172963,6 +174380,191 @@ class _StringsNl extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'Zoeken in bibliotheek';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -173672,7 +175274,7 @@ class _StringsPtBr extends _StringsEn {
   String get anki_mine_to_server => 'Minerar para dispositivo pareado';
   @override
   String get anki_mine_to_server_hint =>
-      'Enviar cartões minerados para o Anki do dispositivo pareado (seus baralhos e configurações) em vez deste dispositivo. Requer um pareamento Interconnect.';
+      'Enviar cartões minerados para o Anki do dispositivo pareado (seus baralhos e configurações) em vez deste dispositivo. Requer um pareamento Interconnect. Se o servidor estiver offline, os cartões aguardam neste dispositivo e são enviados quando ele voltar.';
   @override
   String get anki_mined_action_add_duplicate => 'Adicionar como novo cartão';
   @override
@@ -174522,7 +176124,7 @@ class _StringsPtBr extends _StringsEn {
   String get books => 'Livros';
   @override
   String get browser_extension_enable_server_first =>
-      'Dica: ative o "Servidor de API Yomitan" e defina uma chave de API acima primeiro, para que a extensão seja configurada automaticamente com uma conexão funcional.';
+      'Dica: ative o "Servidor da Fushi API" e defina uma chave de API acima primeiro, para que a extensão seja configurada automaticamente com uma conexão funcional.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Navegadores móveis não conseguem carregar esta extensão. Use a busca no app no leitor ou no player de vídeo.';
@@ -174582,7 +176184,7 @@ class _StringsPtBr extends _StringsEn {
       'A extensão carregada no navegador está desatualizada. Prepare a extensão novamente se necessário e recarregue-a na página de extensões (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor de API Yomitan no Fushi novamente.';
+      'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor da Fushi API novamente.';
   @override
   String get cancel => 'Cancelar';
   @override
@@ -179382,11 +180984,7 @@ class _StringsPtBr extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Mostra as entradas de glossário do dicionário em linha, separadas por \' | \', em vez de uma por linha no pop-up de consulta.';
   @override
-  String get popup_ctx_adjust_button => 'Ajustar contexto';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(nenhum)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -179396,17 +180994,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Selecionar contexto da frase';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -179985,7 +181573,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'Alternar tela cheia';
   @override
-  String get shortcut_action_home_focus_search => 'Focar na busca';
+  String get shortcut_action_home_focus_search =>
+      'Ir para a busca no dicionário';
   @override
   String get shortcut_action_home_tab_books => 'Aba Livros';
   @override
@@ -183546,14 +185135,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Palavra removida dos favoritos';
   @override
-  String get yomitan_api_key => 'Chave da Yomitan API (opcional)';
+  String get yomitan_api_key => 'Chave da Fushi API (opcional)';
   @override
-  String get yomitan_api_server => 'Servidor da Yomitan API';
+  String get yomitan_api_server => 'Servidor da Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Permite que clientes do yomitan-api consultem os dicionários do Fushi (porta 19633)';
+      'Permite que a extensão do navegador e clientes compatíveis com yomitan-api consultem os dicionários do Fushi (porta 19633)';
   @override
-  String get yomitan_api_server_started => 'Servidor de API Yomitan iniciado';
+  String get yomitan_api_server_started => 'Servidor da Fushi API iniciado';
   @override
   String get yomitan_port_kill_action => 'Encerrar processo e tentar novamente';
   @override
@@ -187688,7 +189277,7 @@ class _StringsPtBr extends _StringsEn {
   }) => '${delivered} enviados, ${failed} com falha, ${remaining} restantes';
   @override
   String get anki_pending_mine_landing_title =>
-      'Entregar cartões de outros dispositivos';
+      'Receber cartões de outros dispositivos';
   @override
   String get anki_error_sync_signed_out =>
       'Primeiro entre no seu servidor de sincronização do Anki (configurações do Anki › Sincronização do Anki).';
@@ -187758,7 +189347,7 @@ class _StringsPtBr extends _StringsEn {
       'Falha no login: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Os cartões salvos em dispositivos sem Anki viajam pelo seu serviço de sincronização (armazenamento em nuvem, ou interconexão quando este dispositivo sincroniza com um host) e são adicionados ao Anki neste dispositivo. Apenas um dispositivo faz isso por vez. Um computador que atua como host de interconexão não assume esse papel: os celulares pareados com ele devem ativar Minerar para o servidor Fushi Interconnect (os cartões esperam no celular enquanto o computador está desligado). Um servidor Fushi pode assumir esse papel.';
+      'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
   @override
   String get anki_sync_client_relogin => 'Entrar novamente';
   @override
@@ -189358,8 +190947,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -189718,9 +191305,6 @@ class _StringsPtBr extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -191253,6 +192837,191 @@ class _StringsPtBr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'Buscar na biblioteca';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -191954,7 +193723,7 @@ class _StringsRu extends _StringsEn {
   String get anki_mine_to_server => 'Добывать на сопряжённое устройство';
   @override
   String get anki_mine_to_server_hint =>
-      'Отправлять добытые карточки в Anki сопряжённого хоста (его колоды и настройки) вместо этого устройства. Требуется сопряжение через Interconnect.';
+      'Отправлять добытые карточки в Anki сопряжённого хоста (его колоды и настройки) вместо этого устройства. Требуется сопряжение через Interconnect. Если сервер недоступен, карточки ждут на этом устройстве и отправляются, когда он снова в сети.';
   @override
   String get anki_mined_action_add_duplicate => 'Добавить как новую карточку';
   @override
@@ -192798,7 +194567,7 @@ class _StringsRu extends _StringsEn {
   String get books => 'Книги';
   @override
   String get browser_extension_enable_server_first =>
-      'Совет: сначала включите «Сервер API Yomitan» и задайте API-ключ выше, чтобы расширение автоматически настроилось с рабочим подключением.';
+      'Совет: сначала включите «Сервер Fushi API» и задайте API-ключ выше, чтобы расширение автоматически настроилось с рабочим подключением.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Мобильные браузеры не могут загрузить это расширение. Используйте поиск в приложении — в читалке или видеоплеере.';
@@ -192857,7 +194626,7 @@ class _StringsRu extends _StringsEn {
       'Расширение в браузере устарело. При необходимости переподготовьте расширение, затем перезагрузите его на странице расширений браузера (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Yomitan API в Fushi.';
+      'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Fushi API.';
   @override
   String get cancel => 'Отмена';
   @override
@@ -197652,11 +199421,7 @@ class _StringsRu extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Показывать статьи глоссариев словаря в одну строку, разделяя их « | », вместо одной на строку во всплывающем окне поиска.';
   @override
-  String get popup_ctx_adjust_button => 'Изменить контекст';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(нет)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -197666,17 +199431,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Выберите контекст предложения';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -198257,7 +200012,7 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_global_toggle_fullscreen =>
       'Переключить полноэкранный режим';
   @override
-  String get shortcut_action_home_focus_search => 'Фокус на поиск';
+  String get shortcut_action_home_focus_search => 'Перейти к поиску по словарю';
   @override
   String get shortcut_action_home_tab_books => 'Вкладка «Книги»';
   @override
@@ -201812,14 +203567,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get word_favorite_removed => 'Слово удалено из избранного';
   @override
-  String get yomitan_api_key => 'Ключ Yomitan API (необязательно)';
+  String get yomitan_api_key => 'Ключ Fushi API (необязательно)';
   @override
-  String get yomitan_api_server => 'Сервер Yomitan API';
+  String get yomitan_api_server => 'Сервер Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Разрешить клиентам yomitan-api запрашивать словари Fushi (порт 19633)';
+      'Разрешить расширению браузера и клиентам, совместимым с yomitan-api, запрашивать словари Fushi (порт 19633)';
   @override
-  String get yomitan_api_server_started => 'Сервер Yomitan API запущен';
+  String get yomitan_api_server_started => 'Сервер Fushi API запущен';
   @override
   String get yomitan_port_kill_action => 'Завершить процесс и повторить';
   @override
@@ -205927,7 +207682,7 @@ class _StringsRu extends _StringsEn {
       'Отправлено: ${delivered}, с ошибкой: ${failed}, осталось: ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'Доставка карточек с других устройств';
+      'Принимать карточки с других устройств';
   @override
   String get anki_error_sync_signed_out =>
       'Сначала войдите на свой сервер синхронизации Anki (настройки Anki › Синхронизация Anki).';
@@ -205998,7 +207753,7 @@ class _StringsRu extends _StringsEn {
       'Не удалось войти: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Карточки, сохранённые на устройствах без Anki, проходят через вашу службу синхронизации (облачное хранилище или interconnect, когда это устройство синхронизируется с хостом) и добавляются в Anki на этом устройстве. Одновременно это делает только одно устройство. Компьютер в роли хоста interconnect эту роль не берёт: сопряжённым с ним телефонам следует включить «Создавать карточки на сервере Fushi Interconnect» (карточки ждут на телефоне, пока компьютер выключен). Эту роль может взять сервер Fushi.';
+      'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
   @override
   String get anki_sync_client_relogin => 'Войти снова';
   @override
@@ -207595,8 +209350,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -207955,9 +209708,6 @@ class _StringsRu extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -209489,6 +211239,191 @@ class _StringsRu extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'Поиск в библиотеке';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -210176,7 +212111,7 @@ class _StringsTh extends _StringsEn {
   String get anki_mine_to_server => 'สร้างบัตรไปยังอุปกรณ์ที่จับคู่';
   @override
   String get anki_mine_to_server_hint =>
-      'ส่งบัตรที่สร้างไปยัง Anki ของโฮสต์ที่จับคู่ (สำรับและการตั้งค่าของโฮสต์) แทนที่จะเป็นอุปกรณ์นี้ ต้องมีการจับคู่ Interconnect';
+      'ส่งบัตรที่สร้างไปยัง Anki ของโฮสต์ที่จับคู่ (สำรับและการตั้งค่าของโฮสต์) แทนที่จะเป็นอุปกรณ์นี้ ต้องมีการจับคู่ Interconnect หากเซิร์ฟเวอร์ออฟไลน์ การ์ดจะรออยู่บนอุปกรณ์นี้และส่งเมื่อกลับมาเชื่อมต่อ';
   @override
   String get anki_mined_action_add_duplicate => 'เพิ่มเป็นบัตรใหม่';
   @override
@@ -211004,7 +212939,7 @@ class _StringsTh extends _StringsEn {
   String get books => 'หนังสือ';
   @override
   String get browser_extension_enable_server_first =>
-      'เคล็ดลับ: เปิด "เซิร์ฟเวอร์ Yomitan API" และตั้งคีย์ API ด้านบนก่อน เพื่อให้ส่วนขยายถูกตั้งค่าเชื่อมต่อที่ใช้งานได้โดยอัตโนมัติ';
+      'เคล็ดลับ: เปิด "เซิร์ฟเวอร์ Fushi API" และตั้งคีย์ API ด้านบนก่อน เพื่อให้ส่วนขยายถูกตั้งค่าเชื่อมต่อที่ใช้งานได้โดยอัตโนมัติ';
   @override
   String get browser_extension_mobile_unsupported =>
       'เบราว์เซอร์บนมือถือไม่สามารถโหลดส่วนขยายนี้ได้ ให้ใช้การค้นหาคำในแอปที่โปรแกรมอ่านหรือเครื่องเล่นวิดีโอแทน';
@@ -211061,7 +212996,7 @@ class _StringsTh extends _StringsEn {
       'ส่วนขยายที่โหลดในเบราว์เซอร์ล้าสมัยแล้ว เตรียมส่วนขยายใหม่หากจำเป็น จากนั้นโหลดใหม่จากหน้าส่วนขยายของเบราว์เซอร์ (chrome://extensions)';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Yomitan API ใน Fushi อีกครั้ง';
+      'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Fushi API อีกครั้ง';
   @override
   String get cancel => 'ยกเลิก';
   @override
@@ -215762,11 +217697,7 @@ class _StringsTh extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'แสดงรายการคำจำกัดความของพจนานุกรมต่อเนื่องในบรรทัดเดียว คั่นด้วย \' | \' แทนการแสดงทีละบรรทัดในป๊อปอัปค้นหา';
   @override
-  String get popup_ctx_adjust_button => 'ปรับบริบท';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(ไม่มี)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -215776,17 +217707,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'เลือกบริบทประโยค';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -216355,7 +218276,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'สลับเต็มหน้าจอ';
   @override
-  String get shortcut_action_home_focus_search => 'โฟกัสช่องค้นหา';
+  String get shortcut_action_home_focus_search => 'ไปที่การค้นหาพจนานุกรม';
   @override
   String get shortcut_action_home_tab_books => 'แท็บหนังสือ';
   @override
@@ -219832,15 +221753,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get word_favorite_removed => 'ลบคำออกจากรายการโปรดแล้ว';
   @override
-  String get yomitan_api_key => 'Yomitan API key (ไม่บังคับ)';
+  String get yomitan_api_key => 'Fushi API key (ไม่บังคับ)';
   @override
-  String get yomitan_api_server => 'เซิร์ฟเวอร์ Yomitan API';
+  String get yomitan_api_server => 'เซิร์ฟเวอร์ Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'ให้ไคลเอนต์ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
+      'ให้ส่วนขยายเบราว์เซอร์และไคลเอนต์ที่เข้ากันได้กับ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
   @override
   String get yomitan_api_server_started =>
-      'เซิร์ฟเวอร์ Yomitan API เริ่มทำงานแล้ว';
+      'เซิร์ฟเวอร์ Fushi API เริ่มทำงานแล้ว';
   @override
   String get yomitan_port_kill_action => 'จบโปรเซสแล้วลองใหม่';
   @override
@@ -223853,7 +225774,7 @@ class _StringsTh extends _StringsEn {
     required Object remaining,
   }) => 'ส่งแล้ว ${delivered} ล้มเหลว ${failed} เหลือ ${remaining}';
   @override
-  String get anki_pending_mine_landing_title => 'ส่งการ์ดจากอุปกรณ์อื่น';
+  String get anki_pending_mine_landing_title => 'รับการ์ดจากอุปกรณ์อื่น';
   @override
   String get anki_error_sync_signed_out =>
       'ลงชื่อเข้าใช้เซิร์ฟเวอร์ซิงค์ Anki ของคุณก่อน (การตั้งค่า Anki › ซิงค์ Anki)';
@@ -223920,7 +225841,7 @@ class _StringsTh extends _StringsEn {
       'ลงชื่อเข้าใช้ไม่สำเร็จ: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'การ์ดที่บันทึกบนอุปกรณ์ที่ไม่มี Anki จะส่งผ่านบริการซิงค์ของคุณ (ที่เก็บข้อมูลคลาวด์ หรืออินเทอร์คอนเนกต์เมื่ออุปกรณ์นี้ซิงค์กับโฮสต์) และเพิ่มลงใน Anki บนอุปกรณ์นี้ มีเพียงอุปกรณ์เดียวที่ทำหน้าที่นี้ในแต่ละครั้ง คอมพิวเตอร์ที่เป็นโฮสต์อินเทอร์คอนเนกต์ไม่ทำหน้าที่นี้ โทรศัพท์ที่จับคู่กับโฮสต์ควรเปิด สร้างการ์ดไปยังเซิร์ฟเวอร์ Fushi Interconnect แทน (การ์ดจะรออยู่บนโทรศัพท์ขณะคอมพิวเตอร์ปิด) เซิร์ฟเวอร์ Fushi ทำหน้าที่นี้ได้';
+      'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงค์ และเพิ่มลงใน Anki ที่นี่ รับได้ครั้งละหนึ่งอุปกรณ์เท่านั้น';
   @override
   String get anki_sync_client_relogin => 'ลงชื่อเข้าใช้อีกครั้ง';
   @override
@@ -225509,8 +227430,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -225869,9 +227788,6 @@ class _StringsTh extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -227403,6 +229319,191 @@ class _StringsTh extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'ค้นหาในคลัง';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -228101,7 +230202,7 @@ class _StringsTr extends _StringsEn {
   String get anki_mine_to_server => 'Eşleştirilmiş cihaza çıkar';
   @override
   String get anki_mine_to_server_hint =>
-      'Çıkarılan kartları bu cihaz yerine eşleştirilmiş ana bilgisayarın Anki\'sine (onun desteleri ve ayarları) gönderir. Bir interconnect eşleştirmesi gerektirir.';
+      'Çıkarılan kartları bu cihaz yerine eşleştirilmiş ana bilgisayarın Anki\'sine (onun desteleri ve ayarları) gönderir. Bir interconnect eşleştirmesi gerektirir. Sunucu çevrimdışıysa kartlar bu cihazda bekler ve bağlantı geri geldiğinde gönderilir.';
   @override
   String get anki_mined_action_add_duplicate => 'Yeni kart olarak ekle';
   @override
@@ -228942,7 +231043,7 @@ class _StringsTr extends _StringsEn {
   String get books => 'Kitaplar';
   @override
   String get browser_extension_enable_server_first =>
-      'İpucu: önce "Yomitan API sunucusu"nu etkinleştirin ve yukarıda bir API anahtarı ayarlayın, böylece uzantı çalışan bir bağlantıyla otomatik yapılandırılır.';
+      'İpucu: önce "Fushi API sunucusu"nu etkinleştirin ve yukarıda bir API anahtarı ayarlayın, böylece uzantı çalışan bir bağlantıyla otomatik yapılandırılır.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Mobil tarayıcılar bu uzantıyı yükleyemez. Bunun yerine okuyucu veya video oynatıcıdaki uygulama içi aramayı kullanın.';
@@ -229001,7 +231102,7 @@ class _StringsTr extends _StringsEn {
       'Tarayıcınızda yüklü uzantı güncel değil. Gerekirse uzantıyı yeniden hazırlayın, ardından tarayıcınızın uzantılar sayfasından (chrome://extensions) yeniden yükleyin.';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi\'de Yomitan API sunucusunu tekrar etkinleştirin.';
+      '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi API sunucusunu tekrar etkinleştirin.';
   @override
   String get cancel => 'İptal';
   @override
@@ -233762,11 +235863,7 @@ class _StringsTr extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Arama açılır penceresinde sözlük tanım girdilerini satır başına bir tane yerine \' | \' ile ayrılmış şekilde satır içinde göster.';
   @override
-  String get popup_ctx_adjust_button => 'Bağlamı ayarla';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(yok)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -233776,17 +235873,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Cümle bağlamını seçin';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -234360,7 +236447,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => 'Tam ekranı aç/kapat';
   @override
-  String get shortcut_action_home_focus_search => 'Aramaya Odaklan';
+  String get shortcut_action_home_focus_search => 'Sözlük aramasına git';
   @override
   String get shortcut_action_home_tab_books => 'Kitaplar Sekmesi';
   @override
@@ -237877,14 +239964,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Kelime favorilerden kaldırıldı';
   @override
-  String get yomitan_api_key => 'Yomitan API anahtarı (isteğe bağlı)';
+  String get yomitan_api_key => 'Fushi API anahtarı (isteğe bağlı)';
   @override
-  String get yomitan_api_server => 'Yomitan API sunucusu';
+  String get yomitan_api_server => 'Fushi API sunucusu';
   @override
   String get yomitan_api_server_hint =>
-      'yomitan-api istemcilerinin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
+      'Tarayıcı uzantısının ve yomitan-api uyumlu istemcilerin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
   @override
-  String get yomitan_api_server_started => 'Yomitan API sunucusu başlatıldı';
+  String get yomitan_api_server_started => 'Fushi API sunucusu başlatıldı';
   @override
   String get yomitan_port_kill_action => 'İşlemi sonlandır ve tekrar dene';
   @override
@@ -241961,7 +244048,7 @@ class _StringsTr extends _StringsEn {
   }) => 'Gönderilen ${delivered}, başarısız ${failed}, kalan ${remaining}';
   @override
   String get anki_pending_mine_landing_title =>
-      'Diğer cihazlardan gelen kartları teslim et';
+      'Diğer cihazların kartlarını al';
   @override
   String get anki_error_sync_signed_out =>
       'Önce Anki eşitleme sunucunuzda oturum açın (Anki ayarları › Anki eşitleme).';
@@ -242028,7 +244115,7 @@ class _StringsTr extends _StringsEn {
       'Oturum açma başarısız oldu: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki\'si olmayan cihazlarda kaydedilen kartlar eşitleme hizmetiniz (bulut depolama veya bu cihaz bir ana makineyle eşitleniyorsa interconnect) üzerinden gider ve bu cihazda Anki\'ye eklenir. Aynı anda yalnızca bir cihaz bunu yapar. Interconnect ana makinesi olarak çalışan bir bilgisayar bu rolü üstlenmez: onunla eşleştirilmiş telefonlar bunun yerine Fushi Interconnect sunucusuna kart oluştur seçeneğini açmalıdır (bilgisayar kapalıyken kartlar telefonda bekler). Bir Fushi sunucusu bu rolü üstlenebilir.';
+      'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
   @override
   String get anki_sync_client_relogin => 'Yeniden oturum aç';
   @override
@@ -243625,8 +245712,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -243985,9 +246070,6 @@ class _StringsTr extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -245520,6 +247602,191 @@ class _StringsTr extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'Kütüphanede ara';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -246218,7 +248485,7 @@ class _StringsVi extends _StringsEn {
   String get anki_mine_to_server => 'Gửi thẻ đến thiết bị đã ghép nối';
   @override
   String get anki_mine_to_server_hint =>
-      'Gửi thẻ đã khai thác đến Anki của thiết bị chủ đã ghép nối (bộ thẻ và cài đặt của nó) thay vì thiết bị này. Yêu cầu ghép nối kết nối.';
+      'Gửi thẻ đã khai thác đến Anki của thiết bị chủ đã ghép nối (bộ thẻ và cài đặt của nó) thay vì thiết bị này. Yêu cầu ghép nối kết nối. Nếu máy chủ ngoại tuyến, thẻ sẽ chờ trên thiết bị này và được gửi khi kết nối lại.';
   @override
   String get anki_mined_action_add_duplicate => 'Thêm như thẻ mới';
   @override
@@ -247050,7 +249317,7 @@ class _StringsVi extends _StringsEn {
   String get books => 'Sách';
   @override
   String get browser_extension_enable_server_first =>
-      'Mẹo: bật "Máy chủ API Yomitan" và đặt khóa API ở trên trước, để tiện ích mở rộng được tự động cấu hình với kết nối hoạt động.';
+      'Mẹo: bật "Máy chủ Fushi API" và đặt khóa API ở trên trước, để tiện ích mở rộng được tự động cấu hình với kết nối hoạt động.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Trình duyệt di động không thể tải tiện ích này. Thay vào đó, hãy dùng tra cứu trong ứng dụng ở trình đọc hoặc trình phát video.';
@@ -247111,7 +249378,7 @@ class _StringsVi extends _StringsEn {
       'Tiện ích mở rộng trong trình duyệt đã lỗi thời. Chuẩn bị lại tiện ích nếu cần, sau đó tải lại từ trang tiện ích mở rộng của trình duyệt (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Yomitan API trong Fushi.';
+      'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Fushi API.';
   @override
   String get cancel => 'Hủy';
   @override
@@ -251852,11 +254119,7 @@ class _StringsVi extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       'Hiển thị các mục nghĩa của từ điển nối tiếp nhau, ngăn cách bằng \' | \', thay vì mỗi mục một dòng trong cửa sổ tra từ.';
   @override
-  String get popup_ctx_adjust_button => 'Điều chỉnh ngữ cảnh';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '(không có)';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -251866,17 +254129,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => 'Chọn ngữ cảnh câu';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -252450,7 +254703,7 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_global_toggle_fullscreen =>
       'Bật/tắt toàn màn hình';
   @override
-  String get shortcut_action_home_focus_search => 'Tập trung tìm kiếm';
+  String get shortcut_action_home_focus_search => 'Chuyển đến tìm kiếm từ điển';
   @override
   String get shortcut_action_home_tab_books => 'Tab Sách';
   @override
@@ -255948,14 +258201,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get word_favorite_removed => 'Đã xóa từ khỏi yêu thích';
   @override
-  String get yomitan_api_key => 'Yomitan API key (tùy chọn)';
+  String get yomitan_api_key => 'Fushi API key (tùy chọn)';
   @override
-  String get yomitan_api_server => 'Máy chủ Yomitan API';
+  String get yomitan_api_server => 'Máy chủ Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Cho phép máy khách yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
+      'Cho phép tiện ích mở rộng trình duyệt và máy khách tương thích yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
   @override
-  String get yomitan_api_server_started => 'Đã khởi động máy chủ API Yomitan';
+  String get yomitan_api_server_started => 'Đã khởi động máy chủ Fushi API';
   @override
   String get yomitan_port_kill_action => 'Kết thúc tiến trình và thử lại';
   @override
@@ -260006,7 +262259,7 @@ class _StringsVi extends _StringsEn {
     required Object remaining,
   }) => 'Đã gửi ${delivered}, thất bại ${failed}, còn lại ${remaining}';
   @override
-  String get anki_pending_mine_landing_title => 'Chuyển thẻ từ thiết bị khác';
+  String get anki_pending_mine_landing_title => 'Nhận thẻ từ thiết bị khác';
   @override
   String get anki_error_sync_signed_out =>
       'Hãy đăng nhập máy chủ đồng bộ Anki trước (Cài đặt Anki › Đồng bộ Anki).';
@@ -260073,7 +262326,7 @@ class _StringsVi extends _StringsEn {
       'Đăng nhập thất bại: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Các thẻ lưu trên thiết bị không có Anki sẽ đi qua dịch vụ đồng bộ của bạn (lưu trữ đám mây, hoặc interconnect khi thiết bị này đồng bộ tới máy chủ) và được thêm vào Anki trên thiết bị này. Mỗi lúc chỉ một thiết bị làm việc này. Máy tính đóng vai máy chủ interconnect không nhận vai trò này: điện thoại ghép nối với nó nên bật Tạo thẻ tới máy chủ Fushi Interconnect (thẻ chờ trên điện thoại khi máy tính tắt). Máy chủ Fushi có thể nhận vai trò này.';
+      'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
   @override
   String get anki_sync_client_relogin => 'Đăng nhập lại';
   @override
@@ -261670,8 +263923,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -262030,9 +264281,6 @@ class _StringsVi extends _StringsEn {
       'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
   @override
   String get feedback_compose_submit => 'Send';
-  @override
-  String get feedback_compose_missing =>
-      'Please fill in the title and details.';
   @override
   String get feedback_stage_sending => 'Sending…';
   @override
@@ -263564,6 +265812,191 @@ class _StringsVi extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => 'Image subtitles only';
   @override
   String get video_setting_pause_ocr_scope_off => 'Off';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => 'Please fill in a title.';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => 'Tìm trong thư viện';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
+  @override
+  String get manga_series_manage_volume => 'Manage volume';
 }
 
 // Path: <root>
@@ -264202,7 +266635,7 @@ class _StringsZhCn extends _StringsEn {
   String get anki_mine_to_server => '制卡到 Fushi 互联服务端';
   @override
   String get anki_mine_to_server_hint =>
-      '把制卡发送到 Fushi 互联服务端的 Anki（用服务端的牌组与设置），而非本机。需先在互联/同步里完成配对。';
+      '把制卡发送到 Fushi 互联服务端的 Anki（用服务端的牌组与设置），而非本机。需先在互联/同步里完成配对。服务端离线时卡片先存在本机，连上后自动发送。';
   @override
   String get anki_mined_action_add_duplicate => '新增为重复卡';
   @override
@@ -264965,7 +267398,7 @@ class _StringsZhCn extends _StringsEn {
   String get books => '书架';
   @override
   String get browser_extension_enable_server_first =>
-      '提示：请先在上方开启「Yomitan API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
+      '提示：请先在上方开启「Fushi API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
   @override
   String get browser_extension_mobile_unsupported =>
       '手机浏览器无法加载此扩展，请直接在 app 内阅读器/视频中查词。';
@@ -265016,7 +267449,7 @@ class _StringsZhCn extends _StringsEn {
       '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi 的 Yomitan API 服务器。';
+      '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi API 服务器。';
   @override
   String get cancel => '取消';
   @override
@@ -269367,11 +271800,7 @@ class _StringsZhCn extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       '查词弹窗里的释义条目改为同行显示、用「 | 」分隔，不再每条占一行。';
   @override
-  String get popup_ctx_adjust_button => '调整上下文';
-  @override
   String get popup_ctx_box_current => '当前句';
-  @override
-  String get popup_ctx_box_empty => '（无）';
   @override
   String get popup_ctx_box_next => '后文';
   @override
@@ -269381,17 +271810,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_ctx_confirm => '确认制卡';
   @override
-  String get popup_ctx_modal_count => '已选择 %d 句';
-  @override
-  String get popup_ctx_modal_eyebrow => '制卡前调整';
-  @override
-  String get popup_ctx_modal_title => '选择句子上下文';
-  @override
-  String get popup_ctx_next_minus => '后退一句';
-  @override
   String get popup_ctx_next_plus => '后加一句';
-  @override
-  String get popup_ctx_prev_minus => '前退一句';
   @override
   String get popup_ctx_prev_plus => '前加一句';
   @override
@@ -269931,7 +272350,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => '全屏切换';
   @override
-  String get shortcut_action_home_focus_search => '聚焦搜索';
+  String get shortcut_action_home_focus_search => '跳到查词搜索';
   @override
   String get shortcut_action_home_tab_books => '书架标签';
   @override
@@ -273137,14 +275556,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get word_favorite_removed => '已取消收藏该词';
   @override
-  String get yomitan_api_key => 'Yomitan API 密钥（可选）';
+  String get yomitan_api_key => 'Fushi API 密钥（可选）';
   @override
-  String get yomitan_api_server => 'Yomitan API 服务器';
+  String get yomitan_api_server => 'Fushi API 服务器';
   @override
   String get yomitan_api_server_hint =>
-      '让 yomitan-api 客户端查询 Fushi 词典（端口 19633）';
+      '让浏览器扩展和兼容 yomitan-api 的客户端查询 Fushi 词典（端口 19633）';
   @override
-  String get yomitan_api_server_started => 'Yomitan API 服务器已开启';
+  String get yomitan_api_server_started => 'Fushi API 服务器已开启';
   @override
   String get yomitan_port_kill_action => '结束进程并重试';
   @override
@@ -276808,7 +279227,7 @@ class _StringsZhCn extends _StringsEn {
     required Object remaining,
   }) => '已发送 ${delivered} 张，失败 ${failed} 张，剩余 ${remaining} 张';
   @override
-  String get anki_pending_mine_landing_title => '本机负责落地其他设备的卡片';
+  String get anki_pending_mine_landing_title => '接收其他设备的卡片';
   @override
   String get anki_error_sync_signed_out =>
       '请先登录 Anki 同步服务器（Anki 设置 › Anki 同步）。';
@@ -276875,7 +279294,7 @@ class _StringsZhCn extends _StringsEn {
       '登录失败：${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      '没装 Anki 的设备存下的卡片，经你配置的同步（云盘，或本机作为互联客户端时的互联）送到这台设备，由这里的 Anki 加卡。同一时间只有一台设备负责。作为互联主机的电脑不担任这个角色：与它配对的手机请改开「制卡到 Fushi 互联服务端」（电脑关机时卡片先存在手机上）。Fushi 服务端可以担任。';
+      '没装 Anki 的设备制的卡，会经同步送到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
   @override
   String get anki_sync_client_relogin => '重新登录';
   @override
@@ -278332,8 +280751,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get import_supported_formats => '支持格式';
   @override
-  String get import_methods_title => '导入方式';
-  @override
   String get media_source_list_empty => '还没有常驻来源。添加文件夹或网络共享后会自动扫描。';
   @override
   String get online_sources_pinned_header => '已置顶';
@@ -278672,8 +281089,6 @@ class _StringsZhCn extends _StringsEn {
       '反馈会发送给 fushi.moe 上的 Fushi 开发者，仅用于排查与改进。';
   @override
   String get feedback_compose_submit => '提交';
-  @override
-  String get feedback_compose_missing => '请填写标题和详细描述。';
   @override
   String get feedback_stage_sending => '正在提交…';
   @override
@@ -280042,6 +282457,173 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '仅图片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '关闭';
+  @override
+  String get manga_library_ocr_action => '识别文字（OCR）';
+  @override
+  String get manga_library_ocr_none => '没有需要识别的内容：所选漫画已识别过或尚未下载';
+  @override
+  String get video_google_lens_disclosure_title => '将视频画面发送到 Google Lens？';
+  @override
+  String get video_google_lens_disclosure_body =>
+      '识别视频文字会把暂停的画面（含图片字幕）缩小为 JPEG 后发送给 Google。该接口并非官方公开 API，可能随时失效。只有同意后才会上传。';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint => '图片字幕需开启 OCR 识别才能点字查词';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => '开启';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing => '正在识别画面文字…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready => '已识别画面文字 · 点字查词';
+  @override
+  String get feedback_compose_title_missing => '请填写标题。';
+  @override
+  String get online_source_error_webview_unavailable =>
+      '这个来源需要内置浏览器（WebView），桌面版暂不支持。';
+  @override
+  String get lyrics_sentence_replay => '重播当前句';
+  @override
+  String get lookup_popup_close_after_mining => '制卡后关闭查词弹窗';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      '制卡成功（或进入待发队列）后关掉整个查词弹窗，不再挡住正文';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      '已选中 ${n} 卷，将逐卷各导入为一本，书名取各自的文件名或文件夹名。';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      '无法打开 ${name}，请改从书架导入。';
+  @override
+  String get external_book_open_existing => '打开已有';
+  @override
+  String get external_book_open_import_new => '作为新书导入';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      '书架中已有《${name}》。打开已有的那本，还是把这个文件作为新书导入（加序号后缀）？';
+  @override
+  String get popup_advanced_mining_button => '高级制卡';
+  @override
+  String get popup_advanced_mining_title => '高级制卡';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      '查词 · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => '句子';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '已选 ${count} 句';
+  @override
+  String get popup_advanced_mining_deck_section => '卡组';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => '只对这张卡生效';
+  @override
+  String get popup_advanced_mining_deck_set_default => '同时设为默认卡组';
+  @override
+  String get popup_advanced_mining_deck_unavailable => '连上 Anki 后才能选择卡组';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint => '覆写已有卡时卡片留在原卡组';
+  @override
+  String get popup_advanced_mining_audio_section => '句子音频';
+  @override
+  String get popup_advanced_mining_audio_follow => '跟随句子';
+  @override
+  String get popup_advanced_mining_audio_none => '不要';
+  @override
+  String get popup_advanced_mining_audio_start => '起点';
+  @override
+  String get popup_advanced_mining_audio_end => '终点';
+  @override
+  String get popup_advanced_mining_audio_earlier => '提前';
+  @override
+  String get popup_advanced_mining_audio_later => '推后';
+  @override
+  String get popup_advanced_mining_audio_unavailable => '这几句没有可用的音频';
+  @override
+  String get popup_advanced_mining_audio_range_hint => '区间随所选句子自动重算';
+  @override
+  String get popup_advanced_mining_image_section => '图片';
+  @override
+  String get popup_advanced_mining_image_none => '不要';
+  @override
+  String get popup_advanced_mining_image_mode_animated => '动图';
+  @override
+  String get popup_advanced_mining_image_mode_clip => '视频片段';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => '查词时画面';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start => '字幕开头';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      '首帧 ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      '尾帧 ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => '上一帧';
+  @override
+  String get popup_advanced_mining_image_frame_forward => '下一帧';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio => '视频片段需要句子音频';
+  @override
+  String get popup_advanced_mining_crop_whole_page => '整页';
+  @override
+  String get popup_advanced_mining_crop_panel => '所在分镜';
+  @override
+  String get popup_advanced_mining_crop_text_area => '文字周围';
+  @override
+  String get popup_advanced_mining_crop_custom => '自定义';
+  @override
+  String get popup_advanced_mining_crop_hint => '在图上拖动直接画新框 · Tab 切换分镜 · 方向键微调';
+  @override
+  String get popup_advanced_mining_crop_no_model => '未下载分镜模型，已按文字位置外扩预选。';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      '下载分镜模型（${size}）';
+  @override
+  String get popup_advanced_mining_crop_downloading => '正在下载分镜模型…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => '输出 ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => '卡片上的样子';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => '检测到的分镜';
+  @override
+  String get popup_advanced_mining_crop_legend_text => '这句话的位置';
+  @override
+  String get popup_advanced_mining_reset => '恢复为一键制卡的默认';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      '制卡到 ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => '一键制卡默认裁到所在分镜';
+  @override
+  String get manga_mining_crop_to_panel_hint => '需要分镜模型；没有模型时使用整页。';
+  @override
+  String get popup_advanced_mining_crop_page_title => '框选图片';
+  @override
+  String get popup_advanced_mining_crop_done => '完成';
+  @override
+  String get popup_advanced_mining_crop_download_failed => '分镜模型下载失败';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      '快捷键 [ ] 增减前文 · Shift+[ ] 增减后文';
+  @override
+  String get shortcut_action_library_search => '在书架 / 媒体库中搜索';
+  @override
+  String get feedback_filter_all => '全部';
+  @override
+  String get feedback_filter_active => '进行中';
+  @override
+  String get feedback_filter_closed => '已结案';
+  @override
+  String get feedback_filter_unread => '有新回复';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
+  @override
+  String get manga_series_manage_volume => '管理本卷';
 }
 
 // Path: <root>
@@ -280683,7 +283265,7 @@ class _StringsZhHk extends _StringsEn {
   String get anki_mine_to_server => '製卡到 Fushi 互聯服務端';
   @override
   String get anki_mine_to_server_hint =>
-      '把製卡發送到 Fushi 互聯服務端的 Anki（用服務端的牌組與設定），而非本機。需先在互聯/同步裡完成配對。';
+      '把製卡發送到 Fushi 互聯服務端的 Anki（用服務端的牌組與設定），而非本機。需先在互聯/同步裡完成配對。服務端離線時卡片先存在本機，連上後自動發送。';
   @override
   String get anki_mined_action_add_duplicate => '新增為重復卡';
   @override
@@ -281448,7 +284030,7 @@ class _StringsZhHk extends _StringsEn {
   String get books => '書架';
   @override
   String get browser_extension_enable_server_first =>
-      '提示：請先在上方開啟「Yomitan API 伺服器」並設定 API 密鑰，擴展才能被自動配置為可用連接。';
+      '提示：請先在上方開啟「Fushi API 伺服器」並設定 API 密鑰，擴展才能被自動配置為可用連接。';
   @override
   String get browser_extension_mobile_unsupported =>
       '手機瀏覽器無法載入此擴充功能，請直接在 app 內閱讀器／影片中查詞。';
@@ -281500,7 +284082,7 @@ class _StringsZhHk extends _StringsEn {
       '瀏覽器中加載的擴展不是最新版本：如有需要先重新準備擴展，再到瀏覽器擴展管理頁（chrome://extensions）點「重新加載」。';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi 的 Yomitan API 伺服器。';
+      '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi API 伺服器。';
   @override
   String get cancel => '取消';
   @override
@@ -285854,11 +288436,7 @@ class _StringsZhHk extends _StringsEn {
   String get popup_compact_glossaries_hint =>
       '查詞彈窗裡的釋義條目改為同行顯示、用「 | 」分隔，不再每條佔一行。';
   @override
-  String get popup_ctx_adjust_button => '調整上下文';
-  @override
   String get popup_ctx_box_current => 'Current';
-  @override
-  String get popup_ctx_box_empty => '（無）';
   @override
   String get popup_ctx_box_next => 'After';
   @override
@@ -285868,17 +288446,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_ctx_confirm => 'Confirm';
   @override
-  String get popup_ctx_modal_count => 'Selected %d';
-  @override
-  String get popup_ctx_modal_eyebrow => 'Before mining';
-  @override
-  String get popup_ctx_modal_title => '選擇句子上下文';
-  @override
-  String get popup_ctx_next_minus => 'Remove after';
-  @override
   String get popup_ctx_next_plus => 'Add after';
-  @override
-  String get popup_ctx_prev_minus => 'Remove before';
   @override
   String get popup_ctx_prev_plus => 'Add before';
   @override
@@ -286418,7 +288986,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_global_toggle_fullscreen => '全屏切換';
   @override
-  String get shortcut_action_home_focus_search => '聚焦搜尋';
+  String get shortcut_action_home_focus_search => '跳到查詞搜尋';
   @override
   String get shortcut_action_home_tab_books => '書架分頁';
   @override
@@ -289628,14 +292196,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get word_favorite_removed => '已取消收藏該詞';
   @override
-  String get yomitan_api_key => 'Yomitan API 金鑰（可選）';
+  String get yomitan_api_key => 'Fushi API 金鑰（可選）';
   @override
-  String get yomitan_api_server => 'Yomitan API 伺服器';
+  String get yomitan_api_server => 'Fushi API 伺服器';
   @override
   String get yomitan_api_server_hint =>
-      '讓 yomitan-api 客戶端查詢 Fushi 詞典（連接埠 19633）';
+      '讓瀏覽器擴展和兼容 yomitan-api 的客戶端查詢 Fushi 詞典（連接埠 19633）';
   @override
-  String get yomitan_api_server_started => 'Yomitan API 伺服器已開啟';
+  String get yomitan_api_server_started => 'Fushi API 伺服器已開啟';
   @override
   String get yomitan_port_kill_action => '結束進程並重試';
   @override
@@ -293301,7 +295869,7 @@ class _StringsZhHk extends _StringsEn {
     required Object remaining,
   }) => '已發送 ${delivered} 張，失敗 ${failed} 張，剩餘 ${remaining} 張';
   @override
-  String get anki_pending_mine_landing_title => '本機負責落地其他裝置的卡片';
+  String get anki_pending_mine_landing_title => '接收其他裝置的卡片';
   @override
   String get anki_error_sync_signed_out =>
       '請先登入 Anki 同步伺服器（Anki 設定 › Anki 同步）。';
@@ -293368,7 +295936,7 @@ class _StringsZhHk extends _StringsEn {
       '登入失敗：${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      '沒裝 Anki 的裝置存下的卡片，經你配置的同步（雲盤，或本機作為互聯客户端時的互聯）送到這台裝置，由這裡的 Anki 加卡。同一時間只有一台裝置負責。作為互聯主機的電腦不擔任這個角色：與它配對的手機請改開「制卡到 Fushi 互聯服務端」（電腦關機時卡片先存在手機上）。Fushi 服務端可以擔任。';
+      '沒裝 Anki 的裝置製的卡，會經同步送到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
   @override
   String get anki_sync_client_relogin => '重新登入';
   @override
@@ -294905,8 +297473,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get import_supported_formats => 'Supported formats';
   @override
-  String get import_methods_title => 'Ways to import';
-  @override
   String get media_source_list_empty =>
       'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
   @override
@@ -295258,8 +297824,6 @@ class _StringsZhHk extends _StringsEn {
       '回饋會傳送給 fushi.moe 上的 Fushi 開發者，只用於排查與改進。';
   @override
   String get feedback_compose_submit => '提交';
-  @override
-  String get feedback_compose_missing => '請填寫標題和詳細描述。';
   @override
   String get feedback_stage_sending => '正在提交…';
   @override
@@ -296758,6 +299322,191 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_pause_ocr_scope_graphic => '僅圖片字幕';
   @override
   String get video_setting_pause_ocr_scope_off => '關閉';
+  @override
+  String get manga_library_ocr_action => 'Recognize text (OCR)';
+  @override
+  String get manga_library_ocr_none =>
+      'Nothing to recognize: the selected manga are already recognized or not downloaded';
+  @override
+  String get video_google_lens_disclosure_title =>
+      'Send video frames to Google Lens?';
+  @override
+  String get video_google_lens_disclosure_body =>
+      'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+  @override
+  String get video_subtitle_graphic_ocr_enable_hint =>
+      'Image subtitles need OCR for tap-to-look-up';
+  @override
+  String get video_subtitle_graphic_ocr_enable_action => 'Turn on';
+  @override
+  String get video_subtitle_frame_ocr_status_recognizing =>
+      'Reading on-screen text…';
+  @override
+  String get video_subtitle_frame_ocr_status_ready =>
+      'Text recognized · tap a word';
+  @override
+  String get feedback_compose_title_missing => '請填寫標題。';
+  @override
+  String get online_source_error_webview_unavailable =>
+      'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+  @override
+  String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lookup_popup_close_after_mining =>
+      'Close lookup popup after creating a card';
+  @override
+  String get lookup_popup_close_after_mining_hint =>
+      'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+  @override
+  String manga_import_selection_batch_hint({required Object n}) =>
+      'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
+  @override
+  String get external_book_open_existing => 'Open existing';
+  @override
+  String get external_book_open_import_new => 'Import as new';
+  @override
+  String external_book_open_duplicate_message({required Object name}) =>
+      'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+  @override
+  String get popup_advanced_mining_button => 'Advanced mining';
+  @override
+  String get popup_advanced_mining_title => 'Advanced mining';
+  @override
+  String popup_advanced_mining_eyebrow({required Object term}) =>
+      'Lookup · ${term}';
+  @override
+  String get popup_advanced_mining_sentence_section => 'Sentences';
+  @override
+  String popup_advanced_mining_sentence_count({required Object count}) =>
+      '${count} selected';
+  @override
+  String get popup_advanced_mining_deck_section => 'Deck';
+  @override
+  String get popup_advanced_mining_deck_scope_hint => 'Only for this card';
+  @override
+  String get popup_advanced_mining_deck_set_default =>
+      'Also make it the default deck';
+  @override
+  String get popup_advanced_mining_deck_unavailable =>
+      'Connect to Anki to choose a deck';
+  @override
+  String get popup_advanced_mining_deck_overwrite_hint =>
+      'Updating an existing card keeps it in its current deck';
+  @override
+  String get popup_advanced_mining_audio_section => 'Sentence audio';
+  @override
+  String get popup_advanced_mining_audio_follow => 'Follow sentences';
+  @override
+  String get popup_advanced_mining_audio_none => 'None';
+  @override
+  String get popup_advanced_mining_audio_start => 'Start';
+  @override
+  String get popup_advanced_mining_audio_end => 'End';
+  @override
+  String get popup_advanced_mining_audio_earlier => 'Earlier';
+  @override
+  String get popup_advanced_mining_audio_later => 'Later';
+  @override
+  String get popup_advanced_mining_audio_unavailable =>
+      'No audio for these sentences';
+  @override
+  String get popup_advanced_mining_audio_range_hint =>
+      'The range follows the selected sentences';
+  @override
+  String get popup_advanced_mining_image_section => 'Image';
+  @override
+  String get popup_advanced_mining_image_none => 'None';
+  @override
+  String get popup_advanced_mining_image_mode_animated => 'Animated';
+  @override
+  String get popup_advanced_mining_image_mode_clip => 'Video clip';
+  @override
+  String get popup_advanced_mining_image_mode_lookup_frame => 'Frame at lookup';
+  @override
+  String get popup_advanced_mining_image_mode_subtitle_start =>
+      'Subtitle start';
+  @override
+  String popup_advanced_mining_image_first_frame({required Object time}) =>
+      'First frame ${time}';
+  @override
+  String popup_advanced_mining_image_last_frame({required Object time}) =>
+      'Last frame ${time}';
+  @override
+  String get popup_advanced_mining_image_frame_back => 'Previous frame';
+  @override
+  String get popup_advanced_mining_image_frame_forward => 'Next frame';
+  @override
+  String get popup_advanced_mining_image_clip_needs_audio =>
+      'A video clip needs sentence audio';
+  @override
+  String get popup_advanced_mining_crop_whole_page => 'Whole page';
+  @override
+  String get popup_advanced_mining_crop_panel => 'Panel';
+  @override
+  String get popup_advanced_mining_crop_text_area => 'Around text';
+  @override
+  String get popup_advanced_mining_crop_custom => 'Custom';
+  @override
+  String get popup_advanced_mining_crop_hint =>
+      'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+  @override
+  String get popup_advanced_mining_crop_no_model =>
+      'The panel model is not downloaded, so the box is preselected around the text.';
+  @override
+  String popup_advanced_mining_crop_download_model({required Object size}) =>
+      'Download panel model (${size})';
+  @override
+  String get popup_advanced_mining_crop_downloading =>
+      'Downloading panel model…';
+  @override
+  String popup_advanced_mining_crop_output({
+    required Object width,
+    required Object height,
+  }) => 'Output ${width}×${height}';
+  @override
+  String get popup_advanced_mining_crop_preview => 'On the card';
+  @override
+  String get popup_advanced_mining_crop_legend_panels => 'Detected panels';
+  @override
+  String get popup_advanced_mining_crop_legend_text => 'This sentence';
+  @override
+  String get popup_advanced_mining_reset => 'Reset to one-click defaults';
+  @override
+  String popup_advanced_mining_confirm_to_deck({required Object deck}) =>
+      'Add to ${deck}';
+  @override
+  String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
+  @override
+  String get manga_mining_crop_to_panel_hint =>
+      'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get shortcut_action_library_search => '在書架 / 媒體庫中搜尋';
+  @override
+  String get feedback_filter_all => 'All';
+  @override
+  String get feedback_filter_active => 'Ongoing';
+  @override
+  String get feedback_filter_closed => 'Finished';
+  @override
+  String get feedback_filter_unread => 'New replies';
+  @override
+  String get anki_pending_mine_landing_host_note =>
+      '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
+  @override
+  String get manga_series_manage_volume => '管理本卷';
 }
 
 /// Flat map(s) containing all translations.
@@ -297317,7 +300066,7 @@ extension on _StringsEn {
       case 'anki_mine_to_server':
         return 'Mine to Fushi Interconnect server';
       case 'anki_mine_to_server_hint':
-        return 'Send mined cards to the Fushi Interconnect server\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing.';
+        return 'Send mined cards to the Fushi Interconnect server\'s Anki (its decks and settings) instead of this device. Requires an interconnect pairing. If the server is offline, cards wait on this device and are sent once it\'s back.';
       case 'anki_mined_action_add_duplicate':
         return 'Add as a new card';
       case 'anki_mined_action_overwrite':
@@ -298034,7 +300783,7 @@ extension on _StringsEn {
       case 'books':
         return 'Books';
       case 'browser_extension_enable_server_first':
-        return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
+        return 'Tip: enable "Fushi API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobile browsers cannot load this extension. Use in-app lookup in the reader or video player instead.';
       case 'browser_extension_prepare_button':
@@ -298081,7 +300830,7 @@ extension on _StringsEn {
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Fushi again.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Fushi API server again.';
       case 'cancel':
         return 'Cancel';
       case 'card_cover_degraded_to_static':
@@ -302174,12 +304923,8 @@ extension on _StringsEn {
         return 'Compact glossaries';
       case 'popup_compact_glossaries_hint':
         return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
-      case 'popup_ctx_adjust_button':
-        return 'Adjust context';
       case 'popup_ctx_box_current':
         return 'Current sentence';
-      case 'popup_ctx_box_empty':
-        return '(none)';
       case 'popup_ctx_box_next':
         return 'Next context';
       case 'popup_ctx_box_prev':
@@ -302188,18 +304933,8 @@ extension on _StringsEn {
         return 'Cancel';
       case 'popup_ctx_confirm':
         return 'Confirm mining';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d sentences';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Adjust before mining';
-      case 'popup_ctx_modal_title':
-        return 'Select sentence context';
-      case 'popup_ctx_next_minus':
-        return 'Remove next';
       case 'popup_ctx_next_plus':
         return 'Add next';
-      case 'popup_ctx_prev_minus':
-        return 'Remove previous';
       case 'popup_ctx_prev_plus':
         return 'Add previous';
       case 'popup_ctx_preview_audio':
@@ -302733,7 +305468,7 @@ extension on _StringsEn {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Toggle fullscreen';
       case 'shortcut_action_home_focus_search':
-        return 'Focus search';
+        return 'Jump to dictionary search';
       case 'shortcut_action_home_tab_books':
         return 'Books tab';
       case 'shortcut_action_home_tab_dict':
@@ -305771,13 +308506,13 @@ extension on _StringsEn {
       case 'word_favorite_removed':
         return 'Word removed from favorites';
       case 'yomitan_api_key':
-        return 'Yomitan API key (optional)';
+        return 'Fushi API key (optional)';
       case 'yomitan_api_server':
-        return 'Yomitan API server';
+        return 'Fushi API server';
       case 'yomitan_api_server_hint':
-        return 'Let yomitan-api clients query Fushi\'s dictionaries (port 19633)';
+        return 'Let the browser extension and yomitan-api-compatible clients query Fushi\'s dictionaries (port 19633)';
       case 'yomitan_api_server_started':
-        return 'Yomitan API server started';
+        return 'Fushi API server started';
       case 'yomitan_port_kill_action':
         return 'End process and retry';
       case 'yomitan_port_kill_confirm':
@@ -309157,7 +311892,7 @@ extension on _StringsEn {
           required Object remaining,
         }) => 'Sent ${delivered}, failed ${failed}, remaining ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Deliver cards from other devices';
+        return 'Receive cards from other devices';
       case 'anki_error_sync_signed_out':
         return 'Sign in to your Anki sync server first (Anki settings › Anki sync).';
       case 'anki_error_sync_unavailable':
@@ -309211,7 +311946,7 @@ extension on _StringsEn {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Sign-in failed: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Cards saved on devices without Anki travel through your sync service (cloud storage, or interconnect when this device syncs to a host) and are added to Anki on this device. Only one device does this at a time. A computer acting as an interconnect host doesn\'t take this role: phones paired with it should turn on Mine to Fushi Interconnect server instead (cards wait on the phone while the computer is off). A Fushi server can take this role.';
+        return 'Cards mined on devices without Anki reach this device through sync and are added to Anki here. Only one device receives them at a time.';
       case 'anki_sync_client_relogin':
         return 'Sign in again';
       case 'anki_sync_client_discard_confirm':
@@ -310548,8 +313283,6 @@ extension on _StringsEn {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -310869,8 +313602,6 @@ extension on _StringsEn {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -312140,6 +314871,160 @@ extension on _StringsEn {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'Search in library';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -312699,7 +315584,7 @@ extension on _StringsAr {
       case 'anki_mine_to_server':
         return 'إرسال إلى الجهاز المقترن';
       case 'anki_mine_to_server_hint':
-        return 'أرسل البطاقات المستخرجة إلى Anki على الجهاز المضيف المقترن (رزمه وإعداداته) بدلاً من هذا الجهاز. يتطلب اقتراناً عبر الربط.';
+        return 'أرسل البطاقات المستخرجة إلى Anki على الجهاز المضيف المقترن (رزمه وإعداداته) بدلاً من هذا الجهاز. يتطلب اقتراناً عبر الربط. إذا كان الخادم غير متصل، تنتظر البطاقات على هذا الجهاز وتُرسل عند عودته.';
       case 'anki_mined_action_add_duplicate':
         return 'إضافة كبطاقة جديدة';
       case 'anki_mined_action_overwrite':
@@ -313416,7 +316301,7 @@ extension on _StringsAr {
       case 'books':
         return 'الكتب';
       case 'browser_extension_enable_server_first':
-        return 'نصيحة: فعّل "خادم Yomitan API" وعيّن مفتاح API أعلاه أولاً، حتى يتم تكوين الإضافة تلقائياً باتصال يعمل.';
+        return 'نصيحة: فعّل "خادم Fushi API" وعيّن مفتاح API أعلاه أولاً، حتى يتم تكوين الإضافة تلقائياً باتصال يعمل.';
       case 'browser_extension_mobile_unsupported':
         return 'لا يمكن لمتصفحات الأجهزة المحمولة تحميل هذا الامتداد. استخدم البحث داخل التطبيق في القارئ أو مشغّل الفيديو بدلاً من ذلك.';
       case 'browser_extension_prepare_button':
@@ -313463,7 +316348,7 @@ extension on _StringsAr {
         return 'الإضافة المحمّلة في متصفحك قديمة. أعد تجهيز الإضافة إذا لزم الأمر، ثم أعد تحميلها من صفحة إضافات متصفحك (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Yomitan API في Fushi مجدداً.';
+            'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Fushi API مجدداً.';
       case 'cancel':
         return 'إلغاء';
       case 'card_cover_degraded_to_static':
@@ -317553,12 +320438,8 @@ extension on _StringsAr {
         return 'معاني مدمجة';
       case 'popup_compact_glossaries_hint':
         return 'عرض مدخلات معاني القاموس في سطر واحد مفصولة بـ \' | \' بدلًا من مدخل لكل سطر في نافذة البحث.';
-      case 'popup_ctx_adjust_button':
-        return 'تعديل السياق';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(لا شيء)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -317567,18 +320448,8 @@ extension on _StringsAr {
         return 'إلغاء';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'اختيار سياق الجملة';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -318112,7 +320983,7 @@ extension on _StringsAr {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'تبديل ملء الشاشة';
       case 'shortcut_action_home_focus_search':
-        return 'التركيز على البحث';
+        return 'الانتقال إلى البحث في القاموس';
       case 'shortcut_action_home_tab_books':
         return 'تبويب الكتب';
       case 'shortcut_action_home_tab_dict':
@@ -321147,13 +324018,13 @@ extension on _StringsAr {
       case 'word_favorite_removed':
         return 'تمت إزالة الكلمة من المفضلة';
       case 'yomitan_api_key':
-        return 'مفتاح Yomitan API (اختياري)';
+        return 'مفتاح Fushi API (اختياري)';
       case 'yomitan_api_server':
-        return 'خادم Yomitan API';
+        return 'خادم Fushi API';
       case 'yomitan_api_server_hint':
-        return 'السماح لعملاء yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
+        return 'السماح لإضافة المتصفح والعملاء المتوافقين مع yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
       case 'yomitan_api_server_started':
-        return 'تم تشغيل خادم Yomitan API';
+        return 'تم تشغيل خادم Fushi API';
       case 'yomitan_port_kill_action':
         return 'إنهاء العملية وإعادة المحاولة';
       case 'yomitan_port_kill_confirm':
@@ -324534,7 +327405,7 @@ extension on _StringsAr {
           required Object remaining,
         }) => 'أُرسل ${delivered}، وفشل ${failed}، وتبقى ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'تسليم البطاقات من الأجهزة الأخرى';
+        return 'استلام البطاقات من الأجهزة الأخرى';
       case 'anki_error_sync_signed_out':
         return 'سجّل الدخول إلى خادم مزامنة Anki أولًا (إعدادات Anki › مزامنة Anki).';
       case 'anki_error_sync_unavailable':
@@ -324588,7 +327459,7 @@ extension on _StringsAr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'فشل تسجيل الدخول: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'تنتقل البطاقات المحفوظة على الأجهزة التي بلا Anki عبر خدمة المزامنة لديك (التخزين السحابي، أو الربط عندما يزامن هذا الجهاز مع مضيف) وتُضاف إلى Anki على هذا الجهاز. جهاز واحد فقط يفعل ذلك في كل مرة. الحاسوب الذي يعمل كمضيف ربط لا يتولى هذا الدور: الهواتف المقترنة به ينبغي أن تفعّل «الاستخراج إلى خادم Fushi Interconnect» بدلًا من ذلك (تنتظر البطاقات على الهاتف أثناء إيقاف الحاسوب). يمكن لخادم Fushi تولي هذا الدور.';
+        return 'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
       case 'anki_sync_client_relogin':
         return 'تسجيل الدخول مرة أخرى';
       case 'anki_sync_client_discard_confirm':
@@ -325925,8 +328796,6 @@ extension on _StringsAr {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -326246,8 +329115,6 @@ extension on _StringsAr {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -327517,6 +330384,160 @@ extension on _StringsAr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'البحث في المكتبة';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -328082,7 +331103,7 @@ extension on _StringsDe {
       case 'anki_mine_to_server':
         return 'An gekoppeltes Gerät senden';
       case 'anki_mine_to_server_hint':
-        return 'Erstellte Karten an das Anki des gekoppelten Hosts senden (dessen Decks und Einstellungen) statt an dieses Gerät. Erfordert eine Interconnect-Kopplung.';
+        return 'Erstellte Karten an das Anki des gekoppelten Hosts senden (dessen Decks und Einstellungen) statt an dieses Gerät. Erfordert eine Interconnect-Kopplung. Ist der Server offline, warten die Karten auf diesem Gerät und werden gesendet, sobald er wieder erreichbar ist.';
       case 'anki_mined_action_add_duplicate':
         return 'Als neue Karte hinzufügen';
       case 'anki_mined_action_overwrite':
@@ -328808,7 +331829,7 @@ extension on _StringsDe {
       case 'books':
         return 'Bücher';
       case 'browser_extension_enable_server_first':
-        return 'Tipp: Aktiviere zuerst oben den „Yomitan API-Server" und setze einen API-Schlüssel, damit die Erweiterung automatisch mit einer funktionierenden Verbindung konfiguriert wird.';
+        return 'Tipp: Aktiviere zuerst oben den „Fushi-API-Server" und setze einen API-Schlüssel, damit die Erweiterung automatisch mit einer funktionierenden Verbindung konfiguriert wird.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobile Browser können diese Erweiterung nicht laden. Nutze stattdessen die App-interne Suche im Reader oder Videoplayer.';
       case 'browser_extension_prepare_button':
@@ -328855,7 +331876,7 @@ extension on _StringsDe {
         return 'Die im Browser geladene Erweiterung ist veraltet. Bereite die Erweiterung bei Bedarf erneut vor und lade sie dann über die Erweiterungsseite deines Browsers neu (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Yomitan-API-Server in Fushi erneut.';
+            'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Fushi-API-Server erneut.';
       case 'cancel':
         return 'Abbrechen';
       case 'card_cover_degraded_to_static':
@@ -332970,12 +335991,8 @@ extension on _StringsDe {
         return 'Kompakte Glossare';
       case 'popup_compact_glossaries_hint':
         return 'Wörterbuch-Glossareinträge im Nachschlage-Popup inline, getrennt durch \' | \', statt einen pro Zeile anzeigen.';
-      case 'popup_ctx_adjust_button':
-        return 'Kontext anpassen';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(leer)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -332984,18 +336001,8 @@ extension on _StringsDe {
         return 'Abbrechen';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Satzkontext auswählen';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -333531,7 +336538,7 @@ extension on _StringsDe {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Vollbild umschalten';
       case 'shortcut_action_home_focus_search':
-        return 'Suche fokussieren';
+        return 'Zur Wörterbuchsuche springen';
       case 'shortcut_action_home_tab_books':
         return 'Tab „Bücher“';
       case 'shortcut_action_home_tab_dict':
@@ -336581,13 +339588,13 @@ extension on _StringsDe {
       case 'word_favorite_removed':
         return 'Wort aus Favoriten entfernt';
       case 'yomitan_api_key':
-        return 'Yomitan-API-Schlüssel (optional)';
+        return 'Fushi-API-Schlüssel (optional)';
       case 'yomitan_api_server':
-        return 'Yomitan-API-Server';
+        return 'Fushi-API-Server';
       case 'yomitan_api_server_hint':
-        return 'yomitan-api-Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
+        return 'Browsererweiterung und yomitan-api-kompatible Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
       case 'yomitan_api_server_started':
-        return 'Yomitan-API-Server gestartet';
+        return 'Fushi-API-Server gestartet';
       case 'yomitan_port_kill_action':
         return 'Prozess beenden und erneut versuchen';
       case 'yomitan_port_kill_confirm':
@@ -339984,7 +342991,7 @@ extension on _StringsDe {
         }) =>
             '${delivered} gesendet, ${failed} fehlgeschlagen, ${remaining} verbleibend';
       case 'anki_pending_mine_landing_title':
-        return 'Karten von anderen Geräten zustellen';
+        return 'Karten anderer Geräte empfangen';
       case 'anki_error_sync_signed_out':
         return 'Melde dich zuerst bei deinem Anki-Sync-Server an (Anki-Einstellungen › Anki-Sync).';
       case 'anki_error_sync_unavailable':
@@ -340041,7 +343048,7 @@ extension on _StringsDe {
         return ({required Object error}) =>
             'Anmeldung fehlgeschlagen: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Karten, die auf Geräten ohne Anki gespeichert wurden, laufen über deinen Sync-Dienst (Cloud-Speicher oder Interconnect, wenn dieses Gerät mit einem Host synchronisiert) und werden auf diesem Gerät zu Anki hinzugefügt. Das macht immer nur ein Gerät. Ein Computer, der als Interconnect-Host fungiert, übernimmt diese Rolle nicht: Mit ihm gekoppelte Smartphones sollten stattdessen „Auf Fushi-Interconnect-Server minen“ aktivieren (Karten warten auf dem Smartphone, solange der Computer aus ist). Ein Fushi-Server kann diese Rolle übernehmen.';
+        return 'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
       case 'anki_sync_client_relogin':
         return 'Erneut anmelden';
       case 'anki_sync_client_discard_confirm':
@@ -341378,8 +344385,6 @@ extension on _StringsDe {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -341699,8 +344704,6 @@ extension on _StringsDe {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -342970,6 +345973,160 @@ extension on _StringsDe {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'In der Bibliothek suchen';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -343530,7 +346687,7 @@ extension on _StringsEs {
       case 'anki_mine_to_server':
         return 'Enviar al dispositivo emparejado';
       case 'anki_mine_to_server_hint':
-        return 'Envía las tarjetas creadas al Anki del dispositivo emparejado (sus mazos y ajustes) en lugar de este dispositivo. Requiere emparejamiento por Interconnect.';
+        return 'Envía las tarjetas creadas al Anki del dispositivo emparejado (sus mazos y ajustes) en lugar de este dispositivo. Requiere emparejamiento por Interconnect. Si el servidor está desconectado, las tarjetas esperan en este dispositivo y se envían cuando vuelve.';
       case 'anki_mined_action_add_duplicate':
         return 'Añadir como tarjeta nueva';
       case 'anki_mined_action_overwrite':
@@ -344256,7 +347413,7 @@ extension on _StringsEs {
       case 'books':
         return 'Libros';
       case 'browser_extension_enable_server_first':
-        return 'Consejo: active primero el "servidor API Yomitan" y establezca una clave API arriba, para que la extensión se configure automáticamente con una conexión funcional.';
+        return 'Consejo: active primero el "servidor Fushi API" y establezca una clave API arriba, para que la extensión se configure automáticamente con una conexión funcional.';
       case 'browser_extension_mobile_unsupported':
         return 'Los navegadores móviles no pueden cargar esta extensión. Usa la búsqueda dentro de la app en el lector o el reproductor de vídeo.';
       case 'browser_extension_prepare_button':
@@ -344303,7 +347460,7 @@ extension on _StringsEs {
         return 'La extensión cargada en su navegador está desactualizada. Prepare la extensión de nuevo si es necesario, luego recárguela desde la página de extensiones del navegador (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor API Yomitan en Fushi.';
+            'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor Fushi API.';
       case 'cancel':
         return 'Cancelar';
       case 'card_cover_degraded_to_static':
@@ -348410,12 +351567,8 @@ extension on _StringsEs {
         return 'Glosarios compactos';
       case 'popup_compact_glossaries_hint':
         return 'Muestra las entradas de glosario del diccionario en línea, separadas por \' | \', en lugar de una por línea en la ventana de consulta.';
-      case 'popup_ctx_adjust_button':
-        return 'Ajustar contexto';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(ninguno)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -348424,18 +351577,8 @@ extension on _StringsEs {
         return 'Cancelar';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Seleccionar contexto de oración';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -348972,7 +352115,7 @@ extension on _StringsEs {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Alternar pantalla completa';
       case 'shortcut_action_home_focus_search':
-        return 'Enfocar búsqueda';
+        return 'Ir a la búsqueda del diccionario';
       case 'shortcut_action_home_tab_books':
         return 'Pestaña de libros';
       case 'shortcut_action_home_tab_dict':
@@ -352020,13 +355163,13 @@ extension on _StringsEs {
       case 'word_favorite_removed':
         return 'Palabra eliminada de favoritos';
       case 'yomitan_api_key':
-        return 'API key de Yomitan (opcional)';
+        return 'Clave de Fushi API (opcional)';
       case 'yomitan_api_server':
-        return 'Servidor API de Yomitan';
+        return 'Servidor Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Permite que los clientes de yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
+        return 'Permite que la extensión del navegador y los clientes compatibles con yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
       case 'yomitan_api_server_started':
-        return 'Servidor API Yomitan iniciado';
+        return 'Servidor Fushi API iniciado';
       case 'yomitan_port_kill_action':
         return 'Finalizar proceso y reintentar';
       case 'yomitan_port_kill_confirm':
@@ -355420,7 +358563,7 @@ extension on _StringsEs {
         }) =>
             'Enviadas ${delivered}, fallidas ${failed}, restantes ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Entregar tarjetas de otros dispositivos';
+        return 'Recibir tarjetas de otros dispositivos';
       case 'anki_error_sync_signed_out':
         return 'Inicia primero sesión en tu servidor de sincronización de Anki (ajustes de Anki › Sincronización de Anki).';
       case 'anki_error_sync_unavailable':
@@ -355476,7 +358619,7 @@ extension on _StringsEs {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Error al iniciar sesión: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Las tarjetas guardadas en dispositivos sin Anki viajan por tu servicio de sincronización (almacenamiento en la nube o interconexión cuando este dispositivo sincroniza con un anfitrión) y se añaden a Anki en este dispositivo. Solo un dispositivo hace esto a la vez. Un ordenador que actúa como anfitrión de interconexión no asume este papel: los móviles emparejados con él deben activar Crear tarjetas en el servidor Fushi Interconnect (las tarjetas esperan en el móvil mientras el ordenador está apagado). Un servidor Fushi sí puede asumir este papel.';
+        return 'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
       case 'anki_sync_client_relogin':
         return 'Iniciar sesión de nuevo';
       case 'anki_sync_client_discard_confirm':
@@ -356813,8 +359956,6 @@ extension on _StringsEs {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -357134,8 +360275,6 @@ extension on _StringsEs {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -358405,6 +361544,160 @@ extension on _StringsEs {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'Buscar en la biblioteca';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -358966,7 +362259,7 @@ extension on _StringsFr {
       case 'anki_mine_to_server':
         return 'Envoyer au périphérique apparié';
       case 'anki_mine_to_server_hint':
-        return 'Envoyer les cartes créées vers l\'Anki de l\'hôte apparié (ses paquets et paramètres) au lieu de cet appareil. Nécessite un appairage d\'interconnexion.';
+        return 'Envoyer les cartes créées vers l\'Anki de l\'hôte apparié (ses paquets et paramètres) au lieu de cet appareil. Nécessite un appairage d\'interconnexion. Si le serveur est hors ligne, les cartes restent sur cet appareil et sont envoyées dès son retour.';
       case 'anki_mined_action_add_duplicate':
         return 'Ajouter comme nouvelle carte';
       case 'anki_mined_action_overwrite':
@@ -359694,7 +362987,7 @@ extension on _StringsFr {
       case 'books':
         return 'Livres';
       case 'browser_extension_enable_server_first':
-        return 'Conseil : activez d\'abord « Serveur API Yomitan » et définissez une clé API ci-dessus, pour que l\'extension soit configurée automatiquement avec une connexion fonctionnelle.';
+        return 'Conseil : activez d\'abord « Serveur Fushi API » et définissez une clé API ci-dessus, pour que l\'extension soit configurée automatiquement avec une connexion fonctionnelle.';
       case 'browser_extension_mobile_unsupported':
         return 'Les navigateurs mobiles ne peuvent pas charger cette extension. Utilisez plutôt la recherche intégrée dans le lecteur ou le lecteur vidéo.';
       case 'browser_extension_prepare_button':
@@ -359741,7 +363034,7 @@ extension on _StringsFr {
         return 'L\'extension chargée dans votre navigateur est obsolète. Repréparez l\'extension si nécessaire, puis rechargez-la depuis la page des extensions de votre navigateur (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur API Yomitan dans Fushi.';
+            'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur Fushi API.';
       case 'cancel':
         return 'Annuler';
       case 'card_cover_degraded_to_static':
@@ -363854,12 +367147,8 @@ extension on _StringsFr {
         return 'Glossaires compacts';
       case 'popup_compact_glossaries_hint':
         return 'Affiche les entrées de glossaire des dictionnaires sur une seule ligne, séparées par \' | \', au lieu d\'une par ligne dans la fenêtre de recherche.';
-      case 'popup_ctx_adjust_button':
-        return 'Ajuster le contexte';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(aucun)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -363868,18 +367157,8 @@ extension on _StringsFr {
         return 'Annuler';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Sélectionner le contexte de phrase';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -364416,7 +367695,7 @@ extension on _StringsFr {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Plein écran';
       case 'shortcut_action_home_focus_search':
-        return 'Focus sur la recherche';
+        return 'Aller à la recherche dans le dictionnaire';
       case 'shortcut_action_home_tab_books':
         return 'Onglet Livres';
       case 'shortcut_action_home_tab_dict':
@@ -367466,13 +370745,13 @@ extension on _StringsFr {
       case 'word_favorite_removed':
         return 'Mot retiré des favoris';
       case 'yomitan_api_key':
-        return 'Clé API Yomitan (facultatif)';
+        return 'Clé Fushi API (facultatif)';
       case 'yomitan_api_server':
-        return 'Serveur API Yomitan';
+        return 'Serveur Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Permet aux clients yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
+        return 'Permet à l\'extension de navigateur et aux clients compatibles yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
       case 'yomitan_api_server_started':
-        return 'Serveur API Yomitan démarré';
+        return 'Serveur Fushi API démarré';
       case 'yomitan_port_kill_action':
         return 'Arrêter le processus et réessayer';
       case 'yomitan_port_kill_confirm':
@@ -370873,7 +374152,7 @@ extension on _StringsFr {
         }) =>
             '${delivered} envoyées, ${failed} en échec, ${remaining} restantes';
       case 'anki_pending_mine_landing_title':
-        return 'Livrer les cartes d\'autres appareils';
+        return 'Recevoir les cartes des autres appareils';
       case 'anki_error_sync_signed_out':
         return 'Connectez-vous d\'abord à votre serveur de synchronisation Anki (réglages Anki › Synchronisation Anki).';
       case 'anki_error_sync_unavailable':
@@ -370929,7 +374208,7 @@ extension on _StringsFr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Échec de la connexion : ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Les cartes enregistrées sur des appareils sans Anki transitent par votre service de synchronisation (stockage cloud, ou interconnexion quand cet appareil se synchronise avec un hôte) et sont ajoutées à Anki sur cet appareil. Un seul appareil joue ce rôle à la fois. Un ordinateur faisant office d\'hôte d\'interconnexion ne prend pas ce rôle : les téléphones appairés avec lui doivent plutôt activer Créer vers le serveur Fushi Interconnect (les cartes attendent sur le téléphone tant que l\'ordinateur est éteint). Un serveur Fushi peut prendre ce rôle.';
+        return 'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
       case 'anki_sync_client_relogin':
         return 'Se reconnecter';
       case 'anki_sync_client_discard_confirm':
@@ -372266,8 +375545,6 @@ extension on _StringsFr {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -372587,8 +375864,6 @@ extension on _StringsFr {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -373858,6 +377133,160 @@ extension on _StringsFr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'Rechercher dans la bibliothèque';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -374419,7 +377848,7 @@ extension on _StringsId {
       case 'anki_mine_to_server':
         return 'Kirim kartu ke perangkat berpasangan';
       case 'anki_mine_to_server_hint':
-        return 'Kirim kartu yang ditambang ke Anki perangkat host berpasangan (dek dan pengaturannya) alih-alih perangkat ini. Memerlukan koneksi Interconnect.';
+        return 'Kirim kartu yang ditambang ke Anki perangkat host berpasangan (dek dan pengaturannya) alih-alih perangkat ini. Memerlukan koneksi Interconnect. Jika server sedang offline, kartu menunggu di perangkat ini dan dikirim setelah tersambung kembali.';
       case 'anki_mined_action_add_duplicate':
         return 'Tambah sebagai kartu baru';
       case 'anki_mined_action_overwrite':
@@ -375139,7 +378568,7 @@ extension on _StringsId {
       case 'books':
         return 'Buku';
       case 'browser_extension_enable_server_first':
-        return 'Tips: aktifkan "Server API Yomitan" dan atur kunci API di atas terlebih dahulu, agar ekstensi otomatis terkonfigurasi dengan koneksi yang berfungsi.';
+        return 'Tips: aktifkan "Server Fushi API" dan atur kunci API di atas terlebih dahulu, agar ekstensi otomatis terkonfigurasi dengan koneksi yang berfungsi.';
       case 'browser_extension_mobile_unsupported':
         return 'Peramban seluler tidak dapat memuat ekstensi ini. Gunakan pencarian dalam aplikasi di pembaca atau pemutar video sebagai gantinya.';
       case 'browser_extension_prepare_button':
@@ -375186,7 +378615,7 @@ extension on _StringsId {
         return 'Ekstensi yang dimuat di browser Anda sudah usang. Siapkan ulang ekstensi jika perlu, lalu muat ulang dari halaman ekstensi browser Anda (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server API Yomitan di Fushi.';
+            'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server Fushi API.';
       case 'cancel':
         return 'Batal';
       case 'card_cover_degraded_to_static':
@@ -379283,12 +382712,8 @@ extension on _StringsId {
         return 'Glosarium ringkas';
       case 'popup_compact_glossaries_hint':
         return 'Tampilkan entri glosarium kamus sebaris, dipisahkan oleh \' | \', bukan satu per baris di popup pencarian.';
-      case 'popup_ctx_adjust_button':
-        return 'Sesuaikan konteks';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(tidak ada)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -379297,18 +382722,8 @@ extension on _StringsId {
         return 'Batal';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Pilih konteks kalimat';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -379842,7 +383257,7 @@ extension on _StringsId {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Alihkan layar penuh';
       case 'shortcut_action_home_focus_search':
-        return 'Fokus Pencarian';
+        return 'Lompat ke pencarian kamus';
       case 'shortcut_action_home_tab_books':
         return 'Tab Buku';
       case 'shortcut_action_home_tab_dict':
@@ -382883,13 +386298,13 @@ extension on _StringsId {
       case 'word_favorite_removed':
         return 'Kata dihapus dari favorit';
       case 'yomitan_api_key':
-        return 'Yomitan API key (opsional)';
+        return 'Fushi API key (opsional)';
       case 'yomitan_api_server':
-        return 'Server Yomitan API';
+        return 'Server Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Izinkan klien yomitan-api mencari di kamus Fushi (port 19633)';
+        return 'Izinkan ekstensi browser dan klien yang kompatibel dengan yomitan-api mencari di kamus Fushi (port 19633)';
       case 'yomitan_api_server_started':
-        return 'Server API Yomitan dimulai';
+        return 'Server Fushi API dimulai';
       case 'yomitan_port_kill_action':
         return 'Akhiri proses dan coba lagi';
       case 'yomitan_port_kill_confirm':
@@ -386271,7 +389686,7 @@ extension on _StringsId {
           required Object remaining,
         }) => 'Terkirim ${delivered}, gagal ${failed}, tersisa ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Antarkan kartu dari perangkat lain';
+        return 'Terima kartu dari perangkat lain';
       case 'anki_error_sync_signed_out':
         return 'Masuk ke server sinkronisasi Anki Anda dulu (pengaturan Anki › sinkronisasi Anki).';
       case 'anki_error_sync_unavailable':
@@ -386326,7 +389741,7 @@ extension on _StringsId {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Login gagal: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Kartu yang disimpan di perangkat tanpa Anki melewati layanan sinkronisasi Anda (penyimpanan cloud, atau interconnect saat perangkat ini menyinkronkan ke host) dan ditambahkan ke Anki di perangkat ini. Hanya satu perangkat yang melakukannya dalam satu waktu. Komputer yang bertindak sebagai host interconnect tidak mengambil peran ini: ponsel yang dipasangkan dengannya sebaiknya mengaktifkan Mining ke server Fushi Interconnect (kartu menunggu di ponsel saat komputer mati). Server Fushi dapat mengambil peran ini.';
+        return 'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
       case 'anki_sync_client_relogin':
         return 'Masuk lagi';
       case 'anki_sync_client_discard_confirm':
@@ -387663,8 +391078,6 @@ extension on _StringsId {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -387984,8 +391397,6 @@ extension on _StringsId {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -389255,6 +392666,160 @@ extension on _StringsId {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'Cari di pustaka';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -389816,7 +393381,7 @@ extension on _StringsIt {
       case 'anki_mine_to_server':
         return 'Invia al dispositivo accoppiato';
       case 'anki_mine_to_server_hint':
-        return 'Invia le carte estratte all\'Anki dell\'host accoppiato (i suoi mazzi e impostazioni) invece di questo dispositivo. Richiede un accoppiamento interconnect.';
+        return 'Invia le carte estratte all\'Anki dell\'host accoppiato (i suoi mazzi e impostazioni) invece di questo dispositivo. Richiede un accoppiamento interconnect. Se il server è offline, le carte restano su questo dispositivo e vengono inviate quando torna disponibile.';
       case 'anki_mined_action_add_duplicate':
         return 'Aggiungi come nuova carta';
       case 'anki_mined_action_overwrite':
@@ -390539,7 +394104,7 @@ extension on _StringsIt {
       case 'books':
         return 'Libri';
       case 'browser_extension_enable_server_first':
-        return 'Suggerimento: abilita prima "Server API Yomitan" e imposta una chiave API sopra, così l\'estensione viene configurata automaticamente con una connessione funzionante.';
+        return 'Suggerimento: abilita prima "Server Fushi API" e imposta una chiave API sopra, così l\'estensione viene configurata automaticamente con una connessione funzionante.';
       case 'browser_extension_mobile_unsupported':
         return 'I browser mobili non possono caricare questa estensione. Usa invece la ricerca nell\'app nel lettore o nel player video.';
       case 'browser_extension_prepare_button':
@@ -390586,7 +394151,7 @@ extension on _StringsIt {
         return 'L\'estensione caricata nel browser è obsoleta. Ri-prepara l\'estensione se necessario, poi ricaricala dalla pagina estensioni del browser (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server API Yomitan in Fushi.';
+            'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server Fushi API.';
       case 'cancel':
         return 'Annulla';
       case 'card_cover_degraded_to_static':
@@ -394692,12 +398257,8 @@ extension on _StringsIt {
         return 'Glossari compatti';
       case 'popup_compact_glossaries_hint':
         return 'Mostra le voci di glossario del dizionario in linea, separate da \' | \', invece di una per riga nel popup di ricerca.';
-      case 'popup_ctx_adjust_button':
-        return 'Regola contesto';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(nessuno)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -394706,18 +398267,8 @@ extension on _StringsIt {
         return 'Annulla';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Seleziona contesto della frase';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -395253,7 +398804,7 @@ extension on _StringsIt {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Attiva/disattiva schermo intero';
       case 'shortcut_action_home_focus_search':
-        return 'Vai alla ricerca';
+        return 'Vai alla ricerca nel dizionario';
       case 'shortcut_action_home_tab_books':
         return 'Scheda Libri';
       case 'shortcut_action_home_tab_dict':
@@ -398305,13 +401856,13 @@ extension on _StringsIt {
       case 'word_favorite_removed':
         return 'Parola rimossa dai preferiti';
       case 'yomitan_api_key':
-        return 'API key Yomitan (opzionale)';
+        return 'Chiave Fushi API (opzionale)';
       case 'yomitan_api_server':
-        return 'Server API Yomitan';
+        return 'Server Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Consenti ai client yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
+        return 'Consenti all\'estensione del browser e ai client compatibili con yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
       case 'yomitan_api_server_started':
-        return 'Server API Yomitan avviato';
+        return 'Server Fushi API avviato';
       case 'yomitan_port_kill_action':
         return 'Termina processo e riprova';
       case 'yomitan_port_kill_confirm':
@@ -401703,7 +405254,7 @@ extension on _StringsIt {
         }) =>
             'Inviate ${delivered}, non riuscite ${failed}, rimanenti ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Consegna le carte da altri dispositivi';
+        return 'Ricevi le carte da altri dispositivi';
       case 'anki_error_sync_signed_out':
         return 'Accedi prima al tuo server di sincronizzazione di Anki (impostazioni di Anki › Sincronizzazione Anki).';
       case 'anki_error_sync_unavailable':
@@ -401759,7 +405310,7 @@ extension on _StringsIt {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Accesso non riuscito: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Le carte salvate su dispositivi senza Anki passano dal tuo servizio di sincronizzazione (archiviazione cloud, o interconnect quando questo dispositivo sincronizza con un host) e vengono aggiunte ad Anki su questo dispositivo. Lo fa un solo dispositivo alla volta. Un computer che fa da host interconnect non assume questo ruolo: i telefoni abbinati ad esso devono invece attivare Mining sul server Fushi Interconnect (le carte restano sul telefono mentre il computer è spento). Un server Fushi può assumere questo ruolo.';
+        return 'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
       case 'anki_sync_client_relogin':
         return 'Accedi di nuovo';
       case 'anki_sync_client_discard_confirm':
@@ -403096,8 +406647,6 @@ extension on _StringsIt {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -403417,8 +406966,6 @@ extension on _StringsIt {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -404688,6 +408235,160 @@ extension on _StringsIt {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'Cerca nella libreria';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -405244,7 +408945,7 @@ extension on _StringsJa {
       case 'anki_mine_to_server':
         return 'ペアリングデバイスに制カード';
       case 'anki_mine_to_server_hint':
-        return '制カードをこのデバイスではなく、ペアリングしたホストの Anki（そのデッキと設定）に送信します。互連ペアリングが必要です。';
+        return '制カードをこのデバイスではなく、ペアリングしたホストの Anki（そのデッキと設定）に送信します。互連ペアリングが必要です。サーバーがオフラインの間、カードはこのデバイスに保存され、接続が戻ると送信されます。';
       case 'anki_mined_action_add_duplicate':
         return '新しいカードとして追加';
       case 'anki_mined_action_overwrite':
@@ -405954,7 +409655,7 @@ extension on _StringsJa {
       case 'books':
         return '本';
       case 'browser_extension_enable_server_first':
-        return 'ヒント：先に「Yomitan API サーバー」を有効にし、上で API キーを設定すると、拡張機能が自動で接続設定されます。';
+        return 'ヒント：先に「Fushi API サーバー」を有効にし、上で API キーを設定すると、拡張機能が自動で接続設定されます。';
       case 'browser_extension_mobile_unsupported':
         return 'モバイルブラウザーではこの拡張機能を読み込めません。代わりにアプリ内のリーダーや動画プレーヤーで辞書引きしてください。';
       case 'browser_extension_prepare_button':
@@ -406001,7 +409702,7 @@ extension on _StringsJa {
         return 'ブラウザに読み込まれた拡張機能が古くなっています。必要に応じて拡張機能を再度準備してから、ブラウザの拡張機能ページ（chrome://extensions）から再読み込みしてください。';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi で Yomitan API サーバーを再度有効にしてください。';
+            'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi API サーバーを再度有効にしてください。';
       case 'cancel':
         return 'キャンセル';
       case 'card_cover_degraded_to_static':
@@ -410081,12 +413782,8 @@ extension on _StringsJa {
         return 'コンパクト釈義';
       case 'popup_compact_glossaries_hint':
         return 'ポップアップの釈義項目を1行ずつではなく「 | 」区切りで同じ行に表示します。';
-      case 'popup_ctx_adjust_button':
-        return '文脈を調整';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '（なし）';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -410095,18 +413792,8 @@ extension on _StringsJa {
         return 'キャンセル';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return '文脈の範囲を選択';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -410639,7 +414326,7 @@ extension on _StringsJa {
       case 'shortcut_action_global_toggle_fullscreen':
         return '全画面表示の切り替え';
       case 'shortcut_action_home_focus_search':
-        return '検索にフォーカス';
+        return '辞書検索へ移動';
       case 'shortcut_action_home_tab_books':
         return '書籍タブ';
       case 'shortcut_action_home_tab_dict':
@@ -413656,13 +417343,13 @@ extension on _StringsJa {
       case 'word_favorite_removed':
         return '単語をお気に入りから削除しました';
       case 'yomitan_api_key':
-        return 'Yomitan API キー（任意）';
+        return 'Fushi API キー（任意）';
       case 'yomitan_api_server':
-        return 'Yomitan API サーバー';
+        return 'Fushi API サーバー';
       case 'yomitan_api_server_hint':
-        return 'yomitan-api クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
+        return 'ブラウザ拡張機能や yomitan-api 互換クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
       case 'yomitan_api_server_started':
-        return 'Yomitan APIサーバーが起動しました';
+        return 'Fushi API サーバーが起動しました';
       case 'yomitan_port_kill_action':
         return 'プロセスを終了して再試行';
       case 'yomitan_port_kill_confirm':
@@ -417070,7 +420757,7 @@ extension on _StringsJa {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'サインインに失敗しました: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki のないデバイスで保存されたカードは、同期サービス（クラウドストレージ、またはこのデバイスがホストと同期している場合は Interconnect）を経由して、このデバイスで Anki に追加されます。同時にこれを行うデバイスは 1 台だけです。Interconnect ホストとして動作しているコンピューターはこの役割を担いません。ペアリングしているスマートフォンで代わりに「Fushi Interconnect サーバーへマイニング」をオンにしてください（コンピューターの電源が切れている間、カードはスマートフォンで待機します）。Fushi サーバーはこの役割を担えます。';
+        return 'Anki のないデバイスで作ったカードは、同期を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
       case 'anki_sync_client_relogin':
         return '再度サインイン';
       case 'anki_sync_client_discard_confirm':
@@ -418405,8 +422092,6 @@ extension on _StringsJa {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -418726,8 +422411,6 @@ extension on _StringsJa {
         return 'フィードバックは fushi.moe の Fushi 開発者に送られ、不具合の調査と改善にのみ使われます。';
       case 'feedback_compose_submit':
         return '送信';
-      case 'feedback_compose_missing':
-        return 'タイトルと詳細を入力してください。';
       case 'feedback_stage_sending':
         return '送信中…';
       case 'feedback_stage_screenshots':
@@ -419995,6 +423678,160 @@ extension on _StringsJa {
         return '画像字幕のみ';
       case 'video_setting_pause_ocr_scope_off':
         return 'オフ';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'タイトルを入力してください。';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'ライブラリ内を検索';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
+      case 'manga_series_manage_volume':
+        return 'この巻を管理';
       default:
         return null;
     }
@@ -420550,7 +424387,7 @@ extension on _StringsKo {
       case 'anki_mine_to_server':
         return '페어링된 기기로 채굴';
       case 'anki_mine_to_server_hint':
-        return '채굴한 카드를 이 기기 대신 페어링된 호스트의 Anki(해당 덱 및 설정)로 전송합니다. 인터커넥트 페어링이 필요합니다.';
+        return '채굴한 카드를 이 기기 대신 페어링된 호스트의 Anki(해당 덱 및 설정)로 전송합니다. 인터커넥트 페어링이 필요합니다. 서버가 오프라인이면 카드는 이 기기에 보관되었다가 연결되면 전송됩니다.';
       case 'anki_mined_action_add_duplicate':
         return '새 카드로 추가';
       case 'anki_mined_action_overwrite':
@@ -421260,7 +425097,7 @@ extension on _StringsKo {
       case 'books':
         return '책';
       case 'browser_extension_enable_server_first':
-        return '팁: 먼저 위에서 "Yomitan API 서버"를 활성화하고 API 키를 설정하면 확장 프로그램이 자동으로 연결 구성됩니다.';
+        return '팁: 먼저 위에서 "Fushi API 서버"를 활성화하고 API 키를 설정하면 확장 프로그램이 자동으로 연결 구성됩니다.';
       case 'browser_extension_mobile_unsupported':
         return '모바일 브라우저에서는 이 확장 프로그램을 로드할 수 없습니다. 대신 앱 내 리더나 동영상 플레이어에서 사전 검색을 사용하세요.';
       case 'browser_extension_prepare_button':
@@ -421307,7 +425144,7 @@ extension on _StringsKo {
         return '브라우저에 로드된 확장 프로그램이 오래되었습니다. 필요한 경우 확장 프로그램을 다시 준비한 후 브라우저 확장 프로그램 페이지(chrome://extensions)에서 다시 로드하세요.';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi에서 Yomitan API 서버를 다시 활성화하세요.';
+            '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi API 서버를 다시 활성화하세요.';
       case 'cancel':
         return '취소';
       case 'card_cover_degraded_to_static':
@@ -425388,12 +429225,8 @@ extension on _StringsKo {
         return '간략한 풀이';
       case 'popup_compact_glossaries_hint':
         return '검색 팝업에서 사전 풀이 항목을 한 줄에 하나씩 표시하는 대신 \' | \'로 구분해 한 줄에 이어서 표시합니다.';
-      case 'popup_ctx_adjust_button':
-        return '문맥 조정';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(없음)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -425402,18 +429235,8 @@ extension on _StringsKo {
         return '취소';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return '문장 문맥 선택';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -425947,7 +429770,7 @@ extension on _StringsKo {
       case 'shortcut_action_global_toggle_fullscreen':
         return '전체 화면 전환';
       case 'shortcut_action_home_focus_search':
-        return '검색 포커스';
+        return '사전 검색으로 이동';
       case 'shortcut_action_home_tab_books':
         return '책 탭';
       case 'shortcut_action_home_tab_dict':
@@ -428967,13 +432790,13 @@ extension on _StringsKo {
       case 'word_favorite_removed':
         return '단어가 즐겨찾기에서 삭제되었습니다';
       case 'yomitan_api_key':
-        return 'Yomitan API key(선택)';
+        return 'Fushi API key(선택)';
       case 'yomitan_api_server':
-        return 'Yomitan API 서버';
+        return 'Fushi API 서버';
       case 'yomitan_api_server_hint':
-        return 'yomitan-api 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
+        return '브라우저 확장 프로그램과 yomitan-api 호환 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
       case 'yomitan_api_server_started':
-        return 'Yomitan API 서버가 시작되었습니다';
+        return 'Fushi API 서버가 시작되었습니다';
       case 'yomitan_port_kill_action':
         return '프로세스를 종료하고 재시도';
       case 'yomitan_port_kill_confirm':
@@ -432327,7 +436150,7 @@ extension on _StringsKo {
           required Object remaining,
         }) => '전송 ${delivered}장, 실패 ${failed}장, 남음 ${remaining}장';
       case 'anki_pending_mine_landing_title':
-        return '다른 기기의 카드 전달';
+        return '다른 기기의 카드 받기';
       case 'anki_error_sync_signed_out':
         return '먼저 Anki 동기화 서버에 로그인하세요(Anki 설정 › Anki 동기화).';
       case 'anki_error_sync_unavailable':
@@ -432381,7 +436204,7 @@ extension on _StringsKo {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '로그인 실패: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki가 없는 기기에서 저장한 카드는 동기화 서비스(클라우드 저장소, 또는 이 기기가 호스트와 동기화하는 경우 연동)를 통해 전달되어 이 기기의 Anki에 추가됩니다. 한 번에 한 기기만 이 역할을 합니다. 연동 호스트로 동작하는 컴퓨터는 이 역할을 맡지 않습니다. 그 컴퓨터와 페어링한 휴대폰은 대신 \'Fushi 연동 서버로 마이닝\'을 켜세요(컴퓨터가 꺼져 있는 동안 카드는 휴대폰에서 대기합니다). Fushi 서버는 이 역할을 맡을 수 있습니다.';
+        return 'Anki가 없는 기기에서 만든 카드는 동기화를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
       case 'anki_sync_client_relogin':
         return '다시 로그인';
       case 'anki_sync_client_discard_confirm':
@@ -433717,8 +437540,6 @@ extension on _StringsKo {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -434038,8 +437859,6 @@ extension on _StringsKo {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -435309,6 +439128,160 @@ extension on _StringsKo {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return '라이브러리에서 검색';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -435870,7 +439843,7 @@ extension on _StringsNl {
       case 'anki_mine_to_server':
         return 'Kaarten naar gekoppeld apparaat sturen';
       case 'anki_mine_to_server_hint':
-        return 'Stuur gedolven kaarten naar de Anki van het gekoppelde apparaat (diens dekken en instellingen) in plaats van dit apparaat. Vereist een interconnectkoppeling.';
+        return 'Stuur gedolven kaarten naar de Anki van het gekoppelde apparaat (diens dekken en instellingen) in plaats van dit apparaat. Vereist een interconnectkoppeling. Is de server offline, dan wachten kaarten op dit apparaat en worden ze verzonden zodra hij terug is.';
       case 'anki_mined_action_add_duplicate':
         return 'Als nieuwe kaart toevoegen';
       case 'anki_mined_action_overwrite':
@@ -436590,7 +440563,7 @@ extension on _StringsNl {
       case 'books':
         return 'Boeken';
       case 'browser_extension_enable_server_first':
-        return 'Tip: schakel eerst "Yomitan API-server" in en stel hierboven een API-sleutel in, zodat de extensie automatisch geconfigureerd wordt met een werkende verbinding.';
+        return 'Tip: schakel eerst "Fushi API-server" in en stel hierboven een API-sleutel in, zodat de extensie automatisch geconfigureerd wordt met een werkende verbinding.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobiele browsers kunnen deze extensie niet laden. Gebruik in plaats daarvan het opzoeken in de app in de lezer of videospeler.';
       case 'browser_extension_prepare_button':
@@ -436637,7 +440610,7 @@ extension on _StringsNl {
         return 'De extensie in je browser is verouderd. Bereid de extensie indien nodig opnieuw voor en herlaad deze vanuit je browser-extensiepagina (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Yomitan API-server in Fushi opnieuw in.';
+            'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Fushi API-server opnieuw in.';
       case 'cancel':
         return 'Annuleren';
       case 'card_cover_degraded_to_static':
@@ -440747,12 +444720,8 @@ extension on _StringsNl {
         return 'Compacte verklaringen';
       case 'popup_compact_glossaries_hint':
         return 'Toon woordenboekverklaringen inline, gescheiden door \' | \', in plaats van één per regel in de opzoekpopup.';
-      case 'popup_ctx_adjust_button':
-        return 'Context aanpassen';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(geen)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -440761,18 +444730,8 @@ extension on _StringsNl {
         return 'Annuleren';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Zinscontext selecteren';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -441308,7 +445267,7 @@ extension on _StringsNl {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Volledig scherm wisselen';
       case 'shortcut_action_home_focus_search':
-        return 'Zoeken focussen';
+        return 'Naar woordenboek zoeken springen';
       case 'shortcut_action_home_tab_books':
         return 'Tabblad Boeken';
       case 'shortcut_action_home_tab_dict':
@@ -444355,13 +448314,13 @@ extension on _StringsNl {
       case 'word_favorite_removed':
         return 'Woord verwijderd uit favorieten';
       case 'yomitan_api_key':
-        return 'Yomitan API-sleutel (optioneel)';
+        return 'Fushi API-sleutel (optioneel)';
       case 'yomitan_api_server':
-        return 'Yomitan API-server';
+        return 'Fushi API-server';
       case 'yomitan_api_server_hint':
-        return 'Laat yomitan-api-clients de woordenboeken van Fushi opvragen (poort 19633)';
+        return 'Laat de browserextensie en yomitan-api-compatibele clients de woordenboeken van Fushi opvragen (poort 19633)';
       case 'yomitan_api_server_started':
-        return 'Yomitan API-server gestart';
+        return 'Fushi API-server gestart';
       case 'yomitan_port_kill_action':
         return 'Proces beëindigen en opnieuw proberen';
       case 'yomitan_port_kill_confirm':
@@ -447752,7 +451711,7 @@ extension on _StringsNl {
         }) =>
             '${delivered} verzonden, ${failed} mislukt, ${remaining} resterend';
       case 'anki_pending_mine_landing_title':
-        return 'Kaarten van andere apparaten afleveren';
+        return 'Kaarten van andere apparaten ontvangen';
       case 'anki_error_sync_signed_out':
         return 'Meld je eerst aan bij je Anki-synchronisatieserver (Anki-instellingen › Anki-synchronisatie).';
       case 'anki_error_sync_unavailable':
@@ -447808,7 +451767,7 @@ extension on _StringsNl {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Aanmelden mislukt: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Kaarten die zijn opgeslagen op apparaten zonder Anki reizen via je synchronisatieservice (cloudopslag, of interconnect wanneer dit apparaat met een host synchroniseert) en worden op dit apparaat aan Anki toegevoegd. Slechts één apparaat doet dit tegelijk. Een computer die als interconnect-host fungeert, neemt deze rol niet op zich: telefoons die ermee zijn gekoppeld, moeten in plaats daarvan Minen naar Fushi Interconnect-server inschakelen (kaarten wachten op de telefoon terwijl de computer uit staat). Een Fushi-server kan deze rol wel op zich nemen.';
+        return 'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
       case 'anki_sync_client_relogin':
         return 'Opnieuw aanmelden';
       case 'anki_sync_client_discard_confirm':
@@ -449145,8 +453104,6 @@ extension on _StringsNl {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -449466,8 +453423,6 @@ extension on _StringsNl {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -450737,6 +454692,160 @@ extension on _StringsNl {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'Zoeken in bibliotheek';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -451298,7 +455407,7 @@ extension on _StringsPtBr {
       case 'anki_mine_to_server':
         return 'Minerar para dispositivo pareado';
       case 'anki_mine_to_server_hint':
-        return 'Enviar cartões minerados para o Anki do dispositivo pareado (seus baralhos e configurações) em vez deste dispositivo. Requer um pareamento Interconnect.';
+        return 'Enviar cartões minerados para o Anki do dispositivo pareado (seus baralhos e configurações) em vez deste dispositivo. Requer um pareamento Interconnect. Se o servidor estiver offline, os cartões aguardam neste dispositivo e são enviados quando ele voltar.';
       case 'anki_mined_action_add_duplicate':
         return 'Adicionar como novo cartão';
       case 'anki_mined_action_overwrite':
@@ -452021,7 +456130,7 @@ extension on _StringsPtBr {
       case 'books':
         return 'Livros';
       case 'browser_extension_enable_server_first':
-        return 'Dica: ative o "Servidor de API Yomitan" e defina uma chave de API acima primeiro, para que a extensão seja configurada automaticamente com uma conexão funcional.';
+        return 'Dica: ative o "Servidor da Fushi API" e defina uma chave de API acima primeiro, para que a extensão seja configurada automaticamente com uma conexão funcional.';
       case 'browser_extension_mobile_unsupported':
         return 'Navegadores móveis não conseguem carregar esta extensão. Use a busca no app no leitor ou no player de vídeo.';
       case 'browser_extension_prepare_button':
@@ -452068,7 +456177,7 @@ extension on _StringsPtBr {
         return 'A extensão carregada no navegador está desatualizada. Prepare a extensão novamente se necessário e recarregue-a na página de extensões (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor de API Yomitan no Fushi novamente.';
+            'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor da Fushi API novamente.';
       case 'cancel':
         return 'Cancelar';
       case 'card_cover_degraded_to_static':
@@ -456173,12 +460282,8 @@ extension on _StringsPtBr {
         return 'Glossários compactos';
       case 'popup_compact_glossaries_hint':
         return 'Mostra as entradas de glossário do dicionário em linha, separadas por \' | \', em vez de uma por linha no pop-up de consulta.';
-      case 'popup_ctx_adjust_button':
-        return 'Ajustar contexto';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(nenhum)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -456187,18 +460292,8 @@ extension on _StringsPtBr {
         return 'Cancelar';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Selecionar contexto da frase';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -456734,7 +460829,7 @@ extension on _StringsPtBr {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Alternar tela cheia';
       case 'shortcut_action_home_focus_search':
-        return 'Focar na busca';
+        return 'Ir para a busca no dicionário';
       case 'shortcut_action_home_tab_books':
         return 'Aba Livros';
       case 'shortcut_action_home_tab_dict':
@@ -459777,13 +463872,13 @@ extension on _StringsPtBr {
       case 'word_favorite_removed':
         return 'Palavra removida dos favoritos';
       case 'yomitan_api_key':
-        return 'Chave da Yomitan API (opcional)';
+        return 'Chave da Fushi API (opcional)';
       case 'yomitan_api_server':
-        return 'Servidor da Yomitan API';
+        return 'Servidor da Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Permite que clientes do yomitan-api consultem os dicionários do Fushi (porta 19633)';
+        return 'Permite que a extensão do navegador e clientes compatíveis com yomitan-api consultem os dicionários do Fushi (porta 19633)';
       case 'yomitan_api_server_started':
-        return 'Servidor de API Yomitan iniciado';
+        return 'Servidor da Fushi API iniciado';
       case 'yomitan_port_kill_action':
         return 'Encerrar processo e tentar novamente';
       case 'yomitan_port_kill_confirm':
@@ -463172,7 +467267,7 @@ extension on _StringsPtBr {
         }) =>
             '${delivered} enviados, ${failed} com falha, ${remaining} restantes';
       case 'anki_pending_mine_landing_title':
-        return 'Entregar cartões de outros dispositivos';
+        return 'Receber cartões de outros dispositivos';
       case 'anki_error_sync_signed_out':
         return 'Primeiro entre no seu servidor de sincronização do Anki (configurações do Anki › Sincronização do Anki).';
       case 'anki_error_sync_unavailable':
@@ -463228,7 +467323,7 @@ extension on _StringsPtBr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Falha no login: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Os cartões salvos em dispositivos sem Anki viajam pelo seu serviço de sincronização (armazenamento em nuvem, ou interconexão quando este dispositivo sincroniza com um host) e são adicionados ao Anki neste dispositivo. Apenas um dispositivo faz isso por vez. Um computador que atua como host de interconexão não assume esse papel: os celulares pareados com ele devem ativar Minerar para o servidor Fushi Interconnect (os cartões esperam no celular enquanto o computador está desligado). Um servidor Fushi pode assumir esse papel.';
+        return 'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
       case 'anki_sync_client_relogin':
         return 'Entrar novamente';
       case 'anki_sync_client_discard_confirm':
@@ -464565,8 +468660,6 @@ extension on _StringsPtBr {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -464886,8 +468979,6 @@ extension on _StringsPtBr {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -466157,6 +470248,160 @@ extension on _StringsPtBr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'Buscar na biblioteca';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -466720,7 +470965,7 @@ extension on _StringsRu {
       case 'anki_mine_to_server':
         return 'Добывать на сопряжённое устройство';
       case 'anki_mine_to_server_hint':
-        return 'Отправлять добытые карточки в Anki сопряжённого хоста (его колоды и настройки) вместо этого устройства. Требуется сопряжение через Interconnect.';
+        return 'Отправлять добытые карточки в Anki сопряжённого хоста (его колоды и настройки) вместо этого устройства. Требуется сопряжение через Interconnect. Если сервер недоступен, карточки ждут на этом устройстве и отправляются, когда он снова в сети.';
       case 'anki_mined_action_add_duplicate':
         return 'Добавить как новую карточку';
       case 'anki_mined_action_overwrite':
@@ -467446,7 +471691,7 @@ extension on _StringsRu {
       case 'books':
         return 'Книги';
       case 'browser_extension_enable_server_first':
-        return 'Совет: сначала включите «Сервер API Yomitan» и задайте API-ключ выше, чтобы расширение автоматически настроилось с рабочим подключением.';
+        return 'Совет: сначала включите «Сервер Fushi API» и задайте API-ключ выше, чтобы расширение автоматически настроилось с рабочим подключением.';
       case 'browser_extension_mobile_unsupported':
         return 'Мобильные браузеры не могут загрузить это расширение. Используйте поиск в приложении — в читалке или видеоплеере.';
       case 'browser_extension_prepare_button':
@@ -467493,7 +471738,7 @@ extension on _StringsRu {
         return 'Расширение в браузере устарело. При необходимости переподготовьте расширение, затем перезагрузите его на странице расширений браузера (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Yomitan API в Fushi.';
+            'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Fushi API.';
       case 'cancel':
         return 'Отмена';
       case 'card_cover_degraded_to_static':
@@ -471601,12 +475846,8 @@ extension on _StringsRu {
         return 'Компактные глоссарии';
       case 'popup_compact_glossaries_hint':
         return 'Показывать статьи глоссариев словаря в одну строку, разделяя их « | », вместо одной на строку во всплывающем окне поиска.';
-      case 'popup_ctx_adjust_button':
-        return 'Изменить контекст';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(нет)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -471615,18 +475856,8 @@ extension on _StringsRu {
         return 'Отмена';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Выберите контекст предложения';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -472162,7 +476393,7 @@ extension on _StringsRu {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Переключить полноэкранный режим';
       case 'shortcut_action_home_focus_search':
-        return 'Фокус на поиск';
+        return 'Перейти к поиску по словарю';
       case 'shortcut_action_home_tab_books':
         return 'Вкладка «Книги»';
       case 'shortcut_action_home_tab_dict':
@@ -475204,13 +479435,13 @@ extension on _StringsRu {
       case 'word_favorite_removed':
         return 'Слово удалено из избранного';
       case 'yomitan_api_key':
-        return 'Ключ Yomitan API (необязательно)';
+        return 'Ключ Fushi API (необязательно)';
       case 'yomitan_api_server':
-        return 'Сервер Yomitan API';
+        return 'Сервер Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Разрешить клиентам yomitan-api запрашивать словари Fushi (порт 19633)';
+        return 'Разрешить расширению браузера и клиентам, совместимым с yomitan-api, запрашивать словари Fushi (порт 19633)';
       case 'yomitan_api_server_started':
-        return 'Сервер Yomitan API запущен';
+        return 'Сервер Fushi API запущен';
       case 'yomitan_port_kill_action':
         return 'Завершить процесс и повторить';
       case 'yomitan_port_kill_confirm':
@@ -478597,7 +482828,7 @@ extension on _StringsRu {
         }) =>
             'Отправлено: ${delivered}, с ошибкой: ${failed}, осталось: ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Доставка карточек с других устройств';
+        return 'Принимать карточки с других устройств';
       case 'anki_error_sync_signed_out':
         return 'Сначала войдите на свой сервер синхронизации Anki (настройки Anki › Синхронизация Anki).';
       case 'anki_error_sync_unavailable':
@@ -478653,7 +482884,7 @@ extension on _StringsRu {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Не удалось войти: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Карточки, сохранённые на устройствах без Anki, проходят через вашу службу синхронизации (облачное хранилище или interconnect, когда это устройство синхронизируется с хостом) и добавляются в Anki на этом устройстве. Одновременно это делает только одно устройство. Компьютер в роли хоста interconnect эту роль не берёт: сопряжённым с ним телефонам следует включить «Создавать карточки на сервере Fushi Interconnect» (карточки ждут на телефоне, пока компьютер выключен). Эту роль может взять сервер Fushi.';
+        return 'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
       case 'anki_sync_client_relogin':
         return 'Войти снова';
       case 'anki_sync_client_discard_confirm':
@@ -479990,8 +484221,6 @@ extension on _StringsRu {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -480311,8 +484540,6 @@ extension on _StringsRu {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -481582,6 +485809,160 @@ extension on _StringsRu {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'Поиск в библиотеке';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -482141,7 +486522,7 @@ extension on _StringsTh {
       case 'anki_mine_to_server':
         return 'สร้างบัตรไปยังอุปกรณ์ที่จับคู่';
       case 'anki_mine_to_server_hint':
-        return 'ส่งบัตรที่สร้างไปยัง Anki ของโฮสต์ที่จับคู่ (สำรับและการตั้งค่าของโฮสต์) แทนที่จะเป็นอุปกรณ์นี้ ต้องมีการจับคู่ Interconnect';
+        return 'ส่งบัตรที่สร้างไปยัง Anki ของโฮสต์ที่จับคู่ (สำรับและการตั้งค่าของโฮสต์) แทนที่จะเป็นอุปกรณ์นี้ ต้องมีการจับคู่ Interconnect หากเซิร์ฟเวอร์ออฟไลน์ การ์ดจะรออยู่บนอุปกรณ์นี้และส่งเมื่อกลับมาเชื่อมต่อ';
       case 'anki_mined_action_add_duplicate':
         return 'เพิ่มเป็นบัตรใหม่';
       case 'anki_mined_action_overwrite':
@@ -482859,7 +487240,7 @@ extension on _StringsTh {
       case 'books':
         return 'หนังสือ';
       case 'browser_extension_enable_server_first':
-        return 'เคล็ดลับ: เปิด "เซิร์ฟเวอร์ Yomitan API" และตั้งคีย์ API ด้านบนก่อน เพื่อให้ส่วนขยายถูกตั้งค่าเชื่อมต่อที่ใช้งานได้โดยอัตโนมัติ';
+        return 'เคล็ดลับ: เปิด "เซิร์ฟเวอร์ Fushi API" และตั้งคีย์ API ด้านบนก่อน เพื่อให้ส่วนขยายถูกตั้งค่าเชื่อมต่อที่ใช้งานได้โดยอัตโนมัติ';
       case 'browser_extension_mobile_unsupported':
         return 'เบราว์เซอร์บนมือถือไม่สามารถโหลดส่วนขยายนี้ได้ ให้ใช้การค้นหาคำในแอปที่โปรแกรมอ่านหรือเครื่องเล่นวิดีโอแทน';
       case 'browser_extension_prepare_button':
@@ -482906,7 +487287,7 @@ extension on _StringsTh {
         return 'ส่วนขยายที่โหลดในเบราว์เซอร์ล้าสมัยแล้ว เตรียมส่วนขยายใหม่หากจำเป็น จากนั้นโหลดใหม่จากหน้าส่วนขยายของเบราว์เซอร์ (chrome://extensions)';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Yomitan API ใน Fushi อีกครั้ง';
+            'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Fushi API อีกครั้ง';
       case 'cancel':
         return 'ยกเลิก';
       case 'card_cover_degraded_to_static':
@@ -486999,12 +491380,8 @@ extension on _StringsTh {
         return 'ย่อพจนานุกรมให้กระชับ';
       case 'popup_compact_glossaries_hint':
         return 'แสดงรายการคำจำกัดความของพจนานุกรมต่อเนื่องในบรรทัดเดียว คั่นด้วย \' | \' แทนการแสดงทีละบรรทัดในป๊อปอัปค้นหา';
-      case 'popup_ctx_adjust_button':
-        return 'ปรับบริบท';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(ไม่มี)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -487013,18 +491390,8 @@ extension on _StringsTh {
         return 'ยกเลิก';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'เลือกบริบทประโยค';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -487558,7 +491925,7 @@ extension on _StringsTh {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'สลับเต็มหน้าจอ';
       case 'shortcut_action_home_focus_search':
-        return 'โฟกัสช่องค้นหา';
+        return 'ไปที่การค้นหาพจนานุกรม';
       case 'shortcut_action_home_tab_books':
         return 'แท็บหนังสือ';
       case 'shortcut_action_home_tab_dict':
@@ -490595,13 +494962,13 @@ extension on _StringsTh {
       case 'word_favorite_removed':
         return 'ลบคำออกจากรายการโปรดแล้ว';
       case 'yomitan_api_key':
-        return 'Yomitan API key (ไม่บังคับ)';
+        return 'Fushi API key (ไม่บังคับ)';
       case 'yomitan_api_server':
-        return 'เซิร์ฟเวอร์ Yomitan API';
+        return 'เซิร์ฟเวอร์ Fushi API';
       case 'yomitan_api_server_hint':
-        return 'ให้ไคลเอนต์ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
+        return 'ให้ส่วนขยายเบราว์เซอร์และไคลเอนต์ที่เข้ากันได้กับ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
       case 'yomitan_api_server_started':
-        return 'เซิร์ฟเวอร์ Yomitan API เริ่มทำงานแล้ว';
+        return 'เซิร์ฟเวอร์ Fushi API เริ่มทำงานแล้ว';
       case 'yomitan_port_kill_action':
         return 'จบโปรเซสแล้วลองใหม่';
       case 'yomitan_port_kill_confirm':
@@ -493980,7 +498347,7 @@ extension on _StringsTh {
           required Object remaining,
         }) => 'ส่งแล้ว ${delivered} ล้มเหลว ${failed} เหลือ ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'ส่งการ์ดจากอุปกรณ์อื่น';
+        return 'รับการ์ดจากอุปกรณ์อื่น';
       case 'anki_error_sync_signed_out':
         return 'ลงชื่อเข้าใช้เซิร์ฟเวอร์ซิงค์ Anki ของคุณก่อน (การตั้งค่า Anki › ซิงค์ Anki)';
       case 'anki_error_sync_unavailable':
@@ -494034,7 +498401,7 @@ extension on _StringsTh {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'ลงชื่อเข้าใช้ไม่สำเร็จ: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'การ์ดที่บันทึกบนอุปกรณ์ที่ไม่มี Anki จะส่งผ่านบริการซิงค์ของคุณ (ที่เก็บข้อมูลคลาวด์ หรืออินเทอร์คอนเนกต์เมื่ออุปกรณ์นี้ซิงค์กับโฮสต์) และเพิ่มลงใน Anki บนอุปกรณ์นี้ มีเพียงอุปกรณ์เดียวที่ทำหน้าที่นี้ในแต่ละครั้ง คอมพิวเตอร์ที่เป็นโฮสต์อินเทอร์คอนเนกต์ไม่ทำหน้าที่นี้ โทรศัพท์ที่จับคู่กับโฮสต์ควรเปิด สร้างการ์ดไปยังเซิร์ฟเวอร์ Fushi Interconnect แทน (การ์ดจะรออยู่บนโทรศัพท์ขณะคอมพิวเตอร์ปิด) เซิร์ฟเวอร์ Fushi ทำหน้าที่นี้ได้';
+        return 'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงค์ และเพิ่มลงใน Anki ที่นี่ รับได้ครั้งละหนึ่งอุปกรณ์เท่านั้น';
       case 'anki_sync_client_relogin':
         return 'ลงชื่อเข้าใช้อีกครั้ง';
       case 'anki_sync_client_discard_confirm':
@@ -495371,8 +499738,6 @@ extension on _StringsTh {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -495692,8 +500057,6 @@ extension on _StringsTh {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -496963,6 +501326,160 @@ extension on _StringsTh {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'ค้นหาในคลัง';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -497525,7 +502042,7 @@ extension on _StringsTr {
       case 'anki_mine_to_server':
         return 'Eşleştirilmiş cihaza çıkar';
       case 'anki_mine_to_server_hint':
-        return 'Çıkarılan kartları bu cihaz yerine eşleştirilmiş ana bilgisayarın Anki\'sine (onun desteleri ve ayarları) gönderir. Bir interconnect eşleştirmesi gerektirir.';
+        return 'Çıkarılan kartları bu cihaz yerine eşleştirilmiş ana bilgisayarın Anki\'sine (onun desteleri ve ayarları) gönderir. Bir interconnect eşleştirmesi gerektirir. Sunucu çevrimdışıysa kartlar bu cihazda bekler ve bağlantı geri geldiğinde gönderilir.';
       case 'anki_mined_action_add_duplicate':
         return 'Yeni kart olarak ekle';
       case 'anki_mined_action_overwrite':
@@ -498247,7 +502764,7 @@ extension on _StringsTr {
       case 'books':
         return 'Kitaplar';
       case 'browser_extension_enable_server_first':
-        return 'İpucu: önce "Yomitan API sunucusu"nu etkinleştirin ve yukarıda bir API anahtarı ayarlayın, böylece uzantı çalışan bir bağlantıyla otomatik yapılandırılır.';
+        return 'İpucu: önce "Fushi API sunucusu"nu etkinleştirin ve yukarıda bir API anahtarı ayarlayın, böylece uzantı çalışan bir bağlantıyla otomatik yapılandırılır.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobil tarayıcılar bu uzantıyı yükleyemez. Bunun yerine okuyucu veya video oynatıcıdaki uygulama içi aramayı kullanın.';
       case 'browser_extension_prepare_button':
@@ -498294,7 +502811,7 @@ extension on _StringsTr {
         return 'Tarayıcınızda yüklü uzantı güncel değil. Gerekirse uzantıyı yeniden hazırlayın, ardından tarayıcınızın uzantılar sayfasından (chrome://extensions) yeniden yükleyin.';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi\'de Yomitan API sunucusunu tekrar etkinleştirin.';
+            '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi API sunucusunu tekrar etkinleştirin.';
       case 'cancel':
         return 'İptal';
       case 'card_cover_degraded_to_static':
@@ -502394,12 +506911,8 @@ extension on _StringsTr {
         return 'Kompakt sözlük tanımları';
       case 'popup_compact_glossaries_hint':
         return 'Arama açılır penceresinde sözlük tanım girdilerini satır başına bir tane yerine \' | \' ile ayrılmış şekilde satır içinde göster.';
-      case 'popup_ctx_adjust_button':
-        return 'Bağlamı ayarla';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(yok)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -502408,18 +506921,8 @@ extension on _StringsTr {
         return 'İptal';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Cümle bağlamını seçin';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -502953,7 +507456,7 @@ extension on _StringsTr {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Tam ekranı aç/kapat';
       case 'shortcut_action_home_focus_search':
-        return 'Aramaya Odaklan';
+        return 'Sözlük aramasına git';
       case 'shortcut_action_home_tab_books':
         return 'Kitaplar Sekmesi';
       case 'shortcut_action_home_tab_dict':
@@ -505995,13 +510498,13 @@ extension on _StringsTr {
       case 'word_favorite_removed':
         return 'Kelime favorilerden kaldırıldı';
       case 'yomitan_api_key':
-        return 'Yomitan API anahtarı (isteğe bağlı)';
+        return 'Fushi API anahtarı (isteğe bağlı)';
       case 'yomitan_api_server':
-        return 'Yomitan API sunucusu';
+        return 'Fushi API sunucusu';
       case 'yomitan_api_server_hint':
-        return 'yomitan-api istemcilerinin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
+        return 'Tarayıcı uzantısının ve yomitan-api uyumlu istemcilerin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
       case 'yomitan_api_server_started':
-        return 'Yomitan API sunucusu başlatıldı';
+        return 'Fushi API sunucusu başlatıldı';
       case 'yomitan_port_kill_action':
         return 'İşlemi sonlandır ve tekrar dene';
       case 'yomitan_port_kill_confirm':
@@ -509390,7 +513893,7 @@ extension on _StringsTr {
         }) =>
             'Gönderilen ${delivered}, başarısız ${failed}, kalan ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Diğer cihazlardan gelen kartları teslim et';
+        return 'Diğer cihazların kartlarını al';
       case 'anki_error_sync_signed_out':
         return 'Önce Anki eşitleme sunucunuzda oturum açın (Anki ayarları › Anki eşitleme).';
       case 'anki_error_sync_unavailable':
@@ -509446,7 +513949,7 @@ extension on _StringsTr {
         return ({required Object error}) =>
             'Oturum açma başarısız oldu: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki\'si olmayan cihazlarda kaydedilen kartlar eşitleme hizmetiniz (bulut depolama veya bu cihaz bir ana makineyle eşitleniyorsa interconnect) üzerinden gider ve bu cihazda Anki\'ye eklenir. Aynı anda yalnızca bir cihaz bunu yapar. Interconnect ana makinesi olarak çalışan bir bilgisayar bu rolü üstlenmez: onunla eşleştirilmiş telefonlar bunun yerine Fushi Interconnect sunucusuna kart oluştur seçeneğini açmalıdır (bilgisayar kapalıyken kartlar telefonda bekler). Bir Fushi sunucusu bu rolü üstlenebilir.';
+        return 'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
       case 'anki_sync_client_relogin':
         return 'Yeniden oturum aç';
       case 'anki_sync_client_discard_confirm':
@@ -510783,8 +515286,6 @@ extension on _StringsTr {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -511104,8 +515605,6 @@ extension on _StringsTr {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -512375,6 +516874,160 @@ extension on _StringsTr {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'Kütüphanede ara';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -512936,7 +517589,7 @@ extension on _StringsVi {
       case 'anki_mine_to_server':
         return 'Gửi thẻ đến thiết bị đã ghép nối';
       case 'anki_mine_to_server_hint':
-        return 'Gửi thẻ đã khai thác đến Anki của thiết bị chủ đã ghép nối (bộ thẻ và cài đặt của nó) thay vì thiết bị này. Yêu cầu ghép nối kết nối.';
+        return 'Gửi thẻ đã khai thác đến Anki của thiết bị chủ đã ghép nối (bộ thẻ và cài đặt của nó) thay vì thiết bị này. Yêu cầu ghép nối kết nối. Nếu máy chủ ngoại tuyến, thẻ sẽ chờ trên thiết bị này và được gửi khi kết nối lại.';
       case 'anki_mined_action_add_duplicate':
         return 'Thêm như thẻ mới';
       case 'anki_mined_action_overwrite':
@@ -513656,7 +518309,7 @@ extension on _StringsVi {
       case 'books':
         return 'Sách';
       case 'browser_extension_enable_server_first':
-        return 'Mẹo: bật "Máy chủ API Yomitan" và đặt khóa API ở trên trước, để tiện ích mở rộng được tự động cấu hình với kết nối hoạt động.';
+        return 'Mẹo: bật "Máy chủ Fushi API" và đặt khóa API ở trên trước, để tiện ích mở rộng được tự động cấu hình với kết nối hoạt động.';
       case 'browser_extension_mobile_unsupported':
         return 'Trình duyệt di động không thể tải tiện ích này. Thay vào đó, hãy dùng tra cứu trong ứng dụng ở trình đọc hoặc trình phát video.';
       case 'browser_extension_prepare_button':
@@ -513703,7 +518356,7 @@ extension on _StringsVi {
         return 'Tiện ích mở rộng trong trình duyệt đã lỗi thời. Chuẩn bị lại tiện ích nếu cần, sau đó tải lại từ trang tiện ích mở rộng của trình duyệt (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Yomitan API trong Fushi.';
+            'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Fushi API.';
       case 'cancel':
         return 'Hủy';
       case 'card_cover_degraded_to_static':
@@ -517801,12 +522454,8 @@ extension on _StringsVi {
         return 'Gọn bảng nghĩa';
       case 'popup_compact_glossaries_hint':
         return 'Hiển thị các mục nghĩa của từ điển nối tiếp nhau, ngăn cách bằng \' | \', thay vì mỗi mục một dòng trong cửa sổ tra từ.';
-      case 'popup_ctx_adjust_button':
-        return 'Điều chỉnh ngữ cảnh';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '(không có)';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -517815,18 +522464,8 @@ extension on _StringsVi {
         return 'Hủy';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return 'Chọn ngữ cảnh câu';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -518362,7 +523001,7 @@ extension on _StringsVi {
       case 'shortcut_action_global_toggle_fullscreen':
         return 'Bật/tắt toàn màn hình';
       case 'shortcut_action_home_focus_search':
-        return 'Tập trung tìm kiếm';
+        return 'Chuyển đến tìm kiếm từ điển';
       case 'shortcut_action_home_tab_books':
         return 'Tab Sách';
       case 'shortcut_action_home_tab_dict':
@@ -521400,13 +526039,13 @@ extension on _StringsVi {
       case 'word_favorite_removed':
         return 'Đã xóa từ khỏi yêu thích';
       case 'yomitan_api_key':
-        return 'Yomitan API key (tùy chọn)';
+        return 'Fushi API key (tùy chọn)';
       case 'yomitan_api_server':
-        return 'Máy chủ Yomitan API';
+        return 'Máy chủ Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Cho phép máy khách yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
+        return 'Cho phép tiện ích mở rộng trình duyệt và máy khách tương thích yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
       case 'yomitan_api_server_started':
-        return 'Đã khởi động máy chủ API Yomitan';
+        return 'Đã khởi động máy chủ Fushi API';
       case 'yomitan_port_kill_action':
         return 'Kết thúc tiến trình và thử lại';
       case 'yomitan_port_kill_confirm':
@@ -524786,7 +529425,7 @@ extension on _StringsVi {
           required Object remaining,
         }) => 'Đã gửi ${delivered}, thất bại ${failed}, còn lại ${remaining}';
       case 'anki_pending_mine_landing_title':
-        return 'Chuyển thẻ từ thiết bị khác';
+        return 'Nhận thẻ từ thiết bị khác';
       case 'anki_error_sync_signed_out':
         return 'Hãy đăng nhập máy chủ đồng bộ Anki trước (Cài đặt Anki › Đồng bộ Anki).';
       case 'anki_error_sync_unavailable':
@@ -524841,7 +529480,7 @@ extension on _StringsVi {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Đăng nhập thất bại: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Các thẻ lưu trên thiết bị không có Anki sẽ đi qua dịch vụ đồng bộ của bạn (lưu trữ đám mây, hoặc interconnect khi thiết bị này đồng bộ tới máy chủ) và được thêm vào Anki trên thiết bị này. Mỗi lúc chỉ một thiết bị làm việc này. Máy tính đóng vai máy chủ interconnect không nhận vai trò này: điện thoại ghép nối với nó nên bật Tạo thẻ tới máy chủ Fushi Interconnect (thẻ chờ trên điện thoại khi máy tính tắt). Máy chủ Fushi có thể nhận vai trò này.';
+        return 'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
       case 'anki_sync_client_relogin':
         return 'Đăng nhập lại';
       case 'anki_sync_client_discard_confirm':
@@ -526178,8 +530817,6 @@ extension on _StringsVi {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -526499,8 +531136,6 @@ extension on _StringsVi {
         return 'Feedback goes to the Fushi developers at fushi.moe and is only used to fix problems.';
       case 'feedback_compose_submit':
         return 'Send';
-      case 'feedback_compose_missing':
-        return 'Please fill in the title and details.';
       case 'feedback_stage_sending':
         return 'Sending…';
       case 'feedback_stage_screenshots':
@@ -527770,6 +532405,160 @@ extension on _StringsVi {
         return 'Image subtitles only';
       case 'video_setting_pause_ocr_scope_off':
         return 'Off';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return 'Please fill in a title.';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return 'Tìm trong thư viện';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return 'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
+      case 'manga_series_manage_volume':
+        return 'Manage volume';
       default:
         return null;
     }
@@ -528323,7 +533112,7 @@ extension on _StringsZhCn {
       case 'anki_mine_to_server':
         return '制卡到 Fushi 互联服务端';
       case 'anki_mine_to_server_hint':
-        return '把制卡发送到 Fushi 互联服务端的 Anki（用服务端的牌组与设置），而非本机。需先在互联/同步里完成配对。';
+        return '把制卡发送到 Fushi 互联服务端的 Anki（用服务端的牌组与设置），而非本机。需先在互联/同步里完成配对。服务端离线时卡片先存在本机，连上后自动发送。';
       case 'anki_mined_action_add_duplicate':
         return '新增为重复卡';
       case 'anki_mined_action_overwrite':
@@ -529028,7 +533817,7 @@ extension on _StringsZhCn {
       case 'books':
         return '书架';
       case 'browser_extension_enable_server_first':
-        return '提示：请先在上方开启「Yomitan API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
+        return '提示：请先在上方开启「Fushi API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
       case 'browser_extension_mobile_unsupported':
         return '手机浏览器无法加载此扩展，请直接在 app 内阅读器/视频中查词。';
       case 'browser_extension_prepare_button':
@@ -529075,7 +533864,7 @@ extension on _StringsZhCn {
         return '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi 的 Yomitan API 服务器。';
+            '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi API 服务器。';
       case 'cancel':
         return '取消';
       case 'card_cover_degraded_to_static':
@@ -533149,12 +537938,8 @@ extension on _StringsZhCn {
         return '紧凑释义';
       case 'popup_compact_glossaries_hint':
         return '查词弹窗里的释义条目改为同行显示、用「 | 」分隔，不再每条占一行。';
-      case 'popup_ctx_adjust_button':
-        return '调整上下文';
       case 'popup_ctx_box_current':
         return '当前句';
-      case 'popup_ctx_box_empty':
-        return '（无）';
       case 'popup_ctx_box_next':
         return '后文';
       case 'popup_ctx_box_prev':
@@ -533163,18 +537948,8 @@ extension on _StringsZhCn {
         return '取消';
       case 'popup_ctx_confirm':
         return '确认制卡';
-      case 'popup_ctx_modal_count':
-        return '已选择 %d 句';
-      case 'popup_ctx_modal_eyebrow':
-        return '制卡前调整';
-      case 'popup_ctx_modal_title':
-        return '选择句子上下文';
-      case 'popup_ctx_next_minus':
-        return '后退一句';
       case 'popup_ctx_next_plus':
         return '后加一句';
-      case 'popup_ctx_prev_minus':
-        return '前退一句';
       case 'popup_ctx_prev_plus':
         return '前加一句';
       case 'popup_ctx_preview_audio':
@@ -533708,7 +538483,7 @@ extension on _StringsZhCn {
       case 'shortcut_action_global_toggle_fullscreen':
         return '全屏切换';
       case 'shortcut_action_home_focus_search':
-        return '聚焦搜索';
+        return '跳到查词搜索';
       case 'shortcut_action_home_tab_books':
         return '书架标签';
       case 'shortcut_action_home_tab_dict':
@@ -536713,13 +541488,13 @@ extension on _StringsZhCn {
       case 'word_favorite_removed':
         return '已取消收藏该词';
       case 'yomitan_api_key':
-        return 'Yomitan API 密钥（可选）';
+        return 'Fushi API 密钥（可选）';
       case 'yomitan_api_server':
-        return 'Yomitan API 服务器';
+        return 'Fushi API 服务器';
       case 'yomitan_api_server_hint':
-        return '让 yomitan-api 客户端查询 Fushi 词典（端口 19633）';
+        return '让浏览器扩展和兼容 yomitan-api 的客户端查询 Fushi 词典（端口 19633）';
       case 'yomitan_api_server_started':
-        return 'Yomitan API 服务器已开启';
+        return 'Fushi API 服务器已开启';
       case 'yomitan_port_kill_action':
         return '结束进程并重试';
       case 'yomitan_port_kill_confirm':
@@ -540050,7 +544825,7 @@ extension on _StringsZhCn {
           required Object remaining,
         }) => '已发送 ${delivered} 张，失败 ${failed} 张，剩余 ${remaining} 张';
       case 'anki_pending_mine_landing_title':
-        return '本机负责落地其他设备的卡片';
+        return '接收其他设备的卡片';
       case 'anki_error_sync_signed_out':
         return '请先登录 Anki 同步服务器（Anki 设置 › Anki 同步）。';
       case 'anki_error_sync_unavailable':
@@ -540104,7 +544879,7 @@ extension on _StringsZhCn {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '登录失败：${error}';
       case 'anki_pending_mine_landing_hint':
-        return '没装 Anki 的设备存下的卡片，经你配置的同步（云盘，或本机作为互联客户端时的互联）送到这台设备，由这里的 Anki 加卡。同一时间只有一台设备负责。作为互联主机的电脑不担任这个角色：与它配对的手机请改开「制卡到 Fushi 互联服务端」（电脑关机时卡片先存在手机上）。Fushi 服务端可以担任。';
+        return '没装 Anki 的设备制的卡，会经同步送到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
       case 'anki_sync_client_relogin':
         return '重新登录';
       case 'anki_sync_client_discard_confirm':
@@ -541423,8 +546198,6 @@ extension on _StringsZhCn {
         return '选择文件或文件夹；也可以把文件直接拖进库页。';
       case 'import_supported_formats':
         return '支持格式';
-      case 'import_methods_title':
-        return '导入方式';
       case 'media_source_list_empty':
         return '还没有常驻来源。添加文件夹或网络共享后会自动扫描。';
       case 'online_sources_pinned_header':
@@ -541743,8 +546516,6 @@ extension on _StringsZhCn {
         return '反馈会发送给 fushi.moe 上的 Fushi 开发者，仅用于排查与改进。';
       case 'feedback_compose_submit':
         return '提交';
-      case 'feedback_compose_missing':
-        return '请填写标题和详细描述。';
       case 'feedback_stage_sending':
         return '正在提交…';
       case 'feedback_stage_screenshots':
@@ -542996,6 +547767,158 @@ extension on _StringsZhCn {
         return '仅图片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '关闭';
+      case 'manga_library_ocr_action':
+        return '识别文字（OCR）';
+      case 'manga_library_ocr_none':
+        return '没有需要识别的内容：所选漫画已识别过或尚未下载';
+      case 'video_google_lens_disclosure_title':
+        return '将视频画面发送到 Google Lens？';
+      case 'video_google_lens_disclosure_body':
+        return '识别视频文字会把暂停的画面（含图片字幕）缩小为 JPEG 后发送给 Google。该接口并非官方公开 API，可能随时失效。只有同意后才会上传。';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return '图片字幕需开启 OCR 识别才能点字查词';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return '开启';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return '正在识别画面文字…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return '已识别画面文字 · 点字查词';
+      case 'feedback_compose_title_missing':
+        return '请填写标题。';
+      case 'online_source_error_webview_unavailable':
+        return '这个来源需要内置浏览器（WebView），桌面版暂不支持。';
+      case 'lyrics_sentence_replay':
+        return '重播当前句';
+      case 'lookup_popup_close_after_mining':
+        return '制卡后关闭查词弹窗';
+      case 'lookup_popup_close_after_mining_hint':
+        return '制卡成功（或进入待发队列）后关掉整个查词弹窗，不再挡住正文';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) => '已选中 ${n} 卷，将逐卷各导入为一本，书名取各自的文件名或文件夹名。';
+      case 'external_book_open_failed':
+        return ({required Object name}) => '无法打开 ${name}，请改从书架导入。';
+      case 'external_book_open_existing':
+        return '打开已有';
+      case 'external_book_open_import_new':
+        return '作为新书导入';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            '书架中已有《${name}》。打开已有的那本，还是把这个文件作为新书导入（加序号后缀）？';
+      case 'popup_advanced_mining_button':
+        return '高级制卡';
+      case 'popup_advanced_mining_title':
+        return '高级制卡';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => '查词 · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return '句子';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '已选 ${count} 句';
+      case 'popup_advanced_mining_deck_section':
+        return '卡组';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return '只对这张卡生效';
+      case 'popup_advanced_mining_deck_set_default':
+        return '同时设为默认卡组';
+      case 'popup_advanced_mining_deck_unavailable':
+        return '连上 Anki 后才能选择卡组';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return '覆写已有卡时卡片留在原卡组';
+      case 'popup_advanced_mining_audio_section':
+        return '句子音频';
+      case 'popup_advanced_mining_audio_follow':
+        return '跟随句子';
+      case 'popup_advanced_mining_audio_none':
+        return '不要';
+      case 'popup_advanced_mining_audio_start':
+        return '起点';
+      case 'popup_advanced_mining_audio_end':
+        return '终点';
+      case 'popup_advanced_mining_audio_earlier':
+        return '提前';
+      case 'popup_advanced_mining_audio_later':
+        return '推后';
+      case 'popup_advanced_mining_audio_unavailable':
+        return '这几句没有可用的音频';
+      case 'popup_advanced_mining_audio_range_hint':
+        return '区间随所选句子自动重算';
+      case 'popup_advanced_mining_image_section':
+        return '图片';
+      case 'popup_advanced_mining_image_none':
+        return '不要';
+      case 'popup_advanced_mining_image_mode_animated':
+        return '动图';
+      case 'popup_advanced_mining_image_mode_clip':
+        return '视频片段';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return '查词时画面';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return '字幕开头';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => '首帧 ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => '尾帧 ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return '上一帧';
+      case 'popup_advanced_mining_image_frame_forward':
+        return '下一帧';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return '视频片段需要句子音频';
+      case 'popup_advanced_mining_crop_whole_page':
+        return '整页';
+      case 'popup_advanced_mining_crop_panel':
+        return '所在分镜';
+      case 'popup_advanced_mining_crop_text_area':
+        return '文字周围';
+      case 'popup_advanced_mining_crop_custom':
+        return '自定义';
+      case 'popup_advanced_mining_crop_hint':
+        return '在图上拖动直接画新框 · Tab 切换分镜 · 方向键微调';
+      case 'popup_advanced_mining_crop_no_model':
+        return '未下载分镜模型，已按文字位置外扩预选。';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => '下载分镜模型（${size}）';
+      case 'popup_advanced_mining_crop_downloading':
+        return '正在下载分镜模型…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            '输出 ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return '卡片上的样子';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return '检测到的分镜';
+      case 'popup_advanced_mining_crop_legend_text':
+        return '这句话的位置';
+      case 'popup_advanced_mining_reset':
+        return '恢复为一键制卡的默认';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => '制卡到 ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return '一键制卡默认裁到所在分镜';
+      case 'manga_mining_crop_to_panel_hint':
+        return '需要分镜模型；没有模型时使用整页。';
+      case 'popup_advanced_mining_crop_page_title':
+        return '框选图片';
+      case 'popup_advanced_mining_crop_done':
+        return '完成';
+      case 'popup_advanced_mining_crop_download_failed':
+        return '分镜模型下载失败';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return '快捷键 [ ] 增减前文 · Shift+[ ] 增减后文';
+      case 'shortcut_action_library_search':
+        return '在书架 / 媒体库中搜索';
+      case 'feedback_filter_all':
+        return '全部';
+      case 'feedback_filter_active':
+        return '进行中';
+      case 'feedback_filter_closed':
+        return '已结案';
+      case 'feedback_filter_unread':
+        return '有新回复';
+      case 'anki_pending_mine_landing_host_note':
+        return '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
+      case 'manga_series_manage_volume':
+        return '管理本卷';
       default:
         return null;
     }
@@ -543549,7 +548472,7 @@ extension on _StringsZhHk {
       case 'anki_mine_to_server':
         return '製卡到 Fushi 互聯服務端';
       case 'anki_mine_to_server_hint':
-        return '把製卡發送到 Fushi 互聯服務端的 Anki（用服務端的牌組與設定），而非本機。需先在互聯/同步裡完成配對。';
+        return '把製卡發送到 Fushi 互聯服務端的 Anki（用服務端的牌組與設定），而非本機。需先在互聯/同步裡完成配對。服務端離線時卡片先存在本機，連上後自動發送。';
       case 'anki_mined_action_add_duplicate':
         return '新增為重復卡';
       case 'anki_mined_action_overwrite':
@@ -544254,7 +549177,7 @@ extension on _StringsZhHk {
       case 'books':
         return '書架';
       case 'browser_extension_enable_server_first':
-        return '提示：請先在上方開啟「Yomitan API 伺服器」並設定 API 密鑰，擴展才能被自動配置為可用連接。';
+        return '提示：請先在上方開啟「Fushi API 伺服器」並設定 API 密鑰，擴展才能被自動配置為可用連接。';
       case 'browser_extension_mobile_unsupported':
         return '手機瀏覽器無法載入此擴充功能，請直接在 app 內閱讀器／影片中查詞。';
       case 'browser_extension_prepare_button':
@@ -544301,7 +549224,7 @@ extension on _StringsZhHk {
         return '瀏覽器中加載的擴展不是最新版本：如有需要先重新準備擴展，再到瀏覽器擴展管理頁（chrome://extensions）點「重新加載」。';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi 的 Yomitan API 伺服器。';
+            '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi API 伺服器。';
       case 'cancel':
         return '取消';
       case 'card_cover_degraded_to_static':
@@ -548375,12 +553298,8 @@ extension on _StringsZhHk {
         return '緊湊釋義';
       case 'popup_compact_glossaries_hint':
         return '查詞彈窗裡的釋義條目改為同行顯示、用「 | 」分隔，不再每條佔一行。';
-      case 'popup_ctx_adjust_button':
-        return '調整上下文';
       case 'popup_ctx_box_current':
         return 'Current';
-      case 'popup_ctx_box_empty':
-        return '（無）';
       case 'popup_ctx_box_next':
         return 'After';
       case 'popup_ctx_box_prev':
@@ -548389,18 +553308,8 @@ extension on _StringsZhHk {
         return '取消';
       case 'popup_ctx_confirm':
         return 'Confirm';
-      case 'popup_ctx_modal_count':
-        return 'Selected %d';
-      case 'popup_ctx_modal_eyebrow':
-        return 'Before mining';
-      case 'popup_ctx_modal_title':
-        return '選擇句子上下文';
-      case 'popup_ctx_next_minus':
-        return 'Remove after';
       case 'popup_ctx_next_plus':
         return 'Add after';
-      case 'popup_ctx_prev_minus':
-        return 'Remove before';
       case 'popup_ctx_prev_plus':
         return 'Add before';
       case 'popup_ctx_preview_audio':
@@ -548934,7 +553843,7 @@ extension on _StringsZhHk {
       case 'shortcut_action_global_toggle_fullscreen':
         return '全屏切換';
       case 'shortcut_action_home_focus_search':
-        return '聚焦搜尋';
+        return '跳到查詞搜尋';
       case 'shortcut_action_home_tab_books':
         return '書架分頁';
       case 'shortcut_action_home_tab_dict':
@@ -551940,13 +556849,13 @@ extension on _StringsZhHk {
       case 'word_favorite_removed':
         return '已取消收藏該詞';
       case 'yomitan_api_key':
-        return 'Yomitan API 金鑰（可選）';
+        return 'Fushi API 金鑰（可選）';
       case 'yomitan_api_server':
-        return 'Yomitan API 伺服器';
+        return 'Fushi API 伺服器';
       case 'yomitan_api_server_hint':
-        return '讓 yomitan-api 客戶端查詢 Fushi 詞典（連接埠 19633）';
+        return '讓瀏覽器擴展和兼容 yomitan-api 的客戶端查詢 Fushi 詞典（連接埠 19633）';
       case 'yomitan_api_server_started':
-        return 'Yomitan API 伺服器已開啟';
+        return 'Fushi API 伺服器已開啟';
       case 'yomitan_port_kill_action':
         return '結束進程並重試';
       case 'yomitan_port_kill_confirm':
@@ -555277,7 +560186,7 @@ extension on _StringsZhHk {
           required Object remaining,
         }) => '已發送 ${delivered} 張，失敗 ${failed} 張，剩餘 ${remaining} 張';
       case 'anki_pending_mine_landing_title':
-        return '本機負責落地其他裝置的卡片';
+        return '接收其他裝置的卡片';
       case 'anki_error_sync_signed_out':
         return '請先登入 Anki 同步伺服器（Anki 設定 › Anki 同步）。';
       case 'anki_error_sync_unavailable':
@@ -555331,7 +560240,7 @@ extension on _StringsZhHk {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '登入失敗：${error}';
       case 'anki_pending_mine_landing_hint':
-        return '沒裝 Anki 的裝置存下的卡片，經你配置的同步（雲盤，或本機作為互聯客户端時的互聯）送到這台裝置，由這裡的 Anki 加卡。同一時間只有一台裝置負責。作為互聯主機的電腦不擔任這個角色：與它配對的手機請改開「制卡到 Fushi 互聯服務端」（電腦關機時卡片先存在手機上）。Fushi 服務端可以擔任。';
+        return '沒裝 Anki 的裝置製的卡，會經同步送到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
       case 'anki_sync_client_relogin':
         return '重新登入';
       case 'anki_sync_client_discard_confirm':
@@ -556659,8 +561568,6 @@ extension on _StringsZhHk {
         return 'Choose files or a folder. You can also drag files straight onto the library page.';
       case 'import_supported_formats':
         return 'Supported formats';
-      case 'import_methods_title':
-        return 'Ways to import';
       case 'media_source_list_empty':
         return 'No library sources yet. Add a folder or a network share and it will be scanned automatically.';
       case 'online_sources_pinned_header':
@@ -556979,8 +561886,6 @@ extension on _StringsZhHk {
         return '回饋會傳送給 fushi.moe 上的 Fushi 開發者，只用於排查與改進。';
       case 'feedback_compose_submit':
         return '提交';
-      case 'feedback_compose_missing':
-        return '請填寫標題和詳細描述。';
       case 'feedback_stage_sending':
         return '正在提交…';
       case 'feedback_stage_screenshots':
@@ -558248,6 +563153,160 @@ extension on _StringsZhHk {
         return '僅圖片字幕';
       case 'video_setting_pause_ocr_scope_off':
         return '關閉';
+      case 'manga_library_ocr_action':
+        return 'Recognize text (OCR)';
+      case 'manga_library_ocr_none':
+        return 'Nothing to recognize: the selected manga are already recognized or not downloaded';
+      case 'video_google_lens_disclosure_title':
+        return 'Send video frames to Google Lens?';
+      case 'video_google_lens_disclosure_body':
+        return 'Recognizing text in this video sends a reduced JPEG copy of the paused frame (including image subtitles) to Google. The endpoint is unofficial and may stop working. Nothing is uploaded unless you agree.';
+      case 'video_subtitle_graphic_ocr_enable_hint':
+        return 'Image subtitles need OCR for tap-to-look-up';
+      case 'video_subtitle_graphic_ocr_enable_action':
+        return 'Turn on';
+      case 'video_subtitle_frame_ocr_status_recognizing':
+        return 'Reading on-screen text…';
+      case 'video_subtitle_frame_ocr_status_ready':
+        return 'Text recognized · tap a word';
+      case 'feedback_compose_title_missing':
+        return '請填寫標題。';
+      case 'online_source_error_webview_unavailable':
+        return 'This source needs a built-in browser (WebView), which the desktop app doesn\'t support yet.';
+      case 'lyrics_sentence_replay':
+        return 'Replay current sentence';
+      case 'lookup_popup_close_after_mining':
+        return 'Close lookup popup after creating a card';
+      case 'lookup_popup_close_after_mining_hint':
+        return 'Once a card is added (or queued), the whole lookup popup closes so it stops covering the text';
+      case 'manga_import_selection_batch_hint':
+        return ({required Object n}) =>
+            'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
+      case 'external_book_open_existing':
+        return 'Open existing';
+      case 'external_book_open_import_new':
+        return 'Import as new';
+      case 'external_book_open_duplicate_message':
+        return ({required Object name}) =>
+            'The library already has "${name}". Open that one, or import this file as a new book (with a numbered suffix)?';
+      case 'popup_advanced_mining_button':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_title':
+        return 'Advanced mining';
+      case 'popup_advanced_mining_eyebrow':
+        return ({required Object term}) => 'Lookup · ${term}';
+      case 'popup_advanced_mining_sentence_section':
+        return 'Sentences';
+      case 'popup_advanced_mining_sentence_count':
+        return ({required Object count}) => '${count} selected';
+      case 'popup_advanced_mining_deck_section':
+        return 'Deck';
+      case 'popup_advanced_mining_deck_scope_hint':
+        return 'Only for this card';
+      case 'popup_advanced_mining_deck_set_default':
+        return 'Also make it the default deck';
+      case 'popup_advanced_mining_deck_unavailable':
+        return 'Connect to Anki to choose a deck';
+      case 'popup_advanced_mining_deck_overwrite_hint':
+        return 'Updating an existing card keeps it in its current deck';
+      case 'popup_advanced_mining_audio_section':
+        return 'Sentence audio';
+      case 'popup_advanced_mining_audio_follow':
+        return 'Follow sentences';
+      case 'popup_advanced_mining_audio_none':
+        return 'None';
+      case 'popup_advanced_mining_audio_start':
+        return 'Start';
+      case 'popup_advanced_mining_audio_end':
+        return 'End';
+      case 'popup_advanced_mining_audio_earlier':
+        return 'Earlier';
+      case 'popup_advanced_mining_audio_later':
+        return 'Later';
+      case 'popup_advanced_mining_audio_unavailable':
+        return 'No audio for these sentences';
+      case 'popup_advanced_mining_audio_range_hint':
+        return 'The range follows the selected sentences';
+      case 'popup_advanced_mining_image_section':
+        return 'Image';
+      case 'popup_advanced_mining_image_none':
+        return 'None';
+      case 'popup_advanced_mining_image_mode_animated':
+        return 'Animated';
+      case 'popup_advanced_mining_image_mode_clip':
+        return 'Video clip';
+      case 'popup_advanced_mining_image_mode_lookup_frame':
+        return 'Frame at lookup';
+      case 'popup_advanced_mining_image_mode_subtitle_start':
+        return 'Subtitle start';
+      case 'popup_advanced_mining_image_first_frame':
+        return ({required Object time}) => 'First frame ${time}';
+      case 'popup_advanced_mining_image_last_frame':
+        return ({required Object time}) => 'Last frame ${time}';
+      case 'popup_advanced_mining_image_frame_back':
+        return 'Previous frame';
+      case 'popup_advanced_mining_image_frame_forward':
+        return 'Next frame';
+      case 'popup_advanced_mining_image_clip_needs_audio':
+        return 'A video clip needs sentence audio';
+      case 'popup_advanced_mining_crop_whole_page':
+        return 'Whole page';
+      case 'popup_advanced_mining_crop_panel':
+        return 'Panel';
+      case 'popup_advanced_mining_crop_text_area':
+        return 'Around text';
+      case 'popup_advanced_mining_crop_custom':
+        return 'Custom';
+      case 'popup_advanced_mining_crop_hint':
+        return 'Drag on the page to draw a new box · Tab switches panels · arrow keys nudge';
+      case 'popup_advanced_mining_crop_no_model':
+        return 'The panel model is not downloaded, so the box is preselected around the text.';
+      case 'popup_advanced_mining_crop_download_model':
+        return ({required Object size}) => 'Download panel model (${size})';
+      case 'popup_advanced_mining_crop_downloading':
+        return 'Downloading panel model…';
+      case 'popup_advanced_mining_crop_output':
+        return ({required Object width, required Object height}) =>
+            'Output ${width}×${height}';
+      case 'popup_advanced_mining_crop_preview':
+        return 'On the card';
+      case 'popup_advanced_mining_crop_legend_panels':
+        return 'Detected panels';
+      case 'popup_advanced_mining_crop_legend_text':
+        return 'This sentence';
+      case 'popup_advanced_mining_reset':
+        return 'Reset to one-click defaults';
+      case 'popup_advanced_mining_confirm_to_deck':
+        return ({required Object deck}) => 'Add to ${deck}';
+      case 'manga_mining_crop_to_panel':
+        return 'Crop one-click cards to the panel';
+      case 'manga_mining_crop_to_panel_hint':
+        return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'shortcut_action_library_search':
+        return '在書架 / 媒體庫中搜尋';
+      case 'feedback_filter_all':
+        return 'All';
+      case 'feedback_filter_active':
+        return 'Ongoing';
+      case 'feedback_filter_closed':
+        return 'Finished';
+      case 'feedback_filter_unread':
+        return 'New replies';
+      case 'anki_pending_mine_landing_host_note':
+        return '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
+      case 'manga_series_manage_volume':
+        return '管理本卷';
       default:
         return null;
     }
