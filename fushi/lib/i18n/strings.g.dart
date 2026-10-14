@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 127211 (7483 per locale)
 ///
-/// Built on 2026-10-14 at 12:49 UTC
+/// Built on 2026-10-14 at 14:30 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6143,11 +6143,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get wheel_page_turn_interval => 'Mouse wheel page-turn interval';
   String get word_favorite_added => 'Word saved to favorites';
   String get word_favorite_removed => 'Word removed from favorites';
-  String get yomitan_api_key => 'Fushi API key (optional)';
-  String get yomitan_api_server => 'Fushi API server';
-  String get yomitan_api_server_hint =>
+  String get fushi_api_key => 'Fushi API key (optional)';
+  String get fushi_api_server => 'Fushi API server';
+  String get fushi_api_server_hint =>
       'Let the browser extension and yomitan-api-compatible clients query Fushi\'s dictionaries (port 19633)';
-  String get yomitan_api_server_started => 'Fushi API server started';
+  String get fushi_api_server_started => 'Fushi API server started';
   String get yomitan_port_kill_action => 'End process and retry';
   String get yomitan_port_kill_confirm => 'End process';
   String yomitan_port_kill_confirm_message({required Object process}) =>
@@ -21143,14 +21143,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get word_favorite_removed => 'تمت إزالة الكلمة من المفضلة';
   @override
-  String get yomitan_api_key => 'مفتاح Fushi API (اختياري)';
+  String get fushi_api_key => 'مفتاح Fushi API (اختياري)';
   @override
-  String get yomitan_api_server => 'خادم Fushi API';
+  String get fushi_api_server => 'خادم Fushi API';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'السماح لإضافة المتصفح والعملاء المتوافقين مع yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
   @override
-  String get yomitan_api_server_started => 'تم تشغيل خادم Fushi API';
+  String get fushi_api_server_started => 'تم تشغيل خادم Fushi API';
   @override
   String get yomitan_port_kill_action => 'إنهاء العملية وإعادة المحاولة';
   @override
@@ -39479,14 +39479,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get word_favorite_removed => 'Wort aus Favoriten entfernt';
   @override
-  String get yomitan_api_key => 'Fushi-API-Schlüssel (optional)';
+  String get fushi_api_key => 'Fushi-API-Schlüssel (optional)';
   @override
-  String get yomitan_api_server => 'Fushi-API-Server';
+  String get fushi_api_server => 'Fushi-API-Server';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'Browsererweiterung und yomitan-api-kompatible Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
   @override
-  String get yomitan_api_server_started => 'Fushi-API-Server gestartet';
+  String get fushi_api_server_started => 'Fushi-API-Server gestartet';
   @override
   String get yomitan_port_kill_action => 'Prozess beenden und erneut versuchen';
   @override
@@ -58012,14 +58012,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get word_favorite_removed => 'Palabra eliminada de favoritos';
   @override
-  String get yomitan_api_key => 'Clave de Fushi API (opcional)';
+  String get fushi_api_key => 'Clave de Fushi API (opcional)';
   @override
-  String get yomitan_api_server => 'Servidor Fushi API';
+  String get fushi_api_server => 'Servidor Fushi API';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'Permite que la extensión del navegador y los clientes compatibles con yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
   @override
-  String get yomitan_api_server_started => 'Servidor Fushi API iniciado';
+  String get fushi_api_server_started => 'Servidor Fushi API iniciado';
   @override
   String get yomitan_port_kill_action => 'Finalizar proceso y reintentar';
   @override
@@ -76594,14 +76594,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Mot retiré des favoris';
   @override
-  String get yomitan_api_key => 'Clé Fushi API (facultatif)';
+  String get fushi_api_key => 'Clé Fushi API (facultatif)';
   @override
-  String get yomitan_api_server => 'Serveur Fushi API';
+  String get fushi_api_server => 'Serveur Fushi API';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'Permet à l\'extension de navigateur et aux clients compatibles yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
   @override
-  String get yomitan_api_server_started => 'Serveur Fushi API démarré';
+  String get fushi_api_server_started => 'Serveur Fushi API démarré';
   @override
   String get yomitan_port_kill_action => 'Arrêter le processus et réessayer';
   @override
@@ -94991,14 +94991,14 @@ class _StringsId extends _StringsEn {
   @override
   String get word_favorite_removed => 'Kata dihapus dari favorit';
   @override
-  String get yomitan_api_key => 'Fushi API key (opsional)';
+  String get fushi_api_key => 'Fushi API key (opsional)';
   @override
-  String get yomitan_api_server => 'Server Fushi API';
+  String get fushi_api_server => 'Server Fushi API';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'Izinkan ekstensi browser dan klien yang kompatibel dengan yomitan-api mencari di kamus Fushi (port 19633)';
   @override
-  String get yomitan_api_server_started => 'Server Fushi API dimulai';
+  String get fushi_api_server_started => 'Server Fushi API dimulai';
   @override
   String get yomitan_port_kill_action => 'Akhiri proses dan coba lagi';
   @override
@@ -113365,14 +113365,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get word_favorite_removed => 'Parola rimossa dai preferiti';
   @override
-  String get yomitan_api_key => 'Chiave Fushi API (opzionale)';
+  String get fushi_api_key => 'Chiave Fushi API (opzionale)';
   @override
-  String get yomitan_api_server => 'Server Fushi API';
+  String get fushi_api_server => 'Server Fushi API';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'Consenti all\'estensione del browser e ai client compatibili con yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
   @override
-  String get yomitan_api_server_started => 'Server Fushi API avviato';
+  String get fushi_api_server_started => 'Server Fushi API avviato';
   @override
   String get yomitan_port_kill_action => 'Termina processo e riprova';
   @override
@@ -131147,14 +131147,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get word_favorite_removed => '単語をお気に入りから削除しました';
   @override
-  String get yomitan_api_key => 'Fushi API キー（任意）';
+  String get fushi_api_key => 'Fushi API キー（任意）';
   @override
-  String get yomitan_api_server => 'Fushi API サーバー';
+  String get fushi_api_server => 'Fushi API サーバー';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'ブラウザ拡張機能や yomitan-api 互換クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
   @override
-  String get yomitan_api_server_started => 'Fushi API サーバーが起動しました';
+  String get fushi_api_server_started => 'Fushi API サーバーが起動しました';
   @override
   String get yomitan_port_kill_action => 'プロセスを終了して再試行';
   @override
@@ -148592,14 +148592,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get word_favorite_removed => '단어가 즐겨찾기에서 삭제되었습니다';
   @override
-  String get yomitan_api_key => 'Fushi API key(선택)';
+  String get fushi_api_key => 'Fushi API key(선택)';
   @override
-  String get yomitan_api_server => 'Fushi API 서버';
+  String get fushi_api_server => 'Fushi API 서버';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       '브라우저 확장 프로그램과 yomitan-api 호환 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
   @override
-  String get yomitan_api_server_started => 'Fushi API 서버가 시작되었습니다';
+  String get fushi_api_server_started => 'Fushi API 서버가 시작되었습니다';
   @override
   String get yomitan_port_kill_action => '프로세스를 종료하고 재시도';
   @override
@@ -166674,14 +166674,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get word_favorite_removed => 'Woord verwijderd uit favorieten';
   @override
-  String get yomitan_api_key => 'Fushi API-sleutel (optioneel)';
+  String get fushi_api_key => 'Fushi API-sleutel (optioneel)';
   @override
-  String get yomitan_api_server => 'Fushi API-server';
+  String get fushi_api_server => 'Fushi API-server';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'Laat de browserextensie en yomitan-api-compatibele clients de woordenboeken van Fushi opvragen (poort 19633)';
   @override
-  String get yomitan_api_server_started => 'Fushi API-server gestart';
+  String get fushi_api_server_started => 'Fushi API-server gestart';
   @override
   String get yomitan_port_kill_action =>
       'Proces beëindigen en opnieuw proberen';
@@ -185108,14 +185108,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Palavra removida dos favoritos';
   @override
-  String get yomitan_api_key => 'Chave da Fushi API (opcional)';
+  String get fushi_api_key => 'Chave da Fushi API (opcional)';
   @override
-  String get yomitan_api_server => 'Servidor da Fushi API';
+  String get fushi_api_server => 'Servidor da Fushi API';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'Permite que a extensão do navegador e clientes compatíveis com yomitan-api consultem os dicionários do Fushi (porta 19633)';
   @override
-  String get yomitan_api_server_started => 'Servidor da Fushi API iniciado';
+  String get fushi_api_server_started => 'Servidor da Fushi API iniciado';
   @override
   String get yomitan_port_kill_action => 'Encerrar processo e tentar novamente';
   @override
@@ -203538,14 +203538,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get word_favorite_removed => 'Слово удалено из избранного';
   @override
-  String get yomitan_api_key => 'Ключ Fushi API (необязательно)';
+  String get fushi_api_key => 'Ключ Fushi API (необязательно)';
   @override
-  String get yomitan_api_server => 'Сервер Fushi API';
+  String get fushi_api_server => 'Сервер Fushi API';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'Разрешить расширению браузера и клиентам, совместимым с yomitan-api, запрашивать словари Fushi (порт 19633)';
   @override
-  String get yomitan_api_server_started => 'Сервер Fushi API запущен';
+  String get fushi_api_server_started => 'Сервер Fushi API запущен';
   @override
   String get yomitan_port_kill_action => 'Завершить процесс и повторить';
   @override
@@ -221722,15 +221722,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get word_favorite_removed => 'ลบคำออกจากรายการโปรดแล้ว';
   @override
-  String get yomitan_api_key => 'Fushi API key (ไม่บังคับ)';
+  String get fushi_api_key => 'Fushi API key (ไม่บังคับ)';
   @override
-  String get yomitan_api_server => 'เซิร์ฟเวอร์ Fushi API';
+  String get fushi_api_server => 'เซิร์ฟเวอร์ Fushi API';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'ให้ส่วนขยายเบราว์เซอร์และไคลเอนต์ที่เข้ากันได้กับ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
   @override
-  String get yomitan_api_server_started =>
-      'เซิร์ฟเวอร์ Fushi API เริ่มทำงานแล้ว';
+  String get fushi_api_server_started => 'เซิร์ฟเวอร์ Fushi API เริ่มทำงานแล้ว';
   @override
   String get yomitan_port_kill_action => 'จบโปรเซสแล้วลองใหม่';
   @override
@@ -239931,14 +239930,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Kelime favorilerden kaldırıldı';
   @override
-  String get yomitan_api_key => 'Fushi API anahtarı (isteğe bağlı)';
+  String get fushi_api_key => 'Fushi API anahtarı (isteğe bağlı)';
   @override
-  String get yomitan_api_server => 'Fushi API sunucusu';
+  String get fushi_api_server => 'Fushi API sunucusu';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'Tarayıcı uzantısının ve yomitan-api uyumlu istemcilerin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
   @override
-  String get yomitan_api_server_started => 'Fushi API sunucusu başlatıldı';
+  String get fushi_api_server_started => 'Fushi API sunucusu başlatıldı';
   @override
   String get yomitan_port_kill_action => 'İşlemi sonlandır ve tekrar dene';
   @override
@@ -258166,14 +258165,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get word_favorite_removed => 'Đã xóa từ khỏi yêu thích';
   @override
-  String get yomitan_api_key => 'Fushi API key (tùy chọn)';
+  String get fushi_api_key => 'Fushi API key (tùy chọn)';
   @override
-  String get yomitan_api_server => 'Máy chủ Fushi API';
+  String get fushi_api_server => 'Máy chủ Fushi API';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       'Cho phép tiện ích mở rộng trình duyệt và máy khách tương thích yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
   @override
-  String get yomitan_api_server_started => 'Đã khởi động máy chủ Fushi API';
+  String get fushi_api_server_started => 'Đã khởi động máy chủ Fushi API';
   @override
   String get yomitan_port_kill_action => 'Kết thúc tiến trình và thử lại';
   @override
@@ -275519,14 +275518,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get word_favorite_removed => '已取消收藏该词';
   @override
-  String get yomitan_api_key => 'Fushi API 密钥（可选）';
+  String get fushi_api_key => 'Fushi API 密钥（可选）';
   @override
-  String get yomitan_api_server => 'Fushi API 服务器';
+  String get fushi_api_server => 'Fushi API 服务器';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       '让浏览器扩展和兼容 yomitan-api 的客户端查询 Fushi 词典（端口 19633）';
   @override
-  String get yomitan_api_server_started => 'Fushi API 服务器已开启';
+  String get fushi_api_server_started => 'Fushi API 服务器已开启';
   @override
   String get yomitan_port_kill_action => '结束进程并重试';
   @override
@@ -292157,14 +292156,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get word_favorite_removed => '已取消收藏該詞';
   @override
-  String get yomitan_api_key => 'Fushi API 金鑰（可選）';
+  String get fushi_api_key => 'Fushi API 金鑰（可選）';
   @override
-  String get yomitan_api_server => 'Fushi API 伺服器';
+  String get fushi_api_server => 'Fushi API 伺服器';
   @override
-  String get yomitan_api_server_hint =>
+  String get fushi_api_server_hint =>
       '讓瀏覽器擴展和兼容 yomitan-api 的客戶端查詢 Fushi 詞典（連接埠 19633）';
   @override
-  String get yomitan_api_server_started => 'Fushi API 伺服器已開啟';
+  String get fushi_api_server_started => 'Fushi API 伺服器已開啟';
   @override
   String get yomitan_port_kill_action => '結束進程並重試';
   @override
@@ -308466,13 +308465,13 @@ extension on _StringsEn {
         return 'Word saved to favorites';
       case 'word_favorite_removed':
         return 'Word removed from favorites';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Fushi API key (optional)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Fushi API server';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'Let the browser extension and yomitan-api-compatible clients query Fushi\'s dictionaries (port 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Fushi API server started';
       case 'yomitan_port_kill_action':
         return 'End process and retry';
@@ -323976,13 +323975,13 @@ extension on _StringsAr {
         return 'تمت إضافة الكلمة إلى المفضلة';
       case 'word_favorite_removed':
         return 'تمت إزالة الكلمة من المفضلة';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'مفتاح Fushi API (اختياري)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'خادم Fushi API';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'السماح لإضافة المتصفح والعملاء المتوافقين مع yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'تم تشغيل خادم Fushi API';
       case 'yomitan_port_kill_action':
         return 'إنهاء العملية وإعادة المحاولة';
@@ -339544,13 +339543,13 @@ extension on _StringsDe {
         return 'Wort in Favoriten gespeichert';
       case 'word_favorite_removed':
         return 'Wort aus Favoriten entfernt';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Fushi-API-Schlüssel (optional)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Fushi-API-Server';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'Browsererweiterung und yomitan-api-kompatible Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Fushi-API-Server gestartet';
       case 'yomitan_port_kill_action':
         return 'Prozess beenden und erneut versuchen';
@@ -355117,13 +355116,13 @@ extension on _StringsEs {
         return 'Palabra guardada en favoritos';
       case 'word_favorite_removed':
         return 'Palabra eliminada de favoritos';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Clave de Fushi API (opcional)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Servidor Fushi API';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'Permite que la extensión del navegador y los clientes compatibles con yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Servidor Fushi API iniciado';
       case 'yomitan_port_kill_action':
         return 'Finalizar proceso y reintentar';
@@ -370697,13 +370696,13 @@ extension on _StringsFr {
         return 'Mot ajouté aux favoris';
       case 'word_favorite_removed':
         return 'Mot retiré des favoris';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Clé Fushi API (facultatif)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Serveur Fushi API';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'Permet à l\'extension de navigateur et aux clients compatibles yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Serveur Fushi API démarré';
       case 'yomitan_port_kill_action':
         return 'Arrêter le processus et réessayer';
@@ -386248,13 +386247,13 @@ extension on _StringsId {
         return 'Kata disimpan ke favorit';
       case 'word_favorite_removed':
         return 'Kata dihapus dari favorit';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Fushi API key (opsional)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Server Fushi API';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'Izinkan ekstensi browser dan klien yang kompatibel dengan yomitan-api mencari di kamus Fushi (port 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Server Fushi API dimulai';
       case 'yomitan_port_kill_action':
         return 'Akhiri proses dan coba lagi';
@@ -401804,13 +401803,13 @@ extension on _StringsIt {
         return 'Parola salvata nei preferiti';
       case 'word_favorite_removed':
         return 'Parola rimossa dai preferiti';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Chiave Fushi API (opzionale)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Server Fushi API';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'Consenti all\'estensione del browser e ai client compatibili con yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Server Fushi API avviato';
       case 'yomitan_port_kill_action':
         return 'Termina processo e riprova';
@@ -417289,13 +417288,13 @@ extension on _StringsJa {
         return '単語をお気に入りに保存しました';
       case 'word_favorite_removed':
         return '単語をお気に入りから削除しました';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Fushi API キー（任意）';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Fushi API サーバー';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'ブラウザ拡張機能や yomitan-api 互換クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Fushi API サーバーが起動しました';
       case 'yomitan_port_kill_action':
         return 'プロセスを終了して再試行';
@@ -432734,13 +432733,13 @@ extension on _StringsKo {
         return '단어가 즐겨찾기에 저장되었습니다';
       case 'word_favorite_removed':
         return '단어가 즐겨찾기에서 삭제되었습니다';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Fushi API key(선택)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Fushi API 서버';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return '브라우저 확장 프로그램과 yomitan-api 호환 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Fushi API 서버가 시작되었습니다';
       case 'yomitan_port_kill_action':
         return '프로세스를 종료하고 재시도';
@@ -448256,13 +448255,13 @@ extension on _StringsNl {
         return 'Woord opgeslagen als favoriet';
       case 'word_favorite_removed':
         return 'Woord verwijderd uit favorieten';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Fushi API-sleutel (optioneel)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Fushi API-server';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'Laat de browserextensie en yomitan-api-compatibele clients de woordenboeken van Fushi opvragen (poort 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Fushi API-server gestart';
       case 'yomitan_port_kill_action':
         return 'Proces beëindigen en opnieuw proberen';
@@ -463812,13 +463811,13 @@ extension on _StringsPtBr {
         return 'Palavra salva nos favoritos';
       case 'word_favorite_removed':
         return 'Palavra removida dos favoritos';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Chave da Fushi API (opcional)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Servidor da Fushi API';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'Permite que a extensão do navegador e clientes compatíveis com yomitan-api consultem os dicionários do Fushi (porta 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Servidor da Fushi API iniciado';
       case 'yomitan_port_kill_action':
         return 'Encerrar processo e tentar novamente';
@@ -479373,13 +479372,13 @@ extension on _StringsRu {
         return 'Слово добавлено в избранное';
       case 'word_favorite_removed':
         return 'Слово удалено из избранного';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Ключ Fushi API (необязательно)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Сервер Fushi API';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'Разрешить расширению браузера и клиентам, совместимым с yomitan-api, запрашивать словари Fushi (порт 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Сервер Fushi API запущен';
       case 'yomitan_port_kill_action':
         return 'Завершить процесс и повторить';
@@ -494898,13 +494897,13 @@ extension on _StringsTh {
         return 'บันทึกคำลงรายการโปรดแล้ว';
       case 'word_favorite_removed':
         return 'ลบคำออกจากรายการโปรดแล้ว';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Fushi API key (ไม่บังคับ)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'เซิร์ฟเวอร์ Fushi API';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'ให้ส่วนขยายเบราว์เซอร์และไคลเอนต์ที่เข้ากันได้กับ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'เซิร์ฟเวอร์ Fushi API เริ่มทำงานแล้ว';
       case 'yomitan_port_kill_action':
         return 'จบโปรเซสแล้วลองใหม่';
@@ -510432,13 +510431,13 @@ extension on _StringsTr {
         return 'Kelime favorilere kaydedildi';
       case 'word_favorite_removed':
         return 'Kelime favorilerden kaldırıldı';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Fushi API anahtarı (isteğe bağlı)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Fushi API sunucusu';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'Tarayıcı uzantısının ve yomitan-api uyumlu istemcilerin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Fushi API sunucusu başlatıldı';
       case 'yomitan_port_kill_action':
         return 'İşlemi sonlandır ve tekrar dene';
@@ -525971,13 +525970,13 @@ extension on _StringsVi {
         return 'Đã lưu từ vào yêu thích';
       case 'word_favorite_removed':
         return 'Đã xóa từ khỏi yêu thích';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Fushi API key (tùy chọn)';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Máy chủ Fushi API';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return 'Cho phép tiện ích mở rộng trình duyệt và máy khách tương thích yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Đã khởi động máy chủ Fushi API';
       case 'yomitan_port_kill_action':
         return 'Kết thúc tiến trình và thử lại';
@@ -541418,13 +541417,13 @@ extension on _StringsZhCn {
         return '已收藏该词';
       case 'word_favorite_removed':
         return '已取消收藏该词';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Fushi API 密钥（可选）';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Fushi API 服务器';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return '让浏览器扩展和兼容 yomitan-api 的客户端查询 Fushi 词典（端口 19633）';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Fushi API 服务器已开启';
       case 'yomitan_port_kill_action':
         return '结束进程并重试';
@@ -556777,13 +556776,13 @@ extension on _StringsZhHk {
         return '已收藏該詞';
       case 'word_favorite_removed':
         return '已取消收藏該詞';
-      case 'yomitan_api_key':
+      case 'fushi_api_key':
         return 'Fushi API 金鑰（可選）';
-      case 'yomitan_api_server':
+      case 'fushi_api_server':
         return 'Fushi API 伺服器';
-      case 'yomitan_api_server_hint':
+      case 'fushi_api_server_hint':
         return '讓瀏覽器擴展和兼容 yomitan-api 的客戶端查詢 Fushi 詞典（連接埠 19633）';
-      case 'yomitan_api_server_started':
+      case 'fushi_api_server_started':
         return 'Fushi API 伺服器已開啟';
       case 'yomitan_port_kill_action':
         return '結束進程並重試';
