@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127296 (7488 per locale)
+/// Strings: 127262 (7486 per locale)
 ///
-/// Built on 2026-10-14 at 16:52 UTC
+/// Built on 2026-10-14 at 17:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10815,9 +10815,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Not loaded in this playback (reopen the video)';
   String get home_nav_bar_style => 'Bottom bar style';
   String get home_nav_bar_style_flat => 'Flat';
-  String get home_nav_bar_style_launcher => 'Center launcher';
   String get home_nav_bar_style_pager => 'Paged swipe';
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -28912,11 +28910,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -47401,11 +47395,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -65950,11 +65940,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -84579,11 +84565,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -102861,11 +102843,7 @@ class _StringsId extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -121309,11 +121287,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -138757,11 +138731,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -156240,11 +156210,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -174636,11 +174602,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -193101,11 +193063,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -211511,11 +211469,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -229599,11 +229553,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -247890,11 +247840,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -266108,11 +266054,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 // Path: <root>
@@ -282743,11 +282685,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => '平铺';
   @override
-  String get home_nav_bar_style_launcher => '中央展开';
-  @override
   String get home_nav_bar_style_pager => '分页滑动';
-  @override
-  String get home_nav_bar_style_launcher_pager => '中央展开 + 翻页';
 }
 
 // Path: <root>
@@ -299634,11 +299572,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get home_nav_bar_style_flat => 'Flat';
   @override
-  String get home_nav_bar_style_launcher => 'Center launcher';
-  @override
   String get home_nav_bar_style_pager => 'Paged swipe';
-  @override
-  String get home_nav_bar_style_launcher_pager => 'Center launcher + paging';
 }
 
 /// Flat map(s) containing all translations.
@@ -315159,12 +315093,8 @@ extension on _StringsEn {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -330680,12 +330610,8 @@ extension on _StringsAr {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -346277,12 +346203,8 @@ extension on _StringsDe {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -361856,12 +361778,8 @@ extension on _StringsEs {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -377453,12 +377371,8 @@ extension on _StringsFr {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -392994,12 +392908,8 @@ extension on _StringsId {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -408571,12 +408481,8 @@ extension on _StringsIt {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -424022,12 +423928,8 @@ extension on _StringsJa {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -439480,12 +439382,8 @@ extension on _StringsKo {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -455052,12 +454950,8 @@ extension on _StringsNl {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -470616,12 +470510,8 @@ extension on _StringsPtBr {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -486185,12 +486075,8 @@ extension on _StringsRu {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -501710,12 +501596,8 @@ extension on _StringsTh {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -517266,12 +517148,8 @@ extension on _StringsTr {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -532805,12 +532683,8 @@ extension on _StringsVi {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
@@ -548173,12 +548047,8 @@ extension on _StringsZhCn {
         return '底栏样式';
       case 'home_nav_bar_style_flat':
         return '平铺';
-      case 'home_nav_bar_style_launcher':
-        return '中央展开';
       case 'home_nav_bar_style_pager':
         return '分页滑动';
-      case 'home_nav_bar_style_launcher_pager':
-        return '中央展开 + 翻页';
       default:
         return null;
     }
@@ -563569,12 +563439,8 @@ extension on _StringsZhHk {
         return 'Bottom bar style';
       case 'home_nav_bar_style_flat':
         return 'Flat';
-      case 'home_nav_bar_style_launcher':
-        return 'Center launcher';
       case 'home_nav_bar_style_pager':
         return 'Paged swipe';
-      case 'home_nav_bar_style_launcher_pager':
-        return 'Center launcher + paging';
       default:
         return null;
     }
