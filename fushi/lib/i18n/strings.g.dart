@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 126106 (7418 per locale)
 ///
-/// Built on 2026-10-13 at 12:06 UTC
+/// Built on 2026-10-14 at 08:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1094,7 +1094,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String book_search_results({required Object n}) => '${n} result(s)';
   String get books => 'Books';
   String get browser_extension_enable_server_first =>
-      'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
+      'Tip: enable "Fushi API server" and set an API key above first, so the extension is auto-configured with a working connection.';
   String get browser_extension_mobile_unsupported =>
       'Mobile browsers cannot load this extension. Use in-app lookup in the reader or video player instead.';
   String get browser_extension_prepare_button => 'Prepare extension files';
@@ -1128,7 +1128,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get browser_extension_version_mismatch =>
       'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Fushi again.';
+      'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Fushi API server again.';
   String get cancel => 'Cancel';
   String card_cover_degraded_to_static({required Object reason}) =>
       'Card cover fell back to a still frame (animated clip unavailable): ${reason}';
@@ -6155,11 +6155,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get wheel_page_turn_interval => 'Mouse wheel page-turn interval';
   String get word_favorite_added => 'Word saved to favorites';
   String get word_favorite_removed => 'Word removed from favorites';
-  String get yomitan_api_key => 'Yomitan API key (optional)';
-  String get yomitan_api_server => 'Yomitan API server';
+  String get yomitan_api_key => 'Fushi API key (optional)';
+  String get yomitan_api_server => 'Fushi API server';
   String get yomitan_api_server_hint =>
-      'Let yomitan-api clients query Fushi\'s dictionaries (port 19633)';
-  String get yomitan_api_server_started => 'Yomitan API server started';
+      'Let the browser extension and yomitan-api-compatible clients query Fushi\'s dictionaries (port 19633)';
+  String get yomitan_api_server_started => 'Fushi API server started';
   String get yomitan_port_kill_action => 'End process and retry';
   String get yomitan_port_kill_confirm => 'End process';
   String yomitan_port_kill_confirm_message({required Object process}) =>
@@ -12237,7 +12237,7 @@ class _StringsAr extends _StringsEn {
   String get books => 'الكتب';
   @override
   String get browser_extension_enable_server_first =>
-      'نصيحة: فعّل "خادم Yomitan API" وعيّن مفتاح API أعلاه أولاً، حتى يتم تكوين الإضافة تلقائياً باتصال يعمل.';
+      'نصيحة: فعّل "خادم Fushi API" وعيّن مفتاح API أعلاه أولاً، حتى يتم تكوين الإضافة تلقائياً باتصال يعمل.';
   @override
   String get browser_extension_mobile_unsupported =>
       'لا يمكن لمتصفحات الأجهزة المحمولة تحميل هذا الامتداد. استخدم البحث داخل التطبيق في القارئ أو مشغّل الفيديو بدلاً من ذلك.';
@@ -12293,7 +12293,7 @@ class _StringsAr extends _StringsEn {
       'الإضافة المحمّلة في متصفحك قديمة. أعد تجهيز الإضافة إذا لزم الأمر، ثم أعد تحميلها من صفحة إضافات متصفحك (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Yomitan API في Fushi مجدداً.';
+      'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Fushi API مجدداً.';
   @override
   String get cancel => 'إلغاء';
   @override
@@ -21065,14 +21065,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get word_favorite_removed => 'تمت إزالة الكلمة من المفضلة';
   @override
-  String get yomitan_api_key => 'مفتاح Yomitan API (اختياري)';
+  String get yomitan_api_key => 'مفتاح Fushi API (اختياري)';
   @override
-  String get yomitan_api_server => 'خادم Yomitan API';
+  String get yomitan_api_server => 'خادم Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'السماح لعملاء yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
+      'السماح لإضافة المتصفح والعملاء المتوافقين مع yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
   @override
-  String get yomitan_api_server_started => 'تم تشغيل خادم Yomitan API';
+  String get yomitan_api_server_started => 'تم تشغيل خادم Fushi API';
   @override
   String get yomitan_port_kill_action => 'إنهاء العملية وإعادة المحاولة';
   @override
@@ -30196,7 +30196,7 @@ class _StringsDe extends _StringsEn {
   String get books => 'Bücher';
   @override
   String get browser_extension_enable_server_first =>
-      'Tipp: Aktiviere zuerst oben den „Yomitan API-Server" und setze einen API-Schlüssel, damit die Erweiterung automatisch mit einer funktionierenden Verbindung konfiguriert wird.';
+      'Tipp: Aktiviere zuerst oben den „Fushi-API-Server" und setze einen API-Schlüssel, damit die Erweiterung automatisch mit einer funktionierenden Verbindung konfiguriert wird.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Mobile Browser können diese Erweiterung nicht laden. Nutze stattdessen die App-interne Suche im Reader oder Videoplayer.';
@@ -30256,7 +30256,7 @@ class _StringsDe extends _StringsEn {
       'Die im Browser geladene Erweiterung ist veraltet. Bereite die Erweiterung bei Bedarf erneut vor und lade sie dann über die Erweiterungsseite deines Browsers neu (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Yomitan-API-Server in Fushi erneut.';
+      'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Fushi-API-Server erneut.';
   @override
   String get cancel => 'Abbrechen';
   @override
@@ -39236,14 +39236,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get word_favorite_removed => 'Wort aus Favoriten entfernt';
   @override
-  String get yomitan_api_key => 'Yomitan-API-Schlüssel (optional)';
+  String get yomitan_api_key => 'Fushi-API-Schlüssel (optional)';
   @override
-  String get yomitan_api_server => 'Yomitan-API-Server';
+  String get yomitan_api_server => 'Fushi-API-Server';
   @override
   String get yomitan_api_server_hint =>
-      'yomitan-api-Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
+      'Browsererweiterung und yomitan-api-kompatible Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
   @override
-  String get yomitan_api_server_started => 'Yomitan-API-Server gestartet';
+  String get yomitan_api_server_started => 'Fushi-API-Server gestartet';
   @override
   String get yomitan_port_kill_action => 'Prozess beenden und erneut versuchen';
   @override
@@ -48516,7 +48516,7 @@ class _StringsEs extends _StringsEn {
   String get books => 'Libros';
   @override
   String get browser_extension_enable_server_first =>
-      'Consejo: active primero el "servidor API Yomitan" y establezca una clave API arriba, para que la extensión se configure automáticamente con una conexión funcional.';
+      'Consejo: active primero el "servidor Fushi API" y establezca una clave API arriba, para que la extensión se configure automáticamente con una conexión funcional.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Los navegadores móviles no pueden cargar esta extensión. Usa la búsqueda dentro de la app en el lector o el reproductor de vídeo.';
@@ -48576,7 +48576,7 @@ class _StringsEs extends _StringsEn {
       'La extensión cargada en su navegador está desactualizada. Prepare la extensión de nuevo si es necesario, luego recárguela desde la página de extensiones del navegador (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor API Yomitan en Fushi.';
+      'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor Fushi API.';
   @override
   String get cancel => 'Cancelar';
   @override
@@ -57604,14 +57604,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get word_favorite_removed => 'Palabra eliminada de favoritos';
   @override
-  String get yomitan_api_key => 'API key de Yomitan (opcional)';
+  String get yomitan_api_key => 'Clave de Fushi API (opcional)';
   @override
-  String get yomitan_api_server => 'Servidor API de Yomitan';
+  String get yomitan_api_server => 'Servidor Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Permite que los clientes de yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
+      'Permite que la extensión del navegador y los clientes compatibles con yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
   @override
-  String get yomitan_api_server_started => 'Servidor API Yomitan iniciado';
+  String get yomitan_api_server_started => 'Servidor Fushi API iniciado';
   @override
   String get yomitan_port_kill_action => 'Finalizar proceso y reintentar';
   @override
@@ -66901,7 +66901,7 @@ class _StringsFr extends _StringsEn {
   String get books => 'Livres';
   @override
   String get browser_extension_enable_server_first =>
-      'Conseil : activez d\'abord « Serveur API Yomitan » et définissez une clé API ci-dessus, pour que l\'extension soit configurée automatiquement avec une connexion fonctionnelle.';
+      'Conseil : activez d\'abord « Serveur Fushi API » et définissez une clé API ci-dessus, pour que l\'extension soit configurée automatiquement avec une connexion fonctionnelle.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Les navigateurs mobiles ne peuvent pas charger cette extension. Utilisez plutôt la recherche intégrée dans le lecteur ou le lecteur vidéo.';
@@ -66961,7 +66961,7 @@ class _StringsFr extends _StringsEn {
       'L\'extension chargée dans votre navigateur est obsolète. Repréparez l\'extension si nécessaire, puis rechargez-la depuis la page des extensions de votre navigateur (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur API Yomitan dans Fushi.';
+      'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur Fushi API.';
   @override
   String get cancel => 'Annuler';
   @override
@@ -76021,14 +76021,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Mot retiré des favoris';
   @override
-  String get yomitan_api_key => 'Clé API Yomitan (facultatif)';
+  String get yomitan_api_key => 'Clé Fushi API (facultatif)';
   @override
-  String get yomitan_api_server => 'Serveur API Yomitan';
+  String get yomitan_api_server => 'Serveur Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Permet aux clients yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
+      'Permet à l\'extension de navigateur et aux clients compatibles yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
   @override
-  String get yomitan_api_server_started => 'Serveur API Yomitan démarré';
+  String get yomitan_api_server_started => 'Serveur Fushi API démarré';
   @override
   String get yomitan_port_kill_action => 'Arrêter le processus et réessayer';
   @override
@@ -85318,7 +85318,7 @@ class _StringsId extends _StringsEn {
   String get books => 'Buku';
   @override
   String get browser_extension_enable_server_first =>
-      'Tips: aktifkan "Server API Yomitan" dan atur kunci API di atas terlebih dahulu, agar ekstensi otomatis terkonfigurasi dengan koneksi yang berfungsi.';
+      'Tips: aktifkan "Server Fushi API" dan atur kunci API di atas terlebih dahulu, agar ekstensi otomatis terkonfigurasi dengan koneksi yang berfungsi.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Peramban seluler tidak dapat memuat ekstensi ini. Gunakan pencarian dalam aplikasi di pembaca atau pemutar video sebagai gantinya.';
@@ -85377,7 +85377,7 @@ class _StringsId extends _StringsEn {
       'Ekstensi yang dimuat di browser Anda sudah usang. Siapkan ulang ekstensi jika perlu, lalu muat ulang dari halaman ekstensi browser Anda (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server API Yomitan di Fushi.';
+      'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server Fushi API.';
   @override
   String get cancel => 'Batal';
   @override
@@ -94253,14 +94253,14 @@ class _StringsId extends _StringsEn {
   @override
   String get word_favorite_removed => 'Kata dihapus dari favorit';
   @override
-  String get yomitan_api_key => 'Yomitan API key (opsional)';
+  String get yomitan_api_key => 'Fushi API key (opsional)';
   @override
-  String get yomitan_api_server => 'Server Yomitan API';
+  String get yomitan_api_server => 'Server Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Izinkan klien yomitan-api mencari di kamus Fushi (port 19633)';
+      'Izinkan ekstensi browser dan klien yang kompatibel dengan yomitan-api mencari di kamus Fushi (port 19633)';
   @override
-  String get yomitan_api_server_started => 'Server API Yomitan dimulai';
+  String get yomitan_api_server_started => 'Server Fushi API dimulai';
   @override
   String get yomitan_port_kill_action => 'Akhiri proses dan coba lagi';
   @override
@@ -103439,7 +103439,7 @@ class _StringsIt extends _StringsEn {
   String get books => 'Libri';
   @override
   String get browser_extension_enable_server_first =>
-      'Suggerimento: abilita prima "Server API Yomitan" e imposta una chiave API sopra, così l\'estensione viene configurata automaticamente con una connessione funzionante.';
+      'Suggerimento: abilita prima "Server Fushi API" e imposta una chiave API sopra, così l\'estensione viene configurata automaticamente con una connessione funzionante.';
   @override
   String get browser_extension_mobile_unsupported =>
       'I browser mobili non possono caricare questa estensione. Usa invece la ricerca nell\'app nel lettore o nel player video.';
@@ -103497,7 +103497,7 @@ class _StringsIt extends _StringsEn {
       'L\'estensione caricata nel browser è obsoleta. Ri-prepara l\'estensione se necessario, poi ricaricala dalla pagina estensioni del browser (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server API Yomitan in Fushi.';
+      'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server Fushi API.';
   @override
   String get cancel => 'Annulla';
   @override
@@ -112462,14 +112462,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get word_favorite_removed => 'Parola rimossa dai preferiti';
   @override
-  String get yomitan_api_key => 'API key Yomitan (opzionale)';
+  String get yomitan_api_key => 'Chiave Fushi API (opzionale)';
   @override
-  String get yomitan_api_server => 'Server API Yomitan';
+  String get yomitan_api_server => 'Server Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Consenti ai client yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
+      'Consenti all\'estensione del browser e ai client compatibili con yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
   @override
-  String get yomitan_api_server_started => 'Server API Yomitan avviato';
+  String get yomitan_api_server_started => 'Server Fushi API avviato';
   @override
   String get yomitan_port_kill_action => 'Termina processo e riprova';
   @override
@@ -121627,7 +121627,7 @@ class _StringsJa extends _StringsEn {
   String get books => '本';
   @override
   String get browser_extension_enable_server_first =>
-      'ヒント：先に「Yomitan API サーバー」を有効にし、上で API キーを設定すると、拡張機能が自動で接続設定されます。';
+      'ヒント：先に「Fushi API サーバー」を有効にし、上で API キーを設定すると、拡張機能が自動で接続設定されます。';
   @override
   String get browser_extension_mobile_unsupported =>
       'モバイルブラウザーではこの拡張機能を読み込めません。代わりにアプリ内のリーダーや動画プレーヤーで辞書引きしてください。';
@@ -121682,7 +121682,7 @@ class _StringsJa extends _StringsEn {
       'ブラウザに読み込まれた拡張機能が古くなっています。必要に応じて拡張機能を再度準備してから、ブラウザの拡張機能ページ（chrome://extensions）から再読み込みしてください。';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi で Yomitan API サーバーを再度有効にしてください。';
+      'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi API サーバーを再度有効にしてください。';
   @override
   String get cancel => 'キャンセル';
   @override
@@ -130080,14 +130080,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get word_favorite_removed => '単語をお気に入りから削除しました';
   @override
-  String get yomitan_api_key => 'Yomitan API キー（任意）';
+  String get yomitan_api_key => 'Fushi API キー（任意）';
   @override
-  String get yomitan_api_server => 'Yomitan API サーバー';
+  String get yomitan_api_server => 'Fushi API サーバー';
   @override
   String get yomitan_api_server_hint =>
-      'yomitan-api クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
+      'ブラウザ拡張機能や yomitan-api 互換クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
   @override
-  String get yomitan_api_server_started => 'Yomitan APIサーバーが起動しました';
+  String get yomitan_api_server_started => 'Fushi API サーバーが起動しました';
   @override
   String get yomitan_port_kill_action => 'プロセスを終了して再試行';
   @override
@@ -138895,7 +138895,7 @@ class _StringsKo extends _StringsEn {
   String get books => '책';
   @override
   String get browser_extension_enable_server_first =>
-      '팁: 먼저 위에서 "Yomitan API 서버"를 활성화하고 API 키를 설정하면 확장 프로그램이 자동으로 연결 구성됩니다.';
+      '팁: 먼저 위에서 "Fushi API 서버"를 활성화하고 API 키를 설정하면 확장 프로그램이 자동으로 연결 구성됩니다.';
   @override
   String get browser_extension_mobile_unsupported =>
       '모바일 브라우저에서는 이 확장 프로그램을 로드할 수 없습니다. 대신 앱 내 리더나 동영상 플레이어에서 사전 검색을 사용하세요.';
@@ -138949,7 +138949,7 @@ class _StringsKo extends _StringsEn {
       '브라우저에 로드된 확장 프로그램이 오래되었습니다. 필요한 경우 확장 프로그램을 다시 준비한 후 브라우저 확장 프로그램 페이지(chrome://extensions)에서 다시 로드하세요.';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi에서 Yomitan API 서버를 다시 활성화하세요.';
+      '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi API 서버를 다시 활성화하세요.';
   @override
   String get cancel => '취소';
   @override
@@ -147360,14 +147360,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get word_favorite_removed => '단어가 즐겨찾기에서 삭제되었습니다';
   @override
-  String get yomitan_api_key => 'Yomitan API key(선택)';
+  String get yomitan_api_key => 'Fushi API key(선택)';
   @override
-  String get yomitan_api_server => 'Yomitan API 서버';
+  String get yomitan_api_server => 'Fushi API 서버';
   @override
   String get yomitan_api_server_hint =>
-      'yomitan-api 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
+      '브라우저 확장 프로그램과 yomitan-api 호환 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
   @override
-  String get yomitan_api_server_started => 'Yomitan API 서버가 시작되었습니다';
+  String get yomitan_api_server_started => 'Fushi API 서버가 시작되었습니다';
   @override
   String get yomitan_port_kill_action => '프로세스를 종료하고 재시도';
   @override
@@ -156291,7 +156291,7 @@ class _StringsNl extends _StringsEn {
   String get books => 'Boeken';
   @override
   String get browser_extension_enable_server_first =>
-      'Tip: schakel eerst "Yomitan API-server" in en stel hierboven een API-sleutel in, zodat de extensie automatisch geconfigureerd wordt met een werkende verbinding.';
+      'Tip: schakel eerst "Fushi API-server" in en stel hierboven een API-sleutel in, zodat de extensie automatisch geconfigureerd wordt met een werkende verbinding.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Mobiele browsers kunnen deze extensie niet laden. Gebruik in plaats daarvan het opzoeken in de app in de lezer of videospeler.';
@@ -156351,7 +156351,7 @@ class _StringsNl extends _StringsEn {
       'De extensie in je browser is verouderd. Bereid de extensie indien nodig opnieuw voor en herlaad deze vanuit je browser-extensiepagina (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Yomitan API-server in Fushi opnieuw in.';
+      'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Fushi API-server opnieuw in.';
   @override
   String get cancel => 'Annuleren';
   @override
@@ -165277,14 +165277,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get word_favorite_removed => 'Woord verwijderd uit favorieten';
   @override
-  String get yomitan_api_key => 'Yomitan API-sleutel (optioneel)';
+  String get yomitan_api_key => 'Fushi API-sleutel (optioneel)';
   @override
-  String get yomitan_api_server => 'Yomitan API-server';
+  String get yomitan_api_server => 'Fushi API-server';
   @override
   String get yomitan_api_server_hint =>
-      'Laat yomitan-api-clients de woordenboeken van Fushi opvragen (poort 19633)';
+      'Laat de browserextensie en yomitan-api-compatibele clients de woordenboeken van Fushi opvragen (poort 19633)';
   @override
-  String get yomitan_api_server_started => 'Yomitan API-server gestart';
+  String get yomitan_api_server_started => 'Fushi API-server gestart';
   @override
   String get yomitan_port_kill_action =>
       'Proces beëindigen en opnieuw proberen';
@@ -174522,7 +174522,7 @@ class _StringsPtBr extends _StringsEn {
   String get books => 'Livros';
   @override
   String get browser_extension_enable_server_first =>
-      'Dica: ative o "Servidor de API Yomitan" e defina uma chave de API acima primeiro, para que a extensão seja configurada automaticamente com uma conexão funcional.';
+      'Dica: ative o "Servidor da Fushi API" e defina uma chave de API acima primeiro, para que a extensão seja configurada automaticamente com uma conexão funcional.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Navegadores móveis não conseguem carregar esta extensão. Use a busca no app no leitor ou no player de vídeo.';
@@ -174582,7 +174582,7 @@ class _StringsPtBr extends _StringsEn {
       'A extensão carregada no navegador está desatualizada. Prepare a extensão novamente se necessário e recarregue-a na página de extensões (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor de API Yomitan no Fushi novamente.';
+      'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor da Fushi API novamente.';
   @override
   String get cancel => 'Cancelar';
   @override
@@ -183546,14 +183546,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Palavra removida dos favoritos';
   @override
-  String get yomitan_api_key => 'Chave da Yomitan API (opcional)';
+  String get yomitan_api_key => 'Chave da Fushi API (opcional)';
   @override
-  String get yomitan_api_server => 'Servidor da Yomitan API';
+  String get yomitan_api_server => 'Servidor da Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Permite que clientes do yomitan-api consultem os dicionários do Fushi (porta 19633)';
+      'Permite que a extensão do navegador e clientes compatíveis com yomitan-api consultem os dicionários do Fushi (porta 19633)';
   @override
-  String get yomitan_api_server_started => 'Servidor de API Yomitan iniciado';
+  String get yomitan_api_server_started => 'Servidor da Fushi API iniciado';
   @override
   String get yomitan_port_kill_action => 'Encerrar processo e tentar novamente';
   @override
@@ -192798,7 +192798,7 @@ class _StringsRu extends _StringsEn {
   String get books => 'Книги';
   @override
   String get browser_extension_enable_server_first =>
-      'Совет: сначала включите «Сервер API Yomitan» и задайте API-ключ выше, чтобы расширение автоматически настроилось с рабочим подключением.';
+      'Совет: сначала включите «Сервер Fushi API» и задайте API-ключ выше, чтобы расширение автоматически настроилось с рабочим подключением.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Мобильные браузеры не могут загрузить это расширение. Используйте поиск в приложении — в читалке или видеоплеере.';
@@ -192857,7 +192857,7 @@ class _StringsRu extends _StringsEn {
       'Расширение в браузере устарело. При необходимости переподготовьте расширение, затем перезагрузите его на странице расширений браузера (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Yomitan API в Fushi.';
+      'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Fushi API.';
   @override
   String get cancel => 'Отмена';
   @override
@@ -201812,14 +201812,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get word_favorite_removed => 'Слово удалено из избранного';
   @override
-  String get yomitan_api_key => 'Ключ Yomitan API (необязательно)';
+  String get yomitan_api_key => 'Ключ Fushi API (необязательно)';
   @override
-  String get yomitan_api_server => 'Сервер Yomitan API';
+  String get yomitan_api_server => 'Сервер Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Разрешить клиентам yomitan-api запрашивать словари Fushi (порт 19633)';
+      'Разрешить расширению браузера и клиентам, совместимым с yomitan-api, запрашивать словари Fushi (порт 19633)';
   @override
-  String get yomitan_api_server_started => 'Сервер Yomitan API запущен';
+  String get yomitan_api_server_started => 'Сервер Fushi API запущен';
   @override
   String get yomitan_port_kill_action => 'Завершить процесс и повторить';
   @override
@@ -211004,7 +211004,7 @@ class _StringsTh extends _StringsEn {
   String get books => 'หนังสือ';
   @override
   String get browser_extension_enable_server_first =>
-      'เคล็ดลับ: เปิด "เซิร์ฟเวอร์ Yomitan API" และตั้งคีย์ API ด้านบนก่อน เพื่อให้ส่วนขยายถูกตั้งค่าเชื่อมต่อที่ใช้งานได้โดยอัตโนมัติ';
+      'เคล็ดลับ: เปิด "เซิร์ฟเวอร์ Fushi API" และตั้งคีย์ API ด้านบนก่อน เพื่อให้ส่วนขยายถูกตั้งค่าเชื่อมต่อที่ใช้งานได้โดยอัตโนมัติ';
   @override
   String get browser_extension_mobile_unsupported =>
       'เบราว์เซอร์บนมือถือไม่สามารถโหลดส่วนขยายนี้ได้ ให้ใช้การค้นหาคำในแอปที่โปรแกรมอ่านหรือเครื่องเล่นวิดีโอแทน';
@@ -211061,7 +211061,7 @@ class _StringsTh extends _StringsEn {
       'ส่วนขยายที่โหลดในเบราว์เซอร์ล้าสมัยแล้ว เตรียมส่วนขยายใหม่หากจำเป็น จากนั้นโหลดใหม่จากหน้าส่วนขยายของเบราว์เซอร์ (chrome://extensions)';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Yomitan API ใน Fushi อีกครั้ง';
+      'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Fushi API อีกครั้ง';
   @override
   String get cancel => 'ยกเลิก';
   @override
@@ -219832,15 +219832,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get word_favorite_removed => 'ลบคำออกจากรายการโปรดแล้ว';
   @override
-  String get yomitan_api_key => 'Yomitan API key (ไม่บังคับ)';
+  String get yomitan_api_key => 'Fushi API key (ไม่บังคับ)';
   @override
-  String get yomitan_api_server => 'เซิร์ฟเวอร์ Yomitan API';
+  String get yomitan_api_server => 'เซิร์ฟเวอร์ Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'ให้ไคลเอนต์ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
+      'ให้ส่วนขยายเบราว์เซอร์และไคลเอนต์ที่เข้ากันได้กับ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
   @override
   String get yomitan_api_server_started =>
-      'เซิร์ฟเวอร์ Yomitan API เริ่มทำงานแล้ว';
+      'เซิร์ฟเวอร์ Fushi API เริ่มทำงานแล้ว';
   @override
   String get yomitan_port_kill_action => 'จบโปรเซสแล้วลองใหม่';
   @override
@@ -228942,7 +228942,7 @@ class _StringsTr extends _StringsEn {
   String get books => 'Kitaplar';
   @override
   String get browser_extension_enable_server_first =>
-      'İpucu: önce "Yomitan API sunucusu"nu etkinleştirin ve yukarıda bir API anahtarı ayarlayın, böylece uzantı çalışan bir bağlantıyla otomatik yapılandırılır.';
+      'İpucu: önce "Fushi API sunucusu"nu etkinleştirin ve yukarıda bir API anahtarı ayarlayın, böylece uzantı çalışan bir bağlantıyla otomatik yapılandırılır.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Mobil tarayıcılar bu uzantıyı yükleyemez. Bunun yerine okuyucu veya video oynatıcıdaki uygulama içi aramayı kullanın.';
@@ -229001,7 +229001,7 @@ class _StringsTr extends _StringsEn {
       'Tarayıcınızda yüklü uzantı güncel değil. Gerekirse uzantıyı yeniden hazırlayın, ardından tarayıcınızın uzantılar sayfasından (chrome://extensions) yeniden yükleyin.';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi\'de Yomitan API sunucusunu tekrar etkinleştirin.';
+      '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi API sunucusunu tekrar etkinleştirin.';
   @override
   String get cancel => 'İptal';
   @override
@@ -237877,14 +237877,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Kelime favorilerden kaldırıldı';
   @override
-  String get yomitan_api_key => 'Yomitan API anahtarı (isteğe bağlı)';
+  String get yomitan_api_key => 'Fushi API anahtarı (isteğe bağlı)';
   @override
-  String get yomitan_api_server => 'Yomitan API sunucusu';
+  String get yomitan_api_server => 'Fushi API sunucusu';
   @override
   String get yomitan_api_server_hint =>
-      'yomitan-api istemcilerinin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
+      'Tarayıcı uzantısının ve yomitan-api uyumlu istemcilerin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
   @override
-  String get yomitan_api_server_started => 'Yomitan API sunucusu başlatıldı';
+  String get yomitan_api_server_started => 'Fushi API sunucusu başlatıldı';
   @override
   String get yomitan_port_kill_action => 'İşlemi sonlandır ve tekrar dene';
   @override
@@ -247050,7 +247050,7 @@ class _StringsVi extends _StringsEn {
   String get books => 'Sách';
   @override
   String get browser_extension_enable_server_first =>
-      'Mẹo: bật "Máy chủ API Yomitan" và đặt khóa API ở trên trước, để tiện ích mở rộng được tự động cấu hình với kết nối hoạt động.';
+      'Mẹo: bật "Máy chủ Fushi API" và đặt khóa API ở trên trước, để tiện ích mở rộng được tự động cấu hình với kết nối hoạt động.';
   @override
   String get browser_extension_mobile_unsupported =>
       'Trình duyệt di động không thể tải tiện ích này. Thay vào đó, hãy dùng tra cứu trong ứng dụng ở trình đọc hoặc trình phát video.';
@@ -247111,7 +247111,7 @@ class _StringsVi extends _StringsEn {
       'Tiện ích mở rộng trong trình duyệt đã lỗi thời. Chuẩn bị lại tiện ích nếu cần, sau đó tải lại từ trang tiện ích mở rộng của trình duyệt (chrome://extensions).';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Yomitan API trong Fushi.';
+      'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Fushi API.';
   @override
   String get cancel => 'Hủy';
   @override
@@ -255948,14 +255948,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get word_favorite_removed => 'Đã xóa từ khỏi yêu thích';
   @override
-  String get yomitan_api_key => 'Yomitan API key (tùy chọn)';
+  String get yomitan_api_key => 'Fushi API key (tùy chọn)';
   @override
-  String get yomitan_api_server => 'Máy chủ Yomitan API';
+  String get yomitan_api_server => 'Máy chủ Fushi API';
   @override
   String get yomitan_api_server_hint =>
-      'Cho phép máy khách yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
+      'Cho phép tiện ích mở rộng trình duyệt và máy khách tương thích yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
   @override
-  String get yomitan_api_server_started => 'Đã khởi động máy chủ API Yomitan';
+  String get yomitan_api_server_started => 'Đã khởi động máy chủ Fushi API';
   @override
   String get yomitan_port_kill_action => 'Kết thúc tiến trình và thử lại';
   @override
@@ -264965,7 +264965,7 @@ class _StringsZhCn extends _StringsEn {
   String get books => '书架';
   @override
   String get browser_extension_enable_server_first =>
-      '提示：请先在上方开启「Yomitan API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
+      '提示：请先在上方开启「Fushi API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
   @override
   String get browser_extension_mobile_unsupported =>
       '手机浏览器无法加载此扩展，请直接在 app 内阅读器/视频中查词。';
@@ -265016,7 +265016,7 @@ class _StringsZhCn extends _StringsEn {
       '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi 的 Yomitan API 服务器。';
+      '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi API 服务器。';
   @override
   String get cancel => '取消';
   @override
@@ -273137,14 +273137,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get word_favorite_removed => '已取消收藏该词';
   @override
-  String get yomitan_api_key => 'Yomitan API 密钥（可选）';
+  String get yomitan_api_key => 'Fushi API 密钥（可选）';
   @override
-  String get yomitan_api_server => 'Yomitan API 服务器';
+  String get yomitan_api_server => 'Fushi API 服务器';
   @override
   String get yomitan_api_server_hint =>
-      '让 yomitan-api 客户端查询 Fushi 词典（端口 19633）';
+      '让浏览器扩展和兼容 yomitan-api 的客户端查询 Fushi 词典（端口 19633）';
   @override
-  String get yomitan_api_server_started => 'Yomitan API 服务器已开启';
+  String get yomitan_api_server_started => 'Fushi API 服务器已开启';
   @override
   String get yomitan_port_kill_action => '结束进程并重试';
   @override
@@ -281448,7 +281448,7 @@ class _StringsZhHk extends _StringsEn {
   String get books => '書架';
   @override
   String get browser_extension_enable_server_first =>
-      '提示：請先在上方開啟「Yomitan API 伺服器」並設定 API 密鑰，擴展才能被自動配置為可用連接。';
+      '提示：請先在上方開啟「Fushi API 伺服器」並設定 API 密鑰，擴展才能被自動配置為可用連接。';
   @override
   String get browser_extension_mobile_unsupported =>
       '手機瀏覽器無法載入此擴充功能，請直接在 app 內閱讀器／影片中查詞。';
@@ -281500,7 +281500,7 @@ class _StringsZhHk extends _StringsEn {
       '瀏覽器中加載的擴展不是最新版本：如有需要先重新準備擴展，再到瀏覽器擴展管理頁（chrome://extensions）點「重新加載」。';
   @override
   String browser_extension_yomitan_port_conflict({required Object port}) =>
-      '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi 的 Yomitan API 伺服器。';
+      '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi API 伺服器。';
   @override
   String get cancel => '取消';
   @override
@@ -289628,14 +289628,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get word_favorite_removed => '已取消收藏該詞';
   @override
-  String get yomitan_api_key => 'Yomitan API 金鑰（可選）';
+  String get yomitan_api_key => 'Fushi API 金鑰（可選）';
   @override
-  String get yomitan_api_server => 'Yomitan API 伺服器';
+  String get yomitan_api_server => 'Fushi API 伺服器';
   @override
   String get yomitan_api_server_hint =>
-      '讓 yomitan-api 客戶端查詢 Fushi 詞典（連接埠 19633）';
+      '讓瀏覽器擴展和兼容 yomitan-api 的客戶端查詢 Fushi 詞典（連接埠 19633）';
   @override
-  String get yomitan_api_server_started => 'Yomitan API 伺服器已開啟';
+  String get yomitan_api_server_started => 'Fushi API 伺服器已開啟';
   @override
   String get yomitan_port_kill_action => '結束進程並重試';
   @override
@@ -298034,7 +298034,7 @@ extension on _StringsEn {
       case 'books':
         return 'Books';
       case 'browser_extension_enable_server_first':
-        return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
+        return 'Tip: enable "Fushi API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobile browsers cannot load this extension. Use in-app lookup in the reader or video player instead.';
       case 'browser_extension_prepare_button':
@@ -298081,7 +298081,7 @@ extension on _StringsEn {
         return 'The extension loaded in your browser is outdated. Prepare the extension again if needed, then reload it from your browser\'s extensions page (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Yomitan API server in Fushi again.';
+            'Port ${port} is in use by another process (usually the yomitan-api component — a Python process launched by your browser). End that process, or disable Yomitan API in Yomitan\'s advanced settings, then enable the Fushi API server again.';
       case 'cancel':
         return 'Cancel';
       case 'card_cover_degraded_to_static':
@@ -305771,13 +305771,13 @@ extension on _StringsEn {
       case 'word_favorite_removed':
         return 'Word removed from favorites';
       case 'yomitan_api_key':
-        return 'Yomitan API key (optional)';
+        return 'Fushi API key (optional)';
       case 'yomitan_api_server':
-        return 'Yomitan API server';
+        return 'Fushi API server';
       case 'yomitan_api_server_hint':
-        return 'Let yomitan-api clients query Fushi\'s dictionaries (port 19633)';
+        return 'Let the browser extension and yomitan-api-compatible clients query Fushi\'s dictionaries (port 19633)';
       case 'yomitan_api_server_started':
-        return 'Yomitan API server started';
+        return 'Fushi API server started';
       case 'yomitan_port_kill_action':
         return 'End process and retry';
       case 'yomitan_port_kill_confirm':
@@ -313416,7 +313416,7 @@ extension on _StringsAr {
       case 'books':
         return 'الكتب';
       case 'browser_extension_enable_server_first':
-        return 'نصيحة: فعّل "خادم Yomitan API" وعيّن مفتاح API أعلاه أولاً، حتى يتم تكوين الإضافة تلقائياً باتصال يعمل.';
+        return 'نصيحة: فعّل "خادم Fushi API" وعيّن مفتاح API أعلاه أولاً، حتى يتم تكوين الإضافة تلقائياً باتصال يعمل.';
       case 'browser_extension_mobile_unsupported':
         return 'لا يمكن لمتصفحات الأجهزة المحمولة تحميل هذا الامتداد. استخدم البحث داخل التطبيق في القارئ أو مشغّل الفيديو بدلاً من ذلك.';
       case 'browser_extension_prepare_button':
@@ -313463,7 +313463,7 @@ extension on _StringsAr {
         return 'الإضافة المحمّلة في متصفحك قديمة. أعد تجهيز الإضافة إذا لزم الأمر، ثم أعد تحميلها من صفحة إضافات متصفحك (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Yomitan API في Fushi مجدداً.';
+            'المنفذ ${port} مستخدم بواسطة عملية أخرى (عادةً مكون yomitan-api — عملية Python أطلقها متصفحك). أنهِ تلك العملية، أو عطّل Yomitan API في الإعدادات المتقدمة لـ Yomitan، ثم فعّل خادم Fushi API مجدداً.';
       case 'cancel':
         return 'إلغاء';
       case 'card_cover_degraded_to_static':
@@ -321147,13 +321147,13 @@ extension on _StringsAr {
       case 'word_favorite_removed':
         return 'تمت إزالة الكلمة من المفضلة';
       case 'yomitan_api_key':
-        return 'مفتاح Yomitan API (اختياري)';
+        return 'مفتاح Fushi API (اختياري)';
       case 'yomitan_api_server':
-        return 'خادم Yomitan API';
+        return 'خادم Fushi API';
       case 'yomitan_api_server_hint':
-        return 'السماح لعملاء yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
+        return 'السماح لإضافة المتصفح والعملاء المتوافقين مع yomitan-api بالبحث في قواميس Fushi (المنفذ 19633)';
       case 'yomitan_api_server_started':
-        return 'تم تشغيل خادم Yomitan API';
+        return 'تم تشغيل خادم Fushi API';
       case 'yomitan_port_kill_action':
         return 'إنهاء العملية وإعادة المحاولة';
       case 'yomitan_port_kill_confirm':
@@ -328808,7 +328808,7 @@ extension on _StringsDe {
       case 'books':
         return 'Bücher';
       case 'browser_extension_enable_server_first':
-        return 'Tipp: Aktiviere zuerst oben den „Yomitan API-Server" und setze einen API-Schlüssel, damit die Erweiterung automatisch mit einer funktionierenden Verbindung konfiguriert wird.';
+        return 'Tipp: Aktiviere zuerst oben den „Fushi-API-Server" und setze einen API-Schlüssel, damit die Erweiterung automatisch mit einer funktionierenden Verbindung konfiguriert wird.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobile Browser können diese Erweiterung nicht laden. Nutze stattdessen die App-interne Suche im Reader oder Videoplayer.';
       case 'browser_extension_prepare_button':
@@ -328855,7 +328855,7 @@ extension on _StringsDe {
         return 'Die im Browser geladene Erweiterung ist veraltet. Bereite die Erweiterung bei Bedarf erneut vor und lade sie dann über die Erweiterungsseite deines Browsers neu (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Yomitan-API-Server in Fushi erneut.';
+            'Port ${port} wird von einem anderen Prozess verwendet (normalerweise die Yomitan-API-Komponente – ein Python-Prozess, der von deinem Browser gestartet wurde). Beende diesen Prozess oder deaktiviere die Yomitan-API in Yomitans erweiterten Einstellungen, dann aktiviere den Fushi-API-Server erneut.';
       case 'cancel':
         return 'Abbrechen';
       case 'card_cover_degraded_to_static':
@@ -336581,13 +336581,13 @@ extension on _StringsDe {
       case 'word_favorite_removed':
         return 'Wort aus Favoriten entfernt';
       case 'yomitan_api_key':
-        return 'Yomitan-API-Schlüssel (optional)';
+        return 'Fushi-API-Schlüssel (optional)';
       case 'yomitan_api_server':
-        return 'Yomitan-API-Server';
+        return 'Fushi-API-Server';
       case 'yomitan_api_server_hint':
-        return 'yomitan-api-Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
+        return 'Browsererweiterung und yomitan-api-kompatible Clients Fushis Wörterbücher abfragen lassen (Port 19633)';
       case 'yomitan_api_server_started':
-        return 'Yomitan-API-Server gestartet';
+        return 'Fushi-API-Server gestartet';
       case 'yomitan_port_kill_action':
         return 'Prozess beenden und erneut versuchen';
       case 'yomitan_port_kill_confirm':
@@ -344256,7 +344256,7 @@ extension on _StringsEs {
       case 'books':
         return 'Libros';
       case 'browser_extension_enable_server_first':
-        return 'Consejo: active primero el "servidor API Yomitan" y establezca una clave API arriba, para que la extensión se configure automáticamente con una conexión funcional.';
+        return 'Consejo: active primero el "servidor Fushi API" y establezca una clave API arriba, para que la extensión se configure automáticamente con una conexión funcional.';
       case 'browser_extension_mobile_unsupported':
         return 'Los navegadores móviles no pueden cargar esta extensión. Usa la búsqueda dentro de la app en el lector o el reproductor de vídeo.';
       case 'browser_extension_prepare_button':
@@ -344303,7 +344303,7 @@ extension on _StringsEs {
         return 'La extensión cargada en su navegador está desactualizada. Prepare la extensión de nuevo si es necesario, luego recárguela desde la página de extensiones del navegador (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor API Yomitan en Fushi.';
+            'El puerto ${port} está en uso por otro proceso (generalmente el componente yomitan-api — un proceso Python lanzado por su navegador). Finalice ese proceso, o desactive la API de Yomitan en la configuración avanzada de Yomitan, luego active de nuevo el servidor Fushi API.';
       case 'cancel':
         return 'Cancelar';
       case 'card_cover_degraded_to_static':
@@ -352020,13 +352020,13 @@ extension on _StringsEs {
       case 'word_favorite_removed':
         return 'Palabra eliminada de favoritos';
       case 'yomitan_api_key':
-        return 'API key de Yomitan (opcional)';
+        return 'Clave de Fushi API (opcional)';
       case 'yomitan_api_server':
-        return 'Servidor API de Yomitan';
+        return 'Servidor Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Permite que los clientes de yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
+        return 'Permite que la extensión del navegador y los clientes compatibles con yomitan-api consulten los diccionarios de Fushi (puerto 19633)';
       case 'yomitan_api_server_started':
-        return 'Servidor API Yomitan iniciado';
+        return 'Servidor Fushi API iniciado';
       case 'yomitan_port_kill_action':
         return 'Finalizar proceso y reintentar';
       case 'yomitan_port_kill_confirm':
@@ -359694,7 +359694,7 @@ extension on _StringsFr {
       case 'books':
         return 'Livres';
       case 'browser_extension_enable_server_first':
-        return 'Conseil : activez d\'abord « Serveur API Yomitan » et définissez une clé API ci-dessus, pour que l\'extension soit configurée automatiquement avec une connexion fonctionnelle.';
+        return 'Conseil : activez d\'abord « Serveur Fushi API » et définissez une clé API ci-dessus, pour que l\'extension soit configurée automatiquement avec une connexion fonctionnelle.';
       case 'browser_extension_mobile_unsupported':
         return 'Les navigateurs mobiles ne peuvent pas charger cette extension. Utilisez plutôt la recherche intégrée dans le lecteur ou le lecteur vidéo.';
       case 'browser_extension_prepare_button':
@@ -359741,7 +359741,7 @@ extension on _StringsFr {
         return 'L\'extension chargée dans votre navigateur est obsolète. Repréparez l\'extension si nécessaire, puis rechargez-la depuis la page des extensions de votre navigateur (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur API Yomitan dans Fushi.';
+            'Le port ${port} est utilisé par un autre processus (généralement le composant yomitan-api — un processus Python lancé par votre navigateur). Fermez ce processus, ou désactivez l\'API Yomitan dans les paramètres avancés de Yomitan, puis réactivez le serveur Fushi API.';
       case 'cancel':
         return 'Annuler';
       case 'card_cover_degraded_to_static':
@@ -367466,13 +367466,13 @@ extension on _StringsFr {
       case 'word_favorite_removed':
         return 'Mot retiré des favoris';
       case 'yomitan_api_key':
-        return 'Clé API Yomitan (facultatif)';
+        return 'Clé Fushi API (facultatif)';
       case 'yomitan_api_server':
-        return 'Serveur API Yomitan';
+        return 'Serveur Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Permet aux clients yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
+        return 'Permet à l\'extension de navigateur et aux clients compatibles yomitan-api d\'interroger les dictionnaires de Fushi (port 19633)';
       case 'yomitan_api_server_started':
-        return 'Serveur API Yomitan démarré';
+        return 'Serveur Fushi API démarré';
       case 'yomitan_port_kill_action':
         return 'Arrêter le processus et réessayer';
       case 'yomitan_port_kill_confirm':
@@ -375139,7 +375139,7 @@ extension on _StringsId {
       case 'books':
         return 'Buku';
       case 'browser_extension_enable_server_first':
-        return 'Tips: aktifkan "Server API Yomitan" dan atur kunci API di atas terlebih dahulu, agar ekstensi otomatis terkonfigurasi dengan koneksi yang berfungsi.';
+        return 'Tips: aktifkan "Server Fushi API" dan atur kunci API di atas terlebih dahulu, agar ekstensi otomatis terkonfigurasi dengan koneksi yang berfungsi.';
       case 'browser_extension_mobile_unsupported':
         return 'Peramban seluler tidak dapat memuat ekstensi ini. Gunakan pencarian dalam aplikasi di pembaca atau pemutar video sebagai gantinya.';
       case 'browser_extension_prepare_button':
@@ -375186,7 +375186,7 @@ extension on _StringsId {
         return 'Ekstensi yang dimuat di browser Anda sudah usang. Siapkan ulang ekstensi jika perlu, lalu muat ulang dari halaman ekstensi browser Anda (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server API Yomitan di Fushi.';
+            'Port ${port} sedang digunakan oleh proses lain (biasanya komponen yomitan-api — proses Python yang diluncurkan oleh browser Anda). Akhiri proses tersebut, atau nonaktifkan API Yomitan di pengaturan lanjutan Yomitan, lalu aktifkan kembali server Fushi API.';
       case 'cancel':
         return 'Batal';
       case 'card_cover_degraded_to_static':
@@ -382883,13 +382883,13 @@ extension on _StringsId {
       case 'word_favorite_removed':
         return 'Kata dihapus dari favorit';
       case 'yomitan_api_key':
-        return 'Yomitan API key (opsional)';
+        return 'Fushi API key (opsional)';
       case 'yomitan_api_server':
-        return 'Server Yomitan API';
+        return 'Server Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Izinkan klien yomitan-api mencari di kamus Fushi (port 19633)';
+        return 'Izinkan ekstensi browser dan klien yang kompatibel dengan yomitan-api mencari di kamus Fushi (port 19633)';
       case 'yomitan_api_server_started':
-        return 'Server API Yomitan dimulai';
+        return 'Server Fushi API dimulai';
       case 'yomitan_port_kill_action':
         return 'Akhiri proses dan coba lagi';
       case 'yomitan_port_kill_confirm':
@@ -390539,7 +390539,7 @@ extension on _StringsIt {
       case 'books':
         return 'Libri';
       case 'browser_extension_enable_server_first':
-        return 'Suggerimento: abilita prima "Server API Yomitan" e imposta una chiave API sopra, così l\'estensione viene configurata automaticamente con una connessione funzionante.';
+        return 'Suggerimento: abilita prima "Server Fushi API" e imposta una chiave API sopra, così l\'estensione viene configurata automaticamente con una connessione funzionante.';
       case 'browser_extension_mobile_unsupported':
         return 'I browser mobili non possono caricare questa estensione. Usa invece la ricerca nell\'app nel lettore o nel player video.';
       case 'browser_extension_prepare_button':
@@ -390586,7 +390586,7 @@ extension on _StringsIt {
         return 'L\'estensione caricata nel browser è obsoleta. Ri-prepara l\'estensione se necessario, poi ricaricala dalla pagina estensioni del browser (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server API Yomitan in Fushi.';
+            'La porta ${port} è in uso da un altro processo (di solito il componente yomitan-api — un processo Python avviato dal browser). Termina quel processo, o disabilita Yomitan API nelle impostazioni avanzate di Yomitan, poi riabilita il server Fushi API.';
       case 'cancel':
         return 'Annulla';
       case 'card_cover_degraded_to_static':
@@ -398305,13 +398305,13 @@ extension on _StringsIt {
       case 'word_favorite_removed':
         return 'Parola rimossa dai preferiti';
       case 'yomitan_api_key':
-        return 'API key Yomitan (opzionale)';
+        return 'Chiave Fushi API (opzionale)';
       case 'yomitan_api_server':
-        return 'Server API Yomitan';
+        return 'Server Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Consenti ai client yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
+        return 'Consenti all\'estensione del browser e ai client compatibili con yomitan-api di interrogare i dizionari di Fushi (porta 19633)';
       case 'yomitan_api_server_started':
-        return 'Server API Yomitan avviato';
+        return 'Server Fushi API avviato';
       case 'yomitan_port_kill_action':
         return 'Termina processo e riprova';
       case 'yomitan_port_kill_confirm':
@@ -405954,7 +405954,7 @@ extension on _StringsJa {
       case 'books':
         return '本';
       case 'browser_extension_enable_server_first':
-        return 'ヒント：先に「Yomitan API サーバー」を有効にし、上で API キーを設定すると、拡張機能が自動で接続設定されます。';
+        return 'ヒント：先に「Fushi API サーバー」を有効にし、上で API キーを設定すると、拡張機能が自動で接続設定されます。';
       case 'browser_extension_mobile_unsupported':
         return 'モバイルブラウザーではこの拡張機能を読み込めません。代わりにアプリ内のリーダーや動画プレーヤーで辞書引きしてください。';
       case 'browser_extension_prepare_button':
@@ -406001,7 +406001,7 @@ extension on _StringsJa {
         return 'ブラウザに読み込まれた拡張機能が古くなっています。必要に応じて拡張機能を再度準備してから、ブラウザの拡張機能ページ（chrome://extensions）から再読み込みしてください。';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi で Yomitan API サーバーを再度有効にしてください。';
+            'ポート ${port} が別のプロセス（通常はブラウザが起動した yomitan-api コンポーネント — Python プロセス）で使用されています。そのプロセスを終了するか、Yomitan の詳細設定で Yomitan API を無効にしてから、Fushi API サーバーを再度有効にしてください。';
       case 'cancel':
         return 'キャンセル';
       case 'card_cover_degraded_to_static':
@@ -413656,13 +413656,13 @@ extension on _StringsJa {
       case 'word_favorite_removed':
         return '単語をお気に入りから削除しました';
       case 'yomitan_api_key':
-        return 'Yomitan API キー（任意）';
+        return 'Fushi API キー（任意）';
       case 'yomitan_api_server':
-        return 'Yomitan API サーバー';
+        return 'Fushi API サーバー';
       case 'yomitan_api_server_hint':
-        return 'yomitan-api クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
+        return 'ブラウザ拡張機能や yomitan-api 互換クライアントから Fushi の辞書を検索できるようにします（ポート 19633）';
       case 'yomitan_api_server_started':
-        return 'Yomitan APIサーバーが起動しました';
+        return 'Fushi API サーバーが起動しました';
       case 'yomitan_port_kill_action':
         return 'プロセスを終了して再試行';
       case 'yomitan_port_kill_confirm':
@@ -421260,7 +421260,7 @@ extension on _StringsKo {
       case 'books':
         return '책';
       case 'browser_extension_enable_server_first':
-        return '팁: 먼저 위에서 "Yomitan API 서버"를 활성화하고 API 키를 설정하면 확장 프로그램이 자동으로 연결 구성됩니다.';
+        return '팁: 먼저 위에서 "Fushi API 서버"를 활성화하고 API 키를 설정하면 확장 프로그램이 자동으로 연결 구성됩니다.';
       case 'browser_extension_mobile_unsupported':
         return '모바일 브라우저에서는 이 확장 프로그램을 로드할 수 없습니다. 대신 앱 내 리더나 동영상 플레이어에서 사전 검색을 사용하세요.';
       case 'browser_extension_prepare_button':
@@ -421307,7 +421307,7 @@ extension on _StringsKo {
         return '브라우저에 로드된 확장 프로그램이 오래되었습니다. 필요한 경우 확장 프로그램을 다시 준비한 후 브라우저 확장 프로그램 페이지(chrome://extensions)에서 다시 로드하세요.';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi에서 Yomitan API 서버를 다시 활성화하세요.';
+            '포트 ${port}가 다른 프로세스에서 사용 중입니다 (보통 yomitan-api 컴포넌트 — 브라우저가 실행한 Python 프로세스). 해당 프로세스를 종료하거나 Yomitan 고급 설정에서 Yomitan API를 비활성화한 후 Fushi API 서버를 다시 활성화하세요.';
       case 'cancel':
         return '취소';
       case 'card_cover_degraded_to_static':
@@ -428967,13 +428967,13 @@ extension on _StringsKo {
       case 'word_favorite_removed':
         return '단어가 즐겨찾기에서 삭제되었습니다';
       case 'yomitan_api_key':
-        return 'Yomitan API key(선택)';
+        return 'Fushi API key(선택)';
       case 'yomitan_api_server':
-        return 'Yomitan API 서버';
+        return 'Fushi API 서버';
       case 'yomitan_api_server_hint':
-        return 'yomitan-api 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
+        return '브라우저 확장 프로그램과 yomitan-api 호환 클라이언트가 Fushi 사전을 조회하도록 허용합니다(포트 19633)';
       case 'yomitan_api_server_started':
-        return 'Yomitan API 서버가 시작되었습니다';
+        return 'Fushi API 서버가 시작되었습니다';
       case 'yomitan_port_kill_action':
         return '프로세스를 종료하고 재시도';
       case 'yomitan_port_kill_confirm':
@@ -436590,7 +436590,7 @@ extension on _StringsNl {
       case 'books':
         return 'Boeken';
       case 'browser_extension_enable_server_first':
-        return 'Tip: schakel eerst "Yomitan API-server" in en stel hierboven een API-sleutel in, zodat de extensie automatisch geconfigureerd wordt met een werkende verbinding.';
+        return 'Tip: schakel eerst "Fushi API-server" in en stel hierboven een API-sleutel in, zodat de extensie automatisch geconfigureerd wordt met een werkende verbinding.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobiele browsers kunnen deze extensie niet laden. Gebruik in plaats daarvan het opzoeken in de app in de lezer of videospeler.';
       case 'browser_extension_prepare_button':
@@ -436637,7 +436637,7 @@ extension on _StringsNl {
         return 'De extensie in je browser is verouderd. Bereid de extensie indien nodig opnieuw voor en herlaad deze vanuit je browser-extensiepagina (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Yomitan API-server in Fushi opnieuw in.';
+            'Poort ${port} is in gebruik door een ander proces (meestal de yomitan-api-component — een Python-proces gestart door je browser). Beëindig dat proces, of schakel Yomitan API uit in de geavanceerde instellingen van Yomitan, en schakel de Fushi API-server opnieuw in.';
       case 'cancel':
         return 'Annuleren';
       case 'card_cover_degraded_to_static':
@@ -444355,13 +444355,13 @@ extension on _StringsNl {
       case 'word_favorite_removed':
         return 'Woord verwijderd uit favorieten';
       case 'yomitan_api_key':
-        return 'Yomitan API-sleutel (optioneel)';
+        return 'Fushi API-sleutel (optioneel)';
       case 'yomitan_api_server':
-        return 'Yomitan API-server';
+        return 'Fushi API-server';
       case 'yomitan_api_server_hint':
-        return 'Laat yomitan-api-clients de woordenboeken van Fushi opvragen (poort 19633)';
+        return 'Laat de browserextensie en yomitan-api-compatibele clients de woordenboeken van Fushi opvragen (poort 19633)';
       case 'yomitan_api_server_started':
-        return 'Yomitan API-server gestart';
+        return 'Fushi API-server gestart';
       case 'yomitan_port_kill_action':
         return 'Proces beëindigen en opnieuw proberen';
       case 'yomitan_port_kill_confirm':
@@ -452021,7 +452021,7 @@ extension on _StringsPtBr {
       case 'books':
         return 'Livros';
       case 'browser_extension_enable_server_first':
-        return 'Dica: ative o "Servidor de API Yomitan" e defina uma chave de API acima primeiro, para que a extensão seja configurada automaticamente com uma conexão funcional.';
+        return 'Dica: ative o "Servidor da Fushi API" e defina uma chave de API acima primeiro, para que a extensão seja configurada automaticamente com uma conexão funcional.';
       case 'browser_extension_mobile_unsupported':
         return 'Navegadores móveis não conseguem carregar esta extensão. Use a busca no app no leitor ou no player de vídeo.';
       case 'browser_extension_prepare_button':
@@ -452068,7 +452068,7 @@ extension on _StringsPtBr {
         return 'A extensão carregada no navegador está desatualizada. Prepare a extensão novamente se necessário e recarregue-a na página de extensões (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor de API Yomitan no Fushi novamente.';
+            'A porta ${port} está em uso por outro processo (geralmente o componente yomitan-api — um processo Python iniciado pelo navegador). Encerre esse processo ou desative a API Yomitan nas configurações avançadas do Yomitan e ative o servidor da Fushi API novamente.';
       case 'cancel':
         return 'Cancelar';
       case 'card_cover_degraded_to_static':
@@ -459777,13 +459777,13 @@ extension on _StringsPtBr {
       case 'word_favorite_removed':
         return 'Palavra removida dos favoritos';
       case 'yomitan_api_key':
-        return 'Chave da Yomitan API (opcional)';
+        return 'Chave da Fushi API (opcional)';
       case 'yomitan_api_server':
-        return 'Servidor da Yomitan API';
+        return 'Servidor da Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Permite que clientes do yomitan-api consultem os dicionários do Fushi (porta 19633)';
+        return 'Permite que a extensão do navegador e clientes compatíveis com yomitan-api consultem os dicionários do Fushi (porta 19633)';
       case 'yomitan_api_server_started':
-        return 'Servidor de API Yomitan iniciado';
+        return 'Servidor da Fushi API iniciado';
       case 'yomitan_port_kill_action':
         return 'Encerrar processo e tentar novamente';
       case 'yomitan_port_kill_confirm':
@@ -467446,7 +467446,7 @@ extension on _StringsRu {
       case 'books':
         return 'Книги';
       case 'browser_extension_enable_server_first':
-        return 'Совет: сначала включите «Сервер API Yomitan» и задайте API-ключ выше, чтобы расширение автоматически настроилось с рабочим подключением.';
+        return 'Совет: сначала включите «Сервер Fushi API» и задайте API-ключ выше, чтобы расширение автоматически настроилось с рабочим подключением.';
       case 'browser_extension_mobile_unsupported':
         return 'Мобильные браузеры не могут загрузить это расширение. Используйте поиск в приложении — в читалке или видеоплеере.';
       case 'browser_extension_prepare_button':
@@ -467493,7 +467493,7 @@ extension on _StringsRu {
         return 'Расширение в браузере устарело. При необходимости переподготовьте расширение, затем перезагрузите его на странице расширений браузера (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Yomitan API в Fushi.';
+            'Порт ${port} используется другим процессом (обычно компонент yomitan-api — Python-процесс, запущенный браузером). Завершите этот процесс или отключите Yomitan API в расширенных настройках Yomitan, затем снова включите сервер Fushi API.';
       case 'cancel':
         return 'Отмена';
       case 'card_cover_degraded_to_static':
@@ -475204,13 +475204,13 @@ extension on _StringsRu {
       case 'word_favorite_removed':
         return 'Слово удалено из избранного';
       case 'yomitan_api_key':
-        return 'Ключ Yomitan API (необязательно)';
+        return 'Ключ Fushi API (необязательно)';
       case 'yomitan_api_server':
-        return 'Сервер Yomitan API';
+        return 'Сервер Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Разрешить клиентам yomitan-api запрашивать словари Fushi (порт 19633)';
+        return 'Разрешить расширению браузера и клиентам, совместимым с yomitan-api, запрашивать словари Fushi (порт 19633)';
       case 'yomitan_api_server_started':
-        return 'Сервер Yomitan API запущен';
+        return 'Сервер Fushi API запущен';
       case 'yomitan_port_kill_action':
         return 'Завершить процесс и повторить';
       case 'yomitan_port_kill_confirm':
@@ -482859,7 +482859,7 @@ extension on _StringsTh {
       case 'books':
         return 'หนังสือ';
       case 'browser_extension_enable_server_first':
-        return 'เคล็ดลับ: เปิด "เซิร์ฟเวอร์ Yomitan API" และตั้งคีย์ API ด้านบนก่อน เพื่อให้ส่วนขยายถูกตั้งค่าเชื่อมต่อที่ใช้งานได้โดยอัตโนมัติ';
+        return 'เคล็ดลับ: เปิด "เซิร์ฟเวอร์ Fushi API" และตั้งคีย์ API ด้านบนก่อน เพื่อให้ส่วนขยายถูกตั้งค่าเชื่อมต่อที่ใช้งานได้โดยอัตโนมัติ';
       case 'browser_extension_mobile_unsupported':
         return 'เบราว์เซอร์บนมือถือไม่สามารถโหลดส่วนขยายนี้ได้ ให้ใช้การค้นหาคำในแอปที่โปรแกรมอ่านหรือเครื่องเล่นวิดีโอแทน';
       case 'browser_extension_prepare_button':
@@ -482906,7 +482906,7 @@ extension on _StringsTh {
         return 'ส่วนขยายที่โหลดในเบราว์เซอร์ล้าสมัยแล้ว เตรียมส่วนขยายใหม่หากจำเป็น จากนั้นโหลดใหม่จากหน้าส่วนขยายของเบราว์เซอร์ (chrome://extensions)';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Yomitan API ใน Fushi อีกครั้ง';
+            'พอร์ต ${port} กำลังถูกใช้งานโดยกระบวนการอื่น (โดยปกติคือส่วนประกอบ yomitan-api — กระบวนการ Python ที่เบราว์เซอร์เปิดใช้) หยุดกระบวนการนั้น หรือปิดใช้งาน Yomitan API ในการตั้งค่าขั้นสูงของ Yomitan จากนั้นเปิดเซิร์ฟเวอร์ Fushi API อีกครั้ง';
       case 'cancel':
         return 'ยกเลิก';
       case 'card_cover_degraded_to_static':
@@ -490595,13 +490595,13 @@ extension on _StringsTh {
       case 'word_favorite_removed':
         return 'ลบคำออกจากรายการโปรดแล้ว';
       case 'yomitan_api_key':
-        return 'Yomitan API key (ไม่บังคับ)';
+        return 'Fushi API key (ไม่บังคับ)';
       case 'yomitan_api_server':
-        return 'เซิร์ฟเวอร์ Yomitan API';
+        return 'เซิร์ฟเวอร์ Fushi API';
       case 'yomitan_api_server_hint':
-        return 'ให้ไคลเอนต์ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
+        return 'ให้ส่วนขยายเบราว์เซอร์และไคลเอนต์ที่เข้ากันได้กับ yomitan-api ค้นพจนานุกรมของ Fushi ได้ (พอร์ต 19633)';
       case 'yomitan_api_server_started':
-        return 'เซิร์ฟเวอร์ Yomitan API เริ่มทำงานแล้ว';
+        return 'เซิร์ฟเวอร์ Fushi API เริ่มทำงานแล้ว';
       case 'yomitan_port_kill_action':
         return 'จบโปรเซสแล้วลองใหม่';
       case 'yomitan_port_kill_confirm':
@@ -498247,7 +498247,7 @@ extension on _StringsTr {
       case 'books':
         return 'Kitaplar';
       case 'browser_extension_enable_server_first':
-        return 'İpucu: önce "Yomitan API sunucusu"nu etkinleştirin ve yukarıda bir API anahtarı ayarlayın, böylece uzantı çalışan bir bağlantıyla otomatik yapılandırılır.';
+        return 'İpucu: önce "Fushi API sunucusu"nu etkinleştirin ve yukarıda bir API anahtarı ayarlayın, böylece uzantı çalışan bir bağlantıyla otomatik yapılandırılır.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobil tarayıcılar bu uzantıyı yükleyemez. Bunun yerine okuyucu veya video oynatıcıdaki uygulama içi aramayı kullanın.';
       case 'browser_extension_prepare_button':
@@ -498294,7 +498294,7 @@ extension on _StringsTr {
         return 'Tarayıcınızda yüklü uzantı güncel değil. Gerekirse uzantıyı yeniden hazırlayın, ardından tarayıcınızın uzantılar sayfasından (chrome://extensions) yeniden yükleyin.';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi\'de Yomitan API sunucusunu tekrar etkinleştirin.';
+            '${port} bağlantı noktası başka bir işlem tarafından kullanılıyor (genellikle yomitan-api bileşeni — tarayıcınız tarafından başlatılan bir Python işlemi). Bu işlemi sonlandırın veya Yomitan\'ın gelişmiş ayarlarında Yomitan API\'yi devre dışı bırakın, ardından Fushi API sunucusunu tekrar etkinleştirin.';
       case 'cancel':
         return 'İptal';
       case 'card_cover_degraded_to_static':
@@ -505995,13 +505995,13 @@ extension on _StringsTr {
       case 'word_favorite_removed':
         return 'Kelime favorilerden kaldırıldı';
       case 'yomitan_api_key':
-        return 'Yomitan API anahtarı (isteğe bağlı)';
+        return 'Fushi API anahtarı (isteğe bağlı)';
       case 'yomitan_api_server':
-        return 'Yomitan API sunucusu';
+        return 'Fushi API sunucusu';
       case 'yomitan_api_server_hint':
-        return 'yomitan-api istemcilerinin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
+        return 'Tarayıcı uzantısının ve yomitan-api uyumlu istemcilerin Fushi sözlüklerini sorgulamasına izin ver (port 19633)';
       case 'yomitan_api_server_started':
-        return 'Yomitan API sunucusu başlatıldı';
+        return 'Fushi API sunucusu başlatıldı';
       case 'yomitan_port_kill_action':
         return 'İşlemi sonlandır ve tekrar dene';
       case 'yomitan_port_kill_confirm':
@@ -513656,7 +513656,7 @@ extension on _StringsVi {
       case 'books':
         return 'Sách';
       case 'browser_extension_enable_server_first':
-        return 'Mẹo: bật "Máy chủ API Yomitan" và đặt khóa API ở trên trước, để tiện ích mở rộng được tự động cấu hình với kết nối hoạt động.';
+        return 'Mẹo: bật "Máy chủ Fushi API" và đặt khóa API ở trên trước, để tiện ích mở rộng được tự động cấu hình với kết nối hoạt động.';
       case 'browser_extension_mobile_unsupported':
         return 'Trình duyệt di động không thể tải tiện ích này. Thay vào đó, hãy dùng tra cứu trong ứng dụng ở trình đọc hoặc trình phát video.';
       case 'browser_extension_prepare_button':
@@ -513703,7 +513703,7 @@ extension on _StringsVi {
         return 'Tiện ích mở rộng trong trình duyệt đã lỗi thời. Chuẩn bị lại tiện ích nếu cần, sau đó tải lại từ trang tiện ích mở rộng của trình duyệt (chrome://extensions).';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Yomitan API trong Fushi.';
+            'Cổng ${port} đang được sử dụng bởi tiến trình khác (thường là thành phần yomitan-api — một tiến trình Python được trình duyệt khởi chạy). Kết thúc tiến trình đó, hoặc tắt Yomitan API trong cài đặt nâng cao của Yomitan, sau đó bật lại máy chủ Fushi API.';
       case 'cancel':
         return 'Hủy';
       case 'card_cover_degraded_to_static':
@@ -521400,13 +521400,13 @@ extension on _StringsVi {
       case 'word_favorite_removed':
         return 'Đã xóa từ khỏi yêu thích';
       case 'yomitan_api_key':
-        return 'Yomitan API key (tùy chọn)';
+        return 'Fushi API key (tùy chọn)';
       case 'yomitan_api_server':
-        return 'Máy chủ Yomitan API';
+        return 'Máy chủ Fushi API';
       case 'yomitan_api_server_hint':
-        return 'Cho phép máy khách yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
+        return 'Cho phép tiện ích mở rộng trình duyệt và máy khách tương thích yomitan-api truy vấn từ điển của Fushi (cổng 19633)';
       case 'yomitan_api_server_started':
-        return 'Đã khởi động máy chủ API Yomitan';
+        return 'Đã khởi động máy chủ Fushi API';
       case 'yomitan_port_kill_action':
         return 'Kết thúc tiến trình và thử lại';
       case 'yomitan_port_kill_confirm':
@@ -529028,7 +529028,7 @@ extension on _StringsZhCn {
       case 'books':
         return '书架';
       case 'browser_extension_enable_server_first':
-        return '提示：请先在上方开启「Yomitan API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
+        return '提示：请先在上方开启「Fushi API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
       case 'browser_extension_mobile_unsupported':
         return '手机浏览器无法加载此扩展，请直接在 app 内阅读器/视频中查词。';
       case 'browser_extension_prepare_button':
@@ -529075,7 +529075,7 @@ extension on _StringsZhCn {
         return '浏览器中加载的扩展不是最新版本：如有需要先重新准备扩展，再到浏览器扩展管理页（chrome://extensions）点「重新加载」。';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi 的 Yomitan API 服务器。';
+            '端口 ${port} 正被其他进程占用（通常是浏览器拉起的 yomitan-api 组件，即一个 Python 进程）。可直接结束该进程，或在 Yomitan 高级设置中关闭 Yomitan API，然后重新开启 Fushi API 服务器。';
       case 'cancel':
         return '取消';
       case 'card_cover_degraded_to_static':
@@ -536713,13 +536713,13 @@ extension on _StringsZhCn {
       case 'word_favorite_removed':
         return '已取消收藏该词';
       case 'yomitan_api_key':
-        return 'Yomitan API 密钥（可选）';
+        return 'Fushi API 密钥（可选）';
       case 'yomitan_api_server':
-        return 'Yomitan API 服务器';
+        return 'Fushi API 服务器';
       case 'yomitan_api_server_hint':
-        return '让 yomitan-api 客户端查询 Fushi 词典（端口 19633）';
+        return '让浏览器扩展和兼容 yomitan-api 的客户端查询 Fushi 词典（端口 19633）';
       case 'yomitan_api_server_started':
-        return 'Yomitan API 服务器已开启';
+        return 'Fushi API 服务器已开启';
       case 'yomitan_port_kill_action':
         return '结束进程并重试';
       case 'yomitan_port_kill_confirm':
@@ -544254,7 +544254,7 @@ extension on _StringsZhHk {
       case 'books':
         return '書架';
       case 'browser_extension_enable_server_first':
-        return '提示：請先在上方開啟「Yomitan API 伺服器」並設定 API 密鑰，擴展才能被自動配置為可用連接。';
+        return '提示：請先在上方開啟「Fushi API 伺服器」並設定 API 密鑰，擴展才能被自動配置為可用連接。';
       case 'browser_extension_mobile_unsupported':
         return '手機瀏覽器無法載入此擴充功能，請直接在 app 內閱讀器／影片中查詞。';
       case 'browser_extension_prepare_button':
@@ -544301,7 +544301,7 @@ extension on _StringsZhHk {
         return '瀏覽器中加載的擴展不是最新版本：如有需要先重新準備擴展，再到瀏覽器擴展管理頁（chrome://extensions）點「重新加載」。';
       case 'browser_extension_yomitan_port_conflict':
         return ({required Object port}) =>
-            '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi 的 Yomitan API 伺服器。';
+            '端口 ${port} 正被其他進程佔用（通常是瀏覽器拉起的 yomitan-api 組件，即一個 Python 進程）。可直接結束該進程，或在 Yomitan 高級設定中關閉 Yomitan API，然後重新開啟 Fushi API 伺服器。';
       case 'cancel':
         return '取消';
       case 'card_cover_degraded_to_static':
@@ -551940,13 +551940,13 @@ extension on _StringsZhHk {
       case 'word_favorite_removed':
         return '已取消收藏該詞';
       case 'yomitan_api_key':
-        return 'Yomitan API 金鑰（可選）';
+        return 'Fushi API 金鑰（可選）';
       case 'yomitan_api_server':
-        return 'Yomitan API 伺服器';
+        return 'Fushi API 伺服器';
       case 'yomitan_api_server_hint':
-        return '讓 yomitan-api 客戶端查詢 Fushi 詞典（連接埠 19633）';
+        return '讓瀏覽器擴展和兼容 yomitan-api 的客戶端查詢 Fushi 詞典（連接埠 19633）';
       case 'yomitan_api_server_started':
-        return 'Yomitan API 伺服器已開啟';
+        return 'Fushi API 伺服器已開啟';
       case 'yomitan_port_kill_action':
         return '結束進程並重試';
       case 'yomitan_port_kill_confirm':
