@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127211 (7483 per locale)
+/// Strings: 129574 (7622 per locale)
 ///
-/// Built on 2026-10-14 at 12:49 UTC
+/// Built on 2026-10-14 at 15:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10813,6 +10813,181 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  String get nav_srs => 'Review';
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  String get srs_import_coming_soon => 'Import is coming soon';
+  String get srs_import => 'Import';
+  String get srs_count_new => 'New';
+  String get srs_count_learn => 'Learning';
+  String get srs_count_review => 'Due';
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  String get srs_deck_new => 'New deck';
+  String get srs_deck_new_child => 'New subdeck';
+  String get srs_deck_name => 'Deck name';
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  String get srs_deck_rename => 'Rename deck';
+  String get srs_deck_settings => 'Deck settings';
+  String get srs_deck_delete => 'Delete deck';
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_menu => 'More actions';
+  String get srs_day_boundary_title => 'When does the day start';
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  String get srs_empty_title => 'Add your first card';
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  String get srs_empty_action => 'Add a card';
+  String get srs_conflicts_title => 'Sync conflicts';
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  String get srs_conflicts_empty => 'No sync conflicts';
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  String get srs_conflicts_settings => 'Replaced settings';
+  String get srs_conflict_current => 'Current';
+  String get srs_conflict_replaced => 'Replaced';
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  String get srs_conflict_revert => 'Switch back';
+  String get srs_conflict_confirm => 'Keep current';
+  String get srs_conflict_confirm_all => 'Keep all current';
+  String get srs_conflict_profile => 'Review settings';
+  String get srs_key_name => 'Name';
+  String get srs_key_limits => 'Daily limits';
+  String get srs_key_steps => 'Learning steps';
+  String get srs_key_params => 'Scheduling parameters';
+  String get srs_key_parent => 'Parent deck';
+  String get srs_key_deck => 'Deck';
+  String get srs_key_rollover => 'Day start';
+  String get srs_key_deleted => 'Deleted';
+  String get srs_value_yes => 'Yes';
+  String get srs_value_no => 'No';
+  String get srs_flag_none => 'No flag';
+  String get srs_flag_red => 'Red';
+  String get srs_flag_orange => 'Orange';
+  String get srs_flag_green => 'Green';
+  String get srs_flag_blue => 'Blue';
+  String get srs_flag_pink => 'Pink';
+  String get srs_flag_turquoise => 'Turquoise';
+  String get srs_flag_purple => 'Purple';
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  String get srs_review_show_answer => 'Show answer';
+  String get srs_rating_again => 'Again';
+  String get srs_rating_hard => 'Hard';
+  String get srs_rating_good => 'Good';
+  String get srs_rating_easy => 'Easy';
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  String get srs_review_pending_decision => 'Needs your decision';
+  String get srs_review_done => 'All done for today';
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  String get srs_review_back_to_decks => 'Back to decks';
+  String get srs_card_suspend => 'Suspend';
+  String get srs_card_bury => 'Bury until tomorrow';
+  String get srs_card_flag => 'Flag';
+  String get srs_card_move => 'Move to deck';
+  String get srs_card_reset => 'Reset to new';
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  String get srs_note_add => 'Add note';
+  String get srs_note_add_action => 'Add';
+  String get srs_note_added => 'Added';
+  String get srs_note_edit => 'Edit note';
+  String get srs_note_save => 'Save';
+  String get srs_note_delete => 'Delete note';
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  String get srs_note_type => 'Note type';
+  String get srs_note_deck => 'Deck';
+  String get srs_note_tags => 'Tags';
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  String get srs_note_use_candidate => 'Use this value';
+  String get srs_note_deleted => 'This note was deleted.';
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  String get srs_note_restore => 'Restore';
+  String get srs_note_confirm_delete => 'Confirm delete';
+  String get srs_browse_title => 'Browse';
+  String srs_browse_count({required Object n}) => '${n} notes';
+  String get srs_browse_search_hint => 'Search notes';
+  String get srs_browse_empty => 'No notes found';
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  String get srs_browse_suspended => 'Cards suspended';
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  String get srs_settings_save => 'Save';
+  String get srs_settings_saved => 'Deck settings saved';
+  String get srs_settings_new_per_day => 'New cards per day';
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  String get srs_settings_retention => 'Target retention';
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  String get srs_settings_advanced => 'Advanced';
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  String get srs_settings_params_inherit => 'Same as parent';
+  String get srs_settings_params_own => 'Own settings';
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  String get onboarding_srs_title => 'Fushi review';
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  String get onboarding_srs_mining_title => 'From mining to review';
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  String get onboarding_srs_action => 'Open decks';
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -28902,6 +29077,320 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -47381,6 +47870,320 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -65920,6 +66723,320 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -84539,6 +85656,320 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -102811,6 +104242,320 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -121249,6 +122994,320 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -138687,6 +140746,320 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -156160,6 +158533,320 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -174546,6 +177233,320 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -193001,6 +196002,320 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -211401,6 +214716,320 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -229479,6 +233108,320 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -247760,6 +251703,320 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -265968,6 +270225,320 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 // Path: <root>
@@ -282593,6 +287164,293 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       '本次播放未装载（重新打开视频后生效）';
+  @override
+  String get nav_srs => '复习';
+  @override
+  String get srs_module_switch_hint => 'Fushi 内置间隔复习：牌组、FSRS-7 排程、多设备复习';
+  @override
+  String get srs_import_coming_soon => '导入即将提供';
+  @override
+  String get srs_import => '导入';
+  @override
+  String get srs_count_new => '新卡';
+  @override
+  String get srs_count_learn => '学习中';
+  @override
+  String get srs_count_review => '到期';
+  @override
+  String srs_deck_new_reduced({required Object n}) => '今天到期较多，新卡减为 ${n} 张';
+  @override
+  String get srs_deck_new_paused => '今天到期较多，暂停出新卡';
+  @override
+  String get srs_deck_new => '新建牌组';
+  @override
+  String get srs_deck_new_child => '新建子牌组';
+  @override
+  String get srs_deck_name => '牌组名称';
+  @override
+  String get srs_deck_name_invalid => '牌组名称不能包含 ::';
+  @override
+  String get srs_deck_rename => '重命名牌组';
+  @override
+  String get srs_deck_settings => '牌组设置';
+  @override
+  String get srs_deck_delete => '删除牌组';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      '删除「${name}」及其子牌组？其中的卡片会移到上级牌组（没有上级则移到默认牌组）。';
+  @override
+  String get srs_deck_menu => '更多操作';
+  @override
+  String get srs_day_boundary_title => '复习的「今天」从几点开始';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      '复习的「今天」在每天 ${hour} 点切换，与统计页共用同一个日界（在统计页的设置按钮里修改）。在这个时刻之前做的复习算前一天。';
+  @override
+  String get srs_engine_unavailable => '本机的排程内核不可用：可以浏览和编辑卡片，但暂时不能复习。';
+  @override
+  String get srs_empty_title => '添加第一张卡';
+  @override
+  String get srs_empty_body => '往默认牌组里加一条笔记，它就会出现在这里等你复习。阅读时制的卡也可以直接进入复习。';
+  @override
+  String get srs_empty_action => '添加卡片';
+  @override
+  String get srs_conflicts_title => '同步冲突';
+  @override
+  String srs_conflicts_title_count({required Object n}) => '同步冲突（${n}）';
+  @override
+  String get srs_conflicts_empty => '没有同步冲突';
+  @override
+  String get srs_conflicts_empty_hint =>
+      '两台设备同时改了同一项设置时，被替换掉的那个值会出现在这里，可以一键改回。';
+  @override
+  String get srs_conflicts_pending_notes => '等你决定的笔记';
+  @override
+  String get srs_conflicts_settings => '被替换的设置';
+  @override
+  String get srs_conflict_current => '当前生效';
+  @override
+  String get srs_conflict_replaced => '被替换';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      '设备 ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => '改回';
+  @override
+  String get srs_conflict_confirm => '确认';
+  @override
+  String get srs_conflict_confirm_all => '全部确认';
+  @override
+  String get srs_conflict_profile => '复习设置';
+  @override
+  String get srs_key_name => '名称';
+  @override
+  String get srs_key_limits => '每日上限';
+  @override
+  String get srs_key_steps => '学习步长';
+  @override
+  String get srs_key_params => '排程参数';
+  @override
+  String get srs_key_parent => '上级牌组';
+  @override
+  String get srs_key_deck => '牌组';
+  @override
+  String get srs_key_rollover => '每日起点';
+  @override
+  String get srs_key_deleted => '删除';
+  @override
+  String get srs_value_yes => '是';
+  @override
+  String get srs_value_no => '否';
+  @override
+  String get srs_flag_none => '无旗标';
+  @override
+  String get srs_flag_red => '红';
+  @override
+  String get srs_flag_orange => '橙';
+  @override
+  String get srs_flag_green => '绿';
+  @override
+  String get srs_flag_blue => '蓝';
+  @override
+  String get srs_flag_pink => '粉';
+  @override
+  String get srs_flag_turquoise => '青';
+  @override
+  String get srs_flag_purple => '紫';
+  @override
+  String get srs_action_failed => '操作没有成功，请重试';
+  @override
+  String get srs_review_show_answer => '显示答案';
+  @override
+  String get srs_rating_again => '重来';
+  @override
+  String get srs_rating_hard => '困难';
+  @override
+  String get srs_rating_good => '良好';
+  @override
+  String get srs_rating_easy => '简单';
+  @override
+  String get srs_review_undo_blocked => '这张卡已在其它设备上复习过，无法撤销这一步';
+  @override
+  String get srs_review_pending_decision => '待你决定';
+  @override
+  String get srs_review_done => '今天的复习做完了';
+  @override
+  String srs_review_done_detail({required Object n}) => '本次复习了 ${n} 张';
+  @override
+  String get srs_review_back_to_decks => '回到牌组';
+  @override
+  String get srs_card_suspend => '暂停';
+  @override
+  String get srs_card_bury => '埋到明天';
+  @override
+  String get srs_card_flag => '旗标';
+  @override
+  String get srs_card_move => '移到牌组';
+  @override
+  String get srs_card_reset => '重置为新卡';
+  @override
+  String get srs_card_reset_confirm => '清除这张卡的进度、当作新卡重新学？之后可以马上撤销。';
+  @override
+  String get srs_note_add => '添加笔记';
+  @override
+  String get srs_note_add_action => '添加';
+  @override
+  String get srs_note_added => '已添加';
+  @override
+  String get srs_note_edit => '编辑笔记';
+  @override
+  String get srs_note_save => '保存';
+  @override
+  String get srs_note_delete => '删除笔记';
+  @override
+  String get srs_note_delete_confirm => '删除这条笔记及它的全部卡片？';
+  @override
+  String get srs_note_type => '笔记类型';
+  @override
+  String get srs_note_deck => '牌组';
+  @override
+  String get srs_note_tags => '标签';
+  @override
+  String get srs_note_tags_hint => '多个标签用空格分隔';
+  @override
+  String srs_note_more_fields({required Object n}) => '更多字段（${n}）';
+  @override
+  String get srs_note_field_conflict => '两台设备同时改了这个字段，选择要保留的值：';
+  @override
+  String get srs_note_use_candidate => '使用这个值';
+  @override
+  String get srs_note_deleted => '这条笔记已被删除。';
+  @override
+  String get srs_note_delete_conflict => '一台设备删除了这条笔记，另一台设备同时修改了它。';
+  @override
+  String get srs_note_restore => '恢复';
+  @override
+  String get srs_note_confirm_delete => '确认删除';
+  @override
+  String get srs_browse_title => '浏览';
+  @override
+  String srs_browse_count({required Object n}) => '${n} 条笔记';
+  @override
+  String get srs_browse_search_hint => '搜索笔记';
+  @override
+  String get srs_browse_empty => '没有找到笔记';
+  @override
+  String get srs_browse_toggle_suspend => '暂停 / 取消暂停';
+  @override
+  String get srs_browse_suspended => '已暂停这些卡片';
+  @override
+  String get srs_browse_unsuspended => '已取消暂停';
+  @override
+  String get srs_settings_save => '保存';
+  @override
+  String get srs_settings_saved => '牌组设置已保存';
+  @override
+  String get srs_settings_new_per_day => '每日新卡上限';
+  @override
+  String get srs_settings_new_per_day_hint => '到期较多时会自动减少新卡';
+  @override
+  String get srs_settings_reviews_per_day => '每日复习上限';
+  @override
+  String get srs_settings_retention => '目标记忆率';
+  @override
+  String srs_settings_retention_value({required Object p}) => '目标记忆率：${p}%';
+  @override
+  String get srs_settings_retention_hint => '卡片到期时你仍记得它的概率。越高复习越多。';
+  @override
+  String get srs_settings_learn_steps => '学习步长（分钟）';
+  @override
+  String get srs_settings_relearn_steps => '重学步长（分钟）';
+  @override
+  String get srs_settings_steps_hint => '用空格分隔，如 1 10；每一步都要短于一天';
+  @override
+  String get srs_settings_steps_invalid => '请输入正数分钟，且每一步都短于一天';
+  @override
+  String get srs_settings_advanced => '高级';
+  @override
+  String get srs_settings_params_mode => '排程参数';
+  @override
+  String get srs_settings_params_inherit => '继承上级';
+  @override
+  String get srs_settings_params_own => '单独设置';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      '目标记忆率与排程算法跟随「${name}」';
+  @override
+  String get srs_settings_algorithm => '排程算法';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7（推荐）';
+  @override
+  String get srs_settings_algorithm_hint =>
+      '新算法从下一次复习起生效，已排好的到期日不变；要立即生效请用「立即重排整组」。';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      '此牌组的算法来自更新版本，本机暂用 ${alg}';
+  @override
+  String get srs_settings_auto_optimize => '自动优化';
+  @override
+  String get srs_settings_auto_optimize_hint => '定期按你自己的复习记录调整排程参数';
+  @override
+  String get srs_settings_max_interval => '最大间隔（天）';
+  @override
+  String get srs_settings_max_interval_hint => '任何卡的下次复习都不会超过这么多天';
+  @override
+  String get srs_settings_reschedule => '立即重排整组';
+  @override
+  String get srs_settings_reschedule_confirm => '按当前设置重新计算本组全部复习卡的到期日？';
+  @override
+  String srs_settings_rescheduled({required Object n}) => '已重排 ${n} 张卡';
+  @override
+  String get srs_settings_conflict_replaced => '已被另一台设备的修改替换';
+  @override
+  String get onboarding_srs_title => 'Fushi 内置复习';
+  @override
+  String get onboarding_srs_body => '直接在 Fushi 里复习你制的卡：不需要 Anki，也不用任何配置。';
+  @override
+  String get onboarding_srs_fsrs_title => '默认使用 FSRS-7';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      '排程用的是 FSRS-7——目前最好的间隔复习算法之一，并会按你自己的复习记录调整。';
+  @override
+  String get onboarding_srs_builtin_title => '开箱即用';
+  @override
+  String get onboarding_srs_builtin_desc => '已经备好默认牌组和 Lapis 笔记类型。';
+  @override
+  String get onboarding_srs_mining_title => '制卡直接进复习';
+  @override
+  String get onboarding_srs_mining_desc => '阅读、看视频时制的卡可以直接进入复习。';
+  @override
+  String get onboarding_srs_sync_title => '多设备自动同步';
+  @override
+  String get onboarding_srs_sync_desc => '牌组和复习进度会同步到你的其它设备。';
+  @override
+  String get onboarding_srs_action => '打开牌组';
+  @override
+  String get onboarding_srs_action_desc => '从牌组列表添加第一张卡';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi 内置复习已默认使用 FSRS-7。只有你还要在 Anki 里复习时，才需要下面这几步。';
 }
 
 // Path: <root>
@@ -299474,6 +304332,320 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get nav_srs => 'Review';
+  @override
+  String get srs_module_switch_hint =>
+      'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+  @override
+  String get srs_import_coming_soon => 'Import is coming soon';
+  @override
+  String get srs_import => 'Import';
+  @override
+  String get srs_count_new => 'New';
+  @override
+  String get srs_count_learn => 'Learning';
+  @override
+  String get srs_count_review => 'Due';
+  @override
+  String srs_deck_new_reduced({required Object n}) =>
+      'Many reviews due today — new cards reduced to ${n}';
+  @override
+  String get srs_deck_new_paused =>
+      'Many reviews due today — no new cards today';
+  @override
+  String get srs_deck_new => 'New deck';
+  @override
+  String get srs_deck_new_child => 'New subdeck';
+  @override
+  String get srs_deck_name => 'Deck name';
+  @override
+  String get srs_deck_name_invalid => 'A deck name cannot contain ::';
+  @override
+  String get srs_deck_rename => 'Rename deck';
+  @override
+  String get srs_deck_settings => 'Deck settings';
+  @override
+  String get srs_deck_delete => 'Delete deck';
+  @override
+  String srs_deck_delete_confirm({required Object name}) =>
+      'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_menu => 'More actions';
+  @override
+  String get srs_day_boundary_title => 'When does the day start';
+  @override
+  String srs_day_boundary_body({required Object hour}) =>
+      'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+  @override
+  String get srs_engine_unavailable =>
+      'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+  @override
+  String get srs_empty_title => 'Add your first card';
+  @override
+  String get srs_empty_body =>
+      'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+  @override
+  String get srs_empty_action => 'Add a card';
+  @override
+  String get srs_conflicts_title => 'Sync conflicts';
+  @override
+  String srs_conflicts_title_count({required Object n}) =>
+      'Sync conflicts (${n})';
+  @override
+  String get srs_conflicts_empty => 'No sync conflicts';
+  @override
+  String get srs_conflicts_empty_hint =>
+      'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+  @override
+  String get srs_conflicts_pending_notes => 'Notes waiting for your decision';
+  @override
+  String get srs_conflicts_settings => 'Replaced settings';
+  @override
+  String get srs_conflict_current => 'Current';
+  @override
+  String get srs_conflict_replaced => 'Replaced';
+  @override
+  String srs_conflict_from({required Object device, required Object time}) =>
+      'Device ${device} · ${time}';
+  @override
+  String get srs_conflict_revert => 'Switch back';
+  @override
+  String get srs_conflict_confirm => 'Keep current';
+  @override
+  String get srs_conflict_confirm_all => 'Keep all current';
+  @override
+  String get srs_conflict_profile => 'Review settings';
+  @override
+  String get srs_key_name => 'Name';
+  @override
+  String get srs_key_limits => 'Daily limits';
+  @override
+  String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_key_params => 'Scheduling parameters';
+  @override
+  String get srs_key_parent => 'Parent deck';
+  @override
+  String get srs_key_deck => 'Deck';
+  @override
+  String get srs_key_rollover => 'Day start';
+  @override
+  String get srs_key_deleted => 'Deleted';
+  @override
+  String get srs_value_yes => 'Yes';
+  @override
+  String get srs_value_no => 'No';
+  @override
+  String get srs_flag_none => 'No flag';
+  @override
+  String get srs_flag_red => 'Red';
+  @override
+  String get srs_flag_orange => 'Orange';
+  @override
+  String get srs_flag_green => 'Green';
+  @override
+  String get srs_flag_blue => 'Blue';
+  @override
+  String get srs_flag_pink => 'Pink';
+  @override
+  String get srs_flag_turquoise => 'Turquoise';
+  @override
+  String get srs_flag_purple => 'Purple';
+  @override
+  String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_review_show_answer => 'Show answer';
+  @override
+  String get srs_rating_again => 'Again';
+  @override
+  String get srs_rating_hard => 'Hard';
+  @override
+  String get srs_rating_good => 'Good';
+  @override
+  String get srs_rating_easy => 'Easy';
+  @override
+  String get srs_review_undo_blocked =>
+      'This card was already reviewed on another device, so this step can\'t be undone';
+  @override
+  String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_done => 'All done for today';
+  @override
+  String srs_review_done_detail({required Object n}) =>
+      'Reviewed ${n} cards in this session';
+  @override
+  String get srs_review_back_to_decks => 'Back to decks';
+  @override
+  String get srs_card_suspend => 'Suspend';
+  @override
+  String get srs_card_bury => 'Bury until tomorrow';
+  @override
+  String get srs_card_flag => 'Flag';
+  @override
+  String get srs_card_move => 'Move to deck';
+  @override
+  String get srs_card_reset => 'Reset to new';
+  @override
+  String get srs_card_reset_confirm =>
+      'Forget this card\'s progress and treat it as new? You can undo right after.';
+  @override
+  String get srs_note_add => 'Add note';
+  @override
+  String get srs_note_add_action => 'Add';
+  @override
+  String get srs_note_added => 'Added';
+  @override
+  String get srs_note_edit => 'Edit note';
+  @override
+  String get srs_note_save => 'Save';
+  @override
+  String get srs_note_delete => 'Delete note';
+  @override
+  String get srs_note_delete_confirm =>
+      'Delete this note and all of its cards?';
+  @override
+  String get srs_note_type => 'Note type';
+  @override
+  String get srs_note_deck => 'Deck';
+  @override
+  String get srs_note_tags => 'Tags';
+  @override
+  String get srs_note_tags_hint => 'Separate tags with spaces';
+  @override
+  String srs_note_more_fields({required Object n}) => 'More fields (${n})';
+  @override
+  String get srs_note_field_conflict =>
+      'Changed on two devices at once — pick the value to keep:';
+  @override
+  String get srs_note_use_candidate => 'Use this value';
+  @override
+  String get srs_note_deleted => 'This note was deleted.';
+  @override
+  String get srs_note_delete_conflict =>
+      'Deleted on one device while edited on another.';
+  @override
+  String get srs_note_restore => 'Restore';
+  @override
+  String get srs_note_confirm_delete => 'Confirm delete';
+  @override
+  String get srs_browse_title => 'Browse';
+  @override
+  String srs_browse_count({required Object n}) => '${n} notes';
+  @override
+  String get srs_browse_search_hint => 'Search notes';
+  @override
+  String get srs_browse_empty => 'No notes found';
+  @override
+  String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
+  @override
+  String get srs_browse_suspended => 'Cards suspended';
+  @override
+  String get srs_browse_unsuspended => 'Cards unsuspended';
+  @override
+  String get srs_settings_save => 'Save';
+  @override
+  String get srs_settings_saved => 'Deck settings saved';
+  @override
+  String get srs_settings_new_per_day => 'New cards per day';
+  @override
+  String get srs_settings_new_per_day_hint =>
+      'When many reviews are due, Fushi automatically shows fewer new cards';
+  @override
+  String get srs_settings_reviews_per_day => 'Reviews per day';
+  @override
+  String get srs_settings_retention => 'Target retention';
+  @override
+  String srs_settings_retention_value({required Object p}) =>
+      'Target retention: ${p}%';
+  @override
+  String get srs_settings_retention_hint =>
+      'The chance you still remember a card when it comes due. Higher means more reviews.';
+  @override
+  String get srs_settings_learn_steps => 'Learning steps (minutes)';
+  @override
+  String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_steps_hint =>
+      'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+  @override
+  String get srs_settings_steps_invalid =>
+      'Enter positive numbers of minutes, each shorter than one day';
+  @override
+  String get srs_settings_advanced => 'Advanced';
+  @override
+  String get srs_settings_params_mode => 'Scheduling parameters';
+  @override
+  String get srs_settings_params_inherit => 'Same as parent';
+  @override
+  String get srs_settings_params_own => 'Own settings';
+  @override
+  String srs_settings_inherited_from({required Object name}) =>
+      'Target retention and algorithm follow "${name}"';
+  @override
+  String get srs_settings_algorithm => 'Scheduling algorithm';
+  @override
+  String get srs_settings_algorithm_fsrs7 => 'FSRS-7 (recommended)';
+  @override
+  String get srs_settings_algorithm_hint =>
+      'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+  @override
+  String srs_settings_algorithm_unknown({required Object alg}) =>
+      'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  @override
+  String get srs_settings_auto_optimize => 'Optimize automatically';
+  @override
+  String get srs_settings_auto_optimize_hint =>
+      'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_max_interval => 'Maximum interval (days)';
+  @override
+  String get srs_settings_max_interval_hint =>
+      'No card is scheduled further out than this';
+  @override
+  String get srs_settings_reschedule => 'Reschedule deck now';
+  @override
+  String get srs_settings_reschedule_confirm =>
+      'Recompute the due dates of every review card in this deck with the current settings?';
+  @override
+  String srs_settings_rescheduled({required Object n}) =>
+      'Rescheduled ${n} cards';
+  @override
+  String get srs_settings_conflict_replaced =>
+      'Replaced by a change from another device';
+  @override
+  String get onboarding_srs_title => 'Fushi review';
+  @override
+  String get onboarding_srs_body =>
+      'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+  @override
+  String get onboarding_srs_fsrs_title => 'FSRS-7 by default';
+  @override
+  String get onboarding_srs_fsrs_desc =>
+      'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+  @override
+  String get onboarding_srs_builtin_title => 'Ready to use';
+  @override
+  String get onboarding_srs_builtin_desc =>
+      'A default deck and the Lapis note type are already set up.';
+  @override
+  String get onboarding_srs_mining_title => 'From mining to review';
+  @override
+  String get onboarding_srs_mining_desc =>
+      'Cards you make while reading or watching can go straight into review.';
+  @override
+  String get onboarding_srs_sync_title => 'Syncs across devices';
+  @override
+  String get onboarding_srs_sync_desc =>
+      'Your decks and review progress follow you to your other devices.';
+  @override
+  String get onboarding_srs_action => 'Open decks';
+  @override
+  String get onboarding_srs_action_desc =>
+      'Add your first card from the deck list';
+  @override
+  String get onboarding_anki_fsrs_srs_note =>
+      'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
 }
 
 /// Flat map(s) containing all translations.
@@ -314990,6 +320162,290 @@ extension on _StringsEn {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -330501,6 +335957,290 @@ extension on _StringsAr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -346088,6 +351828,290 @@ extension on _StringsDe {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -361657,6 +367681,290 @@ extension on _StringsEs {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -377244,6 +383552,290 @@ extension on _StringsFr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -392775,6 +399367,290 @@ extension on _StringsId {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -408342,6 +415218,290 @@ extension on _StringsIt {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -423783,6 +430943,290 @@ extension on _StringsJa {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -439231,6 +446675,290 @@ extension on _StringsKo {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -454793,6 +462521,290 @@ extension on _StringsNl {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -470347,6 +478359,290 @@ extension on _StringsPtBr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -485906,6 +494202,290 @@ extension on _StringsRu {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -501421,6 +510001,290 @@ extension on _StringsTh {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -516967,6 +525831,290 @@ extension on _StringsTr {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -532496,6 +541644,290 @@ extension on _StringsVi {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
@@ -547854,6 +557286,287 @@ extension on _StringsZhCn {
         return '播放视频时装载 mpv_scripts 目录里的全部 .lua 脚本。删除脚本在下次打开视频时生效。';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return '本次播放未装载（重新打开视频后生效）';
+      case 'nav_srs':
+        return '复习';
+      case 'srs_module_switch_hint':
+        return 'Fushi 内置间隔复习：牌组、FSRS-7 排程、多设备复习';
+      case 'srs_import_coming_soon':
+        return '导入即将提供';
+      case 'srs_import':
+        return '导入';
+      case 'srs_count_new':
+        return '新卡';
+      case 'srs_count_learn':
+        return '学习中';
+      case 'srs_count_review':
+        return '到期';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) => '今天到期较多，新卡减为 ${n} 张';
+      case 'srs_deck_new_paused':
+        return '今天到期较多，暂停出新卡';
+      case 'srs_deck_new':
+        return '新建牌组';
+      case 'srs_deck_new_child':
+        return '新建子牌组';
+      case 'srs_deck_name':
+        return '牌组名称';
+      case 'srs_deck_name_invalid':
+        return '牌组名称不能包含 ::';
+      case 'srs_deck_rename':
+        return '重命名牌组';
+      case 'srs_deck_settings':
+        return '牌组设置';
+      case 'srs_deck_delete':
+        return '删除牌组';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            '删除「${name}」及其子牌组？其中的卡片会移到上级牌组（没有上级则移到默认牌组）。';
+      case 'srs_deck_menu':
+        return '更多操作';
+      case 'srs_day_boundary_title':
+        return '复习的「今天」从几点开始';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            '复习的「今天」在每天 ${hour} 点切换，与统计页共用同一个日界（在统计页的设置按钮里修改）。在这个时刻之前做的复习算前一天。';
+      case 'srs_engine_unavailable':
+        return '本机的排程内核不可用：可以浏览和编辑卡片，但暂时不能复习。';
+      case 'srs_empty_title':
+        return '添加第一张卡';
+      case 'srs_empty_body':
+        return '往默认牌组里加一条笔记，它就会出现在这里等你复习。阅读时制的卡也可以直接进入复习。';
+      case 'srs_empty_action':
+        return '添加卡片';
+      case 'srs_conflicts_title':
+        return '同步冲突';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => '同步冲突（${n}）';
+      case 'srs_conflicts_empty':
+        return '没有同步冲突';
+      case 'srs_conflicts_empty_hint':
+        return '两台设备同时改了同一项设置时，被替换掉的那个值会出现在这里，可以一键改回。';
+      case 'srs_conflicts_pending_notes':
+        return '等你决定的笔记';
+      case 'srs_conflicts_settings':
+        return '被替换的设置';
+      case 'srs_conflict_current':
+        return '当前生效';
+      case 'srs_conflict_replaced':
+        return '被替换';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            '设备 ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return '改回';
+      case 'srs_conflict_confirm':
+        return '确认';
+      case 'srs_conflict_confirm_all':
+        return '全部确认';
+      case 'srs_conflict_profile':
+        return '复习设置';
+      case 'srs_key_name':
+        return '名称';
+      case 'srs_key_limits':
+        return '每日上限';
+      case 'srs_key_steps':
+        return '学习步长';
+      case 'srs_key_params':
+        return '排程参数';
+      case 'srs_key_parent':
+        return '上级牌组';
+      case 'srs_key_deck':
+        return '牌组';
+      case 'srs_key_rollover':
+        return '每日起点';
+      case 'srs_key_deleted':
+        return '删除';
+      case 'srs_value_yes':
+        return '是';
+      case 'srs_value_no':
+        return '否';
+      case 'srs_flag_none':
+        return '无旗标';
+      case 'srs_flag_red':
+        return '红';
+      case 'srs_flag_orange':
+        return '橙';
+      case 'srs_flag_green':
+        return '绿';
+      case 'srs_flag_blue':
+        return '蓝';
+      case 'srs_flag_pink':
+        return '粉';
+      case 'srs_flag_turquoise':
+        return '青';
+      case 'srs_flag_purple':
+        return '紫';
+      case 'srs_action_failed':
+        return '操作没有成功，请重试';
+      case 'srs_review_show_answer':
+        return '显示答案';
+      case 'srs_rating_again':
+        return '重来';
+      case 'srs_rating_hard':
+        return '困难';
+      case 'srs_rating_good':
+        return '良好';
+      case 'srs_rating_easy':
+        return '简单';
+      case 'srs_review_undo_blocked':
+        return '这张卡已在其它设备上复习过，无法撤销这一步';
+      case 'srs_review_pending_decision':
+        return '待你决定';
+      case 'srs_review_done':
+        return '今天的复习做完了';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => '本次复习了 ${n} 张';
+      case 'srs_review_back_to_decks':
+        return '回到牌组';
+      case 'srs_card_suspend':
+        return '暂停';
+      case 'srs_card_bury':
+        return '埋到明天';
+      case 'srs_card_flag':
+        return '旗标';
+      case 'srs_card_move':
+        return '移到牌组';
+      case 'srs_card_reset':
+        return '重置为新卡';
+      case 'srs_card_reset_confirm':
+        return '清除这张卡的进度、当作新卡重新学？之后可以马上撤销。';
+      case 'srs_note_add':
+        return '添加笔记';
+      case 'srs_note_add_action':
+        return '添加';
+      case 'srs_note_added':
+        return '已添加';
+      case 'srs_note_edit':
+        return '编辑笔记';
+      case 'srs_note_save':
+        return '保存';
+      case 'srs_note_delete':
+        return '删除笔记';
+      case 'srs_note_delete_confirm':
+        return '删除这条笔记及它的全部卡片？';
+      case 'srs_note_type':
+        return '笔记类型';
+      case 'srs_note_deck':
+        return '牌组';
+      case 'srs_note_tags':
+        return '标签';
+      case 'srs_note_tags_hint':
+        return '多个标签用空格分隔';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => '更多字段（${n}）';
+      case 'srs_note_field_conflict':
+        return '两台设备同时改了这个字段，选择要保留的值：';
+      case 'srs_note_use_candidate':
+        return '使用这个值';
+      case 'srs_note_deleted':
+        return '这条笔记已被删除。';
+      case 'srs_note_delete_conflict':
+        return '一台设备删除了这条笔记，另一台设备同时修改了它。';
+      case 'srs_note_restore':
+        return '恢复';
+      case 'srs_note_confirm_delete':
+        return '确认删除';
+      case 'srs_browse_title':
+        return '浏览';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} 条笔记';
+      case 'srs_browse_search_hint':
+        return '搜索笔记';
+      case 'srs_browse_empty':
+        return '没有找到笔记';
+      case 'srs_browse_toggle_suspend':
+        return '暂停 / 取消暂停';
+      case 'srs_browse_suspended':
+        return '已暂停这些卡片';
+      case 'srs_browse_unsuspended':
+        return '已取消暂停';
+      case 'srs_settings_save':
+        return '保存';
+      case 'srs_settings_saved':
+        return '牌组设置已保存';
+      case 'srs_settings_new_per_day':
+        return '每日新卡上限';
+      case 'srs_settings_new_per_day_hint':
+        return '到期较多时会自动减少新卡';
+      case 'srs_settings_reviews_per_day':
+        return '每日复习上限';
+      case 'srs_settings_retention':
+        return '目标记忆率';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => '目标记忆率：${p}%';
+      case 'srs_settings_retention_hint':
+        return '卡片到期时你仍记得它的概率。越高复习越多。';
+      case 'srs_settings_learn_steps':
+        return '学习步长（分钟）';
+      case 'srs_settings_relearn_steps':
+        return '重学步长（分钟）';
+      case 'srs_settings_steps_hint':
+        return '用空格分隔，如 1 10；每一步都要短于一天';
+      case 'srs_settings_steps_invalid':
+        return '请输入正数分钟，且每一步都短于一天';
+      case 'srs_settings_advanced':
+        return '高级';
+      case 'srs_settings_params_mode':
+        return '排程参数';
+      case 'srs_settings_params_inherit':
+        return '继承上级';
+      case 'srs_settings_params_own':
+        return '单独设置';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) => '目标记忆率与排程算法跟随「${name}」';
+      case 'srs_settings_algorithm':
+        return '排程算法';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7（推荐）';
+      case 'srs_settings_algorithm_hint':
+        return '新算法从下一次复习起生效，已排好的到期日不变；要立即生效请用「立即重排整组」。';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) => '此牌组的算法来自更新版本，本机暂用 ${alg}';
+      case 'srs_settings_auto_optimize':
+        return '自动优化';
+      case 'srs_settings_auto_optimize_hint':
+        return '定期按你自己的复习记录调整排程参数';
+      case 'srs_settings_max_interval':
+        return '最大间隔（天）';
+      case 'srs_settings_max_interval_hint':
+        return '任何卡的下次复习都不会超过这么多天';
+      case 'srs_settings_reschedule':
+        return '立即重排整组';
+      case 'srs_settings_reschedule_confirm':
+        return '按当前设置重新计算本组全部复习卡的到期日？';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => '已重排 ${n} 张卡';
+      case 'srs_settings_conflict_replaced':
+        return '已被另一台设备的修改替换';
+      case 'onboarding_srs_title':
+        return 'Fushi 内置复习';
+      case 'onboarding_srs_body':
+        return '直接在 Fushi 里复习你制的卡：不需要 Anki，也不用任何配置。';
+      case 'onboarding_srs_fsrs_title':
+        return '默认使用 FSRS-7';
+      case 'onboarding_srs_fsrs_desc':
+        return '排程用的是 FSRS-7——目前最好的间隔复习算法之一，并会按你自己的复习记录调整。';
+      case 'onboarding_srs_builtin_title':
+        return '开箱即用';
+      case 'onboarding_srs_builtin_desc':
+        return '已经备好默认牌组和 Lapis 笔记类型。';
+      case 'onboarding_srs_mining_title':
+        return '制卡直接进复习';
+      case 'onboarding_srs_mining_desc':
+        return '阅读、看视频时制的卡可以直接进入复习。';
+      case 'onboarding_srs_sync_title':
+        return '多设备自动同步';
+      case 'onboarding_srs_sync_desc':
+        return '牌组和复习进度会同步到你的其它设备。';
+      case 'onboarding_srs_action':
+        return '打开牌组';
+      case 'onboarding_srs_action_desc':
+        return '从牌组列表添加第一张卡';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi 内置复习已默认使用 FSRS-7。只有你还要在 Anki 里复习时，才需要下面这几步。';
       default:
         return null;
     }
@@ -563240,6 +572953,290 @@ extension on _StringsZhHk {
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'nav_srs':
+        return 'Review';
+      case 'srs_module_switch_hint':
+        return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
+      case 'srs_import_coming_soon':
+        return 'Import is coming soon';
+      case 'srs_import':
+        return 'Import';
+      case 'srs_count_new':
+        return 'New';
+      case 'srs_count_learn':
+        return 'Learning';
+      case 'srs_count_review':
+        return 'Due';
+      case 'srs_deck_new_reduced':
+        return ({required Object n}) =>
+            'Many reviews due today — new cards reduced to ${n}';
+      case 'srs_deck_new_paused':
+        return 'Many reviews due today — no new cards today';
+      case 'srs_deck_new':
+        return 'New deck';
+      case 'srs_deck_new_child':
+        return 'New subdeck';
+      case 'srs_deck_name':
+        return 'Deck name';
+      case 'srs_deck_name_invalid':
+        return 'A deck name cannot contain ::';
+      case 'srs_deck_rename':
+        return 'Rename deck';
+      case 'srs_deck_settings':
+        return 'Deck settings';
+      case 'srs_deck_delete':
+        return 'Delete deck';
+      case 'srs_deck_delete_confirm':
+        return ({required Object name}) =>
+            'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_menu':
+        return 'More actions';
+      case 'srs_day_boundary_title':
+        return 'When does the day start';
+      case 'srs_day_boundary_body':
+        return ({required Object hour}) =>
+            'Review days roll over at ${hour}:00, the same day boundary as the Statistics page (change it with the settings button on the Statistics page). Reviews done before that hour count toward the previous day.';
+      case 'srs_engine_unavailable':
+        return 'The scheduling engine is not available on this device. You can browse and edit cards, but reviewing is disabled.';
+      case 'srs_empty_title':
+        return 'Add your first card';
+      case 'srs_empty_body':
+        return 'Add a note to the default deck and it shows up here for review. Cards you mine while reading can also go straight into review.';
+      case 'srs_empty_action':
+        return 'Add a card';
+      case 'srs_conflicts_title':
+        return 'Sync conflicts';
+      case 'srs_conflicts_title_count':
+        return ({required Object n}) => 'Sync conflicts (${n})';
+      case 'srs_conflicts_empty':
+        return 'No sync conflicts';
+      case 'srs_conflicts_empty_hint':
+        return 'When two devices change the same setting at the same time, the replaced value shows up here so you can switch back.';
+      case 'srs_conflicts_pending_notes':
+        return 'Notes waiting for your decision';
+      case 'srs_conflicts_settings':
+        return 'Replaced settings';
+      case 'srs_conflict_current':
+        return 'Current';
+      case 'srs_conflict_replaced':
+        return 'Replaced';
+      case 'srs_conflict_from':
+        return ({required Object device, required Object time}) =>
+            'Device ${device} · ${time}';
+      case 'srs_conflict_revert':
+        return 'Switch back';
+      case 'srs_conflict_confirm':
+        return 'Keep current';
+      case 'srs_conflict_confirm_all':
+        return 'Keep all current';
+      case 'srs_conflict_profile':
+        return 'Review settings';
+      case 'srs_key_name':
+        return 'Name';
+      case 'srs_key_limits':
+        return 'Daily limits';
+      case 'srs_key_steps':
+        return 'Learning steps';
+      case 'srs_key_params':
+        return 'Scheduling parameters';
+      case 'srs_key_parent':
+        return 'Parent deck';
+      case 'srs_key_deck':
+        return 'Deck';
+      case 'srs_key_rollover':
+        return 'Day start';
+      case 'srs_key_deleted':
+        return 'Deleted';
+      case 'srs_value_yes':
+        return 'Yes';
+      case 'srs_value_no':
+        return 'No';
+      case 'srs_flag_none':
+        return 'No flag';
+      case 'srs_flag_red':
+        return 'Red';
+      case 'srs_flag_orange':
+        return 'Orange';
+      case 'srs_flag_green':
+        return 'Green';
+      case 'srs_flag_blue':
+        return 'Blue';
+      case 'srs_flag_pink':
+        return 'Pink';
+      case 'srs_flag_turquoise':
+        return 'Turquoise';
+      case 'srs_flag_purple':
+        return 'Purple';
+      case 'srs_action_failed':
+        return 'That didn\'t work. Please try again.';
+      case 'srs_review_show_answer':
+        return 'Show answer';
+      case 'srs_rating_again':
+        return 'Again';
+      case 'srs_rating_hard':
+        return 'Hard';
+      case 'srs_rating_good':
+        return 'Good';
+      case 'srs_rating_easy':
+        return 'Easy';
+      case 'srs_review_undo_blocked':
+        return 'This card was already reviewed on another device, so this step can\'t be undone';
+      case 'srs_review_pending_decision':
+        return 'Needs your decision';
+      case 'srs_review_done':
+        return 'All done for today';
+      case 'srs_review_done_detail':
+        return ({required Object n}) => 'Reviewed ${n} cards in this session';
+      case 'srs_review_back_to_decks':
+        return 'Back to decks';
+      case 'srs_card_suspend':
+        return 'Suspend';
+      case 'srs_card_bury':
+        return 'Bury until tomorrow';
+      case 'srs_card_flag':
+        return 'Flag';
+      case 'srs_card_move':
+        return 'Move to deck';
+      case 'srs_card_reset':
+        return 'Reset to new';
+      case 'srs_card_reset_confirm':
+        return 'Forget this card\'s progress and treat it as new? You can undo right after.';
+      case 'srs_note_add':
+        return 'Add note';
+      case 'srs_note_add_action':
+        return 'Add';
+      case 'srs_note_added':
+        return 'Added';
+      case 'srs_note_edit':
+        return 'Edit note';
+      case 'srs_note_save':
+        return 'Save';
+      case 'srs_note_delete':
+        return 'Delete note';
+      case 'srs_note_delete_confirm':
+        return 'Delete this note and all of its cards?';
+      case 'srs_note_type':
+        return 'Note type';
+      case 'srs_note_deck':
+        return 'Deck';
+      case 'srs_note_tags':
+        return 'Tags';
+      case 'srs_note_tags_hint':
+        return 'Separate tags with spaces';
+      case 'srs_note_more_fields':
+        return ({required Object n}) => 'More fields (${n})';
+      case 'srs_note_field_conflict':
+        return 'Changed on two devices at once — pick the value to keep:';
+      case 'srs_note_use_candidate':
+        return 'Use this value';
+      case 'srs_note_deleted':
+        return 'This note was deleted.';
+      case 'srs_note_delete_conflict':
+        return 'Deleted on one device while edited on another.';
+      case 'srs_note_restore':
+        return 'Restore';
+      case 'srs_note_confirm_delete':
+        return 'Confirm delete';
+      case 'srs_browse_title':
+        return 'Browse';
+      case 'srs_browse_count':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_browse_search_hint':
+        return 'Search notes';
+      case 'srs_browse_empty':
+        return 'No notes found';
+      case 'srs_browse_toggle_suspend':
+        return 'Suspend / unsuspend';
+      case 'srs_browse_suspended':
+        return 'Cards suspended';
+      case 'srs_browse_unsuspended':
+        return 'Cards unsuspended';
+      case 'srs_settings_save':
+        return 'Save';
+      case 'srs_settings_saved':
+        return 'Deck settings saved';
+      case 'srs_settings_new_per_day':
+        return 'New cards per day';
+      case 'srs_settings_new_per_day_hint':
+        return 'When many reviews are due, Fushi automatically shows fewer new cards';
+      case 'srs_settings_reviews_per_day':
+        return 'Reviews per day';
+      case 'srs_settings_retention':
+        return 'Target retention';
+      case 'srs_settings_retention_value':
+        return ({required Object p}) => 'Target retention: ${p}%';
+      case 'srs_settings_retention_hint':
+        return 'The chance you still remember a card when it comes due. Higher means more reviews.';
+      case 'srs_settings_learn_steps':
+        return 'Learning steps (minutes)';
+      case 'srs_settings_relearn_steps':
+        return 'Relearning steps (minutes)';
+      case 'srs_settings_steps_hint':
+        return 'Separate with spaces, e.g. 1 10; each step must be shorter than a day';
+      case 'srs_settings_steps_invalid':
+        return 'Enter positive numbers of minutes, each shorter than one day';
+      case 'srs_settings_advanced':
+        return 'Advanced';
+      case 'srs_settings_params_mode':
+        return 'Scheduling parameters';
+      case 'srs_settings_params_inherit':
+        return 'Same as parent';
+      case 'srs_settings_params_own':
+        return 'Own settings';
+      case 'srs_settings_inherited_from':
+        return ({required Object name}) =>
+            'Target retention and algorithm follow "${name}"';
+      case 'srs_settings_algorithm':
+        return 'Scheduling algorithm';
+      case 'srs_settings_algorithm_fsrs7':
+        return 'FSRS-7 (recommended)';
+      case 'srs_settings_algorithm_hint':
+        return 'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
+      case 'srs_settings_algorithm_unknown':
+        return ({required Object alg}) =>
+            'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_auto_optimize':
+        return 'Optimize automatically';
+      case 'srs_settings_auto_optimize_hint':
+        return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_max_interval':
+        return 'Maximum interval (days)';
+      case 'srs_settings_max_interval_hint':
+        return 'No card is scheduled further out than this';
+      case 'srs_settings_reschedule':
+        return 'Reschedule deck now';
+      case 'srs_settings_reschedule_confirm':
+        return 'Recompute the due dates of every review card in this deck with the current settings?';
+      case 'srs_settings_rescheduled':
+        return ({required Object n}) => 'Rescheduled ${n} cards';
+      case 'srs_settings_conflict_replaced':
+        return 'Replaced by a change from another device';
+      case 'onboarding_srs_title':
+        return 'Fushi review';
+      case 'onboarding_srs_body':
+        return 'Review the cards you make right inside Fushi — no Anki needed, nothing to set up.';
+      case 'onboarding_srs_fsrs_title':
+        return 'FSRS-7 by default';
+      case 'onboarding_srs_fsrs_desc':
+        return 'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
+      case 'onboarding_srs_builtin_title':
+        return 'Ready to use';
+      case 'onboarding_srs_builtin_desc':
+        return 'A default deck and the Lapis note type are already set up.';
+      case 'onboarding_srs_mining_title':
+        return 'From mining to review';
+      case 'onboarding_srs_mining_desc':
+        return 'Cards you make while reading or watching can go straight into review.';
+      case 'onboarding_srs_sync_title':
+        return 'Syncs across devices';
+      case 'onboarding_srs_sync_desc':
+        return 'Your decks and review progress follow you to your other devices.';
+      case 'onboarding_srs_action':
+        return 'Open decks';
+      case 'onboarding_srs_action_desc':
+        return 'Add your first card from the deck list';
+      case 'onboarding_anki_fsrs_srs_note':
+        return 'Fushi\'s built-in review already uses FSRS-7 by default. You only need the steps below if you also review in Anki.';
       default:
         return null;
     }
