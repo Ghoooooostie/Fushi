@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127228 (7484 per locale)
+/// Strings: 127211 (7483 per locale)
 ///
-/// Built on 2026-10-14 at 10:17 UTC
+/// Built on 2026-10-14 at 11:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5592,14 +5592,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_mpv_hwdec_off => 'Off';
   String get video_setting_mpv_interpolation => 'Motion interpolation';
   String get video_setting_mpv_loop => 'Loop file';
-  String get video_setting_mpv_lua_scripts => 'Load Lua scripts';
   String get video_setting_mpv_lua_scripts_dir_copied => 'Folder path copied';
   String get video_setting_mpv_lua_scripts_dir_copy =>
       'Copy scripts folder path';
   String get video_setting_mpv_lua_scripts_empty =>
       'No scripts in the mpv_scripts folder yet';
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Load all .lua files in the mpv_scripts folder into the player. Turning off takes effect the next time a video is opened.';
   String get video_setting_mpv_lua_scripts_import => 'Import Lua scripts';
   String get video_setting_mpv_lua_scripts_imported => 'Scripts imported';
   String get video_setting_mpv_lua_scripts_input_note =>
@@ -5607,8 +5604,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_mpv_lua_scripts_status_error => 'Error';
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Loaded, no errors reported';
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Not loaded in this player yet (turn on the switch or reopen the video)';
   String get video_setting_mpv_lua_scripts_unavailable =>
       'The bundled libmpv on this platform was built without Lua (-Dlua=disabled), so scripts cannot run here.';
   String get video_setting_mpv_normalize => 'Normalize downmix loudness';
@@ -10814,6 +10809,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_pending_mine_landing_host_note =>
       'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
   String get manga_series_manage_volume => 'Manage volume';
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -20199,8 +20198,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'تكرار الملف';
   @override
-  String get video_setting_mpv_lua_scripts => 'تحميل سكربتات Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => 'تم نسخ مسار المجلد';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
@@ -20208,9 +20205,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'لا توجد سكربتات في مجلد mpv_scripts بعد';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'تحميل جميع ملفات .lua في مجلد mpv_scripts إلى المشغّل. الإيقاف يسري عند فتح فيديو جديد.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'استيراد سكربتات Lua';
   @override
@@ -20223,9 +20217,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'تم التحميل، لا أخطاء';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'لم يُحمَّل في هذا المشغّل بعد (فعّل المفتاح أو أعد فتح الفيديو)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'نسخة libmpv المضمّنة على هذه المنصة بُنيت بدون Lua (-Dlua=disabled)، لذا لا يمكن تشغيل السكربتات هنا.';
@@ -28905,6 +28896,12 @@ class _StringsAr extends _StringsEn {
       'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -38514,8 +38511,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Datei wiederholen';
   @override
-  String get video_setting_mpv_lua_scripts => 'Lua-Skripte laden';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => 'Ordnerpfad kopiert';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
@@ -38523,9 +38518,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Noch keine Skripte im Ordner mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Alle .lua-Dateien im Ordner mpv_scripts in den Player laden. Das Deaktivieren wird beim nächsten Öffnen eines Videos wirksam.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Lua-Skripte importieren';
   @override
@@ -38538,9 +38530,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Geladen, keine Fehler gemeldet';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'In diesem Player noch nicht geladen (Schalter einschalten oder Video erneut öffnen)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'Das mitgelieferte libmpv auf dieser Plattform wurde ohne Lua gebaut (-Dlua=disabled), Skripte können hier nicht laufen.';
@@ -47386,6 +47375,12 @@ class _StringsDe extends _StringsEn {
       'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -57034,8 +57029,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Repetir archivo';
   @override
-  String get video_setting_mpv_lua_scripts => 'Cargar scripts Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Ruta de carpeta copiada';
   @override
@@ -57044,9 +57037,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Aún no hay scripts en la carpeta mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Carga todos los archivos .lua en la carpeta mpv_scripts en el reproductor. Desactivar toma efecto la próxima vez que se abra un vídeo.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importar scripts Lua';
   @override
@@ -57059,9 +57049,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Cargado, sin errores';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Aún no cargado en este reproductor (activa el interruptor o vuelve a abrir el vídeo)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'El libmpv incluido en esta plataforma se compiló sin Lua (-Dlua=disabled), por lo que los scripts no pueden ejecutarse aquí.';
@@ -65927,6 +65914,12 @@ class _StringsEs extends _StringsEn {
       'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -75610,8 +75603,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Lecture en boucle du fichier';
   @override
-  String get video_setting_mpv_lua_scripts => 'Charger les scripts Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Chemin du dossier copié';
   @override
@@ -75620,9 +75611,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Aucun script dans le dossier mpv_scripts pour l\'instant';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Charger tous les fichiers .lua du dossier mpv_scripts dans le lecteur. La désactivation prend effet à la prochaine ouverture d\'une vidéo.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importer des scripts Lua';
   @override
@@ -75635,9 +75623,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Chargé, aucune erreur signalée';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Pas encore chargé dans ce lecteur (activez l\'interrupteur ou rouvrez la vidéo)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'Le libmpv fourni sur cette plateforme a été compilé sans Lua (-Dlua=disabled) : les scripts ne peuvent pas s\'exécuter ici.';
@@ -84548,6 +84533,12 @@ class _StringsFr extends _StringsEn {
       'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -94040,8 +94031,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Ulang file';
   @override
-  String get video_setting_mpv_lua_scripts => 'Muat skrip Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => 'Path folder disalin';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy =>
@@ -94049,9 +94038,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Belum ada skrip di folder mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Muat semua file .lua di folder mpv_scripts ke pemutar. Mematikan berlaku saat video berikutnya dibuka.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Impor skrip Lua';
   @override
@@ -94064,9 +94050,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Dimuat, tidak ada kesalahan';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Belum dimuat di pemutar ini (nyalakan sakelar atau buka ulang video)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'libmpv bawaan di platform ini dibangun tanpa Lua (-Dlua=disabled), sehingga skrip tidak dapat berjalan di sini.';
@@ -102822,6 +102805,12 @@ class _StringsId extends _StringsEn {
       'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -112403,8 +112392,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Ripeti file';
   @override
-  String get video_setting_mpv_lua_scripts => 'Carica script Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Percorso cartella copiato';
   @override
@@ -112413,9 +112400,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Nessuno script nella cartella mpv_scripts per ora';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Carica tutti i file .lua nella cartella mpv_scripts nel player. La disattivazione ha effetto alla prossima apertura di un video.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importa script Lua';
   @override
@@ -112428,9 +112412,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Caricato, nessun errore segnalato';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Non ancora caricato in questo player (attiva l\'interruttore o riapri il video)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'Il libmpv incluso su questa piattaforma è stato compilato senza Lua (-Dlua=disabled), quindi gli script non possono essere eseguiti qui.';
@@ -121262,6 +121243,12 @@ class _StringsIt extends _StringsEn {
       'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -130258,17 +130245,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'ファイルをループ再生';
   @override
-  String get video_setting_mpv_lua_scripts => 'Luaスクリプトを読み込む';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => 'フォルダパスをコピーしました';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => 'スクリプトフォルダのパスをコピー';
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'mpv_scripts フォルダーにスクリプトはまだありません';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'mpv_scriptsフォルダ内のすべての.luaファイルをプレーヤーに読み込みます。オフにすると次回動画を開いたときに反映されます。';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Luaスクリプトをインポート';
   @override
@@ -130280,9 +130262,6 @@ class _StringsJa extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_error => 'エラー';
   @override
   String get video_setting_mpv_lua_scripts_status_loaded => '読み込み済み、エラーなし';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'このプレーヤーではまだ読み込まれていません（スイッチをオンにするか動画を開き直してください）';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'このプラットフォームに同梱の libmpv は Lua なしでビルドされています（-Dlua=disabled）。ここではスクリプトを実行できません。';
@@ -138702,6 +138681,12 @@ class _StringsJa extends _StringsEn {
       'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
   @override
   String get manga_series_manage_volume => 'この巻を管理';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -147702,17 +147687,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_loop => '파일 반복';
   @override
-  String get video_setting_mpv_lua_scripts => 'Lua 스크립트 로드';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => '폴더 경로 복사됨';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => '스크립트 폴더 경로 복사';
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'mpv_scripts 폴더에 아직 스크립트가 없습니다';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'mpv_scripts 폴더의 모든 .lua 파일을 플레이어에 로드합니다. 끄면 다음에 동영상을 열 때 적용됩니다.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Lua 스크립트 가져오기';
   @override
@@ -147724,9 +147704,6 @@ class _StringsKo extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_error => '오류';
   @override
   String get video_setting_mpv_lua_scripts_status_loaded => '로드됨, 오류 없음';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      '이 플레이어에 아직 로드되지 않았습니다(스위치를 켜거나 동영상을 다시 여세요)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       '이 플랫폼에 포함된 libmpv는 Lua 없이 빌드되어(-Dlua=disabled) 여기서는 스크립트를 실행할 수 없습니다.';
@@ -156177,6 +156154,12 @@ class _StringsKo extends _StringsEn {
       '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -165725,17 +165708,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Bestand herhalen';
   @override
-  String get video_setting_mpv_lua_scripts => 'Lua-scripts laden';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => 'Mappad gekopieerd';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => 'Scriptmappad kopiëren';
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Nog geen scripts in de map mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Laad alle .lua-bestanden in de mpv_scripts-map in de speler. Uitschakelen wordt pas van kracht bij het volgende geopende video.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Lua-scripts importeren';
   @override
@@ -165748,9 +165726,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Geladen, geen fouten gemeld';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Nog niet geladen in deze speler (zet de schakelaar aan of open de video opnieuw)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'De meegeleverde libmpv op dit platform is zonder Lua gebouwd (-Dlua=disabled), dus scripts kunnen hier niet draaien.';
@@ -174565,6 +174540,12 @@ class _StringsNl extends _StringsEn {
       'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -184154,8 +184135,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Repetir arquivo';
   @override
-  String get video_setting_mpv_lua_scripts => 'Carregar scripts Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Caminho da pasta copiado';
   @override
@@ -184164,9 +184143,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Ainda não há scripts na pasta mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Carregar todos os arquivos .lua na pasta mpv_scripts no player. Desativar entra em vigor na próxima vez que um vídeo for aberto.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Importar scripts Lua';
   @override
@@ -184179,9 +184155,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Carregado, nenhum erro relatado';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Ainda não carregado neste player (ative a chave ou reabra o vídeo)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'O libmpv incluído nesta plataforma foi compilado sem Lua (-Dlua=disabled), então os scripts não podem ser executados aqui.';
@@ -193022,6 +192995,12 @@ class _StringsPtBr extends _StringsEn {
       'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -202581,8 +202560,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Повтор файла';
   @override
-  String get video_setting_mpv_lua_scripts => 'Загрузить Lua-скрипты';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Путь к папке скопирован';
   @override
@@ -202591,9 +202568,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'В папке mpv_scripts пока нет скриптов';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Загружать все файлы .lua из папки mpv_scripts в плеер. Отключение вступит в силу при следующем открытии видео.';
   @override
   String get video_setting_mpv_lua_scripts_import =>
       'Импортировать Lua-скрипты';
@@ -202607,9 +202581,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Загружен, ошибок нет';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Ещё не загружен в этом плеере (включите переключатель или откройте видео заново)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'Встроенный libmpv на этой платформе собран без Lua (-Dlua=disabled), поэтому скрипты здесь работать не могут.';
@@ -211424,6 +211395,12 @@ class _StringsRu extends _StringsEn {
       'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -220800,8 +220777,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'เล่นวนไฟล์เดียว';
   @override
-  String get video_setting_mpv_lua_scripts => 'โหลดสคริปต์ Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'คัดลอกเส้นทางโฟลเดอร์แล้ว';
   @override
@@ -220810,9 +220785,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'ยังไม่มีสคริปต์ในโฟลเดอร์ mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'โหลดไฟล์ .lua ทั้งหมดในโฟลเดอร์ mpv_scripts เข้าสู่เครื่องเล่น การปิดจะมีผลเมื่อเปิดวิดีโอครั้งถัดไป';
   @override
   String get video_setting_mpv_lua_scripts_import => 'นำเข้าสคริปต์ Lua';
   @override
@@ -220825,9 +220797,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'โหลดแล้ว ไม่มีข้อผิดพลาด';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'ยังไม่ได้โหลดในตัวเล่นนี้ (เปิดสวิตช์หรือเปิดวิดีโอใหม่)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'libmpv ที่มาพร้อมแอปบนแพลตฟอร์มนี้ถูกสร้างโดยไม่มี Lua (-Dlua=disabled) จึงรันสคริปต์ที่นี่ไม่ได้';
@@ -229504,6 +229473,12 @@ class _StringsTh extends _StringsEn {
       'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -238995,8 +238970,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Dosyayı döngüye al';
   @override
-  String get video_setting_mpv_lua_scripts => 'Lua betiklerini yükle';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Klasör yolu kopyalandı';
   @override
@@ -239005,9 +238978,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'mpv_scripts klasöründe henüz betik yok';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'mpv_scripts klasöründeki tüm .lua dosyalarını oynatıcıya yükle. Kapatma, bir sonraki video açıldığında geçerli olur.';
   @override
   String get video_setting_mpv_lua_scripts_import =>
       'Lua betiklerini içe aktar';
@@ -239021,9 +238991,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Yüklendi, hata bildirilmedi';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Bu oynatıcıda henüz yüklenmedi (anahtarı açın veya videoyu yeniden açın)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'Bu platformdaki paketlenmiş libmpv, Lua olmadan derlenmiştir (-Dlua=disabled); betikler burada çalışamaz.';
@@ -247787,6 +247754,12 @@ class _StringsTr extends _StringsEn {
       'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -257240,8 +257213,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_loop => 'Lặp tệp';
   @override
-  String get video_setting_mpv_lua_scripts => 'Tải tập lệnh Lua';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied =>
       'Đã sao chép đường dẫn thư mục';
   @override
@@ -257250,9 +257221,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_empty =>
       'Chưa có tập lệnh trong thư mục mpv_scripts';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      'Tải tất cả tệp .lua trong thư mục mpv_scripts vào trình phát. Tắt sẽ có hiệu lực lần tiếp theo mở video.';
   @override
   String get video_setting_mpv_lua_scripts_import => 'Nhập tập lệnh Lua';
   @override
@@ -257265,9 +257233,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_loaded =>
       'Đã tải, không có lỗi';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      'Chưa tải trong trình phát này (bật công tắc hoặc mở lại video)';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       'libmpv đi kèm trên nền tảng này được biên dịch không có Lua (-Dlua=disabled), nên tập lệnh không thể chạy ở đây.';
@@ -265997,6 +265962,12 @@ class _StringsVi extends _StringsEn {
       'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 // Path: <root>
@@ -274674,16 +274645,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_mpv_loop => '单文件循环';
   @override
-  String get video_setting_mpv_lua_scripts => '加载 Lua 脚本';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => '已复制目录路径';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => '复制脚本目录路径';
   @override
   String get video_setting_mpv_lua_scripts_empty => 'mpv_scripts 目录里还没有脚本';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      '装载 mpv_scripts 目录里的全部 .lua 脚本。关闭在下次打开视频时生效。';
   @override
   String get video_setting_mpv_lua_scripts_import => '导入 Lua 脚本';
   @override
@@ -274695,9 +274661,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_error => '报错';
   @override
   String get video_setting_mpv_lua_scripts_status_loaded => '已装载，无报错';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      '本次播放未装载（开启开关或重新打开视频）';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       '本平台随包 libmpv 未编入 Lua（-Dlua=disabled），脚本在此无法运行。';
@@ -282624,6 +282587,12 @@ class _StringsZhCn extends _StringsEn {
       '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
   @override
   String get manga_series_manage_volume => '管理本卷';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      '播放视频时装载 mpv_scripts 目录里的全部 .lua 脚本。删除脚本在下次打开视频时生效。';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      '本次播放未装载（重新打开视频后生效）';
 }
 
 // Path: <root>
@@ -291314,16 +291283,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_mpv_loop => '單檔循環';
   @override
-  String get video_setting_mpv_lua_scripts => '加載 Lua 腳本';
-  @override
   String get video_setting_mpv_lua_scripts_dir_copied => '已復製目錄路徑';
   @override
   String get video_setting_mpv_lua_scripts_dir_copy => '復製腳本目錄路徑';
   @override
   String get video_setting_mpv_lua_scripts_empty => 'mpv_scripts 目錄裡還沒有腳本';
-  @override
-  String get video_setting_mpv_lua_scripts_hint =>
-      '裝載 mpv_scripts 目錄裡的全部 .lua 腳本。關閉在下次打開影片時生效。';
   @override
   String get video_setting_mpv_lua_scripts_import => '導入 Lua 腳本';
   @override
@@ -291335,9 +291299,6 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_mpv_lua_scripts_status_error => '報錯';
   @override
   String get video_setting_mpv_lua_scripts_status_loaded => '已載入，無報錯';
-  @override
-  String get video_setting_mpv_lua_scripts_status_not_loaded =>
-      '本次播放未載入（開啟開關或重新開啟影片）';
   @override
   String get video_setting_mpv_lua_scripts_unavailable =>
       '本平台隨附的 libmpv 未編入 Lua（-Dlua=disabled），腳本在此無法運行。';
@@ -299507,6 +299468,12 @@ class _StringsZhHk extends _StringsEn {
       '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
   @override
   String get manga_series_manage_volume => '管理本卷';
+  @override
+  String get video_setting_mpv_lua_scripts_import_hint =>
+      'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+  @override
+  String get video_setting_mpv_lua_scripts_status_pending =>
+      'Not loaded in this playback (reopen the video)';
 }
 
 /// Flat map(s) containing all translations.
@@ -307689,16 +307656,12 @@ extension on _StringsEn {
         return 'Motion interpolation';
       case 'video_setting_mpv_loop':
         return 'Loop file';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Load Lua scripts';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Folder path copied';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copy scripts folder path';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'No scripts in the mpv_scripts folder yet';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Load all .lua files in the mpv_scripts folder into the player. Turning off takes effect the next time a video is opened.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Import Lua scripts';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -307709,8 +307672,6 @@ extension on _StringsEn {
         return 'Error';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Loaded, no errors reported';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Not loaded in this player yet (turn on the switch or reopen the video)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'The bundled libmpv on this platform was built without Lua (-Dlua=disabled), so scripts cannot run here.';
       case 'video_setting_mpv_normalize':
@@ -315025,6 +314986,10 @@ extension on _StringsEn {
         return 'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -323200,16 +323165,12 @@ extension on _StringsAr {
         return 'استيفاء الحركة';
       case 'video_setting_mpv_loop':
         return 'تكرار الملف';
-      case 'video_setting_mpv_lua_scripts':
-        return 'تحميل سكربتات Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'تم نسخ مسار المجلد';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'نسخ مسار مجلد السكربتات';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'لا توجد سكربتات في مجلد mpv_scripts بعد';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'تحميل جميع ملفات .lua في مجلد mpv_scripts إلى المشغّل. الإيقاف يسري عند فتح فيديو جديد.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'استيراد سكربتات Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -323220,8 +323181,6 @@ extension on _StringsAr {
         return 'خطأ';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'تم التحميل، لا أخطاء';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'لم يُحمَّل في هذا المشغّل بعد (فعّل المفتاح أو أعد فتح الفيديو)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'نسخة libmpv المضمّنة على هذه المنصة بُنيت بدون Lua (-Dlua=disabled)، لذا لا يمكن تشغيل السكربتات هنا.';
       case 'video_setting_mpv_normalize':
@@ -330538,6 +330497,10 @@ extension on _StringsAr {
         return 'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -338768,16 +338731,12 @@ extension on _StringsDe {
         return 'Bewegungsinterpolation';
       case 'video_setting_mpv_loop':
         return 'Datei wiederholen';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Lua-Skripte laden';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Ordnerpfad kopiert';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Skript-Ordnerpfad kopieren';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Noch keine Skripte im Ordner mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Alle .lua-Dateien im Ordner mpv_scripts in den Player laden. Das Deaktivieren wird beim nächsten Öffnen eines Videos wirksam.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua-Skripte importieren';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -338788,8 +338747,6 @@ extension on _StringsDe {
         return 'Fehler';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Geladen, keine Fehler gemeldet';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'In diesem Player noch nicht geladen (Schalter einschalten oder Video erneut öffnen)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'Das mitgelieferte libmpv auf dieser Plattform wurde ohne Lua gebaut (-Dlua=disabled), Skripte können hier nicht laufen.';
       case 'video_setting_mpv_normalize':
@@ -346127,6 +346084,10 @@ extension on _StringsDe {
         return 'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -354344,16 +354305,12 @@ extension on _StringsEs {
         return 'Interpolación de movimiento';
       case 'video_setting_mpv_loop':
         return 'Repetir archivo';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Cargar scripts Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Ruta de carpeta copiada';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copiar ruta de carpeta de scripts';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Aún no hay scripts en la carpeta mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Carga todos los archivos .lua en la carpeta mpv_scripts en el reproductor. Desactivar toma efecto la próxima vez que se abra un vídeo.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importar scripts Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -354364,8 +354321,6 @@ extension on _StringsEs {
         return 'Error';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Cargado, sin errores';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Aún no cargado en este reproductor (activa el interruptor o vuelve a abrir el vídeo)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'El libmpv incluido en esta plataforma se compiló sin Lua (-Dlua=disabled), por lo que los scripts no pueden ejecutarse aquí.';
       case 'video_setting_mpv_normalize':
@@ -361698,6 +361653,10 @@ extension on _StringsEs {
         return 'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -369926,16 +369885,12 @@ extension on _StringsFr {
         return 'Interpolation de mouvement';
       case 'video_setting_mpv_loop':
         return 'Lecture en boucle du fichier';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Charger les scripts Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Chemin du dossier copié';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copier le chemin du dossier de scripts';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Aucun script dans le dossier mpv_scripts pour l\'instant';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Charger tous les fichiers .lua du dossier mpv_scripts dans le lecteur. La désactivation prend effet à la prochaine ouverture d\'une vidéo.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importer des scripts Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -369946,8 +369901,6 @@ extension on _StringsFr {
         return 'Erreur';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Chargé, aucune erreur signalée';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Pas encore chargé dans ce lecteur (activez l\'interrupteur ou rouvrez la vidéo)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'Le libmpv fourni sur cette plateforme a été compilé sans Lua (-Dlua=disabled) : les scripts ne peuvent pas s\'exécuter ici.';
       case 'video_setting_mpv_normalize':
@@ -377287,6 +377240,10 @@ extension on _StringsFr {
         return 'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -385479,16 +385436,12 @@ extension on _StringsId {
         return 'Interpolasi gerak';
       case 'video_setting_mpv_loop':
         return 'Ulang file';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Muat skrip Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Path folder disalin';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Salin path folder skrip';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Belum ada skrip di folder mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Muat semua file .lua di folder mpv_scripts ke pemutar. Mematikan berlaku saat video berikutnya dibuka.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Impor skrip Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -385499,8 +385452,6 @@ extension on _StringsId {
         return 'Kesalahan';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Dimuat, tidak ada kesalahan';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Belum dimuat di pemutar ini (nyalakan sakelar atau buka ulang video)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'libmpv bawaan di platform ini dibangun tanpa Lua (-Dlua=disabled), sehingga skrip tidak dapat berjalan di sini.';
       case 'video_setting_mpv_normalize':
@@ -392820,6 +392771,10 @@ extension on _StringsId {
         return 'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -401036,16 +400991,12 @@ extension on _StringsIt {
         return 'Interpolazione del movimento';
       case 'video_setting_mpv_loop':
         return 'Ripeti file';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Carica script Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Percorso cartella copiato';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copia percorso cartella script';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Nessuno script nella cartella mpv_scripts per ora';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Carica tutti i file .lua nella cartella mpv_scripts nel player. La disattivazione ha effetto alla prossima apertura di un video.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importa script Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -401056,8 +401007,6 @@ extension on _StringsIt {
         return 'Errore';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Caricato, nessun errore segnalato';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Non ancora caricato in questo player (attiva l\'interruttore o riapri il video)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'Il libmpv incluso su questa piattaforma è stato compilato senza Lua (-Dlua=disabled), quindi gli script non possono essere eseguiti qui.';
       case 'video_setting_mpv_normalize':
@@ -408389,6 +408338,10 @@ extension on _StringsIt {
         return 'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -416529,16 +416482,12 @@ extension on _StringsJa {
         return 'フレーム補間';
       case 'video_setting_mpv_loop':
         return 'ファイルをループ再生';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Luaスクリプトを読み込む';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'フォルダパスをコピーしました';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'スクリプトフォルダのパスをコピー';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'mpv_scripts フォルダーにスクリプトはまだありません';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'mpv_scriptsフォルダ内のすべての.luaファイルをプレーヤーに読み込みます。オフにすると次回動画を開いたときに反映されます。';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Luaスクリプトをインポート';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -416549,8 +416498,6 @@ extension on _StringsJa {
         return 'エラー';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return '読み込み済み、エラーなし';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'このプレーヤーではまだ読み込まれていません（スイッチをオンにするか動画を開き直してください）';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'このプラットフォームに同梱の libmpv は Lua なしでビルドされています（-Dlua=disabled）。ここではスクリプトを実行できません。';
       case 'video_setting_mpv_normalize':
@@ -423832,6 +423779,10 @@ extension on _StringsJa {
         return 'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
       case 'manga_series_manage_volume':
         return 'この巻を管理';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -431975,16 +431926,12 @@ extension on _StringsKo {
         return '모션 보간';
       case 'video_setting_mpv_loop':
         return '파일 반복';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Lua 스크립트 로드';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return '폴더 경로 복사됨';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return '스크립트 폴더 경로 복사';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'mpv_scripts 폴더에 아직 스크립트가 없습니다';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'mpv_scripts 폴더의 모든 .lua 파일을 플레이어에 로드합니다. 끄면 다음에 동영상을 열 때 적용됩니다.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua 스크립트 가져오기';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -431995,8 +431942,6 @@ extension on _StringsKo {
         return '오류';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return '로드됨, 오류 없음';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return '이 플레이어에 아직 로드되지 않았습니다(스위치를 켜거나 동영상을 다시 여세요)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return '이 플랫폼에 포함된 libmpv는 Lua 없이 빌드되어(-Dlua=disabled) 여기서는 스크립트를 실행할 수 없습니다.';
       case 'video_setting_mpv_normalize':
@@ -439282,6 +439227,10 @@ extension on _StringsKo {
         return '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -447494,16 +447443,12 @@ extension on _StringsNl {
         return 'Bewegingsinterpolatie';
       case 'video_setting_mpv_loop':
         return 'Bestand herhalen';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Lua-scripts laden';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Mappad gekopieerd';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Scriptmappad kopiëren';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Nog geen scripts in de map mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Laad alle .lua-bestanden in de mpv_scripts-map in de speler. Uitschakelen wordt pas van kracht bij het volgende geopende video.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua-scripts importeren';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -447514,8 +447459,6 @@ extension on _StringsNl {
         return 'Fout';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Geladen, geen fouten gemeld';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Nog niet geladen in deze speler (zet de schakelaar aan of open de video opnieuw)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'De meegeleverde libmpv op dit platform is zonder Lua gebouwd (-Dlua=disabled), dus scripts kunnen hier niet draaien.';
       case 'video_setting_mpv_normalize':
@@ -454846,6 +454789,10 @@ extension on _StringsNl {
         return 'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -463053,16 +463000,12 @@ extension on _StringsPtBr {
         return 'Interpolação de movimento';
       case 'video_setting_mpv_loop':
         return 'Repetir arquivo';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Carregar scripts Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Caminho da pasta copiado';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Copiar caminho da pasta de scripts';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Ainda não há scripts na pasta mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Carregar todos os arquivos .lua na pasta mpv_scripts no player. Desativar entra em vigor na próxima vez que um vídeo for aberto.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Importar scripts Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -463073,8 +463016,6 @@ extension on _StringsPtBr {
         return 'Erro';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Carregado, nenhum erro relatado';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Ainda não carregado neste player (ative a chave ou reabra o vídeo)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'O libmpv incluído nesta plataforma foi compilado sem Lua (-Dlua=disabled), então os scripts não podem ser executados aqui.';
       case 'video_setting_mpv_normalize':
@@ -470402,6 +470343,10 @@ extension on _StringsPtBr {
         return 'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -478617,16 +478562,12 @@ extension on _StringsRu {
         return 'Интерполяция движения';
       case 'video_setting_mpv_loop':
         return 'Повтор файла';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Загрузить Lua-скрипты';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Путь к папке скопирован';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Скопировать путь к папке скриптов';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'В папке mpv_scripts пока нет скриптов';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Загружать все файлы .lua из папки mpv_scripts в плеер. Отключение вступит в силу при следующем открытии видео.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Импортировать Lua-скрипты';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -478637,8 +478578,6 @@ extension on _StringsRu {
         return 'Ошибка';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Загружен, ошибок нет';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Ещё не загружен в этом плеере (включите переключатель или откройте видео заново)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'Встроенный libmpv на этой платформе собран без Lua (-Dlua=disabled), поэтому скрипты здесь работать не могут.';
       case 'video_setting_mpv_normalize':
@@ -485963,6 +485902,10 @@ extension on _StringsRu {
         return 'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -494145,16 +494088,12 @@ extension on _StringsTh {
         return 'เพิ่มเฟรมการเคลื่อนไหว';
       case 'video_setting_mpv_loop':
         return 'เล่นวนไฟล์เดียว';
-      case 'video_setting_mpv_lua_scripts':
-        return 'โหลดสคริปต์ Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'คัดลอกเส้นทางโฟลเดอร์แล้ว';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'คัดลอกเส้นทางโฟลเดอร์สคริปต์';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'ยังไม่มีสคริปต์ในโฟลเดอร์ mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'โหลดไฟล์ .lua ทั้งหมดในโฟลเดอร์ mpv_scripts เข้าสู่เครื่องเล่น การปิดจะมีผลเมื่อเปิดวิดีโอครั้งถัดไป';
       case 'video_setting_mpv_lua_scripts_import':
         return 'นำเข้าสคริปต์ Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -494165,8 +494104,6 @@ extension on _StringsTh {
         return 'ข้อผิดพลาด';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'โหลดแล้ว ไม่มีข้อผิดพลาด';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'ยังไม่ได้โหลดในตัวเล่นนี้ (เปิดสวิตช์หรือเปิดวิดีโอใหม่)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'libmpv ที่มาพร้อมแอปบนแพลตฟอร์มนี้ถูกสร้างโดยไม่มี Lua (-Dlua=disabled) จึงรันสคริปต์ที่นี่ไม่ได้';
       case 'video_setting_mpv_normalize':
@@ -501480,6 +501417,10 @@ extension on _StringsTh {
         return 'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -509680,16 +509621,12 @@ extension on _StringsTr {
         return 'Hareket ara değerlemesi';
       case 'video_setting_mpv_loop':
         return 'Dosyayı döngüye al';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Lua betiklerini yükle';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Klasör yolu kopyalandı';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Betik klasör yolunu kopyala';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'mpv_scripts klasöründe henüz betik yok';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'mpv_scripts klasöründeki tüm .lua dosyalarını oynatıcıya yükle. Kapatma, bir sonraki video açıldığında geçerli olur.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Lua betiklerini içe aktar';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -509700,8 +509637,6 @@ extension on _StringsTr {
         return 'Hata';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Yüklendi, hata bildirilmedi';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Bu oynatıcıda henüz yüklenmedi (anahtarı açın veya videoyu yeniden açın)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'Bu platformdaki paketlenmiş libmpv, Lua olmadan derlenmiştir (-Dlua=disabled); betikler burada çalışamaz.';
       case 'video_setting_mpv_normalize':
@@ -517028,6 +516963,10 @@ extension on _StringsTr {
         return 'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -525223,16 +525162,12 @@ extension on _StringsVi {
         return 'Nội suy chuyển động';
       case 'video_setting_mpv_loop':
         return 'Lặp tệp';
-      case 'video_setting_mpv_lua_scripts':
-        return 'Tải tập lệnh Lua';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return 'Đã sao chép đường dẫn thư mục';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return 'Sao chép đường dẫn thư mục tập lệnh';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'Chưa có tập lệnh trong thư mục mpv_scripts';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return 'Tải tất cả tệp .lua trong thư mục mpv_scripts vào trình phát. Tắt sẽ có hiệu lực lần tiếp theo mở video.';
       case 'video_setting_mpv_lua_scripts_import':
         return 'Nhập tập lệnh Lua';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -525243,8 +525178,6 @@ extension on _StringsVi {
         return 'Lỗi';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return 'Đã tải, không có lỗi';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return 'Chưa tải trong trình phát này (bật công tắc hoặc mở lại video)';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return 'libmpv đi kèm trên nền tảng này được biên dịch không có Lua (-Dlua=disabled), nên tập lệnh không thể chạy ở đây.';
       case 'video_setting_mpv_normalize':
@@ -532559,6 +532492,10 @@ extension on _StringsVi {
         return 'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
@@ -540679,16 +540616,12 @@ extension on _StringsZhCn {
         return '运动插帧';
       case 'video_setting_mpv_loop':
         return '单文件循环';
-      case 'video_setting_mpv_lua_scripts':
-        return '加载 Lua 脚本';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return '已复制目录路径';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return '复制脚本目录路径';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'mpv_scripts 目录里还没有脚本';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return '装载 mpv_scripts 目录里的全部 .lua 脚本。关闭在下次打开视频时生效。';
       case 'video_setting_mpv_lua_scripts_import':
         return '导入 Lua 脚本';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -540699,8 +540632,6 @@ extension on _StringsZhCn {
         return '报错';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return '已装载，无报错';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return '本次播放未装载（开启开关或重新打开视频）';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return '本平台随包 libmpv 未编入 Lua（-Dlua=disabled），脚本在此无法运行。';
       case 'video_setting_mpv_normalize':
@@ -547919,6 +547850,10 @@ extension on _StringsZhCn {
         return '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
       case 'manga_series_manage_volume':
         return '管理本卷';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return '播放视频时装载 mpv_scripts 目录里的全部 .lua 脚本。删除脚本在下次打开视频时生效。';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return '本次播放未装载（重新打开视频后生效）';
       default:
         return null;
     }
@@ -556040,16 +555975,12 @@ extension on _StringsZhHk {
         return '動態插幀';
       case 'video_setting_mpv_loop':
         return '單檔循環';
-      case 'video_setting_mpv_lua_scripts':
-        return '加載 Lua 腳本';
       case 'video_setting_mpv_lua_scripts_dir_copied':
         return '已復製目錄路徑';
       case 'video_setting_mpv_lua_scripts_dir_copy':
         return '復製腳本目錄路徑';
       case 'video_setting_mpv_lua_scripts_empty':
         return 'mpv_scripts 目錄裡還沒有腳本';
-      case 'video_setting_mpv_lua_scripts_hint':
-        return '裝載 mpv_scripts 目錄裡的全部 .lua 腳本。關閉在下次打開影片時生效。';
       case 'video_setting_mpv_lua_scripts_import':
         return '導入 Lua 腳本';
       case 'video_setting_mpv_lua_scripts_imported':
@@ -556060,8 +555991,6 @@ extension on _StringsZhHk {
         return '報錯';
       case 'video_setting_mpv_lua_scripts_status_loaded':
         return '已載入，無報錯';
-      case 'video_setting_mpv_lua_scripts_status_not_loaded':
-        return '本次播放未載入（開啟開關或重新開啟影片）';
       case 'video_setting_mpv_lua_scripts_unavailable':
         return '本平台隨附的 libmpv 未編入 Lua（-Dlua=disabled），腳本在此無法運行。';
       case 'video_setting_mpv_normalize':
@@ -563307,6 +563236,10 @@ extension on _StringsZhHk {
         return '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
       case 'manga_series_manage_volume':
         return '管理本卷';
+      case 'video_setting_mpv_lua_scripts_import_hint':
+        return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
+      case 'video_setting_mpv_lua_scripts_status_pending':
+        return 'Not loaded in this playback (reopen the video)';
       default:
         return null;
     }
