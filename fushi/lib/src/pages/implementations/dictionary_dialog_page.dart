@@ -1625,9 +1625,29 @@ class _DictionaryDialogPageState extends BasePageState {
   ///
   /// 必须用原生**返回的**路径：安卓把目录内容直接拷进 [tempDir]（返回它本身），
   /// iOS 拷成 `tempDir/<文件夹名>`（返回那一层）。清理永远删 [tempDir]。
-  Future<({Directory directory, Directory? cleanupDir})?>
+  /// [referenced] = true 表示拿到的是**用户目录本身**（未复制），导入时只登记路径。
+  Future<({Directory directory, Directory? cleanupDir, bool referenced})?>
       _pickDictionaryImportDirectory() async {
     if (Platform.isAndroid || Platform.isIOS) {
+      // v117：先试「不复制」。原生已经能把 SAF tree URI 解析成真实绝对路径
+      // （pickRealDirectoryPath），一本 1~6 GB 的词典没必要先整份拷进 app 私有
+      // 目录（旧路径的 pickAndCopyDirectory 就是这么干的）、再打包解压一遍。
+      //
+      // 只有这条路走不通才回退复制：没授全文件访问（解析不出真实路径），或选中的
+      // 不是已解压的 Yomitan 目录（没有 index.json，必须经 native 转换）。
+      final String? realPath = await pickRealDirectoryPath(
+        context: context,
+        appModel: appModel,
+      );
+      if (realPath != null &&
+          File(path.join(realPath, 'index.json')).existsSync()) {
+        return (
+          directory: Directory(realPath),
+          cleanupDir: null,
+          referenced: true,
+        );
+      }
+
       final Directory tempDir = Directory(
         '${appModel.dictionaryResourceDirectory.path}/saf_import_temp',
       );
@@ -1636,12 +1656,20 @@ class _DictionaryDialogPageState extends BasePageState {
         {'destPath': tempDir.path},
       );
       if (result == null) return null;
-      return (directory: Directory(result), cleanupDir: tempDir);
+      return (
+        directory: Directory(result),
+        cleanupDir: tempDir,
+        referenced: false,
+      );
     }
 
     final String? selectedPath = await FilePicker.platform.getDirectoryPath();
     if (selectedPath == null) return null;
-    return (directory: Directory(selectedPath), cleanupDir: null);
+    return (
+      directory: Directory(selectedPath),
+      cleanupDir: null,
+      referenced: false,
+    );
   }
 
   Future<void> _importDictionaryFolder() async {
@@ -1653,7 +1681,8 @@ class _DictionaryDialogPageState extends BasePageState {
       debugPrint('[Dictionary Import] ${progressNotifier.value}');
     });
 
-    final ({Directory? cleanupDir, Directory directory})? pickedDirectory;
+    final ({Directory? cleanupDir, Directory directory, bool referenced})?
+        pickedDirectory;
     try {
       pickedDirectory = await _pickDictionaryImportDirectory();
     } on PlatformException catch (e) {
@@ -1702,6 +1731,8 @@ class _DictionaryDialogPageState extends BasePageState {
         onMemoryError: () {
           hadMemoryError = true;
         },
+        // 安卓上拿到真实路径且是已解压 Yomitan 目录时只登记路径，不复制。
+        referenceOriginal: pickedDirectory.referenced,
       );
     } catch (e, stack) {
       ErrorLogService.instance.log('DictionaryDialog.folderImport', e, stack);
