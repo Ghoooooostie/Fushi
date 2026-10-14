@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126888 (7464 per locale)
+/// Strings: 126956 (7468 per locale)
 ///
-/// Built on 2026-10-14 at 04:29 UTC
+/// Built on 2026-10-14 at 04:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10780,6 +10780,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_mining_crop_to_panel => 'Crop one-click cards to the panel';
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  String get popup_advanced_mining_crop_done => 'Done';
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -28816,6 +28822,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -47242,6 +47258,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -65728,6 +65754,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -84293,6 +84329,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -102513,6 +102559,16 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -120898,6 +120954,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -138283,6 +138349,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -155704,6 +155780,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -174037,6 +174123,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -192439,6 +192535,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -210787,6 +210893,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -228813,6 +228929,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -247042,6 +247168,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -265198,6 +265334,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 // Path: <root>
@@ -281777,6 +281923,15 @@ class _StringsZhCn extends _StringsEn {
   String get manga_mining_crop_to_panel => '一键制卡默认裁到所在分镜';
   @override
   String get manga_mining_crop_to_panel_hint => '需要分镜模型；没有模型时使用整页。';
+  @override
+  String get popup_advanced_mining_crop_page_title => '框选图片';
+  @override
+  String get popup_advanced_mining_crop_done => '完成';
+  @override
+  String get popup_advanced_mining_crop_download_failed => '分镜模型下载失败';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      '快捷键 [ ] 增减前文 · Shift+[ ] 增减后文';
 }
 
 // Path: <root>
@@ -298605,6 +298760,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_mining_crop_to_panel_hint =>
       'Needs the panel model; without it the whole page is used.';
+  @override
+  String get popup_advanced_mining_crop_page_title => 'Select image area';
+  @override
+  String get popup_advanced_mining_crop_done => 'Done';
+  @override
+  String get popup_advanced_mining_crop_download_failed =>
+      'Couldn\'t download the panel model';
+  @override
+  String get popup_advanced_mining_sentence_shortcut_hint =>
+      'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
 }
 
 /// Flat map(s) containing all translations.
@@ -314080,6 +314245,14 @@ extension on _StringsEn {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -329550,6 +329723,14 @@ extension on _StringsAr {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -345096,6 +345277,14 @@ extension on _StringsDe {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -360624,6 +360813,14 @@ extension on _StringsEs {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -376170,6 +376367,14 @@ extension on _StringsFr {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -391660,6 +391865,14 @@ extension on _StringsId {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -407186,6 +407399,14 @@ extension on _StringsIt {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -422586,6 +422807,14 @@ extension on _StringsJa {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -437993,6 +438222,14 @@ extension on _StringsKo {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -453514,6 +453751,14 @@ extension on _StringsNl {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -469027,6 +469272,14 @@ extension on _StringsPtBr {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -484545,6 +484798,14 @@ extension on _StringsRu {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -500019,6 +500280,14 @@ extension on _StringsTh {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -515524,6 +515793,14 @@ extension on _StringsTr {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -531012,6 +531289,14 @@ extension on _StringsVi {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
@@ -546331,6 +546616,14 @@ extension on _StringsZhCn {
         return '一键制卡默认裁到所在分镜';
       case 'manga_mining_crop_to_panel_hint':
         return '需要分镜模型；没有模型时使用整页。';
+      case 'popup_advanced_mining_crop_page_title':
+        return '框选图片';
+      case 'popup_advanced_mining_crop_done':
+        return '完成';
+      case 'popup_advanced_mining_crop_download_failed':
+        return '分镜模型下载失败';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return '快捷键 [ ] 增减前文 · Shift+[ ] 增减后文';
       default:
         return null;
     }
@@ -561676,6 +561969,14 @@ extension on _StringsZhHk {
         return 'Crop one-click cards to the panel';
       case 'manga_mining_crop_to_panel_hint':
         return 'Needs the panel model; without it the whole page is used.';
+      case 'popup_advanced_mining_crop_page_title':
+        return 'Select image area';
+      case 'popup_advanced_mining_crop_done':
+        return 'Done';
+      case 'popup_advanced_mining_crop_download_failed':
+        return 'Couldn\'t download the panel model';
+      case 'popup_advanced_mining_sentence_shortcut_hint':
+        return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       default:
         return null;
     }
