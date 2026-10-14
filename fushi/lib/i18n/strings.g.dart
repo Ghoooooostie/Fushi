@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127228 (7484 per locale)
+/// Strings: 127262 (7486 per locale)
 ///
-/// Built on 2026-10-14 at 12:13 UTC
+/// Built on 2026-10-14 at 19:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8620,7 +8620,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anki_sync_client_sign_in_failed({required Object error}) =>
       'Sign-in failed: ${error}';
   String get anki_pending_mine_landing_hint =>
-      'Cards mined on devices without Anki reach this device through sync and are added to Anki here. Only one device receives them at a time.';
+      'Cards mined on devices without Anki are passed to this device through sync (such as Google Drive or WebDAV) and added to Anki here. Only one device receives them at a time.';
   String get anki_sync_client_relogin => 'Sign in again';
   String anki_sync_client_discard_confirm({required Object count}) =>
       '${count} card(s) haven\'t synced to Anki yet. Discard them and sign out? They can\'t be recovered.';
@@ -10807,12 +10807,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_filter_closed => 'Finished';
   String get feedback_filter_unread => 'New replies';
   String get anki_pending_mine_landing_host_note =>
-      'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
+      'This device is an interconnect host, so paired devices don\'t need this. Turn on "Mine to Fushi Interconnect server" on those devices and their cards go straight to Anki here.';
   String get manga_series_manage_volume => 'Manage volume';
   String get video_setting_mpv_lua_scripts_import_hint =>
       'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  String get sync_position_conflict_title => 'Playback position conflict';
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
 
@@ -25234,7 +25237,7 @@ class _StringsAr extends _StringsEn {
       'فشل تسجيل الدخول: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
+      'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة (مثل Google Drive أو WebDAV) وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
   @override
   String get anki_sync_client_relogin => 'تسجيل الدخول مرة أخرى';
   @override
@@ -28894,7 +28897,7 @@ class _StringsAr extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
+      'هذا الجهاز مضيف للربط البيني، لذا لا تحتاج الأجهزة المقترنة إلى هذا الخيار. فعّل «إرسال إلى الجهاز المقترن» على تلك الأجهزة لتصل بطاقاتها مباشرة إلى Anki على هذا الجهاز.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -28903,6 +28906,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -43702,7 +43710,7 @@ class _StringsDe extends _StringsEn {
       'Anmeldung fehlgeschlagen: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
+      'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync (z. B. Google Drive oder WebDAV) auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
   @override
   String get anki_sync_client_relogin => 'Erneut anmelden';
   @override
@@ -47375,7 +47383,7 @@ class _StringsDe extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
+      'Dieses Gerät ist ein Interconnect-Host, gekoppelte Geräte brauchen diese Option daher nicht. Schalte auf diesen Geräten „An gekoppeltes Gerät senden“ ein, dann landen ihre Karten direkt im Anki dieses Geräts.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -47384,6 +47392,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -62245,7 +62258,7 @@ class _StringsEs extends _StringsEn {
       'Error al iniciar sesión: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
+      'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización (como Google Drive o WebDAV) y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
   @override
   String get anki_sync_client_relogin => 'Iniciar sesión de nuevo';
   @override
@@ -65916,7 +65929,7 @@ class _StringsEs extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
+      'Este dispositivo es un host de interconexión, así que los dispositivos emparejados no necesitan esta opción. Activa «Enviar al dispositivo emparejado» en esos dispositivos y sus tarjetas irán directamente al Anki de este.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -65925,6 +65938,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -80861,7 +80879,7 @@ class _StringsFr extends _StringsEn {
       'Échec de la connexion : ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
+      'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation (Google Drive, WebDAV…) et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
   @override
   String get anki_sync_client_relogin => 'Se reconnecter';
   @override
@@ -84537,7 +84555,7 @@ class _StringsFr extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
+      'Cet appareil est un hôte d\'interconnexion : les appareils appairés n\'ont pas besoin de cette option. Activez « Envoyer au périphérique apparié » sur ces appareils et leurs cartes iront directement dans l\'Anki de celui-ci.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -84546,6 +84564,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -99143,7 +99166,7 @@ class _StringsId extends _StringsEn {
       'Login gagal: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
+      'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi (seperti Google Drive atau WebDAV) dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
   @override
   String get anki_sync_client_relogin => 'Masuk lagi';
   @override
@@ -102811,7 +102834,7 @@ class _StringsId extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
+      'Perangkat ini adalah host interkoneksi, jadi perangkat yang dipasangkan tidak memerlukan opsi ini. Aktifkan "Kirim kartu ke perangkat berpasangan" di perangkat tersebut, dan kartunya langsung masuk ke Anki di perangkat ini.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -102820,6 +102843,11 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -117579,7 +117607,7 @@ class _StringsIt extends _StringsEn {
       'Accesso non riuscito: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
+      'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione (ad es. Google Drive o WebDAV) e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
   @override
   String get anki_sync_client_relogin => 'Accedi di nuovo';
   @override
@@ -121251,7 +121279,7 @@ class _StringsIt extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
+      'Questo dispositivo è un host di interconnessione, quindi ai dispositivi associati questa opzione non serve. Attiva «Invia al dispositivo accoppiato» su quei dispositivi e le loro carte andranno direttamente nell\'Anki di questo.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -121260,6 +121288,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -135073,7 +135106,7 @@ class _StringsJa extends _StringsEn {
       'サインインに失敗しました: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki のないデバイスで作ったカードは、同期を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
+      'Anki のないデバイスで作ったカードは、同期（Google Drive、WebDAV など）を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
   @override
   String get anki_sync_client_relogin => '再度サインイン';
   @override
@@ -138691,7 +138724,7 @@ class _StringsJa extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
+      'このデバイスは Interconnect ホストなので、ペアリングしたデバイスではこの設定は不要です。それらのデバイスで「ペアリングデバイスに制カード」をオンにすると、カードはこのデバイスの Anki に直接追加されます。';
   @override
   String get manga_series_manage_volume => 'この巻を管理';
   @override
@@ -138700,6 +138733,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -152519,7 +152557,7 @@ class _StringsKo extends _StringsEn {
       '로그인 실패: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki가 없는 기기에서 만든 카드는 동기화를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
+      'Anki가 없는 기기에서 만든 카드는 동기화(Google Drive, WebDAV 등)를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
   @override
   String get anki_sync_client_relogin => '다시 로그인';
   @override
@@ -156166,7 +156204,7 @@ class _StringsKo extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
+      '이 기기는 인터커넥트 호스트이므로 페어링된 기기에는 이 설정이 필요 없습니다. 해당 기기에서 \'페어링된 기기로 채굴\'을 켜면 카드가 이 기기의 Anki로 바로 추가됩니다.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -156175,6 +156213,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -170885,7 +170928,7 @@ class _StringsNl extends _StringsEn {
       'Aanmelden mislukt: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
+      'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie (zoals Google Drive of WebDAV) op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
   @override
   String get anki_sync_client_relogin => 'Opnieuw aanmelden';
   @override
@@ -174554,7 +174597,7 @@ class _StringsNl extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
+      'Dit apparaat is een interconnect-host, dus gekoppelde apparaten hebben deze optie niet nodig. Zet op die apparaten \'Kaarten naar gekoppeld apparaat sturen\' aan, dan gaan hun kaarten rechtstreeks naar Anki op dit apparaat.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -174563,6 +174606,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -189339,7 +189387,7 @@ class _StringsPtBr extends _StringsEn {
       'Falha no login: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
+      'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização (como Google Drive ou WebDAV) e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
   @override
   String get anki_sync_client_relogin => 'Entrar novamente';
   @override
@@ -193011,7 +193059,7 @@ class _StringsPtBr extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
+      'Este dispositivo é um host de interconexão, então dispositivos pareados não precisam desta opção. Ative "Minerar para dispositivo pareado" nesses dispositivos e os cartões irão direto para o Anki deste.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -193020,6 +193068,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -207745,7 +207798,7 @@ class _StringsRu extends _StringsEn {
       'Не удалось войти: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
+      'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию (например, Google Drive или WebDAV) и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
   @override
   String get anki_sync_client_relogin => 'Войти снова';
   @override
@@ -211413,7 +211466,7 @@ class _StringsRu extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
+      'Это устройство — хост взаимосвязи, поэтому сопряжённым устройствам эта опция не нужна. Включите на них «Добывать на сопряжённое устройство», и их карточки будут сразу попадать в Anki на этом устройстве.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -211422,6 +211475,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -225833,7 +225891,7 @@ class _StringsTh extends _StringsEn {
       'ลงชื่อเข้าใช้ไม่สำเร็จ: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงค์ และเพิ่มลงใน Anki ที่นี่ รับได้ครั้งละหนึ่งอุปกรณ์เท่านั้น';
+      'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงก์ (เช่น Google Drive หรือ WebDAV) และเพิ่มลงใน Anki ที่นี่ รับได้ทีละหนึ่งอุปกรณ์เท่านั้น';
   @override
   String get anki_sync_client_relogin => 'ลงชื่อเข้าใช้อีกครั้ง';
   @override
@@ -229493,7 +229551,7 @@ class _StringsTh extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
+      'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ อุปกรณ์ที่จับคู่ไว้จึงไม่ต้องใช้ตัวเลือกนี้ เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนอุปกรณ์เหล่านั้น แล้วการ์ดจะถูกเพิ่มลงใน Anki ของอุปกรณ์นี้โดยตรง';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -229502,6 +229560,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -244107,7 +244170,7 @@ class _StringsTr extends _StringsEn {
       'Oturum açma başarısız oldu: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
+      'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla (Google Drive, WebDAV gibi) bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
   @override
   String get anki_sync_client_relogin => 'Yeniden oturum aç';
   @override
@@ -247776,7 +247839,7 @@ class _StringsTr extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
+      'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş cihazların bu seçeneğe ihtiyacı yok. O cihazlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın; kartları doğrudan bu cihazdaki Anki\'ye gider.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -247785,6 +247848,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -262318,7 +262386,7 @@ class _StringsVi extends _StringsEn {
       'Đăng nhập thất bại: ${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
+      'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ (như Google Drive hoặc WebDAV) và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
   @override
   String get anki_sync_client_relogin => 'Đăng nhập lại';
   @override
@@ -265986,7 +266054,7 @@ class _StringsVi extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
+      'Thiết bị này là máy chủ kết nối, nên các thiết bị đã ghép nối không cần tùy chọn này. Hãy bật "Gửi thẻ đến thiết bị đã ghép nối" trên các thiết bị đó, thẻ của chúng sẽ được thêm thẳng vào Anki trên thiết bị này.';
   @override
   String get manga_series_manage_volume => 'Manage volume';
   @override
@@ -265995,6 +266063,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -279286,7 +279359,7 @@ class _StringsZhCn extends _StringsEn {
       '登录失败：${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      '没装 Anki 的设备制的卡，会经同步送到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
+      '没装 Anki 的设备制的卡，会经同步（如 Google Drive、WebDAV）转交到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
   @override
   String get anki_sync_client_relogin => '重新登录';
   @override
@@ -282613,7 +282686,7 @@ class _StringsZhCn extends _StringsEn {
   String get feedback_filter_unread => '有新回复';
   @override
   String get anki_pending_mine_landing_host_note =>
-      '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
+      '本机是互联主机，配对设备不需要这一项：在那些设备上打开「制卡到 Fushi 互联服务端」，它们制的卡就会直接交给本机的 Anki。';
   @override
   String get manga_series_manage_volume => '管理本卷';
   @override
@@ -282622,6 +282695,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       '本次播放未装载（重新打开视频后生效）';
+  @override
+  String get sync_position_conflict_title => '播放进度冲突';
+  @override
+  String get sync_position_conflict_message =>
+      '这些条目在上次同步后，本机和配对设备上都播放过。请选择要保留哪一端的进度。';
   @override
   String get lyrics_layout_swap_sides => '左右互换';
 }
@@ -295928,7 +296006,7 @@ class _StringsZhHk extends _StringsEn {
       '登入失敗：${error}';
   @override
   String get anki_pending_mine_landing_hint =>
-      '沒裝 Anki 的裝置製的卡，會經同步送到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
+      '沒裝 Anki 的裝置製的卡，會經同步（如 Google Drive、WebDAV）轉交到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
   @override
   String get anki_sync_client_relogin => '重新登入';
   @override
@@ -299496,7 +299574,7 @@ class _StringsZhHk extends _StringsEn {
   String get feedback_filter_unread => 'New replies';
   @override
   String get anki_pending_mine_landing_host_note =>
-      '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
+      '本機是互聯主機，配對裝置不需要這一項：在那些裝置上開啟「製卡到 Fushi 互聯服務端」，它們製的卡就會直接交給本機的 Anki。';
   @override
   String get manga_series_manage_volume => '管理本卷';
   @override
@@ -299505,6 +299583,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
+  @override
+  String get sync_position_conflict_title => 'Playback position conflict';
+  @override
+  String get sync_position_conflict_message =>
+      'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
   @override
   String get lyrics_layout_swap_sides => 'Swap sides';
 }
@@ -311940,7 +312023,7 @@ extension on _StringsEn {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Sign-in failed: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Cards mined on devices without Anki reach this device through sync and are added to Anki here. Only one device receives them at a time.';
+        return 'Cards mined on devices without Anki are passed to this device through sync (such as Google Drive or WebDAV) and added to Anki here. Only one device receives them at a time.';
       case 'anki_sync_client_relogin':
         return 'Sign in again';
       case 'anki_sync_client_discard_confirm':
@@ -315016,13 +315099,17 @@ extension on _StringsEn {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'This device is an interconnect host, so paired phones can\'t hand cards to it this way. On those phones, turn on Mine to Fushi Interconnect server instead.';
+        return 'This device is an interconnect host, so paired devices don\'t need this. Turn on "Mine to Fushi Interconnect server" on those devices and their cards go straight to Anki here.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -327453,7 +327540,7 @@ extension on _StringsAr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'فشل تسجيل الدخول: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
+        return 'تصل البطاقات المُنشأة على أجهزة بلا Anki إلى هذا الجهاز عبر المزامنة (مثل Google Drive أو WebDAV) وتُضاف إلى Anki هنا. يستلمها جهاز واحد فقط في كل مرة.';
       case 'anki_sync_client_relogin':
         return 'تسجيل الدخول مرة أخرى';
       case 'anki_sync_client_discard_confirm':
@@ -330529,13 +330616,17 @@ extension on _StringsAr {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'هذا الجهاز مضيف للربط البيني، لذا لا تستطيع الهواتف المقترنة تسليمه البطاقات بهذه الطريقة. فعّل بدلًا من ذلك «إرسال إلى الجهاز المقترن» على تلك الهواتف.';
+        return 'هذا الجهاز مضيف للربط البيني، لذا لا تحتاج الأجهزة المقترنة إلى هذا الخيار. فعّل «إرسال إلى الجهاز المقترن» على تلك الأجهزة لتصل بطاقاتها مباشرة إلى Anki على هذا الجهاز.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -343042,7 +343133,7 @@ extension on _StringsDe {
         return ({required Object error}) =>
             'Anmeldung fehlgeschlagen: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
+        return 'Karten, die auf Geräten ohne Anki erstellt wurden, gelangen per Sync (z. B. Google Drive oder WebDAV) auf dieses Gerät und werden hier zu Anki hinzugefügt. Es empfängt jeweils nur ein Gerät.';
       case 'anki_sync_client_relogin':
         return 'Erneut anmelden';
       case 'anki_sync_client_discard_confirm':
@@ -346118,13 +346209,17 @@ extension on _StringsDe {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Dieses Gerät ist ein Interconnect-Host, daher können gekoppelte Smartphones ihm auf diesem Weg keine Karten übergeben. Schalte auf diesen Smartphones stattdessen „An gekoppeltes Gerät senden“ ein.';
+        return 'Dieses Gerät ist ein Interconnect-Host, gekoppelte Geräte brauchen diese Option daher nicht. Schalte auf diesen Geräten „An gekoppeltes Gerät senden“ ein, dann landen ihre Karten direkt im Anki dieses Geräts.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -358613,7 +358708,7 @@ extension on _StringsEs {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Error al iniciar sesión: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
+        return 'Las tarjetas creadas en dispositivos sin Anki llegan a este dispositivo mediante la sincronización (como Google Drive o WebDAV) y se añaden a Anki aquí. Solo un dispositivo las recibe a la vez.';
       case 'anki_sync_client_relogin':
         return 'Iniciar sesión de nuevo';
       case 'anki_sync_client_discard_confirm':
@@ -361689,13 +361784,17 @@ extension on _StringsEs {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Este dispositivo es un host de interconexión, así que los teléfonos emparejados no pueden entregarle tarjetas de esta forma. En esos teléfonos, activa «Enviar al dispositivo emparejado».';
+        return 'Este dispositivo es un host de interconexión, así que los dispositivos emparejados no necesitan esta opción. Activa «Enviar al dispositivo emparejado» en esos dispositivos y sus tarjetas irán directamente al Anki de este.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -374202,7 +374301,7 @@ extension on _StringsFr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Échec de la connexion : ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
+        return 'Les cartes créées sur des appareils sans Anki arrivent sur cet appareil via la synchronisation (Google Drive, WebDAV…) et sont ajoutées à Anki ici. Un seul appareil les reçoit à la fois.';
       case 'anki_sync_client_relogin':
         return 'Se reconnecter';
       case 'anki_sync_client_discard_confirm':
@@ -377278,13 +377377,17 @@ extension on _StringsFr {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Cet appareil est un hôte d\'interconnexion : les téléphones appairés ne peuvent pas lui transmettre de cartes par ce biais. Sur ces téléphones, activez plutôt « Envoyer au périphérique apparié ».';
+        return 'Cet appareil est un hôte d\'interconnexion : les appareils appairés n\'ont pas besoin de cette option. Activez « Envoyer au périphérique apparié » sur ces appareils et leurs cartes iront directement dans l\'Anki de celui-ci.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -389735,7 +389838,7 @@ extension on _StringsId {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Login gagal: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
+        return 'Kartu yang dibuat di perangkat tanpa Anki sampai ke perangkat ini lewat sinkronisasi (seperti Google Drive atau WebDAV) dan ditambahkan ke Anki di sini. Hanya satu perangkat yang menerima pada satu waktu.';
       case 'anki_sync_client_relogin':
         return 'Masuk lagi';
       case 'anki_sync_client_discard_confirm':
@@ -392811,13 +392914,17 @@ extension on _StringsId {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Perangkat ini adalah host interkoneksi, jadi ponsel yang dipasangkan tidak bisa menyerahkan kartu lewat cara ini. Di ponsel tersebut, aktifkan "Kirim kartu ke perangkat berpasangan".';
+        return 'Perangkat ini adalah host interkoneksi, jadi perangkat yang dipasangkan tidak memerlukan opsi ini. Aktifkan "Kirim kartu ke perangkat berpasangan" di perangkat tersebut, dan kartunya langsung masuk ke Anki di perangkat ini.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -405304,7 +405411,7 @@ extension on _StringsIt {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Accesso non riuscito: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
+        return 'Le carte create su dispositivi senza Anki arrivano su questo dispositivo tramite la sincronizzazione (ad es. Google Drive o WebDAV) e vengono aggiunte ad Anki qui. Le riceve un solo dispositivo alla volta.';
       case 'anki_sync_client_relogin':
         return 'Accedi di nuovo';
       case 'anki_sync_client_discard_confirm':
@@ -408380,13 +408487,17 @@ extension on _StringsIt {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Questo dispositivo è un host di interconnessione, quindi i telefoni associati non possono consegnargli carte in questo modo. Su quei telefoni attiva invece «Invia al dispositivo accoppiato».';
+        return 'Questo dispositivo è un host di interconnessione, quindi ai dispositivi associati questa opzione non serve. Attiva «Invia al dispositivo accoppiato» su quei dispositivi e le loro carte andranno direttamente nell\'Anki di questo.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -420751,7 +420862,7 @@ extension on _StringsJa {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'サインインに失敗しました: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki のないデバイスで作ったカードは、同期を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
+        return 'Anki のないデバイスで作ったカードは、同期（Google Drive、WebDAV など）を経由してこのデバイスに届き、ここの Anki に追加されます。受け取るデバイスは同時に 1 台だけです。';
       case 'anki_sync_client_relogin':
         return '再度サインイン';
       case 'anki_sync_client_discard_confirm':
@@ -423823,13 +423934,17 @@ extension on _StringsJa {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'このデバイスは Interconnect ホストなので、ペアリングしたスマートフォンはこの方法でカードを渡せません。代わりにスマートフォン側で「ペアリングデバイスに制カード」をオンにしてください。';
+        return 'このデバイスは Interconnect ホストなので、ペアリングしたデバイスではこの設定は不要です。それらのデバイスで「ペアリングデバイスに制カード」をオンにすると、カードはこのデバイスの Anki に直接追加されます。';
       case 'manga_series_manage_volume':
         return 'この巻を管理';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -436198,7 +436313,7 @@ extension on _StringsKo {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '로그인 실패: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki가 없는 기기에서 만든 카드는 동기화를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
+        return 'Anki가 없는 기기에서 만든 카드는 동기화(Google Drive, WebDAV 등)를 통해 이 기기로 전달되어 여기의 Anki에 추가됩니다. 한 번에 한 기기만 받을 수 있습니다.';
       case 'anki_sync_client_relogin':
         return '다시 로그인';
       case 'anki_sync_client_discard_confirm':
@@ -439273,13 +439388,17 @@ extension on _StringsKo {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return '이 기기는 인터커넥트 호스트이므로 페어링된 휴대폰이 이 방법으로 카드를 넘길 수 없습니다. 대신 해당 휴대폰에서 \'페어링된 기기로 채굴\'를 켜세요.';
+        return '이 기기는 인터커넥트 호스트이므로 페어링된 기기에는 이 설정이 필요 없습니다. 해당 기기에서 \'페어링된 기기로 채굴\'을 켜면 카드가 이 기기의 Anki로 바로 추가됩니다.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -451761,7 +451880,7 @@ extension on _StringsNl {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Aanmelden mislukt: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
+        return 'Kaarten die op apparaten zonder Anki zijn gemaakt, komen via synchronisatie (zoals Google Drive of WebDAV) op dit apparaat aan en worden hier aan Anki toegevoegd. Er ontvangt steeds maar één apparaat.';
       case 'anki_sync_client_relogin':
         return 'Opnieuw aanmelden';
       case 'anki_sync_client_discard_confirm':
@@ -454837,13 +454956,17 @@ extension on _StringsNl {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Dit apparaat is een interconnect-host, dus gekoppelde telefoons kunnen op deze manier geen kaarten afleveren. Zet op die telefoons in plaats daarvan \'Kaarten naar gekoppeld apparaat sturen\' aan.';
+        return 'Dit apparaat is een interconnect-host, dus gekoppelde apparaten hebben deze optie niet nodig. Zet op die apparaten \'Kaarten naar gekoppeld apparaat sturen\' aan, dan gaan hun kaarten rechtstreeks naar Anki op dit apparaat.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -467317,7 +467440,7 @@ extension on _StringsPtBr {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Falha no login: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
+        return 'Cartões criados em dispositivos sem Anki chegam a este dispositivo pela sincronização (como Google Drive ou WebDAV) e são adicionados ao Anki aqui. Apenas um dispositivo recebe por vez.';
       case 'anki_sync_client_relogin':
         return 'Entrar novamente';
       case 'anki_sync_client_discard_confirm':
@@ -470393,13 +470516,17 @@ extension on _StringsPtBr {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Este dispositivo é um host de interconexão, então celulares pareados não conseguem entregar cartões por esse caminho. Nesses celulares, ative "Minerar para dispositivo pareado".';
+        return 'Este dispositivo é um host de interconexão, então dispositivos pareados não precisam desta opção. Ative "Minerar para dispositivo pareado" nesses dispositivos e os cartões irão direto para o Anki deste.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -482878,7 +483005,7 @@ extension on _StringsRu {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Не удалось войти: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
+        return 'Карточки, созданные на устройствах без Anki, приходят на это устройство через синхронизацию (например, Google Drive или WebDAV) и добавляются в Anki здесь. Принимает только одно устройство одновременно.';
       case 'anki_sync_client_relogin':
         return 'Войти снова';
       case 'anki_sync_client_discard_confirm':
@@ -485954,13 +486081,17 @@ extension on _StringsRu {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Это устройство — хост взаимосвязи, поэтому сопряжённые телефоны не могут передать ему карточки этим способом. Включите на них «Добывать на сопряжённое устройство».';
+        return 'Это устройство — хост взаимосвязи, поэтому сопряжённым устройствам эта опция не нужна. Включите на них «Добывать на сопряжённое устройство», и их карточки будут сразу попадать в Anki на этом устройстве.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -498395,7 +498526,7 @@ extension on _StringsTh {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'ลงชื่อเข้าใช้ไม่สำเร็จ: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงค์ และเพิ่มลงใน Anki ที่นี่ รับได้ครั้งละหนึ่งอุปกรณ์เท่านั้น';
+        return 'การ์ดที่สร้างบนอุปกรณ์ที่ไม่มี Anki จะส่งมาถึงอุปกรณ์นี้ผ่านการซิงก์ (เช่น Google Drive หรือ WebDAV) และเพิ่มลงใน Anki ที่นี่ รับได้ทีละหนึ่งอุปกรณ์เท่านั้น';
       case 'anki_sync_client_relogin':
         return 'ลงชื่อเข้าใช้อีกครั้ง';
       case 'anki_sync_client_discard_confirm':
@@ -501471,13 +501602,17 @@ extension on _StringsTh {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ โทรศัพท์ที่จับคู่ไว้จึงส่งการ์ดมาทางนี้ไม่ได้ ให้เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนโทรศัพท์เหล่านั้นแทน';
+        return 'อุปกรณ์นี้เป็นโฮสต์การเชื่อมต่อ อุปกรณ์ที่จับคู่ไว้จึงไม่ต้องใช้ตัวเลือกนี้ เปิด "สร้างบัตรไปยังอุปกรณ์ที่จับคู่" บนอุปกรณ์เหล่านั้น แล้วการ์ดจะถูกเพิ่มลงใน Anki ของอุปกรณ์นี้โดยตรง';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -513943,7 +514078,7 @@ extension on _StringsTr {
         return ({required Object error}) =>
             'Oturum açma başarısız oldu: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
+        return 'Anki olmayan cihazlarda oluşturulan kartlar senkronizasyonla (Google Drive, WebDAV gibi) bu cihaza ulaşır ve burada Anki\'ye eklenir. Aynı anda yalnızca bir cihaz alır.';
       case 'anki_sync_client_relogin':
         return 'Yeniden oturum aç';
       case 'anki_sync_client_discard_confirm':
@@ -517019,13 +517154,17 @@ extension on _StringsTr {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş telefonlar kartları bu yolla teslim edemez. Bunun yerine o telefonlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın.';
+        return 'Bu cihaz bir ara bağlantı sunucusu, bu yüzden eşleştirilmiş cihazların bu seçeneğe ihtiyacı yok. O cihazlarda "Eşleştirilmiş cihaza çıkar" seçeneğini açın; kartları doğrudan bu cihazdaki Anki\'ye gider.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -529474,7 +529613,7 @@ extension on _StringsVi {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => 'Đăng nhập thất bại: ${error}';
       case 'anki_pending_mine_landing_hint':
-        return 'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
+        return 'Thẻ tạo trên thiết bị không có Anki sẽ được chuyển đến thiết bị này qua đồng bộ (như Google Drive hoặc WebDAV) và được thêm vào Anki tại đây. Mỗi lúc chỉ một thiết bị nhận.';
       case 'anki_sync_client_relogin':
         return 'Đăng nhập lại';
       case 'anki_sync_client_discard_confirm':
@@ -532550,13 +532689,17 @@ extension on _StringsVi {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return 'Thiết bị này là máy chủ kết nối, nên điện thoại đã ghép nối không thể chuyển thẻ theo cách này. Trên các điện thoại đó, hãy bật "Gửi thẻ đến thiết bị đã ghép nối" thay thế.';
+        return 'Thiết bị này là máy chủ kết nối, nên các thiết bị đã ghép nối không cần tùy chọn này. Hãy bật "Gửi thẻ đến thiết bị đã ghép nối" trên các thiết bị đó, thẻ của chúng sẽ được thêm thẳng vào Anki trên thiết bị này.';
       case 'manga_series_manage_volume':
         return 'Manage volume';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
@@ -544873,7 +545016,7 @@ extension on _StringsZhCn {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '登录失败：${error}';
       case 'anki_pending_mine_landing_hint':
-        return '没装 Anki 的设备制的卡，会经同步送到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
+        return '没装 Anki 的设备制的卡，会经同步（如 Google Drive、WebDAV）转交到这台设备，由这里的 Anki 添加。同一时间只有一台设备接收。';
       case 'anki_sync_client_relogin':
         return '重新登录';
       case 'anki_sync_client_discard_confirm':
@@ -547910,13 +548053,17 @@ extension on _StringsZhCn {
       case 'feedback_filter_unread':
         return '有新回复';
       case 'anki_pending_mine_landing_host_note':
-        return '本机是互联主机，配对的手机没法经这条路把卡交过来：请在那些手机上改开「制卡到 Fushi 互联服务端」。';
+        return '本机是互联主机，配对设备不需要这一项：在那些设备上打开「制卡到 Fushi 互联服务端」，它们制的卡就会直接交给本机的 Anki。';
       case 'manga_series_manage_volume':
         return '管理本卷';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return '播放视频时装载 mpv_scripts 目录里的全部 .lua 脚本。删除脚本在下次打开视频时生效。';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return '本次播放未装载（重新打开视频后生效）';
+      case 'sync_position_conflict_title':
+        return '播放进度冲突';
+      case 'sync_position_conflict_message':
+        return '这些条目在上次同步后，本机和配对设备上都播放过。请选择要保留哪一端的进度。';
       case 'lyrics_layout_swap_sides':
         return '左右互换';
       default:
@@ -560234,7 +560381,7 @@ extension on _StringsZhHk {
       case 'anki_sync_client_sign_in_failed':
         return ({required Object error}) => '登入失敗：${error}';
       case 'anki_pending_mine_landing_hint':
-        return '沒裝 Anki 的裝置製的卡，會經同步送到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
+        return '沒裝 Anki 的裝置製的卡，會經同步（如 Google Drive、WebDAV）轉交到這台裝置，由這裡的 Anki 加入。同一時間只有一台裝置接收。';
       case 'anki_sync_client_relogin':
         return '重新登入';
       case 'anki_sync_client_discard_confirm':
@@ -563298,13 +563445,17 @@ extension on _StringsZhHk {
       case 'feedback_filter_unread':
         return 'New replies';
       case 'anki_pending_mine_landing_host_note':
-        return '本機是互聯主機，配對的手機沒法經這條路把卡交過來：請在那些手機上改開「製卡到 Fushi 互聯服務端」。';
+        return '本機是互聯主機，配對裝置不需要這一項：在那些裝置上開啟「製卡到 Fushi 互聯服務端」，它們製的卡就會直接交給本機的 Anki。';
       case 'manga_series_manage_volume':
         return '管理本卷';
       case 'video_setting_mpv_lua_scripts_import_hint':
         return 'Every .lua file in the mpv_scripts folder loads when a video plays. Deleting a script takes effect the next time you open a video.';
       case 'video_setting_mpv_lua_scripts_status_pending':
         return 'Not loaded in this playback (reopen the video)';
+      case 'sync_position_conflict_title':
+        return 'Playback position conflict';
+      case 'sync_position_conflict_message':
+        return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
       case 'lyrics_layout_swap_sides':
         return 'Swap sides';
       default:
