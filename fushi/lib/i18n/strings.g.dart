@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 130526 (7678 per locale)
+/// Strings: 130560 (7680 per locale)
 ///
-/// Built on 2026-10-14 at 18:11 UTC
+/// Built on 2026-10-14 at 19:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11083,6 +11083,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Use the default scheduling parameters for this deck? Automatic optimization waits until you have more reviews.';
   String get srs_settings_reset_params_done => 'Default parameters restored';
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get backup_category_srs => 'Review';
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -29637,6 +29640,11 @@ class _StringsAr extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -48581,6 +48589,11 @@ class _StringsDe extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -67585,6 +67598,11 @@ class _StringsEs extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -86669,6 +86687,11 @@ class _StringsFr extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -105406,6 +105429,11 @@ class _StringsId extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -124309,6 +124337,11 @@ class _StringsIt extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -142212,6 +142245,11 @@ class _StringsJa extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -160150,6 +160188,11 @@ class _StringsKo extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -179001,6 +179044,11 @@ class _StringsNl extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -197921,6 +197969,11 @@ class _StringsPtBr extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -216786,6 +216839,11 @@ class _StringsRu extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -235329,6 +235387,11 @@ class _StringsTh extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -254075,6 +254138,11 @@ class _StringsTr extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -272748,6 +272816,11 @@ class _StringsVi extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 // Path: <root>
@@ -289798,6 +289871,11 @@ class _StringsZhCn extends _StringsEn {
   String get srs_settings_reset_params_done => '已恢复默认参数';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect（Fushi 复习）';
+  @override
+  String get backup_category_srs => '复习';
+  @override
+  String get backup_category_srs_desc =>
+      '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
 }
 
 // Path: <root>
@@ -307144,6 +307222,11 @@ class _StringsZhHk extends _StringsEn {
   String get srs_settings_reset_params_done => 'Default parameters restored';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get backup_category_srs => 'Review';
+  @override
+  String get backup_category_srs_desc =>
+      'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
 }
 
 /// Flat map(s) containing all translations.
@@ -323072,6 +323155,10 @@ extension on _StringsEn {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -338995,6 +339082,10 @@ extension on _StringsAr {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -354994,6 +355085,10 @@ extension on _StringsDe {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -370975,6 +371070,10 @@ extension on _StringsEs {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -386974,6 +387073,10 @@ extension on _StringsFr {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -402917,6 +403020,10 @@ extension on _StringsId {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -418896,6 +419003,10 @@ extension on _StringsIt {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -434749,6 +434860,10 @@ extension on _StringsJa {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -450609,6 +450724,10 @@ extension on _StringsKo {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -466583,6 +466702,10 @@ extension on _StringsNl {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -482549,6 +482672,10 @@ extension on _StringsPtBr {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -498520,6 +498647,10 @@ extension on _StringsRu {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -514447,6 +514578,10 @@ extension on _StringsTh {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -530405,6 +530540,10 @@ extension on _StringsTr {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -546346,6 +546485,10 @@ extension on _StringsVi {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
@@ -562106,6 +562249,10 @@ extension on _StringsZhCn {
         return '已恢复默认参数';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect（Fushi 复习）';
+      case 'backup_category_srs':
+        return '复习';
+      case 'backup_category_srs_desc':
+        return '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
       default:
         return null;
     }
@@ -577904,6 +578051,10 @@ extension on _StringsZhHk {
         return 'Default parameters restored';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'backup_category_srs':
+        return 'Review';
+      case 'backup_category_srs_desc':
+        return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       default:
         return null;
     }
