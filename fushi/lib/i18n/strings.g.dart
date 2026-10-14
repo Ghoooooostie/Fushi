@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127262 (7486 per locale)
+/// Strings: 127313 (7489 per locale)
 ///
-/// Built on 2026-10-14 at 14:17 UTC
+/// Built on 2026-10-14 at 14:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10814,10 +10814,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_mpv_lua_scripts_status_pending =>
       'Not loaded in this playback (reopen the video)';
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -28910,11 +28919,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -47397,11 +47418,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -65944,11 +65977,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -84571,11 +84616,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -102851,11 +102908,23 @@ class _StringsId extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -121297,11 +121366,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -138743,11 +138824,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'このデータベースは旧 Hibiki アプリまたは初期バージョン（データ構造 v75 未満）のもので、このバージョンでは直接アップグレードできません。データは変更されていません。移行手順：Fushi v${version}（完全なアップグレード経路を含むブリッジ版。データフォルダーは保持されます）をこのバージョンの上から上書きインストールし、一度起動してデータをアップグレードしてから、最新バージョンに更新してください。Android では新しいバージョンの上に古いバージョンをインストールできず、Fushi をアンインストールするとこのデータも削除されるため、アンインストール前にバックアップしてください。ダウンロード：${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'このバックアップは旧 Hibiki アプリまたは初期バージョン（データ構造 v75 未満）のもので、このバージョンではインポートできません。現在のデータは変更されていません。移行手順：Fushi v${version}（完全なアップグレード経路を含むブリッジ版）をインストールしてこのバックアップをインポートし、その後最新バージョンに更新してください。Android では新しいバージョンの上に古いバージョンをインストールできないため、先に現在の Fushi をアンインストールしてから（現在のデータは削除されるので、残したいものは先にバックアップしてください）v${version} をインストールしてください。ダウンロード：${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Fushi v${version} のダウンロードページを開く';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Hibiki のデータは Fushi v${version} でインポートしてください';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      '旧 Hibiki アプリが書き出したデータは古すぎるため、このバージョンでは直接インポートできません。何も変更されておらず、書き出したファイルも残っています。移行手順：1. この Fushi をアンインストールします（Android では新しいバージョンの上に古いバージョンをインストールできません。新しく入れた Fushi にはまだデータがありませんが、すでにデータを追加している場合は先にバックアップしてください）。2. 完全なアップグレード経路を含むブリッジ版 Fushi v${version} をインストールします。3. その中で「Hibiki からインポート」を実行します。4. 最新バージョンに更新します。';
 }
 
 // Path: <root>
@@ -156224,11 +156317,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -174618,11 +174723,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -193081,11 +193198,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -211489,11 +211618,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -229575,11 +229716,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -247864,11 +248017,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -266080,11 +266245,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get db_legacy_schema_title => 'Old data needs an upgrade first';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      'Open the Fushi v${version} download page';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      'Import Hibiki data with Fushi v${version}';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
 }
 
 // Path: <root>
@@ -282713,11 +282890,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get db_legacy_schema_title => '旧数据需要先升级';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      '此数据库来自较早版本的 Fushi，当前版本已无法直接升级它。你的数据没有被改动。请先安装 Fushi v${version}，打开一次完成数据升级，再安装当前版本。';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      '此数据库来自旧版 Hibiki 或早期版本（数据结构低于 v75），当前版本已无法直接升级它。你的数据没有被改动。迁移步骤：在当前版本上覆盖安装 Fushi v${version}（仍带完整升级路径的桥接版本，数据目录会保留），打开一次完成数据升级，再更新到当前版本。Android 系统不允许在新版本上直接安装旧版本，而卸载 Fushi 会同时删除这份数据，卸载前请先备份。下载：${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      '此备份来自较早版本的 Fushi，当前版本已无法直接导入。你当前的数据没有任何改动。请先安装 Fushi v${version} 导入此备份，再更新到当前版本。';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      '此备份来自旧版 Hibiki 或早期版本（数据结构低于 v75），当前版本已无法直接导入。你当前的数据没有任何改动。迁移步骤：安装 Fushi v${version}（仍带完整升级路径的桥接版本），在其中导入此备份，再更新到当前版本。Android 系统不允许在新版本上直接安装旧版本：需先卸载当前 Fushi（会删除它现有的数据，需要保留的请先备份），再安装 v${version}。下载：${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      '打开 Fushi v${version} 下载页';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      '请用 Fushi v${version} 导入 Hibiki 数据';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      '旧版 Hibiki 导出的数据太旧，当前版本无法直接导入。没有任何数据被改动，导出文件也已保留。迁移步骤：1. 卸载当前 Fushi——Android 不允许在新版本上直接安装旧版本，而新装的 Fushi 本来就是空库（如果已经添加过数据，请先备份）。2. 安装 Fushi v${version}（仍带完整升级路径的桥接版本）。3. 在其中执行「从 Hibiki 导入」。4. 再更新到当前版本。';
 }
 
 // Path: <root>
@@ -299602,11 +299791,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get db_legacy_schema_title => '舊資料需要先升級';
   @override
-  String db_legacy_schema_message({required Object version}) =>
-      '此資料庫來自較早版本的 Fushi，目前版本已無法直接升級它。你的資料沒有被改動。請先安裝 Fushi v${version}，開啟一次完成資料升級，再安裝目前版本。';
+  String db_legacy_schema_message({
+    required Object version,
+    required Object url,
+  }) =>
+      '此資料庫來自舊版 Hibiki 或早期版本（資料結構低於 v75），目前版本已無法直接升級它。你的資料沒有被改動。遷移步驟：在目前版本上覆蓋安裝 Fushi v${version}（仍帶完整升級路徑的橋接版本，資料目錄會保留），開啟一次完成資料升級，再更新到目前版本。Android 系統不允許在新版本上直接安裝舊版本，而解除安裝 Fushi 會同時刪除這份資料，解除安裝前請先備份。下載：${url}';
   @override
-  String backup_legacy_schema({required Object version}) =>
-      '此備份來自較早版本的 Fushi，目前版本已無法直接匯入。你目前的資料沒有任何改動。請先安裝 Fushi v${version} 匯入此備份，再更新到目前版本。';
+  String backup_legacy_schema({required Object version, required Object url}) =>
+      '此備份來自舊版 Hibiki 或早期版本（資料結構低於 v75），目前版本已無法直接匯入。你目前的資料沒有任何改動。遷移步驟：安裝 Fushi v${version}（仍帶完整升級路徑的橋接版本），在其中匯入此備份，再更新到目前版本。Android 系統不允許在新版本上直接安裝舊版本：需先解除安裝目前的 Fushi（會刪除它現有的資料，需要保留的請先備份），再安裝 v${version}。下載：${url}';
+  @override
+  String db_legacy_schema_release_open({required Object version}) =>
+      '開啟 Fushi v${version} 下載頁';
+  @override
+  String migration_import_legacy_title({required Object version}) =>
+      '請用 Fushi v${version} 匯入 Hibiki 資料';
+  @override
+  String migration_import_legacy_message({required Object version}) =>
+      '舊版 Hibiki 匯出的資料太舊，目前版本無法直接匯入。沒有任何資料被改動，匯出檔案也已保留。遷移步驟：1. 解除安裝目前的 Fushi——Android 不允許在新版本上直接安裝舊版本，而新裝的 Fushi 本來就是空資料庫（如果已經加入過資料，請先備份）。2. 安裝 Fushi v${version}（仍帶完整升級路徑的橋接版本）。3. 在其中執行「從 Hibiki 匯入」。4. 再更新到目前版本。';
 }
 
 /// Flat map(s) containing all translations.
@@ -315126,11 +315327,20 @@ extension on _StringsEn {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -330645,11 +330855,20 @@ extension on _StringsAr {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -346240,11 +346459,20 @@ extension on _StringsDe {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -361817,11 +362045,20 @@ extension on _StringsEs {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -377412,11 +377649,20 @@ extension on _StringsFr {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -392951,11 +393197,20 @@ extension on _StringsId {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -408526,11 +408781,20 @@ extension on _StringsIt {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -423975,11 +424239,19 @@ extension on _StringsJa {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'このデータベースは旧 Hibiki アプリまたは初期バージョン（データ構造 v75 未満）のもので、このバージョンでは直接アップグレードできません。データは変更されていません。移行手順：Fushi v${version}（完全なアップグレード経路を含むブリッジ版。データフォルダーは保持されます）をこのバージョンの上から上書きインストールし、一度起動してデータをアップグレードしてから、最新バージョンに更新してください。Android では新しいバージョンの上に古いバージョンをインストールできず、Fushi をアンインストールするとこのデータも削除されるため、アンインストール前にバックアップしてください。ダウンロード：${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'このバックアップは旧 Hibiki アプリまたは初期バージョン（データ構造 v75 未満）のもので、このバージョンではインポートできません。現在のデータは変更されていません。移行手順：Fushi v${version}（完全なアップグレード経路を含むブリッジ版）をインストールしてこのバックアップをインポートし、その後最新バージョンに更新してください。Android では新しいバージョンの上に古いバージョンをインストールできないため、先に現在の Fushi をアンインストールしてから（現在のデータは削除されるので、残したいものは先にバックアップしてください）v${version} をインストールしてください。ダウンロード：${url}';
+      case 'db_legacy_schema_release_open':
+        return ({required Object version}) => 'Fushi v${version} のダウンロードページを開く';
+      case 'migration_import_legacy_title':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Hibiki のデータは Fushi v${version} でインポートしてください';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            '旧 Hibiki アプリが書き出したデータは古すぎるため、このバージョンでは直接インポートできません。何も変更されておらず、書き出したファイルも残っています。移行手順：1. この Fushi をアンインストールします（Android では新しいバージョンの上に古いバージョンをインストールできません。新しく入れた Fushi にはまだデータがありませんが、すでにデータを追加している場合は先にバックアップしてください）。2. 完全なアップグレード経路を含むブリッジ版 Fushi v${version} をインストールします。3. その中で「Hibiki からインポート」を実行します。4. 最新バージョンに更新します。';
       default:
         return null;
     }
@@ -439431,11 +439703,20 @@ extension on _StringsKo {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -455001,11 +455282,20 @@ extension on _StringsNl {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -470563,11 +470853,20 @@ extension on _StringsPtBr {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -486130,11 +486429,20 @@ extension on _StringsRu {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -501653,11 +501961,20 @@ extension on _StringsTh {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -517207,11 +517524,20 @@ extension on _StringsTr {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -532744,11 +533070,20 @@ extension on _StringsVi {
       case 'db_legacy_schema_title':
         return 'Old data needs an upgrade first';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            'This database was created by an earlier version of Fushi that this version can no longer upgrade directly. Your data has not been changed. Install Fushi v${version}, open it once to upgrade the data, then install this version again.';
+        return ({required Object version, required Object url}) =>
+            'This database comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer upgrade directly. Your data has not been changed. To migrate: install Fushi v${version} over this version (the bridge release that still contains the full upgrade path; your data folder is kept), open it once to upgrade the data, then update to the current version. On Android an older version cannot be installed over a newer one, and uninstalling Fushi also deletes this data, so back it up before uninstalling. Download: ${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            'This backup comes from the old Hibiki app or an early version (data schema older than v75), which this version can no longer import. Your current data has not been changed. To migrate: install Fushi v${version} (the bridge release that still contains the full upgrade path), import the backup there, then update to the current version. On Android an older version cannot be installed over a newer one: uninstall this Fushi first (this deletes its current data, so back up anything you want to keep), then install v${version}. Download: ${url}';
+      case 'db_legacy_schema_release_open':
         return ({required Object version}) =>
-            'This backup comes from an earlier version of Fushi that this version can no longer import. Your current data has not been changed. Install Fushi v${version}, import the backup there once, then update to this version.';
+            'Open the Fushi v${version} download page';
+      case 'migration_import_legacy_title':
+        return ({required Object version}) =>
+            'Import Hibiki data with Fushi v${version}';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       default:
         return null;
     }
@@ -548110,11 +548445,19 @@ extension on _StringsZhCn {
       case 'db_legacy_schema_title':
         return '旧数据需要先升级';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            '此数据库来自较早版本的 Fushi，当前版本已无法直接升级它。你的数据没有被改动。请先安装 Fushi v${version}，打开一次完成数据升级，再安装当前版本。';
+        return ({required Object version, required Object url}) =>
+            '此数据库来自旧版 Hibiki 或早期版本（数据结构低于 v75），当前版本已无法直接升级它。你的数据没有被改动。迁移步骤：在当前版本上覆盖安装 Fushi v${version}（仍带完整升级路径的桥接版本，数据目录会保留），打开一次完成数据升级，再更新到当前版本。Android 系统不允许在新版本上直接安装旧版本，而卸载 Fushi 会同时删除这份数据，卸载前请先备份。下载：${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            '此备份来自旧版 Hibiki 或早期版本（数据结构低于 v75），当前版本已无法直接导入。你当前的数据没有任何改动。迁移步骤：安装 Fushi v${version}（仍带完整升级路径的桥接版本），在其中导入此备份，再更新到当前版本。Android 系统不允许在新版本上直接安装旧版本：需先卸载当前 Fushi（会删除它现有的数据，需要保留的请先备份），再安装 v${version}。下载：${url}';
+      case 'db_legacy_schema_release_open':
+        return ({required Object version}) => '打开 Fushi v${version} 下载页';
+      case 'migration_import_legacy_title':
         return ({required Object version}) =>
-            '此备份来自较早版本的 Fushi，当前版本已无法直接导入。你当前的数据没有任何改动。请先安装 Fushi v${version} 导入此备份，再更新到当前版本。';
+            '请用 Fushi v${version} 导入 Hibiki 数据';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            '旧版 Hibiki 导出的数据太旧，当前版本无法直接导入。没有任何数据被改动，导出文件也已保留。迁移步骤：1. 卸载当前 Fushi——Android 不允许在新版本上直接安装旧版本，而新装的 Fushi 本来就是空库（如果已经添加过数据，请先备份）。2. 安装 Fushi v${version}（仍带完整升级路径的桥接版本）。3. 在其中执行「从 Hibiki 导入」。4. 再更新到当前版本。';
       default:
         return null;
     }
@@ -563504,11 +563847,19 @@ extension on _StringsZhHk {
       case 'db_legacy_schema_title':
         return '舊資料需要先升級';
       case 'db_legacy_schema_message':
-        return ({required Object version}) =>
-            '此資料庫來自較早版本的 Fushi，目前版本已無法直接升級它。你的資料沒有被改動。請先安裝 Fushi v${version}，開啟一次完成資料升級，再安裝目前版本。';
+        return ({required Object version, required Object url}) =>
+            '此資料庫來自舊版 Hibiki 或早期版本（資料結構低於 v75），目前版本已無法直接升級它。你的資料沒有被改動。遷移步驟：在目前版本上覆蓋安裝 Fushi v${version}（仍帶完整升級路徑的橋接版本，資料目錄會保留），開啟一次完成資料升級，再更新到目前版本。Android 系統不允許在新版本上直接安裝舊版本，而解除安裝 Fushi 會同時刪除這份資料，解除安裝前請先備份。下載：${url}';
       case 'backup_legacy_schema':
+        return ({required Object version, required Object url}) =>
+            '此備份來自舊版 Hibiki 或早期版本（資料結構低於 v75），目前版本已無法直接匯入。你目前的資料沒有任何改動。遷移步驟：安裝 Fushi v${version}（仍帶完整升級路徑的橋接版本），在其中匯入此備份，再更新到目前版本。Android 系統不允許在新版本上直接安裝舊版本：需先解除安裝目前的 Fushi（會刪除它現有的資料，需要保留的請先備份），再安裝 v${version}。下載：${url}';
+      case 'db_legacy_schema_release_open':
+        return ({required Object version}) => '開啟 Fushi v${version} 下載頁';
+      case 'migration_import_legacy_title':
         return ({required Object version}) =>
-            '此備份來自較早版本的 Fushi，目前版本已無法直接匯入。你目前的資料沒有任何改動。請先安裝 Fushi v${version} 匯入此備份，再更新到目前版本。';
+            '請用 Fushi v${version} 匯入 Hibiki 資料';
+      case 'migration_import_legacy_message':
+        return ({required Object version}) =>
+            '舊版 Hibiki 匯出的資料太舊，目前版本無法直接匯入。沒有任何資料被改動，匯出檔案也已保留。遷移步驟：1. 解除安裝目前的 Fushi——Android 不允許在新版本上直接安裝舊版本，而新裝的 Fushi 本來就是空資料庫（如果已經加入過資料，請先備份）。2. 安裝 Fushi v${version}（仍帶完整升級路徑的橋接版本）。3. 在其中執行「從 Hibiki 匯入」。4. 再更新到目前版本。';
       default:
         return null;
     }
