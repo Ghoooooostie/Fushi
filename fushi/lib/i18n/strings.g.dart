@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 126123 (7419 per locale)
+/// Strings: 126140 (7420 per locale)
 ///
-/// Built on 2026-10-14 at 05:04 UTC
+/// Built on 2026-10-14 at 05:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10716,6 +10716,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_pause_ocr_scope_off => 'Off';
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -28643,6 +28645,9 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -46960,6 +46965,9 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -65337,6 +65345,9 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -83793,6 +83804,9 @@ class _StringsFr extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -101904,6 +101918,9 @@ class _StringsId extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -120180,6 +120197,9 @@ class _StringsIt extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -137456,6 +137476,9 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -154768,6 +154791,9 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -172992,6 +173018,9 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -191285,6 +191314,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -209524,6 +209556,9 @@ class _StringsRu extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -227441,6 +227476,9 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -245561,6 +245599,9 @@ class _StringsTr extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -263608,6 +263649,9 @@ class _StringsVi extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 // Path: <root>
@@ -280089,6 +280133,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       '已选中 ${n} 卷，将逐卷各导入为一本，书名取各自的文件名或文件夹名。';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      '无法打开 ${name}，请改从书架导入。';
 }
 
 // Path: <root>
@@ -296808,6 +296855,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String manga_import_selection_batch_hint({required Object n}) =>
       'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+  @override
+  String external_book_open_failed({required Object name}) =>
+      'Couldn\'t open ${name}. Try importing it from the library instead.';
 }
 
 /// Flat map(s) containing all translations.
@@ -312193,6 +312243,9 @@ extension on _StringsEn {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -327573,6 +327626,9 @@ extension on _StringsAr {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -343029,6 +343085,9 @@ extension on _StringsDe {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -358467,6 +358526,9 @@ extension on _StringsEs {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -373923,6 +373985,9 @@ extension on _StringsFr {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -389323,6 +389388,9 @@ extension on _StringsId {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -404759,6 +404827,9 @@ extension on _StringsIt {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -420069,6 +420140,9 @@ extension on _StringsJa {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -435386,6 +435460,9 @@ extension on _StringsKo {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -450817,6 +450894,9 @@ extension on _StringsNl {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -466240,6 +466320,9 @@ extension on _StringsPtBr {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -481668,6 +481751,9 @@ extension on _StringsRu {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -497052,6 +497138,9 @@ extension on _StringsTh {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -512467,6 +512556,9 @@ extension on _StringsTr {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -527865,6 +527957,9 @@ extension on _StringsVi {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
@@ -543093,6 +543188,8 @@ extension on _StringsZhCn {
         return '关闭';
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) => '已选中 ${n} 卷，将逐卷各导入为一本，书名取各自的文件名或文件夹名。';
+      case 'external_book_open_failed':
+        return ({required Object name}) => '无法打开 ${name}，请改从书架导入。';
       default:
         return null;
     }
@@ -558348,6 +558445,9 @@ extension on _StringsZhHk {
       case 'manga_import_selection_batch_hint':
         return ({required Object n}) =>
             'Selected ${n} volumes; each is imported as its own book, named after its file or folder.';
+      case 'external_book_open_failed':
+        return ({required Object name}) =>
+            'Couldn\'t open ${name}. Try importing it from the library instead.';
       default:
         return null;
     }
