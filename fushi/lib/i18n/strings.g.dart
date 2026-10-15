@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132158 (7774 per locale)
+/// Strings: 132124 (7772 per locale)
 ///
-/// Built on 2026-10-15 at 03:29 UTC
+/// Built on 2026-10-15 at 05:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11147,9 +11147,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   String get srs_mining_target_anki => 'Anki';
   String get srs_mining_target_srs => 'Fushi review';
-  String get srs_mining_target_both => 'Both';
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   String get srs_sync_now => 'Sync now';
@@ -29898,11 +29895,6 @@ class _StringsAr extends _StringsEn {
   String get srs_mining_target_anki => 'Anki';
   @override
   String get srs_mining_target_srs => 'Fushi review';
-  @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -49086,11 +49078,6 @@ class _StringsDe extends _StringsEn {
   String get srs_mining_target_anki => 'Anki';
   @override
   String get srs_mining_target_srs => 'Fushi review';
-  @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -68333,11 +68320,6 @@ class _StringsEs extends _StringsEn {
   String get srs_mining_target_anki => 'Anki';
   @override
   String get srs_mining_target_srs => 'Fushi review';
-  @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -87662,11 +87644,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -106642,11 +106619,6 @@ class _StringsId extends _StringsEn {
   String get srs_mining_target_anki => 'Anki';
   @override
   String get srs_mining_target_srs => 'Fushi review';
-  @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -125790,11 +125762,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -143936,11 +143903,6 @@ class _StringsJa extends _StringsEn {
   String get srs_mining_target_anki => 'Anki';
   @override
   String get srs_mining_target_srs => 'Fushi review';
-  @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -162119,11 +162081,6 @@ class _StringsKo extends _StringsEn {
   String get srs_mining_target_anki => 'Anki';
   @override
   String get srs_mining_target_srs => 'Fushi review';
-  @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -181214,11 +181171,6 @@ class _StringsNl extends _StringsEn {
   String get srs_mining_target_anki => 'Anki';
   @override
   String get srs_mining_target_srs => 'Fushi review';
-  @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -200379,11 +200331,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -219488,11 +219435,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -238274,11 +238216,6 @@ class _StringsTh extends _StringsEn {
   String get srs_mining_target_anki => 'Anki';
   @override
   String get srs_mining_target_srs => 'Fushi review';
-  @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -257266,11 +257203,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -276184,11 +276116,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -293462,11 +293389,6 @@ class _StringsZhCn extends _StringsEn {
   String get srs_mining_target_anki => 'Anki';
   @override
   String get srs_mining_target_srs => 'Fushi 复习';
-  @override
-  String get srs_mining_target_both => '两者都推';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki 与 Fushi 复习会各自为同一个词安排复习（重复排程）。';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
       '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
@@ -311039,11 +310961,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -327188,10 +327105,6 @@ extension on _StringsEn {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -343311,10 +343224,6 @@ extension on _StringsAr {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -359510,10 +359419,6 @@ extension on _StringsDe {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -375691,10 +375596,6 @@ extension on _StringsEs {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -391890,10 +391791,6 @@ extension on _StringsFr {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -408033,10 +407930,6 @@ extension on _StringsId {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -424212,10 +424105,6 @@ extension on _StringsIt {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -440264,10 +440153,6 @@ extension on _StringsJa {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -456324,10 +456209,6 @@ extension on _StringsKo {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -472498,10 +472379,6 @@ extension on _StringsNl {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -488664,10 +488541,6 @@ extension on _StringsPtBr {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -504835,10 +504708,6 @@ extension on _StringsRu {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -520962,10 +520831,6 @@ extension on _StringsTh {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -537120,10 +536985,6 @@ extension on _StringsTr {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -553261,10 +553122,6 @@ extension on _StringsVi {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -569225,10 +569082,6 @@ extension on _StringsZhCn {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi 复习';
-      case 'srs_mining_target_both':
-        return '两者都推';
-      case 'srs_mining_target_both_warning':
-        return 'Anki 与 Fushi 复习会各自为同一个词安排复习（重复排程）。';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
@@ -585215,10 +585068,6 @@ extension on _StringsZhHk {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
