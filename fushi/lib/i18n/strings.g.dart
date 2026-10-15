@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132158 (7774 per locale)
+/// Strings: 133195 (7835 per locale)
 ///
-/// Built on 2026-10-15 at 03:29 UTC
+/// Built on 2026-10-15 at 06:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11066,7 +11066,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_note_confirm_delete => 'Confirm delete';
   String get srs_browse_title => 'Browse';
   String srs_browse_count({required Object n}) => '${n} notes';
-  String get srs_browse_search_hint => 'Search notes';
   String get srs_browse_empty => 'No notes found';
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
   String get srs_browse_suspended => 'Cards suspended';
@@ -11232,6 +11231,80 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_srs => 'Review';
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  String get srs_browse_mode_cards => 'Cards';
+  String get srs_browse_mode_notes => 'Notes';
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  String get srs_browse_sort_title => 'Sort by';
+  String get srs_browse_sort_ascending => 'Ascending';
+  String get srs_browse_sort_descending => 'Descending';
+  String get srs_browse_sort_sort_field => 'Sort field';
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  String get srs_browse_sort_due => 'Due';
+  String get srs_browse_sort_created => 'Created';
+  String get srs_browse_sort_modified => 'Modified';
+  String get srs_browse_sort_interval => 'Interval';
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  String get srs_browse_sort_reps => 'Reviews';
+  String get srs_browse_sort_lapses => 'Lapses';
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  String get srs_browse_search_field_label => 'Search in';
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  String get srs_browse_search_help => 'Search help';
+  String get srs_browse_help_text => 'Any field contains the text';
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  String get srs_browse_help_note => 'Note type';
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  String get srs_browse_help_card => 'Card number or template name';
+  String get srs_browse_help_is => 'Card state';
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  String get srs_browse_preview => 'Preview';
+  String get srs_browse_preview_question => 'Show question';
+  String get srs_browse_preview_prev => 'Previous card';
+  String get srs_browse_preview_next => 'Next card';
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  String get srs_browse_select => 'Select';
+  String get srs_browse_select_all => 'Select all';
+  String get srs_browse_select_none => 'Clear selection';
+  String get srs_browse_batch_actions => 'Actions';
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  String get srs_browse_tags_add => 'Add tags';
+  String get srs_browse_tags_remove => 'Remove tags';
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  String get srs_browse_set_due => 'Set due date';
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  String get srs_browse_delete_notes => 'Delete notes';
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  String get srs_browse_change_note_type => 'Change note type';
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  String get srs_browse_undone => 'Undone';
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -29759,8 +29832,6 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -30030,6 +30101,142 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -48947,8 +49154,6 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -49218,6 +49423,142 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -68194,8 +68535,6 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -68465,6 +68804,142 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -87522,8 +87997,6 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -87793,6 +88266,142 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -106503,8 +107112,6 @@ class _StringsId extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -106774,6 +107381,142 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -125650,8 +126393,6 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -125921,6 +126662,142 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -143797,8 +144674,6 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -144068,6 +144943,142 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -161980,8 +162991,6 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -162251,6 +163260,142 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -181075,8 +182220,6 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -181346,6 +182489,142 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -200239,8 +201518,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -200510,6 +201787,142 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -219348,8 +220761,6 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -219619,6 +221030,142 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -238135,8 +239682,6 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -238406,6 +239951,142 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -257126,8 +258807,6 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -257397,6 +259076,142 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -276044,8 +277859,6 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -276315,6 +278128,142 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 // Path: <root>
@@ -293339,8 +295288,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} 条笔记';
   @override
-  String get srs_browse_search_hint => '搜索笔记';
-  @override
   String get srs_browse_empty => '没有找到笔记';
   @override
   String get srs_browse_toggle_suspend => '暂停 / 取消暂停';
@@ -293582,6 +295529,136 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} 张卡片';
+  @override
+  String srs_browse_selected_count({required Object n}) => '已选 ${n} 项';
+  @override
+  String get srs_browse_mode_cards => '卡片';
+  @override
+  String get srs_browse_mode_notes => '笔记';
+  @override
+  String get srs_browse_mode_toggle => '切换卡片 / 笔记模式';
+  @override
+  String get srs_browse_sort_title => '排序';
+  @override
+  String get srs_browse_sort_ascending => '升序';
+  @override
+  String get srs_browse_sort_descending => '降序';
+  @override
+  String get srs_browse_sort_sort_field => '排序字段';
+  @override
+  String srs_browse_sort_field_named({required Object name}) => '字段：${name}';
+  @override
+  String get srs_browse_sort_field_pick => '按指定字段排序';
+  @override
+  String get srs_browse_sort_due => '到期';
+  @override
+  String get srs_browse_sort_created => '新建时间';
+  @override
+  String get srs_browse_sort_modified => '修改时间';
+  @override
+  String get srs_browse_sort_interval => '间隔';
+  @override
+  String get srs_browse_sort_difficulty => '难度';
+  @override
+  String get srs_browse_sort_reps => '复习次数';
+  @override
+  String get srs_browse_sort_lapses => '遗忘次数';
+  @override
+  String get srs_browse_search_syntax_hint => '搜索（如 tag:verb is:due）';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      '在「${field}」中搜索';
+  @override
+  String get srs_browse_search_field_all => '全部字段（搜索语法）';
+  @override
+  String get srs_browse_search_field_label => '搜索范围';
+  @override
+  String srs_browse_search_error({required Object reason}) => '无法搜索：${reason}';
+  @override
+  String get srs_browse_search_help => '搜索帮助';
+  @override
+  String get srs_browse_help_text => '任一字段包含该文本';
+  @override
+  String get srs_browse_help_field => '该字段完全匹配；* 匹配任意文本，_ 匹配一个字符';
+  @override
+  String get srs_browse_help_field_regex => '在单个字段里按正则搜索';
+  @override
+  String get srs_browse_help_regex => '在全部字段里按正则搜索';
+  @override
+  String get srs_browse_help_deck => '在该牌组及其子牌组中';
+  @override
+  String get srs_browse_help_note => '笔记类型';
+  @override
+  String get srs_browse_help_tag => '带该标签（含子标签）；tag:none 表示无标签';
+  @override
+  String get srs_browse_help_card => '卡片序号或模板名';
+  @override
+  String get srs_browse_help_is => '卡片状态';
+  @override
+  String get srs_browse_help_flag => '旗标：0 无，1–7 红、橙、绿、蓝、粉、青、紫';
+  @override
+  String get srs_browse_help_prop =>
+      '属性：ivl 间隔、due 距到期天数、reps 复习次数、lapses 遗忘次数、s 稳定性、d 难度（0–1）；比较符 = != < > <= >=';
+  @override
+  String get srs_browse_help_days => '最近 N 天新建 / 修改';
+  @override
+  String get srs_browse_help_logic => '同时满足、任一满足、排除、分组';
+  @override
+  String get srs_browse_help_quote => '含空格的文本加引号';
+  @override
+  String get srs_browse_preview => '预览';
+  @override
+  String get srs_browse_preview_question => '显示问题';
+  @override
+  String get srs_browse_preview_prev => '上一张';
+  @override
+  String get srs_browse_preview_next => '下一张';
+  @override
+  String get srs_browse_preview_empty => '选择一张卡片即可预览';
+  @override
+  String get srs_browse_select => '选择';
+  @override
+  String get srs_browse_select_all => '全选';
+  @override
+  String get srs_browse_select_none => '取消选择';
+  @override
+  String get srs_browse_batch_actions => '批量操作';
+  @override
+  String get srs_browse_bury_toggle => '搁置 / 取消搁置';
+  @override
+  String get srs_browse_tags_add => '添加标签';
+  @override
+  String get srs_browse_tags_remove => '删除标签';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      '清除这 ${n} 张卡片的学习进度、作为新卡重新学习？之后可以立即撤销。';
+  @override
+  String get srs_browse_set_due => '设置到期日';
+  @override
+  String get srs_browse_set_due_hint =>
+      '距今天的天数：0 为今天，3 为 3 天后，1-7 为分散在 1 到 7 天后';
+  @override
+  String get srs_browse_set_due_invalid => '请输入天数，或 1-7 这样的范围';
+  @override
+  String get srs_browse_delete_notes => '删除笔记';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      '删除这 ${n} 条笔记及其全部卡片？';
+  @override
+  String get srs_browse_change_note_type => '更改笔记类型';
+  @override
+  String srs_browse_done({required Object n}) => '已更新 ${n} 项';
+  @override
+  String get srs_browse_nothing_changed => '没有需要更改的项';
+  @override
+  String get srs_browse_undone => '已撤销';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '有 ${n} 张卡片已在其它设备上复习过，无法撤销';
+  @override
+  String get srs_browse_status_buried => '已搁置';
 }
 
 // Path: <root>
@@ -310899,8 +312976,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_browse_count({required Object n}) => '${n} notes';
   @override
-  String get srs_browse_search_hint => 'Search notes';
-  @override
   String get srs_browse_empty => 'No notes found';
   @override
   String get srs_browse_toggle_suspend => 'Suspend / unsuspend';
@@ -311170,6 +313245,142 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String srs_browse_count_cards({required Object n}) => '${n} cards';
+  @override
+  String srs_browse_selected_count({required Object n}) => '${n} selected';
+  @override
+  String get srs_browse_mode_cards => 'Cards';
+  @override
+  String get srs_browse_mode_notes => 'Notes';
+  @override
+  String get srs_browse_mode_toggle => 'Switch between cards and notes';
+  @override
+  String get srs_browse_sort_title => 'Sort by';
+  @override
+  String get srs_browse_sort_ascending => 'Ascending';
+  @override
+  String get srs_browse_sort_descending => 'Descending';
+  @override
+  String get srs_browse_sort_sort_field => 'Sort field';
+  @override
+  String srs_browse_sort_field_named({required Object name}) =>
+      'Field: ${name}';
+  @override
+  String get srs_browse_sort_field_pick => 'Sort by a field';
+  @override
+  String get srs_browse_sort_due => 'Due';
+  @override
+  String get srs_browse_sort_created => 'Created';
+  @override
+  String get srs_browse_sort_modified => 'Modified';
+  @override
+  String get srs_browse_sort_interval => 'Interval';
+  @override
+  String get srs_browse_sort_difficulty => 'Difficulty';
+  @override
+  String get srs_browse_sort_reps => 'Reviews';
+  @override
+  String get srs_browse_sort_lapses => 'Lapses';
+  @override
+  String get srs_browse_search_syntax_hint => 'Search (e.g. tag:verb is:due)';
+  @override
+  String srs_browse_search_keyword_hint({required Object field}) =>
+      'Search in ${field}';
+  @override
+  String get srs_browse_search_field_all => 'All fields (search syntax)';
+  @override
+  String get srs_browse_search_field_label => 'Search in';
+  @override
+  String srs_browse_search_error({required Object reason}) =>
+      'Can\'t search: ${reason}';
+  @override
+  String get srs_browse_search_help => 'Search help';
+  @override
+  String get srs_browse_help_text => 'Any field contains the text';
+  @override
+  String get srs_browse_help_field =>
+      'The field matches exactly; * matches any text, _ one character';
+  @override
+  String get srs_browse_help_field_regex => 'Regular expression in one field';
+  @override
+  String get srs_browse_help_regex => 'Regular expression in any field';
+  @override
+  String get srs_browse_help_deck => 'In the deck or its subdecks';
+  @override
+  String get srs_browse_help_note => 'Note type';
+  @override
+  String get srs_browse_help_tag =>
+      'Has the tag or a child tag; tag:none means no tags';
+  @override
+  String get srs_browse_help_card => 'Card number or template name';
+  @override
+  String get srs_browse_help_is => 'Card state';
+  @override
+  String get srs_browse_help_flag =>
+      'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+  @override
+  String get srs_browse_help_prop =>
+      'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+  @override
+  String get srs_browse_help_days => 'Added or edited in the last N days';
+  @override
+  String get srs_browse_help_logic => 'Both, either, not, grouping';
+  @override
+  String get srs_browse_help_quote => 'Quote text that contains spaces';
+  @override
+  String get srs_browse_preview => 'Preview';
+  @override
+  String get srs_browse_preview_question => 'Show question';
+  @override
+  String get srs_browse_preview_prev => 'Previous card';
+  @override
+  String get srs_browse_preview_next => 'Next card';
+  @override
+  String get srs_browse_preview_empty => 'Select a card to preview it';
+  @override
+  String get srs_browse_select => 'Select';
+  @override
+  String get srs_browse_select_all => 'Select all';
+  @override
+  String get srs_browse_select_none => 'Clear selection';
+  @override
+  String get srs_browse_batch_actions => 'Actions';
+  @override
+  String get srs_browse_bury_toggle => 'Bury / unbury';
+  @override
+  String get srs_browse_tags_add => 'Add tags';
+  @override
+  String get srs_browse_tags_remove => 'Remove tags';
+  @override
+  String srs_browse_reset_confirm({required Object n}) =>
+      'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+  @override
+  String get srs_browse_set_due => 'Set due date';
+  @override
+  String get srs_browse_set_due_hint =>
+      'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+  @override
+  String get srs_browse_set_due_invalid =>
+      'Enter a number of days, or a range like 1-7';
+  @override
+  String get srs_browse_delete_notes => 'Delete notes';
+  @override
+  String srs_browse_delete_confirm({required Object n}) =>
+      'Delete ${n} notes and all of their cards?';
+  @override
+  String get srs_browse_change_note_type => 'Change note type';
+  @override
+  String srs_browse_done({required Object n}) => 'Updated ${n}';
+  @override
+  String get srs_browse_nothing_changed => 'Nothing to change';
+  @override
+  String get srs_browse_undone => 'Undone';
+  @override
+  String srs_browse_undo_partial({required Object n}) =>
+      '${n} cards were already reviewed on another device and could not be undone';
+  @override
+  String get srs_browse_status_buried => 'Buried';
 }
 
 /// Flat map(s) containing all translations.
@@ -327068,8 +329279,6 @@ extension on _StringsEn {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -327298,6 +329507,133 @@ extension on _StringsEn {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -343191,8 +345527,6 @@ extension on _StringsAr {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -343421,6 +345755,133 @@ extension on _StringsAr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -359390,8 +361851,6 @@ extension on _StringsDe {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -359620,6 +362079,133 @@ extension on _StringsDe {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -375571,8 +378157,6 @@ extension on _StringsEs {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -375801,6 +378385,133 @@ extension on _StringsEs {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -391770,8 +394481,6 @@ extension on _StringsFr {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -392000,6 +394709,133 @@ extension on _StringsFr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -407913,8 +410749,6 @@ extension on _StringsId {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -408143,6 +410977,133 @@ extension on _StringsId {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -424092,8 +427053,6 @@ extension on _StringsIt {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -424322,6 +427281,133 @@ extension on _StringsIt {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -440144,8 +443230,6 @@ extension on _StringsJa {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -440374,6 +443458,133 @@ extension on _StringsJa {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -456204,8 +459415,6 @@ extension on _StringsKo {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -456434,6 +459643,133 @@ extension on _StringsKo {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -472378,8 +475714,6 @@ extension on _StringsNl {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -472608,6 +475942,133 @@ extension on _StringsNl {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -488544,8 +492005,6 @@ extension on _StringsPtBr {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -488774,6 +492233,133 @@ extension on _StringsPtBr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -504715,8 +508301,6 @@ extension on _StringsRu {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -504945,6 +508529,133 @@ extension on _StringsRu {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -520842,8 +524553,6 @@ extension on _StringsTh {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -521072,6 +524781,133 @@ extension on _StringsTh {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -537000,8 +540836,6 @@ extension on _StringsTr {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -537230,6 +541064,133 @@ extension on _StringsTr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -553141,8 +557102,6 @@ extension on _StringsVi {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -553371,6 +557330,133 @@ extension on _StringsVi {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
@@ -569107,8 +573193,6 @@ extension on _StringsZhCn {
         return '浏览';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} 条笔记';
-      case 'srs_browse_search_hint':
-        return '搜索笔记';
       case 'srs_browse_empty':
         return '没有找到笔记';
       case 'srs_browse_toggle_suspend':
@@ -569328,6 +573412,130 @@ extension on _StringsZhCn {
         return '复习';
       case 'backup_category_srs_desc':
         return '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} 张卡片';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '已选 ${n} 项';
+      case 'srs_browse_mode_cards':
+        return '卡片';
+      case 'srs_browse_mode_notes':
+        return '笔记';
+      case 'srs_browse_mode_toggle':
+        return '切换卡片 / 笔记模式';
+      case 'srs_browse_sort_title':
+        return '排序';
+      case 'srs_browse_sort_ascending':
+        return '升序';
+      case 'srs_browse_sort_descending':
+        return '降序';
+      case 'srs_browse_sort_sort_field':
+        return '排序字段';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => '字段：${name}';
+      case 'srs_browse_sort_field_pick':
+        return '按指定字段排序';
+      case 'srs_browse_sort_due':
+        return '到期';
+      case 'srs_browse_sort_created':
+        return '新建时间';
+      case 'srs_browse_sort_modified':
+        return '修改时间';
+      case 'srs_browse_sort_interval':
+        return '间隔';
+      case 'srs_browse_sort_difficulty':
+        return '难度';
+      case 'srs_browse_sort_reps':
+        return '复习次数';
+      case 'srs_browse_sort_lapses':
+        return '遗忘次数';
+      case 'srs_browse_search_syntax_hint':
+        return '搜索（如 tag:verb is:due）';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => '在「${field}」中搜索';
+      case 'srs_browse_search_field_all':
+        return '全部字段（搜索语法）';
+      case 'srs_browse_search_field_label':
+        return '搜索范围';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => '无法搜索：${reason}';
+      case 'srs_browse_search_help':
+        return '搜索帮助';
+      case 'srs_browse_help_text':
+        return '任一字段包含该文本';
+      case 'srs_browse_help_field':
+        return '该字段完全匹配；* 匹配任意文本，_ 匹配一个字符';
+      case 'srs_browse_help_field_regex':
+        return '在单个字段里按正则搜索';
+      case 'srs_browse_help_regex':
+        return '在全部字段里按正则搜索';
+      case 'srs_browse_help_deck':
+        return '在该牌组及其子牌组中';
+      case 'srs_browse_help_note':
+        return '笔记类型';
+      case 'srs_browse_help_tag':
+        return '带该标签（含子标签）；tag:none 表示无标签';
+      case 'srs_browse_help_card':
+        return '卡片序号或模板名';
+      case 'srs_browse_help_is':
+        return '卡片状态';
+      case 'srs_browse_help_flag':
+        return '旗标：0 无，1–7 红、橙、绿、蓝、粉、青、紫';
+      case 'srs_browse_help_prop':
+        return '属性：ivl 间隔、due 距到期天数、reps 复习次数、lapses 遗忘次数、s 稳定性、d 难度（0–1）；比较符 = != < > <= >=';
+      case 'srs_browse_help_days':
+        return '最近 N 天新建 / 修改';
+      case 'srs_browse_help_logic':
+        return '同时满足、任一满足、排除、分组';
+      case 'srs_browse_help_quote':
+        return '含空格的文本加引号';
+      case 'srs_browse_preview':
+        return '预览';
+      case 'srs_browse_preview_question':
+        return '显示问题';
+      case 'srs_browse_preview_prev':
+        return '上一张';
+      case 'srs_browse_preview_next':
+        return '下一张';
+      case 'srs_browse_preview_empty':
+        return '选择一张卡片即可预览';
+      case 'srs_browse_select':
+        return '选择';
+      case 'srs_browse_select_all':
+        return '全选';
+      case 'srs_browse_select_none':
+        return '取消选择';
+      case 'srs_browse_batch_actions':
+        return '批量操作';
+      case 'srs_browse_bury_toggle':
+        return '搁置 / 取消搁置';
+      case 'srs_browse_tags_add':
+        return '添加标签';
+      case 'srs_browse_tags_remove':
+        return '删除标签';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) => '清除这 ${n} 张卡片的学习进度、作为新卡重新学习？之后可以立即撤销。';
+      case 'srs_browse_set_due':
+        return '设置到期日';
+      case 'srs_browse_set_due_hint':
+        return '距今天的天数：0 为今天，3 为 3 天后，1-7 为分散在 1 到 7 天后';
+      case 'srs_browse_set_due_invalid':
+        return '请输入天数，或 1-7 这样的范围';
+      case 'srs_browse_delete_notes':
+        return '删除笔记';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) => '删除这 ${n} 条笔记及其全部卡片？';
+      case 'srs_browse_change_note_type':
+        return '更改笔记类型';
+      case 'srs_browse_done':
+        return ({required Object n}) => '已更新 ${n} 项';
+      case 'srs_browse_nothing_changed':
+        return '没有需要更改的项';
+      case 'srs_browse_undone':
+        return '已撤销';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) => '有 ${n} 张卡片已在其它设备上复习过，无法撤销';
+      case 'srs_browse_status_buried':
+        return '已搁置';
       default:
         return null;
     }
@@ -585095,8 +589303,6 @@ extension on _StringsZhHk {
         return 'Browse';
       case 'srs_browse_count':
         return ({required Object n}) => '${n} notes';
-      case 'srs_browse_search_hint':
-        return 'Search notes';
       case 'srs_browse_empty':
         return 'No notes found';
       case 'srs_browse_toggle_suspend':
@@ -585325,6 +589531,133 @@ extension on _StringsZhHk {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_browse_count_cards':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_browse_selected_count':
+        return ({required Object n}) => '${n} selected';
+      case 'srs_browse_mode_cards':
+        return 'Cards';
+      case 'srs_browse_mode_notes':
+        return 'Notes';
+      case 'srs_browse_mode_toggle':
+        return 'Switch between cards and notes';
+      case 'srs_browse_sort_title':
+        return 'Sort by';
+      case 'srs_browse_sort_ascending':
+        return 'Ascending';
+      case 'srs_browse_sort_descending':
+        return 'Descending';
+      case 'srs_browse_sort_sort_field':
+        return 'Sort field';
+      case 'srs_browse_sort_field_named':
+        return ({required Object name}) => 'Field: ${name}';
+      case 'srs_browse_sort_field_pick':
+        return 'Sort by a field';
+      case 'srs_browse_sort_due':
+        return 'Due';
+      case 'srs_browse_sort_created':
+        return 'Created';
+      case 'srs_browse_sort_modified':
+        return 'Modified';
+      case 'srs_browse_sort_interval':
+        return 'Interval';
+      case 'srs_browse_sort_difficulty':
+        return 'Difficulty';
+      case 'srs_browse_sort_reps':
+        return 'Reviews';
+      case 'srs_browse_sort_lapses':
+        return 'Lapses';
+      case 'srs_browse_search_syntax_hint':
+        return 'Search (e.g. tag:verb is:due)';
+      case 'srs_browse_search_keyword_hint':
+        return ({required Object field}) => 'Search in ${field}';
+      case 'srs_browse_search_field_all':
+        return 'All fields (search syntax)';
+      case 'srs_browse_search_field_label':
+        return 'Search in';
+      case 'srs_browse_search_error':
+        return ({required Object reason}) => 'Can\'t search: ${reason}';
+      case 'srs_browse_search_help':
+        return 'Search help';
+      case 'srs_browse_help_text':
+        return 'Any field contains the text';
+      case 'srs_browse_help_field':
+        return 'The field matches exactly; * matches any text, _ one character';
+      case 'srs_browse_help_field_regex':
+        return 'Regular expression in one field';
+      case 'srs_browse_help_regex':
+        return 'Regular expression in any field';
+      case 'srs_browse_help_deck':
+        return 'In the deck or its subdecks';
+      case 'srs_browse_help_note':
+        return 'Note type';
+      case 'srs_browse_help_tag':
+        return 'Has the tag or a child tag; tag:none means no tags';
+      case 'srs_browse_help_card':
+        return 'Card number or template name';
+      case 'srs_browse_help_is':
+        return 'Card state';
+      case 'srs_browse_help_flag':
+        return 'Flag: 0 none, 1–7 red, orange, green, blue, pink, turquoise, purple';
+      case 'srs_browse_help_prop':
+        return 'Properties: ivl interval, due days until due, reps, lapses, s stability, d difficulty (0–1); compare with = != < > <= >=';
+      case 'srs_browse_help_days':
+        return 'Added or edited in the last N days';
+      case 'srs_browse_help_logic':
+        return 'Both, either, not, grouping';
+      case 'srs_browse_help_quote':
+        return 'Quote text that contains spaces';
+      case 'srs_browse_preview':
+        return 'Preview';
+      case 'srs_browse_preview_question':
+        return 'Show question';
+      case 'srs_browse_preview_prev':
+        return 'Previous card';
+      case 'srs_browse_preview_next':
+        return 'Next card';
+      case 'srs_browse_preview_empty':
+        return 'Select a card to preview it';
+      case 'srs_browse_select':
+        return 'Select';
+      case 'srs_browse_select_all':
+        return 'Select all';
+      case 'srs_browse_select_none':
+        return 'Clear selection';
+      case 'srs_browse_batch_actions':
+        return 'Actions';
+      case 'srs_browse_bury_toggle':
+        return 'Bury / unbury';
+      case 'srs_browse_tags_add':
+        return 'Add tags';
+      case 'srs_browse_tags_remove':
+        return 'Remove tags';
+      case 'srs_browse_reset_confirm':
+        return ({required Object n}) =>
+            'Forget the progress of ${n} cards and treat them as new? You can undo right after.';
+      case 'srs_browse_set_due':
+        return 'Set due date';
+      case 'srs_browse_set_due_hint':
+        return 'Days from today: 0 is today, 3 is in 3 days, 1-7 spreads cards over 1 to 7 days';
+      case 'srs_browse_set_due_invalid':
+        return 'Enter a number of days, or a range like 1-7';
+      case 'srs_browse_delete_notes':
+        return 'Delete notes';
+      case 'srs_browse_delete_confirm':
+        return ({required Object n}) =>
+            'Delete ${n} notes and all of their cards?';
+      case 'srs_browse_change_note_type':
+        return 'Change note type';
+      case 'srs_browse_done':
+        return ({required Object n}) => 'Updated ${n}';
+      case 'srs_browse_nothing_changed':
+        return 'Nothing to change';
+      case 'srs_browse_undone':
+        return 'Undone';
+      case 'srs_browse_undo_partial':
+        return ({required Object n}) =>
+            '${n} cards were already reviewed on another device and could not be undone';
+      case 'srs_browse_status_buried':
+        return 'Buried';
       default:
         return null;
     }
