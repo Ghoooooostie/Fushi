@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127271 (7486 per locale)
+/// Strings: 127373 (7492 per locale)
 ///
-/// Built on 2026-10-14 at 22:10 UTC
+/// Built on 2026-10-15 at 00:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7660,6 +7660,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get reader_translation_color => 'Translation color';
 	String get ai_feature_translation => 'Paragraph translation';
 	String get ai_feature_translation_summary => 'Insert translation below each original paragraph';
+	String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	String get dict_detail_reference_tag => 'Referenced';
+	String get dict_detail_location_label => 'Location';
+	String get dict_detail_location_internal => 'In-app dictionary folder';
+	String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -15174,6 +15180,12 @@ class _StringsAr extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -22688,6 +22700,12 @@ class _StringsDe extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -30202,6 +30220,12 @@ class _StringsEs extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -37716,6 +37740,12 @@ class _StringsFr extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -45230,6 +45260,12 @@ class _StringsId extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -52744,6 +52780,12 @@ class _StringsIt extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -60258,6 +60300,12 @@ class _StringsJa extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -67772,6 +67820,12 @@ class _StringsKo extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -75286,6 +75340,12 @@ class _StringsNl extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -82800,6 +82860,12 @@ class _StringsPtBr extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -90314,6 +90380,12 @@ class _StringsRu extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -97828,6 +97900,12 @@ class _StringsTh extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -105342,6 +105420,12 @@ class _StringsTr extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -112856,6 +112940,12 @@ class _StringsVi extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 // Path: <root>
@@ -120383,6 +120473,12 @@ class _StringsZhCn extends _StringsEn {
 	@override String get reader_translation_color => '译文颜色';
 	@override String get ai_feature_translation => '段落翻译';
 	@override String get ai_feature_translation_summary => '在每段原文下方插入译文';
+	@override String get dict_import_reference => '引用词典文件夹（不复制）';
+	@override String get dict_import_reference_not_unpacked => '该目录没有 index.json，必须先经转换，请改用普通导入。';
+	@override String get dict_detail_reference_tag => '引用安装';
+	@override String get dict_detail_location_label => '安装位置';
+	@override String get dict_detail_location_internal => '应用内词典目录';
+	@override String get dict_import_reference_short => '引用导入';
 }
 
 // Path: <root>
@@ -127897,6 +127993,12 @@ class _StringsZhHk extends _StringsEn {
 	@override String get video_setting_mpv_lua_scripts_status_pending => 'Not loaded in this playback (reopen the video)';
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
+	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+	@override String get dict_detail_reference_tag => 'Referenced';
+	@override String get dict_detail_location_label => 'Location';
+	@override String get dict_detail_location_internal => 'In-app dictionary folder';
+	@override String get dict_import_reference_short => 'Reference import';
 }
 
 /// Flat map(s) containing all translations.
@@ -135403,6 +135505,12 @@ extension on _StringsEn {
 			case 'reader_translation_color': return 'Translation color';
 			case 'ai_feature_translation': return 'Paragraph translation';
 			case 'ai_feature_translation_summary': return 'Insert translation below each original paragraph';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -142896,6 +143004,12 @@ extension on _StringsAr {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -150389,6 +150503,12 @@ extension on _StringsDe {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -157882,6 +158002,12 @@ extension on _StringsEs {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -165375,6 +165501,12 @@ extension on _StringsFr {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -172868,6 +173000,12 @@ extension on _StringsId {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -180361,6 +180499,12 @@ extension on _StringsIt {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -187854,6 +187998,12 @@ extension on _StringsJa {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -195347,6 +195497,12 @@ extension on _StringsKo {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -202840,6 +202996,12 @@ extension on _StringsNl {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -210333,6 +210495,12 @@ extension on _StringsPtBr {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -217826,6 +217994,12 @@ extension on _StringsRu {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -225319,6 +225493,12 @@ extension on _StringsTh {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -232812,6 +232992,12 @@ extension on _StringsTr {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -240305,6 +240491,12 @@ extension on _StringsVi {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
@@ -247811,6 +248003,12 @@ extension on _StringsZhCn {
 			case 'reader_translation_color': return '译文颜色';
 			case 'ai_feature_translation': return '段落翻译';
 			case 'ai_feature_translation_summary': return '在每段原文下方插入译文';
+			case 'dict_import_reference': return '引用词典文件夹（不复制）';
+			case 'dict_import_reference_not_unpacked': return '该目录没有 index.json，必须先经转换，请改用普通导入。';
+			case 'dict_detail_reference_tag': return '引用安装';
+			case 'dict_detail_location_label': return '安装位置';
+			case 'dict_detail_location_internal': return '应用内词典目录';
+			case 'dict_import_reference_short': return '引用导入';
 			default: return null;
 		}
 	}
@@ -255304,6 +255502,12 @@ extension on _StringsZhHk {
 			case 'video_setting_mpv_lua_scripts_status_pending': return 'Not loaded in this playback (reopen the video)';
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
+			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
+			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
+			case 'dict_detail_reference_tag': return 'Referenced';
+			case 'dict_detail_location_label': return 'Location';
+			case 'dict_detail_location_internal': return 'In-app dictionary folder';
+			case 'dict_import_reference_short': return 'Reference import';
 			default: return null;
 		}
 	}
