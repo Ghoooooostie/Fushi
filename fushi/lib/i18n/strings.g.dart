@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132124 (7772 per locale)
+/// Strings: 132175 (7775 per locale)
 ///
-/// Built on 2026-10-15 at 05:18 UTC
+/// Built on 2026-10-15 at 05:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11229,6 +11229,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_srs => 'Review';
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -30022,6 +30028,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -49205,6 +49220,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -68447,6 +68471,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -87770,6 +87803,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -106746,6 +106788,15 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -125888,6 +125939,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -144030,6 +144090,15 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -162208,6 +162277,15 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -181298,6 +181376,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -200457,6 +200544,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -219561,6 +219657,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -238343,6 +238448,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -257329,6 +257443,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -276242,6 +276365,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -293504,6 +293636,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
+  @override
+  String get srs_mining_deck_fallback => '所选牌组已被删除，制卡改用默认牌组。';
+  @override
+  String get srs_mining_note_type_fallback => '所选笔记类型已被删除，制卡改用 Lapis。';
+  @override
+  String get srs_mining_lapis_mapping_hint => 'Lapis 使用内置字段映射。';
 }
 
 // Path: <root>
@@ -311087,6 +311225,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 /// Flat map(s) containing all translations.
@@ -327211,6 +327358,12 @@ extension on _StringsEn {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -343330,6 +343483,12 @@ extension on _StringsAr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -359525,6 +359684,12 @@ extension on _StringsDe {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -375702,6 +375867,12 @@ extension on _StringsEs {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -391897,6 +392068,12 @@ extension on _StringsFr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -408036,6 +408213,12 @@ extension on _StringsId {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -424211,6 +424394,12 @@ extension on _StringsIt {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -440259,6 +440448,12 @@ extension on _StringsJa {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -456315,6 +456510,12 @@ extension on _StringsKo {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -472485,6 +472686,12 @@ extension on _StringsNl {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -488647,6 +488854,12 @@ extension on _StringsPtBr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -504814,6 +505027,12 @@ extension on _StringsRu {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -520937,6 +521156,12 @@ extension on _StringsTh {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -537091,6 +537316,12 @@ extension on _StringsTr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -553228,6 +553459,12 @@ extension on _StringsVi {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -569181,6 +569418,12 @@ extension on _StringsZhCn {
         return '复习';
       case 'backup_category_srs_desc':
         return '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
+      case 'srs_mining_deck_fallback':
+        return '所选牌组已被删除，制卡改用默认牌组。';
+      case 'srs_mining_note_type_fallback':
+        return '所选笔记类型已被删除，制卡改用 Lapis。';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis 使用内置字段映射。';
       default:
         return null;
     }
@@ -585174,6 +585417,12 @@ extension on _StringsZhHk {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
