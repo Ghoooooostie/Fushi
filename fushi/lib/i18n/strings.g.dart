@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133586 (7858 per locale)
+/// Strings: 133773 (7869 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7443,12 +7443,28 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Subtitle start';
   String get popup_advanced_mining_image_none => 'None';
   String get popup_advanced_mining_image_section => 'Image';
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   String popup_advanced_mining_sentence_count({required Object count}) =>
       '${count} selected';
   String get popup_advanced_mining_sentence_section => 'Sentences';
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   String get popup_advanced_mining_title => 'Advanced mining';
   String get popup_append_sentence_tooltip => 'Add this sentence to the card';
   String get popup_auto_expand_dictionaries => 'Auto-expand rows';
@@ -23604,6 +23620,28 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -23613,6 +23651,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -42876,6 +42919,28 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -42885,6 +42950,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -62295,6 +62365,28 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -62304,6 +62396,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -81804,6 +81901,28 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -81813,6 +81932,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -101121,6 +101245,28 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -101130,6 +101276,11 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -120418,6 +120569,28 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -120427,6 +120600,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -139139,6 +139317,28 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -139148,6 +139348,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -157504,6 +157709,28 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -157513,6 +157740,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -176465,6 +176697,28 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -176474,6 +176728,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -195817,6 +196076,28 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -195826,6 +196107,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -215150,6 +215436,28 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -215159,6 +215467,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -234263,6 +234576,28 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -234272,6 +234607,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -253400,6 +253740,28 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -253409,6 +253771,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -272550,6 +272917,28 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -272559,6 +272948,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -290604,6 +290998,27 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => '图片';
   @override
+  String get popup_advanced_mining_mosaic_clear => '清除';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      '已打码 ${count} 处';
+  @override
+  String get popup_advanced_mining_mosaic_edit => '打码';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      '打码后改为输出静态截图（不再是动图 / 视频片段）';
+  @override
+  String get popup_advanced_mining_mosaic_hint => '在图上拖动，框出要打码的区域';
+  @override
+  String get popup_advanced_mining_mosaic_none => '未打码';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => '打码';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      '打码只对静态截图生效，切回截图方式后才会应用';
+  @override
+  String get popup_advanced_mining_mosaic_undo => '撤销';
+  @override
   String get popup_advanced_mining_reset => '恢复为一键制卡的默认';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -290613,6 +291028,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       '快捷键 [ ] 增减前文 · Shift+[ ] 增减后文';
+  @override
+  String get popup_advanced_mining_still_screenshot => '截图';
+  @override
+  String get popup_advanced_mining_still_unavailable => '截图不可用';
   @override
   String get popup_advanced_mining_title => '高级制卡';
   @override
@@ -308256,6 +308675,28 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_still_only =>
+      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -308265,6 +308706,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -325002,6 +325448,24 @@ extension on _StringsEn {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -325010,6 +325474,10 @@ extension on _StringsEn {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -341300,6 +341768,24 @@ extension on _StringsAr {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -341308,6 +341794,10 @@ extension on _StringsAr {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -357652,6 +358142,24 @@ extension on _StringsDe {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -357660,6 +358168,10 @@ extension on _StringsDe {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -374009,6 +374521,24 @@ extension on _StringsEs {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -374017,6 +374547,10 @@ extension on _StringsEs {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -390378,6 +390912,24 @@ extension on _StringsFr {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -390386,6 +390938,10 @@ extension on _StringsFr {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -406710,6 +407266,24 @@ extension on _StringsId {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -406718,6 +407292,10 @@ extension on _StringsId {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -423046,6 +423624,24 @@ extension on _StringsIt {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -423054,6 +423650,10 @@ extension on _StringsIt {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -439322,6 +439922,24 @@ extension on _StringsJa {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -439330,6 +439948,10 @@ extension on _StringsJa {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -455550,6 +456172,24 @@ extension on _StringsKo {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -455558,6 +456198,10 @@ extension on _StringsKo {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -471858,6 +472502,24 @@ extension on _StringsNl {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -471866,6 +472528,10 @@ extension on _StringsNl {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -488200,6 +488866,24 @@ extension on _StringsPtBr {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -488208,6 +488892,10 @@ extension on _StringsPtBr {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -504546,6 +505234,24 @@ extension on _StringsRu {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -504554,6 +505260,10 @@ extension on _StringsRu {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -520854,6 +521564,24 @@ extension on _StringsTh {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -520862,6 +521590,10 @@ extension on _StringsTh {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -537178,6 +537910,24 @@ extension on _StringsTr {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -537186,6 +537936,10 @@ extension on _StringsTr {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -553495,6 +554249,24 @@ extension on _StringsVi {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -553503,6 +554275,10 @@ extension on _StringsVi {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -569690,6 +570466,24 @@ extension on _StringsZhCn {
         return '不要';
       case 'popup_advanced_mining_image_section':
         return '图片';
+      case 'popup_advanced_mining_mosaic_clear':
+        return '清除';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => '已打码 ${count} 处';
+      case 'popup_advanced_mining_mosaic_edit':
+        return '打码';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return '打码后改为输出静态截图（不再是动图 / 视频片段）';
+      case 'popup_advanced_mining_mosaic_hint':
+        return '在图上拖动，框出要打码的区域';
+      case 'popup_advanced_mining_mosaic_none':
+        return '未打码';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return '打码';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return '打码只对静态截图生效，切回截图方式后才会应用';
+      case 'popup_advanced_mining_mosaic_undo':
+        return '撤销';
       case 'popup_advanced_mining_reset':
         return '恢复为一键制卡的默认';
       case 'popup_advanced_mining_sentence_count':
@@ -569698,6 +570492,10 @@ extension on _StringsZhCn {
         return '句子';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return '快捷键 [ ] 增减前文 · Shift+[ ] 增减后文';
+      case 'popup_advanced_mining_still_screenshot':
+        return '截图';
+      case 'popup_advanced_mining_still_unavailable':
+        return '截图不可用';
       case 'popup_advanced_mining_title':
         return '高级制卡';
       case 'popup_append_sentence_tooltip':
@@ -585845,6 +586643,24 @@ extension on _StringsZhHk {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_still_only':
+        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -585853,6 +586669,10 @@ extension on _StringsZhHk {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
