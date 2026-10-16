@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133620 (7860 per locale)
+/// Strings: 133671 (7863 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8557,11 +8557,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_rating_easy => 'Easy';
   String get srs_rating_good => 'Good';
   String get srs_rating_hard => 'Hard';
+  String get srs_review_autoplay_audio => 'Autoplay audio';
   String get srs_review_back_to_decks => 'Back to decks';
   String get srs_review_done => 'All done for today';
   String srs_review_done_detail({required Object n}) =>
       'Reviewed ${n} cards in this session';
   String get srs_review_pending_decision => 'Needs your decision';
+  String get srs_review_replay_audio => 'Replay audio';
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   String get srs_review_show_answer => 'Show answer';
   String get srs_review_undo_blocked =>
       'This card was already reviewed on another device, so this step can\'t be undone';
@@ -25594,6 +25598,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -25602,6 +25608,11 @@ class _StringsAr extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -44904,6 +44915,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -44912,6 +44925,11 @@ class _StringsDe extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -64339,6 +64357,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -64347,6 +64367,11 @@ class _StringsEs extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -83861,6 +83886,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -83869,6 +83896,11 @@ class _StringsFr extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -103147,6 +103179,8 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -103155,6 +103189,11 @@ class _StringsId extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -122477,6 +122516,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -122485,6 +122526,11 @@ class _StringsIt extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -141100,6 +141146,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -141108,6 +141156,11 @@ class _StringsJa extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -159471,6 +159524,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -159479,6 +159534,11 @@ class _StringsKo extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -178527,6 +178587,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -178535,6 +178597,11 @@ class _StringsNl extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -197886,6 +197953,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -197894,6 +197963,11 @@ class _StringsPtBr extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -217223,6 +217297,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -217231,6 +217307,11 @@ class _StringsRu extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -236311,6 +236392,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -236319,6 +236402,11 @@ class _StringsTh extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -255464,6 +255552,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -255472,6 +255562,11 @@ class _StringsTr extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -274613,6 +274708,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -274621,6 +274718,11 @@ class _StringsVi extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -292530,6 +292632,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_rating_hard => '困难';
   @override
+  String get srs_review_autoplay_audio => '自动播放音频';
+  @override
   String get srs_review_back_to_decks => '回到牌组';
   @override
   String get srs_review_done => '今天的复习做完了';
@@ -292537,6 +292641,10 @@ class _StringsZhCn extends _StringsEn {
   String srs_review_done_detail({required Object n}) => '本次复习了 ${n} 张';
   @override
   String get srs_review_pending_decision => '待你决定';
+  @override
+  String get srs_review_replay_audio => '重播音频';
+  @override
+  String get srs_review_replay_question_audio => '重播答案时包含问题音频';
   @override
   String get srs_review_show_answer => '显示答案';
   @override
@@ -310222,6 +310330,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
+  String get srs_review_autoplay_audio => 'Autoplay audio';
+  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -310230,6 +310340,11 @@ class _StringsZhHk extends _StringsEn {
       'Reviewed ${n} cards in this session';
   @override
   String get srs_review_pending_decision => 'Needs your decision';
+  @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
+  String get srs_review_replay_question_audio =>
+      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -326881,6 +326996,8 @@ extension on _StringsEn {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -326889,6 +327006,10 @@ extension on _StringsEn {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -343183,6 +343304,8 @@ extension on _StringsAr {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -343191,6 +343314,10 @@ extension on _StringsAr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -359541,6 +359668,8 @@ extension on _StringsDe {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -359549,6 +359678,10 @@ extension on _StringsDe {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -375903,6 +376036,8 @@ extension on _StringsEs {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -375911,6 +376046,10 @@ extension on _StringsEs {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -392276,6 +392415,8 @@ extension on _StringsFr {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -392284,6 +392425,10 @@ extension on _StringsFr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -408609,6 +408754,8 @@ extension on _StringsId {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -408617,6 +408764,10 @@ extension on _StringsId {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -424951,6 +425102,8 @@ extension on _StringsIt {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -424959,6 +425112,10 @@ extension on _StringsIt {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -441227,6 +441384,8 @@ extension on _StringsJa {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -441235,6 +441394,10 @@ extension on _StringsJa {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -457460,6 +457623,8 @@ extension on _StringsKo {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -457468,6 +457633,10 @@ extension on _StringsKo {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -473775,6 +473944,8 @@ extension on _StringsNl {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -473783,6 +473954,10 @@ extension on _StringsNl {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -490121,6 +490296,8 @@ extension on _StringsPtBr {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -490129,6 +490306,10 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -506471,6 +506652,8 @@ extension on _StringsRu {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -506479,6 +506662,10 @@ extension on _StringsRu {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -522781,6 +522968,8 @@ extension on _StringsTh {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -522789,6 +522978,10 @@ extension on _StringsTh {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -539109,6 +539302,8 @@ extension on _StringsTr {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -539117,6 +539312,10 @@ extension on _StringsTr {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -555432,6 +555631,8 @@ extension on _StringsVi {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -555440,6 +555641,10 @@ extension on _StringsVi {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -571616,6 +571821,8 @@ extension on _StringsZhCn {
         return '良好';
       case 'srs_rating_hard':
         return '困难';
+      case 'srs_review_autoplay_audio':
+        return '自动播放音频';
       case 'srs_review_back_to_decks':
         return '回到牌组';
       case 'srs_review_done':
@@ -571624,6 +571831,10 @@ extension on _StringsZhCn {
         return ({required Object n}) => '本次复习了 ${n} 张';
       case 'srs_review_pending_decision':
         return '待你决定';
+      case 'srs_review_replay_audio':
+        return '重播音频';
+      case 'srs_review_replay_question_audio':
+        return '重播答案时包含问题音频';
       case 'srs_review_show_answer':
         return '显示答案';
       case 'srs_review_undo_blocked':
@@ -587785,6 +587996,8 @@ extension on _StringsZhHk {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
+      case 'srs_review_autoplay_audio':
+        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -587793,6 +588006,10 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'Reviewed ${n} cards in this session';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
+      case 'srs_review_replay_question_audio':
+        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
