@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132158 (7774 per locale)
+/// Strings: 133705 (7865 per locale)
 ///
-/// Built on 2026-10-15 at 03:29 UTC
+/// Built on 2026-10-15 at 06:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11232,6 +11232,114 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_srs => 'Review';
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  String get srs_stats_range_month => '1 month';
+  String get srs_stats_range_three_months => '3 months';
+  String get srs_stats_range_year => '1 year';
+  String get srs_stats_deck_all => 'All decks';
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  String get srs_stats_today_reviews => 'Reviews';
+  String get srs_stats_today_time => 'Time';
+  String get srs_stats_today_correct => 'Correct';
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  String get srs_stats_kind_new => 'New';
+  String get srs_stats_kind_learn => 'Learning';
+  String get srs_stats_kind_young => 'Young';
+  String get srs_stats_kind_mature => 'Mature';
+  String get srs_stats_kind_relearn => 'Relearning';
+  String get srs_stats_kind_filtered => 'Filtered';
+  String get srs_stats_kind_review => 'Review';
+  String get srs_stats_kind_early => 'Early';
+  String get srs_stats_kind_suspended => 'Suspended';
+  String get srs_stats_kind_buried => 'Buried';
+  String get srs_stats_future_title => 'Future due';
+  String get srs_stats_future_overdue => 'Overdue';
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  String get srs_stats_future_load => 'Daily load';
+  String get srs_stats_future_backlog => 'Include overdue';
+  String get srs_stats_view_daily => 'Daily';
+  String get srs_stats_view_cumulative => 'Cumulative';
+  String get srs_stats_view_count => 'Count';
+  String get srs_stats_view_time => 'Time';
+  String get srs_stats_calendar_title => 'Calendar';
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  String get srs_stats_streak_current => 'Current streak';
+  String get srs_stats_streak_longest => 'Longest streak';
+  String srs_stats_days({required Object n}) => '${n} days';
+  String get srs_stats_reviews_title => 'Reviews';
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  String get srs_stats_avg_per_day => 'Average per day';
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  String get srs_stats_total => 'Total';
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  String get srs_stats_cards_title => 'Card counts';
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  String get srs_stats_retention_title => 'Retention';
+  String get srs_stats_retention_true => 'True retention';
+  String get srs_stats_retention_desired => 'Desired retention';
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  String get srs_stats_period_yesterday => 'Yesterday';
+  String get srs_stats_period_week => 'Last 7 days';
+  String get srs_stats_period_month => 'Last 30 days';
+  String get srs_stats_period_year => 'Last 365 days';
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  String get srs_stats_memory_title => 'Memory';
+  String get srs_stats_memory_interval => 'Interval';
+  String get srs_stats_memory_stability => 'Stability';
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  String get srs_stats_mean => 'Average';
+  String get srs_stats_median => 'Median';
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  String get srs_stats_hourly_correct => 'Correct rate';
+  String get srs_stats_buttons_title => 'Answer buttons';
+  String get srs_stats_added_title => 'Added';
+  String get srs_stats_leech_title => 'Leeches';
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  String get srs_stats_sources_title => 'Card sources';
+  String get srs_stats_source_none => 'No source';
+  String get srs_stats_source_untitled => 'Untitled';
+  String get srs_stats_source_book => 'Book';
+  String get srs_stats_source_manga => 'Manga';
+  String get srs_stats_source_video => 'Video';
+  String get srs_stats_source_audiobook => 'Audiobook';
+  String get srs_stats_source_online_novel => 'Online novel';
+  String get srs_stats_source_online_video => 'Online video';
+  String get srs_stats_source_game => 'Game';
+  String get srs_stats_source_web => 'Web';
+  String get srs_stats_source_manual => 'Added by hand';
+  String get srs_stats_source_anki => 'Anki';
+  String get srs_stats_source_other => 'Other';
+  String get srs_stats_tomorrow => 'Tomorrow';
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -30030,6 +30138,205 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -49218,6 +49525,205 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -68465,6 +68971,205 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -87793,6 +88498,205 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -106774,6 +107678,205 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -125921,6 +127024,205 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -144068,6 +145370,205 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -162251,6 +163752,205 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -181346,6 +183046,205 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -200510,6 +202409,205 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -219619,6 +221717,205 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -238406,6 +240703,205 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -257397,6 +259893,205 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -276315,6 +279010,205 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 // Path: <root>
@@ -293582,6 +296476,201 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
+  @override
+  String get srs_stats_range_month => '1 个月';
+  @override
+  String get srs_stats_range_three_months => '3 个月';
+  @override
+  String get srs_stats_range_year => '1 年';
+  @override
+  String get srs_stats_deck_all => '全部牌组';
+  @override
+  String get srs_stats_search_hint => '用 Anki 搜索语法筛选，如 tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      '无法识别的搜索：${reason}';
+  @override
+  String get srs_stats_empty => '还没有复习记录。复习几张卡后，统计就会出现在这里。';
+  @override
+  String get srs_stats_today_reviews => '复习';
+  @override
+  String get srs_stats_today_time => '用时';
+  @override
+  String get srs_stats_today_correct => '正确率';
+  @override
+  String get srs_stats_today_none => '今天还没有复习。';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => '成熟卡答对 ${correct} / ${total}（${percent}）';
+  @override
+  String get srs_stats_kind_new => '新卡';
+  @override
+  String get srs_stats_kind_learn => '学习';
+  @override
+  String get srs_stats_kind_young => '年轻';
+  @override
+  String get srs_stats_kind_mature => '成熟';
+  @override
+  String get srs_stats_kind_relearn => '重学';
+  @override
+  String get srs_stats_kind_filtered => '筛选';
+  @override
+  String get srs_stats_kind_review => '复习';
+  @override
+  String get srs_stats_kind_early => '提前复习';
+  @override
+  String get srs_stats_kind_suspended => '已暂停';
+  @override
+  String get srs_stats_kind_buried => '已搁置';
+  @override
+  String get srs_stats_future_title => '未来到期';
+  @override
+  String get srs_stats_future_overdue => '逾期';
+  @override
+  String get srs_stats_future_tomorrow => '明日到期';
+  @override
+  String get srs_stats_future_load => '每日负担';
+  @override
+  String get srs_stats_future_backlog => '含逾期';
+  @override
+  String get srs_stats_view_daily => '每日';
+  @override
+  String get srs_stats_view_cumulative => '累计';
+  @override
+  String get srs_stats_view_count => '次数';
+  @override
+  String get srs_stats_view_time => '用时';
+  @override
+  String get srs_stats_calendar_title => '复习日历';
+  @override
+  String get srs_stats_calendar_days_studied => '学习天数';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} / ${days} 天（${percent}）';
+  @override
+  String get srs_stats_streak_current => '当前连续';
+  @override
+  String get srs_stats_streak_longest => '最长连续';
+  @override
+  String srs_stats_days({required Object n}) => '${n} 天';
+  @override
+  String get srs_stats_reviews_title => '复习量';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} 次复习';
+  @override
+  String get srs_stats_avg_per_day => '日均';
+  @override
+  String get srs_stats_avg_studied_day => '学习日日均';
+  @override
+  String get srs_stats_avg_answer_time => '平均答题用时';
+  @override
+  String get srs_stats_total => '合计';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n} 秒';
+  @override
+  String get srs_stats_cards_title => '卡片状态';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} 张卡';
+  @override
+  String get srs_stats_retention_title => '保留率';
+  @override
+  String get srs_stats_retention_true => '真实保留率';
+  @override
+  String get srs_stats_retention_desired => '期望保留率';
+  @override
+  String get srs_stats_retention_hint =>
+      '复习卡到期时你记住的比例。FSRS 按期望保留率排程，两者越接近，说明参数越贴合你。';
+  @override
+  String get srs_stats_period_yesterday => '昨天';
+  @override
+  String get srs_stats_period_week => '近 7 天';
+  @override
+  String get srs_stats_period_month => '近 30 天';
+  @override
+  String get srs_stats_period_year => '近一年';
+  @override
+  String get srs_stats_mature_growth => '成熟卡增长';
+  @override
+  String get srs_stats_memory_title => '记忆分布';
+  @override
+  String get srs_stats_memory_interval => '间隔';
+  @override
+  String get srs_stats_memory_stability => '稳定性';
+  @override
+  String get srs_stats_memory_difficulty => '难度';
+  @override
+  String get srs_stats_memory_retrievability => '可提取度';
+  @override
+  String get srs_stats_mean => '平均';
+  @override
+  String get srs_stats_median => '中位数';
+  @override
+  String get srs_stats_knowledge => '估计掌握量';
+  @override
+  String get srs_stats_memory_empty => '暂无数据：先复习一些卡片。';
+  @override
+  String get srs_stats_retrievability_unavailable => '本机没有排程内核，无法计算可提取度。';
+  @override
+  String get srs_stats_hourly_title => '按小时';
+  @override
+  String get srs_stats_hourly_correct => '正确率';
+  @override
+  String get srs_stats_buttons_title => '评分按钮';
+  @override
+  String get srs_stats_added_title => '新增卡片';
+  @override
+  String get srs_stats_leech_title => '易忘卡';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => '易忘卡（遗忘 ≥ ${threshold} 次）：${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => '遗忘 ${n} 次';
+  @override
+  String get srs_stats_lapses_in_range => '范围内遗忘';
+  @override
+  String get srs_stats_leech_none => '还没有被遗忘过的卡。';
+  @override
+  String get srs_stats_sources_title => '制卡来源';
+  @override
+  String get srs_stats_source_none => '无出处';
+  @override
+  String get srs_stats_source_untitled => '未命名';
+  @override
+  String get srs_stats_source_book => '书';
+  @override
+  String get srs_stats_source_manga => '漫画';
+  @override
+  String get srs_stats_source_video => '视频';
+  @override
+  String get srs_stats_source_audiobook => '有声书';
+  @override
+  String get srs_stats_source_online_novel => '在线小说';
+  @override
+  String get srs_stats_source_online_video => '在线视频';
+  @override
+  String get srs_stats_source_game => '游戏';
+  @override
+  String get srs_stats_source_web => '网页';
+  @override
+  String get srs_stats_source_manual => '手动添加';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => '其他';
+  @override
+  String get srs_stats_tomorrow => '明天';
+  @override
+  String srs_stats_in_days({required Object n}) => '${n} 天后';
+  @override
+  String get srs_stats_unavailable => '打开复习模块后可查看复习统计。';
 }
 
 // Path: <root>
@@ -311170,6 +314259,205 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get srs_stats_range_month => '1 month';
+  @override
+  String get srs_stats_range_three_months => '3 months';
+  @override
+  String get srs_stats_range_year => '1 year';
+  @override
+  String get srs_stats_deck_all => 'All decks';
+  @override
+  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
+  @override
+  String srs_stats_search_invalid({required Object reason}) =>
+      'Search not supported: ${reason}';
+  @override
+  String get srs_stats_empty =>
+      'No review history yet. Review a few cards and your statistics show up here.';
+  @override
+  String get srs_stats_today_reviews => 'Reviews';
+  @override
+  String get srs_stats_today_time => 'Time';
+  @override
+  String get srs_stats_today_correct => 'Correct';
+  @override
+  String get srs_stats_today_none => 'No cards reviewed today yet.';
+  @override
+  String srs_stats_today_mature_correct({
+    required Object correct,
+    required Object total,
+    required Object percent,
+  }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+  @override
+  String get srs_stats_kind_new => 'New';
+  @override
+  String get srs_stats_kind_learn => 'Learning';
+  @override
+  String get srs_stats_kind_young => 'Young';
+  @override
+  String get srs_stats_kind_mature => 'Mature';
+  @override
+  String get srs_stats_kind_relearn => 'Relearning';
+  @override
+  String get srs_stats_kind_filtered => 'Filtered';
+  @override
+  String get srs_stats_kind_review => 'Review';
+  @override
+  String get srs_stats_kind_early => 'Early';
+  @override
+  String get srs_stats_kind_suspended => 'Suspended';
+  @override
+  String get srs_stats_kind_buried => 'Buried';
+  @override
+  String get srs_stats_future_title => 'Future due';
+  @override
+  String get srs_stats_future_overdue => 'Overdue';
+  @override
+  String get srs_stats_future_tomorrow => 'Due tomorrow';
+  @override
+  String get srs_stats_future_load => 'Daily load';
+  @override
+  String get srs_stats_future_backlog => 'Include overdue';
+  @override
+  String get srs_stats_view_daily => 'Daily';
+  @override
+  String get srs_stats_view_cumulative => 'Cumulative';
+  @override
+  String get srs_stats_view_count => 'Count';
+  @override
+  String get srs_stats_view_time => 'Time';
+  @override
+  String get srs_stats_calendar_title => 'Calendar';
+  @override
+  String get srs_stats_calendar_days_studied => 'Days studied';
+  @override
+  String srs_stats_calendar_days_value({
+    required Object studied,
+    required Object days,
+    required Object percent,
+  }) => '${studied} of ${days} (${percent})';
+  @override
+  String get srs_stats_streak_current => 'Current streak';
+  @override
+  String get srs_stats_streak_longest => 'Longest streak';
+  @override
+  String srs_stats_days({required Object n}) => '${n} days';
+  @override
+  String get srs_stats_reviews_title => 'Reviews';
+  @override
+  String srs_stats_reviews_count({required Object n}) => '${n} reviews';
+  @override
+  String get srs_stats_avg_per_day => 'Average per day';
+  @override
+  String get srs_stats_avg_studied_day => 'Average on days studied';
+  @override
+  String get srs_stats_avg_answer_time => 'Average answer time';
+  @override
+  String get srs_stats_total => 'Total';
+  @override
+  String srs_stats_seconds({required Object n}) => '${n}s';
+  @override
+  String get srs_stats_cards_title => 'Card counts';
+  @override
+  String srs_stats_cards_total({required Object n}) => '${n} cards';
+  @override
+  String get srs_stats_retention_title => 'Retention';
+  @override
+  String get srs_stats_retention_true => 'True retention';
+  @override
+  String get srs_stats_retention_desired => 'Desired retention';
+  @override
+  String get srs_stats_retention_hint =>
+      'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+  @override
+  String get srs_stats_period_yesterday => 'Yesterday';
+  @override
+  String get srs_stats_period_week => 'Last 7 days';
+  @override
+  String get srs_stats_period_month => 'Last 30 days';
+  @override
+  String get srs_stats_period_year => 'Last 365 days';
+  @override
+  String get srs_stats_mature_growth => 'Mature cards over time';
+  @override
+  String get srs_stats_memory_title => 'Memory';
+  @override
+  String get srs_stats_memory_interval => 'Interval';
+  @override
+  String get srs_stats_memory_stability => 'Stability';
+  @override
+  String get srs_stats_memory_difficulty => 'Difficulty';
+  @override
+  String get srs_stats_memory_retrievability => 'Retrievability';
+  @override
+  String get srs_stats_mean => 'Average';
+  @override
+  String get srs_stats_median => 'Median';
+  @override
+  String get srs_stats_knowledge => 'Estimated knowledge';
+  @override
+  String get srs_stats_memory_empty =>
+      'Nothing to show yet: review some cards first.';
+  @override
+  String get srs_stats_retrievability_unavailable =>
+      'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+  @override
+  String get srs_stats_hourly_title => 'Hourly breakdown';
+  @override
+  String get srs_stats_hourly_correct => 'Correct rate';
+  @override
+  String get srs_stats_buttons_title => 'Answer buttons';
+  @override
+  String get srs_stats_added_title => 'Added';
+  @override
+  String get srs_stats_leech_title => 'Leeches';
+  @override
+  String srs_stats_leech_count({
+    required Object threshold,
+    required Object n,
+  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
+  @override
+  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
+  @override
+  String get srs_stats_lapses_in_range => 'Forgotten in range';
+  @override
+  String get srs_stats_leech_none => 'No card has been forgotten yet.';
+  @override
+  String get srs_stats_sources_title => 'Card sources';
+  @override
+  String get srs_stats_source_none => 'No source';
+  @override
+  String get srs_stats_source_untitled => 'Untitled';
+  @override
+  String get srs_stats_source_book => 'Book';
+  @override
+  String get srs_stats_source_manga => 'Manga';
+  @override
+  String get srs_stats_source_video => 'Video';
+  @override
+  String get srs_stats_source_audiobook => 'Audiobook';
+  @override
+  String get srs_stats_source_online_novel => 'Online novel';
+  @override
+  String get srs_stats_source_online_video => 'Online video';
+  @override
+  String get srs_stats_source_game => 'Game';
+  @override
+  String get srs_stats_source_web => 'Web';
+  @override
+  String get srs_stats_source_manual => 'Added by hand';
+  @override
+  String get srs_stats_source_anki => 'Anki';
+  @override
+  String get srs_stats_source_other => 'Other';
+  @override
+  String get srs_stats_tomorrow => 'Tomorrow';
+  @override
+  String srs_stats_in_days({required Object n}) => 'In ${n} days';
+  @override
+  String get srs_stats_unavailable =>
+      'Turn on the review module to see review statistics.';
 }
 
 /// Flat map(s) containing all translations.
@@ -327298,6 +330586,197 @@ extension on _StringsEn {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -343421,6 +346900,197 @@ extension on _StringsAr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -359620,6 +363290,197 @@ extension on _StringsDe {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -375801,6 +379662,197 @@ extension on _StringsEs {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -392000,6 +396052,197 @@ extension on _StringsFr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -408143,6 +412386,197 @@ extension on _StringsId {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -424322,6 +428756,197 @@ extension on _StringsIt {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -440374,6 +444999,197 @@ extension on _StringsJa {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -456434,6 +461250,197 @@ extension on _StringsKo {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -472608,6 +477615,197 @@ extension on _StringsNl {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -488774,6 +493972,197 @@ extension on _StringsPtBr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -504945,6 +510334,197 @@ extension on _StringsRu {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -521072,6 +526652,197 @@ extension on _StringsTh {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -537230,6 +543001,197 @@ extension on _StringsTr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -553371,6 +559333,197 @@ extension on _StringsVi {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
@@ -569328,6 +575481,197 @@ extension on _StringsZhCn {
         return '复习';
       case 'backup_category_srs_desc':
         return '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
+      case 'srs_stats_range_month':
+        return '1 个月';
+      case 'srs_stats_range_three_months':
+        return '3 个月';
+      case 'srs_stats_range_year':
+        return '1 年';
+      case 'srs_stats_deck_all':
+        return '全部牌组';
+      case 'srs_stats_search_hint':
+        return '用 Anki 搜索语法筛选，如 tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => '无法识别的搜索：${reason}';
+      case 'srs_stats_empty':
+        return '还没有复习记录。复习几张卡后，统计就会出现在这里。';
+      case 'srs_stats_today_reviews':
+        return '复习';
+      case 'srs_stats_today_time':
+        return '用时';
+      case 'srs_stats_today_correct':
+        return '正确率';
+      case 'srs_stats_today_none':
+        return '今天还没有复习。';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => '成熟卡答对 ${correct} / ${total}（${percent}）';
+      case 'srs_stats_kind_new':
+        return '新卡';
+      case 'srs_stats_kind_learn':
+        return '学习';
+      case 'srs_stats_kind_young':
+        return '年轻';
+      case 'srs_stats_kind_mature':
+        return '成熟';
+      case 'srs_stats_kind_relearn':
+        return '重学';
+      case 'srs_stats_kind_filtered':
+        return '筛选';
+      case 'srs_stats_kind_review':
+        return '复习';
+      case 'srs_stats_kind_early':
+        return '提前复习';
+      case 'srs_stats_kind_suspended':
+        return '已暂停';
+      case 'srs_stats_kind_buried':
+        return '已搁置';
+      case 'srs_stats_future_title':
+        return '未来到期';
+      case 'srs_stats_future_overdue':
+        return '逾期';
+      case 'srs_stats_future_tomorrow':
+        return '明日到期';
+      case 'srs_stats_future_load':
+        return '每日负担';
+      case 'srs_stats_future_backlog':
+        return '含逾期';
+      case 'srs_stats_view_daily':
+        return '每日';
+      case 'srs_stats_view_cumulative':
+        return '累计';
+      case 'srs_stats_view_count':
+        return '次数';
+      case 'srs_stats_view_time':
+        return '用时';
+      case 'srs_stats_calendar_title':
+        return '复习日历';
+      case 'srs_stats_calendar_days_studied':
+        return '学习天数';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} / ${days} 天（${percent}）';
+      case 'srs_stats_streak_current':
+        return '当前连续';
+      case 'srs_stats_streak_longest':
+        return '最长连续';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} 天';
+      case 'srs_stats_reviews_title':
+        return '复习量';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} 次复习';
+      case 'srs_stats_avg_per_day':
+        return '日均';
+      case 'srs_stats_avg_studied_day':
+        return '学习日日均';
+      case 'srs_stats_avg_answer_time':
+        return '平均答题用时';
+      case 'srs_stats_total':
+        return '合计';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n} 秒';
+      case 'srs_stats_cards_title':
+        return '卡片状态';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} 张卡';
+      case 'srs_stats_retention_title':
+        return '保留率';
+      case 'srs_stats_retention_true':
+        return '真实保留率';
+      case 'srs_stats_retention_desired':
+        return '期望保留率';
+      case 'srs_stats_retention_hint':
+        return '复习卡到期时你记住的比例。FSRS 按期望保留率排程，两者越接近，说明参数越贴合你。';
+      case 'srs_stats_period_yesterday':
+        return '昨天';
+      case 'srs_stats_period_week':
+        return '近 7 天';
+      case 'srs_stats_period_month':
+        return '近 30 天';
+      case 'srs_stats_period_year':
+        return '近一年';
+      case 'srs_stats_mature_growth':
+        return '成熟卡增长';
+      case 'srs_stats_memory_title':
+        return '记忆分布';
+      case 'srs_stats_memory_interval':
+        return '间隔';
+      case 'srs_stats_memory_stability':
+        return '稳定性';
+      case 'srs_stats_memory_difficulty':
+        return '难度';
+      case 'srs_stats_memory_retrievability':
+        return '可提取度';
+      case 'srs_stats_mean':
+        return '平均';
+      case 'srs_stats_median':
+        return '中位数';
+      case 'srs_stats_knowledge':
+        return '估计掌握量';
+      case 'srs_stats_memory_empty':
+        return '暂无数据：先复习一些卡片。';
+      case 'srs_stats_retrievability_unavailable':
+        return '本机没有排程内核，无法计算可提取度。';
+      case 'srs_stats_hourly_title':
+        return '按小时';
+      case 'srs_stats_hourly_correct':
+        return '正确率';
+      case 'srs_stats_buttons_title':
+        return '评分按钮';
+      case 'srs_stats_added_title':
+        return '新增卡片';
+      case 'srs_stats_leech_title':
+        return '易忘卡';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            '易忘卡（遗忘 ≥ ${threshold} 次）：${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => '遗忘 ${n} 次';
+      case 'srs_stats_lapses_in_range':
+        return '范围内遗忘';
+      case 'srs_stats_leech_none':
+        return '还没有被遗忘过的卡。';
+      case 'srs_stats_sources_title':
+        return '制卡来源';
+      case 'srs_stats_source_none':
+        return '无出处';
+      case 'srs_stats_source_untitled':
+        return '未命名';
+      case 'srs_stats_source_book':
+        return '书';
+      case 'srs_stats_source_manga':
+        return '漫画';
+      case 'srs_stats_source_video':
+        return '视频';
+      case 'srs_stats_source_audiobook':
+        return '有声书';
+      case 'srs_stats_source_online_novel':
+        return '在线小说';
+      case 'srs_stats_source_online_video':
+        return '在线视频';
+      case 'srs_stats_source_game':
+        return '游戏';
+      case 'srs_stats_source_web':
+        return '网页';
+      case 'srs_stats_source_manual':
+        return '手动添加';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return '其他';
+      case 'srs_stats_tomorrow':
+        return '明天';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => '${n} 天后';
+      case 'srs_stats_unavailable':
+        return '打开复习模块后可查看复习统计。';
       default:
         return null;
     }
@@ -585325,6 +591669,197 @@ extension on _StringsZhHk {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'srs_stats_range_month':
+        return '1 month';
+      case 'srs_stats_range_three_months':
+        return '3 months';
+      case 'srs_stats_range_year':
+        return '1 year';
+      case 'srs_stats_deck_all':
+        return 'All decks';
+      case 'srs_stats_search_hint':
+        return 'Filter with Anki search, e.g. tag:verb';
+      case 'srs_stats_search_invalid':
+        return ({required Object reason}) => 'Search not supported: ${reason}';
+      case 'srs_stats_empty':
+        return 'No review history yet. Review a few cards and your statistics show up here.';
+      case 'srs_stats_today_reviews':
+        return 'Reviews';
+      case 'srs_stats_today_time':
+        return 'Time';
+      case 'srs_stats_today_correct':
+        return 'Correct';
+      case 'srs_stats_today_none':
+        return 'No cards reviewed today yet.';
+      case 'srs_stats_today_mature_correct':
+        return ({
+          required Object correct,
+          required Object total,
+          required Object percent,
+        }) => 'Mature cards correct: ${correct} / ${total} (${percent})';
+      case 'srs_stats_kind_new':
+        return 'New';
+      case 'srs_stats_kind_learn':
+        return 'Learning';
+      case 'srs_stats_kind_young':
+        return 'Young';
+      case 'srs_stats_kind_mature':
+        return 'Mature';
+      case 'srs_stats_kind_relearn':
+        return 'Relearning';
+      case 'srs_stats_kind_filtered':
+        return 'Filtered';
+      case 'srs_stats_kind_review':
+        return 'Review';
+      case 'srs_stats_kind_early':
+        return 'Early';
+      case 'srs_stats_kind_suspended':
+        return 'Suspended';
+      case 'srs_stats_kind_buried':
+        return 'Buried';
+      case 'srs_stats_future_title':
+        return 'Future due';
+      case 'srs_stats_future_overdue':
+        return 'Overdue';
+      case 'srs_stats_future_tomorrow':
+        return 'Due tomorrow';
+      case 'srs_stats_future_load':
+        return 'Daily load';
+      case 'srs_stats_future_backlog':
+        return 'Include overdue';
+      case 'srs_stats_view_daily':
+        return 'Daily';
+      case 'srs_stats_view_cumulative':
+        return 'Cumulative';
+      case 'srs_stats_view_count':
+        return 'Count';
+      case 'srs_stats_view_time':
+        return 'Time';
+      case 'srs_stats_calendar_title':
+        return 'Calendar';
+      case 'srs_stats_calendar_days_studied':
+        return 'Days studied';
+      case 'srs_stats_calendar_days_value':
+        return ({
+          required Object studied,
+          required Object days,
+          required Object percent,
+        }) => '${studied} of ${days} (${percent})';
+      case 'srs_stats_streak_current':
+        return 'Current streak';
+      case 'srs_stats_streak_longest':
+        return 'Longest streak';
+      case 'srs_stats_days':
+        return ({required Object n}) => '${n} days';
+      case 'srs_stats_reviews_title':
+        return 'Reviews';
+      case 'srs_stats_reviews_count':
+        return ({required Object n}) => '${n} reviews';
+      case 'srs_stats_avg_per_day':
+        return 'Average per day';
+      case 'srs_stats_avg_studied_day':
+        return 'Average on days studied';
+      case 'srs_stats_avg_answer_time':
+        return 'Average answer time';
+      case 'srs_stats_total':
+        return 'Total';
+      case 'srs_stats_seconds':
+        return ({required Object n}) => '${n}s';
+      case 'srs_stats_cards_title':
+        return 'Card counts';
+      case 'srs_stats_cards_total':
+        return ({required Object n}) => '${n} cards';
+      case 'srs_stats_retention_title':
+        return 'Retention';
+      case 'srs_stats_retention_true':
+        return 'True retention';
+      case 'srs_stats_retention_desired':
+        return 'Desired retention';
+      case 'srs_stats_retention_hint':
+        return 'How often you remembered review cards when they came due. FSRS schedules for the desired retention; the closer the two, the better the parameters fit you.';
+      case 'srs_stats_period_yesterday':
+        return 'Yesterday';
+      case 'srs_stats_period_week':
+        return 'Last 7 days';
+      case 'srs_stats_period_month':
+        return 'Last 30 days';
+      case 'srs_stats_period_year':
+        return 'Last 365 days';
+      case 'srs_stats_mature_growth':
+        return 'Mature cards over time';
+      case 'srs_stats_memory_title':
+        return 'Memory';
+      case 'srs_stats_memory_interval':
+        return 'Interval';
+      case 'srs_stats_memory_stability':
+        return 'Stability';
+      case 'srs_stats_memory_difficulty':
+        return 'Difficulty';
+      case 'srs_stats_memory_retrievability':
+        return 'Retrievability';
+      case 'srs_stats_mean':
+        return 'Average';
+      case 'srs_stats_median':
+        return 'Median';
+      case 'srs_stats_knowledge':
+        return 'Estimated knowledge';
+      case 'srs_stats_memory_empty':
+        return 'Nothing to show yet: review some cards first.';
+      case 'srs_stats_retrievability_unavailable':
+        return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
+      case 'srs_stats_hourly_title':
+        return 'Hourly breakdown';
+      case 'srs_stats_hourly_correct':
+        return 'Correct rate';
+      case 'srs_stats_buttons_title':
+        return 'Answer buttons';
+      case 'srs_stats_added_title':
+        return 'Added';
+      case 'srs_stats_leech_title':
+        return 'Leeches';
+      case 'srs_stats_leech_count':
+        return ({required Object threshold, required Object n}) =>
+            'Leeches (forgotten ${threshold}+ times): ${n}';
+      case 'srs_stats_lapses':
+        return ({required Object n}) => 'Forgotten ${n} times';
+      case 'srs_stats_lapses_in_range':
+        return 'Forgotten in range';
+      case 'srs_stats_leech_none':
+        return 'No card has been forgotten yet.';
+      case 'srs_stats_sources_title':
+        return 'Card sources';
+      case 'srs_stats_source_none':
+        return 'No source';
+      case 'srs_stats_source_untitled':
+        return 'Untitled';
+      case 'srs_stats_source_book':
+        return 'Book';
+      case 'srs_stats_source_manga':
+        return 'Manga';
+      case 'srs_stats_source_video':
+        return 'Video';
+      case 'srs_stats_source_audiobook':
+        return 'Audiobook';
+      case 'srs_stats_source_online_novel':
+        return 'Online novel';
+      case 'srs_stats_source_online_video':
+        return 'Online video';
+      case 'srs_stats_source_game':
+        return 'Game';
+      case 'srs_stats_source_web':
+        return 'Web';
+      case 'srs_stats_source_manual':
+        return 'Added by hand';
+      case 'srs_stats_source_anki':
+        return 'Anki';
+      case 'srs_stats_source_other':
+        return 'Other';
+      case 'srs_stats_tomorrow':
+        return 'Tomorrow';
+      case 'srs_stats_in_days':
+        return ({required Object n}) => 'In ${n} days';
+      case 'srs_stats_unavailable':
+        return 'Turn on the review module to see review statistics.';
       default:
         return null;
     }
