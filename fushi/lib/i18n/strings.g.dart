@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133586 (7858 per locale)
+/// Strings: 134334 (7902 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1741,6 +1741,77 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_tts_failure_unsupported =>
       'This voice is not available on this device';
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  String get audiobook_tts_irodori_local_model => 'Model';
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  String get audiobook_tts_irodori_local_port => 'Port';
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   String get audiobook_tts_lang_all_ja => 'Japanese only';
   String get audiobook_tts_lang_all_ko => 'Korean only';
@@ -1850,10 +1921,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_tts_param_api_key => 'API key';
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
+  String get audiobook_tts_param_caption => 'Voice description';
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
   String get audiobook_tts_param_endpoint => 'Server URL';
   String get audiobook_tts_param_invalid => 'This value is not valid';
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
   String get audiobook_tts_param_ref_audio => 'Reference audio path';
@@ -1876,6 +1952,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_tts_provider_google_translate => 'Google Translate';
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   String get audiobook_tts_provider_system => 'System voice';
   String get audiobook_tts_read_from_here => 'Read aloud from here';
@@ -13901,6 +13979,117 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -14082,12 +14271,20 @@ class _StringsAr extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -14128,6 +14325,9 @@ class _StringsAr extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -32947,6 +33147,117 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -33128,12 +33439,20 @@ class _StringsDe extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -33174,6 +33493,9 @@ class _StringsDe extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -52359,6 +52681,117 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -52540,12 +52973,20 @@ class _StringsEs extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -52586,6 +53027,9 @@ class _StringsEs extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -71827,6 +72271,117 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -72008,12 +72563,20 @@ class _StringsFr extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -72054,6 +72617,9 @@ class _StringsFr extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -91323,6 +91889,117 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -91504,12 +92181,20 @@ class _StringsId extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -91550,6 +92235,9 @@ class _StringsId extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -110531,6 +111219,117 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -110712,12 +111511,20 @@ class _StringsIt extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -110758,6 +111565,9 @@ class _StringsIt extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -129785,6 +130595,117 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -129966,12 +130887,20 @@ class _StringsJa extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -130012,6 +130941,9 @@ class _StringsJa extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -148122,6 +149054,117 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -148303,12 +149346,20 @@ class _StringsKo extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -148349,6 +149400,9 @@ class _StringsKo extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -166610,6 +167664,117 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -166791,12 +167956,20 @@ class _StringsNl extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -166837,6 +168010,9 @@ class _StringsNl extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -185925,6 +187101,117 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -186106,12 +187393,20 @@ class _StringsPtBr extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -186152,6 +187447,9 @@ class _StringsPtBr extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -205286,6 +206584,117 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -205467,12 +206876,20 @@ class _StringsRu extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -205513,6 +206930,9 @@ class _StringsRu extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -224565,6 +225985,117 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -224746,12 +226277,20 @@ class _StringsTh extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -224792,6 +226331,9 @@ class _StringsTh extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -243585,6 +245127,117 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -243766,12 +245419,20 @@ class _StringsTr extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -243812,6 +245473,9 @@ class _StringsTr extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -262777,6 +264441,117 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -262958,12 +264733,20 @@ class _StringsVi extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -263004,6 +264787,9 @@ class _StringsVi extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -281686,6 +283472,105 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => '导入有声书';
   @override
+  String get audiobook_tts_irodori_local_add => '在本机一键部署 Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      '下载官方 Irodori-TTS 服务并在本机运行，无需命令行';
+  @override
+  String get audiobook_tts_irodori_local_backend => '计算后端';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple => 'Apple 芯片（Metal）';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA 显卡（CUDA 12.8）';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm => 'AMD 显卡（ROCm，仅 Linux）';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint => '新建后选一个服务上的声音并试听';
+  @override
+  String get audiobook_tts_irodori_local_delete => '删除本机 Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      '这会停止服务并删除 ${path}，包括你上传的声音。';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      '需要约 6–12 GB 空闲空间。Python、依赖、模型与你上传的声音都在同一个文件夹里，删除时一起删掉。';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      '还没有本机服务？在 Fushi 里一键部署 Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Python 环境安装失败，请查看安装日志后重试。';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      '不支持这台电脑（需要 64 位 Windows、Apple 芯片的 Mac 或 64 位 Linux）';
+  @override
+  String get audiobook_tts_irodori_local_install_log => '安装日志';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      '安装官方 Irodori-TTS 服务，自带独立的 Python 与 PyTorch（2–6 GB）和 v4.1 模型（约 3.5 GB），全部放在一个文件夹里。上传一段参考音频就能用那个声音朗读，也可以用文字描述一个声音。朗读时自动启动，退出 Fushi 时自动停止。';
+  @override
+  String get audiobook_tts_irodori_local_model => '模型';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF（快数倍，适合 CPU）';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      '所选模型还没下载：点「下载并安装」只补下模型，环境不会重装。';
+  @override
+  String get audiobook_tts_irodori_local_model_small => 'v4.1 Small（音质最好）';
+  @override
+  String get audiobook_tts_irodori_local_package => 'Irodori-TTS 环境与模型';
+  @override
+  String get audiobook_tts_irodori_local_port => '端口';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      '请用 1024–65535 之间的端口，且不能是 7870、7871、9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com（国内镜像）';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      '正在安装 PyTorch 等依赖（数 GB，可能要一段时间）…';
+  @override
+  String get audiobook_tts_irodori_local_step_python => '正在安装 Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => '本机 Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => '上传参考音频';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      '已上传声音 ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists => '已有同名声音';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed => '上传失败，请检查文件并确认服务在运行。';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      '一段干净的单人音频（WAV、FLAC、MP3 等），几秒到两分钟';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => '从服务上删除声音 ${id}？它的音频文件会被删掉。';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      '删不掉这个声音（只能删除上传的声音）';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => '声音 ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint => '只能用英文字母、数字、- 和 _';
+  @override
+  String get audiobook_tts_irodori_local_voice_name => 'Irodori-TTS（本机）';
+  @override
+  String get audiobook_tts_irodori_local_voices => '服务上的声音';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      '还没有上传的声音。内置声音 none 不用参考音频也能朗读。';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running => '启动服务后可管理声音';
+  @override
   String get audiobook_tts_key_required_hint => '需要填写自己的 API 密钥';
   @override
   String get audiobook_tts_lang_all_ja => '全部按日语读';
@@ -281841,12 +283726,20 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_tts_param_bearer_hint => '仅当服务架在需要认证的网关后面时填写';
   @override
+  String get audiobook_tts_param_caption => '声音描述';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      '可选。描述音色与语气，例如「落ち着いた低めの女性の声」。声音选 none 时就是凭描述设计一个新声音。';
+  @override
   String get audiobook_tts_param_endpoint => '服务地址';
   @override
   String get audiobook_tts_param_invalid => '填写的值无效';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori 工作台端口 7870，GPT-SoVITS 工作台 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      '官方 Irodori-TTS 服务默认端口 8088';
   @override
   String get audiobook_tts_param_prompt_lang => '参考音频语言';
   @override
@@ -281886,6 +283779,8 @@ class _StringsZhCn extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori 工作台';
+  @override
+  String get audiobook_tts_provider_irodori_server => 'Irodori-TTS（官方服务）';
   @override
   String get audiobook_tts_provider_ms_translator => '微软翻译';
   @override
@@ -299202,6 +301097,117 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -299383,12 +301389,20 @@ class _StringsZhHk extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -299429,6 +301443,9 @@ class _StringsZhHk extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -316665,6 +318682,88 @@ extension on _StringsEn {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -316811,12 +318910,18 @@ extension on _StringsEn {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -316854,6 +318959,8 @@ extension on _StringsEn {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -332967,6 +335074,88 @@ extension on _StringsAr {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -333113,12 +335302,18 @@ extension on _StringsAr {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -333156,6 +335351,8 @@ extension on _StringsAr {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -349283,6 +351480,88 @@ extension on _StringsDe {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -349429,12 +351708,18 @@ extension on _StringsDe {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -349472,6 +351757,8 @@ extension on _StringsDe {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -365650,6 +367937,88 @@ extension on _StringsEs {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -365796,12 +368165,18 @@ extension on _StringsEs {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -365839,6 +368214,8 @@ extension on _StringsEs {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -382009,6 +384386,88 @@ extension on _StringsFr {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -382155,12 +384614,18 @@ extension on _StringsFr {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -382198,6 +384663,8 @@ extension on _StringsFr {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -398368,6 +400835,88 @@ extension on _StringsId {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -398514,12 +401063,18 @@ extension on _StringsId {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -398557,6 +401112,8 @@ extension on _StringsId {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -414689,6 +417246,88 @@ extension on _StringsIt {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -414835,12 +417474,18 @@ extension on _StringsIt {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -414878,6 +417523,8 @@ extension on _StringsIt {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -431018,6 +433665,88 @@ extension on _StringsJa {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -431164,12 +433893,18 @@ extension on _StringsJa {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -431207,6 +433942,8 @@ extension on _StringsJa {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -447241,6 +449978,88 @@ extension on _StringsKo {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -447387,12 +450206,18 @@ extension on _StringsKo {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -447430,6 +450255,8 @@ extension on _StringsKo {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -463497,6 +466324,88 @@ extension on _StringsNl {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -463643,12 +466552,18 @@ extension on _StringsNl {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -463686,6 +466601,8 @@ extension on _StringsNl {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -479846,6 +482763,88 @@ extension on _StringsPtBr {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -479992,12 +482991,18 @@ extension on _StringsPtBr {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -480035,6 +483040,8 @@ extension on _StringsPtBr {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -496188,6 +499195,88 @@ extension on _StringsRu {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -496334,12 +499423,18 @@ extension on _StringsRu {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -496377,6 +499472,8 @@ extension on _StringsRu {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -512517,6 +515614,88 @@ extension on _StringsTh {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -512663,12 +515842,18 @@ extension on _StringsTh {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -512706,6 +515891,8 @@ extension on _StringsTh {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -528829,6 +532016,88 @@ extension on _StringsTr {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -528975,12 +532244,18 @@ extension on _StringsTr {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -529018,6 +532293,8 @@ extension on _StringsTr {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -545154,6 +548431,88 @@ extension on _StringsVi {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -545300,12 +548659,18 @@ extension on _StringsVi {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -545343,6 +548708,8 @@ extension on _StringsVi {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -561427,6 +564794,86 @@ extension on _StringsZhCn {
         return '此设备不支持该声音';
       case 'audiobook_tts_import_audiobook':
         return '导入有声书';
+      case 'audiobook_tts_irodori_local_add':
+        return '在本机一键部署 Irodori-TTS';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return '下载官方 Irodori-TTS 服务并在本机运行，无需命令行';
+      case 'audiobook_tts_irodori_local_backend':
+        return '计算后端';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple 芯片（Metal）';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA 显卡（CUDA 12.8）';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD 显卡（ROCm，仅 Linux）';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return '新建后选一个服务上的声音并试听';
+      case 'audiobook_tts_irodori_local_delete':
+        return '删除本机 Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) => '这会停止服务并删除 ${path}，包括你上传的声音。';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return '需要约 6–12 GB 空闲空间。Python、依赖、模型与你上传的声音都在同一个文件夹里，删除时一起删掉。';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return '还没有本机服务？在 Fushi 里一键部署 Irodori-TTS';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Python 环境安装失败，请查看安装日志后重试。';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return '不支持这台电脑（需要 64 位 Windows、Apple 芯片的 Mac 或 64 位 Linux）';
+      case 'audiobook_tts_irodori_local_install_log':
+        return '安装日志';
+      case 'audiobook_tts_irodori_local_intro':
+        return '安装官方 Irodori-TTS 服务，自带独立的 Python 与 PyTorch（2–6 GB）和 v4.1 模型（约 3.5 GB），全部放在一个文件夹里。上传一段参考音频就能用那个声音朗读，也可以用文字描述一个声音。朗读时自动启动，退出 Fushi 时自动停止。';
+      case 'audiobook_tts_irodori_local_model':
+        return '模型';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF（快数倍，适合 CPU）';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return '所选模型还没下载：点「下载并安装」只补下模型，环境不会重装。';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small（音质最好）';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS 环境与模型';
+      case 'audiobook_tts_irodori_local_port':
+        return '端口';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return '请用 1024–65535 之间的端口，且不能是 7870、7871、9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com（国内镜像）';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return '正在安装 PyTorch 等依赖（数 GB，可能要一段时间）…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return '正在安装 Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return '本机 Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return '上传参考音频';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => '已上传声音 ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return '已有同名声音';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return '上传失败，请检查文件并确认服务在运行。';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return '一段干净的单人音频（WAV、FLAC、MP3 等），几秒到两分钟';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) => '从服务上删除声音 ${id}？它的音频文件会被删掉。';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return '删不掉这个声音（只能删除上传的声音）';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return '声音 ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return '只能用英文字母、数字、- 和 _';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS（本机）';
+      case 'audiobook_tts_irodori_local_voices':
+        return '服务上的声音';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return '还没有上传的声音。内置声音 none 不用参考音频也能朗读。';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return '启动服务后可管理声音';
       case 'audiobook_tts_key_required_hint':
         return '需要填写自己的 API 密钥';
       case 'audiobook_tts_lang_all_ja':
@@ -561571,12 +565018,18 @@ extension on _StringsZhCn {
         return 'API 密钥';
       case 'audiobook_tts_param_bearer_hint':
         return '仅当服务架在需要认证的网关后面时填写';
+      case 'audiobook_tts_param_caption':
+        return '声音描述';
+      case 'audiobook_tts_param_caption_hint':
+        return '可选。描述音色与语气，例如「落ち着いた低めの女性の声」。声音选 none 时就是凭描述设计一个新声音。';
       case 'audiobook_tts_param_endpoint':
         return '服务地址';
       case 'audiobook_tts_param_invalid':
         return '填写的值无效';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori 工作台端口 7870，GPT-SoVITS 工作台 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return '官方 Irodori-TTS 服务默认端口 8088';
       case 'audiobook_tts_param_prompt_lang':
         return '参考音频语言';
       case 'audiobook_tts_param_prompt_text':
@@ -561614,6 +565067,8 @@ extension on _StringsZhCn {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori 工作台';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS（官方服务）';
       case 'audiobook_tts_provider_ms_translator':
         return '微软翻译';
       case 'audiobook_tts_provider_system':
@@ -577559,6 +581014,88 @@ extension on _StringsZhHk {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -577705,12 +581242,18 @@ extension on _StringsZhHk {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -577748,6 +581291,8 @@ extension on _StringsZhHk {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
