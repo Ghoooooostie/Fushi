@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 137411 (8083 per locale)
+/// Strings: 137615 (8095 per locale)
 ///
-/// Built on 2026-10-16 at 14:48 UTC
+/// Built on 2026-10-16 at 14:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3560,9 +3560,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_click_lookup_tap_desc =>
       'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
   String get onboarding_click_lookup_tap_title => 'Tap a word';
-  String get onboarding_feature_anki => 'Anki cards';
-  String get onboarding_feature_anki_hint =>
-      'Turn lookups into flashcards with one tap';
   String get onboarding_feature_backup => 'Backup & sync';
   String get onboarding_feature_backup_hint =>
       'Google Drive, WebDAV or a local file';
@@ -11120,7 +11117,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Scheduling uses FSRS-7, one of the best spaced-repetition algorithms, and adjusts to your own review history.';
   String get onboarding_srs_builtin_title => 'Ready to use';
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   String get onboarding_srs_mining_title => 'From mining to review';
   String get onboarding_srs_mining_desc =>
       'Cards you make while reading or watching can go straight into review.';
@@ -11629,6 +11626,26 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_compact_phone =>
       'Compact back on phones (dictionary tabs, long definitions folded)';
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  String get onboarding_feature_review => 'Cards & review';
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  String get onboarding_review_method_title => 'How you review';
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  String get onboarding_review_fushi_title => 'Fushi review';
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  String get onboarding_review_anki_title => 'Anki';
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  String get onboarding_finish_next_title => 'Next steps';
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -17443,11 +17460,6 @@ class _StringsAr extends _StringsEn {
       'انقر على حرف (أو انقر بالزر الأيسر على الحاسوب)؛ يختار Fushi أطول كلمة تبدأ من هناك. وتُفتح الجملة في صفحة البحث.';
   @override
   String get onboarding_click_lookup_tap_title => 'انقر على كلمة';
-  @override
-  String get onboarding_feature_anki => 'بطاقات Anki';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'حوّل عمليات البحث إلى بطاقات بنقرة واحدة';
   @override
   String get onboarding_feature_backup => 'نسخ احتياطي ومزامنة';
   @override
@@ -30248,7 +30260,7 @@ class _StringsAr extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -31133,6 +31145,40 @@ class _StringsAr extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -37083,11 +37129,6 @@ class _StringsDe extends _StringsEn {
       'Tippen Sie auf ein Zeichen (am Computer: Linksklick); Fushi nimmt das längste Wort, das dort beginnt. Der Satz wird auf der Nachschlageseite geöffnet.';
   @override
   String get onboarding_click_lookup_tap_title => 'Auf ein Wort tippen';
-  @override
-  String get onboarding_feature_anki => 'Anki-Karten';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'Nachschlagen mit einem Tipp in Lernkarten verwandeln';
   @override
   String get onboarding_feature_backup => 'Sicherung & Synchronisierung';
   @override
@@ -50142,7 +50183,7 @@ class _StringsDe extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -51027,6 +51068,40 @@ class _StringsDe extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -56999,11 +57074,6 @@ class _StringsEs extends _StringsEn {
       'Toque un carácter (o haga clic con el botón izquierdo); Fushi toma la palabra más larga que empieza ahí. La frase se abre en la página de consulta.';
   @override
   String get onboarding_click_lookup_tap_title => 'Toque una palabra';
-  @override
-  String get onboarding_feature_anki => 'Tarjetas de Anki';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'Convierta sus consultas en tarjetas con un toque';
   @override
   String get onboarding_feature_backup => 'Respaldo y sincronización';
   @override
@@ -70095,7 +70165,7 @@ class _StringsEs extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -70980,6 +71050,40 @@ class _StringsEs extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -76973,11 +77077,6 @@ class _StringsFr extends _StringsEn {
       'Touchez un caractère (ou faites un clic gauche) ; Fushi retient le mot le plus long qui commence là. La phrase s\'ouvre dans la page de recherche.';
   @override
   String get onboarding_click_lookup_tap_title => 'Touchez un mot';
-  @override
-  String get onboarding_feature_anki => 'Cartes Anki';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'Transformez vos recherches en flashcards en un geste';
   @override
   String get onboarding_feature_backup => 'Sauvegarde et synchronisation';
   @override
@@ -90129,7 +90228,7 @@ class _StringsFr extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -91014,6 +91113,40 @@ class _StringsFr extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -96893,11 +97026,6 @@ class _StringsId extends _StringsEn {
       'Ketuk satu karakter (atau klik kiri di komputer); Fushi mengambil kata terpanjang yang dimulai di situ. Kalimatnya terbuka di halaman pencarian.';
   @override
   String get onboarding_click_lookup_tap_title => 'Ketuk sebuah kata';
-  @override
-  String get onboarding_feature_anki => 'Kartu Anki';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'Ubah hasil pencarian jadi kartu hafalan dengan satu ketukan';
   @override
   String get onboarding_feature_backup => 'Cadangan & sinkronisasi';
   @override
@@ -109816,7 +109944,7 @@ class _StringsId extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -110701,6 +110829,40 @@ class _StringsId extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -116632,11 +116794,6 @@ class _StringsIt extends _StringsEn {
       'Tocca un carattere (o fai clic con il tasto sinistro); Fushi prende la parola più lunga che inizia lì. La frase si apre nella pagina di ricerca.';
   @override
   String get onboarding_click_lookup_tap_title => 'Tocca una parola';
-  @override
-  String get onboarding_feature_anki => 'Carte Anki';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'Trasforma le ricerche in flashcard con un tocco';
   @override
   String get onboarding_feature_backup => 'Backup e sincronizzazione';
   @override
@@ -129669,7 +129826,7 @@ class _StringsIt extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -130554,6 +130711,40 @@ class _StringsIt extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -136141,10 +136332,6 @@ class _StringsJa extends _StringsEn {
       '文字をタップ（パソコンでは左クリック）すると、Fushiがそこから始まる最長の単語を選びます。文は辞書ページで開きます。';
   @override
   String get onboarding_click_lookup_tap_title => '単語をタップ';
-  @override
-  String get onboarding_feature_anki => 'Anki カード';
-  @override
-  String get onboarding_feature_anki_hint => '調べた単語をワンタップでフラッシュカードに';
   @override
   String get onboarding_feature_backup => 'バックアップと同期';
   @override
@@ -148522,7 +148709,7 @@ class _StringsJa extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -149407,6 +149594,40 @@ class _StringsJa extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => '「Hard」と「Easy」ボタンを隠す';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -154996,10 +155217,6 @@ class _StringsKo extends _StringsEn {
       '글자를 탭하면(컴퓨터에서는 왼쪽 클릭) Fushi가 그 자리에서 시작하는 가장 긴 단어를 잡습니다. 문장은 단어 찾기 페이지에서 열립니다.';
   @override
   String get onboarding_click_lookup_tap_title => '단어를 탭하세요';
-  @override
-  String get onboarding_feature_anki => 'Anki 카드';
-  @override
-  String get onboarding_feature_anki_hint => '찾은 단어를 한 번의 탭으로 플래시카드로';
   @override
   String get onboarding_feature_backup => '백업 및 동기화';
   @override
@@ -167411,7 +167628,7 @@ class _StringsKo extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -168296,6 +168513,40 @@ class _StringsKo extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -174203,11 +174454,6 @@ class _StringsNl extends _StringsEn {
       'Tik op een teken (of klik met links); Fushi pakt het langste woord dat daar begint. De zin opent in de opzoekpagina.';
   @override
   String get onboarding_click_lookup_tap_title => 'Tik op een woord';
-  @override
-  String get onboarding_feature_anki => 'Anki-kaarten';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'Maak van je opzoekacties in één tik flashcards';
   @override
   String get onboarding_feature_backup => 'Back-up & sync';
   @override
@@ -187212,7 +187458,7 @@ class _StringsNl extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -188097,6 +188343,40 @@ class _StringsNl extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -194034,11 +194314,6 @@ class _StringsPtBr extends _StringsEn {
       'Toque em um caractere (ou clique com o botão esquerdo); o Fushi pega a palavra mais longa que começa ali. A frase abre na página de consulta.';
   @override
   String get onboarding_click_lookup_tap_title => 'Toque em uma palavra';
-  @override
-  String get onboarding_feature_anki => 'Cartões do Anki';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'Transforme suas consultas em flashcards com um toque';
   @override
   String get onboarding_feature_backup => 'Backup e sincronização';
   @override
@@ -207082,7 +207357,7 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -207967,6 +208242,40 @@ class _StringsPtBr extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -213878,11 +214187,6 @@ class _StringsRu extends _StringsEn {
       'Нажмите на символ (на компьютере — щелчок левой кнопкой); Fushi возьмёт самое длинное слово, которое начинается с этого места. Предложение откроется на странице поиска.';
   @override
   String get onboarding_click_lookup_tap_title => 'Нажмите на слово';
-  @override
-  String get onboarding_feature_anki => 'Карточки Anki';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'Превращайте результаты поиска в карточки одним нажатием';
   @override
   String get onboarding_feature_backup =>
       'Резервное копирование и синхронизация';
@@ -226897,7 +227201,7 @@ class _StringsRu extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -227782,6 +228086,40 @@ class _StringsRu extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -233589,11 +233927,6 @@ class _StringsTh extends _StringsEn {
       'แตะตัวอักษรหนึ่งตัว (บนคอมพิวเตอร์ให้คลิกซ้าย) แล้ว Fushi จะจับคำที่ยาวที่สุดซึ่งเริ่มจากตรงนั้น ประโยคจะเปิดในหน้าค้นคำ';
   @override
   String get onboarding_click_lookup_tap_title => 'แตะที่คำหนึ่งคำ';
-  @override
-  String get onboarding_feature_anki => 'การ์ด Anki';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'เปลี่ยนคำที่ค้นให้เป็นแฟลชการ์ดในแตะเดียว';
   @override
   String get onboarding_feature_backup => 'สำรองข้อมูลและซิงค์';
   @override
@@ -246390,7 +246723,7 @@ class _StringsTh extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -247275,6 +247608,40 @@ class _StringsTh extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -253161,11 +253528,6 @@ class _StringsTr extends _StringsEn {
       'Bir karaktere dokunun (bilgisayarda sol tıklayın); Fushi oradan başlayan en uzun kelimeyi alır. Cümle arama sayfasında açılır.';
   @override
   String get onboarding_click_lookup_tap_title => 'Bir kelimeye dokunun';
-  @override
-  String get onboarding_feature_anki => 'Anki kartları';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'Aramalarınızı tek dokunuşla bilgi kartına dönüştürün';
   @override
   String get onboarding_feature_backup => 'Yedekleme ve senkronizasyon';
   @override
@@ -266087,7 +266449,7 @@ class _StringsTr extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -266972,6 +267334,40 @@ class _StringsTr extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -272836,11 +273232,6 @@ class _StringsVi extends _StringsEn {
       'Chạm vào một ký tự (trên máy tính thì nhấp chuột trái); Fushi lấy từ dài nhất bắt đầu từ đó. Câu sẽ mở trong trang tra từ.';
   @override
   String get onboarding_click_lookup_tap_title => 'Chạm vào một từ';
-  @override
-  String get onboarding_feature_anki => 'Thẻ Anki';
-  @override
-  String get onboarding_feature_anki_hint =>
-      'Biến kết quả tra từ thành thẻ ghi nhớ chỉ với một chạm';
   @override
   String get onboarding_feature_backup => 'Sao lưu & đồng bộ';
   @override
@@ -285711,7 +286102,7 @@ class _StringsVi extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -286596,6 +286987,40 @@ class _StringsVi extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 // Path: <root>
@@ -291984,10 +292409,6 @@ class _StringsZhCn extends _StringsEn {
       '轻点（电脑上单击）一个字，Fushi 从这里向后匹配最长的词。句子会在查词页里打开。';
   @override
   String get onboarding_click_lookup_tap_title => '点一下文字';
-  @override
-  String get onboarding_feature_anki => 'Anki 制卡';
-  @override
-  String get onboarding_feature_anki_hint => '查词后一键做成卡片';
   @override
   String get onboarding_feature_backup => '备份与同步';
   @override
@@ -303700,7 +304121,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_srs_builtin_title => '开箱即用';
   @override
-  String get onboarding_srs_builtin_desc => '已经备好默认牌组和 Lapis 笔记类型。';
+  String get onboarding_srs_builtin_desc => '已经备好默认牌组和「Fushi 卡片」笔记类型。';
   @override
   String get onboarding_srs_mining_title => '制卡直接进复习';
   @override
@@ -304538,6 +304959,38 @@ class _StringsZhCn extends _StringsEn {
   String get srs_card_appearance_compact_phone => '手机精简背面（词典页签、长释义收起）';
   @override
   String get srs_review_hide_hard_easy => '隐藏「困难」和「简单」按钮';
+  @override
+  String get onboarding_feature_review => '制卡与复习';
+  @override
+  String get onboarding_feature_review_hint => '查词后一键制卡，并选择在哪里复习';
+  @override
+  String get onboarding_review_method_title => '复习方式';
+  @override
+  String get onboarding_review_method_body =>
+      '查词时制的卡在这里复习。之后随时可以在「设置 → 制卡」里更改。';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi 复习';
+  @override
+  String get onboarding_review_fushi_desc =>
+      '内置间隔复习，排程默认使用 FSRS-7。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
+  @override
+  String get onboarding_review_anki_toggle => '改用 Anki…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      '把卡片发到 Anki（AnkiDroid、AnkiMobile，或桌面版 Anki + AnkiConnect），在 Anki 里复习。下一步需要连接 Anki 并选好牌组和笔记类型。';
+  @override
+  String get onboarding_finish_next_title => '下一步';
+  @override
+  String get onboarding_finish_review_title => '在「复习」里复习';
+  @override
+  String get onboarding_finish_review_desc => '制的卡会进入底栏的「复习」页，到期的卡在那里等你复习。';
+  @override
+  String get onboarding_finish_import_title => '导入已有的 Anki 牌组';
+  @override
+  String get onboarding_finish_import_desc =>
+      '在「复习」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
 }
 
 // Path: <root>
@@ -309935,10 +310388,6 @@ class _StringsZhHk extends _StringsEn {
       '點一下（電腦上按滑鼠左鍵）一個字，Fushi 會從這裡往後配對最長的詞。句子會在查詞頁打開。';
   @override
   String get onboarding_click_lookup_tap_title => '點一下文字';
-  @override
-  String get onboarding_feature_anki => 'Anki 製卡';
-  @override
-  String get onboarding_feature_anki_hint => '查詞後一鍵做成卡片';
   @override
   String get onboarding_feature_backup => '備份與同步';
   @override
@@ -321947,7 +322396,7 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_srs_builtin_title => 'Ready to use';
   @override
   String get onboarding_srs_builtin_desc =>
-      'A default deck and the Lapis note type are already set up.';
+      'A default deck and the Fushi Card note type are already set up.';
   @override
   String get onboarding_srs_mining_title => 'From mining to review';
   @override
@@ -322832,6 +323281,40 @@ class _StringsZhHk extends _StringsEn {
       'Compact back on phones (dictionary tabs, long definitions folded)';
   @override
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
+  @override
+  String get onboarding_feature_review => 'Cards & review';
+  @override
+  String get onboarding_feature_review_hint =>
+      'Turn lookups into cards and choose where to review them';
+  @override
+  String get onboarding_review_method_title => 'How you review';
+  @override
+  String get onboarding_review_method_body =>
+      'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+  @override
+  String get onboarding_review_fushi_title => 'Fushi review';
+  @override
+  String get onboarding_review_fushi_desc =>
+      'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+  @override
+  String get onboarding_review_anki_toggle => 'Use Anki instead…';
+  @override
+  String get onboarding_review_anki_title => 'Anki';
+  @override
+  String get onboarding_review_anki_desc =>
+      'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+  @override
+  String get onboarding_finish_next_title => 'Next steps';
+  @override
+  String get onboarding_finish_review_title => 'Review on the Review tab';
+  @override
+  String get onboarding_finish_review_desc =>
+      'Cards you make land on the Review tab; cards that are due wait for you there.';
+  @override
+  String get onboarding_finish_import_title => 'Bring your Anki decks';
+  @override
+  String get onboarding_finish_import_desc =>
+      'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
 }
 
 /// Flat map(s) containing all translations.
@@ -327870,10 +328353,6 @@ extension on _StringsEn {
         return 'Tap (or left-click) a character; Fushi matches the longest word starting there. The sentence opens in the lookup page.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tap a word';
-      case 'onboarding_feature_anki':
-        return 'Anki cards';
-      case 'onboarding_feature_anki_hint':
-        return 'Turn lookups into flashcards with one tap';
       case 'onboarding_feature_backup':
         return 'Backup & sync';
       case 'onboarding_feature_backup_hint':
@@ -338809,7 +339288,7 @@ extension on _StringsEn {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -339605,6 +340084,34 @@ extension on _StringsEn {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -344640,10 +345147,6 @@ extension on _StringsAr {
         return 'انقر على حرف (أو انقر بالزر الأيسر على الحاسوب)؛ يختار Fushi أطول كلمة تبدأ من هناك. وتُفتح الجملة في صفحة البحث.';
       case 'onboarding_click_lookup_tap_title':
         return 'انقر على كلمة';
-      case 'onboarding_feature_anki':
-        return 'بطاقات Anki';
-      case 'onboarding_feature_anki_hint':
-        return 'حوّل عمليات البحث إلى بطاقات بنقرة واحدة';
       case 'onboarding_feature_backup':
         return 'نسخ احتياطي ومزامنة';
       case 'onboarding_feature_backup_hint':
@@ -355577,7 +356080,7 @@ extension on _StringsAr {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -356373,6 +356876,34 @@ extension on _StringsAr {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -361447,10 +361978,6 @@ extension on _StringsDe {
         return 'Tippen Sie auf ein Zeichen (am Computer: Linksklick); Fushi nimmt das längste Wort, das dort beginnt. Der Satz wird auf der Nachschlageseite geöffnet.';
       case 'onboarding_click_lookup_tap_title':
         return 'Auf ein Wort tippen';
-      case 'onboarding_feature_anki':
-        return 'Anki-Karten';
-      case 'onboarding_feature_anki_hint':
-        return 'Nachschlagen mit einem Tipp in Lernkarten verwandeln';
       case 'onboarding_feature_backup':
         return 'Sicherung & Synchronisierung';
       case 'onboarding_feature_backup_hint':
@@ -372421,7 +372948,7 @@ extension on _StringsDe {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -373217,6 +373744,34 @@ extension on _StringsDe {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -378279,10 +378834,6 @@ extension on _StringsEs {
         return 'Toque un carácter (o haga clic con el botón izquierdo); Fushi toma la palabra más larga que empieza ahí. La frase se abre en la página de consulta.';
       case 'onboarding_click_lookup_tap_title':
         return 'Toque una palabra';
-      case 'onboarding_feature_anki':
-        return 'Tarjetas de Anki';
-      case 'onboarding_feature_anki_hint':
-        return 'Convierta sus consultas en tarjetas con un toque';
       case 'onboarding_feature_backup':
         return 'Respaldo y sincronización';
       case 'onboarding_feature_backup_hint':
@@ -389247,7 +389798,7 @@ extension on _StringsEs {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -390043,6 +390594,34 @@ extension on _StringsEs {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -395113,10 +395692,6 @@ extension on _StringsFr {
         return 'Touchez un caractère (ou faites un clic gauche) ; Fushi retient le mot le plus long qui commence là. La phrase s\'ouvre dans la page de recherche.';
       case 'onboarding_click_lookup_tap_title':
         return 'Touchez un mot';
-      case 'onboarding_feature_anki':
-        return 'Cartes Anki';
-      case 'onboarding_feature_anki_hint':
-        return 'Transformez vos recherches en flashcards en un geste';
       case 'onboarding_feature_backup':
         return 'Sauvegarde et synchronisation';
       case 'onboarding_feature_backup_hint':
@@ -406091,7 +406666,7 @@ extension on _StringsFr {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -406887,6 +407462,34 @@ extension on _StringsFr {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -411934,10 +412537,6 @@ extension on _StringsId {
         return 'Ketuk satu karakter (atau klik kiri di komputer); Fushi mengambil kata terpanjang yang dimulai di situ. Kalimatnya terbuka di halaman pencarian.';
       case 'onboarding_click_lookup_tap_title':
         return 'Ketuk sebuah kata';
-      case 'onboarding_feature_anki':
-        return 'Kartu Anki';
-      case 'onboarding_feature_anki_hint':
-        return 'Ubah hasil pencarian jadi kartu hafalan dengan satu ketukan';
       case 'onboarding_feature_backup':
         return 'Cadangan & sinkronisasi';
       case 'onboarding_feature_backup_hint':
@@ -422879,7 +423478,7 @@ extension on _StringsId {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -423675,6 +424274,34 @@ extension on _StringsId {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -428734,10 +429361,6 @@ extension on _StringsIt {
         return 'Tocca un carattere (o fai clic con il tasto sinistro); Fushi prende la parola più lunga che inizia lì. La frase si apre nella pagina di ricerca.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tocca una parola';
-      case 'onboarding_feature_anki':
-        return 'Carte Anki';
-      case 'onboarding_feature_anki_hint':
-        return 'Trasforma le ricerche in flashcard con un tocco';
       case 'onboarding_feature_backup':
         return 'Backup e sincronizzazione';
       case 'onboarding_feature_backup_hint':
@@ -439703,7 +440326,7 @@ extension on _StringsIt {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -440499,6 +441122,34 @@ extension on _StringsIt {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -445515,10 +446166,6 @@ extension on _StringsJa {
         return '文字をタップ（パソコンでは左クリック）すると、Fushiがそこから始まる最長の単語を選びます。文は辞書ページで開きます。';
       case 'onboarding_click_lookup_tap_title':
         return '単語をタップ';
-      case 'onboarding_feature_anki':
-        return 'Anki カード';
-      case 'onboarding_feature_anki_hint':
-        return '調べた単語をワンタップでフラッシュカードに';
       case 'onboarding_feature_backup':
         return 'バックアップと同期';
       case 'onboarding_feature_backup_hint':
@@ -456400,7 +457047,7 @@ extension on _StringsJa {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -457196,6 +457843,34 @@ extension on _StringsJa {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return '「Hard」と「Easy」ボタンを隠す';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -462212,10 +462887,6 @@ extension on _StringsKo {
         return '글자를 탭하면(컴퓨터에서는 왼쪽 클릭) Fushi가 그 자리에서 시작하는 가장 긴 단어를 잡습니다. 문장은 단어 찾기 페이지에서 열립니다.';
       case 'onboarding_click_lookup_tap_title':
         return '단어를 탭하세요';
-      case 'onboarding_feature_anki':
-        return 'Anki 카드';
-      case 'onboarding_feature_anki_hint':
-        return '찾은 단어를 한 번의 탭으로 플래시카드로';
       case 'onboarding_feature_backup':
         return '백업 및 동기화';
       case 'onboarding_feature_backup_hint':
@@ -473105,7 +473776,7 @@ extension on _StringsKo {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -473901,6 +474572,34 @@ extension on _StringsKo {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -478961,10 +479660,6 @@ extension on _StringsNl {
         return 'Tik op een teken (of klik met links); Fushi pakt het langste woord dat daar begint. De zin opent in de opzoekpagina.';
       case 'onboarding_click_lookup_tap_title':
         return 'Tik op een woord';
-      case 'onboarding_feature_anki':
-        return 'Anki-kaarten';
-      case 'onboarding_feature_anki_hint':
-        return 'Maak van je opzoekacties in één tik flashcards';
       case 'onboarding_feature_backup':
         return 'Back-up & sync';
       case 'onboarding_feature_backup_hint':
@@ -489924,7 +490619,7 @@ extension on _StringsNl {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -490720,6 +491415,34 @@ extension on _StringsNl {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -495778,10 +496501,6 @@ extension on _StringsPtBr {
         return 'Toque em um caractere (ou clique com o botão esquerdo); o Fushi pega a palavra mais longa que começa ali. A frase abre na página de consulta.';
       case 'onboarding_click_lookup_tap_title':
         return 'Toque em uma palavra';
-      case 'onboarding_feature_anki':
-        return 'Cartões do Anki';
-      case 'onboarding_feature_anki_hint':
-        return 'Transforme suas consultas em flashcards com um toque';
       case 'onboarding_feature_backup':
         return 'Backup e sincronização';
       case 'onboarding_feature_backup_hint':
@@ -506735,7 +507454,7 @@ extension on _StringsPtBr {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -507531,6 +508250,34 @@ extension on _StringsPtBr {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -512597,10 +513344,6 @@ extension on _StringsRu {
         return 'Нажмите на символ (на компьютере — щелчок левой кнопкой); Fushi возьмёт самое длинное слово, которое начинается с этого места. Предложение откроется на странице поиска.';
       case 'onboarding_click_lookup_tap_title':
         return 'Нажмите на слово';
-      case 'onboarding_feature_anki':
-        return 'Карточки Anki';
-      case 'onboarding_feature_anki_hint':
-        return 'Превращайте результаты поиска в карточки одним нажатием';
       case 'onboarding_feature_backup':
         return 'Резервное копирование и синхронизация';
       case 'onboarding_feature_backup_hint':
@@ -523551,7 +524294,7 @@ extension on _StringsRu {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -524347,6 +525090,34 @@ extension on _StringsRu {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -529386,10 +530157,6 @@ extension on _StringsTh {
         return 'แตะตัวอักษรหนึ่งตัว (บนคอมพิวเตอร์ให้คลิกซ้าย) แล้ว Fushi จะจับคำที่ยาวที่สุดซึ่งเริ่มจากตรงนั้น ประโยคจะเปิดในหน้าค้นคำ';
       case 'onboarding_click_lookup_tap_title':
         return 'แตะที่คำหนึ่งคำ';
-      case 'onboarding_feature_anki':
-        return 'การ์ด Anki';
-      case 'onboarding_feature_anki_hint':
-        return 'เปลี่ยนคำที่ค้นให้เป็นแฟลชการ์ดในแตะเดียว';
       case 'onboarding_feature_backup':
         return 'สำรองข้อมูลและซิงค์';
       case 'onboarding_feature_backup_hint':
@@ -540323,7 +541090,7 @@ extension on _StringsTh {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -541119,6 +541886,34 @@ extension on _StringsTh {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -546172,10 +546967,6 @@ extension on _StringsTr {
         return 'Bir karaktere dokunun (bilgisayarda sol tıklayın); Fushi oradan başlayan en uzun kelimeyi alır. Cümle arama sayfasında açılır.';
       case 'onboarding_click_lookup_tap_title':
         return 'Bir kelimeye dokunun';
-      case 'onboarding_feature_anki':
-        return 'Anki kartları';
-      case 'onboarding_feature_anki_hint':
-        return 'Aramalarınızı tek dokunuşla bilgi kartına dönüştürün';
       case 'onboarding_feature_backup':
         return 'Yedekleme ve senkronizasyon';
       case 'onboarding_feature_backup_hint':
@@ -557126,7 +557917,7 @@ extension on _StringsTr {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -557922,6 +558713,34 @@ extension on _StringsTr {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -562970,10 +563789,6 @@ extension on _StringsVi {
         return 'Chạm vào một ký tự (trên máy tính thì nhấp chuột trái); Fushi lấy từ dài nhất bắt đầu từ đó. Câu sẽ mở trong trang tra từ.';
       case 'onboarding_click_lookup_tap_title':
         return 'Chạm vào một từ';
-      case 'onboarding_feature_anki':
-        return 'Thẻ Anki';
-      case 'onboarding_feature_anki_hint':
-        return 'Biến kết quả tra từ thành thẻ ghi nhớ chỉ với một chạm';
       case 'onboarding_feature_backup':
         return 'Sao lưu & đồng bộ';
       case 'onboarding_feature_backup_hint':
@@ -573912,7 +574727,7 @@ extension on _StringsVi {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -574708,6 +575523,34 @@ extension on _StringsVi {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
@@ -579710,10 +580553,6 @@ extension on _StringsZhCn {
         return '轻点（电脑上单击）一个字，Fushi 从这里向后匹配最长的词。句子会在查词页里打开。';
       case 'onboarding_click_lookup_tap_title':
         return '点一下文字';
-      case 'onboarding_feature_anki':
-        return 'Anki 制卡';
-      case 'onboarding_feature_anki_hint':
-        return '查词后一键做成卡片';
       case 'onboarding_feature_backup':
         return '备份与同步';
       case 'onboarding_feature_backup_hint':
@@ -590521,7 +591360,7 @@ extension on _StringsZhCn {
       case 'onboarding_srs_builtin_title':
         return '开箱即用';
       case 'onboarding_srs_builtin_desc':
-        return '已经备好默认牌组和 Lapis 笔记类型。';
+        return '已经备好默认牌组和「Fushi 卡片」笔记类型。';
       case 'onboarding_srs_mining_title':
         return '制卡直接进复习';
       case 'onboarding_srs_mining_desc':
@@ -591301,6 +592140,34 @@ extension on _StringsZhCn {
         return '手机精简背面（词典页签、长释义收起）';
       case 'srs_review_hide_hard_easy':
         return '隐藏「困难」和「简单」按钮';
+      case 'onboarding_feature_review':
+        return '制卡与复习';
+      case 'onboarding_feature_review_hint':
+        return '查词后一键制卡，并选择在哪里复习';
+      case 'onboarding_review_method_title':
+        return '复习方式';
+      case 'onboarding_review_method_body':
+        return '查词时制的卡在这里复习。之后随时可以在「设置 → 制卡」里更改。';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi 复习';
+      case 'onboarding_review_fushi_desc':
+        return '内置间隔复习，排程默认使用 FSRS-7。无需安装 Anki，也不用任何配置，制的卡直接进入复习。';
+      case 'onboarding_review_anki_toggle':
+        return '改用 Anki…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return '把卡片发到 Anki（AnkiDroid、AnkiMobile，或桌面版 Anki + AnkiConnect），在 Anki 里复习。下一步需要连接 Anki 并选好牌组和笔记类型。';
+      case 'onboarding_finish_next_title':
+        return '下一步';
+      case 'onboarding_finish_review_title':
+        return '在「复习」里复习';
+      case 'onboarding_finish_review_desc':
+        return '制的卡会进入底栏的「复习」页，到期的卡在那里等你复习。';
+      case 'onboarding_finish_import_title':
+        return '导入已有的 Anki 牌组';
+      case 'onboarding_finish_import_desc':
+        return '在「复习」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
       default:
         return null;
     }
@@ -596303,10 +597170,6 @@ extension on _StringsZhHk {
         return '點一下（電腦上按滑鼠左鍵）一個字，Fushi 會從這裡往後配對最長的詞。句子會在查詞頁打開。';
       case 'onboarding_click_lookup_tap_title':
         return '點一下文字';
-      case 'onboarding_feature_anki':
-        return 'Anki 製卡';
-      case 'onboarding_feature_anki_hint':
-        return '查詞後一鍵做成卡片';
       case 'onboarding_feature_backup':
         return '備份與同步';
       case 'onboarding_feature_backup_hint':
@@ -607147,7 +608010,7 @@ extension on _StringsZhHk {
       case 'onboarding_srs_builtin_title':
         return 'Ready to use';
       case 'onboarding_srs_builtin_desc':
-        return 'A default deck and the Lapis note type are already set up.';
+        return 'A default deck and the Fushi Card note type are already set up.';
       case 'onboarding_srs_mining_title':
         return 'From mining to review';
       case 'onboarding_srs_mining_desc':
@@ -607943,6 +608806,34 @@ extension on _StringsZhHk {
         return 'Compact back on phones (dictionary tabs, long definitions folded)';
       case 'srs_review_hide_hard_easy':
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
+      case 'onboarding_feature_review':
+        return 'Cards & review';
+      case 'onboarding_feature_review_hint':
+        return 'Turn lookups into cards and choose where to review them';
+      case 'onboarding_review_method_title':
+        return 'How you review';
+      case 'onboarding_review_method_body':
+        return 'Cards you make from lookups are reviewed here. You can change this anytime in Settings → Card creation.';
+      case 'onboarding_review_fushi_title':
+        return 'Fushi review';
+      case 'onboarding_review_fushi_desc':
+        return 'Built-in spaced repetition, scheduled with FSRS-7 by default. No Anki to install and nothing to set up — the cards you make go straight into review.';
+      case 'onboarding_review_anki_toggle':
+        return 'Use Anki instead…';
+      case 'onboarding_review_anki_title':
+        return 'Anki';
+      case 'onboarding_review_anki_desc':
+        return 'Send cards to Anki (AnkiDroid, AnkiMobile, or desktop Anki with AnkiConnect) and review them there. The next step connects Anki and picks a deck and note type.';
+      case 'onboarding_finish_next_title':
+        return 'Next steps';
+      case 'onboarding_finish_review_title':
+        return 'Review on the Review tab';
+      case 'onboarding_finish_review_desc':
+        return 'Cards you make land on the Review tab; cards that are due wait for you there.';
+      case 'onboarding_finish_import_title':
+        return 'Bring your Anki decks';
+      case 'onboarding_finish_import_desc':
+        return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
       default:
         return null;
     }
