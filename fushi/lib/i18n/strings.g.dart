@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132226 (7778 per locale)
+/// Strings: 132243 (7779 per locale)
 ///
-/// Built on 2026-10-15 at 05:18 UTC
+/// Built on 2026-10-16 at 06:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11147,9 +11147,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_mining_target_hint => 'Where a card goes when you mine a word';
   String get srs_mining_target_anki => 'Anki';
   String get srs_mining_target_srs => 'Fushi review';
-  String get srs_mining_target_both => 'Both';
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   String get srs_sync_now => 'Sync now';
@@ -11239,6 +11236,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_ankiconnect_key_set =>
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   String get srs_ankiconnect_generate_key => 'Generate key';
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -29906,11 +29909,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -30048,6 +30046,15 @@ class _StringsAr extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -49105,11 +49112,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -49247,6 +49249,15 @@ class _StringsDe extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -68363,11 +68374,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -68505,6 +68511,15 @@ class _StringsEs extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -87702,11 +87717,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -87844,6 +87854,15 @@ class _StringsFr extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -106694,11 +106713,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -106836,6 +106850,15 @@ class _StringsId extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -125852,11 +125875,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -125994,6 +126012,15 @@ class _StringsIt extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -144010,11 +144037,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -144152,6 +144174,15 @@ class _StringsJa extends _StringsEn {
       '他のデバイスから接続するときは、127.0.0.1 をこのコンピューターの LAN アドレスに置き換え、同じ Fushi API キーを入力してください。';
   @override
   String get srs_ankiconnect_generate_key => 'キーを生成';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -162204,11 +162235,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -162346,6 +162372,15 @@ class _StringsKo extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -181310,11 +181345,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -181452,6 +181482,15 @@ class _StringsNl extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -200485,11 +200524,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -200627,6 +200661,15 @@ class _StringsPtBr extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -219605,11 +219648,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -219747,6 +219785,15 @@ class _StringsRu extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -238403,11 +238450,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -238545,6 +238587,15 @@ class _StringsTh extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -257405,11 +257456,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -257547,6 +257593,15 @@ class _StringsTr extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -276334,11 +276389,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -276476,6 +276526,15 @@ class _StringsVi extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 // Path: <root>
@@ -293624,11 +293683,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi 复习';
   @override
-  String get srs_mining_target_both => '两者都推';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki 与 Fushi 复习会各自为同一个词安排复习（重复排程）。';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
   @override
@@ -293754,6 +293808,12 @@ class _StringsZhCn extends _StringsEn {
       '从其他设备连接时，把 127.0.0.1 换成这台电脑的局域网地址，并填同一个 Fushi API 密钥。';
   @override
   String get srs_ankiconnect_generate_key => '生成密钥';
+  @override
+  String get srs_mining_deck_fallback => '所选牌组已被删除，制卡改用默认牌组。';
+  @override
+  String get srs_mining_note_type_fallback => '所选笔记类型已被删除，制卡改用 Lapis。';
+  @override
+  String get srs_mining_lapis_mapping_hint => 'Lapis 使用内置字段映射。';
 }
 
 // Path: <root>
@@ -311211,11 +311271,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_mining_target_srs => 'Fushi review';
   @override
-  String get srs_mining_target_both => 'Both';
-  @override
-  String get srs_mining_target_both_warning =>
-      'Anki and Fushi review will each schedule the same word, so you will review it twice.';
-  @override
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
   @override
@@ -311353,6 +311408,15 @@ class _StringsZhHk extends _StringsEn {
       '從其他裝置連線時，把 127.0.0.1 換成這部電腦的區域網路位址，並填同一個 Fushi API 金鑰。';
   @override
   String get srs_ankiconnect_generate_key => '產生金鑰';
+  @override
+  String get srs_mining_deck_fallback =>
+      'The selected deck was deleted; cards go to the default deck.';
+  @override
+  String get srs_mining_note_type_fallback =>
+      'The selected note type was deleted; cards use Lapis.';
+  @override
+  String get srs_mining_lapis_mapping_hint =>
+      'Lapis uses its built-in field mapping.';
 }
 
 /// Flat map(s) containing all translations.
@@ -327371,10 +327435,6 @@ extension on _StringsEn {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -327489,6 +327549,12 @@ extension on _StringsEn {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -343502,10 +343568,6 @@ extension on _StringsAr {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -343620,6 +343682,12 @@ extension on _StringsAr {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -359709,10 +359777,6 @@ extension on _StringsDe {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -359827,6 +359891,12 @@ extension on _StringsDe {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -375898,10 +375968,6 @@ extension on _StringsEs {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -376016,6 +376082,12 @@ extension on _StringsEs {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -392105,10 +392177,6 @@ extension on _StringsFr {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -392223,6 +392291,12 @@ extension on _StringsFr {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -408256,10 +408330,6 @@ extension on _StringsId {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -408374,6 +408444,12 @@ extension on _StringsId {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -424443,10 +424519,6 @@ extension on _StringsIt {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -424561,6 +424633,12 @@ extension on _StringsIt {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -440503,10 +440581,6 @@ extension on _StringsJa {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -440621,6 +440695,12 @@ extension on _StringsJa {
         return '他のデバイスから接続するときは、127.0.0.1 をこのコンピューターの LAN アドレスに置き換え、同じ Fushi API キーを入力してください。';
       case 'srs_ankiconnect_generate_key':
         return 'キーを生成';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -456571,10 +456651,6 @@ extension on _StringsKo {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -456689,6 +456765,12 @@ extension on _StringsKo {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -472753,10 +472835,6 @@ extension on _StringsNl {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -472871,6 +472949,12 @@ extension on _StringsNl {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -488927,10 +489011,6 @@ extension on _StringsPtBr {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -489045,6 +489125,12 @@ extension on _StringsPtBr {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -505106,10 +505192,6 @@ extension on _StringsRu {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -505224,6 +505306,12 @@ extension on _StringsRu {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -521241,10 +521329,6 @@ extension on _StringsTh {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -521359,6 +521443,12 @@ extension on _StringsTh {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -537407,10 +537497,6 @@ extension on _StringsTr {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -537525,6 +537611,12 @@ extension on _StringsTr {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -553556,10 +553648,6 @@ extension on _StringsVi {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -553674,6 +553762,12 @@ extension on _StringsVi {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
@@ -569528,10 +569622,6 @@ extension on _StringsZhCn {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi 复习';
-      case 'srs_mining_target_both':
-        return '两者都推';
-      case 'srs_mining_target_both_warning':
-        return 'Anki 与 Fushi 复习会各自为同一个词安排复习（重复排程）。';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             '开启复习模块后，AnkiConnect 工具（Yomitan、asbplayer 等）可把 AnkiConnect 地址填成 http://127.0.0.1:${port}，卡片直接进 Fushi 复习。';
@@ -569639,6 +569729,12 @@ extension on _StringsZhCn {
         return '从其他设备连接时，把 127.0.0.1 换成这台电脑的局域网地址，并填同一个 Fushi API 密钥。';
       case 'srs_ankiconnect_generate_key':
         return '生成密钥';
+      case 'srs_mining_deck_fallback':
+        return '所选牌组已被删除，制卡改用默认牌组。';
+      case 'srs_mining_note_type_fallback':
+        return '所选笔记类型已被删除，制卡改用 Lapis。';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis 使用内置字段映射。';
       default:
         return null;
     }
@@ -585526,10 +585622,6 @@ extension on _StringsZhHk {
         return 'Anki';
       case 'srs_mining_target_srs':
         return 'Fushi review';
-      case 'srs_mining_target_both':
-        return 'Both';
-      case 'srs_mining_target_both_warning':
-        return 'Anki and Fushi review will each schedule the same word, so you will review it twice.';
       case 'srs_ankiconnect_hint':
         return ({required Object port}) =>
             'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -585644,6 +585736,12 @@ extension on _StringsZhHk {
         return '從其他裝置連線時，把 127.0.0.1 換成這部電腦的區域網路位址，並填同一個 Fushi API 金鑰。';
       case 'srs_ankiconnect_generate_key':
         return '產生金鑰';
+      case 'srs_mining_deck_fallback':
+        return 'The selected deck was deleted; cards go to the default deck.';
+      case 'srs_mining_note_type_fallback':
+        return 'The selected note type was deleted; cards use Lapis.';
+      case 'srs_mining_lapis_mapping_hint':
+        return 'Lapis uses its built-in field mapping.';
       default:
         return null;
     }
