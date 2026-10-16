@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132175 (7775 per locale)
+/// Strings: 132192 (7776 per locale)
 ///
-/// Built on 2026-10-16 at 07:13 UTC
+/// Built on 2026-10-16 at 11:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11234,6 +11234,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  String home_continue_volume({required Object n}) => 'Vol. ${n}';
 }
 
 // Path: <root>
@@ -30035,6 +30036,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'المجلد ${n}';
 }
 
 // Path: <root>
@@ -49226,6 +49229,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Band ${n}';
 }
 
 // Path: <root>
@@ -68476,6 +68481,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Tomo ${n}';
 }
 
 // Path: <root>
@@ -87807,6 +87814,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Tome ${n}';
 }
 
 // Path: <root>
@@ -106791,6 +106800,8 @@ class _StringsId extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Jilid ${n}';
 }
 
 // Path: <root>
@@ -125941,6 +125952,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Volume ${n}';
 }
 
 // Path: <root>
@@ -144091,6 +144104,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => '第${n}巻';
 }
 
 // Path: <root>
@@ -162277,6 +162292,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => '${n}권';
 }
 
 // Path: <root>
@@ -181375,6 +181392,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Deel ${n}';
 }
 
 // Path: <root>
@@ -200542,6 +200561,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Volume ${n}';
 }
 
 // Path: <root>
@@ -219654,6 +219675,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Том ${n}';
 }
 
 // Path: <root>
@@ -238444,6 +238467,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'เล่ม ${n}';
 }
 
 // Path: <root>
@@ -257438,6 +257463,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => '${n}. cilt';
 }
 
 // Path: <root>
@@ -276359,6 +276386,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => 'Quyển ${n}';
 }
 
 // Path: <root>
@@ -293629,6 +293658,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       '这台主机版本较旧，删除任务时无法选择是否保留文件：Fushi 应用当主机会保留文件，无头 fushi_server 会连文件一起删除。';
+  @override
+  String home_continue_volume({required Object n}) => '第 ${n} 卷';
 }
 
 // Path: <root>
@@ -311220,6 +311251,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_remote_delete_files_host_default =>
       'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+  @override
+  String home_continue_volume({required Object n}) => '第 ${n} 卷';
 }
 
 /// Flat map(s) containing all translations.
@@ -327350,6 +327383,8 @@ extension on _StringsEn {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Vol. ${n}';
       default:
         return null;
     }
@@ -343475,6 +343510,8 @@ extension on _StringsAr {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'المجلد ${n}';
       default:
         return null;
     }
@@ -359676,6 +359713,8 @@ extension on _StringsDe {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Band ${n}';
       default:
         return null;
     }
@@ -375859,6 +375898,8 @@ extension on _StringsEs {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Tomo ${n}';
       default:
         return null;
     }
@@ -392060,6 +392101,8 @@ extension on _StringsFr {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Tome ${n}';
       default:
         return null;
     }
@@ -408205,6 +408248,8 @@ extension on _StringsId {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Jilid ${n}';
       default:
         return null;
     }
@@ -424386,6 +424431,8 @@ extension on _StringsIt {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Volume ${n}';
       default:
         return null;
     }
@@ -440440,6 +440487,8 @@ extension on _StringsJa {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => '第${n}巻';
       default:
         return null;
     }
@@ -456502,6 +456551,8 @@ extension on _StringsKo {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => '${n}권';
       default:
         return null;
     }
@@ -472678,6 +472729,8 @@ extension on _StringsNl {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Deel ${n}';
       default:
         return null;
     }
@@ -488846,6 +488899,8 @@ extension on _StringsPtBr {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Volume ${n}';
       default:
         return null;
     }
@@ -505019,6 +505074,8 @@ extension on _StringsRu {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Том ${n}';
       default:
         return null;
     }
@@ -521148,6 +521205,8 @@ extension on _StringsTh {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'เล่ม ${n}';
       default:
         return null;
     }
@@ -537308,6 +537367,8 @@ extension on _StringsTr {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => '${n}. cilt';
       default:
         return null;
     }
@@ -553451,6 +553512,8 @@ extension on _StringsVi {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => 'Quyển ${n}';
       default:
         return null;
     }
@@ -569410,6 +569473,8 @@ extension on _StringsZhCn {
         return '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
       case 'download_remote_delete_files_host_default':
         return '这台主机版本较旧，删除任务时无法选择是否保留文件：Fushi 应用当主机会保留文件，无头 fushi_server 会连文件一起删除。';
+      case 'home_continue_volume':
+        return ({required Object n}) => '第 ${n} 卷';
       default:
         return null;
     }
@@ -585409,6 +585474,8 @@ extension on _StringsZhHk {
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
       case 'download_remote_delete_files_host_default':
         return 'This host runs an older version, so deleting a task can\'t choose whether its files are kept: a Fushi app host keeps them, a headless fushi_server deletes them.';
+      case 'home_continue_volume':
+        return ({required Object n}) => '第 ${n} 卷';
       default:
         return null;
     }
