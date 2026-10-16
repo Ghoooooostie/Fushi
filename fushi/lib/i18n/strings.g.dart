@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 137921 (8113 per locale)
+/// Strings: 137836 (8108 per locale)
 ///
-/// Built on 2026-10-16 at 16:02 UTC
+/// Built on 2026-10-16 at 18:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11461,9 +11461,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_stats_range_three_months => '3 months';
   String get srs_stats_range_year => '1 year';
   String get srs_stats_deck_all => 'All decks';
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   String get srs_stats_today_reviews => 'Reviews';
@@ -11535,18 +11532,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Nothing to show yet: review some cards first.';
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  String get srs_stats_hourly_correct => 'Correct rate';
-  String get srs_stats_buttons_title => 'Answer buttons';
   String get srs_stats_added_title => 'Added';
-  String get srs_stats_leech_title => 'Leeches';
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   String get srs_stats_sources_title => 'Card sources';
   String get srs_stats_source_none => 'No source';
   String get srs_stats_source_untitled => 'Untitled';
@@ -11669,6 +11655,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get card_target_srs_enable_confirm =>
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   String get card_creation_section_content => 'Card content';
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  String srs_interval_hours({required Object n}) => '${n}h';
+  String srs_interval_days({required Object n}) => '${n}d';
+  String srs_interval_months({required Object n}) => '${n}mo';
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -30863,11 +30854,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -30998,26 +30984,7 @@ class _StringsAr extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -31243,6 +31210,16 @@ class _StringsAr extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -50827,11 +50804,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -50962,26 +50934,7 @@ class _StringsDe extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -51207,6 +51160,16 @@ class _StringsDe extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -70850,11 +70813,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -70985,26 +70943,7 @@ class _StringsEs extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -71230,6 +71169,16 @@ class _StringsEs extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -90954,11 +90903,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -91089,26 +91033,7 @@ class _StringsFr extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -91334,6 +91259,16 @@ class _StringsFr extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -110711,11 +110646,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -110846,26 +110776,7 @@ class _StringsId extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -111091,6 +111002,16 @@ class _StringsId extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -130634,11 +130555,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -130769,26 +130685,7 @@ class _StringsIt extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -131014,6 +130911,16 @@ class _StringsIt extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -149558,11 +149465,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -149693,26 +149595,7 @@ class _StringsJa extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -149937,6 +149820,16 @@ class _StringsJa extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -168517,11 +168410,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -168652,26 +168540,7 @@ class _StringsKo extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -168896,6 +168765,16 @@ class _StringsKo extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -188387,11 +188266,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -188522,26 +188396,7 @@ class _StringsNl extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -188767,6 +188622,16 @@ class _StringsNl extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -208327,11 +208192,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -208462,26 +208322,7 @@ class _StringsPtBr extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -208707,6 +208548,16 @@ class _StringsPtBr extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -228212,11 +228063,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -228347,26 +228193,7 @@ class _StringsRu extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -228592,6 +228419,16 @@ class _StringsRu extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -247775,11 +247612,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -247910,26 +247742,7 @@ class _StringsTh extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -248155,6 +247968,16 @@ class _StringsTh extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -267542,11 +267365,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -267677,26 +267495,7 @@ class _StringsTr extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -267922,6 +267721,16 @@ class _StringsTr extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -287236,11 +287045,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -287371,26 +287175,7 @@ class _StringsVi extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -287616,6 +287401,16 @@ class _StringsVi extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 // Path: <root>
@@ -305258,11 +305053,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_stats_deck_all => '全部牌组';
   @override
-  String get srs_stats_search_hint => '用 Anki 搜索语法筛选，如 tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      '无法识别的搜索：${reason}';
-  @override
   String get srs_stats_empty => '还没有复习记录。复习几张卡后，统计就会出现在这里。';
   @override
   String get srs_stats_today_reviews => '复习';
@@ -305390,26 +305180,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_stats_retrievability_unavailable => '本机没有排程内核，无法计算可提取度。';
   @override
-  String get srs_stats_hourly_title => '按小时';
-  @override
-  String get srs_stats_hourly_correct => '正确率';
-  @override
-  String get srs_stats_buttons_title => '评分按钮';
-  @override
   String get srs_stats_added_title => '新增卡片';
-  @override
-  String get srs_stats_leech_title => '易忘卡';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => '易忘卡（遗忘 ≥ ${threshold} 次）：${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => '遗忘 ${n} 次';
-  @override
-  String get srs_stats_lapses_in_range => '范围内遗忘';
-  @override
-  String get srs_stats_leech_none => '还没有被遗忘过的卡。';
   @override
   String get srs_stats_sources_title => '制卡来源';
   @override
@@ -305624,6 +305395,16 @@ class _StringsZhCn extends _StringsEn {
       '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
   @override
   String get card_creation_section_content => '卡片内容';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}分钟';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}小时';
+  @override
+  String srs_interval_days({required Object n}) => '${n}天';
+  @override
+  String srs_interval_months({required Object n}) => '${n}个月';
+  @override
+  String srs_interval_years({required Object n}) => '${n}年';
 }
 
 // Path: <root>
@@ -323609,11 +323390,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_stats_deck_all => 'All decks';
   @override
-  String get srs_stats_search_hint => 'Filter with Anki search, e.g. tag:verb';
-  @override
-  String srs_stats_search_invalid({required Object reason}) =>
-      'Search not supported: ${reason}';
-  @override
   String get srs_stats_empty =>
       'No review history yet. Review a few cards and your statistics show up here.';
   @override
@@ -323744,26 +323520,7 @@ class _StringsZhHk extends _StringsEn {
   String get srs_stats_retrievability_unavailable =>
       'The scheduling engine is not available on this device, so retrievability cannot be computed.';
   @override
-  String get srs_stats_hourly_title => 'Hourly breakdown';
-  @override
-  String get srs_stats_hourly_correct => 'Correct rate';
-  @override
-  String get srs_stats_buttons_title => 'Answer buttons';
-  @override
   String get srs_stats_added_title => 'Added';
-  @override
-  String get srs_stats_leech_title => 'Leeches';
-  @override
-  String srs_stats_leech_count({
-    required Object threshold,
-    required Object n,
-  }) => 'Leeches (forgotten ${threshold}+ times): ${n}';
-  @override
-  String srs_stats_lapses({required Object n}) => 'Forgotten ${n} times';
-  @override
-  String get srs_stats_lapses_in_range => 'Forgotten in range';
-  @override
-  String get srs_stats_leech_none => 'No card has been forgotten yet.';
   @override
   String get srs_stats_sources_title => 'Card sources';
   @override
@@ -323988,6 +323745,16 @@ class _StringsZhHk extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String srs_interval_minutes({required Object n}) => '${n}m';
+  @override
+  String srs_interval_hours({required Object n}) => '${n}h';
+  @override
+  String srs_interval_days({required Object n}) => '${n}d';
+  @override
+  String srs_interval_months({required Object n}) => '${n}mo';
+  @override
+  String srs_interval_years({required Object n}) => '${n}y';
 }
 
 /// Flat map(s) containing all translations.
@@ -340465,10 +340232,6 @@ extension on _StringsEn {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -340595,25 +340358,8 @@ extension on _StringsEn {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -340822,6 +340568,16 @@ extension on _StringsEn {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -357294,10 +357050,6 @@ extension on _StringsAr {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -357424,25 +357176,8 @@ extension on _StringsAr {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -357651,6 +357386,16 @@ extension on _StringsAr {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -374199,10 +373944,6 @@ extension on _StringsDe {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -374329,25 +374070,8 @@ extension on _StringsDe {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -374556,6 +374280,16 @@ extension on _StringsDe {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -391086,10 +390820,6 @@ extension on _StringsEs {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -391216,25 +390946,8 @@ extension on _StringsEs {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -391443,6 +391156,16 @@ extension on _StringsEs {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -407991,10 +407714,6 @@ extension on _StringsFr {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -408121,25 +407840,8 @@ extension on _StringsFr {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -408348,6 +408050,16 @@ extension on _StringsFr {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -424840,10 +424552,6 @@ extension on _StringsId {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -424970,25 +424678,8 @@ extension on _StringsId {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -425197,6 +424888,16 @@ extension on _StringsId {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -441725,10 +441426,6 @@ extension on _StringsIt {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -441855,25 +441552,8 @@ extension on _StringsIt {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -442082,6 +441762,16 @@ extension on _StringsIt {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -458483,10 +458173,6 @@ extension on _StringsJa {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -458613,25 +458299,8 @@ extension on _StringsJa {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -458840,6 +458509,16 @@ extension on _StringsJa {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -475249,10 +474928,6 @@ extension on _StringsKo {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -475379,25 +475054,8 @@ extension on _StringsKo {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -475606,6 +475264,16 @@ extension on _StringsKo {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -492129,10 +491797,6 @@ extension on _StringsNl {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -492259,25 +491923,8 @@ extension on _StringsNl {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -492486,6 +492133,16 @@ extension on _StringsNl {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -509001,10 +508658,6 @@ extension on _StringsPtBr {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -509131,25 +508784,8 @@ extension on _StringsPtBr {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -509358,6 +508994,16 @@ extension on _StringsPtBr {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -525878,10 +525524,6 @@ extension on _StringsRu {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -526008,25 +525650,8 @@ extension on _StringsRu {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -526235,6 +525860,16 @@ extension on _StringsRu {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -542711,10 +542346,6 @@ extension on _StringsTh {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -542841,25 +542472,8 @@ extension on _StringsTh {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -543068,6 +542682,16 @@ extension on _StringsTh {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -559575,10 +559199,6 @@ extension on _StringsTr {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -559705,25 +559325,8 @@ extension on _StringsTr {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -559932,6 +559535,16 @@ extension on _StringsTr {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -576422,10 +576035,6 @@ extension on _StringsVi {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -576552,25 +576161,8 @@ extension on _StringsVi {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -576779,6 +576371,16 @@ extension on _StringsVi {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
@@ -593076,10 +592678,6 @@ extension on _StringsZhCn {
         return '1 年';
       case 'srs_stats_deck_all':
         return '全部牌组';
-      case 'srs_stats_search_hint':
-        return '用 Anki 搜索语法筛选，如 tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => '无法识别的搜索：${reason}';
       case 'srs_stats_empty':
         return '还没有复习记录。复习几张卡后，统计就会出现在这里。';
       case 'srs_stats_today_reviews':
@@ -593206,25 +592804,8 @@ extension on _StringsZhCn {
         return '暂无数据：先复习一些卡片。';
       case 'srs_stats_retrievability_unavailable':
         return '本机没有排程内核，无法计算可提取度。';
-      case 'srs_stats_hourly_title':
-        return '按小时';
-      case 'srs_stats_hourly_correct':
-        return '正确率';
-      case 'srs_stats_buttons_title':
-        return '评分按钮';
       case 'srs_stats_added_title':
         return '新增卡片';
-      case 'srs_stats_leech_title':
-        return '易忘卡';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            '易忘卡（遗忘 ≥ ${threshold} 次）：${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => '遗忘 ${n} 次';
-      case 'srs_stats_lapses_in_range':
-        return '范围内遗忘';
-      case 'srs_stats_leech_none':
-        return '还没有被遗忘过的卡。';
       case 'srs_stats_sources_title':
         return '制卡来源';
       case 'srs_stats_source_none':
@@ -593433,6 +593014,16 @@ extension on _StringsZhCn {
         return '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
       case 'card_creation_section_content':
         return '卡片内容';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}分钟';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}小时';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}天';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}个月';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}年';
       default:
         return null;
     }
@@ -609779,10 +609370,6 @@ extension on _StringsZhHk {
         return '1 year';
       case 'srs_stats_deck_all':
         return 'All decks';
-      case 'srs_stats_search_hint':
-        return 'Filter with Anki search, e.g. tag:verb';
-      case 'srs_stats_search_invalid':
-        return ({required Object reason}) => 'Search not supported: ${reason}';
       case 'srs_stats_empty':
         return 'No review history yet. Review a few cards and your statistics show up here.';
       case 'srs_stats_today_reviews':
@@ -609909,25 +609496,8 @@ extension on _StringsZhHk {
         return 'Nothing to show yet: review some cards first.';
       case 'srs_stats_retrievability_unavailable':
         return 'The scheduling engine is not available on this device, so retrievability cannot be computed.';
-      case 'srs_stats_hourly_title':
-        return 'Hourly breakdown';
-      case 'srs_stats_hourly_correct':
-        return 'Correct rate';
-      case 'srs_stats_buttons_title':
-        return 'Answer buttons';
       case 'srs_stats_added_title':
         return 'Added';
-      case 'srs_stats_leech_title':
-        return 'Leeches';
-      case 'srs_stats_leech_count':
-        return ({required Object threshold, required Object n}) =>
-            'Leeches (forgotten ${threshold}+ times): ${n}';
-      case 'srs_stats_lapses':
-        return ({required Object n}) => 'Forgotten ${n} times';
-      case 'srs_stats_lapses_in_range':
-        return 'Forgotten in range';
-      case 'srs_stats_leech_none':
-        return 'No card has been forgotten yet.';
       case 'srs_stats_sources_title':
         return 'Card sources';
       case 'srs_stats_source_none':
@@ -610136,6 +609706,16 @@ extension on _StringsZhHk {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_interval_minutes':
+        return ({required Object n}) => '${n}m';
+      case 'srs_interval_hours':
+        return ({required Object n}) => '${n}h';
+      case 'srs_interval_days':
+        return ({required Object n}) => '${n}d';
+      case 'srs_interval_months':
+        return ({required Object n}) => '${n}mo';
+      case 'srs_interval_years':
+        return ({required Object n}) => '${n}y';
       default:
         return null;
     }
