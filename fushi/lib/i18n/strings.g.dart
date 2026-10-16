@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 137411 (8083 per locale)
+/// Strings: 137394 (8082 per locale)
 ///
-/// Built on 2026-10-16 at 11:06 UTC
+/// Built on 2026-10-16 at 12:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11575,14 +11575,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_label_source => 'Source';
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   String get srs_card_appearance_section_fonts => 'Fonts';
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  String get srs_card_appearance_font_latin => 'Latin font';
   String get srs_card_appearance_font_default => 'Default';
-  String get srs_card_appearance_font_library => 'Font library';
-  String get srs_card_appearance_font_system => 'System font…';
-  String get srs_card_appearance_font_import => 'Import font file…';
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   String get srs_card_appearance_section_text => 'Text';
   String get srs_card_appearance_text_size => 'Text size';
   String get srs_card_appearance_term_size => 'Headword size';
@@ -11627,6 +11620,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  String get font_target_srs_card => 'Review card';
+  String get font_target_srs_card_short => 'Card';
+  String get srs_card_appearance_font => 'Card font';
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  String get srs_card_label_show_more => 'Show more';
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -31030,21 +31031,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -31129,6 +31116,20 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -50922,21 +50923,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -51021,6 +51008,20 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -70873,21 +70874,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -70972,6 +70959,20 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -90905,21 +90906,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -91004,6 +90991,20 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -110590,21 +110591,7 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -110689,6 +110676,20 @@ class _StringsId extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -130441,21 +130442,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -130540,6 +130527,20 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -149292,21 +149293,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -149391,6 +149378,20 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -168179,21 +168180,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -168278,6 +168265,20 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -187978,21 +187979,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -188077,6 +188064,20 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -207846,21 +207847,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -207945,6 +207932,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -227659,21 +227660,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -227758,6 +227745,20 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -247150,21 +247151,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -247249,6 +247236,20 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -266845,21 +266846,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -266944,6 +266931,20 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -286467,21 +286468,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -286566,6 +286553,20 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 // Path: <root>
@@ -304411,21 +304412,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => '字体';
   @override
-  String get srs_card_appearance_font_ja => '日文字体';
-  @override
-  String get srs_card_appearance_font_zh => '中文字体';
-  @override
-  String get srs_card_appearance_font_latin => '西文字体';
-  @override
   String get srs_card_appearance_font_default => '默认';
-  @override
-  String get srs_card_appearance_font_library => '字体库';
-  @override
-  String get srs_card_appearance_font_system => '系统字体…';
-  @override
-  String get srs_card_appearance_font_import => '导入字体文件…';
-  @override
-  String get srs_card_appearance_font_import_failed => '不是有效的字体文件';
   @override
   String get srs_card_appearance_section_text => '文字';
   @override
@@ -304508,6 +304495,18 @@ class _StringsZhCn extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi 卡片外观';
   @override
   String srs_card_edit_template({required Object name}) => '编辑 ${name} 模板';
+  @override
+  String get font_target_srs_card => '复习卡片';
+  @override
+  String get font_target_srs_card_short => '卡片';
+  @override
+  String get srs_card_appearance_font => '卡面字体';
+  @override
+  String get srs_card_appearance_font_hint => '从字体库选择；按顺序逐字回落（西文字体放前面）';
+  @override
+  String get srs_card_label_show_more => '展开全文';
+  @override
+  String get srs_card_appearance_compact_phone => '手机精简背面（词典页签、长释义收起）';
 }
 
 // Path: <root>
@@ -322701,21 +322700,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
-  String get srs_card_appearance_font_ja => 'Japanese font';
-  @override
-  String get srs_card_appearance_font_zh => 'Chinese font';
-  @override
-  String get srs_card_appearance_font_latin => 'Latin font';
-  @override
   String get srs_card_appearance_font_default => 'Default';
-  @override
-  String get srs_card_appearance_font_library => 'Font library';
-  @override
-  String get srs_card_appearance_font_system => 'System font…';
-  @override
-  String get srs_card_appearance_font_import => 'Import font file…';
-  @override
-  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -322800,6 +322785,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get font_target_srs_card => 'Review card';
+  @override
+  String get font_target_srs_card_short => 'Card';
+  @override
+  String get srs_card_appearance_font => 'Card font';
+  @override
+  String get srs_card_appearance_font_hint =>
+      'From the font library; characters fall back in order (put Latin fonts first)';
+  @override
+  String get srs_card_label_show_more => 'Show more';
+  @override
+  String get srs_card_appearance_compact_phone =>
+      'Compact back on phones (dictionary tabs, long definitions folded)';
 }
 
 /// Flat map(s) containing all translations.
@@ -339476,22 +339475,8 @@ extension on _StringsEn {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -339573,6 +339558,18 @@ extension on _StringsEn {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -356244,22 +356241,8 @@ extension on _StringsAr {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -356341,6 +356324,18 @@ extension on _StringsAr {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -373088,22 +373083,8 @@ extension on _StringsDe {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -373185,6 +373166,18 @@ extension on _StringsDe {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -389914,22 +389907,8 @@ extension on _StringsEs {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -390011,6 +389990,18 @@ extension on _StringsEs {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -406758,22 +406749,8 @@ extension on _StringsFr {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -406855,6 +406832,18 @@ extension on _StringsFr {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -423546,22 +423535,8 @@ extension on _StringsId {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -423643,6 +423618,18 @@ extension on _StringsId {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -440370,22 +440357,8 @@ extension on _StringsIt {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -440467,6 +440440,18 @@ extension on _StringsIt {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -457067,22 +457052,8 @@ extension on _StringsJa {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -457164,6 +457135,18 @@ extension on _StringsJa {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -473772,22 +473755,8 @@ extension on _StringsKo {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -473869,6 +473838,18 @@ extension on _StringsKo {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -490591,22 +490572,8 @@ extension on _StringsNl {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -490688,6 +490655,18 @@ extension on _StringsNl {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -507402,22 +507381,8 @@ extension on _StringsPtBr {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -507499,6 +507464,18 @@ extension on _StringsPtBr {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -524218,22 +524195,8 @@ extension on _StringsRu {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -524315,6 +524278,18 @@ extension on _StringsRu {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -540990,22 +540965,8 @@ extension on _StringsTh {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -541087,6 +541048,18 @@ extension on _StringsTh {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -557793,22 +557766,8 @@ extension on _StringsTr {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -557890,6 +557849,18 @@ extension on _StringsTr {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -574579,22 +574550,8 @@ extension on _StringsVi {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -574676,6 +574633,18 @@ extension on _StringsVi {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
@@ -591172,22 +591141,8 @@ extension on _StringsZhCn {
         return '作用于「Fushi 卡片」笔记类型';
       case 'srs_card_appearance_section_fonts':
         return '字体';
-      case 'srs_card_appearance_font_ja':
-        return '日文字体';
-      case 'srs_card_appearance_font_zh':
-        return '中文字体';
-      case 'srs_card_appearance_font_latin':
-        return '西文字体';
       case 'srs_card_appearance_font_default':
         return '默认';
-      case 'srs_card_appearance_font_library':
-        return '字体库';
-      case 'srs_card_appearance_font_system':
-        return '系统字体…';
-      case 'srs_card_appearance_font_import':
-        return '导入字体文件…';
-      case 'srs_card_appearance_font_import_failed':
-        return '不是有效的字体文件';
       case 'srs_card_appearance_section_text':
         return '文字';
       case 'srs_card_appearance_text_size':
@@ -591269,6 +591224,18 @@ extension on _StringsZhCn {
         return 'Fushi 卡片外观';
       case 'srs_card_edit_template':
         return ({required Object name}) => '编辑 ${name} 模板';
+      case 'font_target_srs_card':
+        return '复习卡片';
+      case 'font_target_srs_card_short':
+        return '卡片';
+      case 'srs_card_appearance_font':
+        return '卡面字体';
+      case 'srs_card_appearance_font_hint':
+        return '从字体库选择；按顺序逐字回落（西文字体放前面）';
+      case 'srs_card_label_show_more':
+        return '展开全文';
+      case 'srs_card_appearance_compact_phone':
+        return '手机精简背面（词典页签、长释义收起）';
       default:
         return null;
     }
@@ -607814,22 +607781,8 @@ extension on _StringsZhHk {
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
         return 'Fonts';
-      case 'srs_card_appearance_font_ja':
-        return 'Japanese font';
-      case 'srs_card_appearance_font_zh':
-        return 'Chinese font';
-      case 'srs_card_appearance_font_latin':
-        return 'Latin font';
       case 'srs_card_appearance_font_default':
         return 'Default';
-      case 'srs_card_appearance_font_library':
-        return 'Font library';
-      case 'srs_card_appearance_font_system':
-        return 'System font…';
-      case 'srs_card_appearance_font_import':
-        return 'Import font file…';
-      case 'srs_card_appearance_font_import_failed':
-        return 'Not a valid font file';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_text_size':
@@ -607911,6 +607864,18 @@ extension on _StringsZhHk {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'font_target_srs_card':
+        return 'Review card';
+      case 'font_target_srs_card_short':
+        return 'Card';
+      case 'srs_card_appearance_font':
+        return 'Card font';
+      case 'srs_card_appearance_font_hint':
+        return 'From the font library; characters fall back in order (put Latin fonts first)';
+      case 'srs_card_label_show_more':
+        return 'Show more';
+      case 'srs_card_appearance_compact_phone':
+        return 'Compact back on phones (dictionary tabs, long definitions folded)';
       default:
         return null;
     }
