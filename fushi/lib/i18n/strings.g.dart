@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 136510 (8030 per locale)
+/// Strings: 137394 (8082 per locale)
 ///
-/// Built on 2026-10-16 at 06:54 UTC
+/// Built on 2026-10-16 at 09:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11235,8 +11235,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The selected deck was deleted; cards go to the default deck.';
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
   String get srs_deck_expand => 'Expand subdecks';
   String get srs_deck_collapse => 'Collapse subdecks';
   String get srs_import_options_title => 'Import options';
@@ -11570,6 +11568,63 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_stats_in_days({required Object n}) => 'In ${n} days';
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  String get srs_card_label_all_definitions => 'All definitions';
+  String get srs_card_label_frequency => 'Frequency';
+  String get srs_card_label_source => 'Source';
+  String get srs_card_appearance_title => 'Card appearance';
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  String get srs_card_appearance_font_latin => 'Latin font';
+  String get srs_card_appearance_font_default => 'Default';
+  String get srs_card_appearance_font_library => 'Font library';
+  String get srs_card_appearance_font_system => 'System font…';
+  String get srs_card_appearance_font_import => 'Import font file…';
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  String get srs_card_appearance_section_text => 'Text';
+  String get srs_card_appearance_text_size => 'Text size';
+  String get srs_card_appearance_term_size => 'Headword size';
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  String get srs_card_appearance_section_color => 'Color';
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  String get srs_card_appearance_section_layout => 'Layout';
+  String get srs_card_appearance_density => 'Density';
+  String get srs_card_appearance_density_compact => 'Compact';
+  String get srs_card_appearance_density_standard => 'Standard';
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  String get srs_card_appearance_section_content => 'Card content';
+  String get srs_card_appearance_show_picture => 'Picture';
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  String get srs_card_appearance_show_source => 'Source';
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  String get srs_card_appearance_preview_front => 'Front';
+  String get srs_card_appearance_preview_back => 'Back';
+  String get srs_card_appearance_preview_light => 'Light';
+  String get srs_card_appearance_preview_dark => 'Dark';
+  String get srs_card_appearance_preview_phone => 'Phone';
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  String get srs_card_appearance_preview_mine => 'My card';
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -30373,9 +30428,6 @@ class _StringsAr extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -30962,6 +31014,116 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -50155,9 +50317,6 @@ class _StringsDe extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -50744,6 +50903,116 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -69996,9 +70265,6 @@ class _StringsEs extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -70585,6 +70851,116 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -89918,9 +90294,6 @@ class _StringsFr extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -90507,6 +90880,116 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -109493,9 +109976,6 @@ class _StringsId extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -110082,6 +110562,116 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -129234,9 +129824,6 @@ class _StringsIt extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -129823,6 +130410,116 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -147975,9 +148672,6 @@ class _StringsJa extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -148564,6 +149258,116 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -166752,9 +167556,6 @@ class _StringsKo extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -167341,6 +168142,116 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -186441,9 +187352,6 @@ class _StringsNl extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -187030,6 +187938,116 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -206199,9 +207217,6 @@ class _StringsPtBr extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -206788,6 +207803,116 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -225902,9 +227027,6 @@ class _StringsRu extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -226491,6 +227613,116 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -245283,9 +246515,6 @@ class _StringsTh extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -245872,6 +247101,116 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -264868,9 +266207,6 @@ class _StringsTr extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -265457,6 +266793,116 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -284380,9 +285826,6 @@ class _StringsVi extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -284969,6 +286412,116 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 // Path: <root>
@@ -302241,8 +303794,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_mining_note_type_fallback => '所选笔记类型已被删除，制卡改用 Lapis。';
   @override
-  String get srs_mining_lapis_mapping_hint => 'Lapis 使用内置字段映射。';
-  @override
   String get srs_deck_expand => '展开子牌组';
   @override
   String get srs_deck_collapse => '收起子牌组';
@@ -302803,6 +304354,114 @@ class _StringsZhCn extends _StringsEn {
   String srs_stats_in_days({required Object n}) => '${n} 天后';
   @override
   String get srs_stats_unavailable => '打开复习模块后可查看复习统计。';
+  @override
+  String get srs_mining_builtin_mapping_hint => '内置笔记类型使用内置字段映射。';
+  @override
+  String get srs_card_label_all_definitions => '全部释义';
+  @override
+  String get srs_card_label_frequency => '词频';
+  @override
+  String get srs_card_label_source => '来源';
+  @override
+  String get srs_card_appearance_title => '卡面外观';
+  @override
+  String get srs_card_appearance_hint => '作用于「Fushi 卡片」笔记类型';
+  @override
+  String get srs_card_appearance_section_fonts => '字体';
+  @override
+  String get srs_card_appearance_font_ja => '日文字体';
+  @override
+  String get srs_card_appearance_font_zh => '中文字体';
+  @override
+  String get srs_card_appearance_font_latin => '西文字体';
+  @override
+  String get srs_card_appearance_font_default => '默认';
+  @override
+  String get srs_card_appearance_font_library => '字体库';
+  @override
+  String get srs_card_appearance_font_system => '系统字体…';
+  @override
+  String get srs_card_appearance_font_import => '导入字体文件…';
+  @override
+  String get srs_card_appearance_font_import_failed => '不是有效的字体文件';
+  @override
+  String get srs_card_appearance_section_text => '文字';
+  @override
+  String get srs_card_appearance_text_size => '正文字号';
+  @override
+  String get srs_card_appearance_term_size => '词条字号';
+  @override
+  String get srs_card_appearance_line_spacing => '行距';
+  @override
+  String get srs_card_appearance_section_color => '配色';
+  @override
+  String get srs_card_appearance_color_app => '跟随 app 主题';
+  @override
+  String get srs_card_appearance_color_custom => '自定义强调色';
+  @override
+  String get srs_card_appearance_dict_unified => '统一词典样式';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      '把各词典自带的颜色按语义换成卡面配色（M3E）。关闭则保留词典原样式。';
+  @override
+  String get srs_card_appearance_section_layout => '布局';
+  @override
+  String get srs_card_appearance_density => '密度';
+  @override
+  String get srs_card_appearance_density_compact => '紧凑';
+  @override
+  String get srs_card_appearance_density_standard => '标准';
+  @override
+  String get srs_card_appearance_density_comfortable => '宽松';
+  @override
+  String get srs_card_appearance_section_content => '卡面内容';
+  @override
+  String get srs_card_appearance_show_picture => '图片';
+  @override
+  String get srs_card_appearance_show_translation => '例句翻译';
+  @override
+  String get srs_card_appearance_show_frequency => '词频';
+  @override
+  String get srs_card_appearance_show_source => '来源';
+  @override
+  String get srs_card_appearance_glossary_expanded => '默认展开全部释义';
+  @override
+  String get srs_card_appearance_front_reading => '正面显示读音';
+  @override
+  String get srs_card_appearance_front_frequency => '正面显示词频';
+  @override
+  String get srs_card_appearance_sentence_furigana => '例句注音常显';
+  @override
+  String get srs_card_appearance_preview_front => '正面';
+  @override
+  String get srs_card_appearance_preview_back => '背面';
+  @override
+  String get srs_card_appearance_preview_light => '浅色';
+  @override
+  String get srs_card_appearance_preview_dark => '深色';
+  @override
+  String get srs_card_appearance_preview_phone => '手机';
+  @override
+  String get srs_card_appearance_preview_desktop => '桌面';
+  @override
+  String get srs_card_appearance_preview_sample => '样例卡';
+  @override
+  String get srs_card_appearance_preview_mine => '我的卡';
+  @override
+  String get srs_card_appearance_reset => '恢复默认';
+  @override
+  String get srs_migrate_fushi_action => '迁移到 Fushi 卡片';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      '将 ${n} 条 Lapis 笔记迁移到 Fushi 卡片？字段按同名对应，复习历史随卡迁移。';
+  @override
+  String get srs_migrate_fushi_adjust => '调整映射…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => '已迁移 ${n} 条笔记';
+  @override
+  String get srs_migrate_fushi_none => '没有可迁移的 Lapis 笔记';
+  @override
+  String get srs_migrate_fushi_not_lapis => '只能迁移 Lapis 笔记';
 }
 
 // Path: <root>
@@ -320396,9 +322055,6 @@ class _StringsZhHk extends _StringsEn {
   String get srs_mining_note_type_fallback =>
       'The selected note type was deleted; cards use Lapis.';
   @override
-  String get srs_mining_lapis_mapping_hint =>
-      'Lapis uses its built-in field mapping.';
-  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
@@ -320985,6 +322641,116 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_stats_unavailable =>
       'Turn on the review module to see review statistics.';
+  @override
+  String get srs_mining_builtin_mapping_hint =>
+      'Built-in note types use their built-in field mapping.';
+  @override
+  String get srs_card_label_all_definitions => 'All definitions';
+  @override
+  String get srs_card_label_frequency => 'Frequency';
+  @override
+  String get srs_card_label_source => 'Source';
+  @override
+  String get srs_card_appearance_title => 'Card appearance';
+  @override
+  String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
+  @override
+  String get srs_card_appearance_section_fonts => 'Fonts';
+  @override
+  String get srs_card_appearance_font_ja => 'Japanese font';
+  @override
+  String get srs_card_appearance_font_zh => 'Chinese font';
+  @override
+  String get srs_card_appearance_font_latin => 'Latin font';
+  @override
+  String get srs_card_appearance_font_default => 'Default';
+  @override
+  String get srs_card_appearance_font_library => 'Font library';
+  @override
+  String get srs_card_appearance_font_system => 'System font…';
+  @override
+  String get srs_card_appearance_font_import => 'Import font file…';
+  @override
+  String get srs_card_appearance_font_import_failed => 'Not a valid font file';
+  @override
+  String get srs_card_appearance_section_text => 'Text';
+  @override
+  String get srs_card_appearance_text_size => 'Text size';
+  @override
+  String get srs_card_appearance_term_size => 'Headword size';
+  @override
+  String get srs_card_appearance_line_spacing => 'Line spacing';
+  @override
+  String get srs_card_appearance_section_color => 'Color';
+  @override
+  String get srs_card_appearance_color_app => 'Follow app theme';
+  @override
+  String get srs_card_appearance_color_custom => 'Custom accent';
+  @override
+  String get srs_card_appearance_dict_unified => 'Unified dictionary style';
+  @override
+  String get srs_card_appearance_dict_unified_hint =>
+      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+  @override
+  String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_density => 'Density';
+  @override
+  String get srs_card_appearance_density_compact => 'Compact';
+  @override
+  String get srs_card_appearance_density_standard => 'Standard';
+  @override
+  String get srs_card_appearance_density_comfortable => 'Comfortable';
+  @override
+  String get srs_card_appearance_section_content => 'Card content';
+  @override
+  String get srs_card_appearance_show_picture => 'Picture';
+  @override
+  String get srs_card_appearance_show_translation => 'Sentence translation';
+  @override
+  String get srs_card_appearance_show_frequency => 'Frequency';
+  @override
+  String get srs_card_appearance_show_source => 'Source';
+  @override
+  String get srs_card_appearance_glossary_expanded => 'Expand all definitions';
+  @override
+  String get srs_card_appearance_front_reading => 'Reading on the front';
+  @override
+  String get srs_card_appearance_front_frequency => 'Frequency on the front';
+  @override
+  String get srs_card_appearance_sentence_furigana =>
+      'Always show sentence furigana';
+  @override
+  String get srs_card_appearance_preview_front => 'Front';
+  @override
+  String get srs_card_appearance_preview_back => 'Back';
+  @override
+  String get srs_card_appearance_preview_light => 'Light';
+  @override
+  String get srs_card_appearance_preview_dark => 'Dark';
+  @override
+  String get srs_card_appearance_preview_phone => 'Phone';
+  @override
+  String get srs_card_appearance_preview_desktop => 'Desktop';
+  @override
+  String get srs_card_appearance_preview_sample => 'Sample card';
+  @override
+  String get srs_card_appearance_preview_mine => 'My card';
+  @override
+  String get srs_card_appearance_reset => 'Reset to defaults';
+  @override
+  String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
+  @override
+  String srs_migrate_fushi_confirm({required Object n}) =>
+      'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+  @override
+  String get srs_migrate_fushi_adjust => 'Adjust mapping…';
+  @override
+  String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
+  @override
+  String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
+  @override
+  String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
 }
 
 /// Flat map(s) containing all translations.
@@ -337115,8 +338881,6 @@ extension on _StringsEn {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -337651,6 +339415,113 @@ extension on _StringsEn {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -353776,8 +355647,6 @@ extension on _StringsAr {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -354312,6 +356181,113 @@ extension on _StringsAr {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -370513,8 +372489,6 @@ extension on _StringsDe {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -371049,6 +373023,113 @@ extension on _StringsDe {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -387232,8 +389313,6 @@ extension on _StringsEs {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -387768,6 +389847,113 @@ extension on _StringsEs {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -403969,8 +406155,6 @@ extension on _StringsFr {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -404505,6 +406689,113 @@ extension on _StringsFr {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -420650,8 +422941,6 @@ extension on _StringsId {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -421186,6 +423475,113 @@ extension on _StringsId {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -437367,8 +439763,6 @@ extension on _StringsIt {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -437903,6 +440297,113 @@ extension on _StringsIt {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -453957,8 +456458,6 @@ extension on _StringsJa {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -454493,6 +456992,113 @@ extension on _StringsJa {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -470555,8 +473161,6 @@ extension on _StringsKo {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -471091,6 +473695,113 @@ extension on _StringsKo {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -487267,8 +489978,6 @@ extension on _StringsNl {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -487803,6 +490512,113 @@ extension on _StringsNl {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -503971,8 +506787,6 @@ extension on _StringsPtBr {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -504507,6 +507321,113 @@ extension on _StringsPtBr {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -520680,8 +523601,6 @@ extension on _StringsRu {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -521216,6 +524135,113 @@ extension on _StringsRu {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -537345,8 +540371,6 @@ extension on _StringsTh {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -537881,6 +540905,113 @@ extension on _StringsTh {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -554041,8 +557172,6 @@ extension on _StringsTr {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -554577,6 +557706,113 @@ extension on _StringsTr {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -570720,8 +573956,6 @@ extension on _StringsVi {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -571256,6 +574490,113 @@ extension on _StringsVi {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
@@ -587215,8 +590556,6 @@ extension on _StringsZhCn {
         return '所选牌组已被删除，制卡改用默认牌组。';
       case 'srs_mining_note_type_fallback':
         return '所选笔记类型已被删除，制卡改用 Lapis。';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis 使用内置字段映射。';
       case 'srs_deck_expand':
         return '展开子牌组';
       case 'srs_deck_collapse':
@@ -587742,6 +591081,113 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 天后';
       case 'srs_stats_unavailable':
         return '打开复习模块后可查看复习统计。';
+      case 'srs_mining_builtin_mapping_hint':
+        return '内置笔记类型使用内置字段映射。';
+      case 'srs_card_label_all_definitions':
+        return '全部释义';
+      case 'srs_card_label_frequency':
+        return '词频';
+      case 'srs_card_label_source':
+        return '来源';
+      case 'srs_card_appearance_title':
+        return '卡面外观';
+      case 'srs_card_appearance_hint':
+        return '作用于「Fushi 卡片」笔记类型';
+      case 'srs_card_appearance_section_fonts':
+        return '字体';
+      case 'srs_card_appearance_font_ja':
+        return '日文字体';
+      case 'srs_card_appearance_font_zh':
+        return '中文字体';
+      case 'srs_card_appearance_font_latin':
+        return '西文字体';
+      case 'srs_card_appearance_font_default':
+        return '默认';
+      case 'srs_card_appearance_font_library':
+        return '字体库';
+      case 'srs_card_appearance_font_system':
+        return '系统字体…';
+      case 'srs_card_appearance_font_import':
+        return '导入字体文件…';
+      case 'srs_card_appearance_font_import_failed':
+        return '不是有效的字体文件';
+      case 'srs_card_appearance_section_text':
+        return '文字';
+      case 'srs_card_appearance_text_size':
+        return '正文字号';
+      case 'srs_card_appearance_term_size':
+        return '词条字号';
+      case 'srs_card_appearance_line_spacing':
+        return '行距';
+      case 'srs_card_appearance_section_color':
+        return '配色';
+      case 'srs_card_appearance_color_app':
+        return '跟随 app 主题';
+      case 'srs_card_appearance_color_custom':
+        return '自定义强调色';
+      case 'srs_card_appearance_dict_unified':
+        return '统一词典样式';
+      case 'srs_card_appearance_dict_unified_hint':
+        return '把各词典自带的颜色按语义换成卡面配色（M3E）。关闭则保留词典原样式。';
+      case 'srs_card_appearance_section_layout':
+        return '布局';
+      case 'srs_card_appearance_density':
+        return '密度';
+      case 'srs_card_appearance_density_compact':
+        return '紧凑';
+      case 'srs_card_appearance_density_standard':
+        return '标准';
+      case 'srs_card_appearance_density_comfortable':
+        return '宽松';
+      case 'srs_card_appearance_section_content':
+        return '卡面内容';
+      case 'srs_card_appearance_show_picture':
+        return '图片';
+      case 'srs_card_appearance_show_translation':
+        return '例句翻译';
+      case 'srs_card_appearance_show_frequency':
+        return '词频';
+      case 'srs_card_appearance_show_source':
+        return '来源';
+      case 'srs_card_appearance_glossary_expanded':
+        return '默认展开全部释义';
+      case 'srs_card_appearance_front_reading':
+        return '正面显示读音';
+      case 'srs_card_appearance_front_frequency':
+        return '正面显示词频';
+      case 'srs_card_appearance_sentence_furigana':
+        return '例句注音常显';
+      case 'srs_card_appearance_preview_front':
+        return '正面';
+      case 'srs_card_appearance_preview_back':
+        return '背面';
+      case 'srs_card_appearance_preview_light':
+        return '浅色';
+      case 'srs_card_appearance_preview_dark':
+        return '深色';
+      case 'srs_card_appearance_preview_phone':
+        return '手机';
+      case 'srs_card_appearance_preview_desktop':
+        return '桌面';
+      case 'srs_card_appearance_preview_sample':
+        return '样例卡';
+      case 'srs_card_appearance_preview_mine':
+        return '我的卡';
+      case 'srs_card_appearance_reset':
+        return '恢复默认';
+      case 'srs_migrate_fushi_action':
+        return '迁移到 Fushi 卡片';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            '将 ${n} 条 Lapis 笔记迁移到 Fushi 卡片？字段按同名对应，复习历史随卡迁移。';
+      case 'srs_migrate_fushi_adjust':
+        return '调整映射…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => '已迁移 ${n} 条笔记';
+      case 'srs_migrate_fushi_none':
+        return '没有可迁移的 Lapis 笔记';
+      case 'srs_migrate_fushi_not_lapis':
+        return '只能迁移 Lapis 笔记';
       default:
         return null;
     }
@@ -603741,8 +607187,6 @@ extension on _StringsZhHk {
         return 'The selected deck was deleted; cards go to the default deck.';
       case 'srs_mining_note_type_fallback':
         return 'The selected note type was deleted; cards use Lapis.';
-      case 'srs_mining_lapis_mapping_hint':
-        return 'Lapis uses its built-in field mapping.';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_collapse':
@@ -604277,6 +607721,113 @@ extension on _StringsZhHk {
         return ({required Object n}) => 'In ${n} days';
       case 'srs_stats_unavailable':
         return 'Turn on the review module to see review statistics.';
+      case 'srs_mining_builtin_mapping_hint':
+        return 'Built-in note types use their built-in field mapping.';
+      case 'srs_card_label_all_definitions':
+        return 'All definitions';
+      case 'srs_card_label_frequency':
+        return 'Frequency';
+      case 'srs_card_label_source':
+        return 'Source';
+      case 'srs_card_appearance_title':
+        return 'Card appearance';
+      case 'srs_card_appearance_hint':
+        return 'Applies to the Fushi Card note type';
+      case 'srs_card_appearance_section_fonts':
+        return 'Fonts';
+      case 'srs_card_appearance_font_ja':
+        return 'Japanese font';
+      case 'srs_card_appearance_font_zh':
+        return 'Chinese font';
+      case 'srs_card_appearance_font_latin':
+        return 'Latin font';
+      case 'srs_card_appearance_font_default':
+        return 'Default';
+      case 'srs_card_appearance_font_library':
+        return 'Font library';
+      case 'srs_card_appearance_font_system':
+        return 'System font…';
+      case 'srs_card_appearance_font_import':
+        return 'Import font file…';
+      case 'srs_card_appearance_font_import_failed':
+        return 'Not a valid font file';
+      case 'srs_card_appearance_section_text':
+        return 'Text';
+      case 'srs_card_appearance_text_size':
+        return 'Text size';
+      case 'srs_card_appearance_term_size':
+        return 'Headword size';
+      case 'srs_card_appearance_line_spacing':
+        return 'Line spacing';
+      case 'srs_card_appearance_section_color':
+        return 'Color';
+      case 'srs_card_appearance_color_app':
+        return 'Follow app theme';
+      case 'srs_card_appearance_color_custom':
+        return 'Custom accent';
+      case 'srs_card_appearance_dict_unified':
+        return 'Unified dictionary style';
+      case 'srs_card_appearance_dict_unified_hint':
+        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      case 'srs_card_appearance_section_layout':
+        return 'Layout';
+      case 'srs_card_appearance_density':
+        return 'Density';
+      case 'srs_card_appearance_density_compact':
+        return 'Compact';
+      case 'srs_card_appearance_density_standard':
+        return 'Standard';
+      case 'srs_card_appearance_density_comfortable':
+        return 'Comfortable';
+      case 'srs_card_appearance_section_content':
+        return 'Card content';
+      case 'srs_card_appearance_show_picture':
+        return 'Picture';
+      case 'srs_card_appearance_show_translation':
+        return 'Sentence translation';
+      case 'srs_card_appearance_show_frequency':
+        return 'Frequency';
+      case 'srs_card_appearance_show_source':
+        return 'Source';
+      case 'srs_card_appearance_glossary_expanded':
+        return 'Expand all definitions';
+      case 'srs_card_appearance_front_reading':
+        return 'Reading on the front';
+      case 'srs_card_appearance_front_frequency':
+        return 'Frequency on the front';
+      case 'srs_card_appearance_sentence_furigana':
+        return 'Always show sentence furigana';
+      case 'srs_card_appearance_preview_front':
+        return 'Front';
+      case 'srs_card_appearance_preview_back':
+        return 'Back';
+      case 'srs_card_appearance_preview_light':
+        return 'Light';
+      case 'srs_card_appearance_preview_dark':
+        return 'Dark';
+      case 'srs_card_appearance_preview_phone':
+        return 'Phone';
+      case 'srs_card_appearance_preview_desktop':
+        return 'Desktop';
+      case 'srs_card_appearance_preview_sample':
+        return 'Sample card';
+      case 'srs_card_appearance_preview_mine':
+        return 'My card';
+      case 'srs_card_appearance_reset':
+        return 'Reset to defaults';
+      case 'srs_migrate_fushi_action':
+        return 'Migrate to Fushi Card';
+      case 'srs_migrate_fushi_confirm':
+        return ({required Object n}) =>
+            'Migrate ${n} Lapis notes to Fushi Card? Fields map by name and review history moves with the cards.';
+      case 'srs_migrate_fushi_adjust':
+        return 'Adjust mapping…';
+      case 'srs_migrate_fushi_done':
+        return ({required Object n}) => 'Migrated ${n} notes';
+      case 'srs_migrate_fushi_none':
+        return 'No Lapis notes to migrate';
+      case 'srs_migrate_fushi_not_lapis':
+        return 'Only Lapis notes can be migrated';
       default:
         return null;
     }
