@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133620 (7860 per locale)
+/// Strings: 133671 (7863 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3539,6 +3539,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_compose_body_field => 'Details';
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
   String get feedback_compose_contact_field => 'Contact (optional)';
   String get feedback_compose_contact_hint =>
       'Email, Telegram, QQ… only developers can see it';
@@ -3568,8 +3569,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_compose_title_field => 'Title';
   String get feedback_compose_title_hint => 'One-line summary';
   String get feedback_compose_title_missing => 'Please fill in a title.';
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   String get feedback_detail_add_shot => 'Add screenshot';
   String feedback_detail_attachments({required Object n}) =>
       '${n} attachment(s)';
@@ -16983,6 +16991,8 @@ class _StringsAr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -17030,8 +17040,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -36096,6 +36115,8 @@ class _StringsDe extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -36143,8 +36164,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -55519,6 +55549,8 @@ class _StringsEs extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -55566,8 +55598,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -75005,6 +75046,8 @@ class _StringsFr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -75052,8 +75095,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -94446,6 +94498,8 @@ class _StringsId extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -94493,8 +94547,17 @@ class _StringsId extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -113689,6 +113752,8 @@ class _StringsIt extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -113736,8 +113801,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -132794,6 +132868,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get feedback_compose_body_hint => '何が起きたか、期待した結果、再現手順';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => '連絡先（任意）';
   @override
   String get feedback_compose_contact_hint => 'メール・Telegram など。開発者だけが見られます';
@@ -132839,8 +132915,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'タイトルを入力してください。';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -151137,6 +151222,8 @@ class _StringsKo extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -151184,8 +151271,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -169777,6 +169873,8 @@ class _StringsNl extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -169824,8 +169922,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -189105,6 +189212,8 @@ class _StringsPtBr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -189152,8 +189261,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -208455,6 +208573,8 @@ class _StringsRu extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -208502,8 +208622,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -227700,6 +227829,8 @@ class _StringsTh extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -227747,8 +227878,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -246761,6 +246901,8 @@ class _StringsTr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -246808,8 +246950,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -265949,6 +266100,8 @@ class _StringsVi extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -265996,8 +266149,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -284600,6 +284762,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get feedback_compose_body_hint => '发生了什么、你期望的结果、如何复现';
   @override
+  String get feedback_compose_cancel_video_compression => '取消压缩';
+  @override
   String get feedback_compose_contact_field => '联系方式（可选）';
   @override
   String get feedback_compose_contact_hint => '邮箱 / Telegram / QQ 等，仅开发者可见';
@@ -284643,8 +284807,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get feedback_compose_title_missing => '请填写标题。';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 720p。';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      '更清晰但文件更大；超过约 3 分钟的视频会改按 720p 压缩，以免超过 ${max}。';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      '视频较长，1080p 会超过 ${max}，本次改按 720p 压缩。';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) => '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 ${resolution}。';
   @override
   String get feedback_detail_add_shot => '追加截图';
   @override
@@ -302177,6 +302349,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get feedback_compose_body_hint => '發生了甚麼、你期望的結果、如何重現';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => '聯絡方式（可選）';
   @override
   String get feedback_compose_contact_hint => '電郵 / Telegram / QQ 等，只有開發者看得到';
@@ -302222,8 +302396,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get feedback_compose_title_missing => '請填寫標題。';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -319425,6 +319608,8 @@ extension on _StringsEn {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -319464,9 +319649,15 @@ extension on _StringsEn {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -335731,6 +335922,8 @@ extension on _StringsAr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -335770,9 +335963,15 @@ extension on _StringsAr {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -352063,6 +352262,8 @@ extension on _StringsDe {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -352102,9 +352303,15 @@ extension on _StringsDe {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -368429,6 +368636,8 @@ extension on _StringsEs {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -368468,9 +368677,15 @@ extension on _StringsEs {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -384800,6 +385015,8 @@ extension on _StringsFr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -384839,9 +385056,15 @@ extension on _StringsFr {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -401152,6 +401375,8 @@ extension on _StringsId {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -401191,9 +401416,15 @@ extension on _StringsId {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -417482,6 +417713,8 @@ extension on _StringsIt {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -417521,9 +417754,15 @@ extension on _StringsIt {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -433795,6 +434034,8 @@ extension on _StringsJa {
         return '詳細';
       case 'feedback_compose_body_hint':
         return '何が起きたか、期待した結果、再現手順';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return '連絡先（任意）';
       case 'feedback_compose_contact_hint':
@@ -433834,9 +434075,15 @@ extension on _StringsJa {
         return '一行で要約';
       case 'feedback_compose_title_missing':
         return 'タイトルを入力してください。';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -450026,6 +450273,8 @@ extension on _StringsKo {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -450065,9 +450314,15 @@ extension on _StringsKo {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -466302,6 +466557,8 @@ extension on _StringsNl {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -466341,9 +466598,15 @@ extension on _StringsNl {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -482652,6 +482915,8 @@ extension on _StringsPtBr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -482691,9 +482956,15 @@ extension on _StringsPtBr {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -499002,6 +499273,8 @@ extension on _StringsRu {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -499041,9 +499314,15 @@ extension on _StringsRu {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -515326,6 +515605,8 @@ extension on _StringsTh {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -515365,9 +515646,15 @@ extension on _StringsTh {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -531647,6 +531934,8 @@ extension on _StringsTr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -531686,9 +531975,15 @@ extension on _StringsTr {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -547975,6 +548270,8 @@ extension on _StringsVi {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -548014,9 +548311,15 @@ extension on _StringsVi {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -564219,6 +564522,8 @@ extension on _StringsZhCn {
         return '详细描述';
       case 'feedback_compose_body_hint':
         return '发生了什么、你期望的结果、如何复现';
+      case 'feedback_compose_cancel_video_compression':
+        return '取消压缩';
       case 'feedback_compose_contact_field':
         return '联系方式（可选）';
       case 'feedback_compose_contact_hint':
@@ -564256,9 +564561,14 @@ extension on _StringsZhCn {
         return '一句话概括';
       case 'feedback_compose_title_missing':
         return '请填写标题。';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 720p。';
+            '更清晰但文件更大；超过约 3 分钟的视频会改按 720p 压缩，以免超过 ${max}。';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) => '视频较长，1080p 会超过 ${max}，本次改按 720p 压缩。';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 ${resolution}。';
       case 'feedback_detail_add_shot':
         return '追加截图';
       case 'feedback_detail_attachments':
@@ -580363,6 +580673,8 @@ extension on _StringsZhHk {
         return '詳細描述';
       case 'feedback_compose_body_hint':
         return '發生了甚麼、你期望的結果、如何重現';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return '聯絡方式（可選）';
       case 'feedback_compose_contact_hint':
@@ -580401,9 +580713,15 @@ extension on _StringsZhHk {
         return '一句話概括';
       case 'feedback_compose_title_missing':
         return '請填寫標題。';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
