@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 137734 (8102 per locale)
+/// Strings: 137921 (8113 per locale)
 ///
-/// Built on 2026-10-16 at 14:52 UTC
+/// Built on 2026-10-16 at 16:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11654,6 +11654,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get home_panel_mode_hidden => 'Hide';
   String get home_panel_srs_hint =>
       'Auto shows it once you mine to Fushi review or have review cards';
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  String get srs_mining_field_required => 'Required';
+  String get card_target_srs_title => 'Send to Fushi review';
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  String get card_target_anki_title => 'Send to Anki';
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  String get card_target_current => 'Current';
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -31202,6 +31217,32 @@ class _StringsAr extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'يظهر تلقائيًا عند الإرسال إلى مراجعة Fushi أو وجود بطاقات مراجعة';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -51140,6 +51181,32 @@ class _StringsDe extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'Automatisch sichtbar, sobald du in die Fushi-Wiederholung minst oder Karten hast';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -71137,6 +71204,32 @@ class _StringsEs extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'Se muestra al minar a Repaso de Fushi o si ya tienes tarjetas';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -91215,6 +91308,32 @@ class _StringsFr extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'Affiché dès que vous minez vers Révision Fushi ou avez des cartes';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -110946,6 +111065,32 @@ class _StringsId extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'Otomatis tampil saat menambang ke Ulasan Fushi atau sudah ada kartu';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -130843,6 +130988,32 @@ class _StringsIt extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'Appare quando invii le carte al Ripasso Fushi o hai già carte';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -149740,6 +149911,32 @@ class _StringsJa extends _StringsEn {
   String get home_panel_mode_hidden => '非表示';
   @override
   String get home_panel_srs_hint => '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -168673,6 +168870,32 @@ class _StringsKo extends _StringsEn {
   String get home_panel_mode_hidden => '숨기기';
   @override
   String get home_panel_srs_hint => '자동: Fushi 복습으로 카드를 만들거나 복습 카드가 있으면 표시';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -188518,6 +188741,32 @@ class _StringsNl extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'Automatisch zichtbaar zodra je naar Fushi-herhaling minet of kaarten hebt';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -208432,6 +208681,32 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'Aparece ao minerar para a Revisão Fushi ou se já houver cartões';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -228291,6 +228566,32 @@ class _StringsRu extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'Авто: показывается, если карточки идут в повторение Fushi или они уже есть';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -247828,6 +248129,32 @@ class _StringsTh extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยังการทบทวน Fushi หรือมีการ์ดอยู่แล้ว';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -267569,6 +267896,32 @@ class _StringsTr extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'Fushi tekrarına kart eklediğinde veya kartın varsa otomatik görünür';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -287237,6 +287590,32 @@ class _StringsVi extends _StringsEn {
   @override
   String get home_panel_srs_hint =>
       'Tự động hiện khi tạo thẻ vào Ôn tập Fushi hoặc đã có thẻ';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 // Path: <root>
@@ -305221,6 +305600,30 @@ class _StringsZhCn extends _StringsEn {
   String get home_panel_mode_hidden => '隐藏';
   @override
   String get home_panel_srs_hint => '自动：制卡发往 Fushi 复习或已有复习卡时显示';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      '必填字段尚未映射：${fields}。现在制卡会得到空卡（第一个字段为空时直接拒绝制卡）。';
+  @override
+  String get srs_mining_field_required => '必填';
+  @override
+  String get card_target_srs_title => '发往 Fushi 复习';
+  @override
+  String get card_target_srs_hint => '内置间隔复习，无需安装 Anki';
+  @override
+  String get card_target_anki_title => '发往 Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid / AnkiConnect / AnkiWeb';
+  @override
+  String get card_target_current => '当前';
+  @override
+  String get card_target_anki_current_note => '当前发往 Anki，相关设置在下方「Anki」分组。';
+  @override
+  String get card_target_srs_enable => '开启 Fushi 复习';
+  @override
+  String get card_target_srs_enable_confirm =>
+      '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
+  @override
+  String get card_creation_section_content => '卡片内容';
 }
 
 // Path: <root>
@@ -323559,6 +323962,32 @@ class _StringsZhHk extends _StringsEn {
   String get home_panel_mode_hidden => '隱藏';
   @override
   String get home_panel_srs_hint => '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
+  @override
+  String get card_target_srs_title => 'Send to Fushi review';
+  @override
+  String get card_target_srs_hint =>
+      'Built-in spaced repetition, no Anki needed';
+  @override
+  String get card_target_anki_title => 'Send to Anki';
+  @override
+  String get card_target_anki_hint => 'AnkiDroid, AnkiConnect or AnkiWeb';
+  @override
+  String get card_target_current => 'Current';
+  @override
+  String get card_target_anki_current_note =>
+      'Cards currently go to Anki. Its settings are in the Anki group below.';
+  @override
+  String get card_target_srs_enable => 'Turn on Fushi review';
+  @override
+  String get card_target_srs_enable_confirm =>
+      'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+  @override
+  String get card_creation_section_content => 'Card content';
 }
 
 /// Flat map(s) containing all translations.
@@ -340370,6 +340799,29 @@ extension on _StringsEn {
         return 'Hide';
       case 'home_panel_srs_hint':
         return 'Auto shows it once you mine to Fushi review or have review cards';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -357176,6 +357628,29 @@ extension on _StringsAr {
         return 'إخفاء';
       case 'home_panel_srs_hint':
         return 'يظهر تلقائيًا عند الإرسال إلى مراجعة Fushi أو وجود بطاقات مراجعة';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -374058,6 +374533,29 @@ extension on _StringsDe {
         return 'Ausblenden';
       case 'home_panel_srs_hint':
         return 'Automatisch sichtbar, sobald du in die Fushi-Wiederholung minst oder Karten hast';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -390922,6 +391420,29 @@ extension on _StringsEs {
         return 'Ocultar';
       case 'home_panel_srs_hint':
         return 'Se muestra al minar a Repaso de Fushi o si ya tienes tarjetas';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -407804,6 +408325,29 @@ extension on _StringsFr {
         return 'Masquer';
       case 'home_panel_srs_hint':
         return 'Affiché dès que vous minez vers Révision Fushi ou avez des cartes';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -424630,6 +425174,29 @@ extension on _StringsId {
         return 'Sembunyikan';
       case 'home_panel_srs_hint':
         return 'Otomatis tampil saat menambang ke Ulasan Fushi atau sudah ada kartu';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -441492,6 +442059,29 @@ extension on _StringsIt {
         return 'Nascondi';
       case 'home_panel_srs_hint':
         return 'Appare quando invii le carte al Ripasso Fushi o hai già carte';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -458227,6 +458817,29 @@ extension on _StringsJa {
         return '非表示';
       case 'home_panel_srs_hint':
         return '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -474970,6 +475583,29 @@ extension on _StringsKo {
         return '숨기기';
       case 'home_panel_srs_hint':
         return '자동: Fushi 복습으로 카드를 만들거나 복습 카드가 있으면 표시';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -491827,6 +492463,29 @@ extension on _StringsNl {
         return 'Verbergen';
       case 'home_panel_srs_hint':
         return 'Automatisch zichtbaar zodra je naar Fushi-herhaling minet of kaarten hebt';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -508676,6 +509335,29 @@ extension on _StringsPtBr {
         return 'Ocultar';
       case 'home_panel_srs_hint':
         return 'Aparece ao minerar para a Revisão Fushi ou se já houver cartões';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -525530,6 +526212,29 @@ extension on _StringsRu {
         return 'Скрыть';
       case 'home_panel_srs_hint':
         return 'Авто: показывается, если карточки идут в повторение Fushi или они уже есть';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -542340,6 +543045,29 @@ extension on _StringsTh {
         return 'ซ่อน';
       case 'home_panel_srs_hint':
         return 'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยังการทบทวน Fushi หรือมีการ์ดอยู่แล้ว';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -559181,6 +559909,29 @@ extension on _StringsTr {
         return 'Gizle';
       case 'home_panel_srs_hint':
         return 'Fushi tekrarına kart eklediğinde veya kartın varsa otomatik görünür';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -576005,6 +576756,29 @@ extension on _StringsVi {
         return 'Ẩn';
       case 'home_panel_srs_hint':
         return 'Tự động hiện khi tạo thẻ vào Ôn tập Fushi hoặc đã có thẻ';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
@@ -592636,6 +593410,29 @@ extension on _StringsZhCn {
         return '隐藏';
       case 'home_panel_srs_hint':
         return '自动：制卡发往 Fushi 复习或已有复习卡时显示';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            '必填字段尚未映射：${fields}。现在制卡会得到空卡（第一个字段为空时直接拒绝制卡）。';
+      case 'srs_mining_field_required':
+        return '必填';
+      case 'card_target_srs_title':
+        return '发往 Fushi 复习';
+      case 'card_target_srs_hint':
+        return '内置间隔复习，无需安装 Anki';
+      case 'card_target_anki_title':
+        return '发往 Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid / AnkiConnect / AnkiWeb';
+      case 'card_target_current':
+        return '当前';
+      case 'card_target_anki_current_note':
+        return '当前发往 Anki，相关设置在下方「Anki」分组。';
+      case 'card_target_srs_enable':
+        return '开启 Fushi 复习';
+      case 'card_target_srs_enable_confirm':
+        return '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
+      case 'card_creation_section_content':
+        return '卡片内容';
       default:
         return null;
     }
@@ -609316,6 +610113,29 @@ extension on _StringsZhHk {
         return '隱藏';
       case 'home_panel_srs_hint':
         return '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
+      case 'card_target_srs_title':
+        return 'Send to Fushi review';
+      case 'card_target_srs_hint':
+        return 'Built-in spaced repetition, no Anki needed';
+      case 'card_target_anki_title':
+        return 'Send to Anki';
+      case 'card_target_anki_hint':
+        return 'AnkiDroid, AnkiConnect or AnkiWeb';
+      case 'card_target_current':
+        return 'Current';
+      case 'card_target_anki_current_note':
+        return 'Cards currently go to Anki. Its settings are in the Anki group below.';
+      case 'card_target_srs_enable':
+        return 'Turn on Fushi review';
+      case 'card_target_srs_enable_confirm':
+        return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
+      case 'card_creation_section_content':
+        return 'Card content';
       default:
         return null;
     }
