@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 137615 (8095 per locale)
+/// Strings: 137734 (8102 per locale)
 ///
-/// Built on 2026-10-16 at 14:50 UTC
+/// Built on 2026-10-16 at 14:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11646,6 +11646,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_finish_import_title => 'Bring your Anki decks';
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  String get home_srs_panel_start => 'Review';
+  String get home_srs_panel_done => 'Done for today';
+  String get settings_section_home_panels => 'Home panels';
+  String get home_panel_mode_auto => 'Auto';
+  String get home_panel_mode_shown => 'Show';
+  String get home_panel_mode_hidden => 'Hide';
+  String get home_panel_srs_hint =>
+      'Auto shows it once you mine to Fushi review or have review cards';
 }
 
 // Path: <root>
@@ -29970,7 +29978,7 @@ class _StringsAr extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'المراجعة';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -31179,6 +31187,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'مراجعة';
+  @override
+  String get home_srs_panel_done => 'انتهى اليوم';
+  @override
+  String get settings_section_home_panels => 'لوحات الصفحة الرئيسية';
+  @override
+  String get home_panel_mode_auto => 'تلقائي';
+  @override
+  String get home_panel_mode_shown => 'إظهار';
+  @override
+  String get home_panel_mode_hidden => 'إخفاء';
+  @override
+  String get home_panel_srs_hint =>
+      'يظهر تلقائيًا عند الإرسال إلى مراجعة Fushi أو وجود بطاقات مراجعة';
 }
 
 // Path: <root>
@@ -49893,7 +49916,7 @@ class _StringsDe extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'Wiederholen';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -51102,6 +51125,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'Lernen';
+  @override
+  String get home_srs_panel_done => 'Für heute fertig';
+  @override
+  String get settings_section_home_panels => 'Startseiten-Panels';
+  @override
+  String get home_panel_mode_auto => 'Automatisch';
+  @override
+  String get home_panel_mode_shown => 'Anzeigen';
+  @override
+  String get home_panel_mode_hidden => 'Ausblenden';
+  @override
+  String get home_panel_srs_hint =>
+      'Automatisch sichtbar, sobald du in die Fushi-Wiederholung minst oder Karten hast';
 }
 
 // Path: <root>
@@ -69875,7 +69913,7 @@ class _StringsEs extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'Repaso';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -71084,6 +71122,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'Repasar';
+  @override
+  String get home_srs_panel_done => 'Listo por hoy';
+  @override
+  String get settings_section_home_panels => 'Paneles de inicio';
+  @override
+  String get home_panel_mode_auto => 'Automático';
+  @override
+  String get home_panel_mode_shown => 'Mostrar';
+  @override
+  String get home_panel_mode_hidden => 'Ocultar';
+  @override
+  String get home_panel_srs_hint =>
+      'Se muestra al minar a Repaso de Fushi o si ya tienes tarjetas';
 }
 
 // Path: <root>
@@ -89938,7 +89991,7 @@ class _StringsFr extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'Révision';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -91147,6 +91200,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'Réviser';
+  @override
+  String get home_srs_panel_done => 'Terminé pour aujourd\'hui';
+  @override
+  String get settings_section_home_panels => 'Panneaux d\'accueil';
+  @override
+  String get home_panel_mode_auto => 'Automatique';
+  @override
+  String get home_panel_mode_shown => 'Afficher';
+  @override
+  String get home_panel_mode_hidden => 'Masquer';
+  @override
+  String get home_panel_srs_hint =>
+      'Affiché dès que vous minez vers Révision Fushi ou avez des cartes';
 }
 
 // Path: <root>
@@ -109654,7 +109722,7 @@ class _StringsId extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'Ulasan';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -110863,6 +110931,21 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'Ulas';
+  @override
+  String get home_srs_panel_done => 'Selesai untuk hari ini';
+  @override
+  String get settings_section_home_panels => 'Panel beranda';
+  @override
+  String get home_panel_mode_auto => 'Otomatis';
+  @override
+  String get home_panel_mode_shown => 'Tampilkan';
+  @override
+  String get home_panel_mode_hidden => 'Sembunyikan';
+  @override
+  String get home_panel_srs_hint =>
+      'Otomatis tampil saat menambang ke Ulasan Fushi atau sudah ada kartu';
 }
 
 // Path: <root>
@@ -129536,7 +129619,7 @@ class _StringsIt extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'Ripasso';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -130745,6 +130828,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'Ripassa';
+  @override
+  String get home_srs_panel_done => 'Finito per oggi';
+  @override
+  String get settings_section_home_panels => 'Pannelli della home';
+  @override
+  String get home_panel_mode_auto => 'Automatico';
+  @override
+  String get home_panel_mode_shown => 'Mostra';
+  @override
+  String get home_panel_mode_hidden => 'Nascondi';
+  @override
+  String get home_panel_srs_hint =>
+      'Appare quando invii le carte al Ripasso Fushi o hai già carte';
 }
 
 // Path: <root>
@@ -148419,7 +148517,7 @@ class _StringsJa extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       '旧 Hibiki アプリが書き出したデータは古すぎるため、このバージョンでは直接インポートできません。何も変更されておらず、書き出したファイルも残っています。移行手順：1. この Fushi をアンインストールします（Android では新しいバージョンの上に古いバージョンをインストールできません。新しく入れた Fushi にはまだデータがありませんが、すでにデータを追加している場合は先にバックアップしてください）。2. 完全なアップグレード経路を含むブリッジ版 Fushi v${version} をインストールします。3. その中で「Hibiki からインポート」を実行します。4. 最新バージョンに更新します。';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => '復習';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -149628,6 +149726,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => '復習する';
+  @override
+  String get home_srs_panel_done => '今日の分は完了';
+  @override
+  String get settings_section_home_panels => 'ホームのパネル';
+  @override
+  String get home_panel_mode_auto => '自動';
+  @override
+  String get home_panel_mode_shown => '表示';
+  @override
+  String get home_panel_mode_hidden => '非表示';
+  @override
+  String get home_panel_srs_hint => '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
 }
 
 // Path: <root>
@@ -167338,7 +167450,7 @@ class _StringsKo extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => '복습';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -168547,6 +168659,20 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => '복습 시작';
+  @override
+  String get home_srs_panel_done => '오늘 완료';
+  @override
+  String get settings_section_home_panels => '홈 패널';
+  @override
+  String get home_panel_mode_auto => '자동';
+  @override
+  String get home_panel_mode_shown => '표시';
+  @override
+  String get home_panel_mode_hidden => '숨기기';
+  @override
+  String get home_panel_srs_hint => '자동: Fushi 복습으로 카드를 만들거나 복습 카드가 있으면 표시';
 }
 
 // Path: <root>
@@ -187168,7 +187294,7 @@ class _StringsNl extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'Herhalen';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -188377,6 +188503,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'Herhalen';
+  @override
+  String get home_srs_panel_done => 'Klaar voor vandaag';
+  @override
+  String get settings_section_home_panels => 'Startpaginapanelen';
+  @override
+  String get home_panel_mode_auto => 'Automatisch';
+  @override
+  String get home_panel_mode_shown => 'Tonen';
+  @override
+  String get home_panel_mode_hidden => 'Verbergen';
+  @override
+  String get home_panel_srs_hint =>
+      'Automatisch zichtbaar zodra je naar Fushi-herhaling minet of kaarten hebt';
 }
 
 // Path: <root>
@@ -207067,7 +207208,7 @@ class _StringsPtBr extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'Revisão';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -208276,6 +208417,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'Revisar';
+  @override
+  String get home_srs_panel_done => 'Concluído por hoje';
+  @override
+  String get settings_section_home_panels => 'Painéis da tela inicial';
+  @override
+  String get home_panel_mode_auto => 'Automático';
+  @override
+  String get home_panel_mode_shown => 'Mostrar';
+  @override
+  String get home_panel_mode_hidden => 'Ocultar';
+  @override
+  String get home_panel_srs_hint =>
+      'Aparece ao minerar para a Revisão Fushi ou se já houver cartões';
 }
 
 // Path: <root>
@@ -226911,7 +227067,7 @@ class _StringsRu extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'Повторение';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -228120,6 +228276,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'Повторить';
+  @override
+  String get home_srs_panel_done => 'На сегодня всё';
+  @override
+  String get settings_section_home_panels => 'Панели главной';
+  @override
+  String get home_panel_mode_auto => 'Авто';
+  @override
+  String get home_panel_mode_shown => 'Показать';
+  @override
+  String get home_panel_mode_hidden => 'Скрыть';
+  @override
+  String get home_panel_srs_hint =>
+      'Авто: показывается, если карточки идут в повторение Fushi или они уже есть';
 }
 
 // Path: <root>
@@ -246433,7 +246604,7 @@ class _StringsTh extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'ทบทวน';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -247642,6 +247813,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'ทบทวน';
+  @override
+  String get home_srs_panel_done => 'วันนี้เสร็จแล้ว';
+  @override
+  String get settings_section_home_panels => 'แผงหน้าแรก';
+  @override
+  String get home_panel_mode_auto => 'อัตโนมัติ';
+  @override
+  String get home_panel_mode_shown => 'แสดง';
+  @override
+  String get home_panel_mode_hidden => 'ซ่อน';
+  @override
+  String get home_panel_srs_hint =>
+      'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยังการทบทวน Fushi หรือมีการ์ดอยู่แล้ว';
 }
 
 // Path: <root>
@@ -266159,7 +266345,7 @@ class _StringsTr extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'Tekrar';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -267368,6 +267554,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'Tekrar et';
+  @override
+  String get home_srs_panel_done => 'Bugünlük bitti';
+  @override
+  String get settings_section_home_panels => 'Ana sayfa panelleri';
+  @override
+  String get home_panel_mode_auto => 'Otomatik';
+  @override
+  String get home_panel_mode_shown => 'Göster';
+  @override
+  String get home_panel_mode_hidden => 'Gizle';
+  @override
+  String get home_panel_srs_hint =>
+      'Fushi tekrarına kart eklediğinde veya kartın varsa otomatik görünür';
 }
 
 // Path: <root>
@@ -285812,7 +286013,7 @@ class _StringsVi extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => 'Ôn tập';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -287021,6 +287222,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => 'Ôn tập';
+  @override
+  String get home_srs_panel_done => 'Đã xong hôm nay';
+  @override
+  String get settings_section_home_panels => 'Bảng trang chủ';
+  @override
+  String get home_panel_mode_auto => 'Tự động';
+  @override
+  String get home_panel_mode_shown => 'Hiện';
+  @override
+  String get home_panel_mode_hidden => 'Ẩn';
+  @override
+  String get home_panel_srs_hint =>
+      'Tự động hiện khi tạo thẻ vào Ôn tập Fushi hoặc đã có thẻ';
 }
 
 // Path: <root>
@@ -304991,6 +305207,20 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       '在「复习」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
+  @override
+  String get home_srs_panel_start => '开始复习';
+  @override
+  String get home_srs_panel_done => '今日已完成';
+  @override
+  String get settings_section_home_panels => '首页面板';
+  @override
+  String get home_panel_mode_auto => '自动';
+  @override
+  String get home_panel_mode_shown => '显示';
+  @override
+  String get home_panel_mode_hidden => '隐藏';
+  @override
+  String get home_panel_srs_hint => '自动：制卡发往 Fushi 复习或已有复习卡时显示';
 }
 
 // Path: <root>
@@ -322106,7 +322336,7 @@ class _StringsZhHk extends _StringsEn {
   String migration_import_legacy_message({required Object version}) =>
       '舊版 Hibiki 匯出的資料太舊，目前版本無法直接匯入。沒有任何資料被改動，匯出檔案也已保留。遷移步驟：1. 解除安裝目前的 Fushi——Android 不允許在新版本上直接安裝舊版本，而新裝的 Fushi 本來就是空資料庫（如果已經加入過資料，請先備份）。2. 安裝 Fushi v${version}（仍帶完整升級路徑的橋接版本）。3. 在其中執行「從 Hibiki 匯入」。4. 再更新到目前版本。';
   @override
-  String get nav_srs => 'Review';
+  String get nav_srs => '複習';
   @override
   String get srs_module_switch_hint =>
       'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
@@ -323315,6 +323545,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_finish_import_desc =>
       'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+  @override
+  String get home_srs_panel_start => '開始複習';
+  @override
+  String get home_srs_panel_done => '今日已完成';
+  @override
+  String get settings_section_home_panels => '首頁面板';
+  @override
+  String get home_panel_mode_auto => '自動';
+  @override
+  String get home_panel_mode_shown => '顯示';
+  @override
+  String get home_panel_mode_hidden => '隱藏';
+  @override
+  String get home_panel_srs_hint => '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
 }
 
 /// Flat map(s) containing all translations.
@@ -340112,6 +340356,20 @@ extension on _StringsEn {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'Review';
+      case 'home_srs_panel_done':
+        return 'Done for today';
+      case 'settings_section_home_panels':
+        return 'Home panels';
+      case 'home_panel_mode_auto':
+        return 'Auto';
+      case 'home_panel_mode_shown':
+        return 'Show';
+      case 'home_panel_mode_hidden':
+        return 'Hide';
+      case 'home_panel_srs_hint':
+        return 'Auto shows it once you mine to Fushi review or have review cards';
       default:
         return null;
     }
@@ -355816,7 +356074,7 @@ extension on _StringsAr {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'المراجعة';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -356904,6 +357162,20 @@ extension on _StringsAr {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'مراجعة';
+      case 'home_srs_panel_done':
+        return 'انتهى اليوم';
+      case 'settings_section_home_panels':
+        return 'لوحات الصفحة الرئيسية';
+      case 'home_panel_mode_auto':
+        return 'تلقائي';
+      case 'home_panel_mode_shown':
+        return 'إظهار';
+      case 'home_panel_mode_hidden':
+        return 'إخفاء';
+      case 'home_panel_srs_hint':
+        return 'يظهر تلقائيًا عند الإرسال إلى مراجعة Fushi أو وجود بطاقات مراجعة';
       default:
         return null;
     }
@@ -372684,7 +372956,7 @@ extension on _StringsDe {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'Wiederholen';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -373772,6 +374044,20 @@ extension on _StringsDe {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'Lernen';
+      case 'home_srs_panel_done':
+        return 'Für heute fertig';
+      case 'settings_section_home_panels':
+        return 'Startseiten-Panels';
+      case 'home_panel_mode_auto':
+        return 'Automatisch';
+      case 'home_panel_mode_shown':
+        return 'Anzeigen';
+      case 'home_panel_mode_hidden':
+        return 'Ausblenden';
+      case 'home_panel_srs_hint':
+        return 'Automatisch sichtbar, sobald du in die Fushi-Wiederholung minst oder Karten hast';
       default:
         return null;
     }
@@ -389534,7 +389820,7 @@ extension on _StringsEs {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'Repaso';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -390622,6 +390908,20 @@ extension on _StringsEs {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'Repasar';
+      case 'home_srs_panel_done':
+        return 'Listo por hoy';
+      case 'settings_section_home_panels':
+        return 'Paneles de inicio';
+      case 'home_panel_mode_auto':
+        return 'Automático';
+      case 'home_panel_mode_shown':
+        return 'Mostrar';
+      case 'home_panel_mode_hidden':
+        return 'Ocultar';
+      case 'home_panel_srs_hint':
+        return 'Se muestra al minar a Repaso de Fushi o si ya tienes tarjetas';
       default:
         return null;
     }
@@ -406402,7 +406702,7 @@ extension on _StringsFr {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'Révision';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -407490,6 +407790,20 @@ extension on _StringsFr {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'Réviser';
+      case 'home_srs_panel_done':
+        return 'Terminé pour aujourd\'hui';
+      case 'settings_section_home_panels':
+        return 'Panneaux d\'accueil';
+      case 'home_panel_mode_auto':
+        return 'Automatique';
+      case 'home_panel_mode_shown':
+        return 'Afficher';
+      case 'home_panel_mode_hidden':
+        return 'Masquer';
+      case 'home_panel_srs_hint':
+        return 'Affiché dès que vous minez vers Révision Fushi ou avez des cartes';
       default:
         return null;
     }
@@ -423214,7 +423528,7 @@ extension on _StringsId {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'Ulasan';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -424302,6 +424616,20 @@ extension on _StringsId {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'Ulas';
+      case 'home_srs_panel_done':
+        return 'Selesai untuk hari ini';
+      case 'settings_section_home_panels':
+        return 'Panel beranda';
+      case 'home_panel_mode_auto':
+        return 'Otomatis';
+      case 'home_panel_mode_shown':
+        return 'Tampilkan';
+      case 'home_panel_mode_hidden':
+        return 'Sembunyikan';
+      case 'home_panel_srs_hint':
+        return 'Otomatis tampil saat menambang ke Ulasan Fushi atau sudah ada kartu';
       default:
         return null;
     }
@@ -440062,7 +440390,7 @@ extension on _StringsIt {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'Ripasso';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -441150,6 +441478,20 @@ extension on _StringsIt {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'Ripassa';
+      case 'home_srs_panel_done':
+        return 'Finito per oggi';
+      case 'settings_section_home_panels':
+        return 'Pannelli della home';
+      case 'home_panel_mode_auto':
+        return 'Automatico';
+      case 'home_panel_mode_shown':
+        return 'Mostra';
+      case 'home_panel_mode_hidden':
+        return 'Nascondi';
+      case 'home_panel_srs_hint':
+        return 'Appare quando invii le carte al Ripasso Fushi o hai già carte';
       default:
         return null;
     }
@@ -456783,7 +457125,7 @@ extension on _StringsJa {
         return ({required Object version}) =>
             '旧 Hibiki アプリが書き出したデータは古すぎるため、このバージョンでは直接インポートできません。何も変更されておらず、書き出したファイルも残っています。移行手順：1. この Fushi をアンインストールします（Android では新しいバージョンの上に古いバージョンをインストールできません。新しく入れた Fushi にはまだデータがありませんが、すでにデータを追加している場合は先にバックアップしてください）。2. 完全なアップグレード経路を含むブリッジ版 Fushi v${version} をインストールします。3. その中で「Hibiki からインポート」を実行します。4. 最新バージョンに更新します。';
       case 'nav_srs':
-        return 'Review';
+        return '復習';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -457871,6 +458213,20 @@ extension on _StringsJa {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return '復習する';
+      case 'home_srs_panel_done':
+        return '今日の分は完了';
+      case 'settings_section_home_panels':
+        return 'ホームのパネル';
+      case 'home_panel_mode_auto':
+        return '自動';
+      case 'home_panel_mode_shown':
+        return '表示';
+      case 'home_panel_mode_hidden':
+        return '非表示';
+      case 'home_panel_srs_hint':
+        return '自動：Fushi 復習にカードを作成するか、復習カードがあると表示';
       default:
         return null;
     }
@@ -473512,7 +473868,7 @@ extension on _StringsKo {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return '복습';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -474600,6 +474956,20 @@ extension on _StringsKo {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return '복습 시작';
+      case 'home_srs_panel_done':
+        return '오늘 완료';
+      case 'settings_section_home_panels':
+        return '홈 패널';
+      case 'home_panel_mode_auto':
+        return '자동';
+      case 'home_panel_mode_shown':
+        return '표시';
+      case 'home_panel_mode_hidden':
+        return '숨기기';
+      case 'home_panel_srs_hint':
+        return '자동: Fushi 복습으로 카드를 만들거나 복습 카드가 있으면 표시';
       default:
         return null;
     }
@@ -490355,7 +490725,7 @@ extension on _StringsNl {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'Herhalen';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -491443,6 +491813,20 @@ extension on _StringsNl {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'Herhalen';
+      case 'home_srs_panel_done':
+        return 'Klaar voor vandaag';
+      case 'settings_section_home_panels':
+        return 'Startpaginapanelen';
+      case 'home_panel_mode_auto':
+        return 'Automatisch';
+      case 'home_panel_mode_shown':
+        return 'Tonen';
+      case 'home_panel_mode_hidden':
+        return 'Verbergen';
+      case 'home_panel_srs_hint':
+        return 'Automatisch zichtbaar zodra je naar Fushi-herhaling minet of kaarten hebt';
       default:
         return null;
     }
@@ -507190,7 +507574,7 @@ extension on _StringsPtBr {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'Revisão';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -508278,6 +508662,20 @@ extension on _StringsPtBr {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'Revisar';
+      case 'home_srs_panel_done':
+        return 'Concluído por hoje';
+      case 'settings_section_home_panels':
+        return 'Painéis da tela inicial';
+      case 'home_panel_mode_auto':
+        return 'Automático';
+      case 'home_panel_mode_shown':
+        return 'Mostrar';
+      case 'home_panel_mode_hidden':
+        return 'Ocultar';
+      case 'home_panel_srs_hint':
+        return 'Aparece ao minerar para a Revisão Fushi ou se já houver cartões';
       default:
         return null;
     }
@@ -524030,7 +524428,7 @@ extension on _StringsRu {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'Повторение';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -525118,6 +525516,20 @@ extension on _StringsRu {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'Повторить';
+      case 'home_srs_panel_done':
+        return 'На сегодня всё';
+      case 'settings_section_home_panels':
+        return 'Панели главной';
+      case 'home_panel_mode_auto':
+        return 'Авто';
+      case 'home_panel_mode_shown':
+        return 'Показать';
+      case 'home_panel_mode_hidden':
+        return 'Скрыть';
+      case 'home_panel_srs_hint':
+        return 'Авто: показывается, если карточки идут в повторение Fushi или они уже есть';
       default:
         return null;
     }
@@ -540826,7 +541238,7 @@ extension on _StringsTh {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'ทบทวน';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -541914,6 +542326,20 @@ extension on _StringsTh {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'ทบทวน';
+      case 'home_srs_panel_done':
+        return 'วันนี้เสร็จแล้ว';
+      case 'settings_section_home_panels':
+        return 'แผงหน้าแรก';
+      case 'home_panel_mode_auto':
+        return 'อัตโนมัติ';
+      case 'home_panel_mode_shown':
+        return 'แสดง';
+      case 'home_panel_mode_hidden':
+        return 'ซ่อน';
+      case 'home_panel_srs_hint':
+        return 'อัตโนมัติ: แสดงเมื่อสร้างการ์ดไปยังการทบทวน Fushi หรือมีการ์ดอยู่แล้ว';
       default:
         return null;
     }
@@ -557653,7 +558079,7 @@ extension on _StringsTr {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'Tekrar';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -558741,6 +559167,20 @@ extension on _StringsTr {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'Tekrar et';
+      case 'home_srs_panel_done':
+        return 'Bugünlük bitti';
+      case 'settings_section_home_panels':
+        return 'Ana sayfa panelleri';
+      case 'home_panel_mode_auto':
+        return 'Otomatik';
+      case 'home_panel_mode_shown':
+        return 'Göster';
+      case 'home_panel_mode_hidden':
+        return 'Gizle';
+      case 'home_panel_srs_hint':
+        return 'Fushi tekrarına kart eklediğinde veya kartın varsa otomatik görünür';
       default:
         return null;
     }
@@ -574463,7 +574903,7 @@ extension on _StringsVi {
         return ({required Object version}) =>
             'Data exported by the old Hibiki app is too old for this version to import directly. Nothing has been changed, and the exported files are kept. To migrate: 1. Uninstall this Fushi. Android will not install an older version over a newer one, and a freshly installed Fushi holds no data yet (if you have already added data, back it up first). 2. Install Fushi v${version}, the bridge release that still contains the full upgrade path. 3. Run "Import from Hibiki" in it. 4. Update to the current version.';
       case 'nav_srs':
-        return 'Review';
+        return 'Ôn tập';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -575551,6 +575991,20 @@ extension on _StringsVi {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return 'Ôn tập';
+      case 'home_srs_panel_done':
+        return 'Đã xong hôm nay';
+      case 'settings_section_home_panels':
+        return 'Bảng trang chủ';
+      case 'home_panel_mode_auto':
+        return 'Tự động';
+      case 'home_panel_mode_shown':
+        return 'Hiện';
+      case 'home_panel_mode_hidden':
+        return 'Ẩn';
+      case 'home_panel_srs_hint':
+        return 'Tự động hiện khi tạo thẻ vào Ôn tập Fushi hoặc đã có thẻ';
       default:
         return null;
     }
@@ -592168,6 +592622,20 @@ extension on _StringsZhCn {
         return '导入已有的 Anki 牌组';
       case 'onboarding_finish_import_desc':
         return '在「复习」页顶栏点「导入」，选择从 Anki 导出的 .apkg 或 .colpkg 文件。';
+      case 'home_srs_panel_start':
+        return '开始复习';
+      case 'home_srs_panel_done':
+        return '今日已完成';
+      case 'settings_section_home_panels':
+        return '首页面板';
+      case 'home_panel_mode_auto':
+        return '自动';
+      case 'home_panel_mode_shown':
+        return '显示';
+      case 'home_panel_mode_hidden':
+        return '隐藏';
+      case 'home_panel_srs_hint':
+        return '自动：制卡发往 Fushi 复习或已有复习卡时显示';
       default:
         return null;
     }
@@ -607746,7 +608214,7 @@ extension on _StringsZhHk {
         return ({required Object version}) =>
             '舊版 Hibiki 匯出的資料太舊，目前版本無法直接匯入。沒有任何資料被改動，匯出檔案也已保留。遷移步驟：1. 解除安裝目前的 Fushi——Android 不允許在新版本上直接安裝舊版本，而新裝的 Fushi 本來就是空資料庫（如果已經加入過資料，請先備份）。2. 安裝 Fushi v${version}（仍帶完整升級路徑的橋接版本）。3. 在其中執行「從 Hibiki 匯入」。4. 再更新到目前版本。';
       case 'nav_srs':
-        return 'Review';
+        return '複習';
       case 'srs_module_switch_hint':
         return 'Fushi\'s built-in spaced repetition: decks, FSRS-7 scheduling, review on any device';
       case 'srs_import':
@@ -608834,6 +609302,20 @@ extension on _StringsZhHk {
         return 'Bring your Anki decks';
       case 'onboarding_finish_import_desc':
         return 'On the Review page, tap Import in the top bar and pick an .apkg or .colpkg file exported from Anki.';
+      case 'home_srs_panel_start':
+        return '開始複習';
+      case 'home_srs_panel_done':
+        return '今日已完成';
+      case 'settings_section_home_panels':
+        return '首頁面板';
+      case 'home_panel_mode_auto':
+        return '自動';
+      case 'home_panel_mode_shown':
+        return '顯示';
+      case 'home_panel_mode_hidden':
+        return '隱藏';
+      case 'home_panel_srs_hint':
+        return '自動：製卡發往 Fushi 複習或已有複習卡時顯示';
       default:
         return null;
     }
