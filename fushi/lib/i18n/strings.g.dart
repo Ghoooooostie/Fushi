@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 137394 (8082 per locale)
+/// Strings: 137411 (8083 per locale)
 ///
-/// Built on 2026-10-16 at 09:22 UTC
+/// Built on 2026-10-16 at 11:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11573,7 +11573,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_label_all_definitions => 'All definitions';
   String get srs_card_label_frequency => 'Frequency';
   String get srs_card_label_source => 'Source';
-  String get srs_card_appearance_title => 'Card appearance';
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   String get srs_card_appearance_section_fonts => 'Fonts';
   String get srs_card_appearance_font_ja => 'Japanese font';
@@ -11625,6 +11624,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -31024,8 +31026,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -31124,6 +31124,11 @@ class _StringsAr extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -50913,8 +50918,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -51013,6 +51016,11 @@ class _StringsDe extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -70861,8 +70869,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -70961,6 +70967,11 @@ class _StringsEs extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -90890,8 +90901,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -90990,6 +90999,11 @@ class _StringsFr extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -110572,8 +110586,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -110672,6 +110684,11 @@ class _StringsId extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -130420,8 +130437,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -130520,6 +130535,11 @@ class _StringsIt extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -149268,8 +149288,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -149368,6 +149386,11 @@ class _StringsJa extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -168152,8 +168175,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -168252,6 +168273,11 @@ class _StringsKo extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -187948,8 +187974,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -188048,6 +188072,11 @@ class _StringsNl extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -207813,8 +207842,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -207913,6 +207940,11 @@ class _StringsPtBr extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -227623,8 +227655,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -227723,6 +227753,11 @@ class _StringsRu extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -247111,8 +247146,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -247211,6 +247244,11 @@ class _StringsTh extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -266803,8 +266841,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -266903,6 +266939,11 @@ class _StringsTr extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -286422,8 +286463,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -286522,6 +286561,11 @@ class _StringsVi extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 // Path: <root>
@@ -304363,8 +304407,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_label_source => '来源';
   @override
-  String get srs_card_appearance_title => '卡面外观';
-  @override
   String get srs_card_appearance_hint => '作用于「Fushi 卡片」笔记类型';
   @override
   String get srs_card_appearance_section_fonts => '字体';
@@ -304462,6 +304504,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_migrate_fushi_none => '没有可迁移的 Lapis 笔记';
   @override
   String get srs_migrate_fushi_not_lapis => '只能迁移 Lapis 笔记';
+  @override
+  String get srs_card_appearance_title => 'Fushi 卡片外观';
+  @override
+  String srs_card_edit_template({required Object name}) => '编辑 ${name} 模板';
 }
 
 // Path: <root>
@@ -322651,8 +322697,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_label_source => 'Source';
   @override
-  String get srs_card_appearance_title => 'Card appearance';
-  @override
   String get srs_card_appearance_hint => 'Applies to the Fushi Card note type';
   @override
   String get srs_card_appearance_section_fonts => 'Fonts';
@@ -322751,6 +322795,11 @@ class _StringsZhHk extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String get srs_card_appearance_title => 'Fushi Card appearance';
+  @override
+  String srs_card_edit_template({required Object name}) =>
+      'Edit ${name} template';
 }
 
 /// Flat map(s) containing all translations.
@@ -339423,8 +339472,6 @@ extension on _StringsEn {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -339522,6 +339569,10 @@ extension on _StringsEn {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -356189,8 +356240,6 @@ extension on _StringsAr {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -356288,6 +356337,10 @@ extension on _StringsAr {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -373031,8 +373084,6 @@ extension on _StringsDe {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -373130,6 +373181,10 @@ extension on _StringsDe {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -389855,8 +389910,6 @@ extension on _StringsEs {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -389954,6 +390007,10 @@ extension on _StringsEs {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -406697,8 +406754,6 @@ extension on _StringsFr {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -406796,6 +406851,10 @@ extension on _StringsFr {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -423483,8 +423542,6 @@ extension on _StringsId {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -423582,6 +423639,10 @@ extension on _StringsId {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -440305,8 +440366,6 @@ extension on _StringsIt {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -440404,6 +440463,10 @@ extension on _StringsIt {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -457000,8 +457063,6 @@ extension on _StringsJa {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -457099,6 +457160,10 @@ extension on _StringsJa {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -473703,8 +473768,6 @@ extension on _StringsKo {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -473802,6 +473865,10 @@ extension on _StringsKo {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -490520,8 +490587,6 @@ extension on _StringsNl {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -490619,6 +490684,10 @@ extension on _StringsNl {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -507329,8 +507398,6 @@ extension on _StringsPtBr {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -507428,6 +507495,10 @@ extension on _StringsPtBr {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -524143,8 +524214,6 @@ extension on _StringsRu {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -524242,6 +524311,10 @@ extension on _StringsRu {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -540913,8 +540986,6 @@ extension on _StringsTh {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -541012,6 +541083,10 @@ extension on _StringsTh {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -557714,8 +557789,6 @@ extension on _StringsTr {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -557813,6 +557886,10 @@ extension on _StringsTr {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -574498,8 +574575,6 @@ extension on _StringsVi {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -574597,6 +574672,10 @@ extension on _StringsVi {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
@@ -591089,8 +591168,6 @@ extension on _StringsZhCn {
         return '词频';
       case 'srs_card_label_source':
         return '来源';
-      case 'srs_card_appearance_title':
-        return '卡面外观';
       case 'srs_card_appearance_hint':
         return '作用于「Fushi 卡片」笔记类型';
       case 'srs_card_appearance_section_fonts':
@@ -591188,6 +591265,10 @@ extension on _StringsZhCn {
         return '没有可迁移的 Lapis 笔记';
       case 'srs_migrate_fushi_not_lapis':
         return '只能迁移 Lapis 笔记';
+      case 'srs_card_appearance_title':
+        return 'Fushi 卡片外观';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => '编辑 ${name} 模板';
       default:
         return null;
     }
@@ -607729,8 +607810,6 @@ extension on _StringsZhHk {
         return 'Frequency';
       case 'srs_card_label_source':
         return 'Source';
-      case 'srs_card_appearance_title':
-        return 'Card appearance';
       case 'srs_card_appearance_hint':
         return 'Applies to the Fushi Card note type';
       case 'srs_card_appearance_section_fonts':
@@ -607828,6 +607907,10 @@ extension on _StringsZhHk {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_card_appearance_title':
+        return 'Fushi Card appearance';
+      case 'srs_card_edit_template':
+        return ({required Object name}) => 'Edit ${name} template';
       default:
         return null;
     }
