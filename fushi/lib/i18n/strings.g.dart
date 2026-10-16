@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133586 (7858 per locale)
+/// Strings: 133756 (7868 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3116,12 +3116,31 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_backend_setup_title => 'Set up download backend';
   String get download_backend_unsupported_note =>
       'The built-in engine is not available on this platform. Downloads use external qBittorrent.';
+  String get download_batch_clear => 'Remove from list';
   String download_batch_delete_confirm({required Object n}) =>
       'Delete ${n} download task(s)?';
   String download_batch_done({required Object n}) => '${n} task(s) processed';
   String download_batch_failed({required Object n}) => '${n} failed';
   String download_batch_unsupported({required Object n}) =>
       '${n} skipped (not supported)';
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   String get download_clear_finished => 'Clear finished';
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
@@ -16265,6 +16284,8 @@ class _StringsAr extends _StringsEn {
   String get download_backend_unsupported_note =>
       'المحرك المدمج غير متاح على هذه المنصة. تستخدم التحميلات qBittorrent خارجي.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'حذف ${n} مهمة تنزيل؟';
   @override
@@ -16274,6 +16295,33 @@ class _StringsAr extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       'تم تخطي ${n} (غير مدعومة)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'مسح المنتهية';
   @override
@@ -35356,6 +35404,8 @@ class _StringsDe extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Die integrierte Engine ist auf dieser Plattform nicht verfügbar. Downloads verwenden externes qBittorrent.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       '${n} Download-Aufgabe(n) löschen?';
   @override
@@ -35366,6 +35416,33 @@ class _StringsDe extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} übersprungen (nicht unterstützt)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Abgeschlossene löschen';
   @override
@@ -54773,6 +54850,8 @@ class _StringsEs extends _StringsEn {
   String get download_backend_unsupported_note =>
       'El motor integrado no está disponible en esta plataforma. Las descargas usan qBittorrent externo.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       '¿Eliminar ${n} tarea(s) de descarga?';
   @override
@@ -54783,6 +54862,33 @@ class _StringsEs extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} omitida(s) (no compatible)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Limpiar finalizados';
   @override
@@ -74255,6 +74361,8 @@ class _StringsFr extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Le moteur intégré n\'est pas disponible sur cette plateforme. Les téléchargements utilisent qBittorrent externe.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Supprimer ${n} tâche(s) de téléchargement ?';
   @override
@@ -74264,6 +74372,33 @@ class _StringsFr extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} ignorée(s) (non prises en charge)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Effacer les terminés';
   @override
@@ -93701,6 +93836,8 @@ class _StringsId extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Mesin bawaan tidak tersedia di platform ini. Unduhan menggunakan qBittorrent eksternal.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Hapus ${n} tugas unduhan?';
   @override
@@ -93710,6 +93847,33 @@ class _StringsId extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} dilewati (tidak didukung)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Bersihkan yang selesai';
   @override
@@ -112933,6 +113097,8 @@ class _StringsIt extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Il motore integrato non è disponibile su questa piattaforma. I download usano qBittorrent esterno.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Eliminare ${n} attività di download?';
   @override
@@ -112942,6 +113108,33 @@ class _StringsIt extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} saltate (non supportate)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Cancella completati';
   @override
@@ -132068,6 +132261,8 @@ class _StringsJa extends _StringsEn {
   String get download_backend_unsupported_note =>
       '内蔵エンジンはこのプラットフォームでは利用できません。ダウンロードは外部のqBittorrentを使用します。';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'ダウンロードタスク ${n} 件を削除しますか？';
   @override
@@ -132077,6 +132272,33 @@ class _StringsJa extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} 件はサポート外のためスキップしました';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => '完了済みをクリア';
   @override
@@ -150405,6 +150627,8 @@ class _StringsKo extends _StringsEn {
   String get download_backend_unsupported_note =>
       '이 플랫폼에서는 내장 엔진을 사용할 수 없습니다. 외부 qBittorrent를 사용하여 다운로드합니다.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       '다운로드 작업 ${n}개를 삭제하시겠습니까?';
   @override
@@ -150414,6 +150638,33 @@ class _StringsKo extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n}개 건너뜀(지원되지 않음)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => '완료된 항목 지우기';
   @override
@@ -169008,6 +169259,8 @@ class _StringsNl extends _StringsEn {
   String get download_backend_unsupported_note =>
       'De ingebouwde engine is niet beschikbaar op dit platform. Downloads gebruiken externe qBittorrent.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       '${n} downloadtaak/-taken verwijderen?';
   @override
@@ -169017,6 +169270,33 @@ class _StringsNl extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} overgeslagen (niet ondersteund)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Voltooide wissen';
   @override
@@ -188327,6 +188607,8 @@ class _StringsPtBr extends _StringsEn {
   String get download_backend_unsupported_note =>
       'O motor integrado não está disponível nesta plataforma. Downloads usam qBittorrent externo.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Excluir ${n} tarefa(s) de download?';
   @override
@@ -188337,6 +188619,33 @@ class _StringsPtBr extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} ignorada(s) (não compatíveis)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Limpar concluídos';
   @override
@@ -207678,6 +207987,8 @@ class _StringsRu extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Встроенный движок недоступен на этой платформе. Загрузки используют внешний qBittorrent.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Удалить задач загрузки: ${n}?';
   @override
@@ -207687,6 +207998,33 @@ class _StringsRu extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       'Пропущено (не поддерживается): ${n}';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Очистить завершённые';
   @override
@@ -226927,6 +227265,8 @@ class _StringsTh extends _StringsEn {
   String get download_backend_unsupported_note =>
       'เอนจินในตัวไม่พร้อมใช้งานบนแพลตฟอร์มนี้ การดาวน์โหลดใช้ qBittorrent ภายนอก';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'ลบงานดาวน์โหลด ${n} งานหรือไม่?';
   @override
@@ -226936,6 +227276,33 @@ class _StringsTh extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       'ข้าม ${n} งาน (ไม่รองรับ)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'ล้างที่เสร็จแล้ว';
   @override
@@ -245972,6 +246339,8 @@ class _StringsTr extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Yerleşik motor bu platformda kullanılamıyor. İndirmeler harici qBittorrent kullanıyor.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       '${n} indirme görevi silinsin mi?';
   @override
@@ -245981,6 +246350,33 @@ class _StringsTr extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} atlandı (desteklenmiyor)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Tamamlananları temizle';
   @override
@@ -265158,6 +265554,8 @@ class _StringsVi extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Engine tích hợp không khả dụng trên nền tảng này. Tải xuống sử dụng qBittorrent bên ngoài.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Xóa ${n} tác vụ tải xuống?';
   @override
@@ -265167,6 +265565,33 @@ class _StringsVi extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       'Bỏ qua ${n} (không được hỗ trợ)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Xóa đã hoàn tất';
   @override
@@ -283865,6 +284290,8 @@ class _StringsZhCn extends _StringsEn {
   String get download_backend_unsupported_note =>
       '本平台无内置引擎，下载使用外接 qBittorrent。';
   @override
+  String get download_batch_clear => '从列表移除';
+  @override
   String download_batch_delete_confirm({required Object n}) => '删除 ${n} 个下载任务？';
   @override
   String download_batch_done({required Object n}) => '已处理 ${n} 项';
@@ -283872,6 +284299,33 @@ class _StringsZhCn extends _StringsEn {
   String download_batch_failed({required Object n}) => '${n} 项失败';
   @override
   String download_batch_unsupported({required Object n}) => '${n} 项不支持此操作';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      '清除 ${n} 个已完成的下载任务？不勾选下方选项时只移出列表，已下载的文件保留。';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '其中 ${n} 个无法在这里删除文件，勾选后也只会移出列表。';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '其中 ${n} 个只能连同文件一起删除，不勾选时保持不动。';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '其中 ${n} 个正在做种，删除文件会同时停止做种。';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '其中 ${n} 个不支持在这里清除，将保持不动。';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      '已清除 ${n} 项';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      '已删除 ${n} 项的文件';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} 项无法删除文件，仅清除记录';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} 项未处理';
   @override
   String get download_clear_finished => '清除已完成';
   @override
@@ -301433,6 +301887,8 @@ class _StringsZhHk extends _StringsEn {
   String get download_backend_unsupported_note =>
       '本平台無內置引擎，下載使用外接 qBittorrent。';
   @override
+  String get download_batch_clear => '從列表移除';
+  @override
   String download_batch_delete_confirm({required Object n}) => '刪除 ${n} 個下載任務？';
   @override
   String download_batch_done({required Object n}) => '已處理 ${n} 項';
@@ -301440,6 +301896,33 @@ class _StringsZhHk extends _StringsEn {
   String download_batch_failed({required Object n}) => '${n} 項失敗';
   @override
   String download_batch_unsupported({required Object n}) => '${n} 項不支持此操作';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      '清除 ${n} 個已完成的下載任務？不勾選下方選項時只移出列表，已下載的檔案保留。';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '其中 ${n} 個無法在這裡刪除檔案，勾選後也只會移出列表。';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '其中 ${n} 個只能連同檔案一起刪除，不勾選時保持不動。';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '其中 ${n} 個正在做種，刪除檔案會同時停止做種。';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '其中 ${n} 個不支持在這裡清除，將保持不動。';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      '已清除 ${n} 項';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      '已刪除 ${n} 項的檔案';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} 項無法刪除檔案，僅清除記錄';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} 項未處理';
   @override
   String get download_clear_finished => '清除已完成';
   @override
@@ -318728,6 +319211,8 @@ extension on _StringsEn {
         return 'Set up download backend';
       case 'download_backend_unsupported_note':
         return 'The built-in engine is not available on this platform. Downloads use external qBittorrent.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Delete ${n} download task(s)?';
       case 'download_batch_done':
@@ -318736,6 +319221,30 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} failed';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Clear finished';
       case 'download_detail_backend_offline':
@@ -335031,6 +335540,8 @@ extension on _StringsAr {
         return 'إعداد خلفية التحميل';
       case 'download_backend_unsupported_note':
         return 'المحرك المدمج غير متاح على هذه المنصة. تستخدم التحميلات qBittorrent خارجي.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'حذف ${n} مهمة تنزيل؟';
       case 'download_batch_done':
@@ -335039,6 +335550,30 @@ extension on _StringsAr {
         return ({required Object n}) => 'فشلت ${n}';
       case 'download_batch_unsupported':
         return ({required Object n}) => 'تم تخطي ${n} (غير مدعومة)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'مسح المنتهية';
       case 'download_detail_backend_offline':
@@ -351356,6 +351891,8 @@ extension on _StringsDe {
         return 'Download-Backend einrichten';
       case 'download_backend_unsupported_note':
         return 'Die integrierte Engine ist auf dieser Plattform nicht verfügbar. Downloads verwenden externes qBittorrent.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '${n} Download-Aufgabe(n) löschen?';
       case 'download_batch_done':
@@ -351364,6 +351901,30 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} fehlgeschlagen';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} übersprungen (nicht unterstützt)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Abgeschlossene löschen';
       case 'download_detail_backend_offline':
@@ -367718,6 +368279,8 @@ extension on _StringsEs {
         return 'Configurar el backend de descargas';
       case 'download_backend_unsupported_note':
         return 'El motor integrado no está disponible en esta plataforma. Las descargas usan qBittorrent externo.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '¿Eliminar ${n} tarea(s) de descarga?';
       case 'download_batch_done':
@@ -367726,6 +368289,30 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} fallida(s)';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} omitida(s) (no compatible)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Limpiar finalizados';
       case 'download_detail_backend_offline':
@@ -384083,6 +384670,8 @@ extension on _StringsFr {
         return 'Configurer le backend de téléchargement';
       case 'download_backend_unsupported_note':
         return 'Le moteur intégré n\'est pas disponible sur cette plateforme. Les téléchargements utilisent qBittorrent externe.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) =>
             'Supprimer ${n} tâche(s) de téléchargement ?';
@@ -384093,6 +384682,30 @@ extension on _StringsFr {
       case 'download_batch_unsupported':
         return ({required Object n}) =>
             '${n} ignorée(s) (non prises en charge)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Effacer les terminés';
       case 'download_detail_backend_offline':
@@ -400434,6 +401047,8 @@ extension on _StringsId {
         return 'Siapkan backend unduhan';
       case 'download_backend_unsupported_note':
         return 'Mesin bawaan tidak tersedia di platform ini. Unduhan menggunakan qBittorrent eksternal.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Hapus ${n} tugas unduhan?';
       case 'download_batch_done':
@@ -400442,6 +401057,30 @@ extension on _StringsId {
         return ({required Object n}) => '${n} gagal';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} dilewati (tidak didukung)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Bersihkan yang selesai';
       case 'download_detail_backend_offline':
@@ -416760,6 +417399,8 @@ extension on _StringsIt {
         return 'Configura il backend di download';
       case 'download_backend_unsupported_note':
         return 'Il motore integrato non è disponibile su questa piattaforma. I download usano qBittorrent esterno.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Eliminare ${n} attività di download?';
       case 'download_batch_done':
@@ -416768,6 +417409,30 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} non riuscite';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} saltate (non supportate)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Cancella completati';
       case 'download_detail_backend_offline':
@@ -433073,6 +433738,8 @@ extension on _StringsJa {
         return 'ダウンロードバックエンドを設定';
       case 'download_backend_unsupported_note':
         return '内蔵エンジンはこのプラットフォームでは利用できません。ダウンロードは外部のqBittorrentを使用します。';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'ダウンロードタスク ${n} 件を削除しますか？';
       case 'download_batch_done':
@@ -433081,6 +433748,30 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} 件が失敗しました';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} 件はサポート外のためスキップしました';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return '完了済みをクリア';
       case 'download_detail_backend_offline':
@@ -449300,6 +449991,8 @@ extension on _StringsKo {
         return '다운로드 백엔드 설정';
       case 'download_backend_unsupported_note':
         return '이 플랫폼에서는 내장 엔진을 사용할 수 없습니다. 외부 qBittorrent를 사용하여 다운로드합니다.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '다운로드 작업 ${n}개를 삭제하시겠습니까?';
       case 'download_batch_done':
@@ -449308,6 +450001,30 @@ extension on _StringsKo {
         return ({required Object n}) => '${n}개 실패';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n}개 건너뜀(지원되지 않음)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return '완료된 항목 지우기';
       case 'download_detail_backend_offline':
@@ -465569,6 +466286,8 @@ extension on _StringsNl {
         return 'Downloadbackend instellen';
       case 'download_backend_unsupported_note':
         return 'De ingebouwde engine is niet beschikbaar op dit platform. Downloads gebruiken externe qBittorrent.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '${n} downloadtaak/-taken verwijderen?';
       case 'download_batch_done':
@@ -465577,6 +466296,30 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} mislukt';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} overgeslagen (niet ondersteund)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Voltooide wissen';
       case 'download_detail_backend_offline':
@@ -481915,6 +482658,8 @@ extension on _StringsPtBr {
         return 'Configurar o backend de downloads';
       case 'download_backend_unsupported_note':
         return 'O motor integrado não está disponível nesta plataforma. Downloads usam qBittorrent externo.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Excluir ${n} tarefa(s) de download?';
       case 'download_batch_done':
@@ -481923,6 +482668,30 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} falharam';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} ignorada(s) (não compatíveis)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Limpar concluídos';
       case 'download_detail_backend_offline':
@@ -498260,6 +499029,8 @@ extension on _StringsRu {
         return 'Настройка бэкенда загрузок';
       case 'download_backend_unsupported_note':
         return 'Встроенный движок недоступен на этой платформе. Загрузки используют внешний qBittorrent.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Удалить задач загрузки: ${n}?';
       case 'download_batch_done':
@@ -498268,6 +499039,30 @@ extension on _StringsRu {
         return ({required Object n}) => 'Ошибок: ${n}';
       case 'download_batch_unsupported':
         return ({required Object n}) => 'Пропущено (не поддерживается): ${n}';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Очистить завершённые';
       case 'download_detail_backend_offline':
@@ -514580,6 +515375,8 @@ extension on _StringsTh {
         return 'ตั้งค่าแบ็กเอนด์ดาวน์โหลด';
       case 'download_backend_unsupported_note':
         return 'เอนจินในตัวไม่พร้อมใช้งานบนแพลตฟอร์มนี้ การดาวน์โหลดใช้ qBittorrent ภายนอก';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'ลบงานดาวน์โหลด ${n} งานหรือไม่?';
       case 'download_batch_done':
@@ -514588,6 +515385,30 @@ extension on _StringsTh {
         return ({required Object n}) => 'ล้มเหลว ${n} งาน';
       case 'download_batch_unsupported':
         return ({required Object n}) => 'ข้าม ${n} งาน (ไม่รองรับ)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'ล้างที่เสร็จแล้ว';
       case 'download_detail_backend_offline':
@@ -530897,6 +531718,8 @@ extension on _StringsTr {
         return 'İndirme arka ucunu ayarla';
       case 'download_backend_unsupported_note':
         return 'Yerleşik motor bu platformda kullanılamıyor. İndirmeler harici qBittorrent kullanıyor.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '${n} indirme görevi silinsin mi?';
       case 'download_batch_done':
@@ -530905,6 +531728,30 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} başarısız oldu';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} atlandı (desteklenmiyor)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Tamamlananları temizle';
       case 'download_detail_backend_offline':
@@ -547220,6 +548067,8 @@ extension on _StringsVi {
         return 'Thiết lập backend tải xuống';
       case 'download_backend_unsupported_note':
         return 'Engine tích hợp không khả dụng trên nền tảng này. Tải xuống sử dụng qBittorrent bên ngoài.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Xóa ${n} tác vụ tải xuống?';
       case 'download_batch_done':
@@ -547228,6 +548077,30 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} thất bại';
       case 'download_batch_unsupported':
         return ({required Object n}) => 'Bỏ qua ${n} (không được hỗ trợ)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Xóa đã hoàn tất';
       case 'download_detail_backend_offline':
@@ -563468,6 +564341,8 @@ extension on _StringsZhCn {
         return '配置下载后端';
       case 'download_backend_unsupported_note':
         return '本平台无内置引擎，下载使用外接 qBittorrent。';
+      case 'download_batch_clear':
+        return '从列表移除';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '删除 ${n} 个下载任务？';
       case 'download_batch_done':
@@ -563476,6 +564351,25 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 项失败';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} 项不支持此操作';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            '清除 ${n} 个已完成的下载任务？不勾选下方选项时只移出列表，已下载的文件保留。';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) => '其中 ${n} 个无法在这里删除文件，勾选后也只会移出列表。';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) => '其中 ${n} 个只能连同文件一起删除，不勾选时保持不动。';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) => '其中 ${n} 个正在做种，删除文件会同时停止做种。';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) => '其中 ${n} 个不支持在这里清除，将保持不动。';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => '已清除 ${n} 项';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => '已删除 ${n} 项的文件';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) => '${n} 项无法删除文件，仅清除记录';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} 项未处理';
       case 'download_clear_finished':
         return '清除已完成';
       case 'download_detail_backend_offline':
@@ -579607,6 +580501,8 @@ extension on _StringsZhHk {
         return '設定下載後端';
       case 'download_backend_unsupported_note':
         return '本平台無內置引擎，下載使用外接 qBittorrent。';
+      case 'download_batch_clear':
+        return '從列表移除';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '刪除 ${n} 個下載任務？';
       case 'download_batch_done':
@@ -579615,6 +580511,25 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} 項失敗';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} 項不支持此操作';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            '清除 ${n} 個已完成的下載任務？不勾選下方選項時只移出列表，已下載的檔案保留。';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) => '其中 ${n} 個無法在這裡刪除檔案，勾選後也只會移出列表。';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) => '其中 ${n} 個只能連同檔案一起刪除，不勾選時保持不動。';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) => '其中 ${n} 個正在做種，刪除檔案會同時停止做種。';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) => '其中 ${n} 個不支持在這裡清除，將保持不動。';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => '已清除 ${n} 項';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => '已刪除 ${n} 項的檔案';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) => '${n} 項無法刪除檔案，僅清除記錄';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} 項未處理';
       case 'download_clear_finished':
         return '清除已完成';
       case 'download_detail_backend_offline':
