@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133586 (7858 per locale)
+/// Strings: 133654 (7862 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6828,7 +6828,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Shared by manga and graphic subtitles: engine, local models and LLM correction';
   String get models_section_files => 'Model files';
   String get models_tts_card_fallback_section => 'Card audio fallback';
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  String get models_tts_fallback_voice => 'Fallback voice';
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   String get models_tts_title => 'Speech synthesis (TTS)';
@@ -22574,7 +22581,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -41820,7 +41838,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -61244,7 +61273,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -80745,7 +80785,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -100083,7 +100134,18 @@ class _StringsId extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -119375,7 +119437,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -138150,7 +138223,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary => '読み上げ音声、ローカル GPT-SoVITS、カード音声の代替';
   @override
@@ -156511,7 +156595,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -175417,7 +175512,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -194770,7 +194876,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -214096,7 +214213,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -233234,7 +233362,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -252359,7 +252498,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -271518,7 +271668,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -289671,7 +289832,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => '制卡发音兜底';
   @override
-  String get models_tts_engine => '引擎';
+  String get models_tts_fallback_off => '不使用 TTS 兜底';
+  @override
+  String get models_tts_fallback_online_notice => '词条文本会发送给该在线服务';
+  @override
+  String get models_tts_fallback_voice => '兜底声音';
+  @override
+  String get models_tts_fallback_voice_hint => '找不到单词音频时用哪个声音合成';
+  @override
+  String get models_tts_fallback_voice_missing => '所选声音已被删除';
   @override
   String get models_tts_summary => '朗读声音、本机 GPT-SoVITS 与制卡发音兜底';
   @override
@@ -307303,7 +307472,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => '引擎';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary => '朗讀聲音、本機 GPT-SoVITS 與製卡發音備援';
   @override
@@ -324150,8 +324330,16 @@ extension on _StringsEn {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -340447,8 +340635,16 @@ extension on _StringsAr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -356795,8 +356991,16 @@ extension on _StringsDe {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -373153,8 +373357,16 @@ extension on _StringsEs {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -389521,8 +389733,16 @@ extension on _StringsFr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -405858,8 +406078,16 @@ extension on _StringsId {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -422192,8 +422420,16 @@ extension on _StringsIt {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -438474,8 +438710,16 @@ extension on _StringsJa {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return '読み上げ音声、ローカル GPT-SoVITS、カード音声の代替';
       case 'models_tts_title':
@@ -454701,8 +454945,16 @@ extension on _StringsKo {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -471004,8 +471256,16 @@ extension on _StringsNl {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -487346,8 +487606,16 @@ extension on _StringsPtBr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -503692,8 +503960,16 @@ extension on _StringsRu {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -520003,8 +520279,16 @@ extension on _StringsTh {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -536327,8 +536611,16 @@ extension on _StringsTr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -552643,8 +552935,16 @@ extension on _StringsVi {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -568843,8 +569143,16 @@ extension on _StringsZhCn {
         return '模型文件';
       case 'models_tts_card_fallback_section':
         return '制卡发音兜底';
-      case 'models_tts_engine':
-        return '引擎';
+      case 'models_tts_fallback_off':
+        return '不使用 TTS 兜底';
+      case 'models_tts_fallback_online_notice':
+        return '词条文本会发送给该在线服务';
+      case 'models_tts_fallback_voice':
+        return '兜底声音';
+      case 'models_tts_fallback_voice_hint':
+        return '找不到单词音频时用哪个声音合成';
+      case 'models_tts_fallback_voice_missing':
+        return '所选声音已被删除';
       case 'models_tts_summary':
         return '朗读声音、本机 GPT-SoVITS 与制卡发音兜底';
       case 'models_tts_title':
@@ -584997,8 +585305,16 @@ extension on _StringsZhHk {
         return '模型檔案';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return '引擎';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return '朗讀聲音、本機 GPT-SoVITS 與製卡發音備援';
       case 'models_tts_title':
