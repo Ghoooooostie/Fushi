@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 137394 (8082 per locale)
+/// Strings: 137428 (8084 per locale)
 ///
-/// Built on 2026-10-16 at 09:22 UTC
+/// Built on 2026-10-16 at 11:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11625,6 +11625,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String srs_migrate_fushi_done({required Object n}) => 'Migrated ${n} notes';
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -31124,6 +31127,11 @@ class _StringsAr extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -51013,6 +51021,11 @@ class _StringsDe extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -70961,6 +70974,11 @@ class _StringsEs extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -90990,6 +91008,11 @@ class _StringsFr extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -110672,6 +110695,11 @@ class _StringsId extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -130520,6 +130548,11 @@ class _StringsIt extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -149368,6 +149401,11 @@ class _StringsJa extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -168252,6 +168290,11 @@ class _StringsKo extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -188048,6 +188091,11 @@ class _StringsNl extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -207913,6 +207961,11 @@ class _StringsPtBr extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -227723,6 +227776,11 @@ class _StringsRu extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -247211,6 +247269,11 @@ class _StringsTh extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -266903,6 +266966,11 @@ class _StringsTr extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -286522,6 +286590,11 @@ class _StringsVi extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 // Path: <root>
@@ -304462,6 +304535,11 @@ class _StringsZhCn extends _StringsEn {
   String get srs_migrate_fushi_none => '没有可迁移的 Lapis 笔记';
   @override
   String get srs_migrate_fushi_not_lapis => '只能迁移 Lapis 笔记';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      '必填字段尚未映射：${fields}。现在制卡会得到空卡（第一个字段为空时直接拒绝制卡）。';
+  @override
+  String get srs_mining_field_required => '必填';
 }
 
 // Path: <root>
@@ -322751,6 +322829,11 @@ class _StringsZhHk extends _StringsEn {
   String get srs_migrate_fushi_none => 'No Lapis notes to migrate';
   @override
   String get srs_migrate_fushi_not_lapis => 'Only Lapis notes can be migrated';
+  @override
+  String srs_mining_required_unmapped({required Object fields}) =>
+      'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+  @override
+  String get srs_mining_field_required => 'Required';
 }
 
 /// Flat map(s) containing all translations.
@@ -339522,6 +339605,11 @@ extension on _StringsEn {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -356288,6 +356376,11 @@ extension on _StringsAr {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -373130,6 +373223,11 @@ extension on _StringsDe {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -389954,6 +390052,11 @@ extension on _StringsEs {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -406796,6 +406899,11 @@ extension on _StringsFr {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -423582,6 +423690,11 @@ extension on _StringsId {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -440404,6 +440517,11 @@ extension on _StringsIt {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -457099,6 +457217,11 @@ extension on _StringsJa {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -473802,6 +473925,11 @@ extension on _StringsKo {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -490619,6 +490747,11 @@ extension on _StringsNl {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -507428,6 +507561,11 @@ extension on _StringsPtBr {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -524242,6 +524380,11 @@ extension on _StringsRu {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -541012,6 +541155,11 @@ extension on _StringsTh {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -557813,6 +557961,11 @@ extension on _StringsTr {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -574597,6 +574750,11 @@ extension on _StringsVi {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
@@ -591188,6 +591346,11 @@ extension on _StringsZhCn {
         return '没有可迁移的 Lapis 笔记';
       case 'srs_migrate_fushi_not_lapis':
         return '只能迁移 Lapis 笔记';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            '必填字段尚未映射：${fields}。现在制卡会得到空卡（第一个字段为空时直接拒绝制卡）。';
+      case 'srs_mining_field_required':
+        return '必填';
       default:
         return null;
     }
@@ -607828,6 +607991,11 @@ extension on _StringsZhHk {
         return 'No Lapis notes to migrate';
       case 'srs_migrate_fushi_not_lapis':
         return 'Only Lapis notes can be migrated';
+      case 'srs_mining_required_unmapped':
+        return ({required Object fields}) =>
+            'Required fields are not mapped: ${fields}. Cards mined now would be empty (a card whose first field is empty is refused).';
+      case 'srs_mining_field_required':
+        return 'Required';
       default:
         return null;
     }
