@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133586 (7858 per locale)
+/// Strings: 133722 (7866 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9565,6 +9565,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get updates_center_title => 'Updates';
   String get updates_check_now => 'Check for updates now';
   String get updates_checking => 'Checking...';
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  String get updates_extension_auto_updated => 'Updated automatically';
   String get updates_history_clear => 'Clear history';
   String get updates_history_clear_confirm_action => 'Clear';
   String updates_history_clear_confirm_body({required Object scope}) =>
@@ -9572,6 +9581,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get updates_history_clear_confirm_title => 'Clear update history?';
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  String get updates_kind_anime_extension => 'Video extensions';
   String get updates_kind_app_release => 'App releases';
   String get updates_kind_manga_chapter => 'Manga chapters';
   String get updates_kind_manga_extension => 'Manga extensions';
@@ -9587,6 +9597,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object count,
   }) => '${first} and ${count} more';
   String get updates_notification_view_all => 'View updates';
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   String get updates_notify_app_release => 'Notify about app releases';
   String get updates_notify_app_release_hint =>
       'Alert when a newer Fushi release is available.';
@@ -27355,6 +27369,20 @@ class _StringsAr extends _StringsEn {
   @override
   String get updates_checking => 'جارٍ التحقق...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'مسح السجل';
   @override
   String get updates_history_clear_confirm_action => 'مسح';
@@ -27366,6 +27394,8 @@ class _StringsAr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'تم مسح ${count} إدخال';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'إصدارات التطبيق';
   @override
@@ -27393,6 +27423,12 @@ class _StringsAr extends _StringsEn {
   }) => '${first} و${count} أخرى';
   @override
   String get updates_notification_view_all => 'عرض التحديثات';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'إشعار بإصدارات التطبيق';
   @override
@@ -46687,6 +46723,20 @@ class _StringsDe extends _StringsEn {
   @override
   String get updates_checking => 'Suche läuft...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Verlauf löschen';
   @override
   String get updates_history_clear_confirm_action => 'Löschen';
@@ -46698,6 +46748,8 @@ class _StringsDe extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} Einträge gelöscht';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'App-Releases';
   @override
@@ -46725,6 +46777,12 @@ class _StringsDe extends _StringsEn {
   }) => '${first} und ${count} weitere';
   @override
   String get updates_notification_view_all => 'Updates anzeigen';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Über App-Releases benachrichtigen';
   @override
@@ -66127,6 +66185,20 @@ class _StringsEs extends _StringsEn {
   @override
   String get updates_checking => 'Comprobando...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Borrar historial';
   @override
   String get updates_history_clear_confirm_action => 'Borrar';
@@ -66139,6 +66211,8 @@ class _StringsEs extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Se borraron ${count} entradas';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Versiones de la app';
   @override
@@ -66166,6 +66240,12 @@ class _StringsEs extends _StringsEn {
   }) => '${first} y ${count} más';
   @override
   String get updates_notification_view_all => 'Ver actualizaciones';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Avisar de versiones de la app';
   @override
@@ -85641,6 +85721,20 @@ class _StringsFr extends _StringsEn {
   @override
   String get updates_checking => 'Recherche en cours...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Effacer l\'historique';
   @override
   String get updates_history_clear_confirm_action => 'Effacer';
@@ -85653,6 +85747,8 @@ class _StringsFr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} entrées effacées';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Versions de l\'application';
   @override
@@ -85680,6 +85776,12 @@ class _StringsFr extends _StringsEn {
   }) => '${first} et ${count} autres';
   @override
   String get updates_notification_view_all => 'Voir les mises à jour';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release =>
       'Notifier des versions de l\'application';
@@ -104899,6 +105001,20 @@ class _StringsId extends _StringsEn {
   @override
   String get updates_checking => 'Memeriksa...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Hapus riwayat';
   @override
   String get updates_history_clear_confirm_action => 'Hapus';
@@ -104910,6 +105026,8 @@ class _StringsId extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} entri dihapus';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Rilis aplikasi';
   @override
@@ -104937,6 +105055,12 @@ class _StringsId extends _StringsEn {
   }) => '${first} dan ${count} lainnya';
   @override
   String get updates_notification_view_all => 'Lihat pembaruan';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Beri tahu tentang rilis aplikasi';
   @override
@@ -124236,6 +124360,20 @@ class _StringsIt extends _StringsEn {
   @override
   String get updates_checking => 'Controllo in corso...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Cancella cronologia';
   @override
   String get updates_history_clear_confirm_action => 'Cancella';
@@ -124248,6 +124386,8 @@ class _StringsIt extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cancellate ${count} voci';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Versioni dell\'app';
   @override
@@ -124275,6 +124415,12 @@ class _StringsIt extends _StringsEn {
   }) => '${first} e altri ${count}';
   @override
   String get updates_notification_view_all => 'Vedi aggiornamenti';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Notifica nuove versioni dell\'app';
   @override
@@ -142765,6 +142911,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get updates_checking => '確認中…';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => '履歴を消去';
   @override
   String get updates_history_clear_confirm_action => '消去';
@@ -142776,6 +142936,8 @@ class _StringsJa extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} 件を消去しました';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'アプリのリリース';
   @override
@@ -142803,6 +142965,12 @@ class _StringsJa extends _StringsEn {
   }) => '${first} ほか ${count} 件';
   @override
   String get updates_notification_view_all => 'アップデートを表示';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'アプリのリリースを通知';
   @override
@@ -161133,6 +161301,20 @@ class _StringsKo extends _StringsEn {
   @override
   String get updates_checking => '확인 중...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => '기록 지우기';
   @override
   String get updates_history_clear_confirm_action => '지우기';
@@ -161144,6 +161326,8 @@ class _StringsKo extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '항목 ${count}개를 지웠습니다';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => '앱 릴리스';
   @override
@@ -161171,6 +161355,12 @@ class _StringsKo extends _StringsEn {
   }) => '${first} 외 ${count}개';
   @override
   String get updates_notification_view_all => '업데이트 보기';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => '앱 릴리스 알림';
   @override
@@ -180273,6 +180463,20 @@ class _StringsNl extends _StringsEn {
   @override
   String get updates_checking => 'Controleren...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Geschiedenis wissen';
   @override
   String get updates_history_clear_confirm_action => 'Wissen';
@@ -180285,6 +180489,8 @@ class _StringsNl extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} items gewist';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'App-releases';
   @override
@@ -180312,6 +180518,12 @@ class _StringsNl extends _StringsEn {
   }) => '${first} en nog ${count}';
   @override
   String get updates_notification_view_all => 'Updates bekijken';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Melden bij app-releases';
   @override
@@ -199624,6 +199836,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get updates_checking => 'Verificando...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Limpar histórico';
   @override
   String get updates_history_clear_confirm_action => 'Limpar';
@@ -199636,6 +199862,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} entradas removidas';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Versões do app';
   @override
@@ -199663,6 +199891,12 @@ class _StringsPtBr extends _StringsEn {
   }) => '${first} e mais ${count}';
   @override
   String get updates_notification_view_all => 'Ver atualizações';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Notificar sobre versões do app';
   @override
@@ -218951,6 +219185,20 @@ class _StringsRu extends _StringsEn {
   @override
   String get updates_checking => 'Проверка...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Очистить историю';
   @override
   String get updates_history_clear_confirm_action => 'Очистить';
@@ -218963,6 +219211,8 @@ class _StringsRu extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Очищено записей: ${count}';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Выпуски приложения';
   @override
@@ -218990,6 +219240,12 @@ class _StringsRu extends _StringsEn {
   }) => '${first} и ещё ${count}';
   @override
   String get updates_notification_view_all => 'Посмотреть обновления';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Уведомлять о выпусках приложения';
   @override
@@ -238018,6 +238274,20 @@ class _StringsTh extends _StringsEn {
   @override
   String get updates_checking => 'กำลังตรวจสอบ...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'ล้างประวัติ';
   @override
   String get updates_history_clear_confirm_action => 'ล้าง';
@@ -238029,6 +238299,8 @@ class _StringsTh extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'ล้าง ${count} รายการแล้ว';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'รุ่นของแอป';
   @override
@@ -238056,6 +238328,12 @@ class _StringsTh extends _StringsEn {
   }) => '${first} และอีก ${count} รายการ';
   @override
   String get updates_notification_view_all => 'ดูอัปเดต';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'แจ้งเตือนรุ่นของแอป';
   @override
@@ -257181,6 +257459,20 @@ class _StringsTr extends _StringsEn {
   @override
   String get updates_checking => 'Kontrol ediliyor...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Geçmişi temizle';
   @override
   String get updates_history_clear_confirm_action => 'Temizle';
@@ -257193,6 +257485,8 @@ class _StringsTr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} girdi temizlendi';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Uygulama sürümleri';
   @override
@@ -257220,6 +257514,12 @@ class _StringsTr extends _StringsEn {
   }) => '${first} ve ${count} tane daha';
   @override
   String get updates_notification_view_all => 'Güncellemeleri görüntüle';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Uygulama sürümlerini bildir';
   @override
@@ -276316,6 +276616,20 @@ class _StringsVi extends _StringsEn {
   @override
   String get updates_checking => 'Đang kiểm tra...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Xóa lịch sử';
   @override
   String get updates_history_clear_confirm_action => 'Xóa';
@@ -276327,6 +276641,8 @@ class _StringsVi extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Đã xóa ${count} mục';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Bản phát hành ứng dụng';
   @override
@@ -276354,6 +276670,12 @@ class _StringsVi extends _StringsEn {
   }) => '${first} và ${count} mục khác';
   @override
   String get updates_notification_view_all => 'Xem cập nhật';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release =>
       'Thông báo về bản phát hành ứng dụng';
@@ -294077,6 +294399,18 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get updates_checking => '检查中…';
   @override
+  String get updates_extension_auto_update => '后台自动更新扩展';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      '需手动更新：${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      '启动时自动安装漫画与视频扩展的新版本（只装签名未变的）。本次已打开过在线源时，推迟到下次启动。';
+  @override
+  String get updates_extension_auto_update_reason_signature => '签名已变更';
+  @override
+  String get updates_extension_auto_updated => '已自动更新';
+  @override
   String get updates_history_clear => '清空记录';
   @override
   String get updates_history_clear_confirm_action => '清空';
@@ -294087,6 +294421,8 @@ class _StringsZhCn extends _StringsEn {
   String get updates_history_clear_confirm_title => '清空更新记录？';
   @override
   String updates_history_cleared({required Object count}) => '已清除 ${count} 条记录';
+  @override
+  String get updates_kind_anime_extension => '视频扩展';
   @override
   String get updates_kind_app_release => '应用新版';
   @override
@@ -294114,6 +294450,10 @@ class _StringsZhCn extends _StringsEn {
   }) => '${first} 等 ${count} 项';
   @override
   String get updates_notification_view_all => '查看更新';
+  @override
+  String get updates_notify_anime_extension => '视频扩展更新提醒';
+  @override
+  String get updates_notify_anime_extension_hint => '已装视频扩展在仓库里有更高版本时提醒。';
   @override
   String get updates_notify_app_release => '应用新版提醒';
   @override
@@ -311793,6 +312133,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get updates_checking => '檢查中…';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => '清空記錄';
   @override
   String get updates_history_clear_confirm_action => '清空';
@@ -311803,6 +312157,8 @@ class _StringsZhHk extends _StringsEn {
   String get updates_history_clear_confirm_title => '清空更新記錄？';
   @override
   String updates_history_cleared({required Object count}) => '已清除 ${count} 條記錄';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => '應用新版';
   @override
@@ -311830,6 +312186,12 @@ class _StringsZhHk extends _StringsEn {
   }) => '${first} 等 ${count} 項';
   @override
   String get updates_notification_view_all => '查看更新';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => '應用新版提醒';
   @override
@@ -328348,6 +328710,16 @@ extension on _StringsEn {
         return 'Check for updates now';
       case 'updates_checking':
         return 'Checking...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_action':
@@ -328359,6 +328731,8 @@ extension on _StringsEn {
         return 'Clear update history?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'App releases';
       case 'updates_kind_manga_chapter':
@@ -328384,6 +328758,10 @@ extension on _StringsEn {
             '${first} and ${count} more';
       case 'updates_notification_view_all':
         return 'View updates';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Notify about app releases';
       case 'updates_notify_app_release_hint':
@@ -344642,6 +345020,16 @@ extension on _StringsAr {
         return 'التحقق من التحديثات الآن';
       case 'updates_checking':
         return 'جارٍ التحقق...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'مسح السجل';
       case 'updates_history_clear_confirm_action':
@@ -344653,6 +345041,8 @@ extension on _StringsAr {
         return 'مسح سجل التحديثات؟';
       case 'updates_history_cleared':
         return ({required Object count}) => 'تم مسح ${count} إدخال';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'إصدارات التطبيق';
       case 'updates_kind_manga_chapter':
@@ -344678,6 +345068,10 @@ extension on _StringsAr {
             '${first} و${count} أخرى';
       case 'updates_notification_view_all':
         return 'عرض التحديثات';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'إشعار بإصدارات التطبيق';
       case 'updates_notify_app_release_hint':
@@ -361007,6 +361401,16 @@ extension on _StringsDe {
         return 'Jetzt nach Updates suchen';
       case 'updates_checking':
         return 'Suche läuft...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Verlauf löschen';
       case 'updates_history_clear_confirm_action':
@@ -361018,6 +361422,8 @@ extension on _StringsDe {
         return 'Update-Verlauf löschen?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} Einträge gelöscht';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'App-Releases';
       case 'updates_kind_manga_chapter':
@@ -361043,6 +361449,10 @@ extension on _StringsDe {
             '${first} und ${count} weitere';
       case 'updates_notification_view_all':
         return 'Updates anzeigen';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Über App-Releases benachrichtigen';
       case 'updates_notify_app_release_hint':
@@ -377363,6 +377773,16 @@ extension on _StringsEs {
         return 'Buscar actualizaciones ahora';
       case 'updates_checking':
         return 'Comprobando...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Borrar historial';
       case 'updates_history_clear_confirm_action':
@@ -377374,6 +377794,8 @@ extension on _StringsEs {
         return '¿Borrar el historial de actualizaciones?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Se borraron ${count} entradas';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Versiones de la app';
       case 'updates_kind_manga_chapter':
@@ -377399,6 +377821,10 @@ extension on _StringsEs {
             '${first} y ${count} más';
       case 'updates_notification_view_all':
         return 'Ver actualizaciones';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Avisar de versiones de la app';
       case 'updates_notify_app_release_hint':
@@ -393733,6 +394159,16 @@ extension on _StringsFr {
         return 'Rechercher les mises à jour maintenant';
       case 'updates_checking':
         return 'Recherche en cours...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Effacer l\'historique';
       case 'updates_history_clear_confirm_action':
@@ -393744,6 +394180,8 @@ extension on _StringsFr {
         return 'Effacer l\'historique des mises à jour ?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} entrées effacées';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Versions de l\'application';
       case 'updates_kind_manga_chapter':
@@ -393769,6 +394207,10 @@ extension on _StringsFr {
             '${first} et ${count} autres';
       case 'updates_notification_view_all':
         return 'Voir les mises à jour';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Notifier des versions de l\'application';
       case 'updates_notify_app_release_hint':
@@ -410056,6 +410498,16 @@ extension on _StringsId {
         return 'Periksa pembaruan sekarang';
       case 'updates_checking':
         return 'Memeriksa...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Hapus riwayat';
       case 'updates_history_clear_confirm_action':
@@ -410067,6 +410519,8 @@ extension on _StringsId {
         return 'Hapus riwayat pembaruan?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} entri dihapus';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Rilis aplikasi';
       case 'updates_kind_manga_chapter':
@@ -410092,6 +410546,10 @@ extension on _StringsId {
             '${first} dan ${count} lainnya';
       case 'updates_notification_view_all':
         return 'Lihat pembaruan';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Beri tahu tentang rilis aplikasi';
       case 'updates_notify_app_release_hint':
@@ -426403,6 +426861,16 @@ extension on _StringsIt {
         return 'Cerca aggiornamenti ora';
       case 'updates_checking':
         return 'Controllo in corso...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Cancella cronologia';
       case 'updates_history_clear_confirm_action':
@@ -426414,6 +426882,8 @@ extension on _StringsIt {
         return 'Cancellare la cronologia degli aggiornamenti?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cancellate ${count} voci';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Versioni dell\'app';
       case 'updates_kind_manga_chapter':
@@ -426439,6 +426909,10 @@ extension on _StringsIt {
             '${first} e altri ${count}';
       case 'updates_notification_view_all':
         return 'Vedi aggiornamenti';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Notifica nuove versioni dell\'app';
       case 'updates_notify_app_release_hint':
@@ -442650,6 +443124,16 @@ extension on _StringsJa {
         return '今すぐアップデートを確認';
       case 'updates_checking':
         return '確認中…';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return '履歴を消去';
       case 'updates_history_clear_confirm_action':
@@ -442661,6 +443145,8 @@ extension on _StringsJa {
         return '更新履歴を消去しますか？';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} 件を消去しました';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'アプリのリリース';
       case 'updates_kind_manga_chapter':
@@ -442686,6 +443172,10 @@ extension on _StringsJa {
             '${first} ほか ${count} 件';
       case 'updates_notification_view_all':
         return 'アップデートを表示';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'アプリのリリースを通知';
       case 'updates_notify_app_release_hint':
@@ -458881,6 +459371,16 @@ extension on _StringsKo {
         return '지금 업데이트 확인';
       case 'updates_checking':
         return '확인 중...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return '기록 지우기';
       case 'updates_history_clear_confirm_action':
@@ -458892,6 +459392,8 @@ extension on _StringsKo {
         return '업데이트 기록을 지우시겠습니까?';
       case 'updates_history_cleared':
         return ({required Object count}) => '항목 ${count}개를 지웠습니다';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return '앱 릴리스';
       case 'updates_kind_manga_chapter':
@@ -458917,6 +459419,10 @@ extension on _StringsKo {
             '${first} 외 ${count}개';
       case 'updates_notification_view_all':
         return '업데이트 보기';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return '앱 릴리스 알림';
       case 'updates_notify_app_release_hint':
@@ -475207,6 +475713,16 @@ extension on _StringsNl {
         return 'Nu op updates controleren';
       case 'updates_checking':
         return 'Controleren...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Geschiedenis wissen';
       case 'updates_history_clear_confirm_action':
@@ -475218,6 +475734,8 @@ extension on _StringsNl {
         return 'Updategeschiedenis wissen?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} items gewist';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'App-releases';
       case 'updates_kind_manga_chapter':
@@ -475243,6 +475761,10 @@ extension on _StringsNl {
             '${first} en nog ${count}';
       case 'updates_notification_view_all':
         return 'Updates bekijken';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Melden bij app-releases';
       case 'updates_notify_app_release_hint':
@@ -491547,6 +492069,16 @@ extension on _StringsPtBr {
         return 'Verificar atualizações agora';
       case 'updates_checking':
         return 'Verificando...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Limpar histórico';
       case 'updates_history_clear_confirm_action':
@@ -491558,6 +492090,8 @@ extension on _StringsPtBr {
         return 'Limpar histórico de atualizações?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} entradas removidas';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Versões do app';
       case 'updates_kind_manga_chapter':
@@ -491583,6 +492117,10 @@ extension on _StringsPtBr {
             '${first} e mais ${count}';
       case 'updates_notification_view_all':
         return 'Ver atualizações';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Notificar sobre versões do app';
       case 'updates_notify_app_release_hint':
@@ -507894,6 +508432,16 @@ extension on _StringsRu {
         return 'Проверить обновления сейчас';
       case 'updates_checking':
         return 'Проверка...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Очистить историю';
       case 'updates_history_clear_confirm_action':
@@ -507905,6 +508453,8 @@ extension on _StringsRu {
         return 'Очистить историю обновлений?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Очищено записей: ${count}';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Выпуски приложения';
       case 'updates_kind_manga_chapter':
@@ -507930,6 +508480,10 @@ extension on _StringsRu {
             '${first} и ещё ${count}';
       case 'updates_notification_view_all':
         return 'Посмотреть обновления';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Уведомлять о выпусках приложения';
       case 'updates_notify_app_release_hint':
@@ -524198,6 +524752,16 @@ extension on _StringsTh {
         return 'ตรวจหาอัปเดตตอนนี้';
       case 'updates_checking':
         return 'กำลังตรวจสอบ...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'ล้างประวัติ';
       case 'updates_history_clear_confirm_action':
@@ -524209,6 +524773,8 @@ extension on _StringsTh {
         return 'ล้างประวัติอัปเดตหรือไม่?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'ล้าง ${count} รายการแล้ว';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'รุ่นของแอป';
       case 'updates_kind_manga_chapter':
@@ -524234,6 +524800,10 @@ extension on _StringsTh {
             '${first} และอีก ${count} รายการ';
       case 'updates_notification_view_all':
         return 'ดูอัปเดต';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'แจ้งเตือนรุ่นของแอป';
       case 'updates_notify_app_release_hint':
@@ -540524,6 +541094,16 @@ extension on _StringsTr {
         return 'Güncellemeleri şimdi kontrol et';
       case 'updates_checking':
         return 'Kontrol ediliyor...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Geçmişi temizle';
       case 'updates_history_clear_confirm_action':
@@ -540535,6 +541115,8 @@ extension on _StringsTr {
         return 'Güncelleme geçmişi temizlensin mi?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} girdi temizlendi';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Uygulama sürümleri';
       case 'updates_kind_manga_chapter':
@@ -540560,6 +541142,10 @@ extension on _StringsTr {
             '${first} ve ${count} tane daha';
       case 'updates_notification_view_all':
         return 'Güncellemeleri görüntüle';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Uygulama sürümlerini bildir';
       case 'updates_notify_app_release_hint':
@@ -556844,6 +557430,16 @@ extension on _StringsVi {
         return 'Kiểm tra cập nhật ngay';
       case 'updates_checking':
         return 'Đang kiểm tra...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Xóa lịch sử';
       case 'updates_history_clear_confirm_action':
@@ -556855,6 +557451,8 @@ extension on _StringsVi {
         return 'Xóa lịch sử cập nhật?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Đã xóa ${count} mục';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Bản phát hành ứng dụng';
       case 'updates_kind_manga_chapter':
@@ -556880,6 +557478,10 @@ extension on _StringsVi {
             '${first} và ${count} mục khác';
       case 'updates_notification_view_all':
         return 'Xem cập nhật';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Thông báo về bản phát hành ứng dụng';
       case 'updates_notify_app_release_hint':
@@ -572999,6 +573601,16 @@ extension on _StringsZhCn {
         return '立即检查更新';
       case 'updates_checking':
         return '检查中…';
+      case 'updates_extension_auto_update':
+        return '后台自动更新扩展';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => '需手动更新：${reason}';
+      case 'updates_extension_auto_update_hint':
+        return '启动时自动安装漫画与视频扩展的新版本（只装签名未变的）。本次已打开过在线源时，推迟到下次启动。';
+      case 'updates_extension_auto_update_reason_signature':
+        return '签名已变更';
+      case 'updates_extension_auto_updated':
+        return '已自动更新';
       case 'updates_history_clear':
         return '清空记录';
       case 'updates_history_clear_confirm_action':
@@ -573010,6 +573622,8 @@ extension on _StringsZhCn {
         return '清空更新记录？';
       case 'updates_history_cleared':
         return ({required Object count}) => '已清除 ${count} 条记录';
+      case 'updates_kind_anime_extension':
+        return '视频扩展';
       case 'updates_kind_app_release':
         return '应用新版';
       case 'updates_kind_manga_chapter':
@@ -573035,6 +573649,10 @@ extension on _StringsZhCn {
             '${first} 等 ${count} 项';
       case 'updates_notification_view_all':
         return '查看更新';
+      case 'updates_notify_anime_extension':
+        return '视频扩展更新提醒';
+      case 'updates_notify_anime_extension_hint':
+        return '已装视频扩展在仓库里有更高版本时提醒。';
       case 'updates_notify_app_release':
         return '应用新版提醒';
       case 'updates_notify_app_release_hint':
@@ -589167,6 +589785,16 @@ extension on _StringsZhHk {
         return '立即檢查更新';
       case 'updates_checking':
         return '檢查中…';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return '清空記錄';
       case 'updates_history_clear_confirm_action':
@@ -589178,6 +589806,8 @@ extension on _StringsZhHk {
         return '清空更新記錄？';
       case 'updates_history_cleared':
         return ({required Object count}) => '已清除 ${count} 條記錄';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return '應用新版';
       case 'updates_kind_manga_chapter':
@@ -589203,6 +589833,10 @@ extension on _StringsZhHk {
             '${first} 等 ${count} 項';
       case 'updates_notification_view_all':
         return '查看更新';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return '應用新版提醒';
       case 'updates_notify_app_release_hint':
