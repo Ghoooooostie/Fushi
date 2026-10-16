@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 137411 (8083 per locale)
+/// Strings: 137428 (8084 per locale)
 ///
-/// Built on 2026-10-16 at 11:06 UTC
+/// Built on 2026-10-16 at 11:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11627,6 +11627,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_title => 'Fushi Card appearance';
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -31129,6 +31130,8 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -51021,6 +51024,8 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -70972,6 +70977,8 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -91004,6 +91011,8 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -110689,6 +110698,8 @@ class _StringsId extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -130540,6 +130551,8 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -149391,6 +149404,8 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => '「Hard」と「Easy」ボタンを隠す';
 }
 
 // Path: <root>
@@ -168278,6 +168293,8 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -188077,6 +188094,8 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -207945,6 +207964,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -227758,6 +227779,8 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -247249,6 +247272,8 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -266944,6 +266969,8 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -286566,6 +286593,8 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 // Path: <root>
@@ -304508,6 +304537,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_card_appearance_title => 'Fushi 卡片外观';
   @override
   String srs_card_edit_template({required Object name}) => '编辑 ${name} 模板';
+  @override
+  String get srs_review_hide_hard_easy => '隐藏「困难」和「简单」按钮';
 }
 
 // Path: <root>
@@ -322800,6 +322831,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_card_edit_template({required Object name}) =>
       'Edit ${name} template';
+  @override
+  String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
 }
 
 /// Flat map(s) containing all translations.
@@ -339573,6 +339606,8 @@ extension on _StringsEn {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -356341,6 +356376,8 @@ extension on _StringsAr {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -373185,6 +373222,8 @@ extension on _StringsDe {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -390011,6 +390050,8 @@ extension on _StringsEs {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -406855,6 +406896,8 @@ extension on _StringsFr {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -423643,6 +423686,8 @@ extension on _StringsId {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -440467,6 +440512,8 @@ extension on _StringsIt {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -457164,6 +457211,8 @@ extension on _StringsJa {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return '「Hard」と「Easy」ボタンを隠す';
       default:
         return null;
     }
@@ -473869,6 +473918,8 @@ extension on _StringsKo {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -490688,6 +490739,8 @@ extension on _StringsNl {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -507499,6 +507552,8 @@ extension on _StringsPtBr {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -524315,6 +524370,8 @@ extension on _StringsRu {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -541087,6 +541144,8 @@ extension on _StringsTh {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -557890,6 +557949,8 @@ extension on _StringsTr {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -574676,6 +574737,8 @@ extension on _StringsVi {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
@@ -591269,6 +591332,8 @@ extension on _StringsZhCn {
         return 'Fushi 卡片外观';
       case 'srs_card_edit_template':
         return ({required Object name}) => '编辑 ${name} 模板';
+      case 'srs_review_hide_hard_easy':
+        return '隐藏「困难」和「简单」按钮';
       default:
         return null;
     }
@@ -607911,6 +607976,8 @@ extension on _StringsZhHk {
         return 'Fushi Card appearance';
       case 'srs_card_edit_template':
         return ({required Object name}) => 'Edit ${name} template';
+      case 'srs_review_hide_hard_easy':
+        return 'Hide ‘Hard’ and ‘Easy’ buttons';
       default:
         return null;
     }
