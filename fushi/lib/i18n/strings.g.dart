@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132158 (7774 per locale)
+/// Strings: 132226 (7778 per locale)
 ///
-/// Built on 2026-10-15 at 03:29 UTC
+/// Built on 2026-10-15 at 05:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6139,7 +6139,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get wheel_page_turn_interval => 'Mouse wheel page-turn interval';
   String get word_favorite_added => 'Word saved to favorites';
   String get word_favorite_removed => 'Word removed from favorites';
-  String get fushi_api_key => 'Fushi API key (optional)';
+  String get fushi_api_key => 'Fushi API key';
   String get fushi_api_server => 'Fushi API server';
   String get fushi_api_server_hint =>
       'Let the browser extension and yomitan-api-compatible clients query Fushi\'s dictionaries (port 19633)';
@@ -11166,7 +11166,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object n,
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
   String get srs_export_done => 'Exported';
@@ -11232,6 +11232,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_srs => 'Review';
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -21555,7 +21562,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get word_favorite_removed => 'تمت إزالة الكلمة من المفضلة';
   @override
-  String get fushi_api_key => 'مفتاح Fushi API (اختياري)';
+  String get fushi_api_key => 'مفتاح Fushi API';
   @override
   String get fushi_api_server => 'خادم Fushi API';
   @override
@@ -29929,7 +29936,7 @@ class _StringsAr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -30030,6 +30037,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -40599,7 +40617,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get word_favorite_removed => 'Wort aus Favoriten entfernt';
   @override
-  String get fushi_api_key => 'Fushi-API-Schlüssel (optional)';
+  String get fushi_api_key => 'Fushi-API-Schlüssel';
   @override
   String get fushi_api_server => 'Fushi-API-Server';
   @override
@@ -49117,7 +49135,7 @@ class _StringsDe extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -49218,6 +49236,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -59841,7 +59870,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get word_favorite_removed => 'Palabra eliminada de favoritos';
   @override
-  String get fushi_api_key => 'Clave de Fushi API (opcional)';
+  String get fushi_api_key => 'Clave de Fushi API';
   @override
   String get fushi_api_server => 'Servidor Fushi API';
   @override
@@ -68364,7 +68393,7 @@ class _StringsEs extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -68465,6 +68494,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -79131,7 +79171,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Mot retiré des favoris';
   @override
-  String get fushi_api_key => 'Clé Fushi API (facultatif)';
+  String get fushi_api_key => 'Clé Fushi API';
   @override
   String get fushi_api_server => 'Serveur Fushi API';
   @override
@@ -87692,7 +87732,7 @@ class _StringsFr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -87793,6 +87833,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -98237,7 +98288,7 @@ class _StringsId extends _StringsEn {
   @override
   String get word_favorite_removed => 'Kata dihapus dari favorit';
   @override
-  String get fushi_api_key => 'Fushi API key (opsional)';
+  String get fushi_api_key => 'Fushi API key';
   @override
   String get fushi_api_server => 'Server Fushi API';
   @override
@@ -106673,7 +106724,7 @@ class _StringsId extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -106774,6 +106825,17 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -117320,7 +117382,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get word_favorite_removed => 'Parola rimossa dai preferiti';
   @override
-  String get fushi_api_key => 'Chiave Fushi API (opzionale)';
+  String get fushi_api_key => 'Chiave Fushi API';
   @override
   String get fushi_api_server => 'Server Fushi API';
   @override
@@ -125820,7 +125882,7 @@ class _StringsIt extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -125921,6 +125983,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -135812,7 +135885,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get word_favorite_removed => '単語をお気に入りから削除しました';
   @override
-  String get fushi_api_key => 'Fushi API キー（任意）';
+  String get fushi_api_key => 'Fushi API キー';
   @override
   String get fushi_api_server => 'Fushi API サーバー';
   @override
@@ -143967,7 +144040,7 @@ class _StringsJa extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -144068,6 +144141,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      '他のデバイスやツール（Yomitan、別のデバイスの Fushi）から接続するときは同じキーを入力します。空欄のままだと他のデバイスから Fushi の復習にカードを追加できません。設定後は、このデバイスのツールにも入力が必要です。';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'キー未設定：このデバイスからのみ接続できます。他のデバイスからカードを追加するには、キーを生成して向こうにも同じキーを入力してください。';
+  @override
+  String get srs_ankiconnect_key_set =>
+      '他のデバイスから接続するときは、127.0.0.1 をこのコンピューターの LAN アドレスに置き換え、同じ Fushi API キーを入力してください。';
+  @override
+  String get srs_ankiconnect_generate_key => 'キーを生成';
 }
 
 // Path: <root>
@@ -153966,7 +154050,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get word_favorite_removed => '단어가 즐겨찾기에서 삭제되었습니다';
   @override
-  String get fushi_api_key => 'Fushi API key(선택)';
+  String get fushi_api_key => 'Fushi API key';
   @override
   String get fushi_api_server => 'Fushi API 서버';
   @override
@@ -162150,7 +162234,7 @@ class _StringsKo extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -162251,6 +162335,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -172757,7 +172852,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get word_favorite_removed => 'Woord verwijderd uit favorieten';
   @override
-  String get fushi_api_key => 'Fushi API-sleutel (optioneel)';
+  String get fushi_api_key => 'Fushi API-sleutel';
   @override
   String get fushi_api_server => 'Fushi API-server';
   @override
@@ -181245,7 +181340,7 @@ class _StringsNl extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -181346,6 +181441,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -191900,7 +192006,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Palavra removida dos favoritos';
   @override
-  String get fushi_api_key => 'Chave da Fushi API (opcional)';
+  String get fushi_api_key => 'Chave da Fushi API';
   @override
   String get fushi_api_server => 'Servidor da Fushi API';
   @override
@@ -200409,7 +200515,7 @@ class _StringsPtBr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -200510,6 +200616,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -211039,7 +211156,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get word_favorite_removed => 'Слово удалено из избранного';
   @override
-  String get fushi_api_key => 'Ключ Fushi API (необязательно)';
+  String get fushi_api_key => 'Ключ Fushi API';
   @override
   String get fushi_api_server => 'Сервер Fushi API';
   @override
@@ -219518,7 +219635,7 @@ class _StringsRu extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -219619,6 +219736,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -229933,7 +230061,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get word_favorite_removed => 'ลบคำออกจากรายการโปรดแล้ว';
   @override
-  String get fushi_api_key => 'Fushi API key (ไม่บังคับ)';
+  String get fushi_api_key => 'Fushi API key';
   @override
   String get fushi_api_server => 'เซิร์ฟเวอร์ Fushi API';
   @override
@@ -238305,7 +238433,7 @@ class _StringsTh extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -238406,6 +238534,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -248851,7 +248990,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get word_favorite_removed => 'Kelime favorilerden kaldırıldı';
   @override
-  String get fushi_api_key => 'Fushi API anahtarı (isteğe bağlı)';
+  String get fushi_api_key => 'Fushi API anahtarı';
   @override
   String get fushi_api_server => 'Fushi API sunucusu';
   @override
@@ -257296,7 +257435,7 @@ class _StringsTr extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -257397,6 +257536,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -267796,7 +267946,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get word_favorite_removed => 'Đã xóa từ khỏi yêu thích';
   @override
-  String get fushi_api_key => 'Fushi API key (tùy chọn)';
+  String get fushi_api_key => 'Fushi API key';
   @override
   String get fushi_api_server => 'Máy chủ Fushi API';
   @override
@@ -276214,7 +276364,7 @@ class _StringsVi extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -276315,6 +276465,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+  @override
+  String get srs_ankiconnect_key_set =>
+      'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+  @override
+  String get srs_ankiconnect_generate_key => 'Generate key';
 }
 
 // Path: <root>
@@ -285859,7 +286020,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get word_favorite_removed => '已取消收藏该词';
   @override
-  String get fushi_api_key => 'Fushi API 密钥（可选）';
+  String get fushi_api_key => 'Fushi API 密钥';
   @override
   String get fushi_api_server => 'Fushi API 服务器';
   @override
@@ -293491,7 +293652,7 @@ class _StringsZhCn extends _StringsEn {
     required Object skipped,
   }) => '已导入 ${n} 条，跳过 ${skipped} 条';
   @override
-  String get srs_export_apkg => '导出到 Anki（.apkg）';
+  String get srs_export_apkg => '导出（.apkg）';
   @override
   String get srs_export_fsrs7_note =>
       'Anki 里会改用 FSRS-6，建议导入后在 Anki 的牌组选项里点一次「优化」。';
@@ -293582,6 +293743,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
+  @override
+  String get fushi_api_key_hint =>
+      '其他设备和工具（Yomitan、另一台设备上的 Fushi）连接时要填同一个密钥。留空时其他设备无法往 Fushi 复习里加卡；设置后，本机的工具也要填它。';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      '未设密钥：只有本机能连。要从其他设备加卡，先生成密钥，再在那边填同一个密钥。';
+  @override
+  String get srs_ankiconnect_key_set =>
+      '从其他设备连接时，把 127.0.0.1 换成这台电脑的局域网地址，并填同一个 Fushi API 密钥。';
+  @override
+  String get srs_ankiconnect_generate_key => '生成密钥';
 }
 
 // Path: <root>
@@ -303139,7 +303311,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get word_favorite_removed => '已取消收藏該詞';
   @override
-  String get fushi_api_key => 'Fushi API 金鑰（可選）';
+  String get fushi_api_key => 'Fushi API 金鑰';
   @override
   String get fushi_api_server => 'Fushi API 伺服器';
   @override
@@ -311069,7 +311241,7 @@ class _StringsZhHk extends _StringsEn {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   @override
-  String get srs_export_apkg => 'Export to Anki (.apkg)';
+  String get srs_export_apkg => 'Export (.apkg)';
   @override
   String get srs_export_fsrs7_note =>
       'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
@@ -311170,6 +311342,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_srs_desc =>
       'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+  @override
+  String get fushi_api_key_hint =>
+      '其他裝置和工具（Yomitan、另一部裝置上的 Fushi）連線時要填同一個金鑰。留空時其他裝置無法往 Fushi 複習裡加卡；設定後，本機的工具也要填它。';
+  @override
+  String get srs_ankiconnect_key_missing =>
+      '未設金鑰：只有本機能連線。要從其他裝置加卡，先產生金鑰，再在那邊填同一個金鑰。';
+  @override
+  String get srs_ankiconnect_key_set =>
+      '從其他裝置連線時，把 127.0.0.1 換成這部電腦的區域網路位址，並填同一個 Fushi API 金鑰。';
+  @override
+  String get srs_ankiconnect_generate_key => '產生金鑰';
 }
 
 /// Flat map(s) containing all translations.
@@ -320157,7 +320340,7 @@ extension on _StringsEn {
       case 'word_favorite_removed':
         return 'Word removed from favorites';
       case 'fushi_api_key':
-        return 'Fushi API key (optional)';
+        return 'Fushi API key';
       case 'fushi_api_server':
         return 'Fushi API server';
       case 'fushi_api_server_hint':
@@ -327214,7 +327397,7 @@ extension on _StringsEn {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -327298,6 +327481,14 @@ extension on _StringsEn {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -336279,7 +336470,7 @@ extension on _StringsAr {
       case 'word_favorite_removed':
         return 'تمت إزالة الكلمة من المفضلة';
       case 'fushi_api_key':
-        return 'مفتاح Fushi API (اختياري)';
+        return 'مفتاح Fushi API';
       case 'fushi_api_server':
         return 'خادم Fushi API';
       case 'fushi_api_server_hint':
@@ -343337,7 +343528,7 @@ extension on _StringsAr {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -343421,6 +343612,14 @@ extension on _StringsAr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -352459,7 +352658,7 @@ extension on _StringsDe {
       case 'word_favorite_removed':
         return 'Wort aus Favoriten entfernt';
       case 'fushi_api_key':
-        return 'Fushi-API-Schlüssel (optional)';
+        return 'Fushi-API-Schlüssel';
       case 'fushi_api_server':
         return 'Fushi-API-Server';
       case 'fushi_api_server_hint':
@@ -359536,7 +359735,7 @@ extension on _StringsDe {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -359620,6 +359819,14 @@ extension on _StringsDe {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -368644,7 +368851,7 @@ extension on _StringsEs {
       case 'word_favorite_removed':
         return 'Palabra eliminada de favoritos';
       case 'fushi_api_key':
-        return 'Clave de Fushi API (opcional)';
+        return 'Clave de Fushi API';
       case 'fushi_api_server':
         return 'Servidor Fushi API';
       case 'fushi_api_server_hint':
@@ -375717,7 +375924,7 @@ extension on _StringsEs {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -375801,6 +376008,14 @@ extension on _StringsEs {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -384836,7 +385051,7 @@ extension on _StringsFr {
       case 'word_favorite_removed':
         return 'Mot retiré des favoris';
       case 'fushi_api_key':
-        return 'Clé Fushi API (facultatif)';
+        return 'Clé Fushi API';
       case 'fushi_api_server':
         return 'Serveur Fushi API';
       case 'fushi_api_server_hint':
@@ -391916,7 +392131,7 @@ extension on _StringsFr {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -392000,6 +392215,14 @@ extension on _StringsFr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -400999,7 +401222,7 @@ extension on _StringsId {
       case 'word_favorite_removed':
         return 'Kata dihapus dari favorit';
       case 'fushi_api_key':
-        return 'Fushi API key (opsional)';
+        return 'Fushi API key';
       case 'fushi_api_server':
         return 'Server Fushi API';
       case 'fushi_api_server_hint':
@@ -408059,7 +408282,7 @@ extension on _StringsId {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -408143,6 +408366,14 @@ extension on _StringsId {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -417167,7 +417398,7 @@ extension on _StringsIt {
       case 'word_favorite_removed':
         return 'Parola rimossa dai preferiti';
       case 'fushi_api_key':
-        return 'Chiave Fushi API (opzionale)';
+        return 'Chiave Fushi API';
       case 'fushi_api_server':
         return 'Server Fushi API';
       case 'fushi_api_server_hint':
@@ -424238,7 +424469,7 @@ extension on _StringsIt {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -424322,6 +424553,14 @@ extension on _StringsIt {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -433264,7 +433503,7 @@ extension on _StringsJa {
       case 'word_favorite_removed':
         return '単語をお気に入りから削除しました';
       case 'fushi_api_key':
-        return 'Fushi API キー（任意）';
+        return 'Fushi API キー';
       case 'fushi_api_server':
         return 'Fushi API サーバー';
       case 'fushi_api_server_hint':
@@ -440290,7 +440529,7 @@ extension on _StringsJa {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -440374,6 +440613,14 @@ extension on _StringsJa {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return '他のデバイスやツール（Yomitan、別のデバイスの Fushi）から接続するときは同じキーを入力します。空欄のままだと他のデバイスから Fushi の復習にカードを追加できません。設定後は、このデバイスのツールにも入力が必要です。';
+      case 'srs_ankiconnect_key_missing':
+        return 'キー未設定：このデバイスからのみ接続できます。他のデバイスからカードを追加するには、キーを生成して向こうにも同じキーを入力してください。';
+      case 'srs_ankiconnect_key_set':
+        return '他のデバイスから接続するときは、127.0.0.1 をこのコンピューターの LAN アドレスに置き換え、同じ Fushi API キーを入力してください。';
+      case 'srs_ankiconnect_generate_key':
+        return 'キーを生成';
       default:
         return null;
     }
@@ -449320,7 +449567,7 @@ extension on _StringsKo {
       case 'word_favorite_removed':
         return '단어가 즐겨찾기에서 삭제되었습니다';
       case 'fushi_api_key':
-        return 'Fushi API key(선택)';
+        return 'Fushi API key';
       case 'fushi_api_server':
         return 'Fushi API 서버';
       case 'fushi_api_server_hint':
@@ -456350,7 +456597,7 @@ extension on _StringsKo {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -456434,6 +456681,14 @@ extension on _StringsKo {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -465454,7 +465709,7 @@ extension on _StringsNl {
       case 'word_favorite_removed':
         return 'Woord verwijderd uit favorieten';
       case 'fushi_api_key':
-        return 'Fushi API-sleutel (optioneel)';
+        return 'Fushi API-sleutel';
       case 'fushi_api_server':
         return 'Fushi API-server';
       case 'fushi_api_server_hint':
@@ -472524,7 +472779,7 @@ extension on _StringsNl {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -472608,6 +472863,14 @@ extension on _StringsNl {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -481622,7 +481885,7 @@ extension on _StringsPtBr {
       case 'word_favorite_removed':
         return 'Palavra removida dos favoritos';
       case 'fushi_api_key':
-        return 'Chave da Fushi API (opcional)';
+        return 'Chave da Fushi API';
       case 'fushi_api_server':
         return 'Servidor da Fushi API';
       case 'fushi_api_server_hint':
@@ -488690,7 +488953,7 @@ extension on _StringsPtBr {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -488774,6 +489037,14 @@ extension on _StringsPtBr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -497795,7 +498066,7 @@ extension on _StringsRu {
       case 'word_favorite_removed':
         return 'Слово удалено из избранного';
       case 'fushi_api_key':
-        return 'Ключ Fushi API (необязательно)';
+        return 'Ключ Fushi API';
       case 'fushi_api_server':
         return 'Сервер Fushi API';
       case 'fushi_api_server_hint':
@@ -504861,7 +505132,7 @@ extension on _StringsRu {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -504945,6 +505216,14 @@ extension on _StringsRu {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -513932,7 +514211,7 @@ extension on _StringsTh {
       case 'word_favorite_removed':
         return 'ลบคำออกจากรายการโปรดแล้ว';
       case 'fushi_api_key':
-        return 'Fushi API key (ไม่บังคับ)';
+        return 'Fushi API key';
       case 'fushi_api_server':
         return 'เซิร์ฟเวอร์ Fushi API';
       case 'fushi_api_server_hint':
@@ -520988,7 +521267,7 @@ extension on _StringsTh {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -521072,6 +521351,14 @@ extension on _StringsTh {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -530078,7 +530365,7 @@ extension on _StringsTr {
       case 'word_favorite_removed':
         return 'Kelime favorilerden kaldırıldı';
       case 'fushi_api_key':
-        return 'Fushi API anahtarı (isteğe bağlı)';
+        return 'Fushi API anahtarı';
       case 'fushi_api_server':
         return 'Fushi API sunucusu';
       case 'fushi_api_server_hint':
@@ -537146,7 +537433,7 @@ extension on _StringsTr {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -537230,6 +537517,14 @@ extension on _StringsTr {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -546229,7 +546524,7 @@ extension on _StringsVi {
       case 'word_favorite_removed':
         return 'Đã xóa từ khỏi yêu thích';
       case 'fushi_api_key':
-        return 'Fushi API key (tùy chọn)';
+        return 'Fushi API key';
       case 'fushi_api_server':
         return 'Máy chủ Fushi API';
       case 'fushi_api_server_hint':
@@ -553287,7 +553582,7 @@ extension on _StringsVi {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -553371,6 +553666,14 @@ extension on _StringsVi {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return 'Other devices and tools (Yomitan, Fushi on another device) enter this same key to connect. While it\'s empty, other devices can\'t add cards to Fushi review; once it\'s set, tools on this device need it too.';
+      case 'srs_ankiconnect_key_missing':
+        return 'No key set: only this device can connect. To add cards from another device, generate a key and enter the same key there.';
+      case 'srs_ankiconnect_key_set':
+        return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
+      case 'srs_ankiconnect_generate_key':
+        return 'Generate key';
       default:
         return null;
     }
@@ -562288,7 +562591,7 @@ extension on _StringsZhCn {
       case 'word_favorite_removed':
         return '已取消收藏该词';
       case 'fushi_api_key':
-        return 'Fushi API 密钥（可选）';
+        return 'Fushi API 密钥';
       case 'fushi_api_server':
         return 'Fushi API 服务器';
       case 'fushi_api_server_hint':
@@ -569251,7 +569554,7 @@ extension on _StringsZhCn {
         return ({required Object n, required Object skipped}) =>
             '已导入 ${n} 条，跳过 ${skipped} 条';
       case 'srs_export_apkg':
-        return '导出到 Anki（.apkg）';
+        return '导出（.apkg）';
       case 'srs_export_fsrs7_note':
         return 'Anki 里会改用 FSRS-6，建议导入后在 Anki 的牌组选项里点一次「优化」。';
       case 'srs_export_done':
@@ -569328,6 +569631,14 @@ extension on _StringsZhCn {
         return '复习';
       case 'backup_category_srs_desc':
         return '复习笔记与复习记录，以及卡片里的图片和音频（数量为笔记数与媒体文件数之和）。归属于配置方案：没有一并恢复配置方案时，会自动并入本机对应的方案';
+      case 'fushi_api_key_hint':
+        return '其他设备和工具（Yomitan、另一台设备上的 Fushi）连接时要填同一个密钥。留空时其他设备无法往 Fushi 复习里加卡；设置后，本机的工具也要填它。';
+      case 'srs_ankiconnect_key_missing':
+        return '未设密钥：只有本机能连。要从其他设备加卡，先生成密钥，再在那边填同一个密钥。';
+      case 'srs_ankiconnect_key_set':
+        return '从其他设备连接时，把 127.0.0.1 换成这台电脑的局域网地址，并填同一个 Fushi API 密钥。';
+      case 'srs_ankiconnect_generate_key':
+        return '生成密钥';
       default:
         return null;
     }
@@ -578246,7 +578557,7 @@ extension on _StringsZhHk {
       case 'word_favorite_removed':
         return '已取消收藏該詞';
       case 'fushi_api_key':
-        return 'Fushi API 金鑰（可選）';
+        return 'Fushi API 金鑰';
       case 'fushi_api_server':
         return 'Fushi API 伺服器';
       case 'fushi_api_server_hint':
@@ -585241,7 +585552,7 @@ extension on _StringsZhHk {
         return ({required Object n, required Object skipped}) =>
             'Imported ${n}, skipped ${skipped}';
       case 'srs_export_apkg':
-        return 'Export to Anki (.apkg)';
+        return 'Export (.apkg)';
       case 'srs_export_fsrs7_note':
         return 'Anki will schedule these cards with FSRS-6. After importing, run Optimize once in the deck options in Anki.';
       case 'srs_export_done':
@@ -585325,6 +585636,14 @@ extension on _StringsZhHk {
         return 'Review';
       case 'backup_category_srs_desc':
         return 'Review notes and history, plus card images and audio (count = notes + media files). Tied to profiles: if profiles aren\'t restored too, it\'s merged into the matching profile on this device';
+      case 'fushi_api_key_hint':
+        return '其他裝置和工具（Yomitan、另一部裝置上的 Fushi）連線時要填同一個金鑰。留空時其他裝置無法往 Fushi 複習裡加卡；設定後，本機的工具也要填它。';
+      case 'srs_ankiconnect_key_missing':
+        return '未設金鑰：只有本機能連線。要從其他裝置加卡，先產生金鑰，再在那邊填同一個金鑰。';
+      case 'srs_ankiconnect_key_set':
+        return '從其他裝置連線時，把 127.0.0.1 換成這部電腦的區域網路位址，並填同一個 Fushi API 金鑰。';
+      case 'srs_ankiconnect_generate_key':
+        return '產生金鑰';
       default:
         return null;
     }
