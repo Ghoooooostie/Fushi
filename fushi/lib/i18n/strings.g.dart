@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133586 (7858 per locale)
+/// Strings: 133620 (7860 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5865,6 +5865,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Lyrics mode has its own font size setting. You can adjust it in ⚙ Settings → Typography.';
   String get lyrics_mode_hint_title => 'Lyrics mode';
   String get lyrics_sentence_replay => 'Replay current sentence';
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   String get lyrics_sweep => 'Word-by-word sweep';
   String get lyrics_sweep_hint =>
       'Light up the current line as it is read. Turn off to show the whole line in one solid color';
@@ -20916,6 +20919,11 @@ class _StringsAr extends _StringsEn {
   String get lyrics_mode_hint_title => 'وضع كلمات الأغاني';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -40117,6 +40125,11 @@ class _StringsDe extends _StringsEn {
   String get lyrics_mode_hint_title => 'Liedtextmodus';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -59539,6 +59552,11 @@ class _StringsEs extends _StringsEn {
   String get lyrics_mode_hint_title => 'Modo de letras';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -79032,6 +79050,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
   @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
+  @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
   String get lyrics_sweep_hint =>
@@ -98406,6 +98429,11 @@ class _StringsId extends _StringsEn {
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
   @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
+  @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
   String get lyrics_sweep_hint =>
@@ -117671,6 +117699,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
   @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
+  @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
   String get lyrics_sweep_hint =>
@@ -136547,6 +136580,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
   @override
+  String get lyrics_skipped_text_show => '朗読されなかった本文を表示';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      '朗読で飛ばされた、または字幕と対応できなかった本文を、行の間に小さな灰色の文字で表示します';
+  @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
   String get lyrics_sweep_hint =>
@@ -154897,6 +154935,11 @@ class _StringsKo extends _StringsEn {
   String get lyrics_mode_hint_title => '가사 모드';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -173729,6 +173772,11 @@ class _StringsNl extends _StringsEn {
   String get lyrics_mode_hint_title => 'Songtekstmodus';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -193076,6 +193124,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
   @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
+  @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
   String get lyrics_sweep_hint =>
@@ -212406,6 +212459,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
   @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
+  @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
   String get lyrics_sweep_hint =>
@@ -231572,6 +231630,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
   @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
+  @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
   String get lyrics_sweep_hint =>
@@ -250680,6 +250743,11 @@ class _StringsTr extends _StringsEn {
   String get lyrics_mode_hint_title => 'Şarkı Sözü Modu';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -269849,6 +269917,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
   @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
+  @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
   String get lyrics_sweep_hint =>
@@ -288124,6 +288197,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get lyrics_sentence_replay => '重播当前句';
   @override
+  String get lyrics_skipped_text_show => '显示未朗读的原文';
+  @override
+  String get lyrics_skipped_text_show_hint => '朗读者跳过、或字幕没能对上的原文，以灰色小字显示在两句之间';
+  @override
   String get lyrics_sweep => '逐字跟读渐变';
   @override
   String get lyrics_sweep_hint => '当前行按朗读进度逐字点亮；关掉后整行显示为纯色';
@@ -305746,6 +305823,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
   @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
+  @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
   String get lyrics_sweep_hint =>
@@ -322685,6 +322767,10 @@ extension on _StringsEn {
         return 'Lyrics mode';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -338982,6 +339068,10 @@ extension on _StringsAr {
         return 'وضع كلمات الأغاني';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -355320,6 +355410,10 @@ extension on _StringsDe {
         return 'Liedtextmodus';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -371679,6 +371773,10 @@ extension on _StringsEs {
         return 'Modo de letras';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -388048,6 +388146,10 @@ extension on _StringsFr {
         return 'Mode paroles';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -404392,6 +404494,10 @@ extension on _StringsId {
         return 'Mode Lirik';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -420720,6 +420826,10 @@ extension on _StringsIt {
         return 'Modalità testi';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -437012,6 +437122,10 @@ extension on _StringsJa {
         return '歌詞モード';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return '朗読されなかった本文を表示';
+      case 'lyrics_skipped_text_show_hint':
+        return '朗読で飛ばされた、または字幕と対応できなかった本文を、行の間に小さな灰色の文字で表示します';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -453241,6 +453355,10 @@ extension on _StringsKo {
         return '가사 모드';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -469529,6 +469647,10 @@ extension on _StringsNl {
         return 'Songtekstmodus';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -485873,6 +485995,10 @@ extension on _StringsPtBr {
         return 'Modo de letras';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -502219,6 +502345,10 @@ extension on _StringsRu {
         return 'Режим текстов песен';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -518538,6 +518668,10 @@ extension on _StringsTh {
         return 'โหมดเนื้อเพลง';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -534857,6 +534991,10 @@ extension on _StringsTr {
         return 'Şarkı Sözü Modu';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -551178,6 +551316,10 @@ extension on _StringsVi {
         return 'Chế độ lời bài hát';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -567390,6 +567532,10 @@ extension on _StringsZhCn {
         return '歌词模式';
       case 'lyrics_sentence_replay':
         return '重播当前句';
+      case 'lyrics_skipped_text_show':
+        return '显示未朗读的原文';
+      case 'lyrics_skipped_text_show_hint':
+        return '朗读者跳过、或字幕没能对上的原文，以灰色小字显示在两句之间';
       case 'lyrics_sweep':
         return '逐字跟读渐变';
       case 'lyrics_sweep_hint':
@@ -583540,6 +583686,10 @@ extension on _StringsZhHk {
         return '歌詞模式';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
