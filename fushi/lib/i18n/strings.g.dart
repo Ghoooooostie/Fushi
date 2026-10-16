@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133586 (7858 per locale)
+/// Strings: 133620 (7860 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3409,6 +3409,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_task_status_seeding => 'Seeding';
   String get download_task_status_stalled => 'Stalled';
   String get download_task_toggle_failed => 'Pause/resume failed';
+  String get download_task_work_focus_clear => 'Show all tasks';
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
   String get download_tasks_tab => 'Tasks';
   String get download_test_connection => 'Test connection';
   String get download_test_connection_failed =>
@@ -16765,6 +16768,11 @@ class _StringsAr extends _StringsEn {
   String get download_task_status_stalled => 'متوقف';
   @override
   String get download_task_toggle_failed => 'فشل الإيقاف المؤقت/الاستئناف';
+  @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
   @override
   String get download_tasks_tab => 'المهام';
   @override
@@ -35867,6 +35875,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_task_toggle_failed =>
       'Pausieren/Fortsetzen fehlgeschlagen';
+  @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
   @override
   String get download_tasks_tab => 'Aufgaben';
   @override
@@ -55283,6 +55296,11 @@ class _StringsEs extends _StringsEn {
   String get download_task_status_stalled => 'Atascado';
   @override
   String get download_task_toggle_failed => 'Pausa/reanudación falló';
+  @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
   @override
   String get download_tasks_tab => 'Tareas';
   @override
@@ -74767,6 +74785,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'Échec de la pause/reprise';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Tâches';
   @override
   String get download_test_connection => 'Tester la connexion';
@@ -94207,6 +94230,11 @@ class _StringsId extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'Jeda/lanjutkan gagal';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Tugas';
   @override
   String get download_test_connection => 'Tes koneksi';
@@ -113440,6 +113468,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'Pausa/ripresa fallita';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Task';
   @override
   String get download_test_connection => 'Testa connessione';
@@ -132560,6 +132593,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_task_toggle_failed => '一時停止/再開に失敗';
   @override
+  String get download_task_work_focus_clear => 'すべてのタスクを表示';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      '「${title}」のタスクのみ表示';
+  @override
   String get download_tasks_tab => 'タスク';
   @override
   String get download_test_connection => '接続テスト';
@@ -150894,6 +150932,11 @@ class _StringsKo extends _StringsEn {
   String get download_task_status_stalled => '정체됨';
   @override
   String get download_task_toggle_failed => '일시정지/재개 실패';
+  @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
   @override
   String get download_tasks_tab => '작업';
   @override
@@ -169515,6 +169558,11 @@ class _StringsNl extends _StringsEn {
   String get download_task_status_stalled => 'Vastgelopen';
   @override
   String get download_task_toggle_failed => 'Pauzeren/hervatten mislukt';
+  @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
   @override
   String get download_tasks_tab => 'Taken';
   @override
@@ -188834,6 +188882,11 @@ class _StringsPtBr extends _StringsEn {
   String get download_task_status_stalled => 'Parado';
   @override
   String get download_task_toggle_failed => 'Pausar/retomar falhou';
+  @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
   @override
   String get download_tasks_tab => 'Tarefas';
   @override
@@ -208185,6 +208238,11 @@ class _StringsRu extends _StringsEn {
   String get download_task_toggle_failed =>
       'Не удалось приостановить/возобновить';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Задачи';
   @override
   String get download_test_connection => 'Проверить подключение';
@@ -227429,6 +227487,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'หยุดชั่วคราว/เล่นต่อล้มเหลว';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'งาน';
   @override
   String get download_test_connection => 'ทดสอบการเชื่อมต่อ';
@@ -246477,6 +246540,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_task_toggle_failed =>
       'Duraklatma/devam ettirme başarısız';
+  @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
   @override
   String get download_tasks_tab => 'Görevler';
   @override
@@ -265664,6 +265732,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'Tạm dừng/tiếp tục thất bại';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Tác vụ';
   @override
   String get download_test_connection => 'Kiểm tra kết nối';
@@ -284332,6 +284405,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_task_toggle_failed => '暂停/恢复操作失败';
   @override
+  String get download_task_work_focus_clear => '显示全部任务';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      '仅显示「${title}」的任务';
+  @override
   String get download_tasks_tab => '任务';
   @override
   String get download_test_connection => '测试连接';
@@ -301904,6 +301982,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_task_toggle_failed => '暫停/恢復操作失敗';
   @override
+  String get download_task_work_focus_clear => '顯示全部任務';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      '僅顯示「${title}」的任務';
+  @override
   String get download_tasks_tab => '任務';
   @override
   String get download_test_connection => '測試連接';
@@ -319160,6 +319243,10 @@ extension on _StringsEn {
         return 'Stalled';
       case 'download_task_toggle_failed':
         return 'Pause/resume failed';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tasks';
       case 'download_test_connection':
@@ -335462,6 +335549,10 @@ extension on _StringsAr {
         return 'متوقف';
       case 'download_task_toggle_failed':
         return 'فشل الإيقاف المؤقت/الاستئناف';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'المهام';
       case 'download_test_connection':
@@ -351789,6 +351880,10 @@ extension on _StringsDe {
         return 'Blockiert';
       case 'download_task_toggle_failed':
         return 'Pausieren/Fortsetzen fehlgeschlagen';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Aufgaben';
       case 'download_test_connection':
@@ -368152,6 +368247,10 @@ extension on _StringsEs {
         return 'Atascado';
       case 'download_task_toggle_failed':
         return 'Pausa/reanudación falló';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tareas';
       case 'download_test_connection':
@@ -384519,6 +384618,10 @@ extension on _StringsFr {
         return 'Bloqué';
       case 'download_task_toggle_failed':
         return 'Échec de la pause/reprise';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tâches';
       case 'download_test_connection':
@@ -400867,6 +400970,10 @@ extension on _StringsId {
         return 'Terhenti';
       case 'download_task_toggle_failed':
         return 'Jeda/lanjutkan gagal';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tugas';
       case 'download_test_connection':
@@ -417193,6 +417300,10 @@ extension on _StringsIt {
         return 'Bloccato';
       case 'download_task_toggle_failed':
         return 'Pausa/ripresa fallita';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Task';
       case 'download_test_connection':
@@ -433503,6 +433614,10 @@ extension on _StringsJa {
         return '停滞中';
       case 'download_task_toggle_failed':
         return '一時停止/再開に失敗';
+      case 'download_task_work_focus_clear':
+        return 'すべてのタスクを表示';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => '「${title}」のタスクのみ表示';
       case 'download_tasks_tab':
         return 'タスク';
       case 'download_test_connection':
@@ -449730,6 +449845,10 @@ extension on _StringsKo {
         return '정체됨';
       case 'download_task_toggle_failed':
         return '일시정지/재개 실패';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return '작업';
       case 'download_test_connection':
@@ -466001,6 +466120,10 @@ extension on _StringsNl {
         return 'Vastgelopen';
       case 'download_task_toggle_failed':
         return 'Pauzeren/hervatten mislukt';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Taken';
       case 'download_test_connection':
@@ -482347,6 +482470,10 @@ extension on _StringsPtBr {
         return 'Parado';
       case 'download_task_toggle_failed':
         return 'Pausar/retomar falhou';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tarefas';
       case 'download_test_connection':
@@ -498693,6 +498820,10 @@ extension on _StringsRu {
         return 'Остановлено';
       case 'download_task_toggle_failed':
         return 'Не удалось приостановить/возобновить';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Задачи';
       case 'download_test_connection':
@@ -515011,6 +515142,10 @@ extension on _StringsTh {
         return 'หยุดชะงัก';
       case 'download_task_toggle_failed':
         return 'หยุดชั่วคราว/เล่นต่อล้มเหลว';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'งาน';
       case 'download_test_connection':
@@ -531330,6 +531465,10 @@ extension on _StringsTr {
         return 'Durağan';
       case 'download_task_toggle_failed':
         return 'Duraklatma/devam ettirme başarısız';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Görevler';
       case 'download_test_connection':
@@ -547653,6 +547792,10 @@ extension on _StringsVi {
         return 'Bị treo';
       case 'download_task_toggle_failed':
         return 'Tạm dừng/tiếp tục thất bại';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tác vụ';
       case 'download_test_connection':
@@ -563897,6 +564040,10 @@ extension on _StringsZhCn {
         return '等待资源';
       case 'download_task_toggle_failed':
         return '暂停/恢复操作失败';
+      case 'download_task_work_focus_clear':
+        return '显示全部任务';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => '仅显示「${title}」的任务';
       case 'download_tasks_tab':
         return '任务';
       case 'download_test_connection':
@@ -580036,6 +580183,10 @@ extension on _StringsZhHk {
         return '等待資源';
       case 'download_task_toggle_failed':
         return '暫停/恢復操作失敗';
+      case 'download_task_work_focus_clear':
+        return '顯示全部任務';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => '僅顯示「${title}」的任務';
       case 'download_tasks_tab':
         return '任務';
       case 'download_test_connection':
