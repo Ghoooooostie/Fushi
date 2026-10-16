@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132634 (7802 per locale)
+/// Strings: 133926 (7878 per locale)
 ///
-/// Built on 2026-10-16 at 06:51 UTC
+/// Built on 2026-10-16 at 06:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11274,6 +11274,121 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Note types updated: ${n}';
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  String get srs_note_types_title => 'Note types';
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  String get srs_note_types_builtin => 'Built-in';
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  String get srs_note_types_add => 'Add note type';
+  String get srs_note_types_stock_basic => 'Basic';
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  String get srs_note_types_stock_cloze => 'Cloze';
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  String get srs_note_types_rename => 'Rename note type';
+  String get srs_note_types_clone => 'Clone';
+  String get srs_note_types_delete => 'Delete note type';
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  String get srs_note_types_name_empty => 'Enter a name';
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  String get srs_note_types_kind_standard => 'Standard';
+  String get srs_note_types_kind_cloze => 'Cloze';
+  String get srs_note_types_kind => 'Kind';
+  String get srs_note_types_fields => 'Fields';
+  String get srs_note_types_field_add => 'Add field';
+  String get srs_note_types_field_name => 'Field name';
+  String get srs_note_types_field_rename => 'Rename field';
+  String get srs_note_types_field_delete => 'Delete field';
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  String get srs_note_types_field_builtin => 'Built-in field';
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  String get srs_note_types_move_up => 'Move up';
+  String get srs_note_types_move_down => 'Move down';
+  String get srs_note_types_term_field => 'Word field';
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  String get srs_note_types_term_field_none => 'None';
+  String get srs_note_types_templates => 'Card types';
+  String get srs_note_types_template_add => 'Add card type';
+  String get srs_note_types_template_name => 'Card type name';
+  String get srs_note_types_template_rename => 'Rename card type';
+  String get srs_note_types_template_delete => 'Delete card type';
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  String get srs_note_types_template_edit => 'Edit card type';
+  String get srs_note_types_styling => 'Styling';
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  String get srs_note_types_front => 'Front template';
+  String get srs_note_types_back => 'Back template';
+  String get srs_note_types_side_front => 'Front';
+  String get srs_note_types_side_back => 'Back';
+  String get srs_note_types_preview => 'Preview';
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  String get srs_note_types_insert_field => 'Insert field';
+  String get srs_note_types_saved => 'Saved';
+  String get srs_note_types_discard_title => 'Discard changes?';
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  String get srs_note_types_discard => 'Discard';
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  String get srs_note_types_empty => 'No note types';
+  String get srs_change_type_title => 'Change note type';
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  String get srs_change_type_target => 'New note type';
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  String get srs_change_type_nothing => '(nothing)';
+  String get srs_change_type_apply => 'Change';
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  String get srs_change_type_done => 'Note type changed';
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -30142,6 +30257,197 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -49400,6 +49706,197 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -68717,6 +69214,197 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -88115,6 +88803,197 @@ class _StringsFr extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -107166,6 +108045,197 @@ class _StringsId extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -126383,6 +127453,197 @@ class _StringsIt extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -144600,6 +145861,197 @@ class _StringsJa extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -162853,6 +164305,197 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -182018,6 +183661,197 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -201252,6 +203086,197 @@ class _StringsPtBr extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -220431,6 +222456,197 @@ class _StringsRu extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -239288,6 +241504,197 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -258349,6 +260756,197 @@ class _StringsTr extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -277337,6 +279935,197 @@ class _StringsVi extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 // Path: <root>
@@ -294672,6 +297461,182 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       '笔记模板「${name}」与本机的不一致，已另存为一个新模板';
+  @override
+  String get srs_note_types_title => '笔记类型';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} 条笔记 · ${fields} 个字段 · ${cards} 种卡片';
+  @override
+  String get srs_note_types_builtin => '内置';
+  @override
+  String get srs_note_types_builtin_hint =>
+      '内置笔记类型可以修改，但不能删除。挖词和查词弹窗里的复习标记依赖它的内置字段，这些字段可以改名、调整顺序，但不能删除。';
+  @override
+  String get srs_note_types_add => '新建笔记类型';
+  @override
+  String get srs_note_types_stock_basic => '问答';
+  @override
+  String get srs_note_types_stock_reversed => '问答（含反向卡）';
+  @override
+  String get srs_note_types_stock_cloze => '填空';
+  @override
+  String srs_note_types_clone_of({required Object name}) => '克隆：${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} 副本';
+  @override
+  String get srs_note_types_rename => '重命名笔记类型';
+  @override
+  String get srs_note_types_clone => '克隆';
+  @override
+  String get srs_note_types_delete => '删除笔记类型';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => '删除「${name}」？它的 ${n} 条笔记及其卡片也会一并删除。';
+  @override
+  String get srs_note_types_name_empty => '请输入名称';
+  @override
+  String get srs_note_types_name_duplicate => '这个名称已被使用';
+  @override
+  String get srs_note_types_name_invalid => '字段名不能包含 : { } "，也不能以 # /  开头';
+  @override
+  String get srs_note_types_name_reserved =>
+      '这是 Anki 的保留字段名（FrontSide、Tags、Deck 等）';
+  @override
+  String get srs_note_types_kind_standard => '普通';
+  @override
+  String get srs_note_types_kind_cloze => '填空';
+  @override
+  String get srs_note_types_kind => '类型';
+  @override
+  String get srs_note_types_fields => '字段';
+  @override
+  String get srs_note_types_field_add => '添加字段';
+  @override
+  String get srs_note_types_field_name => '字段名';
+  @override
+  String get srs_note_types_field_rename => '重命名字段';
+  @override
+  String get srs_note_types_field_delete => '删除字段';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => '删除字段「${name}」？有 ${n} 条笔记在这个字段里有内容，删除后这些内容会丢失。';
+  @override
+  String get srs_note_types_field_builtin => '内置字段';
+  @override
+  String get srs_note_types_field_last => '笔记类型至少要有一个字段';
+  @override
+  String get srs_note_types_move_up => '上移';
+  @override
+  String get srs_note_types_move_down => '下移';
+  @override
+  String get srs_note_types_term_field => '词条字段';
+  @override
+  String get srs_note_types_term_field_hint => '查词弹窗按这个字段匹配单词、显示复习标记';
+  @override
+  String get srs_note_types_term_field_none => '不参与';
+  @override
+  String get srs_note_types_templates => '卡片模板';
+  @override
+  String get srs_note_types_template_add => '添加卡片模板';
+  @override
+  String get srs_note_types_template_name => '模板名称';
+  @override
+  String get srs_note_types_template_rename => '重命名卡片模板';
+  @override
+  String get srs_note_types_template_delete => '删除卡片模板';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => '删除卡片模板「${name}」？由它生成的 ${n} 张卡会一并删除。';
+  @override
+  String get srs_note_types_template_last => '笔记类型至少要有一个卡片模板';
+  @override
+  String get srs_note_types_template_cloze_single => '填空类型只有一个卡片模板';
+  @override
+  String get srs_note_types_template_edit => '编辑卡片模板';
+  @override
+  String get srs_note_types_styling => '样式';
+  @override
+  String get srs_note_types_styling_hint => '本笔记类型的全部卡片模板共用';
+  @override
+  String get srs_note_types_front => '正面模板';
+  @override
+  String get srs_note_types_back => '背面模板';
+  @override
+  String get srs_note_types_side_front => '正面';
+  @override
+  String get srs_note_types_side_back => '背面';
+  @override
+  String get srs_note_types_preview => '预览';
+  @override
+  String get srs_note_types_preview_empty => '这条笔记的正面为空，这张卡不会出现。';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      '预览用的笔记：${note}';
+  @override
+  String get srs_note_types_preview_placeholder => '还没有笔记，预览用字段名作示例内容。';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      '模板有错误：${error}';
+  @override
+  String get srs_note_types_insert_field => '插入字段';
+  @override
+  String get srs_note_types_saved => '已保存';
+  @override
+  String get srs_note_types_discard_title => '放弃修改？';
+  @override
+  String get srs_note_types_discard_body => '对这个卡片模板的修改还没有保存。';
+  @override
+  String get srs_note_types_discard => '放弃';
+  @override
+  String get srs_note_types_conflict => '另一台设备同时修改了这个笔记类型，选择要保留的版本：';
+  @override
+  String get srs_note_types_empty => '没有笔记类型';
+  @override
+  String get srs_change_type_title => '更改笔记类型';
+  @override
+  String srs_change_type_current({required Object name}) => '当前：${name}';
+  @override
+  String get srs_change_type_target => '新笔记类型';
+  @override
+  String get srs_change_type_fields_hint => '为新类型的每个字段选择用当前哪个字段的内容。';
+  @override
+  String get srs_change_type_templates_hint =>
+      '为新类型的每个卡片模板选择接手当前哪张卡：接手的卡保留复习记录和排程。';
+  @override
+  String get srs_change_type_cloze_hint =>
+      '卡片按序号对应：第 N 张卡对应填空 N（或新类型的第 N 个卡片模板）。';
+  @override
+  String get srs_change_type_nothing => '（无）';
+  @override
+  String get srs_change_type_apply => '更改';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '有 ${n} 张卡在新类型里没有对应，会被删除。';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      '这些字段的内容不会带过去：${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => '更改 ${n} 条笔记的笔记类型？有 ${dropped} 张卡会被删除。';
+  @override
+  String get srs_change_type_done => '已更改笔记类型';
+  @override
+  String get srs_change_type_mixed => '所选笔记的笔记类型不同，请只选同一种类型的笔记。';
+  @override
+  String get srs_change_type_no_target => '还没有别的笔记类型，请先在「笔记类型」里新建。';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} 条笔记';
 }
 
 // Path: <root>
@@ -312330,6 +315295,197 @@ class _StringsZhHk extends _StringsEn {
   @override
   String srs_import_report_notetypes_duplicated({required Object name}) =>
       'Note type “${name}” differs from the one here and was imported as a separate note type';
+  @override
+  String get srs_note_types_title => 'Note types';
+  @override
+  String srs_note_types_summary({
+    required Object notes,
+    required Object fields,
+    required Object cards,
+  }) => '${notes} notes · ${fields} fields · ${cards} card types';
+  @override
+  String get srs_note_types_builtin => 'Built-in';
+  @override
+  String get srs_note_types_builtin_hint =>
+      'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+  @override
+  String get srs_note_types_add => 'Add note type';
+  @override
+  String get srs_note_types_stock_basic => 'Basic';
+  @override
+  String get srs_note_types_stock_reversed => 'Basic (and reversed card)';
+  @override
+  String get srs_note_types_stock_cloze => 'Cloze';
+  @override
+  String srs_note_types_clone_of({required Object name}) => 'Clone: ${name}';
+  @override
+  String srs_note_types_copy_name({required Object name}) => '${name} copy';
+  @override
+  String get srs_note_types_rename => 'Rename note type';
+  @override
+  String get srs_note_types_clone => 'Clone';
+  @override
+  String get srs_note_types_delete => 'Delete note type';
+  @override
+  String srs_note_types_delete_confirm({
+    required Object name,
+    required Object n,
+  }) => 'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+  @override
+  String get srs_note_types_name_empty => 'Enter a name';
+  @override
+  String get srs_note_types_name_duplicate => 'This name is already used';
+  @override
+  String get srs_note_types_name_invalid =>
+      'Field names can\'t contain : { } " or start with # / ';
+  @override
+  String get srs_note_types_name_reserved =>
+      'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+  @override
+  String get srs_note_types_kind_standard => 'Standard';
+  @override
+  String get srs_note_types_kind_cloze => 'Cloze';
+  @override
+  String get srs_note_types_kind => 'Kind';
+  @override
+  String get srs_note_types_fields => 'Fields';
+  @override
+  String get srs_note_types_field_add => 'Add field';
+  @override
+  String get srs_note_types_field_name => 'Field name';
+  @override
+  String get srs_note_types_field_rename => 'Rename field';
+  @override
+  String get srs_note_types_field_delete => 'Delete field';
+  @override
+  String srs_note_types_field_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+  @override
+  String get srs_note_types_field_builtin => 'Built-in field';
+  @override
+  String get srs_note_types_field_last =>
+      'A note type needs at least one field';
+  @override
+  String get srs_note_types_move_up => 'Move up';
+  @override
+  String get srs_note_types_move_down => 'Move down';
+  @override
+  String get srs_note_types_term_field => 'Word field';
+  @override
+  String get srs_note_types_term_field_hint =>
+      'Review marks in the lookup popup match words against this field';
+  @override
+  String get srs_note_types_term_field_none => 'None';
+  @override
+  String get srs_note_types_templates => 'Card types';
+  @override
+  String get srs_note_types_template_add => 'Add card type';
+  @override
+  String get srs_note_types_template_name => 'Card type name';
+  @override
+  String get srs_note_types_template_rename => 'Rename card type';
+  @override
+  String get srs_note_types_template_delete => 'Delete card type';
+  @override
+  String srs_note_types_template_delete_confirm({
+    required Object name,
+    required Object n,
+  }) =>
+      'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+  @override
+  String get srs_note_types_template_last =>
+      'A note type needs at least one card type';
+  @override
+  String get srs_note_types_template_cloze_single =>
+      'Cloze note types have exactly one card type';
+  @override
+  String get srs_note_types_template_edit => 'Edit card type';
+  @override
+  String get srs_note_types_styling => 'Styling';
+  @override
+  String get srs_note_types_styling_hint =>
+      'Shared by all card types of this note type';
+  @override
+  String get srs_note_types_front => 'Front template';
+  @override
+  String get srs_note_types_back => 'Back template';
+  @override
+  String get srs_note_types_side_front => 'Front';
+  @override
+  String get srs_note_types_side_back => 'Back';
+  @override
+  String get srs_note_types_preview => 'Preview';
+  @override
+  String get srs_note_types_preview_empty =>
+      'The front is empty for this note, so this card won\'t be shown.';
+  @override
+  String srs_note_types_preview_sample({required Object note}) =>
+      'Previewing with: ${note}';
+  @override
+  String get srs_note_types_preview_placeholder =>
+      'No notes yet. The preview fills each field with its name.';
+  @override
+  String srs_note_types_template_error({required Object error}) =>
+      'Template error: ${error}';
+  @override
+  String get srs_note_types_insert_field => 'Insert field';
+  @override
+  String get srs_note_types_saved => 'Saved';
+  @override
+  String get srs_note_types_discard_title => 'Discard changes?';
+  @override
+  String get srs_note_types_discard_body =>
+      'Your changes to this card type haven\'t been saved.';
+  @override
+  String get srs_note_types_discard => 'Discard';
+  @override
+  String get srs_note_types_conflict =>
+      'Another device changed this note type at the same time. Pick the version to keep:';
+  @override
+  String get srs_note_types_empty => 'No note types';
+  @override
+  String get srs_change_type_title => 'Change note type';
+  @override
+  String srs_change_type_current({required Object name}) => 'Current: ${name}';
+  @override
+  String get srs_change_type_target => 'New note type';
+  @override
+  String get srs_change_type_fields_hint =>
+      'Choose which current field fills each field of the new type.';
+  @override
+  String get srs_change_type_templates_hint =>
+      'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+  @override
+  String get srs_change_type_cloze_hint =>
+      'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+  @override
+  String get srs_change_type_nothing => '(nothing)';
+  @override
+  String get srs_change_type_apply => 'Change';
+  @override
+  String srs_change_type_dropped({required Object n}) =>
+      '${n} cards have no counterpart in the new type and will be deleted.';
+  @override
+  String srs_change_type_unused({required Object names}) =>
+      'Content not carried over: ${names}';
+  @override
+  String srs_change_type_confirm({
+    required Object n,
+    required Object dropped,
+  }) => 'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+  @override
+  String get srs_change_type_done => 'Note type changed';
+  @override
+  String get srs_change_type_mixed =>
+      'The selected notes have different note types. Select notes of one type.';
+  @override
+  String get srs_change_type_no_target =>
+      'There is no other note type yet. Create one under Note types first.';
+  @override
+  String srs_change_type_notes({required Object n}) => '${n} notes';
 }
 
 /// Flat map(s) containing all translations.
@@ -328518,6 +331674,168 @@ extension on _StringsEn {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -344701,6 +348019,168 @@ extension on _StringsAr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -360960,6 +364440,168 @@ extension on _StringsDe {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -377201,6 +380843,168 @@ extension on _StringsEs {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -393460,6 +397264,168 @@ extension on _StringsFr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -409663,6 +413629,168 @@ extension on _StringsId {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -425902,6 +430030,168 @@ extension on _StringsIt {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -442014,6 +446304,168 @@ extension on _StringsJa {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -458134,6 +462586,168 @@ extension on _StringsKo {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -474368,6 +478982,168 @@ extension on _StringsNl {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -490594,6 +495370,168 @@ extension on _StringsPtBr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -506825,6 +511763,168 @@ extension on _StringsRu {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -523012,6 +528112,168 @@ extension on _StringsTh {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -539230,6 +544492,168 @@ extension on _StringsTr {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -555431,6 +560855,168 @@ extension on _StringsVi {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
@@ -571444,6 +577030,166 @@ extension on _StringsZhCn {
         return ({required Object n}) => '更新笔记模板：${n} 个';
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) => '笔记模板「${name}」与本机的不一致，已另存为一个新模板';
+      case 'srs_note_types_title':
+        return '笔记类型';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} 条笔记 · ${fields} 个字段 · ${cards} 种卡片';
+      case 'srs_note_types_builtin':
+        return '内置';
+      case 'srs_note_types_builtin_hint':
+        return '内置笔记类型可以修改，但不能删除。挖词和查词弹窗里的复习标记依赖它的内置字段，这些字段可以改名、调整顺序，但不能删除。';
+      case 'srs_note_types_add':
+        return '新建笔记类型';
+      case 'srs_note_types_stock_basic':
+        return '问答';
+      case 'srs_note_types_stock_reversed':
+        return '问答（含反向卡）';
+      case 'srs_note_types_stock_cloze':
+        return '填空';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => '克隆：${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} 副本';
+      case 'srs_note_types_rename':
+        return '重命名笔记类型';
+      case 'srs_note_types_clone':
+        return '克隆';
+      case 'srs_note_types_delete':
+        return '删除笔记类型';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            '删除「${name}」？它的 ${n} 条笔记及其卡片也会一并删除。';
+      case 'srs_note_types_name_empty':
+        return '请输入名称';
+      case 'srs_note_types_name_duplicate':
+        return '这个名称已被使用';
+      case 'srs_note_types_name_invalid':
+        return '字段名不能包含 : { } "，也不能以 # /  开头';
+      case 'srs_note_types_name_reserved':
+        return '这是 Anki 的保留字段名（FrontSide、Tags、Deck 等）';
+      case 'srs_note_types_kind_standard':
+        return '普通';
+      case 'srs_note_types_kind_cloze':
+        return '填空';
+      case 'srs_note_types_kind':
+        return '类型';
+      case 'srs_note_types_fields':
+        return '字段';
+      case 'srs_note_types_field_add':
+        return '添加字段';
+      case 'srs_note_types_field_name':
+        return '字段名';
+      case 'srs_note_types_field_rename':
+        return '重命名字段';
+      case 'srs_note_types_field_delete':
+        return '删除字段';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            '删除字段「${name}」？有 ${n} 条笔记在这个字段里有内容，删除后这些内容会丢失。';
+      case 'srs_note_types_field_builtin':
+        return '内置字段';
+      case 'srs_note_types_field_last':
+        return '笔记类型至少要有一个字段';
+      case 'srs_note_types_move_up':
+        return '上移';
+      case 'srs_note_types_move_down':
+        return '下移';
+      case 'srs_note_types_term_field':
+        return '词条字段';
+      case 'srs_note_types_term_field_hint':
+        return '查词弹窗按这个字段匹配单词、显示复习标记';
+      case 'srs_note_types_term_field_none':
+        return '不参与';
+      case 'srs_note_types_templates':
+        return '卡片模板';
+      case 'srs_note_types_template_add':
+        return '添加卡片模板';
+      case 'srs_note_types_template_name':
+        return '模板名称';
+      case 'srs_note_types_template_rename':
+        return '重命名卡片模板';
+      case 'srs_note_types_template_delete':
+        return '删除卡片模板';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            '删除卡片模板「${name}」？由它生成的 ${n} 张卡会一并删除。';
+      case 'srs_note_types_template_last':
+        return '笔记类型至少要有一个卡片模板';
+      case 'srs_note_types_template_cloze_single':
+        return '填空类型只有一个卡片模板';
+      case 'srs_note_types_template_edit':
+        return '编辑卡片模板';
+      case 'srs_note_types_styling':
+        return '样式';
+      case 'srs_note_types_styling_hint':
+        return '本笔记类型的全部卡片模板共用';
+      case 'srs_note_types_front':
+        return '正面模板';
+      case 'srs_note_types_back':
+        return '背面模板';
+      case 'srs_note_types_side_front':
+        return '正面';
+      case 'srs_note_types_side_back':
+        return '背面';
+      case 'srs_note_types_preview':
+        return '预览';
+      case 'srs_note_types_preview_empty':
+        return '这条笔记的正面为空，这张卡不会出现。';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => '预览用的笔记：${note}';
+      case 'srs_note_types_preview_placeholder':
+        return '还没有笔记，预览用字段名作示例内容。';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => '模板有错误：${error}';
+      case 'srs_note_types_insert_field':
+        return '插入字段';
+      case 'srs_note_types_saved':
+        return '已保存';
+      case 'srs_note_types_discard_title':
+        return '放弃修改？';
+      case 'srs_note_types_discard_body':
+        return '对这个卡片模板的修改还没有保存。';
+      case 'srs_note_types_discard':
+        return '放弃';
+      case 'srs_note_types_conflict':
+        return '另一台设备同时修改了这个笔记类型，选择要保留的版本：';
+      case 'srs_note_types_empty':
+        return '没有笔记类型';
+      case 'srs_change_type_title':
+        return '更改笔记类型';
+      case 'srs_change_type_current':
+        return ({required Object name}) => '当前：${name}';
+      case 'srs_change_type_target':
+        return '新笔记类型';
+      case 'srs_change_type_fields_hint':
+        return '为新类型的每个字段选择用当前哪个字段的内容。';
+      case 'srs_change_type_templates_hint':
+        return '为新类型的每个卡片模板选择接手当前哪张卡：接手的卡保留复习记录和排程。';
+      case 'srs_change_type_cloze_hint':
+        return '卡片按序号对应：第 N 张卡对应填空 N（或新类型的第 N 个卡片模板）。';
+      case 'srs_change_type_nothing':
+        return '（无）';
+      case 'srs_change_type_apply':
+        return '更改';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) => '有 ${n} 张卡在新类型里没有对应，会被删除。';
+      case 'srs_change_type_unused':
+        return ({required Object names}) => '这些字段的内容不会带过去：${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            '更改 ${n} 条笔记的笔记类型？有 ${dropped} 张卡会被删除。';
+      case 'srs_change_type_done':
+        return '已更改笔记类型';
+      case 'srs_change_type_mixed':
+        return '所选笔记的笔记类型不同，请只选同一种类型的笔记。';
+      case 'srs_change_type_no_target':
+        return '还没有别的笔记类型，请先在「笔记类型」里新建。';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} 条笔记';
       default:
         return null;
     }
@@ -587501,6 +593247,168 @@ extension on _StringsZhHk {
       case 'srs_import_report_notetypes_duplicated':
         return ({required Object name}) =>
             'Note type “${name}” differs from the one here and was imported as a separate note type';
+      case 'srs_note_types_title':
+        return 'Note types';
+      case 'srs_note_types_summary':
+        return ({
+          required Object notes,
+          required Object fields,
+          required Object cards,
+        }) => '${notes} notes · ${fields} fields · ${cards} card types';
+      case 'srs_note_types_builtin':
+        return 'Built-in';
+      case 'srs_note_types_builtin_hint':
+        return 'Built-in note types can be edited but not deleted. Mining and the review marks in the lookup popup rely on their built-in fields, so those fields can be renamed or reordered but not deleted.';
+      case 'srs_note_types_add':
+        return 'Add note type';
+      case 'srs_note_types_stock_basic':
+        return 'Basic';
+      case 'srs_note_types_stock_reversed':
+        return 'Basic (and reversed card)';
+      case 'srs_note_types_stock_cloze':
+        return 'Cloze';
+      case 'srs_note_types_clone_of':
+        return ({required Object name}) => 'Clone: ${name}';
+      case 'srs_note_types_copy_name':
+        return ({required Object name}) => '${name} copy';
+      case 'srs_note_types_rename':
+        return 'Rename note type';
+      case 'srs_note_types_clone':
+        return 'Clone';
+      case 'srs_note_types_delete':
+        return 'Delete note type';
+      case 'srs_note_types_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete "${name}"? Its ${n} notes and their cards will be deleted too.';
+      case 'srs_note_types_name_empty':
+        return 'Enter a name';
+      case 'srs_note_types_name_duplicate':
+        return 'This name is already used';
+      case 'srs_note_types_name_invalid':
+        return 'Field names can\'t contain : { } " or start with # / ';
+      case 'srs_note_types_name_reserved':
+        return 'This name is reserved by Anki (FrontSide, Tags, Deck…)';
+      case 'srs_note_types_kind_standard':
+        return 'Standard';
+      case 'srs_note_types_kind_cloze':
+        return 'Cloze';
+      case 'srs_note_types_kind':
+        return 'Kind';
+      case 'srs_note_types_fields':
+        return 'Fields';
+      case 'srs_note_types_field_add':
+        return 'Add field';
+      case 'srs_note_types_field_name':
+        return 'Field name';
+      case 'srs_note_types_field_rename':
+        return 'Rename field';
+      case 'srs_note_types_field_delete':
+        return 'Delete field';
+      case 'srs_note_types_field_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the field "${name}"? ${n} notes have content in it, and that content will be lost.';
+      case 'srs_note_types_field_builtin':
+        return 'Built-in field';
+      case 'srs_note_types_field_last':
+        return 'A note type needs at least one field';
+      case 'srs_note_types_move_up':
+        return 'Move up';
+      case 'srs_note_types_move_down':
+        return 'Move down';
+      case 'srs_note_types_term_field':
+        return 'Word field';
+      case 'srs_note_types_term_field_hint':
+        return 'Review marks in the lookup popup match words against this field';
+      case 'srs_note_types_term_field_none':
+        return 'None';
+      case 'srs_note_types_templates':
+        return 'Card types';
+      case 'srs_note_types_template_add':
+        return 'Add card type';
+      case 'srs_note_types_template_name':
+        return 'Card type name';
+      case 'srs_note_types_template_rename':
+        return 'Rename card type';
+      case 'srs_note_types_template_delete':
+        return 'Delete card type';
+      case 'srs_note_types_template_delete_confirm':
+        return ({required Object name, required Object n}) =>
+            'Delete the card type "${name}"? ${n} cards made from it will be deleted.';
+      case 'srs_note_types_template_last':
+        return 'A note type needs at least one card type';
+      case 'srs_note_types_template_cloze_single':
+        return 'Cloze note types have exactly one card type';
+      case 'srs_note_types_template_edit':
+        return 'Edit card type';
+      case 'srs_note_types_styling':
+        return 'Styling';
+      case 'srs_note_types_styling_hint':
+        return 'Shared by all card types of this note type';
+      case 'srs_note_types_front':
+        return 'Front template';
+      case 'srs_note_types_back':
+        return 'Back template';
+      case 'srs_note_types_side_front':
+        return 'Front';
+      case 'srs_note_types_side_back':
+        return 'Back';
+      case 'srs_note_types_preview':
+        return 'Preview';
+      case 'srs_note_types_preview_empty':
+        return 'The front is empty for this note, so this card won\'t be shown.';
+      case 'srs_note_types_preview_sample':
+        return ({required Object note}) => 'Previewing with: ${note}';
+      case 'srs_note_types_preview_placeholder':
+        return 'No notes yet. The preview fills each field with its name.';
+      case 'srs_note_types_template_error':
+        return ({required Object error}) => 'Template error: ${error}';
+      case 'srs_note_types_insert_field':
+        return 'Insert field';
+      case 'srs_note_types_saved':
+        return 'Saved';
+      case 'srs_note_types_discard_title':
+        return 'Discard changes?';
+      case 'srs_note_types_discard_body':
+        return 'Your changes to this card type haven\'t been saved.';
+      case 'srs_note_types_discard':
+        return 'Discard';
+      case 'srs_note_types_conflict':
+        return 'Another device changed this note type at the same time. Pick the version to keep:';
+      case 'srs_note_types_empty':
+        return 'No note types';
+      case 'srs_change_type_title':
+        return 'Change note type';
+      case 'srs_change_type_current':
+        return ({required Object name}) => 'Current: ${name}';
+      case 'srs_change_type_target':
+        return 'New note type';
+      case 'srs_change_type_fields_hint':
+        return 'Choose which current field fills each field of the new type.';
+      case 'srs_change_type_templates_hint':
+        return 'Choose which current card each new card type takes over. The card keeps its review history and schedule.';
+      case 'srs_change_type_cloze_hint':
+        return 'Cards keep their number: card N becomes cloze N (or the N-th card type of the new type).';
+      case 'srs_change_type_nothing':
+        return '(nothing)';
+      case 'srs_change_type_apply':
+        return 'Change';
+      case 'srs_change_type_dropped':
+        return ({required Object n}) =>
+            '${n} cards have no counterpart in the new type and will be deleted.';
+      case 'srs_change_type_unused':
+        return ({required Object names}) =>
+            'Content not carried over: ${names}';
+      case 'srs_change_type_confirm':
+        return ({required Object n, required Object dropped}) =>
+            'Change the note type of ${n} notes? ${dropped} cards will be deleted.';
+      case 'srs_change_type_done':
+        return 'Note type changed';
+      case 'srs_change_type_mixed':
+        return 'The selected notes have different note types. Select notes of one type.';
+      case 'srs_change_type_no_target':
+        return 'There is no other note type yet. Create one under Note types first.';
+      case 'srs_change_type_notes':
+        return ({required Object n}) => '${n} notes';
       default:
         return null;
     }
