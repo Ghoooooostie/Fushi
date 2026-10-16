@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 127373 (7492 per locale)
+/// Strings: 127356 (7491 per locale)
 ///
-/// Built on 2026-10-15 at 00:03 UTC
+/// Built on 2026-10-15 at 23:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7661,7 +7661,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
 	String get ai_feature_translation => 'Paragraph translation';
 	String get ai_feature_translation_summary => 'Insert translation below each original paragraph';
 	String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	String get dict_detail_reference_tag => 'Referenced';
 	String get dict_detail_location_label => 'Location';
 	String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -15181,7 +15180,6 @@ class _StringsAr extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -22701,7 +22699,6 @@ class _StringsDe extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -30221,7 +30218,6 @@ class _StringsEs extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -37741,7 +37737,6 @@ class _StringsFr extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -45261,7 +45256,6 @@ class _StringsId extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -52781,7 +52775,6 @@ class _StringsIt extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -60301,7 +60294,6 @@ class _StringsJa extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -67821,7 +67813,6 @@ class _StringsKo extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -75341,7 +75332,6 @@ class _StringsNl extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -82861,7 +82851,6 @@ class _StringsPtBr extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -90381,7 +90370,6 @@ class _StringsRu extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -97901,7 +97889,6 @@ class _StringsTh extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -105421,7 +105408,6 @@ class _StringsTr extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -112941,7 +112927,6 @@ class _StringsVi extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -120474,7 +120459,6 @@ class _StringsZhCn extends _StringsEn {
 	@override String get ai_feature_translation => '段落翻译';
 	@override String get ai_feature_translation_summary => '在每段原文下方插入译文';
 	@override String get dict_import_reference => '引用词典文件夹（不复制）';
-	@override String get dict_import_reference_not_unpacked => '该目录没有 index.json，必须先经转换，请改用普通导入。';
 	@override String get dict_detail_reference_tag => '引用安装';
 	@override String get dict_detail_location_label => '安装位置';
 	@override String get dict_detail_location_internal => '应用内词典目录';
@@ -127994,7 +127978,6 @@ class _StringsZhHk extends _StringsEn {
 	@override String get sync_position_conflict_title => 'Playback position conflict';
 	@override String get sync_position_conflict_message => 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 	@override String get dict_import_reference => 'Reference dictionary folder (no copy)';
-	@override String get dict_import_reference_not_unpacked => 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 	@override String get dict_detail_reference_tag => 'Referenced';
 	@override String get dict_detail_location_label => 'Location';
 	@override String get dict_detail_location_internal => 'In-app dictionary folder';
@@ -135506,7 +135489,6 @@ extension on _StringsEn {
 			case 'ai_feature_translation': return 'Paragraph translation';
 			case 'ai_feature_translation_summary': return 'Insert translation below each original paragraph';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -143005,7 +142987,6 @@ extension on _StringsAr {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -150504,7 +150485,6 @@ extension on _StringsDe {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -158003,7 +157983,6 @@ extension on _StringsEs {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -165502,7 +165481,6 @@ extension on _StringsFr {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -173001,7 +172979,6 @@ extension on _StringsId {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -180500,7 +180477,6 @@ extension on _StringsIt {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -187999,7 +187975,6 @@ extension on _StringsJa {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -195498,7 +195473,6 @@ extension on _StringsKo {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -202997,7 +202971,6 @@ extension on _StringsNl {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -210496,7 +210469,6 @@ extension on _StringsPtBr {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -217995,7 +217967,6 @@ extension on _StringsRu {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -225494,7 +225465,6 @@ extension on _StringsTh {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -232993,7 +232963,6 @@ extension on _StringsTr {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -240492,7 +240461,6 @@ extension on _StringsVi {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';
@@ -248004,7 +247972,6 @@ extension on _StringsZhCn {
 			case 'ai_feature_translation': return '段落翻译';
 			case 'ai_feature_translation_summary': return '在每段原文下方插入译文';
 			case 'dict_import_reference': return '引用词典文件夹（不复制）';
-			case 'dict_import_reference_not_unpacked': return '该目录没有 index.json，必须先经转换，请改用普通导入。';
 			case 'dict_detail_reference_tag': return '引用安装';
 			case 'dict_detail_location_label': return '安装位置';
 			case 'dict_detail_location_internal': return '应用内词典目录';
@@ -255503,7 +255470,6 @@ extension on _StringsZhHk {
 			case 'sync_position_conflict_title': return 'Playback position conflict';
 			case 'sync_position_conflict_message': return 'These items were played on both this device and the paired device since the last sync. Choose which position to keep.';
 			case 'dict_import_reference': return 'Reference dictionary folder (no copy)';
-			case 'dict_import_reference_not_unpacked': return 'That folder has no index.json, so it must be converted first. Use the normal import instead.';
 			case 'dict_detail_reference_tag': return 'Referenced';
 			case 'dict_detail_location_label': return 'Location';
 			case 'dict_detail_location_internal': return 'In-app dictionary folder';

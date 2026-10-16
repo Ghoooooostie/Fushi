@@ -198,12 +198,236 @@ void main() {
       expect(installed.order, 3, reason: '重导继承原有排序');
     });
 
-    test('判据不过（无 index.json）时抛错、不落库', () async {
+    test('判据不过、又无包可转（空 / 杂物目录）时抛错、不落库', () async {
       final Directory dir = sourceDir('broken');
       File(path.join(dir.path, 'index.json')).deleteSync();
 
       await expectLater(importReferenced(dir), throwsA(isA<Exception>()));
-      expect(repo.dictionaries, isEmpty, reason: '不可引用的目录不该被登记');
+      expect(repo.dictionaries, isEmpty, reason: '无东西可登记的目录不该被登记');
+    });
+  });
+
+  group('②b 引用模式·原始包原地转换（zip / mdx 落回包所在目录）', () {
+    late Directory resourceRoot;
+    late DictionaryRepository repo;
+
+    /// 假转换器：真 FFI 起不了。按 native 的落盘习惯把产物写进
+    /// `<outputDir>/<title>/`，返回成功结果。
+    FushiDictsConverter fakeConverter({bool Function(String? title)? failFor}) {
+      return ({
+        required String zipPath,
+        required String outputDir,
+        String? breadcrumbDir,
+      }) async {
+        final String title = path.basenameWithoutExtension(zipPath);
+        if (failFor != null && failFor(title)) {
+          return const FushiImportResult(
+            success: false,
+            title: '',
+            termCount: 0,
+            metaCount: 0,
+            freqCount: 0,
+            pitchCount: 0,
+            mediaCount: 0,
+            kanjiCount: 0,
+            detectedType: '',
+            error: 'fake failure',
+          );
+        }
+        final Directory dir = Directory(path.join(outputDir, title));
+        dir.createSync(recursive: true);
+        File(path.join(dir.path, 'index.json')).writeAsStringSync(
+          '{"title":"$title","revision":"r1","sourceLanguage":"ja",'
+          '"targetLanguage":"zh"}',
+        );
+        File(path.join(dir.path, 'term_bank_1.json')).writeAsStringSync('[]');
+        return FushiImportResult(
+          success: true,
+          title: title,
+          termCount: 5,
+          metaCount: 0,
+          freqCount: 0,
+          pitchCount: 0,
+          mediaCount: 0,
+          kanjiCount: 0,
+          detectedType: 'term',
+          error: '',
+        );
+      };
+    }
+
+    DictionaryImportManager manager() => DictionaryImportManager(
+      dictRepo: repo,
+      resourceDirectory: resourceRoot,
+      formats: <String, DictionaryFormat>{},
+      converterForTest: fakeConverter(),
+    );
+
+    setUp(() {
+      resourceRoot = Directory(path.join(tempRoot.path, 'resource'))
+        ..createSync(recursive: true);
+      repo = DictionaryRepository(
+        FushiDatabase.forTesting(DatabaseConnection(NativeDatabase.memory())),
+      );
+    });
+
+    test('静态扫描：递归收集 zip/mdx/dsl，跳过点目录与已转换的子树', () {
+      final Directory root = Directory(path.join(tempRoot.path, 'scan'))
+        ..createSync(recursive: true);
+      File(path.join(root.path, 'B.zip')).writeAsStringSync('');
+      File(path.join(root.path, 'a.mdx')).writeAsStringSync('');
+      File(path.join(root.path, 'readme.txt')).writeAsStringSync('');
+      final Directory sub = Directory(path.join(root.path, '牛津'))..createSync();
+      File(path.join(sub.path, 'c.dsl')).writeAsStringSync('');
+      // 已转换产物（带 index.json）：整棵子树跳过，里面的包也不重复转
+      final Directory converted = Directory(path.join(root.path, '牛津大辞典'))
+        ..createSync();
+      File(path.join(converted.path, 'index.json')).writeAsStringSync('{}');
+      File(path.join(converted.path, 'nested.zip')).writeAsStringSync('');
+      final Directory stage = Directory(path.join(root.path, '.fushi_stage'))
+        ..createSync();
+      File(path.join(stage.path, 'stale.zip')).writeAsStringSync('');
+
+      expect(
+        DictionaryImportManager.referenceImportPackagePaths(root.path),
+        // sort() 是码点序：大写排在小写前
+        <String>[
+          File(path.join(root.path, 'B.zip')).path,
+          File(path.join(root.path, 'a.mdx')).path,
+          File(path.join(sub.path, 'c.dsl')).path,
+        ],
+      );
+    });
+
+    test('原始包转换后产物落回包所在目录，私有目录零占用', () async {
+      final Directory root = Directory(path.join(tempRoot.path, 'src'))
+        ..createSync(recursive: true);
+      File(path.join(root.path, 'COBUILD2002.mdx')).writeAsStringSync('fake');
+
+      await manager().importFromDirectory(
+        directory: root,
+        progressNotifier: ValueNotifier<String>(''),
+        countNotifier: ValueNotifier<int?>(null),
+        totalNotifier: ValueNotifier<int?>(null),
+        onImportSuccess: () {},
+        lowMemoryMode: false,
+        referenceOriginal: true,
+      );
+
+      final Dictionary installed = repo.dictionaries.single;
+      expect(installed.name, 'COBUILD2002');
+      expect(installed.resourcePath, path.join(root.path, 'COBUILD2002'));
+      expect(installed.isReferenced, isTrue);
+      expect(
+        Directory(path.join(resourceRoot.path, 'COBUILD2002')).existsSync(),
+        isFalse,
+        reason: '私有目录不该出现副本——产物在用户的 Documents 里',
+      );
+      // 暂存区用完即删
+      expect(
+        Directory(path.join(root.path, '.fushi_stage')).existsSync(),
+        isFalse,
+      );
+      // 产物可用：index.json 被读出来进了 metadata
+      expect(installed.revision, 'r1');
+    });
+
+    test('重复转换：覆盖自家旧产物、继承设置；私有副本被收走', () async {
+      final Directory root = Directory(path.join(tempRoot.path, 'src'))
+        ..createSync(recursive: true);
+      File(path.join(root.path, 'COBUILD2002.mdx')).writeAsStringSync('fake');
+
+      // 假装这本先前是**复制式**安装的：resourcePath 空（数据在私有目录），且用户
+      // 改过显示名 / 语言覆盖；私有目录里躺着占位的旧副本。
+      await repo.persistDictionary(
+        Dictionary(name: 'COBUILD2002', formatKey: 'yomichan', order: 3),
+      );
+      final Dictionary current = repo.dictionaries.single;
+      await repo.persistDictionary(
+        Dictionary(
+          name: current.name,
+          formatKey: current.formatKey,
+          order: current.order,
+          type: current.type,
+          metadata: current.metadata,
+          displayName: '牛高双解',
+          languageOverride: 'ja',
+        ),
+      );
+      final Directory staleCopy = Directory(
+        path.join(resourceRoot.path, 'COBUILD2002'),
+      )..createSync(recursive: true);
+      File(
+        path.join(staleCopy.path, 'old.term_bank.json'),
+      ).writeAsStringSync('[]');
+
+      await manager().importFromDirectory(
+        directory: root,
+        progressNotifier: ValueNotifier<String>(''),
+        countNotifier: ValueNotifier<int?>(null),
+        totalNotifier: ValueNotifier<int?>(null),
+        onImportSuccess: () {},
+        lowMemoryMode: false,
+        referenceOriginal: true,
+      );
+
+      expect(staleCopy.existsSync(), isFalse, reason: '换引用后私有副本是孤儿，必须收走');
+      final Dictionary after = repo.dictionaries.single;
+      expect(after.displayName, '牛高双解');
+      expect(after.languageOverride, 'ja');
+      expect(after.resourcePath, path.join(root.path, 'COBUILD2002'));
+    });
+
+    test('同名但非自家产物的目录绝不覆盖（用户文件夹让位、报失败）', () async {
+      final Directory root = Directory(path.join(tempRoot.path, 'src'))
+        ..createSync(recursive: true);
+      File(path.join(root.path, 'COBUILD2002.mdx')).writeAsStringSync('fake');
+      final Directory userDir = Directory(path.join(root.path, 'COBUILD2002'))
+        ..createSync();
+      final File userFile = File(path.join(userDir.path, 'notes.txt'))
+        ..writeAsStringSync('重要笔记');
+
+      await manager().importFromDirectory(
+        directory: root,
+        progressNotifier: ValueNotifier<String>(''),
+        countNotifier: ValueNotifier<int?>(null),
+        totalNotifier: ValueNotifier<int?>(null),
+        onImportSuccess: () {},
+        lowMemoryMode: false,
+        referenceOriginal: true,
+      );
+
+      expect(userFile.existsSync(), isTrue, reason: '用户的同名文件夹一个字节都不能动');
+      expect(repo.dictionaries, isEmpty, reason: '被拒的包不登记');
+    });
+
+    DictionaryImportManager managerWithFailingConverter(String title) =>
+        DictionaryImportManager(
+          dictRepo: repo,
+          resourceDirectory: resourceRoot,
+          formats: <String, DictionaryFormat>{},
+          converterForTest: fakeConverter(failFor: (String? t) => t == title),
+        );
+
+    test('单包失败不拖垮批量，其余照常登记', () async {
+      final Directory root = Directory(path.join(tempRoot.path, 'src'))
+        ..createSync(recursive: true);
+      File(path.join(root.path, 'bad.mdx')).writeAsStringSync('fake');
+      File(path.join(root.path, 'good.mdx')).writeAsStringSync('fake');
+
+      await managerWithFailingConverter('bad').importFromDirectory(
+        directory: root,
+        progressNotifier: ValueNotifier<String>(''),
+        countNotifier: ValueNotifier<int?>(null),
+        totalNotifier: ValueNotifier<int?>(null),
+        onImportSuccess: () {},
+        lowMemoryMode: false,
+        referenceOriginal: true,
+      );
+
+      final List<Dictionary> names = repo.dictionaries;
+      expect(names.length, 1);
+      expect(names.single.name, 'good');
     });
   });
 
@@ -239,19 +463,21 @@ void main() {
       );
     });
 
-    test('入口做准入校验而不静默回退成复制', () {
+    test('UI 不做准入预检：原始包也能走引用入口（分流交给导入器）', () {
       final String src = read(
         'lib/src/pages/implementations/dictionary_dialog_page.dart',
       );
       expect(
-        src.contains('isReferenceableDictionaryDirectory(pickedPath)'),
-        isTrue,
-        reason: '必须先在 picked 之后验一把',
+        src.contains('isReferenceableDictionaryDirectory'),
+        isFalse,
+        reason:
+            'UI 预检会把「一堆原包」的目录挡在门外；'
+            '能不能原地用、要不要转换是导入器的职责',
       );
       expect(
         src.contains('t.dict_import_reference_not_unpacked'),
-        isTrue,
-        reason: '不可引用时必须告诉用户原因；静默回退成复制等于悄悄吃掉双倍磁盘',
+        isFalse,
+        reason: '引用模式已支持原地转换，这条报错文案退役了',
       );
     });
 

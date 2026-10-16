@@ -7498,7 +7498,6 @@
   "ai_feature_translation": "段落翻译",
   "ai_feature_translation_summary": "在每段原文下方插入译文",
   "dict_import_reference": "引用词典文件夹（不复制）",
-  "dict_import_reference_not_unpacked": "该目录没有 index.json，必须先经转换，请改用普通导入。",
   "dict_detail_reference_tag": "引用安装",
   "dict_detail_location_label": "安装位置",
   "dict_detail_location_internal": "应用内词典目录",

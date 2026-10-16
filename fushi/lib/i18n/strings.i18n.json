@@ -7498,7 +7498,6 @@
   "ai_feature_translation": "Paragraph translation",
   "ai_feature_translation_summary": "Insert translation below each original paragraph",
   "dict_import_reference": "Reference dictionary folder (no copy)",
-  "dict_import_reference_not_unpacked": "That folder has no index.json, so it must be converted first. Use the normal import instead.",
   "dict_detail_reference_tag": "Referenced",
   "dict_detail_location_label": "Location",
   "dict_detail_location_internal": "In-app dictionary folder",

@@ -31,8 +31,6 @@ import 'package:fushi/src/utils/misc/channel_constants.dart';
 import 'package:fushi/utils.dart';
 import 'package:fushi/src/utils/misc/error_details_dialog.dart';
 import 'package:fushi/src/media/import/real_path_directory_picker.dart';
-import 'package:fushi_engine/models/dictionary_directory.dart'
-    show isReferenceableDictionaryDirectory;
 
 // ── BUG-1493：下载/导入两阶段的可归因进度 ──────────────────────────────
 //
@@ -1716,13 +1714,16 @@ class _DictionaryDialogPageState extends BasePageState {
     );
   }
 
-  /// v117 的显式入口：**引用**一个已经解压好的词典文件夹，不打包、不复制。
+  /// v117 的显式入口：**引用**词典数据，不让它进 app 私有目录。
   ///
-  /// 与「导入文件夹」的区别不在 UI 而在语义：后者把任何目录交给 native 转换后落进
-  /// 私有目录（等于多占一份体积），这里只登记路径——所以必须经
-  /// [isReferenceableDictionaryDirectory] 准入，不做「不行就悄悄回退成复制」：用户
-  /// 是冲着「不复制」点进来的，静默回退就等于悄悄吃掉双倍磁盘，而他以为自己省下来
-  /// 了。判不过就把原因说出来，由他自己决定改用普通导入。
+  /// 选中的目录里是什么都行，交给导入器分流（UI 不做预检）：
+  /// - 已解压好的词典目录（含 `index.json`）→ 原地登记，零转换；
+  /// - 原始包（`.zip` / `.mdx` / `.dsl`，含子目录里的）→ 逐个转换，**产物写回
+  ///   包所在目录**，原包不动、私有目录零占用。
+  ///
+  /// 与「导入文件夹」的区别在语义：后者把任何目录转换后落进私有目录（卸载即没、
+  /// 多占一份体积）。这里不做「不行就悄悄回退成复制」——用户是冲着「不复制」点
+  /// 进来的，静默回退等于悄悄吃掉双倍磁盘。
   ///
   /// 安卓只能用 `pickRealDirectoryPath`（原生把 SAF tree URI 解析回真实绝对路径）：
   /// 另一条 `pickAndCopyDirectory` 给的是私有目录里的副本，引用它等于引用一份清缓存
@@ -1741,15 +1742,6 @@ class _DictionaryDialogPageState extends BasePageState {
       pickedPath = await FilePicker.platform.getDirectoryPath();
     }
     if (pickedPath == null || !mounted) return;
-
-    if (!isReferenceableDictionaryDirectory(pickedPath)) {
-      FushiToast.show(
-        msg: t.dict_import_reference_not_unpacked,
-        toastLength: Toast.LENGTH_LONG,
-        severity: ToastSeverity.error,
-      );
-      return;
-    }
 
     await _runDirectoryImport(
       directory: Directory(pickedPath),
