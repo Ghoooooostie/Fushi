@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133756 (7868 per locale)
+/// Strings: 133773 (7869 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3129,6 +3129,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${n} of them cannot have their files deleted from here and will only be removed from the list.';
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
   String download_clear_completed_confirm_unsupported({required Object n}) =>
@@ -16304,6 +16306,9 @@ class _StringsAr extends _StringsEn {
   @override
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
   @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
@@ -35425,6 +35430,9 @@ class _StringsDe extends _StringsEn {
   @override
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
   @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
@@ -54871,6 +54879,9 @@ class _StringsEs extends _StringsEn {
   @override
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
   @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
@@ -74382,6 +74393,9 @@ class _StringsFr extends _StringsEn {
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
   @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
   @override
@@ -93857,6 +93871,9 @@ class _StringsId extends _StringsEn {
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
   @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
   @override
@@ -113118,6 +113135,9 @@ class _StringsIt extends _StringsEn {
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
   @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
   @override
@@ -132282,6 +132302,9 @@ class _StringsJa extends _StringsEn {
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
   @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
   @override
@@ -150647,6 +150670,9 @@ class _StringsKo extends _StringsEn {
   @override
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
   @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
@@ -169279,6 +169305,9 @@ class _StringsNl extends _StringsEn {
   @override
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
   @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
@@ -188628,6 +188657,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
   @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
@@ -208008,6 +208040,9 @@ class _StringsRu extends _StringsEn {
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
   @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
   @override
@@ -227286,6 +227321,9 @@ class _StringsTh extends _StringsEn {
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
   @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
   @override
@@ -246359,6 +246397,9 @@ class _StringsTr extends _StringsEn {
   @override
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
   @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
@@ -265575,6 +265616,9 @@ class _StringsVi extends _StringsEn {
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
   @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '${n} of them are seeding; deleting their files also stops seeding.';
   @override
@@ -284309,6 +284353,9 @@ class _StringsZhCn extends _StringsEn {
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '其中 ${n} 个只能连同文件一起删除，不勾选时保持不动。';
   @override
+  String get download_clear_completed_confirm_removes_library =>
+      '对应的视频也会从媒体库中移除。';
+  @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '其中 ${n} 个正在做种，删除文件会同时停止做种。';
   @override
@@ -301906,6 +301953,9 @@ class _StringsZhHk extends _StringsEn {
   String download_clear_completed_confirm_needs_delete({required Object n}) =>
       '其中 ${n} 個只能連同檔案一起刪除，不勾選時保持不動。';
   @override
+  String get download_clear_completed_confirm_removes_library =>
+      '對應的影片也會從媒體庫中移除。';
+  @override
   String download_clear_completed_confirm_seeding({required Object n}) =>
       '其中 ${n} 個正在做種，刪除檔案會同時停止做種。';
   @override
@@ -319230,6 +319280,8 @@ extension on _StringsEn {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -335559,6 +335611,8 @@ extension on _StringsAr {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -351910,6 +351964,8 @@ extension on _StringsDe {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -368298,6 +368354,8 @@ extension on _StringsEs {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -384691,6 +384749,8 @@ extension on _StringsFr {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -401066,6 +401126,8 @@ extension on _StringsId {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -417418,6 +417480,8 @@ extension on _StringsIt {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -433757,6 +433821,8 @@ extension on _StringsJa {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -450010,6 +450076,8 @@ extension on _StringsKo {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -466305,6 +466373,8 @@ extension on _StringsNl {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -482677,6 +482747,8 @@ extension on _StringsPtBr {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -499048,6 +499120,8 @@ extension on _StringsRu {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -515394,6 +515468,8 @@ extension on _StringsTh {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -531737,6 +531813,8 @@ extension on _StringsTr {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -548086,6 +548164,8 @@ extension on _StringsVi {
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) =>
             '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) =>
             '${n} of them are seeding; deleting their files also stops seeding.';
@@ -564358,6 +564438,8 @@ extension on _StringsZhCn {
         return ({required Object n}) => '其中 ${n} 个无法在这里删除文件，勾选后也只会移出列表。';
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) => '其中 ${n} 个只能连同文件一起删除，不勾选时保持不动。';
+      case 'download_clear_completed_confirm_removes_library':
+        return '对应的视频也会从媒体库中移除。';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) => '其中 ${n} 个正在做种，删除文件会同时停止做种。';
       case 'download_clear_completed_confirm_unsupported':
@@ -580518,6 +580600,8 @@ extension on _StringsZhHk {
         return ({required Object n}) => '其中 ${n} 個無法在這裡刪除檔案，勾選後也只會移出列表。';
       case 'download_clear_completed_confirm_needs_delete':
         return ({required Object n}) => '其中 ${n} 個只能連同檔案一起刪除，不勾選時保持不動。';
+      case 'download_clear_completed_confirm_removes_library':
+        return '對應的影片也會從媒體庫中移除。';
       case 'download_clear_completed_confirm_seeding':
         return ({required Object n}) => '其中 ${n} 個正在做種，刪除檔案會同時停止做種。';
       case 'download_clear_completed_confirm_unsupported':
