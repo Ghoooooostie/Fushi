@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133586 (7858 per locale)
+/// Strings: 133756 (7868 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5311,6 +5311,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_host_update_title => 'Host version';
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
   String get interconnect_moved_note =>
       'Connection & server settings are in the Fushi Interconnect category';
   String get interconnect_peer_list_empty =>
@@ -5586,6 +5594,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get leaderboard_kind_video => 'Videos';
   String get leaderboard_load_more => 'Load more';
   String get leaderboard_metric_chars => 'Characters';
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   String leaderboard_readers({required Object n}) => '${n} readers';
   String get leaderboard_recovery_export_hint =>
       'Use it to sign in on another device without email';
@@ -9102,7 +9116,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_p2p_relay_urls => 'Self-hosted relays (optional)';
   String get sync_p2p_relay_urls_hint =>
       'One iroh-relay URL per line. Leave empty to use iroh\'s public relays.';
-  String get sync_pair_allow => 'Allow';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   String sync_pair_confirm_identity_body({required Object device}) =>
       'You are pairing with ${device}. Confirm this is the device you expect before continuing.';
   String get sync_pair_confirm_identity_title => 'Confirm device';
@@ -9180,6 +9195,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_pair_unknown_device => 'Unknown device';
   String get sync_pair_upgrade_required =>
       'The other device runs an older version that cannot pair securely from this network. Update it, then pair again.';
+  String get sync_paired_peer_owner_badge => 'My device';
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   String get sync_paired_peer_remove => 'Remove';
   String get sync_paired_peer_removed => 'Removed paired device';
   String get sync_paired_peer_unknown => 'Unknown device';
@@ -19989,6 +20008,18 @@ class _StringsAr extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'إعدادات الاتصال والخادم موجودة في فئة ترابط Fushi';
   @override
@@ -20442,6 +20473,14 @@ class _StringsAr extends _StringsEn {
   String get leaderboard_load_more => 'تحميل المزيد';
   @override
   String get leaderboard_metric_chars => 'الأحرف';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} قارئ';
   @override
@@ -26557,7 +26596,9 @@ class _StringsAr extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'عنوان URL واحد لـ iroh-relay في كل سطر. اتركه فارغًا لاستخدام مرحّلات iroh العامة.';
   @override
-  String get sync_pair_allow => 'سماح';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'أنت تقترن بـ ${device}. تأكد أن هذا هو الجهاز المتوقع قبل المتابعة.';
@@ -26689,6 +26730,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'الجهاز الآخر يعمل بإصدار أقدم لا يمكنه الاقتران بأمان من هذه الشبكة. حدّثه، ثم أعد الاقتران.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'إزالة';
   @override
@@ -39167,6 +39215,18 @@ class _StringsDe extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Verbindungs- und Servereinstellungen befinden sich in der Kategorie Fushi Interconnect';
   @override
@@ -39636,6 +39696,14 @@ class _StringsDe extends _StringsEn {
   String get leaderboard_load_more => 'Mehr laden';
   @override
   String get leaderboard_metric_chars => 'Zeichen';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} Leser';
   @override
@@ -45875,7 +45943,9 @@ class _StringsDe extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Eine iroh-relay-URL pro Zeile. Leer lassen, um die öffentlichen Relays von iroh zu verwenden.';
   @override
-  String get sync_pair_allow => 'Erlauben';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Du koppelst mit ${device}. Bestätige, dass dies das erwartete Gerät ist, bevor du fortfährst.';
@@ -46010,6 +46080,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'Das andere Gerät verwendet eine ältere Version, die aus diesem Netzwerk nicht sicher koppeln kann. Aktualisieren Sie es und koppeln Sie erneut.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Entfernen';
   @override
@@ -58584,6 +58661,18 @@ class _StringsEs extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Los ajustes de conexión y servidor están en la categoría Fushi Interconnect';
   @override
@@ -59057,6 +59146,14 @@ class _StringsEs extends _StringsEn {
   String get leaderboard_load_more => 'Cargar más';
   @override
   String get leaderboard_metric_chars => 'Caracteres';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} lectores';
   @override
@@ -65309,7 +65406,9 @@ class _StringsEs extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Una URL de iroh-relay por línea. Déjalo vacío para usar los relés públicos de iroh.';
   @override
-  String get sync_pair_allow => 'Permitir';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Se está emparejando con ${device}. Confirme que es el dispositivo que espera antes de continuar.';
@@ -65445,6 +65544,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'El otro dispositivo tiene una versión más antigua que no puede emparejarse de forma segura desde esta red. Actualícelo, luego empareje de nuevo.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Eliminar';
   @override
@@ -78073,6 +78179,18 @@ class _StringsFr extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Les paramètres de connexion et de serveur sont dans la catégorie Fushi Interconnect';
   @override
@@ -78547,6 +78665,14 @@ class _StringsFr extends _StringsEn {
   String get leaderboard_load_more => 'Charger plus';
   @override
   String get leaderboard_metric_chars => 'Caractères';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} lecteurs';
   @override
@@ -84823,7 +84949,9 @@ class _StringsFr extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Une URL iroh-relay par ligne. Laissez vide pour utiliser les relais publics d\'iroh.';
   @override
-  String get sync_pair_allow => 'Autoriser';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Vous vous appairez avec ${device}. Confirmez qu\'il s\'agit bien de l\'appareil attendu avant de continuer.';
@@ -84959,6 +85087,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'L\'autre appareil exécute une version plus ancienne qui ne peut pas s\'appairer en toute sécurité depuis ce réseau. Mettez-le à jour, puis réappairez.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Retirer';
   @override
@@ -97465,6 +97600,18 @@ class _StringsId extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Pengaturan koneksi & server ada di kategori Fushi Interconnect';
   @override
@@ -97927,6 +98074,14 @@ class _StringsId extends _StringsEn {
   String get leaderboard_load_more => 'Muat lebih banyak';
   @override
   String get leaderboard_metric_chars => 'Karakter';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} pembaca';
   @override
@@ -104093,7 +104248,9 @@ class _StringsId extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Satu URL iroh-relay per baris. Kosongkan untuk menggunakan relay publik iroh.';
   @override
-  String get sync_pair_allow => 'Izinkan';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Anda memasangkan dengan ${device}. Konfirmasi bahwa ini adalah perangkat yang Anda harapkan sebelum melanjutkan.';
@@ -104227,6 +104384,13 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'Perangkat lain menjalankan versi yang lebih lama dan tidak bisa berpasangan secara aman dari jaringan ini. Perbarui perangkat tersebut, lalu pasangkan lagi.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Hapus';
   @override
@@ -116726,6 +116890,18 @@ class _StringsIt extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Le impostazioni di connessione e server sono nella categoria Fushi Interconnect';
   @override
@@ -117191,6 +117367,14 @@ class _StringsIt extends _StringsEn {
   String get leaderboard_load_more => 'Carica altro';
   @override
   String get leaderboard_metric_chars => 'Caratteri';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} lettori';
   @override
@@ -123422,7 +123606,9 @@ class _StringsIt extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Un URL iroh-relay per riga. Lascia vuoto per usare i relay pubblici di iroh.';
   @override
-  String get sync_pair_allow => 'Consenti';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Stai accoppiando con ${device}. Conferma che sia il dispositivo che ti aspetti prima di continuare.';
@@ -123558,6 +123744,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'L\'altro dispositivo ha una versione più vecchia che non può accoppiarsi in modo sicuro da questa rete. Aggiornalo, poi riaccoppia.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Rimuovi';
   @override
@@ -135657,6 +135850,18 @@ class _StringsJa extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note => '接続とサーバーの設定は Fushi インターコネクト カテゴリにあります';
   @override
   String get interconnect_peer_list_empty =>
@@ -136085,6 +136290,14 @@ class _StringsJa extends _StringsEn {
   String get leaderboard_load_more => 'さらに読み込む';
   @override
   String get leaderboard_metric_chars => '文字数';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} 人の読者';
   @override
@@ -141994,7 +142207,9 @@ class _StringsJa extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       '1 行に iroh-relay の URL を 1 件。空欄の場合は iroh の公開リレーを使用します。';
   @override
-  String get sync_pair_allow => '許可';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       '${device}とペアリングしようとしています。続行する前に、これが意図したデバイスであることを確認してください。';
@@ -142118,6 +142333,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       '相手のデバイスは古いバージョンを実行しており、このネットワークから安全にペアリングできません。更新してから再度ペアリングしてください。';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => '削除';
   @override
@@ -154007,6 +154229,18 @@ class _StringsKo extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note => '연결 및 서버 설정은 Fushi 인터커넥트 카테고리에 있습니다';
   @override
   String get interconnect_peer_list_empty =>
@@ -154434,6 +154668,14 @@ class _StringsKo extends _StringsEn {
   String get leaderboard_load_more => '더 보기';
   @override
   String get leaderboard_metric_chars => '글자 수';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '독자 ${n}명';
   @override
@@ -160361,7 +160603,9 @@ class _StringsKo extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       '한 줄에 iroh-relay URL 하나씩. 비워 두면 iroh의 공용 릴레이를 사용합니다.';
   @override
-  String get sync_pair_allow => '허용';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       '${device}와 페어링하려고 합니다. 계속하기 전에 예상하는 기기가 맞는지 확인하세요.';
@@ -160485,6 +160729,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       '상대 기기가 이 네트워크에서 안전하게 페어링할 수 없는 이전 버전을 실행 중입니다. 업데이트한 후 다시 페어링하세요.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => '제거';
   @override
@@ -172784,6 +173035,18 @@ class _StringsNl extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Verbindings- en serverinstellingen staan in de categorie Fushi Interconnect';
   @override
@@ -173252,6 +173515,14 @@ class _StringsNl extends _StringsEn {
   String get leaderboard_load_more => 'Meer laden';
   @override
   String get leaderboard_metric_chars => 'Tekens';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} lezers';
   @override
@@ -179461,7 +179732,9 @@ class _StringsNl extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Eén iroh-relay-URL per regel. Laat leeg om de openbare relays van iroh te gebruiken.';
   @override
-  String get sync_pair_allow => 'Toestaan';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Je koppelt met ${device}. Bevestig dat dit het verwachte apparaat is voordat je verdergaat.';
@@ -179596,6 +179869,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'Het andere apparaat draait een oudere versie die niet veilig kan koppelen vanuit dit netwerk. Werk het bij en koppel opnieuw.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Verwijderen';
   @override
@@ -192126,6 +192406,18 @@ class _StringsPtBr extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'As configurações de conexão e servidor estão na categoria Fushi Interconnect';
   @override
@@ -192593,6 +192885,14 @@ class _StringsPtBr extends _StringsEn {
   String get leaderboard_load_more => 'Carregar mais';
   @override
   String get leaderboard_metric_chars => 'Caracteres';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} leitores';
   @override
@@ -198811,7 +199111,9 @@ class _StringsPtBr extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Uma URL de iroh-relay por linha. Deixe vazio para usar os relays públicos do iroh.';
   @override
-  String get sync_pair_allow => 'Permitir';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Você está pareando com ${device}. Confirme que este é o dispositivo esperado antes de continuar.';
@@ -198945,6 +199247,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'O outro dispositivo roda uma versão antiga que não pode parear com segurança desta rede. Atualize-o e pareie novamente.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Remover';
   @override
@@ -211458,6 +211767,18 @@ class _StringsRu extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Настройки подключения и сервера находятся в разделе «Fushi Interconnect»';
   @override
@@ -211924,6 +212245,14 @@ class _StringsRu extends _StringsEn {
   String get leaderboard_load_more => 'Загрузить ещё';
   @override
   String get leaderboard_metric_chars => 'Символы';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => 'Читателей: ${n}';
   @override
@@ -218144,7 +218473,9 @@ class _StringsRu extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'По одному URL iroh-relay в строке. Оставьте пустым, чтобы использовать публичные ретрансляторы iroh.';
   @override
-  String get sync_pair_allow => 'Разрешить';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Вы сопрягаетесь с ${device}. Убедитесь, что это ожидаемое устройство, прежде чем продолжить.';
@@ -218278,6 +218609,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'На другом устройстве установлена устаревшая версия, которая не может безопасно выполнить сопряжение из этой сети. Обновите его, затем повторите сопряжение.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Удалить';
   @override
@@ -230644,6 +230982,18 @@ class _StringsTh extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'การตั้งค่าการเชื่อมต่อและเซิร์ฟเวอร์อยู่ในหมวด Fushi Interconnect';
   @override
@@ -231097,6 +231447,14 @@ class _StringsTh extends _StringsEn {
   String get leaderboard_load_more => 'โหลดเพิ่ม';
   @override
   String get leaderboard_metric_chars => 'ตัวอักษร';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => 'ผู้อ่าน ${n} คน';
   @override
@@ -237221,7 +237579,9 @@ class _StringsTh extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'URL ของ iroh-relay หนึ่งรายการต่อบรรทัด เว้นว่างไว้เพื่อใช้รีเลย์สาธารณะของ iroh';
   @override
-  String get sync_pair_allow => 'อนุญาต';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'คุณกำลังจับคู่กับ ${device} ยืนยันว่าเป็นอุปกรณ์ที่คุณต้องการก่อนดำเนินการต่อ';
@@ -237353,6 +237713,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'อุปกรณ์อีกเครื่องใช้เวอร์ชันเก่าที่ไม่สามารถจับคู่อย่างปลอดภัยจากเครือข่ายนี้ได้ อัปเดตแล้วจับคู่อีกครั้ง';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'ลบ';
   @override
@@ -249743,6 +250110,18 @@ class _StringsTr extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Bağlantı ve sunucu ayarları Fushi Interconnect kategorisindedir';
   @override
@@ -250205,6 +250584,14 @@ class _StringsTr extends _StringsEn {
   String get leaderboard_load_more => 'Daha fazla yükle';
   @override
   String get leaderboard_metric_chars => 'Karakter';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} okur';
   @override
@@ -256375,7 +256762,9 @@ class _StringsTr extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Satır başına bir iroh-relay URL\'si. iroh\'un genel aktarıcılarını kullanmak için boş bırakın.';
   @override
-  String get sync_pair_allow => 'İzin ver';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       '${device} ile eşleşiyorsunuz. Devam etmeden önce bunun beklediğiniz cihaz olduğunu onaylayın.';
@@ -256509,6 +256898,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'Diğer cihaz, bu ağdan güvenli eşleştirme yapamayan eski bir sürüm çalıştırıyor. Güncelleyin, ardından tekrar eşleştirin.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Kaldır';
   @override
@@ -268913,6 +269309,18 @@ class _StringsVi extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Cài đặt kết nối & máy chủ nằm trong danh mục Fushi Interconnect';
   @override
@@ -269371,6 +269779,14 @@ class _StringsVi extends _StringsEn {
   String get leaderboard_load_more => 'Tải thêm';
   @override
   String get leaderboard_metric_chars => 'Ký tự';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} người đọc';
   @override
@@ -275516,7 +275932,9 @@ class _StringsVi extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Mỗi dòng một URL iroh-relay. Để trống để dùng relay công khai của iroh.';
   @override
-  String get sync_pair_allow => 'Cho phép';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Bạn đang ghép nối với ${device}. Xác nhận đây là thiết bị bạn mong đợi trước khi tiếp tục.';
@@ -275649,6 +276067,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'Thiết bị kia chạy phiên bản cũ không thể ghép nối an toàn từ mạng này. Cập nhật nó, rồi ghép nối lại.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Xóa';
   @override
@@ -287273,6 +287698,16 @@ class _StringsZhCn extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       '主机已是最新（${version}）';
   @override
+  String get interconnect_leaderboard_follow_login_toggle => '跟随已配对设备自动登录';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      '本机没有 Fushi 账户时，自动使用已登录的已配对设备的账户登录（仅当对方把本机标记为「我的设备」时生效）。只发送本机新生成的公钥；主动退出后不会再自动登录。';
+  @override
+  String get interconnect_leaderboard_link_host_toggle => '允许已配对设备自动登录我的账户';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      '仅对标记为「我的设备」的已配对设备生效：它们没有 Fushi 账户时会自动使用本机的账户登录（需开启 HTTPS）。本机私钥不会离开本机。';
+  @override
   String get interconnect_moved_note => '互联连接与本机服务器设置在「Fushi 互联」分类';
   @override
   String get interconnect_peer_list_empty =>
@@ -287681,6 +288116,14 @@ class _StringsZhCn extends _StringsEn {
   String get leaderboard_load_more => '加载更多';
   @override
   String get leaderboard_metric_chars => '字数';
+  @override
+  String leaderboard_paired_login_done({
+    required Object device,
+    required Object name,
+  }) => '已使用 ${device} 的账户登录：${name}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      '已使用已配对设备的账户登录：${name}';
   @override
   String leaderboard_readers({required Object n}) => '${n} 人';
   @override
@@ -293343,7 +293786,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_p2p_relay_urls_hint => '每行一个 iroh-relay 地址；留空则用 iroh 公共中继。';
   @override
-  String get sync_pair_allow => '允许';
+  String get sync_pair_allow_interconnect_only => '仅互联';
+  @override
+  String get sync_pair_allow_owner_device => '允许 · 这是我的设备';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       '你正在与 ${device} 配对。继续前请确认这是你预期的设备。';
@@ -293460,6 +293905,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       '对方版本过旧，无法在当前网络下安全配对（需要 PIN）。请更新对方后重新配对。';
+  @override
+  String get sync_paired_peer_owner_badge => '我的设备';
+  @override
+  String get sync_paired_peer_owner_mark => '标记为我的设备（可跟随本机 Fushi 账户自动登录）';
+  @override
+  String get sync_paired_peer_owner_unmark => '取消标记为我的设备';
   @override
   String get sync_paired_peer_remove => '移除';
   @override
@@ -304891,6 +305342,16 @@ class _StringsZhHk extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle => '跟隨已配對裝置自動登入';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      '本機沒有 Fushi 帳戶時，自動使用已登入的已配對裝置的帳戶登入（僅當對方把本機標記為「我的裝置」時生效）。只傳送本機新產生的公鑰；主動登出後不會再自動登入。';
+  @override
+  String get interconnect_leaderboard_link_host_toggle => '允許已配對裝置自動登入我的帳戶';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      '僅對標記為「我的裝置」的已配對裝置生效：它們沒有 Fushi 帳戶時會自動使用本機的帳戶登入（需開啟 HTTPS）。本機私鑰不會離開本機。';
+  @override
   String get interconnect_moved_note => '互聯連接與本機伺服器設定在「Fushi 互聯」分類';
   @override
   String get interconnect_peer_list_empty =>
@@ -305299,6 +305760,14 @@ class _StringsZhHk extends _StringsEn {
   String get leaderboard_load_more => '加載更多';
   @override
   String get leaderboard_metric_chars => '字數';
+  @override
+  String leaderboard_paired_login_done({
+    required Object device,
+    required Object name,
+  }) => '已使用 ${device} 的帳戶登入：${name}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      '已使用已配對裝置的帳戶登入：${name}';
   @override
   String leaderboard_readers({required Object n}) => '${n} 人';
   @override
@@ -311049,7 +311518,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_p2p_relay_urls_hint => '每行一個 iroh-relay 地址；留空則用 iroh 公共中繼。';
   @override
-  String get sync_pair_allow => '允許';
+  String get sync_pair_allow_interconnect_only => '僅互聯';
+  @override
+  String get sync_pair_allow_owner_device => '允許 · 這是我的裝置';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       '你正在與 ${device} 配對。繼續前請確認這是你預期的設備。';
@@ -311166,6 +311637,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       '對方版本過舊，無法在當前網路下安全配對（需要 PIN）。請更新對方後重新配對。';
+  @override
+  String get sync_paired_peer_owner_badge => '我的裝置';
+  @override
+  String get sync_paired_peer_owner_mark => '標記為我的裝置（可跟隨本機 Fushi 帳戶自動登入）';
+  @override
+  String get sync_paired_peer_owner_unmark => '取消標記為我的裝置';
   @override
   String get sync_paired_peer_remove => '移除';
   @override
@@ -321905,6 +322382,14 @@ extension on _StringsEn {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Fushi Interconnect category';
       case 'interconnect_peer_list_empty':
@@ -322284,6 +322769,12 @@ extension on _StringsEn {
         return 'Load more';
       case 'leaderboard_metric_chars':
         return 'Characters';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} readers';
       case 'leaderboard_recovery_export_hint':
@@ -327653,8 +328144,10 @@ extension on _StringsEn {
         return 'Self-hosted relays (optional)';
       case 'sync_p2p_relay_urls_hint':
         return 'One iroh-relay URL per line. Leave empty to use iroh\'s public relays.';
-      case 'sync_pair_allow':
-        return 'Allow';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'You are pairing with ${device}. Confirm this is the device you expect before continuing.';
@@ -327766,6 +328259,12 @@ extension on _StringsEn {
         return 'Unknown device';
       case 'sync_pair_upgrade_required':
         return 'The other device runs an older version that cannot pair securely from this network. Update it, then pair again.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Remove';
       case 'sync_paired_peer_removed':
@@ -338205,6 +338704,14 @@ extension on _StringsAr {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'إعدادات الاتصال والخادم موجودة في فئة ترابط Fushi';
       case 'interconnect_peer_list_empty':
@@ -338581,6 +339088,12 @@ extension on _StringsAr {
         return 'تحميل المزيد';
       case 'leaderboard_metric_chars':
         return 'الأحرف';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} قارئ';
       case 'leaderboard_recovery_export_hint':
@@ -343946,8 +344459,10 @@ extension on _StringsAr {
         return 'مرحّلات مستضافة ذاتيًا (اختياري)';
       case 'sync_p2p_relay_urls_hint':
         return 'عنوان URL واحد لـ iroh-relay في كل سطر. اتركه فارغًا لاستخدام مرحّلات iroh العامة.';
-      case 'sync_pair_allow':
-        return 'سماح';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'أنت تقترن بـ ${device}. تأكد أن هذا هو الجهاز المتوقع قبل المتابعة.';
@@ -344059,6 +344574,12 @@ extension on _StringsAr {
         return 'جهاز غير معروف';
       case 'sync_pair_upgrade_required':
         return 'الجهاز الآخر يعمل بإصدار أقدم لا يمكنه الاقتران بأمان من هذه الشبكة. حدّثه، ثم أعد الاقتران.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'إزالة';
       case 'sync_paired_peer_removed':
@@ -354539,6 +355060,14 @@ extension on _StringsDe {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Verbindungs- und Servereinstellungen befinden sich in der Kategorie Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -354919,6 +355448,12 @@ extension on _StringsDe {
         return 'Mehr laden';
       case 'leaderboard_metric_chars':
         return 'Zeichen';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} Leser';
       case 'leaderboard_recovery_export_hint':
@@ -360307,8 +360842,10 @@ extension on _StringsDe {
         return 'Selbst gehostete Relays (optional)';
       case 'sync_p2p_relay_urls_hint':
         return 'Eine iroh-relay-URL pro Zeile. Leer lassen, um die öffentlichen Relays von iroh zu verwenden.';
-      case 'sync_pair_allow':
-        return 'Erlauben';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Du koppelst mit ${device}. Bestätige, dass dies das erwartete Gerät ist, bevor du fortfährst.';
@@ -360420,6 +360957,12 @@ extension on _StringsDe {
         return 'Unbekanntes Gerät';
       case 'sync_pair_upgrade_required':
         return 'Das andere Gerät verwendet eine ältere Version, die aus diesem Netzwerk nicht sicher koppeln kann. Aktualisieren Sie es und koppeln Sie erneut.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Entfernen';
       case 'sync_paired_peer_removed':
@@ -370900,6 +371443,14 @@ extension on _StringsEs {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Los ajustes de conexión y servidor están en la categoría Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -371278,6 +371829,12 @@ extension on _StringsEs {
         return 'Cargar más';
       case 'leaderboard_metric_chars':
         return 'Caracteres';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} lectores';
       case 'leaderboard_recovery_export_hint':
@@ -376664,8 +377221,10 @@ extension on _StringsEs {
         return 'Relés autoalojados (opcional)';
       case 'sync_p2p_relay_urls_hint':
         return 'Una URL de iroh-relay por línea. Déjalo vacío para usar los relés públicos de iroh.';
-      case 'sync_pair_allow':
-        return 'Permitir';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Se está emparejando con ${device}. Confirme que es el dispositivo que espera antes de continuar.';
@@ -376777,6 +377336,12 @@ extension on _StringsEs {
         return 'Dispositivo desconocido';
       case 'sync_pair_upgrade_required':
         return 'El otro dispositivo tiene una versión más antigua que no puede emparejarse de forma segura desde esta red. Actualícelo, luego empareje de nuevo.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Eliminar';
       case 'sync_paired_peer_removed':
@@ -387269,6 +387834,14 @@ extension on _StringsFr {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Les paramètres de connexion et de serveur sont dans la catégorie Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -387647,6 +388220,12 @@ extension on _StringsFr {
         return 'Charger plus';
       case 'leaderboard_metric_chars':
         return 'Caractères';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} lecteurs';
       case 'leaderboard_recovery_export_hint':
@@ -393032,8 +393611,10 @@ extension on _StringsFr {
         return 'Relais auto-hébergés (facultatif)';
       case 'sync_p2p_relay_urls_hint':
         return 'Une URL iroh-relay par ligne. Laissez vide pour utiliser les relais publics d\'iroh.';
-      case 'sync_pair_allow':
-        return 'Autoriser';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Vous vous appairez avec ${device}. Confirmez qu\'il s\'agit bien de l\'appareil attendu avant de continuer.';
@@ -393145,6 +393726,12 @@ extension on _StringsFr {
         return 'Appareil inconnu';
       case 'sync_pair_upgrade_required':
         return 'L\'autre appareil exécute une version plus ancienne qui ne peut pas s\'appairer en toute sécurité depuis ce réseau. Mettez-le à jour, puis réappairez.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Retirer';
       case 'sync_paired_peer_removed':
@@ -403613,6 +404200,14 @@ extension on _StringsId {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Pengaturan koneksi & server ada di kategori Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -403991,6 +404586,12 @@ extension on _StringsId {
         return 'Muat lebih banyak';
       case 'leaderboard_metric_chars':
         return 'Karakter';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} pembaca';
       case 'leaderboard_recovery_export_hint':
@@ -409361,8 +409962,10 @@ extension on _StringsId {
         return 'Relay yang dihosting sendiri (opsional)';
       case 'sync_p2p_relay_urls_hint':
         return 'Satu URL iroh-relay per baris. Kosongkan untuk menggunakan relay publik iroh.';
-      case 'sync_pair_allow':
-        return 'Izinkan';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Anda memasangkan dengan ${device}. Konfirmasi bahwa ini adalah perangkat yang Anda harapkan sebelum melanjutkan.';
@@ -409474,6 +410077,12 @@ extension on _StringsId {
         return 'Perangkat tidak dikenal';
       case 'sync_pair_upgrade_required':
         return 'Perangkat lain menjalankan versi yang lebih lama dan tidak bisa berpasangan secara aman dari jaringan ini. Perbarui perangkat tersebut, lalu pasangkan lagi.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Hapus';
       case 'sync_paired_peer_removed':
@@ -419941,6 +420550,14 @@ extension on _StringsIt {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Le impostazioni di connessione e server sono nella categoria Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -420319,6 +420936,12 @@ extension on _StringsIt {
         return 'Carica altro';
       case 'leaderboard_metric_chars':
         return 'Caratteri';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} lettori';
       case 'leaderboard_recovery_export_hint':
@@ -425700,8 +426323,10 @@ extension on _StringsIt {
         return 'Relay self-hosted (facoltativo)';
       case 'sync_p2p_relay_urls_hint':
         return 'Un URL iroh-relay per riga. Lascia vuoto per usare i relay pubblici di iroh.';
-      case 'sync_pair_allow':
-        return 'Consenti';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Stai accoppiando con ${device}. Conferma che sia il dispositivo che ti aspetti prima di continuare.';
@@ -425813,6 +426438,12 @@ extension on _StringsIt {
         return 'Dispositivo sconosciuto';
       case 'sync_pair_upgrade_required':
         return 'L\'altro dispositivo ha una versione più vecchia che non può accoppiarsi in modo sicuro da questa rete. Aggiornalo, poi riaccoppia.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Rimuovi';
       case 'sync_paired_peer_removed':
@@ -436238,6 +436869,14 @@ extension on _StringsJa {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return '接続とサーバーの設定は Fushi インターコネクト カテゴリにあります';
       case 'interconnect_peer_list_empty':
@@ -436614,6 +437253,12 @@ extension on _StringsJa {
         return 'さらに読み込む';
       case 'leaderboard_metric_chars':
         return '文字数';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} 人の読者';
       case 'leaderboard_recovery_export_hint':
@@ -441961,8 +442606,10 @@ extension on _StringsJa {
         return 'セルフホストのリレー（任意）';
       case 'sync_p2p_relay_urls_hint':
         return '1 行に iroh-relay の URL を 1 件。空欄の場合は iroh の公開リレーを使用します。';
-      case 'sync_pair_allow':
-        return '許可';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             '${device}とペアリングしようとしています。続行する前に、これが意図したデバイスであることを確認してください。';
@@ -442074,6 +442721,12 @@ extension on _StringsJa {
         return '不明なデバイス';
       case 'sync_pair_upgrade_required':
         return '相手のデバイスは古いバージョンを実行しており、このネットワークから安全にペアリングできません。更新してから再度ペアリングしてください。';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return '削除';
       case 'sync_paired_peer_removed':
@@ -452467,6 +453120,14 @@ extension on _StringsKo {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return '연결 및 서버 설정은 Fushi 인터커넥트 카테고리에 있습니다';
       case 'interconnect_peer_list_empty':
@@ -452843,6 +453504,12 @@ extension on _StringsKo {
         return '더 보기';
       case 'leaderboard_metric_chars':
         return '글자 수';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '독자 ${n}명';
       case 'leaderboard_recovery_export_hint':
@@ -458191,8 +458858,10 @@ extension on _StringsKo {
         return '자체 호스팅 릴레이(선택 사항)';
       case 'sync_p2p_relay_urls_hint':
         return '한 줄에 iroh-relay URL 하나씩. 비워 두면 iroh의 공용 릴레이를 사용합니다.';
-      case 'sync_pair_allow':
-        return '허용';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             '${device}와 페어링하려고 합니다. 계속하기 전에 예상하는 기기가 맞는지 확인하세요.';
@@ -458304,6 +458973,12 @@ extension on _StringsKo {
         return '알 수 없는 기기';
       case 'sync_pair_upgrade_required':
         return '상대 기기가 이 네트워크에서 안전하게 페어링할 수 없는 이전 버전을 실행 중입니다. 업데이트한 후 다시 페어링하세요.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return '제거';
       case 'sync_paired_peer_removed':
@@ -468748,6 +469423,14 @@ extension on _StringsNl {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Verbindings- en serverinstellingen staan in de categorie Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -469128,6 +469811,12 @@ extension on _StringsNl {
         return 'Meer laden';
       case 'leaderboard_metric_chars':
         return 'Tekens';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} lezers';
       case 'leaderboard_recovery_export_hint':
@@ -474511,8 +475200,10 @@ extension on _StringsNl {
         return 'Zelfgehoste relays (optioneel)';
       case 'sync_p2p_relay_urls_hint':
         return 'Eén iroh-relay-URL per regel. Laat leeg om de openbare relays van iroh te gebruiken.';
-      case 'sync_pair_allow':
-        return 'Toestaan';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Je koppelt met ${device}. Bevestig dat dit het verwachte apparaat is voordat je verdergaat.';
@@ -474624,6 +475315,12 @@ extension on _StringsNl {
         return 'Onbekend apparaat';
       case 'sync_pair_upgrade_required':
         return 'Het andere apparaat draait een oudere versie die niet veilig kan koppelen vanuit dit netwerk. Werk het bij en koppel opnieuw.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Verwijderen';
       case 'sync_paired_peer_removed':
@@ -485094,6 +485791,14 @@ extension on _StringsPtBr {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'As configurações de conexão e servidor estão na categoria Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -485472,6 +486177,12 @@ extension on _StringsPtBr {
         return 'Carregar mais';
       case 'leaderboard_metric_chars':
         return 'Caracteres';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} leitores';
       case 'leaderboard_recovery_export_hint':
@@ -490852,8 +491563,10 @@ extension on _StringsPtBr {
         return 'Relays auto-hospedados (opcional)';
       case 'sync_p2p_relay_urls_hint':
         return 'Uma URL de iroh-relay por linha. Deixe vazio para usar os relays públicos do iroh.';
-      case 'sync_pair_allow':
-        return 'Permitir';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Você está pareando com ${device}. Confirme que este é o dispositivo esperado antes de continuar.';
@@ -490965,6 +491678,12 @@ extension on _StringsPtBr {
         return 'Dispositivo desconhecido';
       case 'sync_pair_upgrade_required':
         return 'O outro dispositivo roda uma versão antiga que não pode parear com segurança desta rede. Atualize-o e pareie novamente.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Remover';
       case 'sync_paired_peer_removed':
@@ -501440,6 +502159,14 @@ extension on _StringsRu {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Настройки подключения и сервера находятся в разделе «Fushi Interconnect»';
       case 'interconnect_peer_list_empty':
@@ -501818,6 +502545,12 @@ extension on _StringsRu {
         return 'Загрузить ещё';
       case 'leaderboard_metric_chars':
         return 'Символы';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => 'Читателей: ${n}';
       case 'leaderboard_recovery_export_hint':
@@ -507199,8 +507932,10 @@ extension on _StringsRu {
         return 'Собственные ретрансляторы (необязательно)';
       case 'sync_p2p_relay_urls_hint':
         return 'По одному URL iroh-relay в строке. Оставьте пустым, чтобы использовать публичные ретрансляторы iroh.';
-      case 'sync_pair_allow':
-        return 'Разрешить';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Вы сопрягаетесь с ${device}. Убедитесь, что это ожидаемое устройство, прежде чем продолжить.';
@@ -507312,6 +508047,12 @@ extension on _StringsRu {
         return 'Неизвестное устройство';
       case 'sync_pair_upgrade_required':
         return 'На другом устройстве установлена устаревшая версия, которая не может безопасно выполнить сопряжение из этой сети. Обновите его, затем повторите сопряжение.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Удалить';
       case 'sync_paired_peer_removed':
@@ -517758,6 +518499,14 @@ extension on _StringsTh {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'การตั้งค่าการเชื่อมต่อและเซิร์ฟเวอร์อยู่ในหมวด Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -518137,6 +518886,12 @@ extension on _StringsTh {
         return 'โหลดเพิ่ม';
       case 'leaderboard_metric_chars':
         return 'ตัวอักษร';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => 'ผู้อ่าน ${n} คน';
       case 'leaderboard_recovery_export_hint':
@@ -523503,8 +524258,10 @@ extension on _StringsTh {
         return 'รีเลย์ที่โฮสต์เอง (ไม่บังคับ)';
       case 'sync_p2p_relay_urls_hint':
         return 'URL ของ iroh-relay หนึ่งรายการต่อบรรทัด เว้นว่างไว้เพื่อใช้รีเลย์สาธารณะของ iroh';
-      case 'sync_pair_allow':
-        return 'อนุญาต';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'คุณกำลังจับคู่กับ ${device} ยืนยันว่าเป็นอุปกรณ์ที่คุณต้องการก่อนดำเนินการต่อ';
@@ -523616,6 +524373,12 @@ extension on _StringsTh {
         return 'อุปกรณ์ที่ไม่รู้จัก';
       case 'sync_pair_upgrade_required':
         return 'อุปกรณ์อีกเครื่องใช้เวอร์ชันเก่าที่ไม่สามารถจับคู่อย่างปลอดภัยจากเครือข่ายนี้ได้ อัปเดตแล้วจับคู่อีกครั้ง';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'ลบ';
       case 'sync_paired_peer_removed':
@@ -534077,6 +534840,14 @@ extension on _StringsTr {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Bağlantı ve sunucu ayarları Fushi Interconnect kategorisindedir';
       case 'interconnect_peer_list_empty':
@@ -534456,6 +535227,12 @@ extension on _StringsTr {
         return 'Daha fazla yükle';
       case 'leaderboard_metric_chars':
         return 'Karakter';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} okur';
       case 'leaderboard_recovery_export_hint':
@@ -539827,8 +540604,10 @@ extension on _StringsTr {
         return 'Kendi barındırdığınız aktarıcılar (isteğe bağlı)';
       case 'sync_p2p_relay_urls_hint':
         return 'Satır başına bir iroh-relay URL\'si. iroh\'un genel aktarıcılarını kullanmak için boş bırakın.';
-      case 'sync_pair_allow':
-        return 'İzin ver';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             '${device} ile eşleşiyorsunuz. Devam etmeden önce bunun beklediğiniz cihaz olduğunu onaylayın.';
@@ -539940,6 +540719,12 @@ extension on _StringsTr {
         return 'Bilinmeyen cihaz';
       case 'sync_pair_upgrade_required':
         return 'Diğer cihaz, bu ağdan güvenli eşleştirme yapamayan eski bir sürüm çalıştırıyor. Güncelleyin, ardından tekrar eşleştirin.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Kaldır';
       case 'sync_paired_peer_removed':
@@ -550399,6 +551184,14 @@ extension on _StringsVi {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Cài đặt kết nối & máy chủ nằm trong danh mục Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -550777,6 +551570,12 @@ extension on _StringsVi {
         return 'Tải thêm';
       case 'leaderboard_metric_chars':
         return 'Ký tự';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} người đọc';
       case 'leaderboard_recovery_export_hint':
@@ -556147,8 +556946,10 @@ extension on _StringsVi {
         return 'Relay tự lưu trữ (tùy chọn)';
       case 'sync_p2p_relay_urls_hint':
         return 'Mỗi dòng một URL iroh-relay. Để trống để dùng relay công khai của iroh.';
-      case 'sync_pair_allow':
-        return 'Cho phép';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Bạn đang ghép nối với ${device}. Xác nhận đây là thiết bị bạn mong đợi trước khi tiếp tục.';
@@ -556260,6 +557061,12 @@ extension on _StringsVi {
         return 'Thiết bị không xác định';
       case 'sync_pair_upgrade_required':
         return 'Thiết bị kia chạy phiên bản cũ không thể ghép nối an toàn từ mạng này. Cập nhật nó, rồi ghép nối lại.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Xóa';
       case 'sync_paired_peer_removed':
@@ -566617,6 +567424,14 @@ extension on _StringsZhCn {
         return '主机版本';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => '主机已是最新（${version}）';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return '跟随已配对设备自动登录';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return '本机没有 Fushi 账户时，自动使用已登录的已配对设备的账户登录（仅当对方把本机标记为「我的设备」时生效）。只发送本机新生成的公钥；主动退出后不会再自动登录。';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return '允许已配对设备自动登录我的账户';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return '仅对标记为「我的设备」的已配对设备生效：它们没有 Fushi 账户时会自动使用本机的账户登录（需开启 HTTPS）。本机私钥不会离开本机。';
       case 'interconnect_moved_note':
         return '互联连接与本机服务器设置在「Fushi 互联」分类';
       case 'interconnect_peer_list_empty':
@@ -566992,6 +567807,11 @@ extension on _StringsZhCn {
         return '加载更多';
       case 'leaderboard_metric_chars':
         return '字数';
+      case 'leaderboard_paired_login_done':
+        return ({required Object device, required Object name}) =>
+            '已使用 ${device} 的账户登录：${name}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) => '已使用已配对设备的账户登录：${name}';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} 人';
       case 'leaderboard_recovery_export_hint':
@@ -572313,8 +573133,10 @@ extension on _StringsZhCn {
         return '自建中继（可选）';
       case 'sync_p2p_relay_urls_hint':
         return '每行一个 iroh-relay 地址；留空则用 iroh 公共中继。';
-      case 'sync_pair_allow':
-        return '允许';
+      case 'sync_pair_allow_interconnect_only':
+        return '仅互联';
+      case 'sync_pair_allow_owner_device':
+        return '允许 · 这是我的设备';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             '你正在与 ${device} 配对。继续前请确认这是你预期的设备。';
@@ -572426,6 +573248,12 @@ extension on _StringsZhCn {
         return '未知设备';
       case 'sync_pair_upgrade_required':
         return '对方版本过旧，无法在当前网络下安全配对（需要 PIN）。请更新对方后重新配对。';
+      case 'sync_paired_peer_owner_badge':
+        return '我的设备';
+      case 'sync_paired_peer_owner_mark':
+        return '标记为我的设备（可跟随本机 Fushi 账户自动登录）';
+      case 'sync_paired_peer_owner_unmark':
+        return '取消标记为我的设备';
       case 'sync_paired_peer_remove':
         return '移除';
       case 'sync_paired_peer_removed':
@@ -582767,6 +583595,14 @@ extension on _StringsZhHk {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return '跟隨已配對裝置自動登入';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return '本機沒有 Fushi 帳戶時，自動使用已登入的已配對裝置的帳戶登入（僅當對方把本機標記為「我的裝置」時生效）。只傳送本機新產生的公鑰；主動登出後不會再自動登入。';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return '允許已配對裝置自動登入我的帳戶';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return '僅對標記為「我的裝置」的已配對裝置生效：它們沒有 Fushi 帳戶時會自動使用本機的帳戶登入（需開啟 HTTPS）。本機私鑰不會離開本機。';
       case 'interconnect_moved_note':
         return '互聯連接與本機伺服器設定在「Fushi 互聯」分類';
       case 'interconnect_peer_list_empty':
@@ -583142,6 +583978,11 @@ extension on _StringsZhHk {
         return '加載更多';
       case 'leaderboard_metric_chars':
         return '字數';
+      case 'leaderboard_paired_login_done':
+        return ({required Object device, required Object name}) =>
+            '已使用 ${device} 的帳戶登入：${name}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) => '已使用已配對裝置的帳戶登入：${name}';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} 人';
       case 'leaderboard_recovery_export_hint':
@@ -588481,8 +589322,10 @@ extension on _StringsZhHk {
         return '自建中繼（可選）';
       case 'sync_p2p_relay_urls_hint':
         return '每行一個 iroh-relay 地址；留空則用 iroh 公共中繼。';
-      case 'sync_pair_allow':
-        return '允許';
+      case 'sync_pair_allow_interconnect_only':
+        return '僅互聯';
+      case 'sync_pair_allow_owner_device':
+        return '允許 · 這是我的裝置';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             '你正在與 ${device} 配對。繼續前請確認這是你預期的設備。';
@@ -588594,6 +589437,12 @@ extension on _StringsZhHk {
         return '未知裝置';
       case 'sync_pair_upgrade_required':
         return '對方版本過舊，無法在當前網路下安全配對（需要 PIN）。請更新對方後重新配對。';
+      case 'sync_paired_peer_owner_badge':
+        return '我的裝置';
+      case 'sync_paired_peer_owner_mark':
+        return '標記為我的裝置（可跟隨本機 Fushi 帳戶自動登入）';
+      case 'sync_paired_peer_owner_unmark':
+        return '取消標記為我的裝置';
       case 'sync_paired_peer_remove':
         return '移除';
       case 'sync_paired_peer_removed':
