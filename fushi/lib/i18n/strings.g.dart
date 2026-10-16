@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 137921 (8113 per locale)
+/// Strings: 138414 (8142 per locale)
 ///
-/// Built on 2026-10-16 at 16:02 UTC
+/// Built on 2026-10-16 at 18:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11669,6 +11669,38 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get card_target_srs_enable_confirm =>
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   String get card_creation_section_content => 'Card content';
+  String get srs_note_block_term => 'Term';
+  String get srs_note_block_reading => 'Reading';
+  String get srs_note_block_picture => 'Picture';
+  String get srs_note_block_sentence => 'Sentence';
+  String get srs_note_block_definitions => 'Definitions';
+  String get srs_note_block_frequency => 'Frequency';
+  String get srs_note_block_source => 'Source';
+  String get srs_note_block_card_type => 'Card type';
+  String get srs_note_block_other => 'Other';
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  String get srs_note_format_color => 'Text color';
+  String get srs_note_format_color_default => 'Default color';
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  String get srs_note_image_pick => 'Choose image';
+  String get srs_note_image_paste => 'Paste image';
+  String get srs_note_image_replace => 'Replace image';
+  String get srs_note_image_remove => 'Remove image';
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  String get srs_note_audio_pick => 'Choose audio file';
+  String get srs_note_audio_record => 'Record';
+  String get srs_note_audio_remove => 'Remove audio';
+  String get srs_note_audio_missing => 'Audio file not found';
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -31243,6 +31275,67 @@ class _StringsAr extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -51207,6 +51300,67 @@ class _StringsDe extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -71230,6 +71384,67 @@ class _StringsEs extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -91334,6 +91549,67 @@ class _StringsFr extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -111091,6 +111367,67 @@ class _StringsId extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -131014,6 +131351,67 @@ class _StringsIt extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -149937,6 +150335,67 @@ class _StringsJa extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -168896,6 +169355,67 @@ class _StringsKo extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -188767,6 +189287,67 @@ class _StringsNl extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -208707,6 +209288,67 @@ class _StringsPtBr extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -228592,6 +229234,67 @@ class _StringsRu extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -248155,6 +248858,67 @@ class _StringsTh extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -267922,6 +268686,67 @@ class _StringsTr extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -287616,6 +288441,67 @@ class _StringsVi extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 // Path: <root>
@@ -305624,6 +306510,64 @@ class _StringsZhCn extends _StringsEn {
       '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
   @override
   String get card_creation_section_content => '卡片内容';
+  @override
+  String get srs_note_block_term => '词条';
+  @override
+  String get srs_note_block_reading => '读音';
+  @override
+  String get srs_note_block_picture => '图片';
+  @override
+  String get srs_note_block_sentence => '例句';
+  @override
+  String get srs_note_block_definitions => '释义';
+  @override
+  String get srs_note_block_frequency => '词频';
+  @override
+  String get srs_note_block_source => '来源';
+  @override
+  String get srs_note_block_card_type => '卡型';
+  @override
+  String get srs_note_block_other => '其它';
+  @override
+  String get srs_note_format_bold => '加粗（Ctrl+B）';
+  @override
+  String get srs_note_format_italic => '斜体（Ctrl+I）';
+  @override
+  String get srs_note_format_underline => '下划线（Ctrl+U）';
+  @override
+  String get srs_note_format_color => '文字颜色';
+  @override
+  String get srs_note_format_color_default => '默认颜色';
+  @override
+  String get srs_note_field_source_show => 'HTML 源码（Ctrl+Shift+X）';
+  @override
+  String get srs_note_field_source_hide => '回到可视化编辑（Ctrl+Shift+X）';
+  @override
+  String get srs_note_field_structured_hint => '词典排版内容：改 HTML 源码来修改';
+  @override
+  String get srs_note_image_pick => '选择图片';
+  @override
+  String get srs_note_image_paste => '粘贴图片';
+  @override
+  String get srs_note_image_replace => '替换图片';
+  @override
+  String get srs_note_image_remove => '删除图片';
+  @override
+  String get srs_note_image_paste_empty => '剪贴板里没有图片';
+  @override
+  String get srs_note_audio_pick => '选择音频文件';
+  @override
+  String get srs_note_audio_record => '录音';
+  @override
+  String get srs_note_audio_remove => '删除音频';
+  @override
+  String get srs_note_audio_missing => '找不到音频文件';
+  @override
+  String srs_note_furigana_reading({required Object base}) => '「${base}」的读音';
+  @override
+  String get srs_note_furigana_hint => '点词改读音';
+  @override
+  String get srs_note_furigana_edit_text => '编辑文字';
 }
 
 // Path: <root>
@@ -323988,6 +324932,67 @@ class _StringsZhHk extends _StringsEn {
       'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
   @override
   String get card_creation_section_content => 'Card content';
+  @override
+  String get srs_note_block_term => 'Term';
+  @override
+  String get srs_note_block_reading => 'Reading';
+  @override
+  String get srs_note_block_picture => 'Picture';
+  @override
+  String get srs_note_block_sentence => 'Sentence';
+  @override
+  String get srs_note_block_definitions => 'Definitions';
+  @override
+  String get srs_note_block_frequency => 'Frequency';
+  @override
+  String get srs_note_block_source => 'Source';
+  @override
+  String get srs_note_block_card_type => 'Card type';
+  @override
+  String get srs_note_block_other => 'Other';
+  @override
+  String get srs_note_format_bold => 'Bold (Ctrl+B)';
+  @override
+  String get srs_note_format_italic => 'Italic (Ctrl+I)';
+  @override
+  String get srs_note_format_underline => 'Underline (Ctrl+U)';
+  @override
+  String get srs_note_format_color => 'Text color';
+  @override
+  String get srs_note_format_color_default => 'Default color';
+  @override
+  String get srs_note_field_source_show => 'HTML source (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_source_hide =>
+      'Back to visual editing (Ctrl+Shift+X)';
+  @override
+  String get srs_note_field_structured_hint =>
+      'Formatted dictionary content. Edit the HTML source to change it';
+  @override
+  String get srs_note_image_pick => 'Choose image';
+  @override
+  String get srs_note_image_paste => 'Paste image';
+  @override
+  String get srs_note_image_replace => 'Replace image';
+  @override
+  String get srs_note_image_remove => 'Remove image';
+  @override
+  String get srs_note_image_paste_empty => 'No image on the clipboard';
+  @override
+  String get srs_note_audio_pick => 'Choose audio file';
+  @override
+  String get srs_note_audio_record => 'Record';
+  @override
+  String get srs_note_audio_remove => 'Remove audio';
+  @override
+  String get srs_note_audio_missing => 'Audio file not found';
+  @override
+  String srs_note_furigana_reading({required Object base}) =>
+      'Reading of ${base}';
+  @override
+  String get srs_note_furigana_hint => 'Tap a word to change its reading';
+  @override
+  String get srs_note_furigana_edit_text => 'Edit text';
 }
 
 /// Flat map(s) containing all translations.
@@ -340822,6 +341827,64 @@ extension on _StringsEn {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -357651,6 +358714,64 @@ extension on _StringsAr {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -374556,6 +375677,64 @@ extension on _StringsDe {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -391443,6 +392622,64 @@ extension on _StringsEs {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -408348,6 +409585,64 @@ extension on _StringsFr {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -425197,6 +426492,64 @@ extension on _StringsId {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -442082,6 +443435,64 @@ extension on _StringsIt {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -458840,6 +460251,64 @@ extension on _StringsJa {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -475606,6 +477075,64 @@ extension on _StringsKo {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -492486,6 +494013,64 @@ extension on _StringsNl {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -509358,6 +510943,64 @@ extension on _StringsPtBr {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -526235,6 +527878,64 @@ extension on _StringsRu {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -543068,6 +544769,64 @@ extension on _StringsTh {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -559932,6 +561691,64 @@ extension on _StringsTr {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -576779,6 +578596,64 @@ extension on _StringsVi {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
@@ -593433,6 +595308,64 @@ extension on _StringsZhCn {
         return '将开启「复习」模块，之后制的卡发往 Fushi 复习。随时可以改回 Anki。';
       case 'card_creation_section_content':
         return '卡片内容';
+      case 'srs_note_block_term':
+        return '词条';
+      case 'srs_note_block_reading':
+        return '读音';
+      case 'srs_note_block_picture':
+        return '图片';
+      case 'srs_note_block_sentence':
+        return '例句';
+      case 'srs_note_block_definitions':
+        return '释义';
+      case 'srs_note_block_frequency':
+        return '词频';
+      case 'srs_note_block_source':
+        return '来源';
+      case 'srs_note_block_card_type':
+        return '卡型';
+      case 'srs_note_block_other':
+        return '其它';
+      case 'srs_note_format_bold':
+        return '加粗（Ctrl+B）';
+      case 'srs_note_format_italic':
+        return '斜体（Ctrl+I）';
+      case 'srs_note_format_underline':
+        return '下划线（Ctrl+U）';
+      case 'srs_note_format_color':
+        return '文字颜色';
+      case 'srs_note_format_color_default':
+        return '默认颜色';
+      case 'srs_note_field_source_show':
+        return 'HTML 源码（Ctrl+Shift+X）';
+      case 'srs_note_field_source_hide':
+        return '回到可视化编辑（Ctrl+Shift+X）';
+      case 'srs_note_field_structured_hint':
+        return '词典排版内容：改 HTML 源码来修改';
+      case 'srs_note_image_pick':
+        return '选择图片';
+      case 'srs_note_image_paste':
+        return '粘贴图片';
+      case 'srs_note_image_replace':
+        return '替换图片';
+      case 'srs_note_image_remove':
+        return '删除图片';
+      case 'srs_note_image_paste_empty':
+        return '剪贴板里没有图片';
+      case 'srs_note_audio_pick':
+        return '选择音频文件';
+      case 'srs_note_audio_record':
+        return '录音';
+      case 'srs_note_audio_remove':
+        return '删除音频';
+      case 'srs_note_audio_missing':
+        return '找不到音频文件';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => '「${base}」的读音';
+      case 'srs_note_furigana_hint':
+        return '点词改读音';
+      case 'srs_note_furigana_edit_text':
+        return '编辑文字';
       default:
         return null;
     }
@@ -610136,6 +612069,64 @@ extension on _StringsZhHk {
         return 'This turns on the Review module and sends cards you mine to Fushi review. You can switch back to Anki at any time.';
       case 'card_creation_section_content':
         return 'Card content';
+      case 'srs_note_block_term':
+        return 'Term';
+      case 'srs_note_block_reading':
+        return 'Reading';
+      case 'srs_note_block_picture':
+        return 'Picture';
+      case 'srs_note_block_sentence':
+        return 'Sentence';
+      case 'srs_note_block_definitions':
+        return 'Definitions';
+      case 'srs_note_block_frequency':
+        return 'Frequency';
+      case 'srs_note_block_source':
+        return 'Source';
+      case 'srs_note_block_card_type':
+        return 'Card type';
+      case 'srs_note_block_other':
+        return 'Other';
+      case 'srs_note_format_bold':
+        return 'Bold (Ctrl+B)';
+      case 'srs_note_format_italic':
+        return 'Italic (Ctrl+I)';
+      case 'srs_note_format_underline':
+        return 'Underline (Ctrl+U)';
+      case 'srs_note_format_color':
+        return 'Text color';
+      case 'srs_note_format_color_default':
+        return 'Default color';
+      case 'srs_note_field_source_show':
+        return 'HTML source (Ctrl+Shift+X)';
+      case 'srs_note_field_source_hide':
+        return 'Back to visual editing (Ctrl+Shift+X)';
+      case 'srs_note_field_structured_hint':
+        return 'Formatted dictionary content. Edit the HTML source to change it';
+      case 'srs_note_image_pick':
+        return 'Choose image';
+      case 'srs_note_image_paste':
+        return 'Paste image';
+      case 'srs_note_image_replace':
+        return 'Replace image';
+      case 'srs_note_image_remove':
+        return 'Remove image';
+      case 'srs_note_image_paste_empty':
+        return 'No image on the clipboard';
+      case 'srs_note_audio_pick':
+        return 'Choose audio file';
+      case 'srs_note_audio_record':
+        return 'Record';
+      case 'srs_note_audio_remove':
+        return 'Remove audio';
+      case 'srs_note_audio_missing':
+        return 'Audio file not found';
+      case 'srs_note_furigana_reading':
+        return ({required Object base}) => 'Reading of ${base}';
+      case 'srs_note_furigana_hint':
+        return 'Tap a word to change its reading';
+      case 'srs_note_furigana_edit_text':
+        return 'Edit text';
       default:
         return null;
     }
