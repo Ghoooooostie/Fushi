@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132277 (7781 per locale)
+/// Strings: 132634 (7802 per locale)
 ///
-/// Built on 2026-10-16 at 06:49 UTC
+/// Built on 2026-10-16 at 06:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11169,10 +11169,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_export_done => 'Exported';
   String get srs_export_failed => 'Export failed';
   String get srs_import_pick_title => 'Import Anki package';
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
   String get srs_import_running => 'Importing…';
   String get srs_import_needs_kernel =>
       'This package uses Anki\'s newer format, which needs the scheduling engine. The engine isn\'t available on this device.';
@@ -11244,6 +11240,40 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Lapis uses its built-in field mapping.';
   String get srs_deck_expand => 'Expand subdecks';
   String get srs_deck_collapse => 'Collapse subdecks';
+  String get srs_import_options_title => 'Import options';
+  String get srs_import_options_help => 'About these options';
+  String get srs_import_with_scheduling => 'Import all review progress';
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  String get srs_import_section_updates => 'Updates';
+  String get srs_import_merge_notetypes => 'Merge note types';
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  String get srs_import_update_notes => 'Update notes';
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  String get srs_import_update_notetypes => 'Update note types';
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  String get srs_import_update_if_newer => 'If newer';
+  String get srs_import_update_always => 'Always';
+  String get srs_import_update_never => 'Never';
+  String get srs_import_reset_default => 'Restore default';
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -29947,12 +29977,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -30061,6 +30085,63 @@ class _StringsAr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -49154,12 +49235,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -49268,6 +49343,63 @@ class _StringsDe extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -68420,12 +68552,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -68534,6 +68660,63 @@ class _StringsEs extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -87767,12 +87950,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -87881,6 +88058,63 @@ class _StringsFr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -106767,12 +107001,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -106881,6 +107109,63 @@ class _StringsId extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -125933,12 +126218,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -126047,6 +126326,63 @@ class _StringsIt extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -144099,12 +144435,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -144213,6 +144543,63 @@ class _StringsJa extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -162301,12 +162688,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -162415,6 +162796,63 @@ class _StringsKo extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -181415,12 +181853,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -181529,6 +181961,63 @@ class _StringsNl extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -200598,12 +201087,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -200712,6 +201195,63 @@ class _StringsPtBr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -219726,12 +220266,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -219840,6 +220374,63 @@ class _StringsRu extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -238532,12 +239123,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -238646,6 +239231,63 @@ class _StringsTh extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -257542,12 +258184,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -257656,6 +258292,63 @@ class _StringsTr extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -276479,12 +277172,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -276593,6 +277280,63 @@ class _StringsVi extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 // Path: <root>
@@ -293775,10 +294519,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_import_pick_title => '导入 Anki 包';
   @override
-  String get srs_import_update_existing => '用导入内容更新已有笔记';
-  @override
-  String get srs_import_update_existing_hint => '关闭时，已存在的笔记保留本地内容';
-  @override
   String get srs_import_running => '正在导入…';
   @override
   String get srs_import_needs_kernel => '这个包是 Anki 新格式，需要排程内核；本设备上排程内核不可用。';
@@ -293876,6 +294616,62 @@ class _StringsZhCn extends _StringsEn {
   String get srs_deck_expand => '展开子牌组';
   @override
   String get srs_deck_collapse => '收起子牌组';
+  @override
+  String get srs_import_options_title => '导入选项';
+  @override
+  String get srs_import_options_help => '选项说明';
+  @override
+  String get srs_import_with_scheduling => '导入所有学习进度信息';
+  @override
+  String get srs_import_with_scheduling_help =>
+      '导入复习记录、到期时间和暂停状态。关闭时所有卡片都作为新卡导入、不导入复习记录，并去掉 marked / leech 标签。导入自己的备份时打开；导入别人分享的牌组时一般保持关闭。';
+  @override
+  String get srs_import_with_deck_configs => '导入所有牌组预设配置';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      '本次导入新建的牌组使用包里的学习步长、每日上限、算法和 FSRS 参数；关闭时使用默认设置。已存在的牌组不会被改动。';
+  @override
+  String get srs_import_section_updates => '更新';
+  @override
+  String get srs_import_merge_notetypes => '合并笔记模板';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      '包里的笔记模板与本机同一个模板的字段或卡片模板不一致时，合并成一个：包里新增的字段和模板加到本机，本机已有的不会删除。关闭时把包里的版本另存为一个新模板，本机这个模板下已有的笔记不会被更新。';
+  @override
+  String get srs_import_update_notes => '更新笔记';
+  @override
+  String get srs_import_update_notes_help =>
+      '笔记已存在时：「较新时」只有包里的修改晚于你在本机的最后一次修改才更新；「始终」一律采用包里的内容；「从不」保留本机内容。';
+  @override
+  String get srs_import_update_notetypes => '更新笔记模板';
+  @override
+  String get srs_import_update_notetypes_help => '对笔记模板做同样的选择：名称、样式和卡片模板。';
+  @override
+  String get srs_import_update_if_newer => '较新时';
+  @override
+  String get srs_import_update_always => '始终';
+  @override
+  String get srs_import_update_never => '从不';
+  @override
+  String get srs_import_reset_default => '恢复默认';
+  @override
+  String get srs_import_colpkg_note =>
+      '这是整库包（.colpkg）。Anki 会用它替换整个集合；Fushi 改为合并导入，不会删除或替换你已有的卡片。';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      '作为新卡导入（不含学习进度）：${n} 张';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      '未导入复习记录：${n} 条';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      '未导入牌组预设：${n} 个（新牌组使用默认设置）';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      '更新笔记模板：${n} 个';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      '笔记模板「${name}」与本机的不一致，已另存为一个新模板';
 }
 
 // Path: <root>
@@ -311369,12 +312165,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_import_pick_title => 'Import Anki package';
   @override
-  String get srs_import_update_existing =>
-      'Update existing notes with imported content';
-  @override
-  String get srs_import_update_existing_hint =>
-      'When off, notes that already exist keep your local changes';
-  @override
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_needs_kernel =>
@@ -311483,6 +312273,63 @@ class _StringsZhHk extends _StringsEn {
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_collapse => 'Collapse subdecks';
+  @override
+  String get srs_import_options_title => 'Import options';
+  @override
+  String get srs_import_options_help => 'About these options';
+  @override
+  String get srs_import_with_scheduling => 'Import all review progress';
+  @override
+  String get srs_import_with_scheduling_help =>
+      'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+  @override
+  String get srs_import_with_deck_configs => 'Import all deck presets';
+  @override
+  String get srs_import_with_deck_configs_help =>
+      'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+  @override
+  String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_merge_notetypes => 'Merge note types';
+  @override
+  String get srs_import_merge_notetypes_help =>
+      'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+  @override
+  String get srs_import_update_notes => 'Update notes';
+  @override
+  String get srs_import_update_notes_help =>
+      'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+  @override
+  String get srs_import_update_notetypes => 'Update note types';
+  @override
+  String get srs_import_update_notetypes_help =>
+      'The same choice for note types: their name, styling and card templates.';
+  @override
+  String get srs_import_update_if_newer => 'If newer';
+  @override
+  String get srs_import_update_always => 'Always';
+  @override
+  String get srs_import_update_never => 'Never';
+  @override
+  String get srs_import_reset_default => 'Restore default';
+  @override
+  String get srs_import_colpkg_note =>
+      'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+  @override
+  String srs_import_report_reset_new({required Object n}) =>
+      'Imported as new cards without review progress: ${n}';
+  @override
+  String srs_import_report_reviews_skipped({required Object n}) =>
+      'Review history not imported: ${n} entries';
+  @override
+  String srs_import_report_presets_skipped({required Object n}) =>
+      'Deck presets not imported: ${n} (new decks use the default settings)';
+  @override
+  String srs_import_report_notetypes_updated({required Object n}) =>
+      'Note types updated: ${n}';
+  @override
+  String srs_import_report_notetypes_duplicated({required Object name}) =>
+      'Note type “${name}” differs from the one here and was imported as a separate note type';
 }
 
 /// Flat map(s) containing all translations.
@@ -327532,10 +328379,6 @@ extension on _StringsEn {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -327625,6 +328468,56 @@ extension on _StringsEn {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -343669,10 +344562,6 @@ extension on _StringsAr {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -343762,6 +344651,56 @@ extension on _StringsAr {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -359882,10 +360821,6 @@ extension on _StringsDe {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -359975,6 +360910,56 @@ extension on _StringsDe {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -376077,10 +377062,6 @@ extension on _StringsEs {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -376170,6 +377151,56 @@ extension on _StringsEs {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -392290,10 +393321,6 @@ extension on _StringsFr {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -392383,6 +393410,56 @@ extension on _StringsFr {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -408447,10 +409524,6 @@ extension on _StringsId {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -408540,6 +409613,56 @@ extension on _StringsId {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -424640,10 +425763,6 @@ extension on _StringsIt {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -424733,6 +425852,56 @@ extension on _StringsIt {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -440706,10 +441875,6 @@ extension on _StringsJa {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -440799,6 +441964,56 @@ extension on _StringsJa {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -456780,10 +457995,6 @@ extension on _StringsKo {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -456873,6 +458084,56 @@ extension on _StringsKo {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -472968,10 +474229,6 @@ extension on _StringsNl {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -473061,6 +474318,56 @@ extension on _StringsNl {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -489148,10 +490455,6 @@ extension on _StringsPtBr {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -489241,6 +490544,56 @@ extension on _StringsPtBr {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -505333,10 +506686,6 @@ extension on _StringsRu {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -505426,6 +506775,56 @@ extension on _StringsRu {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -521474,10 +522873,6 @@ extension on _StringsTh {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -521567,6 +522962,56 @@ extension on _StringsTh {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -537646,10 +539091,6 @@ extension on _StringsTr {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -537739,6 +539180,56 @@ extension on _StringsTr {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -553801,10 +555292,6 @@ extension on _StringsVi {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -553894,6 +555381,56 @@ extension on _StringsVi {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
@@ -569779,10 +571316,6 @@ extension on _StringsZhCn {
         return '导出失败';
       case 'srs_import_pick_title':
         return '导入 Anki 包';
-      case 'srs_import_update_existing':
-        return '用导入内容更新已有笔记';
-      case 'srs_import_update_existing_hint':
-        return '关闭时，已存在的笔记保留本地内容';
       case 'srs_import_running':
         return '正在导入…';
       case 'srs_import_needs_kernel':
@@ -569865,6 +571398,52 @@ extension on _StringsZhCn {
         return '展开子牌组';
       case 'srs_deck_collapse':
         return '收起子牌组';
+      case 'srs_import_options_title':
+        return '导入选项';
+      case 'srs_import_options_help':
+        return '选项说明';
+      case 'srs_import_with_scheduling':
+        return '导入所有学习进度信息';
+      case 'srs_import_with_scheduling_help':
+        return '导入复习记录、到期时间和暂停状态。关闭时所有卡片都作为新卡导入、不导入复习记录，并去掉 marked / leech 标签。导入自己的备份时打开；导入别人分享的牌组时一般保持关闭。';
+      case 'srs_import_with_deck_configs':
+        return '导入所有牌组预设配置';
+      case 'srs_import_with_deck_configs_help':
+        return '本次导入新建的牌组使用包里的学习步长、每日上限、算法和 FSRS 参数；关闭时使用默认设置。已存在的牌组不会被改动。';
+      case 'srs_import_section_updates':
+        return '更新';
+      case 'srs_import_merge_notetypes':
+        return '合并笔记模板';
+      case 'srs_import_merge_notetypes_help':
+        return '包里的笔记模板与本机同一个模板的字段或卡片模板不一致时，合并成一个：包里新增的字段和模板加到本机，本机已有的不会删除。关闭时把包里的版本另存为一个新模板，本机这个模板下已有的笔记不会被更新。';
+      case 'srs_import_update_notes':
+        return '更新笔记';
+      case 'srs_import_update_notes_help':
+        return '笔记已存在时：「较新时」只有包里的修改晚于你在本机的最后一次修改才更新；「始终」一律采用包里的内容；「从不」保留本机内容。';
+      case 'srs_import_update_notetypes':
+        return '更新笔记模板';
+      case 'srs_import_update_notetypes_help':
+        return '对笔记模板做同样的选择：名称、样式和卡片模板。';
+      case 'srs_import_update_if_newer':
+        return '较新时';
+      case 'srs_import_update_always':
+        return '始终';
+      case 'srs_import_update_never':
+        return '从不';
+      case 'srs_import_reset_default':
+        return '恢复默认';
+      case 'srs_import_colpkg_note':
+        return '这是整库包（.colpkg）。Anki 会用它替换整个集合；Fushi 改为合并导入，不会删除或替换你已有的卡片。';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) => '作为新卡导入（不含学习进度）：${n} 张';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) => '未导入复习记录：${n} 条';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) => '未导入牌组预设：${n} 个（新牌组使用默认设置）';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => '更新笔记模板：${n} 个';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) => '笔记模板「${name}」与本机的不一致，已另存为一个新模板';
       default:
         return null;
     }
@@ -585783,10 +587362,6 @@ extension on _StringsZhHk {
         return 'Export failed';
       case 'srs_import_pick_title':
         return 'Import Anki package';
-      case 'srs_import_update_existing':
-        return 'Update existing notes with imported content';
-      case 'srs_import_update_existing_hint':
-        return 'When off, notes that already exist keep your local changes';
       case 'srs_import_running':
         return 'Importing…';
       case 'srs_import_needs_kernel':
@@ -585876,6 +587451,56 @@ extension on _StringsZhHk {
         return 'Expand subdecks';
       case 'srs_deck_collapse':
         return 'Collapse subdecks';
+      case 'srs_import_options_title':
+        return 'Import options';
+      case 'srs_import_options_help':
+        return 'About these options';
+      case 'srs_import_with_scheduling':
+        return 'Import all review progress';
+      case 'srs_import_with_scheduling_help':
+        return 'Imports review history, due dates and suspended state. When off, every card is imported as a new card, no review history is imported, and the marked / leech tags are removed. Turn it on when importing your own backup; leave it off for decks shared by others.';
+      case 'srs_import_with_deck_configs':
+        return 'Import all deck presets';
+      case 'srs_import_with_deck_configs_help':
+        return 'Decks created by this import take the learning steps, daily limits, algorithm and FSRS parameters from the package. When off they use the default settings. Decks that already exist are never changed.';
+      case 'srs_import_section_updates':
+        return 'Updates';
+      case 'srs_import_merge_notetypes':
+        return 'Merge note types';
+      case 'srs_import_merge_notetypes_help':
+        return 'When a note type in the package has different fields or card templates than the same note type here, merge them into one: fields and templates added in the package are added here, and nothing here is removed. When off, the package\'s version is imported as a separate note type, and notes that already exist under the note type here are not updated.';
+      case 'srs_import_update_notes':
+        return 'Update notes';
+      case 'srs_import_update_notes_help':
+        return 'When a note already exists here: “If newer” updates it only if it was changed in the package after your last change here; “Always” always takes the content from the package; “Never” keeps what you have.';
+      case 'srs_import_update_notetypes':
+        return 'Update note types';
+      case 'srs_import_update_notetypes_help':
+        return 'The same choice for note types: their name, styling and card templates.';
+      case 'srs_import_update_if_newer':
+        return 'If newer';
+      case 'srs_import_update_always':
+        return 'Always';
+      case 'srs_import_update_never':
+        return 'Never';
+      case 'srs_import_reset_default':
+        return 'Restore default';
+      case 'srs_import_colpkg_note':
+        return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
+      case 'srs_import_report_reset_new':
+        return ({required Object n}) =>
+            'Imported as new cards without review progress: ${n}';
+      case 'srs_import_report_reviews_skipped':
+        return ({required Object n}) =>
+            'Review history not imported: ${n} entries';
+      case 'srs_import_report_presets_skipped':
+        return ({required Object n}) =>
+            'Deck presets not imported: ${n} (new decks use the default settings)';
+      case 'srs_import_report_notetypes_updated':
+        return ({required Object n}) => 'Note types updated: ${n}';
+      case 'srs_import_report_notetypes_duplicated':
+        return ({required Object name}) =>
+            'Note type “${name}” differs from the one here and was imported as a separate note type';
       default:
         return null;
     }
