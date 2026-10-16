@@ -7453,8 +7453,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Drag on the image to mask an area';
   String get popup_advanced_mining_mosaic_none => 'No mosaic';
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -7463,6 +7461,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
   String get popup_advanced_mining_title => 'Advanced mining';
@@ -23637,9 +23637,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -23653,6 +23650,9 @@ class _StringsAr extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -42936,9 +42936,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -42952,6 +42949,9 @@ class _StringsDe extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -62382,9 +62382,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -62398,6 +62395,9 @@ class _StringsEs extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -81918,9 +81918,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -81934,6 +81931,9 @@ class _StringsFr extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -101262,9 +101262,6 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -101278,6 +101275,9 @@ class _StringsId extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -120586,9 +120586,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -120602,6 +120599,9 @@ class _StringsIt extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -139334,9 +139334,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -139350,6 +139347,9 @@ class _StringsJa extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -157726,9 +157726,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -157742,6 +157739,9 @@ class _StringsKo extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -176714,9 +176714,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -176730,6 +176727,9 @@ class _StringsNl extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -196093,9 +196093,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -196109,6 +196106,9 @@ class _StringsPtBr extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -215453,9 +215453,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -215469,6 +215466,9 @@ class _StringsRu extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -234593,9 +234593,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -234609,6 +234606,9 @@ class _StringsTh extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -253757,9 +253757,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -253773,6 +253770,9 @@ class _StringsTr extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -272934,9 +272934,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -272950,6 +272947,9 @@ class _StringsVi extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -291014,9 +291014,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => '打码';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      '打码只对静态截图生效，切回截图方式后才会应用';
-  @override
   String get popup_advanced_mining_mosaic_undo => '撤销';
   @override
   String get popup_advanced_mining_reset => '恢复为一键制卡的默认';
@@ -291030,6 +291027,8 @@ class _StringsZhCn extends _StringsEn {
       '快捷键 [ ] 增减前文 · Shift+[ ] 增减后文';
   @override
   String get popup_advanced_mining_still_screenshot => '截图';
+  @override
+  String get popup_advanced_mining_still_stale => '这是打开对话框时的画面，不是该台词当时的画面';
   @override
   String get popup_advanced_mining_still_unavailable => '截图不可用';
   @override
@@ -308692,9 +308691,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
   @override
-  String get popup_advanced_mining_mosaic_still_only =>
-      'Mosaic only applies to still frames; switch to a screenshot mode to use it';
-  @override
   String get popup_advanced_mining_mosaic_undo => 'Undo';
   @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
@@ -308708,6 +308704,9 @@ class _StringsZhHk extends _StringsEn {
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
   @override
   String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
   @override
   String get popup_advanced_mining_still_unavailable =>
       'Screenshot unavailable';
@@ -325462,8 +325461,6 @@ extension on _StringsEn {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -325476,6 +325473,8 @@ extension on _StringsEn {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -341782,8 +341781,6 @@ extension on _StringsAr {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -341796,6 +341793,8 @@ extension on _StringsAr {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -358156,8 +358155,6 @@ extension on _StringsDe {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -358170,6 +358167,8 @@ extension on _StringsDe {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -374535,8 +374534,6 @@ extension on _StringsEs {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -374549,6 +374546,8 @@ extension on _StringsEs {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -390926,8 +390925,6 @@ extension on _StringsFr {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -390940,6 +390937,8 @@ extension on _StringsFr {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -407280,8 +407279,6 @@ extension on _StringsId {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -407294,6 +407291,8 @@ extension on _StringsId {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -423638,8 +423637,6 @@ extension on _StringsIt {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -423652,6 +423649,8 @@ extension on _StringsIt {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -439936,8 +439935,6 @@ extension on _StringsJa {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -439950,6 +439947,8 @@ extension on _StringsJa {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -456186,8 +456185,6 @@ extension on _StringsKo {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -456200,6 +456197,8 @@ extension on _StringsKo {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -472516,8 +472515,6 @@ extension on _StringsNl {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -472530,6 +472527,8 @@ extension on _StringsNl {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -488880,8 +488879,6 @@ extension on _StringsPtBr {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -488894,6 +488891,8 @@ extension on _StringsPtBr {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -505248,8 +505247,6 @@ extension on _StringsRu {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -505262,6 +505259,8 @@ extension on _StringsRu {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -521578,8 +521577,6 @@ extension on _StringsTh {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -521592,6 +521589,8 @@ extension on _StringsTh {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -537924,8 +537923,6 @@ extension on _StringsTr {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -537938,6 +537935,8 @@ extension on _StringsTr {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -554263,8 +554262,6 @@ extension on _StringsVi {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -554277,6 +554274,8 @@ extension on _StringsVi {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
@@ -570480,8 +570479,6 @@ extension on _StringsZhCn {
         return '未打码';
       case 'popup_advanced_mining_mosaic_page_title':
         return '打码';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return '打码只对静态截图生效，切回截图方式后才会应用';
       case 'popup_advanced_mining_mosaic_undo':
         return '撤销';
       case 'popup_advanced_mining_reset':
@@ -570494,6 +570491,8 @@ extension on _StringsZhCn {
         return '快捷键 [ ] 增减前文 · Shift+[ ] 增减后文';
       case 'popup_advanced_mining_still_screenshot':
         return '截图';
+      case 'popup_advanced_mining_still_stale':
+        return '这是打开对话框时的画面，不是该台词当时的画面';
       case 'popup_advanced_mining_still_unavailable':
         return '截图不可用';
       case 'popup_advanced_mining_title':
@@ -586657,8 +586656,6 @@ extension on _StringsZhHk {
         return 'No mosaic';
       case 'popup_advanced_mining_mosaic_page_title':
         return 'Mosaic areas';
-      case 'popup_advanced_mining_mosaic_still_only':
-        return 'Mosaic only applies to still frames; switch to a screenshot mode to use it';
       case 'popup_advanced_mining_mosaic_undo':
         return 'Undo';
       case 'popup_advanced_mining_reset':
@@ -586671,6 +586668,8 @@ extension on _StringsZhHk {
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
       case 'popup_advanced_mining_still_screenshot':
         return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
       case 'popup_advanced_mining_still_unavailable':
         return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
