@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 132243 (7779 per locale)
+/// Strings: 132277 (7781 per locale)
 ///
-/// Built on 2026-10-16 at 06:48 UTC
+/// Built on 2026-10-16 at 06:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -11242,6 +11242,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The selected note type was deleted; cards use Lapis.';
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  String get srs_deck_expand => 'Expand subdecks';
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -30055,6 +30057,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -49258,6 +49264,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -68520,6 +68530,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -87863,6 +87877,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -106859,6 +106877,10 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -126021,6 +126043,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -144183,6 +144209,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -162381,6 +162411,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -181491,6 +181525,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -200670,6 +200708,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -219794,6 +219836,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -238596,6 +238642,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -257602,6 +257652,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -276535,6 +276589,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 // Path: <root>
@@ -293814,6 +293872,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_mining_note_type_fallback => '所选笔记类型已被删除，制卡改用 Lapis。';
   @override
   String get srs_mining_lapis_mapping_hint => 'Lapis 使用内置字段映射。';
+  @override
+  String get srs_deck_expand => '展开子牌组';
+  @override
+  String get srs_deck_collapse => '收起子牌组';
 }
 
 // Path: <root>
@@ -311417,6 +311479,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_mining_lapis_mapping_hint =>
       'Lapis uses its built-in field mapping.';
+  @override
+  String get srs_deck_expand => 'Expand subdecks';
+  @override
+  String get srs_deck_collapse => 'Collapse subdecks';
 }
 
 /// Flat map(s) containing all translations.
@@ -327555,6 +327621,10 @@ extension on _StringsEn {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -343688,6 +343758,10 @@ extension on _StringsAr {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -359897,6 +359971,10 @@ extension on _StringsDe {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -376088,6 +376166,10 @@ extension on _StringsEs {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -392297,6 +392379,10 @@ extension on _StringsFr {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -408450,6 +408536,10 @@ extension on _StringsId {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -424639,6 +424729,10 @@ extension on _StringsIt {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -440701,6 +440795,10 @@ extension on _StringsJa {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -456771,6 +456869,10 @@ extension on _StringsKo {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -472955,6 +473057,10 @@ extension on _StringsNl {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -489131,6 +489237,10 @@ extension on _StringsPtBr {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -505312,6 +505422,10 @@ extension on _StringsRu {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -521449,6 +521563,10 @@ extension on _StringsTh {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -537617,6 +537735,10 @@ extension on _StringsTr {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -553768,6 +553890,10 @@ extension on _StringsVi {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
@@ -569735,6 +569861,10 @@ extension on _StringsZhCn {
         return '所选笔记类型已被删除，制卡改用 Lapis。';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis 使用内置字段映射。';
+      case 'srs_deck_expand':
+        return '展开子牌组';
+      case 'srs_deck_collapse':
+        return '收起子牌组';
       default:
         return null;
     }
@@ -585742,6 +585872,10 @@ extension on _StringsZhHk {
         return 'The selected note type was deleted; cards use Lapis.';
       case 'srs_mining_lapis_mapping_hint':
         return 'Lapis uses its built-in field mapping.';
+      case 'srs_deck_expand':
+        return 'Expand subdecks';
+      case 'srs_deck_collapse':
+        return 'Collapse subdecks';
       default:
         return null;
     }
