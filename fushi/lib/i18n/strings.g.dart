@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133671 (7863 per locale)
+/// Strings: 133722 (7866 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8557,15 +8557,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_rating_easy => 'Easy';
   String get srs_rating_good => 'Good';
   String get srs_rating_hard => 'Hard';
-  String get srs_review_autoplay_audio => 'Autoplay audio';
   String get srs_review_back_to_decks => 'Back to decks';
   String get srs_review_done => 'All done for today';
   String srs_review_done_detail({required Object n}) =>
       'Reviewed ${n} cards in this session';
   String get srs_review_pending_decision => 'Needs your decision';
   String get srs_review_replay_audio => 'Replay audio';
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   String get srs_review_show_answer => 'Show answer';
   String get srs_review_undo_blocked =>
       'This card was already reviewed on another device, so this step can\'t be undone';
@@ -8576,9 +8573,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  String get srs_settings_audio => 'Audio';
   String get srs_settings_auto_optimize => 'Optimize automatically';
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
   String srs_settings_inherited_from({required Object name}) =>
@@ -8607,6 +8608,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_settings_params_mode => 'Scheduling parameters';
   String get srs_settings_params_own => 'Own settings';
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   String get srs_settings_reschedule => 'Reschedule deck now';
   String get srs_settings_reschedule_confirm =>
       'Recompute the due dates of every review card in this deck with the current settings?';
@@ -25598,8 +25603,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -25610,9 +25613,6 @@ class _StringsAr extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -25631,10 +25631,17 @@ class _StringsAr extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -25681,6 +25688,12 @@ class _StringsAr extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -44915,8 +44928,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -44927,9 +44938,6 @@ class _StringsDe extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -44948,10 +44956,17 @@ class _StringsDe extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -44998,6 +45013,12 @@ class _StringsDe extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -64357,8 +64378,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -64369,9 +64388,6 @@ class _StringsEs extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -64390,10 +64406,17 @@ class _StringsEs extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -64440,6 +64463,12 @@ class _StringsEs extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -83886,8 +83915,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -83898,9 +83925,6 @@ class _StringsFr extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -83919,10 +83943,17 @@ class _StringsFr extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -83969,6 +84000,12 @@ class _StringsFr extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -103179,8 +103216,6 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -103191,9 +103226,6 @@ class _StringsId extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -103212,10 +103244,17 @@ class _StringsId extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -103262,6 +103301,12 @@ class _StringsId extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -122516,8 +122561,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -122528,9 +122571,6 @@ class _StringsIt extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -122549,10 +122589,17 @@ class _StringsIt extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -122599,6 +122646,12 @@ class _StringsIt extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -141146,8 +141199,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -141158,9 +141209,6 @@ class _StringsJa extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -141179,10 +141227,17 @@ class _StringsJa extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -141229,6 +141284,12 @@ class _StringsJa extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -159524,8 +159585,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -159536,9 +159595,6 @@ class _StringsKo extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -159557,10 +159613,17 @@ class _StringsKo extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -159607,6 +159670,12 @@ class _StringsKo extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -178587,8 +178656,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -178599,9 +178666,6 @@ class _StringsNl extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -178620,10 +178684,17 @@ class _StringsNl extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -178670,6 +178741,12 @@ class _StringsNl extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -197953,8 +198030,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -197965,9 +198040,6 @@ class _StringsPtBr extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -197986,10 +198058,17 @@ class _StringsPtBr extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -198036,6 +198115,12 @@ class _StringsPtBr extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -217297,8 +217382,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -217309,9 +217392,6 @@ class _StringsRu extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -217330,10 +217410,17 @@ class _StringsRu extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -217380,6 +217467,12 @@ class _StringsRu extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -236392,8 +236485,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -236404,9 +236495,6 @@ class _StringsTh extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -236425,10 +236513,17 @@ class _StringsTh extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -236475,6 +236570,12 @@ class _StringsTh extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -255552,8 +255653,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -255564,9 +255663,6 @@ class _StringsTr extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -255585,10 +255681,17 @@ class _StringsTr extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -255635,6 +255738,12 @@ class _StringsTr extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -274708,8 +274817,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -274720,9 +274827,6 @@ class _StringsVi extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -274741,10 +274845,17 @@ class _StringsVi extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -274791,6 +274902,12 @@ class _StringsVi extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -292632,8 +292749,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_rating_hard => '困难';
   @override
-  String get srs_review_autoplay_audio => '自动播放音频';
-  @override
   String get srs_review_back_to_decks => '回到牌组';
   @override
   String get srs_review_done => '今天的复习做完了';
@@ -292643,8 +292758,6 @@ class _StringsZhCn extends _StringsEn {
   String get srs_review_pending_decision => '待你决定';
   @override
   String get srs_review_replay_audio => '重播音频';
-  @override
-  String get srs_review_replay_question_audio => '重播答案时包含问题音频';
   @override
   String get srs_review_show_answer => '显示答案';
   @override
@@ -292662,9 +292775,16 @@ class _StringsZhCn extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       '此牌组的算法来自更新版本，本机暂用 ${alg}';
   @override
+  String get srs_settings_audio => '音频';
+  @override
   String get srs_settings_auto_optimize => '自动优化';
   @override
   String get srs_settings_auto_optimize_hint => '定期按你自己的复习记录调整排程参数';
+  @override
+  String get srs_settings_autoplay_audio => '自动播放音频';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      '显示问题面或答案面时自动播放卡上的音频；答案面不重播从正面带过来的音频。';
   @override
   String get srs_settings_conflict_replaced => '已被另一台设备的修改替换';
   @override
@@ -292705,6 +292825,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_settings_params_own => '单独设置';
   @override
   String get srs_settings_relearn_steps => '重学步长（分钟）';
+  @override
+  String get srs_settings_replay_question_audio => '重播答案时包含问题音频';
+  @override
+  String get srs_settings_replay_question_audio_hint => '关闭后，在答案面重播只播答案的音频。';
   @override
   String get srs_settings_reschedule => '立即重排整组';
   @override
@@ -310330,8 +310454,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_rating_hard => 'Hard';
   @override
-  String get srs_review_autoplay_audio => 'Autoplay audio';
-  @override
   String get srs_review_back_to_decks => 'Back to decks';
   @override
   String get srs_review_done => 'All done for today';
@@ -310342,9 +310464,6 @@ class _StringsZhHk extends _StringsEn {
   String get srs_review_pending_decision => 'Needs your decision';
   @override
   String get srs_review_replay_audio => 'Replay audio';
-  @override
-  String get srs_review_replay_question_audio =>
-      'Include question audio when replaying answer';
   @override
   String get srs_review_show_answer => 'Show answer';
   @override
@@ -310363,10 +310482,17 @@ class _StringsZhHk extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -310413,6 +310539,12 @@ class _StringsZhHk extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -326996,8 +327128,6 @@ extension on _StringsEn {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -327008,8 +327138,6 @@ extension on _StringsEn {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -327025,10 +327153,16 @@ extension on _StringsEn {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -327067,6 +327201,10 @@ extension on _StringsEn {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -343304,8 +343442,6 @@ extension on _StringsAr {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -343316,8 +343452,6 @@ extension on _StringsAr {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -343333,10 +343467,16 @@ extension on _StringsAr {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -343375,6 +343515,10 @@ extension on _StringsAr {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -359668,8 +359812,6 @@ extension on _StringsDe {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -359680,8 +359822,6 @@ extension on _StringsDe {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -359697,10 +359837,16 @@ extension on _StringsDe {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -359739,6 +359885,10 @@ extension on _StringsDe {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -376036,8 +376186,6 @@ extension on _StringsEs {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -376048,8 +376196,6 @@ extension on _StringsEs {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -376065,10 +376211,16 @@ extension on _StringsEs {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -376107,6 +376259,10 @@ extension on _StringsEs {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -392415,8 +392571,6 @@ extension on _StringsFr {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -392427,8 +392581,6 @@ extension on _StringsFr {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -392444,10 +392596,16 @@ extension on _StringsFr {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -392486,6 +392644,10 @@ extension on _StringsFr {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -408754,8 +408916,6 @@ extension on _StringsId {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -408766,8 +408926,6 @@ extension on _StringsId {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -408783,10 +408941,16 @@ extension on _StringsId {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -408825,6 +408989,10 @@ extension on _StringsId {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -425102,8 +425270,6 @@ extension on _StringsIt {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -425114,8 +425280,6 @@ extension on _StringsIt {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -425131,10 +425295,16 @@ extension on _StringsIt {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -425173,6 +425343,10 @@ extension on _StringsIt {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -441384,8 +441558,6 @@ extension on _StringsJa {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -441396,8 +441568,6 @@ extension on _StringsJa {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -441413,10 +441583,16 @@ extension on _StringsJa {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -441455,6 +441631,10 @@ extension on _StringsJa {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -457623,8 +457803,6 @@ extension on _StringsKo {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -457635,8 +457813,6 @@ extension on _StringsKo {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -457652,10 +457828,16 @@ extension on _StringsKo {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -457694,6 +457876,10 @@ extension on _StringsKo {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -473944,8 +474130,6 @@ extension on _StringsNl {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -473956,8 +474140,6 @@ extension on _StringsNl {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -473973,10 +474155,16 @@ extension on _StringsNl {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -474015,6 +474203,10 @@ extension on _StringsNl {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -490296,8 +490488,6 @@ extension on _StringsPtBr {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -490308,8 +490498,6 @@ extension on _StringsPtBr {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -490325,10 +490513,16 @@ extension on _StringsPtBr {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -490367,6 +490561,10 @@ extension on _StringsPtBr {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -506652,8 +506850,6 @@ extension on _StringsRu {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -506664,8 +506860,6 @@ extension on _StringsRu {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -506681,10 +506875,16 @@ extension on _StringsRu {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -506723,6 +506923,10 @@ extension on _StringsRu {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -522968,8 +523172,6 @@ extension on _StringsTh {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -522980,8 +523182,6 @@ extension on _StringsTh {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -522997,10 +523197,16 @@ extension on _StringsTh {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -523039,6 +523245,10 @@ extension on _StringsTh {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -539302,8 +539512,6 @@ extension on _StringsTr {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -539314,8 +539522,6 @@ extension on _StringsTr {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -539331,10 +539537,16 @@ extension on _StringsTr {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -539373,6 +539585,10 @@ extension on _StringsTr {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -555631,8 +555847,6 @@ extension on _StringsVi {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -555643,8 +555857,6 @@ extension on _StringsVi {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -555660,10 +555872,16 @@ extension on _StringsVi {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -555702,6 +555920,10 @@ extension on _StringsVi {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -571821,8 +572043,6 @@ extension on _StringsZhCn {
         return '良好';
       case 'srs_rating_hard':
         return '困难';
-      case 'srs_review_autoplay_audio':
-        return '自动播放音频';
       case 'srs_review_back_to_decks':
         return '回到牌组';
       case 'srs_review_done':
@@ -571833,8 +572053,6 @@ extension on _StringsZhCn {
         return '待你决定';
       case 'srs_review_replay_audio':
         return '重播音频';
-      case 'srs_review_replay_question_audio':
-        return '重播答案时包含问题音频';
       case 'srs_review_show_answer':
         return '显示答案';
       case 'srs_review_undo_blocked':
@@ -571849,10 +572067,16 @@ extension on _StringsZhCn {
         return '新算法从下一次复习起生效，已排好的到期日不变；要立即生效请用「立即重排整组」。';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) => '此牌组的算法来自更新版本，本机暂用 ${alg}';
+      case 'srs_settings_audio':
+        return '音频';
       case 'srs_settings_auto_optimize':
         return '自动优化';
       case 'srs_settings_auto_optimize_hint':
         return '定期按你自己的复习记录调整排程参数';
+      case 'srs_settings_autoplay_audio':
+        return '自动播放音频';
+      case 'srs_settings_autoplay_audio_hint':
+        return '显示问题面或答案面时自动播放卡上的音频；答案面不重播从正面带过来的音频。';
       case 'srs_settings_conflict_replaced':
         return '已被另一台设备的修改替换';
       case 'srs_settings_inherited_from':
@@ -571890,6 +572114,10 @@ extension on _StringsZhCn {
         return '单独设置';
       case 'srs_settings_relearn_steps':
         return '重学步长（分钟）';
+      case 'srs_settings_replay_question_audio':
+        return '重播答案时包含问题音频';
+      case 'srs_settings_replay_question_audio_hint':
+        return '关闭后，在答案面重播只播答案的音频。';
       case 'srs_settings_reschedule':
         return '立即重排整组';
       case 'srs_settings_reschedule_confirm':
@@ -587996,8 +588224,6 @@ extension on _StringsZhHk {
         return 'Good';
       case 'srs_rating_hard':
         return 'Hard';
-      case 'srs_review_autoplay_audio':
-        return 'Autoplay audio';
       case 'srs_review_back_to_decks':
         return 'Back to decks';
       case 'srs_review_done':
@@ -588008,8 +588234,6 @@ extension on _StringsZhHk {
         return 'Needs your decision';
       case 'srs_review_replay_audio':
         return 'Replay audio';
-      case 'srs_review_replay_question_audio':
-        return 'Include question audio when replaying answer';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -588025,10 +588249,16 @@ extension on _StringsZhHk {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -588067,6 +588297,10 @@ extension on _StringsZhHk {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
