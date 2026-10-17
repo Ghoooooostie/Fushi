@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142103 (8359 per locale)
+/// Strings: 142137 (8361 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8619,6 +8619,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_backup_kind_manual => 'Manual';
   String get srs_backup_kind_pre_restore => 'Before restore';
   String get srs_backup_list => 'Saved backups';
+  String get srs_backup_menu => 'Backup actions';
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   String get srs_backup_now => 'Back up now';
@@ -8638,6 +8639,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   String get srs_backup_title => 'Backups';
   String get srs_browse_batch_actions => 'Actions';
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -26363,6 +26366,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -26392,6 +26397,9 @@ class _StringsAr extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -46859,6 +46867,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -46888,6 +46898,9 @@ class _StringsDe extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -67480,6 +67493,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -67509,6 +67524,9 @@ class _StringsEs extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -88188,6 +88206,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -88217,6 +88237,9 @@ class _StringsFr extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -108660,6 +108683,8 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -108689,6 +108714,9 @@ class _StringsId extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -129176,6 +129204,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -129205,6 +129235,9 @@ class _StringsIt extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -148985,6 +149018,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -149014,6 +149049,9 @@ class _StringsJa extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -168542,6 +168580,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -168571,6 +168611,9 @@ class _StringsKo extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -188784,6 +188827,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -188813,6 +188858,9 @@ class _StringsNl extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -209329,6 +209377,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -209358,6 +209408,9 @@ class _StringsPtBr extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -229852,6 +229905,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -229881,6 +229936,9 @@ class _StringsRu extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -250126,6 +250184,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -250155,6 +250215,9 @@ class _StringsTh extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -270465,6 +270528,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -270494,6 +270559,9 @@ class _StringsTr extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -290800,6 +290868,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -290829,6 +290899,9 @@ class _StringsVi extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -309891,6 +309964,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_backup_list => '已有备份';
   @override
+  String get srs_backup_menu => '备份操作';
+  @override
   String get srs_backup_newer => '这份备份来自更新版本的 Fushi，请先更新应用再恢复。';
   @override
   String get srs_backup_now => '立即备份';
@@ -309918,6 +309993,9 @@ class _StringsZhCn extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} 条笔记 · ${reviews} 次复习 · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      '这份备份属于本机的配置「${name}」，请先切换到该配置再恢复。';
   @override
   String get srs_backup_title => '备份';
   @override
@@ -328705,6 +328783,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_menu => 'Backup actions';
+  @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
@@ -328734,6 +328814,9 @@ class _StringsZhHk extends _StringsEn {
     required Object reviews,
     required Object size,
   }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String srs_backup_switch_profile({required Object name}) =>
+      'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
   @override
   String get srs_backup_title => 'Backups';
   @override
@@ -346501,6 +346584,8 @@ extension on _StringsEn {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -346529,6 +346614,9 @@ extension on _StringsEn {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -363846,6 +363934,8 @@ extension on _StringsAr {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -363874,6 +363964,9 @@ extension on _StringsAr {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -381247,6 +381340,8 @@ extension on _StringsDe {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -381275,6 +381370,9 @@ extension on _StringsDe {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -398652,6 +398750,8 @@ extension on _StringsEs {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -398680,6 +398780,9 @@ extension on _StringsEs {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -416068,6 +416171,8 @@ extension on _StringsFr {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -416096,6 +416201,9 @@ extension on _StringsFr {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -433444,6 +433552,8 @@ extension on _StringsId {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -433472,6 +433582,9 @@ extension on _StringsId {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -450829,6 +450942,8 @@ extension on _StringsIt {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -450857,6 +450972,9 @@ extension on _StringsIt {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -468148,6 +468266,8 @@ extension on _StringsJa {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -468176,6 +468296,9 @@ extension on _StringsJa {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -485424,6 +485547,8 @@ extension on _StringsKo {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -485452,6 +485577,9 @@ extension on _StringsKo {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -502782,6 +502910,8 @@ extension on _StringsNl {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -502810,6 +502940,9 @@ extension on _StringsNl {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -520171,6 +520304,8 @@ extension on _StringsPtBr {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -520199,6 +520334,9 @@ extension on _StringsPtBr {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -537564,6 +537702,8 @@ extension on _StringsRu {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -537592,6 +537732,9 @@ extension on _StringsRu {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -554917,6 +555060,8 @@ extension on _StringsTh {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -554945,6 +555090,9 @@ extension on _StringsTh {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -572288,6 +572436,8 @@ extension on _StringsTr {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -572316,6 +572466,9 @@ extension on _StringsTr {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -589654,6 +589807,8 @@ extension on _StringsVi {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -589682,6 +589837,9 @@ extension on _StringsVi {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
@@ -606880,6 +607038,8 @@ extension on _StringsZhCn {
         return '恢复前';
       case 'srs_backup_list':
         return '已有备份';
+      case 'srs_backup_menu':
+        return '备份操作';
       case 'srs_backup_newer':
         return '这份备份来自更新版本的 Fushi，请先更新应用再恢复。';
       case 'srs_backup_now':
@@ -606908,6 +607068,8 @@ extension on _StringsZhCn {
           required Object reviews,
           required Object size,
         }) => '${notes} 条笔记 · ${reviews} 次复习 · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) => '这份备份属于本机的配置「${name}」，请先切换到该配置再恢复。';
       case 'srs_backup_title':
         return '备份';
       case 'srs_browse_batch_actions':
@@ -624069,6 +624231,8 @@ extension on _StringsZhHk {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_menu':
+        return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
@@ -624097,6 +624261,9 @@ extension on _StringsZhHk {
           required Object reviews,
           required Object size,
         }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_switch_profile':
+        return ({required Object name}) =>
+            'This backup belongs to the profile ${name} on this device. Switch to that profile and restore it there.';
       case 'srs_backup_title':
         return 'Backups';
       case 'srs_browse_batch_actions':
