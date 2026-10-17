@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133620 (7860 per locale)
+/// Strings: 133637 (7861 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7507,6 +7507,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
   String get popup_max_height => 'Popup max height';
   String get popup_max_width => 'Popup max width';
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
   String get popup_mining_target_switch => 'Switch profile or deck';
@@ -23721,6 +23723,9 @@ class _StringsAr extends _StringsEn {
   String get popup_max_height => 'أقصى ارتفاع للنافذة المنبثقة';
   @override
   String get popup_max_width => 'أقصى عرض للنافذة المنبثقة';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -43001,6 +43006,9 @@ class _StringsDe extends _StringsEn {
   String get popup_max_height => 'Maximale Popup-Höhe';
   @override
   String get popup_max_width => 'Maximale Popup-Breite';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -62424,6 +62432,9 @@ class _StringsEs extends _StringsEn {
   String get popup_max_height => 'Altura máxima de la ventana';
   @override
   String get popup_max_width => 'Ancho máximo del popup';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -81941,6 +81952,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_max_width => 'Largeur max du popup';
   @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+  @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
   @override
@@ -101260,6 +101274,9 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_max_width => 'Lebar maks popup';
   @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+  @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
   @override
@@ -120563,6 +120580,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_max_width => 'Larghezza massima popup';
   @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+  @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
   @override
@@ -139286,6 +139306,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_max_width => 'ポップアップの最大幅';
   @override
+  String get popup_mine_still_queued =>
+      'カード作成に追加済みですが、まだ Anki への書き込みを確認できていないため上書きできません。';
+  @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
   @override
@@ -157655,6 +157678,9 @@ class _StringsKo extends _StringsEn {
   String get popup_max_height => '팝업 최대 높이';
   @override
   String get popup_max_width => '팝업 최대 너비';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -176624,6 +176650,9 @@ class _StringsNl extends _StringsEn {
   String get popup_max_height => 'Maximale hoogte pop-up';
   @override
   String get popup_max_width => 'Maximale popup-breedte';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -195983,6 +196012,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_max_width => 'Largura máxima do popup';
   @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+  @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
   @override
@@ -215322,6 +215354,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_max_width => 'Макс. ширина всплывающего окна';
   @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+  @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
   @override
@@ -234436,6 +234471,9 @@ class _StringsTh extends _StringsEn {
   String get popup_max_height => 'ความสูงสูงสุดของหน้าต่างค้นคำ';
   @override
   String get popup_max_width => 'ความกว้างสูงสุดของป๊อปอัป';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -253577,6 +253615,9 @@ class _StringsTr extends _StringsEn {
   String get popup_max_height => 'Açılır pencere maksimum yüksekliği';
   @override
   String get popup_max_width => 'Açılır pencere maks. genişlik';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -272733,6 +272774,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_max_width => 'Chiều rộng tối đa popup';
   @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+  @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
   @override
@@ -290786,6 +290830,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_max_width => '查词窗口最大宽度';
   @override
+  String get popup_mine_still_queued => '已加入制卡，还没确认写进 Anki，暂时不能覆盖。';
+  @override
   String get popup_mining_target_empty => '还没有可选的配置或牌组，请先在设置里连接 Anki。';
   @override
   String get popup_mining_target_switch => '切换配置或牌组';
@@ -308443,6 +308489,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_max_width => '查詞視窗最大寬度';
   @override
+  String get popup_mine_still_queued => '已加入製卡，尚未確認寫入 Anki，暫時不能覆蓋。';
+  @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
   @override
@@ -325187,6 +325235,8 @@ extension on _StringsEn {
         return 'Popup max height';
       case 'popup_max_width':
         return 'Popup max width';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -341489,6 +341539,8 @@ extension on _StringsAr {
         return 'أقصى ارتفاع للنافذة المنبثقة';
       case 'popup_max_width':
         return 'أقصى عرض للنافذة المنبثقة';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -357845,6 +357897,8 @@ extension on _StringsDe {
         return 'Maximale Popup-Höhe';
       case 'popup_max_width':
         return 'Maximale Popup-Breite';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -374206,6 +374260,8 @@ extension on _StringsEs {
         return 'Altura máxima de la ventana';
       case 'popup_max_width':
         return 'Ancho máximo del popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -390579,6 +390635,8 @@ extension on _StringsFr {
         return 'Hauteur max. de la fenêtre de recherche';
       case 'popup_max_width':
         return 'Largeur max du popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -406915,6 +406973,8 @@ extension on _StringsId {
         return 'Tinggi maks popup';
       case 'popup_max_width':
         return 'Lebar maks popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -423255,6 +423315,8 @@ extension on _StringsIt {
         return 'Altezza massima del popup';
       case 'popup_max_width':
         return 'Larghezza massima popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -439535,6 +439597,8 @@ extension on _StringsJa {
         return 'ポップアップの最大高さ';
       case 'popup_max_width':
         return 'ポップアップの最大幅';
+      case 'popup_mine_still_queued':
+        return 'カード作成に追加済みですが、まだ Anki への書き込みを確認できていないため上書きできません。';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -455767,6 +455831,8 @@ extension on _StringsKo {
         return '팝업 최대 높이';
       case 'popup_max_width':
         return '팝업 최대 너비';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -472079,6 +472145,8 @@ extension on _StringsNl {
         return 'Maximale hoogte pop-up';
       case 'popup_max_width':
         return 'Maximale popup-breedte';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -488425,6 +488493,8 @@ extension on _StringsPtBr {
         return 'Altura máxima do pop-up';
       case 'popup_max_width':
         return 'Largura máxima do popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -504775,6 +504845,8 @@ extension on _StringsRu {
         return 'Макс. высота окна поиска';
       case 'popup_max_width':
         return 'Макс. ширина всплывающего окна';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -521087,6 +521159,8 @@ extension on _StringsTh {
         return 'ความสูงสูงสุดของหน้าต่างค้นคำ';
       case 'popup_max_width':
         return 'ความกว้างสูงสุดของป๊อปอัป';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -537415,6 +537489,8 @@ extension on _StringsTr {
         return 'Açılır pencere maksimum yüksekliği';
       case 'popup_max_width':
         return 'Açılır pencere maks. genişlik';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -553736,6 +553812,8 @@ extension on _StringsVi {
         return 'Chiều cao tối đa cửa sổ tra';
       case 'popup_max_width':
         return 'Chiều rộng tối đa popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -569935,6 +570013,8 @@ extension on _StringsZhCn {
         return '查词窗口最大高度';
       case 'popup_max_width':
         return '查词窗口最大宽度';
+      case 'popup_mine_still_queued':
+        return '已加入制卡，还没确认写进 Anki，暂时不能覆盖。';
       case 'popup_mining_target_empty':
         return '还没有可选的配置或牌组，请先在设置里连接 Anki。';
       case 'popup_mining_target_switch':
@@ -586094,6 +586174,8 @@ extension on _StringsZhHk {
         return '查詞視窗最大高度';
       case 'popup_max_width':
         return '查詞視窗最大寬度';
+      case 'popup_mine_still_queued':
+        return '已加入製卡，尚未確認寫入 Anki，暫時不能覆蓋。';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
