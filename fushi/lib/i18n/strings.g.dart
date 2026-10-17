@@ -5965,7 +5965,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Fonts for dictionary popups, with a live Japanese preview';
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   String get lookup_history_favorite => 'Add to favorites';
   String get lookup_history_more => 'More';
   String get lookup_history_remove => 'Remove from history';
@@ -8687,7 +8687,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_density_standard => 'Standard';
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   String get srs_card_appearance_font => 'Card font';
   String get srs_card_appearance_font_default => 'Default';
   String get srs_card_appearance_font_hint =>
@@ -21716,7 +21716,7 @@ class _StringsAr extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -26446,7 +26446,7 @@ class _StringsAr extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -42034,7 +42034,7 @@ class _StringsDe extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -46869,7 +46869,7 @@ class _StringsDe extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -62575,7 +62575,7 @@ class _StringsEs extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -67417,7 +67417,7 @@ class _StringsEs extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -83185,7 +83185,7 @@ class _StringsFr extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -88052,7 +88052,7 @@ class _StringsFr extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -103676,7 +103676,7 @@ class _StringsId extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -108451,7 +108451,7 @@ class _StringsId extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -124060,7 +124060,7 @@ class _StringsIt extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -128894,7 +128894,7 @@ class _StringsIt extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -144057,7 +144057,7 @@ class _StringsJa extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -148630,7 +148630,7 @@ class _StringsJa extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -163525,7 +163525,7 @@ class _StringsKo extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -168114,7 +168114,7 @@ class _StringsKo extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -183473,7 +183473,7 @@ class _StringsNl extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -188283,7 +188283,7 @@ class _StringsNl extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -203937,7 +203937,7 @@ class _StringsPtBr extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -208755,7 +208755,7 @@ class _StringsPtBr extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -224385,7 +224385,7 @@ class _StringsRu extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -229205,7 +229205,7 @@ class _StringsRu extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -244669,7 +244669,7 @@ class _StringsTh extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -249406,7 +249406,7 @@ class _StringsTh extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -264896,7 +264896,7 @@ class _StringsTr extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -269672,7 +269672,7 @@ class _StringsTr extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -285182,7 +285182,7 @@ class _StringsVi extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -289934,7 +289934,7 @@ class _StringsVi extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -304565,7 +304565,7 @@ class _StringsZhCn extends _StringsEn {
   String get lookup_dictionary_unified_style => '统一词典样式';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      '将导入词典自带的标签、强调字与边框按当前强调色（M3E）重新着色；关闭则保留各词典原样式。';
+      '将导入词典自带的标签、强调字与边框按当前强调色（Material）重新着色；关闭则保留各词典原样式。';
   @override
   String get lookup_history_favorite => '加入收藏';
   @override
@@ -308946,7 +308946,7 @@ class _StringsZhCn extends _StringsEn {
   String get srs_card_appearance_dict_unified => '统一词典样式';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      '把各词典自带的颜色按语义换成卡面配色（M3E）。关闭则保留词典原样式。';
+      '把各词典自带的颜色按语义换成卡面配色（Material）。关闭则保留词典原样式。';
   @override
   String get srs_card_appearance_font => '卡面字体';
   @override
@@ -323249,7 +323249,7 @@ class _StringsZhHk extends _StringsEn {
   String get lookup_dictionary_unified_style => 'Unify dictionary styles';
   @override
   String get lookup_dictionary_unified_style_hint =>
-      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+      'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
   @override
   String get lookup_history_favorite => 'Add to favorites';
   @override
@@ -327695,7 +327695,7 @@ class _StringsZhHk extends _StringsEn {
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
-      'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+      'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
   @override
   String get srs_card_appearance_font => 'Card font';
   @override
@@ -341260,7 +341260,7 @@ extension on _StringsEn {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -345411,7 +345411,7 @@ extension on _StringsEn {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -358536,7 +358536,7 @@ extension on _StringsAr {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -362688,7 +362688,7 @@ extension on _StringsAr {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -375853,7 +375853,7 @@ extension on _StringsDe {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -380021,7 +380021,7 @@ extension on _StringsDe {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -393191,7 +393191,7 @@ extension on _StringsEs {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -397358,7 +397358,7 @@ extension on _StringsEs {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -410539,7 +410539,7 @@ extension on _StringsFr {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -414706,7 +414706,7 @@ extension on _StringsFr {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -427862,7 +427862,7 @@ extension on _StringsId {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -432014,7 +432014,7 @@ extension on _StringsId {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -445169,7 +445169,7 @@ extension on _StringsIt {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -449331,7 +449331,7 @@ extension on _StringsIt {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -462440,7 +462440,7 @@ extension on _StringsJa {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -466582,7 +466582,7 @@ extension on _StringsJa {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -479648,7 +479648,7 @@ extension on _StringsKo {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -483790,7 +483790,7 @@ extension on _StringsKo {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -496915,7 +496915,7 @@ extension on _StringsNl {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -501080,7 +501080,7 @@ extension on _StringsNl {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -514238,7 +514238,7 @@ extension on _StringsPtBr {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -518401,7 +518401,7 @@ extension on _StringsPtBr {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -531563,7 +531563,7 @@ extension on _StringsRu {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -535726,7 +535726,7 @@ extension on _StringsRu {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -548861,7 +548861,7 @@ extension on _StringsTh {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -553011,7 +553011,7 @@ extension on _StringsTh {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -566159,7 +566159,7 @@ extension on _StringsTr {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -570314,7 +570314,7 @@ extension on _StringsTr {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -583459,7 +583459,7 @@ extension on _StringsVi {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -587612,7 +587612,7 @@ extension on _StringsVi {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
@@ -600641,7 +600641,7 @@ extension on _StringsZhCn {
       case 'lookup_dictionary_unified_style':
         return '统一词典样式';
       case 'lookup_dictionary_unified_style_hint':
-        return '将导入词典自带的标签、强调字与边框按当前强调色（M3E）重新着色；关闭则保留各词典原样式。';
+        return '将导入词典自带的标签、强调字与边框按当前强调色（Material）重新着色；关闭则保留各词典原样式。';
       case 'lookup_history_favorite':
         return '加入收藏';
       case 'lookup_history_more':
@@ -604767,7 +604767,7 @@ extension on _StringsZhCn {
       case 'srs_card_appearance_dict_unified':
         return '统一词典样式';
       case 'srs_card_appearance_dict_unified_hint':
-        return '把各词典自带的颜色按语义换成卡面配色（M3E）。关闭则保留词典原样式。';
+        return '把各词典自带的颜色按语义换成卡面配色（Material）。关闭则保留词典原样式。';
       case 'srs_card_appearance_font':
         return '卡面字体';
       case 'srs_card_appearance_font_default':
@@ -617755,7 +617755,7 @@ extension on _StringsZhHk {
       case 'lookup_dictionary_unified_style':
         return 'Unify dictionary styles';
       case 'lookup_dictionary_unified_style_hint':
-        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (M3E). Turn off to keep each dictionary\'s original colors.';
+        return 'Recolor imported dictionaries\' tags, highlights and borders with the current accent color (Material). Turn off to keep each dictionary\'s original colors.';
       case 'lookup_history_favorite':
         return 'Add to favorites';
       case 'lookup_history_more':
@@ -621891,7 +621891,7 @@ extension on _StringsZhHk {
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
-        return 'Recolor each dictionary\'s own colors to match the card (M3E). Off keeps the original dictionary style.';
+        return 'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
       case 'srs_card_appearance_font':
         return 'Card font';
       case 'srs_card_appearance_font_default':
