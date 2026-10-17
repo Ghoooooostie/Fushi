@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133620 (7860 per locale)
+/// Strings: 133654 (7862 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7739,6 +7739,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_orient_mixed => 'Mixed';
   String get reader_orient_upright => 'Upright';
   String get reader_page_columns_auto => 'Auto';
+  String get reader_page_crease => 'Page crease';
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
   String get reader_paginated => 'Paginated';
   String get reader_panel_lyrics_exit_hint =>
       'Return to the book page at the current sentence';
@@ -24129,6 +24132,11 @@ class _StringsAr extends _StringsEn {
   String get reader_orient_upright => 'قائم';
   @override
   String get reader_page_columns_auto => 'تلقائي';
+  @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
   @override
   String get reader_paginated => 'صفحات';
   @override
@@ -43414,6 +43422,11 @@ class _StringsDe extends _StringsEn {
   String get reader_orient_upright => 'Aufrecht';
   @override
   String get reader_page_columns_auto => 'Automatisch';
+  @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
   @override
   String get reader_paginated => 'Seitenweise';
   @override
@@ -62840,6 +62853,11 @@ class _StringsEs extends _StringsEn {
   String get reader_orient_upright => 'Vertical';
   @override
   String get reader_page_columns_auto => 'Automático';
+  @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
   @override
   String get reader_paginated => 'Paginado';
   @override
@@ -82357,6 +82375,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Automatique';
   @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
+  @override
   String get reader_paginated => 'Paginé';
   @override
   String get reader_panel_lyrics_exit_hint =>
@@ -101674,6 +101697,11 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Otomatis';
   @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
+  @override
   String get reader_paginated => 'Paginasi';
   @override
   String get reader_panel_lyrics_exit_hint =>
@@ -120979,6 +121007,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Automatico';
   @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
+  @override
   String get reader_paginated => 'Paginato';
   @override
   String get reader_panel_lyrics_exit_hint =>
@@ -139680,6 +139713,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_page_columns_auto => '自動';
   @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
+  @override
   String get reader_paginated => 'ページ送り';
   @override
   String get reader_panel_lyrics_exit_hint =>
@@ -158052,6 +158090,11 @@ class _StringsKo extends _StringsEn {
   String get reader_orient_upright => '직립';
   @override
   String get reader_page_columns_auto => '자동';
+  @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
   @override
   String get reader_paginated => '페이지 넘김';
   @override
@@ -177039,6 +177082,11 @@ class _StringsNl extends _StringsEn {
   String get reader_orient_upright => 'Rechtop';
   @override
   String get reader_page_columns_auto => 'Automatisch';
+  @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
   @override
   String get reader_paginated => 'Gepagineerd';
   @override
@@ -196398,6 +196446,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Automático';
   @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
+  @override
   String get reader_paginated => 'Paginado';
   @override
   String get reader_panel_lyrics_exit_hint =>
@@ -215735,6 +215788,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Авто';
   @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
+  @override
   String get reader_paginated => 'Постраничный';
   @override
   String get reader_panel_lyrics_exit_hint =>
@@ -234846,6 +234904,11 @@ class _StringsTh extends _StringsEn {
   String get reader_orient_upright => 'ตั้งตรง';
   @override
   String get reader_page_columns_auto => 'อัตโนมัติ';
+  @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
   @override
   String get reader_paginated => 'แบ่งหน้า';
   @override
@@ -253990,6 +254053,11 @@ class _StringsTr extends _StringsEn {
   String get reader_orient_upright => 'Dik';
   @override
   String get reader_page_columns_auto => 'Otomatik';
+  @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
   @override
   String get reader_paginated => 'Sayfalı';
   @override
@@ -273144,6 +273212,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_page_columns_auto => 'Tự động';
   @override
+  String get reader_page_crease => 'Page crease';
+  @override
+  String get reader_page_crease_subtitle =>
+      'Shade the gutter between two pages, like an open book (two columns per page)';
+  @override
   String get reader_paginated => 'Phân trang';
   @override
   String get reader_panel_lyrics_exit_hint =>
@@ -291165,6 +291238,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reader_page_columns_auto => '自动';
   @override
+  String get reader_page_crease => '中缝折痕';
+  @override
+  String get reader_page_crease_subtitle => '两栏一屏时在两页之间画出书脊阴影，像摊开的实体书';
+  @override
   String get reader_paginated => '翻页';
   @override
   String get reader_panel_lyrics_exit_hint => '回到书页，停在当前句';
@@ -308826,6 +308903,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_page_columns_auto => '自動';
   @override
+  String get reader_page_crease => '中縫摺痕';
+  @override
+  String get reader_page_crease_subtitle => '兩欄一屏時在兩頁之間畫出書脊陰影，像攤開的實體書';
+  @override
   String get reader_paginated => '翻頁';
   @override
   String get reader_panel_lyrics_exit_hint => '回到書頁，停在當前句';
@@ -325551,6 +325632,10 @@ extension on _StringsEn {
         return 'Upright';
       case 'reader_page_columns_auto':
         return 'Auto';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'Paginated';
       case 'reader_panel_lyrics_exit_hint':
@@ -341853,6 +341938,10 @@ extension on _StringsAr {
         return 'قائم';
       case 'reader_page_columns_auto':
         return 'تلقائي';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'صفحات';
       case 'reader_panel_lyrics_exit_hint':
@@ -358211,6 +358300,10 @@ extension on _StringsDe {
         return 'Aufrecht';
       case 'reader_page_columns_auto':
         return 'Automatisch';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'Seitenweise';
       case 'reader_panel_lyrics_exit_hint':
@@ -374573,6 +374666,10 @@ extension on _StringsEs {
         return 'Vertical';
       case 'reader_page_columns_auto':
         return 'Automático';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'Paginado';
       case 'reader_panel_lyrics_exit_hint':
@@ -390946,6 +391043,10 @@ extension on _StringsFr {
         return 'Droit';
       case 'reader_page_columns_auto':
         return 'Automatique';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'Paginé';
       case 'reader_panel_lyrics_exit_hint':
@@ -407279,6 +407380,10 @@ extension on _StringsId {
         return 'Tegak';
       case 'reader_page_columns_auto':
         return 'Otomatis';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'Paginasi';
       case 'reader_panel_lyrics_exit_hint':
@@ -423621,6 +423726,10 @@ extension on _StringsIt {
         return 'Diritto';
       case 'reader_page_columns_auto':
         return 'Automatico';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'Paginato';
       case 'reader_panel_lyrics_exit_hint':
@@ -439898,6 +440007,10 @@ extension on _StringsJa {
         return '正立';
       case 'reader_page_columns_auto':
         return '自動';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'ページ送り';
       case 'reader_panel_lyrics_exit_hint':
@@ -456130,6 +456243,10 @@ extension on _StringsKo {
         return '직립';
       case 'reader_page_columns_auto':
         return '자동';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return '페이지 넘김';
       case 'reader_panel_lyrics_exit_hint':
@@ -472445,6 +472562,10 @@ extension on _StringsNl {
         return 'Rechtop';
       case 'reader_page_columns_auto':
         return 'Automatisch';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'Gepagineerd';
       case 'reader_panel_lyrics_exit_hint':
@@ -488791,6 +488912,10 @@ extension on _StringsPtBr {
         return 'Vertical';
       case 'reader_page_columns_auto':
         return 'Automático';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'Paginado';
       case 'reader_panel_lyrics_exit_hint':
@@ -505141,6 +505266,10 @@ extension on _StringsRu {
         return 'Прямая';
       case 'reader_page_columns_auto':
         return 'Авто';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'Постраничный';
       case 'reader_panel_lyrics_exit_hint':
@@ -521451,6 +521580,10 @@ extension on _StringsTh {
         return 'ตั้งตรง';
       case 'reader_page_columns_auto':
         return 'อัตโนมัติ';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'แบ่งหน้า';
       case 'reader_panel_lyrics_exit_hint':
@@ -537779,6 +537912,10 @@ extension on _StringsTr {
         return 'Dik';
       case 'reader_page_columns_auto':
         return 'Otomatik';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'Sayfalı';
       case 'reader_panel_lyrics_exit_hint':
@@ -554102,6 +554239,10 @@ extension on _StringsVi {
         return 'Thẳng đứng';
       case 'reader_page_columns_auto':
         return 'Tự động';
+      case 'reader_page_crease':
+        return 'Page crease';
+      case 'reader_page_crease_subtitle':
+        return 'Shade the gutter between two pages, like an open book (two columns per page)';
       case 'reader_paginated':
         return 'Phân trang';
       case 'reader_panel_lyrics_exit_hint':
@@ -570297,6 +570438,10 @@ extension on _StringsZhCn {
         return '竖直';
       case 'reader_page_columns_auto':
         return '自动';
+      case 'reader_page_crease':
+        return '中缝折痕';
+      case 'reader_page_crease_subtitle':
+        return '两栏一屏时在两页之间画出书脊阴影，像摊开的实体书';
       case 'reader_paginated':
         return '翻页';
       case 'reader_panel_lyrics_exit_hint':
@@ -586457,6 +586602,10 @@ extension on _StringsZhHk {
         return '豎直';
       case 'reader_page_columns_auto':
         return '自動';
+      case 'reader_page_crease':
+        return '中縫摺痕';
+      case 'reader_page_crease_subtitle':
+        return '兩欄一屏時在兩頁之間畫出書脊陰影，像攤開的實體書';
       case 'reader_paginated':
         return '翻頁';
       case 'reader_panel_lyrics_exit_hint':
