@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 141576 (8328 per locale)
+/// Strings: 141729 (8337 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3653,7 +3653,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_compose_body_field => 'Details';
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
   String get feedback_compose_contact_field => 'Contact (optional)';
   String get feedback_compose_contact_hint =>
       'Email, Telegram, QQ… only developers can see it';
@@ -3685,13 +3684,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_compose_title_missing => 'Please fill in a title.';
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  String get feedback_compose_video_retry => 'Compress again';
   String get feedback_detail_add_shot => 'Add screenshot';
   String feedback_detail_attachments({required Object n}) =>
       '${n} attachment(s)';
@@ -7697,8 +7701,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
   String get popup_max_height => 'Popup max height';
   String get popup_max_width => 'Popup max width';
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
   String get popup_mining_target_switch => 'Switch profile or deck';
@@ -10752,6 +10758,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_metadata_provider_tmdb => 'TMDB';
   String video_mine_in_progress({required Object count}) =>
       'Making ${count} card(s)…';
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
   String video_mine_queue_badge({required Object count}) => '${count} to add';
   String get video_mine_queue_commit_all => 'Add all to Anki';
   String video_mine_queue_committed({
@@ -10937,6 +10951,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_remote_no_results => 'No dictionary entries found';
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   String get video_remote_previous => 'Previous subtitle';
   String get video_remote_reading => 'Reading';
   String get video_remote_remove => 'Remove selected favorites';
@@ -17808,8 +17824,6 @@ class _StringsAr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -17860,14 +17874,23 @@ class _StringsAr extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -24670,8 +24693,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_max_width => 'أقصى عرض للنافذة المنبثقة';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -30040,6 +30066,18 @@ class _StringsAr extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       'جارٍ إنشاء ${count} بطاقة…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) => '${count} للإضافة';
   @override
   String get video_mine_queue_commit_all => 'إضافة الكل إلى Anki';
@@ -30347,6 +30385,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -38034,8 +38075,6 @@ class _StringsDe extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -38086,14 +38125,23 @@ class _StringsDe extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -45063,8 +45111,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_max_width => 'Maximale Popup-Breite';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -50508,6 +50559,18 @@ class _StringsDe extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       '${count} Karte(n) werden erstellt…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) =>
       '${count} hinzuzufügen';
   @override
@@ -50819,6 +50882,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -58570,8 +58636,6 @@ class _StringsEs extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -58622,14 +58686,23 @@ class _StringsEs extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -65599,8 +65672,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_max_width => 'Ancho máximo del popup';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -71069,6 +71145,18 @@ class _StringsEs extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       'Creando ${count} tarjeta(s)…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) =>
       '${count} por añadir';
   @override
@@ -71382,6 +71470,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -79169,8 +79260,6 @@ class _StringsFr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -79221,14 +79310,23 @@ class _StringsFr extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -86228,8 +86326,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_max_width => 'Largeur max du popup';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -91707,6 +91808,18 @@ class _StringsFr extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       'Création de ${count} carte(s)…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) =>
       '${count} à ajouter';
   @override
@@ -92021,6 +92134,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -99723,8 +99839,6 @@ class _StringsId extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -99775,14 +99889,23 @@ class _StringsId extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -106660,8 +106783,11 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_max_width => 'Lebar maks popup';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -112070,6 +112196,18 @@ class _StringsId extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       'Membuat ${count} kartu…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) =>
       '${count} untuk ditambah';
   @override
@@ -112381,6 +112519,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -120079,8 +120220,6 @@ class _StringsIt extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -120131,14 +120270,23 @@ class _StringsIt extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -127076,8 +127224,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_max_width => 'Larghezza massima popup';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -132523,6 +132674,18 @@ class _StringsIt extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       'Creazione di ${count} carta/e…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) =>
       '${count} da aggiungere';
   @override
@@ -132833,6 +132996,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -140297,8 +140463,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get feedback_compose_body_hint => '何が起きたか、期待した結果、再現手順';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => '連絡先（任意）';
   @override
   String get feedback_compose_contact_hint => 'メール・Telegram など。開発者だけが見られます';
@@ -140347,14 +140511,23 @@ class _StringsJa extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -146912,8 +147085,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_max_width => 'ポップアップの最大幅';
   @override
-  String get popup_mine_still_queued =>
-      'カード作成に追加済みですが、まだ Anki への書き込みを確認できていないため上書きできません。';
+  String get popup_mine_overwrite_queued => 'Anki に書き込み後、自動で上書きします';
+  @override
+  String get popup_mine_still_queued => 'Anki に書き込み中です。少し後で再試行してください';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -152121,6 +152295,16 @@ class _StringsJa extends _StringsEn {
   @override
   String video_mine_in_progress({required Object count}) => 'カード作成中 ${count}';
   @override
+  String get video_mine_overwrite_cancelled => 'カードを保存できず、上書きを取り消しました';
+  @override
+  String get video_mine_overwrite_cancelled_episode => 'エピソードが変わり、上書きを取り消しました';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      '書き込んだカードが見つからず、上書きを取り消しました';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'カードを保存できず（${reason}）、上書きを取り消しました';
+  @override
   String video_mine_queue_badge({required Object count}) => '保留 ${count}';
   @override
   String get video_mine_queue_commit_all => 'すべて Anki に追加';
@@ -152419,6 +152603,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending => 'PC でカード作成中です。後で上書きしてください';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -159753,8 +159939,6 @@ class _StringsKo extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -159805,14 +159989,23 @@ class _StringsKo extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -166395,8 +166588,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_max_width => '팝업 최대 너비';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -171609,6 +171805,18 @@ class _StringsKo extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       '카드 ${count}장 만드는 중…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) => '추가할 카드 ${count}장';
   @override
   String get video_mine_queue_commit_all => '모두 Anki에 추가';
@@ -171908,6 +172116,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -179506,8 +179717,6 @@ class _StringsNl extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -179558,14 +179767,23 @@ class _StringsNl extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -186477,8 +186695,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_max_width => 'Maximale popup-breedte';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -191915,6 +192136,18 @@ class _StringsNl extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       '${count} kaart(en) maken…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) =>
       '${count} toe te voegen';
   @override
@@ -192226,6 +192459,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -199947,8 +200183,6 @@ class _StringsPtBr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -199999,14 +200233,23 @@ class _StringsPtBr extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -206948,8 +207191,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_max_width => 'Largura máxima do popup';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -212391,6 +212637,18 @@ class _StringsPtBr extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       'Criando ${count} cartão(ões)…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) =>
       '${count} para adicionar';
   @override
@@ -212703,6 +212961,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -220410,8 +220671,6 @@ class _StringsRu extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -220462,14 +220721,23 @@ class _StringsRu extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -227400,8 +227668,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_max_width => 'Макс. ширина всплывающего окна';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -232830,6 +233101,18 @@ class _StringsRu extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       'Создаётся карточек: ${count}…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) =>
       'К добавлению: ${count}';
   @override
@@ -233141,6 +233424,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -240768,8 +241054,6 @@ class _StringsTh extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -240820,14 +241104,23 @@ class _StringsTh extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -247628,8 +247921,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_max_width => 'ความกว้างสูงสุดของป๊อปอัป';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -252998,6 +253294,18 @@ class _StringsTh extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       'กำลังสร้างการ์ด ${count} ใบ…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) => 'รอเพิ่ม ${count}';
   @override
   String get video_mine_queue_commit_all => 'เพิ่มทั้งหมดลง Anki';
@@ -253304,6 +253612,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -260942,8 +261253,6 @@ class _StringsTr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -260994,14 +261303,23 @@ class _StringsTr extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -267882,8 +268200,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_max_width => 'Açılır pencere maks. genişlik';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -273286,6 +273607,18 @@ class _StringsTr extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       '${count} kart yapılıyor…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) =>
       '${count} eklenecek';
   @override
@@ -273594,6 +273927,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -281243,8 +281579,6 @@ class _StringsVi extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -281295,14 +281629,23 @@ class _StringsVi extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -288150,8 +288493,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_max_width => 'Chiều rộng tối đa popup';
   @override
+  String get popup_mine_overwrite_queued =>
+      'Will overwrite once saved to Anki.';
+  @override
   String get popup_mine_still_queued =>
-      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+      'Still saving to Anki. Try again shortly.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -293541,6 +293887,18 @@ class _StringsVi extends _StringsEn {
   String video_mine_in_progress({required Object count}) =>
       'Đang tạo ${count} thẻ…';
   @override
+  String get video_mine_overwrite_cancelled =>
+      'Card not saved; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_episode =>
+      'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      'Card not saved (${reason}); overwrite cancelled';
+  @override
   String video_mine_queue_badge({required Object count}) => '${count} cần thêm';
   @override
   String get video_mine_queue_commit_all => 'Thêm tất cả vào Anki';
@@ -293851,6 +294209,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending =>
+      'Still mining on the computer. Overwrite later.';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -300992,8 +301353,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get feedback_compose_body_hint => '发生了什么、你期望的结果、如何复现';
   @override
-  String get feedback_compose_cancel_video_compression => '取消压缩';
-  @override
   String get feedback_compose_contact_field => '联系方式（可选）';
   @override
   String get feedback_compose_contact_hint => '邮箱 / Telegram / QQ 等，仅开发者可见';
@@ -301040,13 +301399,22 @@ class _StringsZhCn extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       '更清晰但文件更大；超过约 3 分钟的视频会改按 720p 压缩，以免超过 ${max}。';
   @override
+  String get feedback_compose_video_cancel_remove => '取消并移除视频';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      '已压缩 · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       '视频较长，1080p 会超过 ${max}，本次改按 720p 压缩。';
+  @override
+  String get feedback_compose_video_failed => '视频压缩失败。';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) => '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 ${resolution}。';
+  @override
+  String get feedback_compose_video_retry => '重新压缩';
   @override
   String get feedback_detail_add_shot => '追加截图';
   @override
@@ -307289,7 +307657,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_max_width => '查词窗口最大宽度';
   @override
-  String get popup_mine_still_queued => '已加入制卡，还没确认写进 Anki，暂时不能覆盖。';
+  String get popup_mine_overwrite_queued => '写入 Anki 后自动覆盖';
+  @override
+  String get popup_mine_still_queued => '还在写入 Anki，稍后再试';
   @override
   String get popup_mining_target_empty => '还没有可选的配置或牌组，请先在设置里连接 Anki。';
   @override
@@ -312258,6 +312628,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_mine_in_progress({required Object count}) => '正在制卡 ${count}';
   @override
+  String get video_mine_overwrite_cancelled => '卡没写进 Anki，已取消覆盖';
+  @override
+  String get video_mine_overwrite_cancelled_episode => '已换集，已取消覆盖';
+  @override
+  String get video_mine_overwrite_cancelled_no_target => '找不到刚写入的卡，已取消覆盖';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      '卡没写进 Anki（${reason}），已取消覆盖';
+  @override
   String video_mine_queue_badge({required Object count}) => '待制卡 ${count}';
   @override
   String get video_mine_queue_commit_all => '全部写入 Anki';
@@ -312526,6 +312905,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_remote_no_results => '没有查到词条';
   @override
   String get video_remote_open_favorite => '在电脑打开此收藏？';
+  @override
+  String get video_remote_overwrite_pending => '电脑端还在制卡，稍后再覆盖';
   @override
   String get video_remote_previous => '上一句';
   @override
@@ -319627,8 +320008,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get feedback_compose_body_hint => '發生了甚麼、你期望的結果、如何重現';
   @override
-  String get feedback_compose_cancel_video_compression => 'Cancel compression';
-  @override
   String get feedback_compose_contact_field => '聯絡方式（可選）';
   @override
   String get feedback_compose_contact_hint => '電郵 / Telegram / QQ 等，只有開發者看得到';
@@ -319677,14 +320056,23 @@ class _StringsZhHk extends _StringsEn {
   String feedback_compose_video_1080_hint({required Object max}) =>
       'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
   @override
+  String get feedback_compose_video_cancel_remove => 'Cancel and remove video';
+  @override
+  String feedback_compose_video_compressed({required Object size}) =>
+      'Compressed · ${size}';
+  @override
   String feedback_compose_video_downgraded({required Object max}) =>
       'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String get feedback_compose_video_failed => 'Couldn\'t compress the video.';
   @override
   String feedback_compose_video_hint({
     required Object max,
     required Object resolution,
   }) =>
       'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+  @override
+  String get feedback_compose_video_retry => 'Compress again';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -326014,7 +326402,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_max_width => '查詞視窗最大寬度';
   @override
-  String get popup_mine_still_queued => '已加入製卡，尚未確認寫入 Anki，暫時不能覆蓋。';
+  String get popup_mine_overwrite_queued => '寫入 Anki 後自動覆蓋';
+  @override
+  String get popup_mine_still_queued => '仍在寫入 Anki，稍後再試';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -331100,6 +331490,15 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_mine_in_progress({required Object count}) => '正在製卡 ${count}';
   @override
+  String get video_mine_overwrite_cancelled => '卡未寫入 Anki，已取消覆蓋';
+  @override
+  String get video_mine_overwrite_cancelled_episode => '已換集，已取消覆蓋';
+  @override
+  String get video_mine_overwrite_cancelled_no_target => '找不到剛寫入的卡，已取消覆蓋';
+  @override
+  String video_mine_overwrite_cancelled_reason({required Object reason}) =>
+      '卡未寫入 Anki（${reason}），已取消覆蓋';
+  @override
   String video_mine_queue_badge({required Object count}) => '待製卡 ${count}';
   @override
   String get video_mine_queue_commit_all => '全部寫入 Anki';
@@ -331392,6 +331791,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_open_favorite =>
       'Open this favorite on the computer?';
+  @override
+  String get video_remote_overwrite_pending => '電腦端仍在製卡，稍後再覆蓋';
   @override
   String get video_remote_previous => 'Previous subtitle';
   @override
@@ -337943,8 +338344,6 @@ extension on _StringsEn {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -337987,12 +338386,20 @@ extension on _StringsEn {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -343803,8 +344210,10 @@ extension on _StringsEn {
         return 'Popup max height';
       case 'popup_max_width':
         return 'Popup max width';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -348564,6 +348973,15 @@ extension on _StringsEn {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => 'Making ${count} card(s)…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '${count} to add';
       case 'video_mine_queue_commit_all':
@@ -348818,6 +349236,8 @@ extension on _StringsEn {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -355224,8 +355644,6 @@ extension on _StringsAr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -355268,12 +355686,20 @@ extension on _StringsAr {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -361080,8 +361506,10 @@ extension on _StringsAr {
         return 'أقصى ارتفاع للنافذة المنبثقة';
       case 'popup_max_width':
         return 'أقصى عرض للنافذة المنبثقة';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -365838,6 +366266,15 @@ extension on _StringsAr {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => 'جارٍ إنشاء ${count} بطاقة…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '${count} للإضافة';
       case 'video_mine_queue_commit_all':
@@ -366091,6 +366528,8 @@ extension on _StringsAr {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -372531,8 +372970,6 @@ extension on _StringsDe {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -372575,12 +373012,20 @@ extension on _StringsDe {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -378411,8 +378856,10 @@ extension on _StringsDe {
         return 'Maximale Popup-Höhe';
       case 'popup_max_width':
         return 'Maximale Popup-Breite';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -383186,6 +383633,15 @@ extension on _StringsDe {
       case 'video_mine_in_progress':
         return ({required Object count}) =>
             '${count} Karte(n) werden erstellt…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '${count} hinzuzufügen';
       case 'video_mine_queue_commit_all':
@@ -383440,6 +383896,8 @@ extension on _StringsDe {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -389872,8 +390330,6 @@ extension on _StringsEs {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -389916,12 +390372,20 @@ extension on _StringsEs {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -395747,8 +396211,10 @@ extension on _StringsEs {
         return 'Altura máxima de la ventana';
       case 'popup_max_width':
         return 'Ancho máximo del popup';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -400520,6 +400986,15 @@ extension on _StringsEs {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => 'Creando ${count} tarjeta(s)…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '${count} por añadir';
       case 'video_mine_queue_commit_all':
@@ -400774,6 +401249,8 @@ extension on _StringsEs {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -407218,8 +407695,6 @@ extension on _StringsFr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -407262,12 +407737,20 @@ extension on _StringsFr {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -413095,8 +413578,10 @@ extension on _StringsFr {
         return 'Hauteur max. de la fenêtre de recherche';
       case 'popup_max_width':
         return 'Largeur max du popup';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -417870,6 +418355,15 @@ extension on _StringsFr {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => 'Création de ${count} carte(s)…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '${count} à ajouter';
       case 'video_mine_queue_commit_all':
@@ -418124,6 +418618,8 @@ extension on _StringsFr {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -424545,8 +425041,6 @@ extension on _StringsId {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -424589,12 +425083,20 @@ extension on _StringsId {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -430406,8 +430908,10 @@ extension on _StringsId {
         return 'Tinggi maks popup';
       case 'popup_max_width':
         return 'Lebar maks popup';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -435168,6 +435672,15 @@ extension on _StringsId {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => 'Membuat ${count} kartu…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '${count} untuk ditambah';
       case 'video_mine_queue_commit_all':
@@ -435422,6 +435935,8 @@ extension on _StringsId {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -441850,8 +442365,6 @@ extension on _StringsIt {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -441894,12 +442407,20 @@ extension on _StringsIt {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -447721,8 +448242,10 @@ extension on _StringsIt {
         return 'Altezza massima del popup';
       case 'popup_max_width':
         return 'Larghezza massima popup';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -452497,6 +453020,15 @@ extension on _StringsIt {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => 'Creazione di ${count} carta/e…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '${count} da aggiungere';
       case 'video_mine_queue_commit_all':
@@ -452750,6 +453282,8 @@ extension on _StringsIt {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -459138,8 +459672,6 @@ extension on _StringsJa {
         return '詳細';
       case 'feedback_compose_body_hint':
         return '何が起きたか、期待した結果、再現手順';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return '連絡先（任意）';
       case 'feedback_compose_contact_hint':
@@ -459182,12 +459714,20 @@ extension on _StringsJa {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -464976,8 +465516,10 @@ extension on _StringsJa {
         return 'ポップアップの最大高さ';
       case 'popup_max_width':
         return 'ポップアップの最大幅';
+      case 'popup_mine_overwrite_queued':
+        return 'Anki に書き込み後、自動で上書きします';
       case 'popup_mine_still_queued':
-        return 'カード作成に追加済みですが、まだ Anki への書き込みを確認できていないため上書きできません。';
+        return 'Anki に書き込み中です。少し後で再試行してください';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -469714,6 +470256,14 @@ extension on _StringsJa {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => 'カード作成中 ${count}';
+      case 'video_mine_overwrite_cancelled':
+        return 'カードを保存できず、上書きを取り消しました';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'エピソードが変わり、上書きを取り消しました';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return '書き込んだカードが見つからず、上書きを取り消しました';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) => 'カードを保存できず（${reason}）、上書きを取り消しました';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '保留 ${count}';
       case 'video_mine_queue_commit_all':
@@ -469964,6 +470514,8 @@ extension on _StringsJa {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'PC でカード作成中です。後で上書きしてください';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -476344,8 +476896,6 @@ extension on _StringsKo {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -476388,12 +476938,20 @@ extension on _StringsKo {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -482183,8 +482741,10 @@ extension on _StringsKo {
         return '팝업 최대 높이';
       case 'popup_max_width':
         return '팝업 최대 너비';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -486926,6 +487486,15 @@ extension on _StringsKo {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => '카드 ${count}장 만드는 중…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '추가할 카드 ${count}장';
       case 'video_mine_queue_commit_all':
@@ -487178,6 +487747,8 @@ extension on _StringsKo {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -493595,8 +494166,6 @@ extension on _StringsNl {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -493639,12 +494208,20 @@ extension on _StringsNl {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -499470,8 +500047,10 @@ extension on _StringsNl {
         return 'Maximale hoogte pop-up';
       case 'popup_max_width':
         return 'Maximale popup-breedte';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -504237,6 +504816,15 @@ extension on _StringsNl {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => '${count} kaart(en) maken…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '${count} toe te voegen';
       case 'video_mine_queue_commit_all':
@@ -504491,6 +505079,8 @@ extension on _StringsNl {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -510920,8 +511510,6 @@ extension on _StringsPtBr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -510964,12 +511552,20 @@ extension on _StringsPtBr {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -516791,8 +517387,10 @@ extension on _StringsPtBr {
         return 'Altura máxima do pop-up';
       case 'popup_max_width':
         return 'Largura máxima do popup';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -521557,6 +522155,15 @@ extension on _StringsPtBr {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => 'Criando ${count} cartão(ões)…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '${count} para adicionar';
       case 'video_mine_queue_commit_all':
@@ -521811,6 +522418,8 @@ extension on _StringsPtBr {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -528245,8 +528854,6 @@ extension on _StringsRu {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -528289,12 +528896,20 @@ extension on _StringsRu {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -534116,8 +534731,10 @@ extension on _StringsRu {
         return 'Макс. высота окна поиска';
       case 'popup_max_width':
         return 'Макс. ширина всплывающего окна';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -538882,6 +539499,15 @@ extension on _StringsRu {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => 'Создаётся карточек: ${count}…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => 'К добавлению: ${count}';
       case 'video_mine_queue_commit_all':
@@ -539135,6 +539761,8 @@ extension on _StringsRu {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -545544,8 +546172,6 @@ extension on _StringsTh {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -545588,12 +546214,20 @@ extension on _StringsTh {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -551403,8 +552037,10 @@ extension on _StringsTh {
         return 'ความสูงสูงสุดของหน้าต่างค้นคำ';
       case 'popup_max_width':
         return 'ความกว้างสูงสุดของป๊อปอัป';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -556164,6 +556800,15 @@ extension on _StringsTh {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => 'กำลังสร้างการ์ด ${count} ใบ…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => 'รอเพิ่ม ${count}';
       case 'video_mine_queue_commit_all':
@@ -556416,6 +557061,8 @@ extension on _StringsTh {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -562840,8 +563487,6 @@ extension on _StringsTr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -562884,12 +563529,20 @@ extension on _StringsTr {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -568706,8 +569359,10 @@ extension on _StringsTr {
         return 'Açılır pencere maksimum yüksekliği';
       case 'popup_max_width':
         return 'Açılır pencere maks. genişlik';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -573470,6 +574125,15 @@ extension on _StringsTr {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => '${count} kart yapılıyor…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '${count} eklenecek';
       case 'video_mine_queue_commit_all':
@@ -573723,6 +574387,8 @@ extension on _StringsTr {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -580143,8 +580809,6 @@ extension on _StringsVi {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -580187,12 +580851,20 @@ extension on _StringsVi {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -586002,8 +586674,10 @@ extension on _StringsVi {
         return 'Chiều cao tối đa cửa sổ tra';
       case 'popup_max_width':
         return 'Chiều rộng tối đa popup';
+      case 'popup_mine_overwrite_queued':
+        return 'Will overwrite once saved to Anki.';
       case 'popup_mine_still_queued':
-        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
+        return 'Still saving to Anki. Try again shortly.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -590767,6 +591441,15 @@ extension on _StringsVi {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => 'Đang tạo ${count} thẻ…';
+      case 'video_mine_overwrite_cancelled':
+        return 'Card not saved; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_episode':
+        return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) =>
+            'Card not saved (${reason}); overwrite cancelled';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '${count} cần thêm';
       case 'video_mine_queue_commit_all':
@@ -591019,6 +591702,8 @@ extension on _StringsVi {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return 'Still mining on the computer. Overwrite later.';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
@@ -597355,8 +598040,6 @@ extension on _StringsZhCn {
         return '详细描述';
       case 'feedback_compose_body_hint':
         return '发生了什么、你期望的结果、如何复现';
-      case 'feedback_compose_cancel_video_compression':
-        return '取消压缩';
       case 'feedback_compose_contact_field':
         return '联系方式（可选）';
       case 'feedback_compose_contact_hint':
@@ -597397,11 +598080,19 @@ extension on _StringsZhCn {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             '更清晰但文件更大；超过约 3 分钟的视频会改按 720p 压缩，以免超过 ${max}。';
+      case 'feedback_compose_video_cancel_remove':
+        return '取消并移除视频';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => '已压缩 · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) => '视频较长，1080p 会超过 ${max}，本次改按 720p 压缩。';
+      case 'feedback_compose_video_failed':
+        return '视频压缩失败。';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 ${resolution}。';
+      case 'feedback_compose_video_retry':
+        return '重新压缩';
       case 'feedback_detail_add_shot':
         return '追加截图';
       case 'feedback_detail_attachments':
@@ -603167,8 +603858,10 @@ extension on _StringsZhCn {
         return '查词窗口最大高度';
       case 'popup_max_width':
         return '查词窗口最大宽度';
+      case 'popup_mine_overwrite_queued':
+        return '写入 Anki 后自动覆盖';
       case 'popup_mine_still_queued':
-        return '已加入制卡，还没确认写进 Anki，暂时不能覆盖。';
+        return '还在写入 Anki，稍后再试';
       case 'popup_mining_target_empty':
         return '还没有可选的配置或牌组，请先在设置里连接 Anki。';
       case 'popup_mining_target_switch':
@@ -607876,6 +608569,14 @@ extension on _StringsZhCn {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => '正在制卡 ${count}';
+      case 'video_mine_overwrite_cancelled':
+        return '卡没写进 Anki，已取消覆盖';
+      case 'video_mine_overwrite_cancelled_episode':
+        return '已换集，已取消覆盖';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return '找不到刚写入的卡，已取消覆盖';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) => '卡没写进 Anki（${reason}），已取消覆盖';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '待制卡 ${count}';
       case 'video_mine_queue_commit_all':
@@ -608126,6 +608827,8 @@ extension on _StringsZhCn {
         return '没有查到词条';
       case 'video_remote_open_favorite':
         return '在电脑打开此收藏？';
+      case 'video_remote_overwrite_pending':
+        return '电脑端还在制卡，稍后再覆盖';
       case 'video_remote_previous':
         return '上一句';
       case 'video_remote_reading':
@@ -614458,8 +615161,6 @@ extension on _StringsZhHk {
         return '詳細描述';
       case 'feedback_compose_body_hint':
         return '發生了甚麼、你期望的結果、如何重現';
-      case 'feedback_compose_cancel_video_compression':
-        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return '聯絡方式（可選）';
       case 'feedback_compose_contact_hint':
@@ -614501,12 +615202,20 @@ extension on _StringsZhHk {
       case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
             'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_cancel_remove':
+        return 'Cancel and remove video';
+      case 'feedback_compose_video_compressed':
+        return ({required Object size}) => 'Compressed · ${size}';
       case 'feedback_compose_video_downgraded':
         return ({required Object max}) =>
             'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_failed':
+        return 'Couldn\'t compress the video.';
       case 'feedback_compose_video_hint':
         return ({required Object max, required Object resolution}) =>
             'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
+      case 'feedback_compose_video_retry':
+        return 'Compress again';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -620286,8 +620995,10 @@ extension on _StringsZhHk {
         return '查詞視窗最大高度';
       case 'popup_max_width':
         return '查詞視窗最大寬度';
+      case 'popup_mine_overwrite_queued':
+        return '寫入 Anki 後自動覆蓋';
       case 'popup_mine_still_queued':
-        return '已加入製卡，尚未確認寫入 Anki，暫時不能覆蓋。';
+        return '仍在寫入 Anki，稍後再試';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -625017,6 +625728,14 @@ extension on _StringsZhHk {
         return 'TMDB';
       case 'video_mine_in_progress':
         return ({required Object count}) => '正在製卡 ${count}';
+      case 'video_mine_overwrite_cancelled':
+        return '卡未寫入 Anki，已取消覆蓋';
+      case 'video_mine_overwrite_cancelled_episode':
+        return '已換集，已取消覆蓋';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return '找不到剛寫入的卡，已取消覆蓋';
+      case 'video_mine_overwrite_cancelled_reason':
+        return ({required Object reason}) => '卡未寫入 Anki（${reason}），已取消覆蓋';
       case 'video_mine_queue_badge':
         return ({required Object count}) => '待製卡 ${count}';
       case 'video_mine_queue_commit_all':
@@ -625267,6 +625986,8 @@ extension on _StringsZhHk {
         return 'No dictionary entries found';
       case 'video_remote_open_favorite':
         return 'Open this favorite on the computer?';
+      case 'video_remote_overwrite_pending':
+        return '電腦端仍在製卡，稍後再覆蓋';
       case 'video_remote_previous':
         return 'Previous subtitle';
       case 'video_remote_reading':
