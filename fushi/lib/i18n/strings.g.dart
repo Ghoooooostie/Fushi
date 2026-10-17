@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142409 (8377 per locale)
+/// Strings: 142443 (8379 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5458,6 +5458,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
   String get interconnect_moved_note =>
       'Connection & server settings are in the Fushi Interconnect category';
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  String get interconnect_peer_forget_title => 'Forget this device?';
   String get interconnect_peer_list_empty =>
       'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
   String get interconnect_peer_list_title => 'Added peers';
@@ -20940,6 +20943,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'إعدادات الاتصال والخادم موجودة في فئة ترابط Fushi';
+  @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
   @override
   String get interconnect_peer_list_empty =>
       'لم تُضف أقران بعد. اختر جهازاً مكتشفاً من قائمة أجهزة الشبكة المحلية أدناه للاقتران تلقائياً، أو أضف عنوان قرين يدوياً.';
@@ -41356,6 +41364,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Verbindungs- und Servereinstellungen befinden sich in der Kategorie Fushi Interconnect';
+  @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
   @override
   String get interconnect_peer_list_empty =>
       'Noch keine Geräte hinzugefügt. Wählen Sie ein erkanntes Gerät aus der LAN-Geräteliste unten zum automatischen Koppeln, oder fügen Sie eine Geräteadresse manuell hinzu.';
@@ -62011,6 +62024,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Los ajustes de conexión y servidor están en la categoría Fushi Interconnect';
+  @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
   @override
   String get interconnect_peer_list_empty =>
       'Aún no hay pares añadidos. Elija un dispositivo descubierto de la lista de dispositivos LAN abajo para emparejar automáticamente, o agregue una dirección de par manualmente.';
@@ -82739,6 +82757,11 @@ class _StringsFr extends _StringsEn {
   String get interconnect_moved_note =>
       'Les paramètres de connexion et de serveur sont dans la catégorie Fushi Interconnect';
   @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
+  @override
   String get interconnect_peer_list_empty =>
       'Aucun pair ajouté. Choisissez un appareil découvert dans la liste LAN ci-dessous pour vous appairer automatiquement, ou ajoutez une adresse de pair manuellement.';
   @override
@@ -103369,6 +103392,11 @@ class _StringsId extends _StringsEn {
   String get interconnect_moved_note =>
       'Pengaturan koneksi & server ada di kategori Fushi Interconnect';
   @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
+  @override
   String get interconnect_peer_list_empty =>
       'Belum ada peer yang ditambahkan. Pilih perangkat yang ditemukan dari daftar perangkat LAN di bawah untuk berpasangan secara otomatis, atau tambahkan alamat peer secara manual.';
   @override
@@ -123868,6 +123896,11 @@ class _StringsIt extends _StringsEn {
   String get interconnect_moved_note =>
       'Le impostazioni di connessione e server sono nella categoria Fushi Interconnect';
   @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
+  @override
   String get interconnect_peer_list_empty =>
       'Nessun peer aggiunto. Scegli un dispositivo scoperto dalla lista dispositivi LAN qui sotto per accoppiare automaticamente, o aggiungi un indirizzo peer manualmente.';
   @override
@@ -144035,6 +144068,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get interconnect_moved_note => '接続とサーバーの設定は Fushi インターコネクト カテゴリにあります';
   @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
+  @override
   String get interconnect_peer_list_empty =>
       'ピアはまだ追加されていません。下のLANデバイスリストから検出されたデバイスを選んで自動ペアリングするか、ピアアドレスを手動で追加してください。';
   @override
@@ -163617,6 +163655,11 @@ class _StringsKo extends _StringsEn {
       'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
   @override
   String get interconnect_moved_note => '연결 및 서버 설정은 Fushi 인터커넥트 카테고리에 있습니다';
+  @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
   @override
   String get interconnect_peer_list_empty =>
       '아직 추가된 피어가 없습니다. 아래 LAN 장치 목록에서 발견된 장치를 선택하여 자동으로 페어링하거나, 피어 주소를 수동으로 추가하세요.';
@@ -183634,6 +183677,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Verbindings- en serverinstellingen staan in de categorie Fushi Interconnect';
+  @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
   @override
   String get interconnect_peer_list_empty =>
       'Nog geen peers toegevoegd. Kies een ontdekt apparaat uit de LAN-apparatenlijst hieronder om automatisch te koppelen, of voeg handmatig een peeradres toe.';
@@ -204215,6 +204263,11 @@ class _StringsPtBr extends _StringsEn {
   String get interconnect_moved_note =>
       'As configurações de conexão e servidor estão na categoria Fushi Interconnect';
   @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
+  @override
   String get interconnect_peer_list_empty =>
       'Nenhum par adicionado ainda. Escolha um dispositivo descoberto na lista de dispositivos LAN abaixo para parear automaticamente, ou adicione um endereço manualmente.';
   @override
@@ -224785,6 +224838,11 @@ class _StringsRu extends _StringsEn {
   String get interconnect_moved_note =>
       'Настройки подключения и сервера находятся в разделе «Fushi Interconnect»';
   @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
+  @override
   String get interconnect_peer_list_empty =>
       'Узлы не добавлены. Выберите обнаруженное устройство из списка LAN ниже для автоматической привязки или добавьте адрес узла вручную.';
   @override
@@ -245209,6 +245267,11 @@ class _StringsTh extends _StringsEn {
   String get interconnect_moved_note =>
       'การตั้งค่าการเชื่อมต่อและเซิร์ฟเวอร์อยู่ในหมวด Fushi Interconnect';
   @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
+  @override
   String get interconnect_peer_list_empty =>
       'ยังไม่มีเพียร์ เลือกอุปกรณ์ที่ค้นพบจากรายการอุปกรณ์ LAN ด้านล่างเพื่อจับคู่อัตโนมัติ หรือเพิ่มที่อยู่เพียร์ด้วยตนเอง';
   @override
@@ -265545,6 +265608,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get interconnect_moved_note =>
       'Bağlantı ve sunucu ayarları Fushi Interconnect kategorisindedir';
+  @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
   @override
   String get interconnect_peer_list_empty =>
       'Henüz eş eklenmedi. Otomatik eşleştirme için aşağıdaki LAN cihaz listesinden keşfedilen bir cihaz seçin veya manuel olarak bir eş adresi ekleyin.';
@@ -285954,6 +286022,11 @@ class _StringsVi extends _StringsEn {
   String get interconnect_moved_note =>
       'Cài đặt kết nối & máy chủ nằm trong danh mục Fushi Interconnect';
   @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
+  @override
   String get interconnect_peer_list_empty =>
       'Chưa thêm peer nào. Chọn thiết bị được phát hiện từ danh sách thiết bị LAN bên dưới để ghép nối tự động, hoặc thêm địa chỉ peer thủ công.';
   @override
@@ -305532,6 +305605,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get interconnect_moved_note => '互联连接与本机服务器设置在「Fushi 互联」分类';
   @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      '这台设备的全部 ${count} 个地址会一起移除，之后不再与它同步。要再连接需重新配对。';
+  @override
+  String get interconnect_peer_forget_title => '忘记这台设备？';
+  @override
   String get interconnect_peer_list_empty =>
       '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
   @override
@@ -324324,6 +324402,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get interconnect_moved_note => '互聯連接與本機伺服器設定在「Fushi 互聯」分類';
   @override
+  String interconnect_peer_forget_confirm({required Object count}) =>
+      'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+  @override
+  String get interconnect_peer_forget_title => 'Forget this device?';
+  @override
   String get interconnect_peer_list_empty =>
       '尚未添加任何對端。可在下方的局域網設備列表中點擊發現的設備自動配對，或手動添加對端地址。';
   @override
@@ -342519,6 +342602,11 @@ extension on _StringsEn {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Fushi Interconnect category';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'No peers added yet. Pick a discovered device from the LAN device list below to pair automatically, or add a peer address manually.';
       case 'interconnect_peer_list_title':
@@ -359904,6 +359992,11 @@ extension on _StringsAr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'إعدادات الاتصال والخادم موجودة في فئة ترابط Fushi';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'لم تُضف أقران بعد. اختر جهازاً مكتشفاً من قائمة أجهزة الشبكة المحلية أدناه للاقتران تلقائياً، أو أضف عنوان قرين يدوياً.';
       case 'interconnect_peer_list_title':
@@ -377323,6 +377416,11 @@ extension on _StringsDe {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Verbindungs- und Servereinstellungen befinden sich in der Kategorie Fushi Interconnect';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'Noch keine Geräte hinzugefügt. Wählen Sie ein erkanntes Gerät aus der LAN-Geräteliste unten zum automatischen Koppeln, oder fügen Sie eine Geräteadresse manuell hinzu.';
       case 'interconnect_peer_list_title':
@@ -394769,6 +394867,11 @@ extension on _StringsEs {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Los ajustes de conexión y servidor están en la categoría Fushi Interconnect';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'Aún no hay pares añadidos. Elija un dispositivo descubierto de la lista de dispositivos LAN abajo para emparejar automáticamente, o agregue una dirección de par manualmente.';
       case 'interconnect_peer_list_title':
@@ -412223,6 +412326,11 @@ extension on _StringsFr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Les paramètres de connexion et de serveur sont dans la catégorie Fushi Interconnect';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'Aucun pair ajouté. Choisissez un appareil découvert dans la liste LAN ci-dessous pour vous appairer automatiquement, ou ajoutez une adresse de pair manuellement.';
       case 'interconnect_peer_list_title':
@@ -429652,6 +429760,11 @@ extension on _StringsId {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Pengaturan koneksi & server ada di kategori Fushi Interconnect';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'Belum ada peer yang ditambahkan. Pilih perangkat yang ditemukan dari daftar perangkat LAN di bawah untuk berpasangan secara otomatis, atau tambahkan alamat peer secara manual.';
       case 'interconnect_peer_list_title':
@@ -447065,6 +447178,11 @@ extension on _StringsIt {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Le impostazioni di connessione e server sono nella categoria Fushi Interconnect';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'Nessun peer aggiunto. Scegli un dispositivo scoperto dalla lista dispositivi LAN qui sotto per accoppiare automaticamente, o aggiungi un indirizzo peer manualmente.';
       case 'interconnect_peer_list_title':
@@ -464447,6 +464565,11 @@ extension on _StringsJa {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return '接続とサーバーの設定は Fushi インターコネクト カテゴリにあります';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'ピアはまだ追加されていません。下のLANデバイスリストから検出されたデバイスを選んで自動ペアリングするか、ピアアドレスを手動で追加してください。';
       case 'interconnect_peer_list_title':
@@ -481760,6 +481883,11 @@ extension on _StringsKo {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return '연결 및 서버 설정은 Fushi 인터커넥트 카테고리에 있습니다';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return '아직 추가된 피어가 없습니다. 아래 LAN 장치 목록에서 발견된 장치를 선택하여 자동으로 페어링하거나, 피어 주소를 수동으로 추가하세요.';
       case 'interconnect_peer_list_title':
@@ -499126,6 +499254,11 @@ extension on _StringsNl {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Verbindings- en serverinstellingen staan in de categorie Fushi Interconnect';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'Nog geen peers toegevoegd. Kies een ontdekt apparaat uit de LAN-apparatenlijst hieronder om automatisch te koppelen, of voeg handmatig een peeradres toe.';
       case 'interconnect_peer_list_title':
@@ -516557,6 +516690,11 @@ extension on _StringsPtBr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'As configurações de conexão e servidor estão na categoria Fushi Interconnect';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'Nenhum par adicionado ainda. Escolha um dispositivo descoberto na lista de dispositivos LAN abaixo para parear automaticamente, ou adicione um endereço manualmente.';
       case 'interconnect_peer_list_title':
@@ -533988,6 +534126,11 @@ extension on _StringsRu {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Настройки подключения и сервера находятся в разделе «Fushi Interconnect»';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'Узлы не добавлены. Выберите обнаруженное устройство из списка LAN ниже для автоматической привязки или добавьте адрес узла вручную.';
       case 'interconnect_peer_list_title':
@@ -551391,6 +551534,11 @@ extension on _StringsTh {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'การตั้งค่าการเชื่อมต่อและเซิร์ฟเวอร์อยู่ในหมวด Fushi Interconnect';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'ยังไม่มีเพียร์ เลือกอุปกรณ์ที่ค้นพบจากรายการอุปกรณ์ LAN ด้านล่างเพื่อจับคู่อัตโนมัติ หรือเพิ่มที่อยู่เพียร์ด้วยตนเอง';
       case 'interconnect_peer_list_title':
@@ -568795,6 +568943,11 @@ extension on _StringsTr {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Bağlantı ve sunucu ayarları Fushi Interconnect kategorisindedir';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'Henüz eş eklenmedi. Otomatik eşleştirme için aşağıdaki LAN cihaz listesinden keşfedilen bir cihaz seçin veya manuel olarak bir eş adresi ekleyin.';
       case 'interconnect_peer_list_title':
@@ -586202,6 +586355,11 @@ extension on _StringsVi {
         return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Cài đặt kết nối & máy chủ nằm trong danh mục Fushi Interconnect';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return 'Chưa thêm peer nào. Chọn thiết bị được phát hiện từ danh sách thiết bị LAN bên dưới để ghép nối tự động, hoặc thêm địa chỉ peer thủ công.';
       case 'interconnect_peer_list_title':
@@ -603497,6 +603655,11 @@ extension on _StringsZhCn {
         return '仅对标记为「我的设备」的已配对设备生效：它们没有 Fushi 账户时会自动使用本机的账户登录（需开启 HTTPS）。本机私钥不会离开本机。';
       case 'interconnect_moved_note':
         return '互联连接与本机服务器设置在「Fushi 互联」分类';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            '这台设备的全部 ${count} 个地址会一起移除，之后不再与它同步。要再连接需重新配对。';
+      case 'interconnect_peer_forget_title':
+        return '忘记这台设备？';
       case 'interconnect_peer_list_empty':
         return '尚未添加任何对端。可在下方的局域网设备列表中点击发现的设备自动配对，或手动添加对端地址。';
       case 'interconnect_peer_list_title':
@@ -620715,6 +620878,11 @@ extension on _StringsZhHk {
         return '僅對標記為「我的裝置」的已配對裝置生效：它們沒有 Fushi 帳戶時會自動使用本機的帳戶登入（需開啟 HTTPS）。本機私鑰不會離開本機。';
       case 'interconnect_moved_note':
         return '互聯連接與本機伺服器設定在「Fushi 互聯」分類';
+      case 'interconnect_peer_forget_confirm':
+        return ({required Object count}) =>
+            'All ${count} addresses of this device will be removed together, and it will stop syncing with this device. Pair again to reconnect.';
+      case 'interconnect_peer_forget_title':
+        return 'Forget this device?';
       case 'interconnect_peer_list_empty':
         return '尚未添加任何對端。可在下方的局域網設備列表中點擊發現的設備自動配對，或手動添加對端地址。';
       case 'interconnect_peer_list_title':
