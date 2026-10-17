@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142239 (8367 per locale)
+/// Strings: 142222 (8366 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8621,12 +8621,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_backup_kind_pre_restore => 'Before restore';
   String get srs_backup_list => 'Saved backups';
   String get srs_backup_location => 'Backup folder';
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   String get srs_backup_menu => 'Backup actions';
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
@@ -26379,14 +26377,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -46895,14 +46890,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -67536,14 +67528,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -88264,14 +88253,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -108756,14 +108742,11 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -129292,14 +129275,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -149121,14 +149101,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -168698,14 +168675,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -188960,14 +188934,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -209525,14 +209496,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -230068,14 +230036,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -250362,14 +250327,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -270721,14 +270683,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -291076,14 +291035,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -310187,13 +310143,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_backup_location => '备份存放位置';
   @override
-  String get srs_backup_location_android =>
-      '存在 Fushi 的应用私有存储里：文件管理器看不到，卸载 Fushi 会一并删除。重要的备份请用每份备份菜单里的「另存为 / 分享」另存一份。';
-  @override
   String get srs_backup_location_desktop => '随 Fushi 的数据存储位置一起迁移。';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      '在「文件」App 的「我的 iPhone › Fushi › ${path}」里可以看到，并随 iPhone 的 iCloud 备份一起备份。';
+  String get srs_backup_location_mobile =>
+      '存在 Fushi 的应用私有存储里：文件管理器看不到，卸载 Fushi 会一并删除。重要的备份请用每份备份菜单里的「另存为 / 分享」另存一份。';
   @override
   String get srs_backup_menu => '备份操作';
   @override
@@ -329020,14 +328973,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_backup_location => 'Backup folder';
   @override
-  String get srs_backup_location_android =>
-      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
-  @override
   String get srs_backup_location_desktop =>
       'Moves together with Fushi\'s data storage location.';
   @override
-  String srs_backup_location_ios({required Object path}) =>
-      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  String get srs_backup_location_mobile =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
   @override
   String get srs_backup_menu => 'Backup actions';
   @override
@@ -346836,13 +346786,10 @@ extension on _StringsEn {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -364199,13 +364146,10 @@ extension on _StringsAr {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -381618,13 +381562,10 @@ extension on _StringsDe {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -399041,13 +398982,10 @@ extension on _StringsEs {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -416475,13 +416413,10 @@ extension on _StringsFr {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -433869,13 +433804,10 @@ extension on _StringsId {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -451272,13 +451204,10 @@ extension on _StringsIt {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -468609,13 +468538,10 @@ extension on _StringsJa {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -485903,13 +485829,10 @@ extension on _StringsKo {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -503279,13 +503202,10 @@ extension on _StringsNl {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -520686,13 +520606,10 @@ extension on _StringsPtBr {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -538097,13 +538014,10 @@ extension on _StringsRu {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -555468,13 +555382,10 @@ extension on _StringsTh {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -572857,13 +572768,10 @@ extension on _StringsTr {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -590241,13 +590149,10 @@ extension on _StringsVi {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
@@ -607485,13 +607390,10 @@ extension on _StringsZhCn {
         return '已有备份';
       case 'srs_backup_location':
         return '备份存放位置';
-      case 'srs_backup_location_android':
-        return '存在 Fushi 的应用私有存储里：文件管理器看不到，卸载 Fushi 会一并删除。重要的备份请用每份备份菜单里的「另存为 / 分享」另存一份。';
       case 'srs_backup_location_desktop':
         return '随 Fushi 的数据存储位置一起迁移。';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            '在「文件」App 的「我的 iPhone › Fushi › ${path}」里可以看到，并随 iPhone 的 iCloud 备份一起备份。';
+      case 'srs_backup_location_mobile':
+        return '存在 Fushi 的应用私有存储里：文件管理器看不到，卸载 Fushi 会一并删除。重要的备份请用每份备份菜单里的「另存为 / 分享」另存一份。';
       case 'srs_backup_menu':
         return '备份操作';
       case 'srs_backup_newer':
@@ -624691,13 +624593,10 @@ extension on _StringsZhHk {
         return 'Saved backups';
       case 'srs_backup_location':
         return 'Backup folder';
-      case 'srs_backup_location_android':
-        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_location_desktop':
         return 'Moves together with Fushi\'s data storage location.';
-      case 'srs_backup_location_ios':
-        return ({required Object path}) =>
-            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+      case 'srs_backup_location_mobile':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
