@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142137 (8361 per locale)
+/// Strings: 142239 (8367 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8597,6 +8597,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_backup_auto => 'Automatic backups';
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  String get srs_backup_change_location => 'Change storage location';
   String get srs_backup_corrupt => 'This backup file is damaged';
   String get srs_backup_delete => 'Delete backup';
   String srs_backup_delete_confirm({required Object time}) =>
@@ -8619,10 +8620,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_backup_kind_manual => 'Manual';
   String get srs_backup_kind_pre_restore => 'Before restore';
   String get srs_backup_list => 'Saved backups';
+  String get srs_backup_location => 'Backup folder';
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
   String get srs_backup_menu => 'Backup actions';
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   String get srs_backup_now => 'Back up now';
+  String get srs_backup_open_folder => 'Open folder';
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
   String get srs_backup_restore => 'Restore to this point';
@@ -26325,6 +26334,8 @@ class _StringsAr extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -26366,12 +26377,25 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -46826,6 +46850,8 @@ class _StringsDe extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -46867,12 +46893,25 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -67452,6 +67491,8 @@ class _StringsEs extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -67493,12 +67534,25 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -88165,6 +88219,8 @@ class _StringsFr extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -88206,12 +88262,25 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -108642,6 +108711,8 @@ class _StringsId extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -108683,12 +108754,25 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -129163,6 +129247,8 @@ class _StringsIt extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -129204,12 +129290,25 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -148977,6 +149076,8 @@ class _StringsJa extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -149018,12 +149119,25 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -168539,6 +168653,8 @@ class _StringsKo extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -168580,12 +168696,25 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -188786,6 +188915,8 @@ class _StringsNl extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -188827,12 +188958,25 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -209336,6 +209480,8 @@ class _StringsPtBr extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -209377,12 +209523,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -229864,6 +230023,8 @@ class _StringsRu extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -229905,12 +230066,25 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -250143,6 +250317,8 @@ class _StringsTh extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -250184,12 +250360,25 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -270487,6 +270676,8 @@ class _StringsTr extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -270528,12 +270719,25 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -290827,6 +291031,8 @@ class _StringsVi extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -290868,12 +291074,25 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -309925,6 +310144,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_backup_auto_hint =>
       '复习数据有变动后自动备份，离开复习页时也会备份一次。备份只保存在本机，不参与同步。';
   @override
+  String get srs_backup_change_location => '更改存储位置';
+  @override
   String get srs_backup_corrupt => '备份文件已损坏';
   @override
   String get srs_backup_delete => '删除备份';
@@ -309964,11 +310185,23 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_backup_list => '已有备份';
   @override
+  String get srs_backup_location => '备份存放位置';
+  @override
+  String get srs_backup_location_android =>
+      '存在 Fushi 的应用私有存储里：文件管理器看不到，卸载 Fushi 会一并删除。重要的备份请用每份备份菜单里的「另存为 / 分享」另存一份。';
+  @override
+  String get srs_backup_location_desktop => '随 Fushi 的数据存储位置一起迁移。';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      '在「文件」App 的「我的 iPhone › Fushi › ${path}」里可以看到，并随 iPhone 的 iCloud 备份一起备份。';
+  @override
   String get srs_backup_menu => '备份操作';
   @override
   String get srs_backup_newer => '这份备份来自更新版本的 Fushi，请先更新应用再恢复。';
   @override
   String get srs_backup_now => '立即备份';
+  @override
+  String get srs_backup_open_folder => '打开文件夹';
   @override
   String srs_backup_other_profile({required Object name}) =>
       '这份备份属于另一个配置（${name}），而当前配置已有复习数据。请新建一个空配置，在其中恢复。';
@@ -328742,6 +328975,8 @@ class _StringsZhHk extends _StringsEn {
   String get srs_backup_auto_hint =>
       'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
   @override
+  String get srs_backup_change_location => 'Change storage location';
+  @override
   String get srs_backup_corrupt => 'This backup file is damaged';
   @override
   String get srs_backup_delete => 'Delete backup';
@@ -328783,12 +329018,25 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_backup_list => 'Saved backups';
   @override
+  String get srs_backup_location => 'Backup folder';
+  @override
+  String get srs_backup_location_android =>
+      'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+  @override
+  String get srs_backup_location_desktop =>
+      'Moves together with Fushi\'s data storage location.';
+  @override
+  String srs_backup_location_ios({required Object path}) =>
+      'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
+  @override
   String get srs_backup_menu => 'Backup actions';
   @override
   String get srs_backup_newer =>
       'This backup was made by a newer version of Fushi. Update the app to restore it.';
   @override
   String get srs_backup_now => 'Back up now';
+  @override
+  String get srs_backup_open_folder => 'Open folder';
   @override
   String srs_backup_other_profile({required Object name}) =>
       'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -346546,6 +346794,8 @@ extension on _StringsEn {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -346584,12 +346834,23 @@ extension on _StringsEn {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -363896,6 +364157,8 @@ extension on _StringsAr {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -363934,12 +364197,23 @@ extension on _StringsAr {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -381302,6 +381576,8 @@ extension on _StringsDe {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -381340,12 +381616,23 @@ extension on _StringsDe {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -398712,6 +398999,8 @@ extension on _StringsEs {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -398750,12 +399039,23 @@ extension on _StringsEs {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -416133,6 +416433,8 @@ extension on _StringsFr {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -416171,12 +416473,23 @@ extension on _StringsFr {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -433514,6 +433827,8 @@ extension on _StringsId {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -433552,12 +433867,23 @@ extension on _StringsId {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -450904,6 +451230,8 @@ extension on _StringsIt {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -450942,12 +451270,23 @@ extension on _StringsIt {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -468228,6 +468567,8 @@ extension on _StringsJa {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -468266,12 +468607,23 @@ extension on _StringsJa {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -485509,6 +485861,8 @@ extension on _StringsKo {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -485547,12 +485901,23 @@ extension on _StringsKo {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -502872,6 +503237,8 @@ extension on _StringsNl {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -502910,12 +503277,23 @@ extension on _StringsNl {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -520266,6 +520644,8 @@ extension on _StringsPtBr {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -520304,12 +520684,23 @@ extension on _StringsPtBr {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -537664,6 +538055,8 @@ extension on _StringsRu {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -537702,12 +538095,23 @@ extension on _StringsRu {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -555022,6 +555426,8 @@ extension on _StringsTh {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -555060,12 +555466,23 @@ extension on _StringsTh {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -572398,6 +572815,8 @@ extension on _StringsTr {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -572436,12 +572855,23 @@ extension on _StringsTr {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -589769,6 +590199,8 @@ extension on _StringsVi {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -589807,12 +590239,23 @@ extension on _StringsVi {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
@@ -607000,6 +607443,8 @@ extension on _StringsZhCn {
         return '自动备份';
       case 'srs_backup_auto_hint':
         return '复习数据有变动后自动备份，离开复习页时也会备份一次。备份只保存在本机，不参与同步。';
+      case 'srs_backup_change_location':
+        return '更改存储位置';
       case 'srs_backup_corrupt':
         return '备份文件已损坏';
       case 'srs_backup_delete':
@@ -607038,12 +607483,23 @@ extension on _StringsZhCn {
         return '恢复前';
       case 'srs_backup_list':
         return '已有备份';
+      case 'srs_backup_location':
+        return '备份存放位置';
+      case 'srs_backup_location_android':
+        return '存在 Fushi 的应用私有存储里：文件管理器看不到，卸载 Fushi 会一并删除。重要的备份请用每份备份菜单里的「另存为 / 分享」另存一份。';
+      case 'srs_backup_location_desktop':
+        return '随 Fushi 的数据存储位置一起迁移。';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            '在「文件」App 的「我的 iPhone › Fushi › ${path}」里可以看到，并随 iPhone 的 iCloud 备份一起备份。';
       case 'srs_backup_menu':
         return '备份操作';
       case 'srs_backup_newer':
         return '这份备份来自更新版本的 Fushi，请先更新应用再恢复。';
       case 'srs_backup_now':
         return '立即备份';
+      case 'srs_backup_open_folder':
+        return '打开文件夹';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             '这份备份属于另一个配置（${name}），而当前配置已有复习数据。请新建一个空配置，在其中恢复。';
@@ -624193,6 +624649,8 @@ extension on _StringsZhHk {
         return 'Automatic backups';
       case 'srs_backup_auto_hint':
         return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_change_location':
+        return 'Change storage location';
       case 'srs_backup_corrupt':
         return 'This backup file is damaged';
       case 'srs_backup_delete':
@@ -624231,12 +624689,23 @@ extension on _StringsZhHk {
         return 'Before restore';
       case 'srs_backup_list':
         return 'Saved backups';
+      case 'srs_backup_location':
+        return 'Backup folder';
+      case 'srs_backup_location_android':
+        return 'Stored in Fushi\'s private app storage: file managers can\'t see it and uninstalling Fushi deletes it. Use “Save or share” on a backup to keep a copy elsewhere.';
+      case 'srs_backup_location_desktop':
+        return 'Moves together with Fushi\'s data storage location.';
+      case 'srs_backup_location_ios':
+        return ({required Object path}) =>
+            'Visible in the Files app under On My iPhone › Fushi › ${path}, and included in your iCloud device backup.';
       case 'srs_backup_menu':
         return 'Backup actions';
       case 'srs_backup_newer':
         return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
       case 'srs_backup_now':
         return 'Back up now';
+      case 'srs_backup_open_folder':
+        return 'Open folder';
       case 'srs_backup_other_profile':
         return ({required Object name}) =>
             'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
