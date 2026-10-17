@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 141542 (8326 per locale)
+/// Strings: 142103 (8359 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8594,6 +8594,51 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_ankiconnect_key_set =>
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  String get srs_backup_auto => 'Automatic backups';
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  String get srs_backup_delete => 'Delete backup';
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  String get srs_backup_done => 'Backup saved';
+  String get srs_backup_empty => 'No backups yet';
+  String get srs_backup_export => 'Save or share';
+  String get srs_backup_failed => 'Backup failed';
+  String get srs_backup_interval => 'Minimum interval';
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  String get srs_backup_kind_auto => 'Automatic';
+  String get srs_backup_kind_manual => 'Manual';
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  String get srs_backup_list => 'Saved backups';
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  String get srs_backup_now => 'Back up now';
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  String get srs_backup_restore => 'Restore to this point';
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  String get srs_backup_restore_failed => 'Restore failed';
+  String get srs_backup_restore_from_file => 'Restore from file';
+  String get srs_backup_saved => 'Saved';
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  String get srs_backup_title => 'Backups';
   String get srs_browse_batch_actions => 'Actions';
   String get srs_browse_bury_toggle => 'Bury / unbury';
   String get srs_browse_change_note_type => 'Change note type';
@@ -26271,6 +26316,84 @@ class _StringsAr extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
   @override
   String get srs_browse_batch_actions => 'Actions';
   @override
@@ -46689,6 +46812,84 @@ class _StringsDe extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
   @override
   String get srs_browse_batch_actions => 'Actions';
   @override
@@ -67232,6 +67433,84 @@ class _StringsEs extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
   @override
   String get srs_browse_batch_actions => 'Actions';
   @override
@@ -87863,6 +88142,84 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
+  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -108256,6 +108613,84 @@ class _StringsId extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
   @override
   String get srs_browse_batch_actions => 'Actions';
   @override
@@ -128695,6 +129130,84 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
+  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -148426,6 +148939,84 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
+  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -167904,6 +168495,84 @@ class _StringsKo extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
   @override
   String get srs_browse_batch_actions => 'Actions';
   @override
@@ -188068,6 +188737,84 @@ class _StringsNl extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
   @override
   String get srs_browse_batch_actions => 'Actions';
   @override
@@ -208536,6 +209283,84 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
+  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -228981,6 +229806,84 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
+  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -249176,6 +250079,84 @@ class _StringsTh extends _StringsEn {
       'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
+  @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
   @override
   String get srs_browse_batch_actions => 'Actions';
   @override
@@ -269438,6 +270419,84 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
+  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -289695,6 +290754,84 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
+  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -308710,6 +309847,80 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect（Fushi 复习）';
   @override
+  String get srs_backup_auto => '自动备份';
+  @override
+  String get srs_backup_auto_hint =>
+      '复习数据有变动后自动备份，离开复习页时也会备份一次。备份只保存在本机，不参与同步。';
+  @override
+  String get srs_backup_corrupt => '备份文件已损坏';
+  @override
+  String get srs_backup_delete => '删除备份';
+  @override
+  String srs_backup_delete_confirm({required Object time}) => '删除 ${time} 的备份？';
+  @override
+  String srs_backup_disk_usage({required Object size}) => '本机占用 ${size}';
+  @override
+  String get srs_backup_done => '已备份';
+  @override
+  String get srs_backup_empty => '还没有备份';
+  @override
+  String get srs_backup_export => '另存为 / 分享';
+  @override
+  String get srs_backup_failed => '备份失败';
+  @override
+  String get srs_backup_interval => '最短间隔';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} 分钟';
+  @override
+  String get srs_backup_invalid => '这个文件不是 Fushi 复习备份';
+  @override
+  String get srs_backup_keep_daily => '每日备份保留份数';
+  @override
+  String get srs_backup_keep_hint =>
+      '今天和昨天的备份全部保留；更早的按日、周、月各留一份，超出份数的自动删除（与 Anki 相同）。';
+  @override
+  String get srs_backup_keep_monthly => '每月备份保留份数';
+  @override
+  String get srs_backup_keep_weekly => '每周备份保留份数';
+  @override
+  String get srs_backup_kind_auto => '自动';
+  @override
+  String get srs_backup_kind_manual => '手动';
+  @override
+  String get srs_backup_kind_pre_restore => '恢复前';
+  @override
+  String get srs_backup_list => '已有备份';
+  @override
+  String get srs_backup_newer => '这份备份来自更新版本的 Fushi，请先更新应用再恢复。';
+  @override
+  String get srs_backup_now => '立即备份';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      '这份备份属于另一个配置（${name}），而当前配置已有复习数据。请新建一个空配置，在其中恢复。';
+  @override
+  String get srs_backup_restore => '恢复到此时间点';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      '复习数据将回到 ${time}：之后新建的笔记会被删除，之后删掉的笔记会恢复，之后的复习会被撤销；其它设备同步后也会一致。恢复前会先备份当前状态，可以随时撤回。';
+  @override
+  String get srs_backup_restore_confirm_title => '恢复复习数据？';
+  @override
+  String srs_backup_restore_done({required Object time}) => '已恢复到 ${time}';
+  @override
+  String get srs_backup_restore_failed => '恢复失败';
+  @override
+  String get srs_backup_restore_from_file => '从文件恢复';
+  @override
+  String get srs_backup_saved => '已保存';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} 条笔记 · ${reviews} 次复习 · ${size}';
+  @override
+  String get srs_backup_title => '备份';
+  @override
   String get srs_browse_batch_actions => '批量操作';
   @override
   String get srs_browse_bury_toggle => '搁置 / 取消搁置';
@@ -327448,6 +328659,84 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_ankiconnect_title => 'AnkiConnect for Fushi review';
   @override
+  String get srs_backup_auto => 'Automatic backups';
+  @override
+  String get srs_backup_auto_hint =>
+      'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+  @override
+  String get srs_backup_corrupt => 'This backup file is damaged';
+  @override
+  String get srs_backup_delete => 'Delete backup';
+  @override
+  String srs_backup_delete_confirm({required Object time}) =>
+      'Delete the backup from ${time}?';
+  @override
+  String srs_backup_disk_usage({required Object size}) =>
+      'Using ${size} on this device';
+  @override
+  String get srs_backup_done => 'Backup saved';
+  @override
+  String get srs_backup_empty => 'No backups yet';
+  @override
+  String get srs_backup_export => 'Save or share';
+  @override
+  String get srs_backup_failed => 'Backup failed';
+  @override
+  String get srs_backup_interval => 'Minimum interval';
+  @override
+  String srs_backup_interval_minutes({required Object n}) => '${n} min';
+  @override
+  String get srs_backup_invalid => 'This file is not a Fushi review backup';
+  @override
+  String get srs_backup_keep_daily => 'Daily backups to keep';
+  @override
+  String get srs_backup_keep_hint =>
+      'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+  @override
+  String get srs_backup_keep_monthly => 'Monthly backups to keep';
+  @override
+  String get srs_backup_keep_weekly => 'Weekly backups to keep';
+  @override
+  String get srs_backup_kind_auto => 'Automatic';
+  @override
+  String get srs_backup_kind_manual => 'Manual';
+  @override
+  String get srs_backup_kind_pre_restore => 'Before restore';
+  @override
+  String get srs_backup_list => 'Saved backups';
+  @override
+  String get srs_backup_newer =>
+      'This backup was made by a newer version of Fushi. Update the app to restore it.';
+  @override
+  String get srs_backup_now => 'Back up now';
+  @override
+  String srs_backup_other_profile({required Object name}) =>
+      'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+  @override
+  String get srs_backup_restore => 'Restore to this point';
+  @override
+  String srs_backup_restore_confirm({required Object time}) =>
+      'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+  @override
+  String get srs_backup_restore_confirm_title => 'Restore review data?';
+  @override
+  String srs_backup_restore_done({required Object time}) =>
+      'Restored to ${time}';
+  @override
+  String get srs_backup_restore_failed => 'Restore failed';
+  @override
+  String get srs_backup_restore_from_file => 'Restore from file';
+  @override
+  String get srs_backup_saved => 'Saved';
+  @override
+  String srs_backup_summary({
+    required Object notes,
+    required Object reviews,
+    required Object size,
+  }) => '${notes} notes · ${reviews} reviews · ${size}';
+  @override
+  String get srs_backup_title => 'Backups';
+  @override
   String get srs_browse_batch_actions => 'Actions';
   @override
   String get srs_browse_bury_toggle => 'Bury / unbury';
@@ -345170,6 +346459,78 @@ extension on _StringsEn {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -362443,6 +363804,78 @@ extension on _StringsAr {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -379772,6 +381205,78 @@ extension on _StringsDe {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -397105,6 +398610,78 @@ extension on _StringsEs {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -414449,6 +416026,78 @@ extension on _StringsFr {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -431753,6 +433402,78 @@ extension on _StringsId {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -449066,6 +450787,78 @@ extension on _StringsIt {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -466313,6 +468106,78 @@ extension on _StringsJa {
         return '他のデバイスから接続するときは、127.0.0.1 をこのコンピューターの LAN アドレスに置き換え、同じ Fushi API キーを入力してください。';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -483517,6 +485382,78 @@ extension on _StringsKo {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -500803,6 +502740,78 @@ extension on _StringsNl {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -518120,6 +520129,78 @@ extension on _StringsPtBr {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -535441,6 +537522,78 @@ extension on _StringsRu {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -552722,6 +554875,78 @@ extension on _StringsTh {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -570021,6 +572246,78 @@ extension on _StringsTr {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -587315,6 +589612,78 @@ extension on _StringsVi {
         return 'From another device, replace 127.0.0.1 with this computer\'s LAN address and enter the same Fushi API key.';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
@@ -604469,6 +606838,78 @@ extension on _StringsZhCn {
         return '从其他设备连接时，把 127.0.0.1 换成这台电脑的局域网地址，并填同一个 Fushi API 密钥。';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect（Fushi 复习）';
+      case 'srs_backup_auto':
+        return '自动备份';
+      case 'srs_backup_auto_hint':
+        return '复习数据有变动后自动备份，离开复习页时也会备份一次。备份只保存在本机，不参与同步。';
+      case 'srs_backup_corrupt':
+        return '备份文件已损坏';
+      case 'srs_backup_delete':
+        return '删除备份';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => '删除 ${time} 的备份？';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => '本机占用 ${size}';
+      case 'srs_backup_done':
+        return '已备份';
+      case 'srs_backup_empty':
+        return '还没有备份';
+      case 'srs_backup_export':
+        return '另存为 / 分享';
+      case 'srs_backup_failed':
+        return '备份失败';
+      case 'srs_backup_interval':
+        return '最短间隔';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} 分钟';
+      case 'srs_backup_invalid':
+        return '这个文件不是 Fushi 复习备份';
+      case 'srs_backup_keep_daily':
+        return '每日备份保留份数';
+      case 'srs_backup_keep_hint':
+        return '今天和昨天的备份全部保留；更早的按日、周、月各留一份，超出份数的自动删除（与 Anki 相同）。';
+      case 'srs_backup_keep_monthly':
+        return '每月备份保留份数';
+      case 'srs_backup_keep_weekly':
+        return '每周备份保留份数';
+      case 'srs_backup_kind_auto':
+        return '自动';
+      case 'srs_backup_kind_manual':
+        return '手动';
+      case 'srs_backup_kind_pre_restore':
+        return '恢复前';
+      case 'srs_backup_list':
+        return '已有备份';
+      case 'srs_backup_newer':
+        return '这份备份来自更新版本的 Fushi，请先更新应用再恢复。';
+      case 'srs_backup_now':
+        return '立即备份';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            '这份备份属于另一个配置（${name}），而当前配置已有复习数据。请新建一个空配置，在其中恢复。';
+      case 'srs_backup_restore':
+        return '恢复到此时间点';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            '复习数据将回到 ${time}：之后新建的笔记会被删除，之后删掉的笔记会恢复，之后的复习会被撤销；其它设备同步后也会一致。恢复前会先备份当前状态，可以随时撤回。';
+      case 'srs_backup_restore_confirm_title':
+        return '恢复复习数据？';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => '已恢复到 ${time}';
+      case 'srs_backup_restore_failed':
+        return '恢复失败';
+      case 'srs_backup_restore_from_file':
+        return '从文件恢复';
+      case 'srs_backup_saved':
+        return '已保存';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} 条笔记 · ${reviews} 次复习 · ${size}';
+      case 'srs_backup_title':
+        return '备份';
       case 'srs_browse_batch_actions':
         return '批量操作';
       case 'srs_browse_bury_toggle':
@@ -621586,6 +624027,78 @@ extension on _StringsZhHk {
         return '從其他裝置連線時，把 127.0.0.1 換成這部電腦的區域網路位址，並填同一個 Fushi API 金鑰。';
       case 'srs_ankiconnect_title':
         return 'AnkiConnect for Fushi review';
+      case 'srs_backup_auto':
+        return 'Automatic backups';
+      case 'srs_backup_auto_hint':
+        return 'Back up review data after it changes, and when you leave a review session. Backups stay on this device and are not synced.';
+      case 'srs_backup_corrupt':
+        return 'This backup file is damaged';
+      case 'srs_backup_delete':
+        return 'Delete backup';
+      case 'srs_backup_delete_confirm':
+        return ({required Object time}) => 'Delete the backup from ${time}?';
+      case 'srs_backup_disk_usage':
+        return ({required Object size}) => 'Using ${size} on this device';
+      case 'srs_backup_done':
+        return 'Backup saved';
+      case 'srs_backup_empty':
+        return 'No backups yet';
+      case 'srs_backup_export':
+        return 'Save or share';
+      case 'srs_backup_failed':
+        return 'Backup failed';
+      case 'srs_backup_interval':
+        return 'Minimum interval';
+      case 'srs_backup_interval_minutes':
+        return ({required Object n}) => '${n} min';
+      case 'srs_backup_invalid':
+        return 'This file is not a Fushi review backup';
+      case 'srs_backup_keep_daily':
+        return 'Daily backups to keep';
+      case 'srs_backup_keep_hint':
+        return 'Backups from today and yesterday are always kept. Older ones are thinned to one per day, week and month, as in Anki.';
+      case 'srs_backup_keep_monthly':
+        return 'Monthly backups to keep';
+      case 'srs_backup_keep_weekly':
+        return 'Weekly backups to keep';
+      case 'srs_backup_kind_auto':
+        return 'Automatic';
+      case 'srs_backup_kind_manual':
+        return 'Manual';
+      case 'srs_backup_kind_pre_restore':
+        return 'Before restore';
+      case 'srs_backup_list':
+        return 'Saved backups';
+      case 'srs_backup_newer':
+        return 'This backup was made by a newer version of Fushi. Update the app to restore it.';
+      case 'srs_backup_now':
+        return 'Back up now';
+      case 'srs_backup_other_profile':
+        return ({required Object name}) =>
+            'This backup belongs to another profile (${name}), and the current profile already has review data. Create an empty profile and restore it there.';
+      case 'srs_backup_restore':
+        return 'Restore to this point';
+      case 'srs_backup_restore_confirm':
+        return ({required Object time}) =>
+            'Review data goes back to ${time}: notes added after that are deleted, notes deleted after that come back, and later reviews are undone. Other devices follow after syncing. The current state is backed up first, so you can undo this.';
+      case 'srs_backup_restore_confirm_title':
+        return 'Restore review data?';
+      case 'srs_backup_restore_done':
+        return ({required Object time}) => 'Restored to ${time}';
+      case 'srs_backup_restore_failed':
+        return 'Restore failed';
+      case 'srs_backup_restore_from_file':
+        return 'Restore from file';
+      case 'srs_backup_saved':
+        return 'Saved';
+      case 'srs_backup_summary':
+        return ({
+          required Object notes,
+          required Object reviews,
+          required Object size,
+        }) => '${notes} notes · ${reviews} reviews · ${size}';
+      case 'srs_backup_title':
+        return 'Backups';
       case 'srs_browse_batch_actions':
         return 'Actions';
       case 'srs_browse_bury_toggle':
