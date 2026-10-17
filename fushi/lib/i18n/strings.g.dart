@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 135286 (7958 per locale)
+/// Strings: 135371 (7963 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6955,7 +6955,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Shared by manga and graphic subtitles: engine, local models and LLM correction';
   String get models_section_files => 'Model files';
   String get models_tts_card_fallback_section => 'Card audio fallback';
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  String get models_tts_fallback_voice => 'Fallback voice';
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   String get models_tts_title => 'Speech synthesis (TTS)';
@@ -9008,6 +9015,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Delete failed: ${reason}';
   String get storage_entry_delete_files_confirm_body =>
       'This deletes it from disk right away. Nothing in your library references it - it is cached, exported or re-downloadable data.';
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   String get storage_entry_external_audio_hint =>
       'Audio references the original files, using no app storage';
   String storage_entry_more_rest({required Object n, required Object size}) =>
@@ -22945,7 +22954,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -26533,6 +26553,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'سيُحذف من القرص فورًا. لا يشير إليه أي عنصر في مكتبتك — فهذه بيانات مؤقتة أو مُصدَّرة أو يمكن تنزيلها من جديد.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'يشير الصوت إلى الملفات الأصلية ولا يستهلك مساحة التطبيق';
@@ -42467,7 +42490,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -46119,6 +46153,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Wird sofort von der Festplatte gelöscht. Nichts in deiner Bibliothek verweist darauf – es sind zwischengespeicherte, exportierte oder erneut herunterladbare Daten.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'Audio verweist auf die Originaldateien und belegt keinen App-Speicher';
@@ -62167,7 +62204,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -65826,6 +65874,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Se eliminará del disco de inmediato. Nada de tu biblioteca hace referencia a esto: son datos en caché, exportados o que se pueden volver a descargar.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'El audio hace referencia a los archivos originales y no ocupa espacio de la app';
@@ -81944,7 +81995,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -85618,6 +85680,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Suppression immédiate du disque. Rien dans votre bibliothèque n\'y fait référence : ce sont des données en cache, exportées ou re-téléchargeables.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'L\'audio référence les fichiers d\'origine et n\'occupe aucun espace de l\'application';
@@ -101558,7 +101623,18 @@ class _StringsId extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -105173,6 +105249,9 @@ class _StringsId extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Akan langsung dihapus dari disk. Tidak ada di pustaka Anda yang merujuk ke sini — isinya data cache, hasil ekspor, atau yang bisa diunduh ulang.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'Audio merujuk ke berkas aslinya, tidak memakai penyimpanan aplikasi';
@@ -121126,7 +121205,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -124775,6 +124865,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Verrà eliminato subito dal disco. Nulla nella tua libreria vi fa riferimento: sono dati in cache, esportati o riscaricabili.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'L\'audio fa riferimento ai file originali e non occupa spazio dell\'app';
@@ -140177,7 +140270,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary => '読み上げ音声、ローカル GPT-SoVITS、カード音声の代替';
   @override
@@ -143656,6 +143760,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'ディスクからすぐに削除します。ライブラリのどの項目もこれを参照していません（キャッシュ・書き出し済みデータ・再取得できるデータです）。';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       '音声は元のファイルを参照するため、アプリの容量を使いません';
@@ -158814,7 +158921,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -162298,6 +162416,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       '디스크에서 즉시 삭제합니다. 라이브러리의 어떤 항목도 이를 참조하지 않습니다 — 캐시, 내보낸 파일, 또는 다시 받을 수 있는 데이터입니다.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       '오디오는 원본 파일을 참조하므로 앱 저장 공간을 쓰지 않아요';
@@ -177996,7 +178117,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -181638,6 +181770,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Wordt meteen van de schijf verwijderd. Niets in je bibliotheek verwijst ernaar: het zijn cache-, geëxporteerde of opnieuw te downloaden gegevens.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'Audio verwijst naar de originele bestanden en gebruikt geen app-opslag';
@@ -197625,7 +197760,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -201268,6 +201414,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Será excluído do disco imediatamente. Nada na sua biblioteca faz referência a isso — são dados em cache, exportados ou que podem ser baixados de novo.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'O áudio referencia os arquivos originais e não ocupa espaço do app';
@@ -217227,7 +217376,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -220875,6 +221035,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Будет сразу удалено с диска. Ничто в вашей библиотеке на это не ссылается — это кеш, экспортированные или заново загружаемые данные.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'Аудио ссылается на исходные файлы и не занимает место приложения';
@@ -236641,7 +236804,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -240230,6 +240404,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'จะถูกลบออกจากดิสก์ทันที ไม่มีรายการใดในคลังอ้างอิงถึงไฟล์นี้ — เป็นข้อมูลแคช ข้อมูลที่ส่งออก หรือข้อมูลที่ดาวน์โหลดใหม่ได้';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'เสียงอ้างอิงไฟล์ต้นฉบับ ไม่ใช้พื้นที่ของแอป';
@@ -256042,7 +256219,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -259657,6 +259845,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Diskten hemen silinir. Kitaplığınızdaki hiçbir şey buna başvurmuyor — bunlar önbellek, dışa aktarılmış veya yeniden indirilebilir verilerdir.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'Ses özgün dosyaları kullanır, uygulama depolamasında yer kaplamaz';
@@ -275477,7 +275668,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -279077,6 +279279,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       'Sẽ bị xóa khỏi ổ đĩa ngay lập tức. Không có mục nào trong thư viện tham chiếu tới nó — đây là dữ liệu bộ nhớ đệm, đã xuất hoặc có thể tải lại.';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint =>
       'Âm thanh tham chiếu tệp gốc, không chiếm dung lượng của ứng dụng';
@@ -293889,7 +294094,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => '制卡发音兜底';
   @override
-  String get models_tts_engine => '引擎';
+  String get models_tts_fallback_off => '不使用 TTS 兜底';
+  @override
+  String get models_tts_fallback_online_notice => '词条文本会发送给该在线服务';
+  @override
+  String get models_tts_fallback_voice => '兜底声音';
+  @override
+  String get models_tts_fallback_voice_hint => '找不到单词音频时用哪个声音合成';
+  @override
+  String get models_tts_fallback_voice_missing => '所选声音已被删除';
   @override
   String get models_tts_summary => '朗读声音、本机 GPT-SoVITS 与制卡发音兜底';
   @override
@@ -297205,6 +297418,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       '将立即从磁盘删除。媒体库里没有条目引用它——这里放的是缓存、导出或可重新获取的数据。';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      '会把这个视频从媒体库移除，并删除本机上的视频文件。';
   @override
   String get storage_entry_external_audio_hint => '音频引用原文件，不占用应用空间';
   @override
@@ -311784,7 +312000,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => '引擎';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary => '朗讀聲音、本機 GPT-SoVITS 與製卡發音備援';
   @override
@@ -315177,6 +315404,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get storage_entry_delete_files_confirm_body =>
       '將立即從磁碟刪除。媒體庫裡沒有項目引用它——這裡放的是快取、匯出或可重新取得的資料。';
+  @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   @override
   String get storage_entry_external_audio_hint => '音訊引用原檔案，不佔用應用空間';
   @override
@@ -328858,8 +329088,16 @@ extension on _StringsEn {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -332017,6 +332255,8 @@ extension on _StringsEn {
         return ({required Object reason}) => 'Delete failed: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'This deletes it from disk right away. Nothing in your library references it - it is cached, exported or re-downloadable data.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Audio references the original files, using no app storage';
       case 'storage_entry_more_rest':
@@ -345367,8 +345607,16 @@ extension on _StringsAr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -348523,6 +348771,8 @@ extension on _StringsAr {
         return ({required Object reason}) => 'فشل الحذف: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'سيُحذف من القرص فورًا. لا يشير إليه أي عنصر في مكتبتك — فهذه بيانات مؤقتة أو مُصدَّرة أو يمكن تنزيلها من جديد.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'يشير الصوت إلى الملفات الأصلية ولا يستهلك مساحة التطبيق';
       case 'storage_entry_more_rest':
@@ -361927,8 +362177,16 @@ extension on _StringsDe {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -365094,6 +365352,8 @@ extension on _StringsDe {
             'Löschen fehlgeschlagen: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Wird sofort von der Festplatte gelöscht. Nichts in deiner Bibliothek verweist darauf – es sind zwischengespeicherte, exportierte oder erneut herunterladbare Daten.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Audio verweist auf die Originaldateien und belegt keinen App-Speicher';
       case 'storage_entry_more_rest':
@@ -378497,8 +378757,16 @@ extension on _StringsEs {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -381663,6 +381931,8 @@ extension on _StringsEs {
         return ({required Object reason}) => 'La eliminación falló: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Se eliminará del disco de inmediato. Nada de tu biblioteca hace referencia a esto: son datos en caché, exportados o que se pueden volver a descargar.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'El audio hace referencia a los archivos originales y no ocupa espacio de la app';
       case 'storage_entry_more_rest':
@@ -395077,8 +395347,16 @@ extension on _StringsFr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -398242,6 +398520,8 @@ extension on _StringsFr {
         return ({required Object reason}) => 'Suppression échouée : ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Suppression immédiate du disque. Rien dans votre bibliothèque n\'y fait référence : ce sont des données en cache, exportées ou re-téléchargeables.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'L\'audio référence les fichiers d\'origine et n\'occupe aucun espace de l\'application';
       case 'storage_entry_more_rest':
@@ -411626,8 +411906,16 @@ extension on _StringsId {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -414785,6 +415073,8 @@ extension on _StringsId {
         return ({required Object reason}) => 'Penghapusan gagal: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Akan langsung dihapus dari disk. Tidak ada di pustaka Anda yang merujuk ke sini — isinya data cache, hasil ekspor, atau yang bisa diunduh ulang.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Audio merujuk ke berkas aslinya, tidak memakai penyimpanan aplikasi';
       case 'storage_entry_more_rest':
@@ -428172,8 +428462,16 @@ extension on _StringsIt {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -431335,6 +431633,8 @@ extension on _StringsIt {
         return ({required Object reason}) => 'Eliminazione fallita: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Verrà eliminato subito dal disco. Nulla nella tua libreria vi fa riferimento: sono dati in cache, esportati o riscaricabili.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'L\'audio fa riferimento ai file originali e non occupa spazio dell\'app';
       case 'storage_entry_more_rest':
@@ -444666,8 +444966,16 @@ extension on _StringsJa {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return '読み上げ音声、ローカル GPT-SoVITS、カード音声の代替';
       case 'models_tts_title':
@@ -447811,6 +448119,8 @@ extension on _StringsJa {
         return ({required Object reason}) => '削除に失敗: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'ディスクからすぐに削除します。ライブラリのどの項目もこれを参照していません（キャッシュ・書き出し済みデータ・再取得できるデータです）。';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return '音声は元のファイルを参照するため、アプリの容量を使いません';
       case 'storage_entry_more_rest':
@@ -461105,8 +461415,16 @@ extension on _StringsKo {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -464253,6 +464571,8 @@ extension on _StringsKo {
         return ({required Object reason}) => '삭제 실패: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return '디스크에서 즉시 삭제합니다. 라이브러리의 어떤 항목도 이를 참조하지 않습니다 — 캐시, 내보낸 파일, 또는 다시 받을 수 있는 데이터입니다.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return '오디오는 원본 파일을 참조하므로 앱 저장 공간을 쓰지 않아요';
       case 'storage_entry_more_rest':
@@ -477620,8 +477940,16 @@ extension on _StringsNl {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -480783,6 +481111,8 @@ extension on _StringsNl {
         return ({required Object reason}) => 'Verwijderen mislukt: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Wordt meteen van de schijf verwijderd. Niets in je bibliotheek verwijst ernaar: het zijn cache-, geëxporteerde of opnieuw te downloaden gegevens.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Audio verwijst naar de originele bestanden en gebruikt geen app-opslag';
       case 'storage_entry_more_rest':
@@ -494174,8 +494504,16 @@ extension on _StringsPtBr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -497335,6 +497673,8 @@ extension on _StringsPtBr {
         return ({required Object reason}) => 'Exclusão falhou: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Será excluído do disco imediatamente. Nada na sua biblioteca faz referência a isso — são dados em cache, exportados ou que podem ser baixados de novo.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'O áudio referencia os arquivos originais e não ocupa espaço do app';
       case 'storage_entry_more_rest':
@@ -510732,8 +511072,16 @@ extension on _StringsRu {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -513893,6 +514241,8 @@ extension on _StringsRu {
         return ({required Object reason}) => 'Ошибка удаления: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Будет сразу удалено с диска. Ничто в вашей библиотеке на это не ссылается — это кеш, экспортированные или заново загружаемые данные.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Аудио ссылается на исходные файлы и не занимает место приложения';
       case 'storage_entry_more_rest':
@@ -527255,8 +527605,16 @@ extension on _StringsTh {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -530411,6 +530769,8 @@ extension on _StringsTh {
         return ({required Object reason}) => 'ลบไม่สำเร็จ: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'จะถูกลบออกจากดิสก์ทันที ไม่มีรายการใดในคลังอ้างอิงถึงไฟล์นี้ — เป็นข้อมูลแคช ข้อมูลที่ส่งออก หรือข้อมูลที่ดาวน์โหลดใหม่ได้';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'เสียงอ้างอิงไฟล์ต้นฉบับ ไม่ใช้พื้นที่ของแอป';
       case 'storage_entry_more_rest':
@@ -543791,8 +544151,16 @@ extension on _StringsTr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -546946,6 +547314,8 @@ extension on _StringsTr {
         return ({required Object reason}) => 'Silme başarısız: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Diskten hemen silinir. Kitaplığınızdaki hiçbir şey buna başvurmuyor — bunlar önbellek, dışa aktarılmış veya yeniden indirilebilir verilerdir.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Ses özgün dosyaları kullanır, uygulama depolamasında yer kaplamaz';
       case 'storage_entry_more_rest':
@@ -560319,8 +560689,16 @@ extension on _StringsVi {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -563480,6 +563858,8 @@ extension on _StringsVi {
         return ({required Object reason}) => 'Xóa thất bại: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Sẽ bị xóa khỏi ổ đĩa ngay lập tức. Không có mục nào trong thư viện tham chiếu tới nó — đây là dữ liệu bộ nhớ đệm, đã xuất hoặc có thể tải lại.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Âm thanh tham chiếu tệp gốc, không chiếm dung lượng của ứng dụng';
       case 'storage_entry_more_rest':
@@ -576722,8 +577102,16 @@ extension on _StringsZhCn {
         return '模型文件';
       case 'models_tts_card_fallback_section':
         return '制卡发音兜底';
-      case 'models_tts_engine':
-        return '引擎';
+      case 'models_tts_fallback_off':
+        return '不使用 TTS 兜底';
+      case 'models_tts_fallback_online_notice':
+        return '词条文本会发送给该在线服务';
+      case 'models_tts_fallback_voice':
+        return '兜底声音';
+      case 'models_tts_fallback_voice_hint':
+        return '找不到单词音频时用哪个声音合成';
+      case 'models_tts_fallback_voice_missing':
+        return '所选声音已被删除';
       case 'models_tts_summary':
         return '朗读声音、本机 GPT-SoVITS 与制卡发音兜底';
       case 'models_tts_title':
@@ -579853,6 +580241,8 @@ extension on _StringsZhCn {
         return ({required Object reason}) => '删除失败：${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return '将立即从磁盘删除。媒体库里没有条目引用它——这里放的是缓存、导出或可重新获取的数据。';
+      case 'storage_entry_delete_video_confirm_body':
+        return '会把这个视频从媒体库移除，并删除本机上的视频文件。';
       case 'storage_entry_external_audio_hint':
         return '音频引用原文件，不占用应用空间';
       case 'storage_entry_more_rest':
@@ -593082,8 +593472,16 @@ extension on _StringsZhHk {
         return '模型檔案';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return '引擎';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return '朗讀聲音、本機 GPT-SoVITS 與製卡發音備援';
       case 'models_tts_title':
@@ -596226,6 +596624,8 @@ extension on _StringsZhHk {
         return ({required Object reason}) => '刪除失敗：${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return '將立即從磁碟刪除。媒體庫裡沒有項目引用它——這裡放的是快取、匯出或可重新取得的資料。';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return '音訊引用原檔案，不佔用應用空間';
       case 'storage_entry_more_rest':
