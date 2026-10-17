@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 141678 (8334 per locale)
+/// Strings: 141695 (8335 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10759,6 +10759,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Card not saved; overwrite cancelled';
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
   String video_mine_queue_badge({required Object count}) => '${count} to add';
@@ -30061,6 +30063,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
   @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
@@ -50546,6 +50551,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
   @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
@@ -71124,6 +71132,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
   @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
@@ -91780,6 +91791,9 @@ class _StringsFr extends _StringsEn {
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
   @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
   @override
@@ -112159,6 +112173,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
   @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
@@ -132630,6 +132647,9 @@ class _StringsIt extends _StringsEn {
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
   @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
   @override
@@ -152241,6 +152261,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_mine_overwrite_cancelled_episode => 'エピソードが変わり、上書きを取り消しました';
   @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      '書き込んだカードが見つからず、上書きを取り消しました';
+  @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'カードを保存できず（${reason}）、上書きを取り消しました';
   @override
@@ -171744,6 +171767,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
   @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
@@ -192067,6 +192093,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
   @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
@@ -212561,6 +212590,9 @@ class _StringsPtBr extends _StringsEn {
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
   @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
   @override
@@ -233017,6 +233049,9 @@ class _StringsRu extends _StringsEn {
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
   @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
   @override
@@ -253201,6 +253236,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
+  @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
   @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
@@ -273507,6 +273545,9 @@ class _StringsTr extends _StringsEn {
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
   @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
   @override
@@ -293779,6 +293820,9 @@ class _StringsVi extends _StringsEn {
   String get video_mine_overwrite_cancelled_episode =>
       'Episode changed; overwrite cancelled';
   @override
+  String get video_mine_overwrite_cancelled_no_target =>
+      'Saved card not found; overwrite cancelled';
+  @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       'Card not saved (${reason}); overwrite cancelled';
   @override
@@ -312510,6 +312554,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_mine_overwrite_cancelled => '卡没写进 Anki，已取消覆盖';
   @override
   String get video_mine_overwrite_cancelled_episode => '已换集，已取消覆盖';
+  @override
+  String get video_mine_overwrite_cancelled_no_target => '找不到刚写入的卡，已取消覆盖';
   @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       '卡没写进 Anki（${reason}），已取消覆盖';
@@ -331367,6 +331413,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_mine_overwrite_cancelled_episode => '已換集，已取消覆蓋';
   @override
+  String get video_mine_overwrite_cancelled_no_target => '找不到剛寫入的卡，已取消覆蓋';
+  @override
   String video_mine_overwrite_cancelled_reason({required Object reason}) =>
       '卡未寫入 Anki（${reason}），已取消覆蓋';
   @override
@@ -348844,6 +348892,8 @@ extension on _StringsEn {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -366131,6 +366181,8 @@ extension on _StringsAr {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -383492,6 +383544,8 @@ extension on _StringsDe {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -400839,6 +400893,8 @@ extension on _StringsEs {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -418202,6 +418258,8 @@ extension on _StringsFr {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -435513,6 +435571,8 @@ extension on _StringsId {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -452855,6 +452915,8 @@ extension on _StringsIt {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -470085,6 +470147,8 @@ extension on _StringsJa {
         return 'カードを保存できず、上書きを取り消しました';
       case 'video_mine_overwrite_cancelled_episode':
         return 'エピソードが変わり、上書きを取り消しました';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return '書き込んだカードが見つからず、上書きを取り消しました';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) => 'カードを保存できず（${reason}）、上書きを取り消しました';
       case 'video_mine_queue_badge':
@@ -487309,6 +487373,8 @@ extension on _StringsKo {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -504633,6 +504699,8 @@ extension on _StringsNl {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -521966,6 +522034,8 @@ extension on _StringsPtBr {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -539304,6 +539374,8 @@ extension on _StringsRu {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -556599,6 +556671,8 @@ extension on _StringsTh {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -573918,6 +573992,8 @@ extension on _StringsTr {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -591228,6 +591304,8 @@ extension on _StringsVi {
         return 'Card not saved; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_episode':
         return 'Episode changed; overwrite cancelled';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return 'Saved card not found; overwrite cancelled';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) =>
             'Card not saved (${reason}); overwrite cancelled';
@@ -608350,6 +608428,8 @@ extension on _StringsZhCn {
         return '卡没写进 Anki，已取消覆盖';
       case 'video_mine_overwrite_cancelled_episode':
         return '已换集，已取消覆盖';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return '找不到刚写入的卡，已取消覆盖';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) => '卡没写进 Anki（${reason}），已取消覆盖';
       case 'video_mine_queue_badge':
@@ -625503,6 +625583,8 @@ extension on _StringsZhHk {
         return '卡未寫入 Anki，已取消覆蓋';
       case 'video_mine_overwrite_cancelled_episode':
         return '已換集，已取消覆蓋';
+      case 'video_mine_overwrite_cancelled_no_target':
+        return '找不到剛寫入的卡，已取消覆蓋';
       case 'video_mine_overwrite_cancelled_reason':
         return ({required Object reason}) => '卡未寫入 Anki（${reason}），已取消覆蓋';
       case 'video_mine_queue_badge':
