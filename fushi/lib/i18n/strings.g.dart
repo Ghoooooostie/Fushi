@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 133501 (7853 per locale)
+/// Strings: 133620 (7860 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9605,6 +9605,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get updates_system_notifications_hint =>
       'Also send a system notification. Turning this off keeps the in-app badge.';
   String get url => 'URL';
+  String get usage_stats_enabled => 'Share usage statistics';
+  String get usage_stats_enabled_hint =>
+      'Once a day, sends a random install ID, the app version, platform and update channel to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored. When you attach device info to feedback, the install ID is sent with it.';
   String get video_air_season_autumn => 'Fall';
   String get video_air_season_spring => 'Spring';
   String get video_air_season_summer => 'Summer';
@@ -10219,12 +10222,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Show or hide subtitles';
   String get video_remote_control_unfavorite => 'Remove from favorites';
   String get video_remote_current => 'Return to current subtitle';
+  String get video_remote_error_action_unsupported =>
+      'Fushi on the computer doesn\'t support this yet. Update it and try again';
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   String get video_remote_error_controller_busy =>
       'Another device is controlling this video';
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  String get video_remote_error_episode_unavailable =>
+      'Couldn\'t switch to that episode';
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
   String get video_remote_error_favorite_missing =>
@@ -10250,6 +10257,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Remote control was closed on the computer';
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  String get video_remote_error_subtitle_busy =>
+      'Subtitles are still loading on the computer. Try again shortly';
+  String get video_remote_error_subtitle_track_unavailable =>
+      'That subtitle track can\'t be selected';
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
   String get video_remote_error_task_missing =>
@@ -10610,6 +10621,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_secondary_subtitle_obscure_hint =>
       'Blur or hide the secondary (translation) subtitle';
   String get video_setting_seek_seconds => 'Seek seconds';
+  String get video_setting_shortcuts_hint =>
+      'View and customize the player\'s keyboard and gamepad shortcuts';
   String get video_setting_slim_progress_bar =>
       'Slim progress bar at the bottom';
   String get video_setting_slim_progress_bar_hint =>
@@ -27413,6 +27426,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get url => 'الرابط';
   @override
+  String get usage_stats_enabled => 'مشاركة إحصاءات الاستخدام';
+  @override
+  String get usage_stats_enabled_hint =>
+      'مرة واحدة يوميًا، يرسل معرّف تثبيت عشوائيًا وإصدار التطبيق والمنصة وقناة التحديث إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
+  @override
   String get video_air_season_autumn => 'خريف';
   @override
   String get video_air_season_spring => 'ربيع';
@@ -28460,6 +28478,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi على الكمبيوتر لا يدعم هذا بعد. حدّثه ثم حاول مرة أخرى';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -28468,6 +28489,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'تعذّر الانتقال إلى هذه الحلقة';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -28506,6 +28530,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'لا تزال الترجمات قيد التحميل على الكمبيوتر. حاول مرة أخرى بعد قليل';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'لا يمكن اختيار مسار الترجمة هذا';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -29121,6 +29151,9 @@ class _StringsAr extends _StringsEn {
       'تمويه أو إخفاء الترجمة الثانوية (المترجمة)';
   @override
   String get video_setting_seek_seconds => 'ثوانٍ الانتقال';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'عرض اختصارات لوحة المفاتيح وذراع التحكم الخاصة بالمشغّل وتخصيصها';
   @override
   String get video_setting_slim_progress_bar => 'شريط تقدّم رفيع في الأسفل';
   @override
@@ -46733,6 +46766,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => 'Nutzungsstatistiken teilen';
+  @override
+  String get usage_stats_enabled_hint =>
+      'Sendet einmal täglich eine zufällige Installations-ID, die App-Version, die Plattform und den Update-Kanal an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
+  @override
   String get video_air_season_autumn => 'Herbst';
   @override
   String get video_air_season_spring => 'Frühling';
@@ -47799,6 +47837,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi auf dem Computer unterstützt das noch nicht. Aktualisiere es und versuche es erneut';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -47807,6 +47848,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Wechsel zu dieser Folge nicht möglich';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -47845,6 +47889,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Die Untertitel werden auf dem Computer noch geladen. Versuche es gleich noch einmal';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'Diese Untertitelspur kann nicht ausgewählt werden';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -48476,6 +48526,9 @@ class _StringsDe extends _StringsEn {
       'Den sekundären (Übersetzungs-)Untertitel weichzeichnen oder ausblenden';
   @override
   String get video_setting_seek_seconds => 'Spulschritt (Sekunden)';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'Tastatur- und Gamepad-Kurzbefehle des Players anzeigen und anpassen';
   @override
   String get video_setting_slim_progress_bar =>
       'Schmale Fortschrittsleiste unten';
@@ -66159,6 +66212,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => 'Compartir estadísticas de uso';
+  @override
+  String get usage_stats_enabled_hint =>
+      'Una vez al día, envía a fushi.moe un ID de instalación aleatorio, la versión de la app, la plataforma y el canal de actualizaciones para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
+  @override
   String get video_air_season_autumn => 'Otoño';
   @override
   String get video_air_season_spring => 'Primavera';
@@ -67229,6 +67287,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi en el ordenador aún no admite esto. Actualízalo e inténtalo de nuevo';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -67237,6 +67298,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'No se pudo cambiar a ese episodio';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -67275,6 +67339,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Los subtítulos aún se están cargando en el ordenador. Inténtalo de nuevo en breve';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'No se puede seleccionar esa pista de subtítulos';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -67906,6 +67976,9 @@ class _StringsEs extends _StringsEn {
       'Difumina u oculta el subtítulo secundario (traducción)';
   @override
   String get video_setting_seek_seconds => 'Segundos de salto';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'Ver y personalizar los atajos de teclado y mando del reproductor';
   @override
   String get video_setting_slim_progress_bar =>
       'Barra de progreso fina en la parte inferior';
@@ -85659,6 +85732,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => 'Partager les statistiques d’utilisation';
+  @override
+  String get usage_stats_enabled_hint =>
+      'Une fois par jour, envoie à fushi.moe un identifiant d’installation aléatoire, la version de l’app, la plateforme et le canal de mise à jour afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
+  @override
   String get video_air_season_autumn => 'Automne';
   @override
   String get video_air_season_spring => 'Printemps';
@@ -86735,6 +86813,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi sur l\'ordinateur ne prend pas encore cela en charge. Mettez-le à jour et réessayez';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -86743,6 +86824,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Impossible de passer à cet épisode';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -86781,6 +86865,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Les sous-titres sont encore en cours de chargement sur l\'ordinateur. Réessayez dans un instant';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'Cette piste de sous-titres ne peut pas être sélectionnée';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -87416,6 +87506,9 @@ class _StringsFr extends _StringsEn {
       'Flouter ou cacher le sous-titre secondaire (traduction)';
   @override
   String get video_setting_seek_seconds => 'Pas d\'avance/recul (secondes)';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'Afficher et personnaliser les raccourcis clavier et manette du lecteur';
   @override
   String get video_setting_slim_progress_bar =>
       'Fine barre de progression en bas';
@@ -104899,6 +104992,11 @@ class _StringsId extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => 'Bagikan statistik penggunaan';
+  @override
+  String get usage_stats_enabled_hint =>
+      'Sekali sehari, mengirim ID instalasi acak, versi aplikasi, platform, dan kanal pembaruan ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
+  @override
   String get video_air_season_autumn => 'Musim gugur';
   @override
   String get video_air_season_spring => 'Musim semi';
@@ -105962,6 +106060,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi di komputer belum mendukung ini. Perbarui lalu coba lagi';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -105970,6 +106071,9 @@ class _StringsId extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Tidak dapat beralih ke episode itu';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -106008,6 +106112,12 @@ class _StringsId extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Subtitel masih dimuat di komputer. Coba lagi sebentar lagi';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'Trek subtitel itu tidak dapat dipilih';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -106628,6 +106738,9 @@ class _StringsId extends _StringsEn {
       'Buramkan atau sembunyikan subtitle sekunder (terjemahan)';
   @override
   String get video_setting_seek_seconds => 'Detik lompatan';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'Lihat dan sesuaikan pintasan keyboard dan gamepad pemutar';
   @override
   String get video_setting_slim_progress_bar => 'Bilah progres tipis di bawah';
   @override
@@ -124221,6 +124334,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => 'Condividi statistiche di utilizzo';
+  @override
+  String get usage_stats_enabled_hint =>
+      'Una volta al giorno invia a fushi.moe un ID di installazione casuale, la versione dell\'app, la piattaforma e il canale di aggiornamento, così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
+  @override
   String get video_air_season_autumn => 'Autunno';
   @override
   String get video_air_season_spring => 'Primavera';
@@ -125281,6 +125399,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi sul computer non supporta ancora questa funzione. Aggiornalo e riprova';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -125289,6 +125410,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Impossibile passare a quell\'episodio';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -125327,6 +125451,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'I sottotitoli sono ancora in caricamento sul computer. Riprova tra poco';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'Impossibile selezionare quella traccia di sottotitoli';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -125956,6 +126086,9 @@ class _StringsIt extends _StringsEn {
       'Sfoca o nascondi il sottotitolo secondario (traduzione)';
   @override
   String get video_setting_seek_seconds => 'Secondi di spostamento';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'Visualizza e personalizza le scorciatoie da tastiera e gamepad del lettore';
   @override
   String get video_setting_slim_progress_bar =>
       'Barra di avanzamento sottile in basso';
@@ -142732,6 +142865,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => '利用統計を送信';
+  @override
+  String get usage_stats_enabled_hint =>
+      '1 日 1 回、ランダムなインストール ID・アプリのバージョン・プラットフォーム・更新チャネルを fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
+  @override
   String get video_air_season_autumn => '秋';
   @override
   String get video_air_season_spring => '春';
@@ -143735,6 +143873,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'パソコンの Fushi はまだこの操作に対応していません。更新してからもう一度お試しください';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -143743,6 +143884,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable => 'そのエピソードに切り替えられませんでした';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -143781,6 +143924,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'パソコンで字幕を読み込み中です。しばらくしてからもう一度お試しください';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'その字幕トラックは選択できません';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -144374,6 +144523,9 @@ class _StringsJa extends _StringsEn {
       '副字幕（翻訳）をぼかすまたは非表示にします';
   @override
   String get video_setting_seek_seconds => 'シークの秒数';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'プレーヤーのキーボード／ゲームパッドのショートカットを確認・カスタマイズ';
   @override
   String get video_setting_slim_progress_bar => '下部に細いプログレスバーを表示';
   @override
@@ -161086,6 +161238,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => '사용 통계 보내기';
+  @override
+  String get usage_stats_enabled_hint =>
+      '하루에 한 번 무작위 설치 ID, 앱 버전, 플랫폼, 업데이트 채널을 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않습니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
+  @override
   String get video_air_season_autumn => '가을';
   @override
   String get video_air_season_spring => '봄';
@@ -162092,6 +162249,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      '컴퓨터의 Fushi가 아직 이 기능을 지원하지 않습니다. 업데이트한 후 다시 시도하세요';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -162100,6 +162260,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable => '해당 에피소드로 전환할 수 없습니다';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -162138,6 +162300,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      '컴퓨터에서 아직 자막을 불러오는 중입니다. 잠시 후 다시 시도하세요';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      '해당 자막 트랙을 선택할 수 없습니다';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -162733,6 +162901,8 @@ class _StringsKo extends _StringsEn {
       '보조(번역) 자막을 흐리게 하거나 숨깁니다';
   @override
   String get video_setting_seek_seconds => '이동 간격(초)';
+  @override
+  String get video_setting_shortcuts_hint => '플레이어의 키보드 및 게임패드 단축키 보기 및 사용자 지정';
   @override
   String get video_setting_slim_progress_bar => '하단 얇은 진행 막대';
   @override
@@ -180218,6 +180388,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => 'Gebruiksstatistieken delen';
+  @override
+  String get usage_stats_enabled_hint =>
+      'Stuurt één keer per dag een willekeurige installatie-ID, de app-versie, het platform en het updatekanaal naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
+  @override
   String get video_air_season_autumn => 'Herfst';
   @override
   String get video_air_season_spring => 'Lente';
@@ -181278,6 +181453,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi op de computer ondersteunt dit nog niet. Werk het bij en probeer het opnieuw';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -181286,6 +181464,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Kan niet naar die aflevering overschakelen';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -181324,6 +181505,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'De ondertitels worden nog geladen op de computer. Probeer het zo opnieuw';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'Dat ondertitelspoor kan niet worden geselecteerd';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -181949,6 +182136,9 @@ class _StringsNl extends _StringsEn {
       'Vervaag of verberg de secundaire (vertaling) ondertitel';
   @override
   String get video_setting_seek_seconds => 'Spoelstap (seconden)';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'Toetsenbord- en gamepadsnelkoppelingen van de speler bekijken en aanpassen';
   @override
   String get video_setting_slim_progress_bar => 'Dunne voortgangsbalk onderaan';
   @override
@@ -199554,6 +199744,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => 'Compartilhar estatísticas de uso';
+  @override
+  String get usage_stats_enabled_hint =>
+      'Uma vez por dia, envia ao fushi.moe um ID de instalação aleatório, a versão do app, a plataforma e o canal de atualização para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
+  @override
   String get video_air_season_autumn => 'Outono';
   @override
   String get video_air_season_spring => 'Primavera';
@@ -200622,6 +200817,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'O Fushi no computador ainda não oferece suporte a isso. Atualize-o e tente novamente';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -200630,6 +200828,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Não foi possível mudar para esse episódio';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -200668,6 +200869,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'As legendas ainda estão carregando no computador. Tente novamente em instantes';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'Essa faixa de legenda não pode ser selecionada';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -201299,6 +201506,9 @@ class _StringsPtBr extends _StringsEn {
       'Desfocar ou ocultar a legenda secundária (tradução)';
   @override
   String get video_setting_seek_seconds => 'Segundos para avançar/retroceder';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'Ver e personalizar os atalhos de teclado e controle do player';
   @override
   String get video_setting_slim_progress_bar =>
       'Barra de progresso fina na parte inferior';
@@ -218864,6 +219074,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => 'Отправлять статистику использования';
+  @override
+  String get usage_stats_enabled_hint =>
+      'Раз в день отправляет на fushi.moe случайный идентификатор установки, версию приложения, платформу и канал обновлений, чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
+  @override
   String get video_air_season_autumn => 'Осень';
   @override
   String get video_air_season_spring => 'Весна';
@@ -219927,6 +220142,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi на компьютере пока не поддерживает это. Обновите его и повторите попытку';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -219935,6 +220153,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Не удалось переключиться на эту серию';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -219973,6 +220194,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Субтитры на компьютере ещё загружаются. Повторите попытку чуть позже';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'Эту дорожку субтитров нельзя выбрать';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -220600,6 +220827,9 @@ class _StringsRu extends _StringsEn {
       'Размыть или скрыть вторичные (переводные) субтитры';
   @override
   String get video_setting_seek_seconds => 'Шаг перемотки (с)';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'Просмотр и настройка сочетаний клавиш клавиатуры и геймпада для плеера';
   @override
   String get video_setting_slim_progress_bar => 'Тонкая полоса прогресса внизу';
   @override
@@ -237914,6 +238144,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => 'ส่งสถิติการใช้งาน';
+  @override
+  String get usage_stats_enabled_hint =>
+      'วันละครั้ง จะส่ง ID การติดตั้งแบบสุ่ม เวอร์ชันแอป แพลตฟอร์ม และช่องทางอัปเดตไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
+  @override
   String get video_air_season_autumn => 'ฤดูใบไม้ร่วง';
   @override
   String get video_air_season_spring => 'ฤดูใบไม้ผลิ';
@@ -238957,6 +239192,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi บนคอมพิวเตอร์ยังไม่รองรับการทำงานนี้ โปรดอัปเดตแล้วลองอีกครั้ง';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -238965,6 +239203,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'ไม่สามารถสลับไปยังตอนนั้นได้';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -239003,6 +239244,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'คำบรรยายบนคอมพิวเตอร์ยังโหลดอยู่ โปรดลองอีกครั้งในอีกสักครู่';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'ไม่สามารถเลือกแทร็กคำบรรยายนั้นได้';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -239616,6 +239863,9 @@ class _StringsTh extends _StringsEn {
       'เบลอหรือซ่อนคำบรรยายรอง (คำแปล)';
   @override
   String get video_setting_seek_seconds => 'ระยะเลื่อนเวลา (วินาที)';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'ดูและปรับแต่งปุ่มลัดแป้นพิมพ์และเกมแพดของเครื่องเล่น';
   @override
   String get video_setting_slim_progress_bar => 'แถบความคืบหน้าบางที่ด้านล่าง';
   @override
@@ -257064,6 +257314,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => 'Kullanım istatistiklerini paylaş';
+  @override
+  String get usage_stats_enabled_hint =>
+      'Günde bir kez rastgele bir kurulum kimliğini, uygulama sürümünü, platformu ve güncelleme kanalını fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
+  @override
   String get video_air_season_autumn => 'Sonbahar';
   @override
   String get video_air_season_spring => 'İlkbahar';
@@ -258115,6 +258370,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Bilgisayardaki Fushi bunu henüz desteklemiyor. Güncelleyip tekrar deneyin';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -258123,6 +258381,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable => 'O bölüme geçilemedi';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -258161,6 +258421,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Altyazılar bilgisayarda hâlâ yükleniyor. Birazdan tekrar deneyin';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'Bu altyazı parçası seçilemez';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -258787,6 +259053,9 @@ class _StringsTr extends _StringsEn {
       'İkincil (çeviri) altyazıyı bulanıklaştır veya gizle';
   @override
   String get video_setting_seek_seconds => 'Sarma saniyesi';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'Oynatıcının klavye ve oyun kumandası kısayollarını görüntüleyin ve özelleştirin';
   @override
   String get video_setting_slim_progress_bar => 'Altta ince ilerleme çubuğu';
   @override
@@ -276185,6 +276454,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get url => 'URL';
   @override
+  String get usage_stats_enabled => 'Chia sẻ thống kê sử dụng';
+  @override
+  String get usage_stats_enabled_hint =>
+      'Mỗi ngày một lần, gửi ID cài đặt ngẫu nhiên, phiên bản ứng dụng, nền tảng và kênh cập nhật đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
+  @override
   String get video_air_season_autumn => 'Thu';
   @override
   String get video_air_season_spring => 'Xuân';
@@ -277239,6 +277513,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      'Fushi trên máy tính chưa hỗ trợ thao tác này. Hãy cập nhật rồi thử lại';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -277247,6 +277524,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable =>
+      'Không thể chuyển sang tập đó';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -277285,6 +277565,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy =>
+      'Phụ đề trên máy tính vẫn đang tải. Vui lòng thử lại sau giây lát';
+  @override
+  String get video_remote_error_subtitle_track_unavailable =>
+      'Không thể chọn bản phụ đề đó';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -277903,6 +278189,9 @@ class _StringsVi extends _StringsEn {
       'Làm mờ hoặc ẩn phụ đề phụ (bản dịch)';
   @override
   String get video_setting_seek_seconds => 'Bước tua (giây)';
+  @override
+  String get video_setting_shortcuts_hint =>
+      'Xem và tùy chỉnh phím tắt bàn phím và tay cầm của trình phát';
   @override
   String get video_setting_slim_progress_bar =>
       'Thanh tiến độ mảnh ở dưới cùng';
@@ -293923,6 +294212,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get url => '网址';
   @override
+  String get usage_stats_enabled => '发送使用统计';
+  @override
+  String get usage_stats_enabled_hint =>
+      '每天一次向 fushi.moe 发送随机安装 ID、应用版本、平台和更新通道，用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
+  @override
   String get video_air_season_autumn => '秋';
   @override
   String get video_air_season_spring => '春';
@@ -294876,11 +295170,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_remote_current => '回到当前字幕';
   @override
+  String get video_remote_error_action_unsupported =>
+      '电脑上的 Fushi 还不支持这个操作，请更新后再试';
+  @override
   String get video_remote_error_certificate_mismatch => '电脑证书与配对时不一致，请重新配对';
   @override
   String get video_remote_error_controller_busy => '另一台设备正在遥控这个视频';
   @override
   String get video_remote_error_controller_lease_lost => '遥控已超时或被接管，正在重新连接';
+  @override
+  String get video_remote_error_episode_unavailable => '无法切换到这一集';
   @override
   String get video_remote_error_favorite_ambiguous => '有多条字幕与这条收藏匹配，无法确定';
   @override
@@ -294908,6 +295207,10 @@ class _StringsZhCn extends _StringsEn {
   String get video_remote_error_remote_closed => '电脑已关闭遥控';
   @override
   String get video_remote_error_requests_busy => '电脑忙，请稍后再试';
+  @override
+  String get video_remote_error_subtitle_busy => '电脑上的字幕还在加载，请稍后再试';
+  @override
+  String get video_remote_error_subtitle_track_unavailable => '这条字幕当前无法选择';
   @override
   String get video_remote_error_subtitles_changed => '电脑上的字幕已变化，正在刷新';
   @override
@@ -295465,6 +295768,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_setting_secondary_subtitle_obscure_hint => '模糊或隐藏副字幕（翻译参考轨）';
   @override
   String get video_setting_seek_seconds => '快进/快退步长（秒）';
+  @override
+  String get video_setting_shortcuts_hint => '查看并自定义播放器的键盘 / 手柄快捷键';
   @override
   String get video_setting_slim_progress_bar => '底部细进度条';
   @override
@@ -311628,6 +311933,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get url => '網址';
   @override
+  String get usage_stats_enabled => '傳送使用統計';
+  @override
+  String get usage_stats_enabled_hint =>
+      '每天一次向 fushi.moe 傳送隨機安裝 ID、應用程式版本、平台和更新通道，用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
+  @override
   String get video_air_season_autumn => '秋';
   @override
   String get video_air_season_spring => '春';
@@ -312596,6 +312906,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_current => 'Return to current subtitle';
   @override
+  String get video_remote_error_action_unsupported =>
+      '電腦上的 Fushi 尚未支援此操作，請更新後再試';
+  @override
   String get video_remote_error_certificate_mismatch =>
       'The computer\'s certificate doesn\'t match the paired one; pair again';
   @override
@@ -312604,6 +312917,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_error_controller_lease_lost =>
       'Remote control timed out or was taken over; reconnecting';
+  @override
+  String get video_remote_error_episode_unavailable => '無法切換到這一集';
   @override
   String get video_remote_error_favorite_ambiguous =>
       'Several subtitle lines match this favorite';
@@ -312642,6 +312957,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_remote_error_requests_busy =>
       'The computer is busy; try again shortly';
+  @override
+  String get video_remote_error_subtitle_busy => '電腦上的字幕仍在載入，請稍後再試';
+  @override
+  String get video_remote_error_subtitle_track_unavailable => '目前無法選擇這條字幕';
   @override
   String get video_remote_error_subtitles_changed =>
       'Subtitles on the computer changed; refreshing';
@@ -313220,6 +313539,8 @@ class _StringsZhHk extends _StringsEn {
   String get video_setting_secondary_subtitle_obscure_hint => '模糊或隱藏副字幕（翻譯參考軌）';
   @override
   String get video_setting_seek_seconds => '快進／快退步長（秒）';
+  @override
+  String get video_setting_shortcuts_hint => '查看並自訂播放器的鍵盤 / 手掣快捷鍵';
   @override
   String get video_setting_slim_progress_bar => '底部細進度條';
   @override
@@ -328170,6 +328491,10 @@ extension on _StringsEn {
         return 'Also send a system notification. Turning this off keeps the in-app badge.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'Share usage statistics';
+      case 'usage_stats_enabled_hint':
+        return 'Once a day, sends a random install ID, the app version, platform and update channel to fushi.moe so we can count active users. No account, library or reading data is included, and your IP address is not stored. When you attach device info to feedback, the install ID is sent with it.';
       case 'video_air_season_autumn':
         return 'Fall';
       case 'video_air_season_spring':
@@ -329055,12 +329380,16 @@ extension on _StringsEn {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi on the computer doesn\'t support this yet. Update it and try again';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Couldn\'t switch to that episode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -329088,6 +329417,10 @@ extension on _StringsEn {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitles are still loading on the computer. Try again shortly';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'That subtitle track can\'t be selected';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -329610,6 +329943,8 @@ extension on _StringsEn {
         return 'Blur or hide the secondary (translation) subtitle';
       case 'video_setting_seek_seconds':
         return 'Seek seconds';
+      case 'video_setting_shortcuts_hint':
+        return 'View and customize the player\'s keyboard and gamepad shortcuts';
       case 'video_setting_slim_progress_bar':
         return 'Slim progress bar at the bottom';
       case 'video_setting_slim_progress_bar_hint':
@@ -344454,6 +344789,10 @@ extension on _StringsAr {
         return 'إرسال إشعار نظام أيضًا. تعطيله يُبقي الشارة داخل التطبيق.';
       case 'url':
         return 'الرابط';
+      case 'usage_stats_enabled':
+        return 'مشاركة إحصاءات الاستخدام';
+      case 'usage_stats_enabled_hint':
+        return 'مرة واحدة يوميًا، يرسل معرّف تثبيت عشوائيًا وإصدار التطبيق والمنصة وقناة التحديث إلى fushi.moe لنتمكن من إحصاء المستخدمين النشطين. لا تُضمَّن أي بيانات عن الحساب أو المكتبة أو القراءة، ولا يُخزَّن عنوان IP الخاص بك. عند إرفاق معلومات الجهاز بالملاحظات، يُرسَل معرّف التثبيت معها.';
       case 'video_air_season_autumn':
         return 'خريف';
       case 'video_air_season_spring':
@@ -345339,12 +345678,16 @@ extension on _StringsAr {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi على الكمبيوتر لا يدعم هذا بعد. حدّثه ثم حاول مرة أخرى';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'تعذّر الانتقال إلى هذه الحلقة';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -345372,6 +345715,10 @@ extension on _StringsAr {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'لا تزال الترجمات قيد التحميل على الكمبيوتر. حاول مرة أخرى بعد قليل';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'لا يمكن اختيار مسار الترجمة هذا';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -345895,6 +346242,8 @@ extension on _StringsAr {
         return 'تمويه أو إخفاء الترجمة الثانوية (المترجمة)';
       case 'video_setting_seek_seconds':
         return 'ثوانٍ الانتقال';
+      case 'video_setting_shortcuts_hint':
+        return 'عرض اختصارات لوحة المفاتيح وذراع التحكم الخاصة بالمشغّل وتخصيصها';
       case 'video_setting_slim_progress_bar':
         return 'شريط تقدّم رفيع في الأسفل';
       case 'video_setting_slim_progress_bar_hint':
@@ -360809,6 +361158,10 @@ extension on _StringsDe {
         return 'Zusätzlich eine Systembenachrichtigung senden. Wenn ausgeschaltet, bleibt das Badge in der App erhalten.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'Nutzungsstatistiken teilen';
+      case 'usage_stats_enabled_hint':
+        return 'Sendet einmal täglich eine zufällige Installations-ID, die App-Version, die Plattform und den Update-Kanal an fushi.moe, damit wir aktive Nutzer zählen können. Konto-, Bibliotheks- oder Lesedaten sind nicht enthalten, und deine IP-Adresse wird nicht gespeichert. Wenn du Feedback Geräteinformationen anhängst, wird die Installations-ID mitgesendet.';
       case 'video_air_season_autumn':
         return 'Herbst';
       case 'video_air_season_spring':
@@ -361699,12 +362052,16 @@ extension on _StringsDe {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi auf dem Computer unterstützt das noch nicht. Aktualisiere es und versuche es erneut';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Wechsel zu dieser Folge nicht möglich';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -361732,6 +362089,10 @@ extension on _StringsDe {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Die Untertitel werden auf dem Computer noch geladen. Versuche es gleich noch einmal';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'Diese Untertitelspur kann nicht ausgewählt werden';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -362255,6 +362616,8 @@ extension on _StringsDe {
         return 'Den sekundären (Übersetzungs-)Untertitel weichzeichnen oder ausblenden';
       case 'video_setting_seek_seconds':
         return 'Spulschritt (Sekunden)';
+      case 'video_setting_shortcuts_hint':
+        return 'Tastatur- und Gamepad-Kurzbefehle des Players anzeigen und anpassen';
       case 'video_setting_slim_progress_bar':
         return 'Schmale Fortschrittsleiste unten';
       case 'video_setting_slim_progress_bar_hint':
@@ -377155,6 +377518,10 @@ extension on _StringsEs {
         return 'Envía también una notificación del sistema. Si lo desactivas, se mantiene la insignia dentro de la app.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'Compartir estadísticas de uso';
+      case 'usage_stats_enabled_hint':
+        return 'Una vez al día, envía a fushi.moe un ID de instalación aleatorio, la versión de la app, la plataforma y el canal de actualizaciones para que podamos contar los usuarios activos. No incluye datos de la cuenta, la biblioteca ni la lectura, y tu dirección IP no se guarda. Si adjuntas información del dispositivo a un comentario, el ID de instalación se envía con él.';
       case 'video_air_season_autumn':
         return 'Otoño';
       case 'video_air_season_spring':
@@ -378044,12 +378411,16 @@ extension on _StringsEs {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi en el ordenador aún no admite esto. Actualízalo e inténtalo de nuevo';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'No se pudo cambiar a ese episodio';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -378077,6 +378448,10 @@ extension on _StringsEs {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Los subtítulos aún se están cargando en el ordenador. Inténtalo de nuevo en breve';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'No se puede seleccionar esa pista de subtítulos';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -378600,6 +378975,8 @@ extension on _StringsEs {
         return 'Difumina u oculta el subtítulo secundario (traducción)';
       case 'video_setting_seek_seconds':
         return 'Segundos de salto';
+      case 'video_setting_shortcuts_hint':
+        return 'Ver y personalizar los atajos de teclado y mando del reproductor';
       case 'video_setting_slim_progress_bar':
         return 'Barra de progreso fina en la parte inferior';
       case 'video_setting_slim_progress_bar_hint':
@@ -393515,6 +393892,10 @@ extension on _StringsFr {
         return 'Envoie aussi une notification système. La désactiver conserve le badge dans l\'application.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'Partager les statistiques d’utilisation';
+      case 'usage_stats_enabled_hint':
+        return 'Une fois par jour, envoie à fushi.moe un identifiant d’installation aléatoire, la version de l’app, la plateforme et le canal de mise à jour afin de compter les utilisateurs actifs. Aucune donnée de compte, de bibliothèque ou de lecture n’est incluse, et votre adresse IP n’est pas conservée. Si vous joignez les informations de l’appareil à un retour, l’identifiant d’installation est envoyé avec.';
       case 'video_air_season_autumn':
         return 'Automne';
       case 'video_air_season_spring':
@@ -394405,12 +394786,16 @@ extension on _StringsFr {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi sur l\'ordinateur ne prend pas encore cela en charge. Mettez-le à jour et réessayez';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Impossible de passer à cet épisode';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -394438,6 +394823,10 @@ extension on _StringsFr {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Les sous-titres sont encore en cours de chargement sur l\'ordinateur. Réessayez dans un instant';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'Cette piste de sous-titres ne peut pas être sélectionnée';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -394962,6 +395351,8 @@ extension on _StringsFr {
         return 'Flouter ou cacher le sous-titre secondaire (traduction)';
       case 'video_setting_seek_seconds':
         return 'Pas d\'avance/recul (secondes)';
+      case 'video_setting_shortcuts_hint':
+        return 'Afficher et personnaliser les raccourcis clavier et manette du lecteur';
       case 'video_setting_slim_progress_bar':
         return 'Fine barre de progression en bas';
       case 'video_setting_slim_progress_bar_hint':
@@ -409828,6 +410219,10 @@ extension on _StringsId {
         return 'Juga kirim notifikasi sistem. Mematikan ini mempertahankan lencana dalam aplikasi.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'Bagikan statistik penggunaan';
+      case 'usage_stats_enabled_hint':
+        return 'Sekali sehari, mengirim ID instalasi acak, versi aplikasi, platform, dan kanal pembaruan ke fushi.moe agar kami dapat menghitung pengguna aktif. Tidak ada data akun, pustaka, atau bacaan yang disertakan, dan alamat IP Anda tidak disimpan. Saat Anda melampirkan info perangkat ke masukan, ID instalasi ikut dikirim.';
       case 'video_air_season_autumn':
         return 'Musim gugur';
       case 'video_air_season_spring':
@@ -410714,12 +411109,16 @@ extension on _StringsId {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi di komputer belum mendukung ini. Perbarui lalu coba lagi';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Tidak dapat beralih ke episode itu';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -410747,6 +411146,10 @@ extension on _StringsId {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Subtitel masih dimuat di komputer. Coba lagi sebentar lagi';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'Trek subtitel itu tidak dapat dipilih';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -411269,6 +411672,8 @@ extension on _StringsId {
         return 'Buramkan atau sembunyikan subtitle sekunder (terjemahan)';
       case 'video_setting_seek_seconds':
         return 'Detik lompatan';
+      case 'video_setting_shortcuts_hint':
+        return 'Lihat dan sesuaikan pintasan keyboard dan gamepad pemutar';
       case 'video_setting_slim_progress_bar':
         return 'Bilah progres tipis di bawah';
       case 'video_setting_slim_progress_bar_hint':
@@ -426165,6 +426570,10 @@ extension on _StringsIt {
         return 'Invia anche una notifica di sistema. Disattivandola resta il badge nell\'app.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'Condividi statistiche di utilizzo';
+      case 'usage_stats_enabled_hint':
+        return 'Una volta al giorno invia a fushi.moe un ID di installazione casuale, la versione dell\'app, la piattaforma e il canale di aggiornamento, così possiamo contare gli utenti attivi. Non sono inclusi dati dell\'account, della libreria o di lettura, e il tuo indirizzo IP non viene memorizzato. Se alleghi le informazioni sul dispositivo a un feedback, l\'ID di installazione viene inviato insieme.';
       case 'video_air_season_autumn':
         return 'Autunno';
       case 'video_air_season_spring':
@@ -427053,12 +427462,16 @@ extension on _StringsIt {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi sul computer non supporta ancora questa funzione. Aggiornalo e riprova';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Impossibile passare a quell\'episodio';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -427086,6 +427499,10 @@ extension on _StringsIt {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'I sottotitoli sono ancora in caricamento sul computer. Riprova tra poco';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'Impossibile selezionare quella traccia di sottotitoli';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -427609,6 +428026,8 @@ extension on _StringsIt {
         return 'Sfoca o nascondi il sottotitolo secondario (traduzione)';
       case 'video_setting_seek_seconds':
         return 'Secondi di spostamento';
+      case 'video_setting_shortcuts_hint':
+        return 'Visualizza e personalizza le scorciatoie da tastiera e gamepad del lettore';
       case 'video_setting_slim_progress_bar':
         return 'Barra di avanzamento sottile in basso';
       case 'video_setting_slim_progress_bar_hint':
@@ -442402,6 +442821,10 @@ extension on _StringsJa {
         return 'システム通知も送信します。オフにしてもアプリ内のバッジは残ります。';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return '利用統計を送信';
+      case 'usage_stats_enabled_hint':
+        return '1 日 1 回、ランダムなインストール ID・アプリのバージョン・プラットフォーム・更新チャネルを fushi.moe に送信し、アクティブユーザー数の集計に使います。アカウント・ライブラリ・読書内容は含まれず、IP アドレスも保存しません。フィードバックにデバイス情報を添付すると、インストール ID も一緒に送信されます。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -443278,12 +443701,16 @@ extension on _StringsJa {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'パソコンの Fushi はまだこの操作に対応していません。更新してからもう一度お試しください';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'そのエピソードに切り替えられませんでした';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -443311,6 +443738,10 @@ extension on _StringsJa {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'パソコンで字幕を読み込み中です。しばらくしてからもう一度お試しください';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'その字幕トラックは選択できません';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -443832,6 +444263,8 @@ extension on _StringsJa {
         return '副字幕（翻訳）をぼかすまたは非表示にします';
       case 'video_setting_seek_seconds':
         return 'シークの秒数';
+      case 'video_setting_shortcuts_hint':
+        return 'プレーヤーのキーボード／ゲームパッドのショートカットを確認・カスタマイズ';
       case 'video_setting_slim_progress_bar':
         return '下部に細いプログレスバーを表示';
       case 'video_setting_slim_progress_bar_hint':
@@ -458623,6 +459056,10 @@ extension on _StringsKo {
         return '시스템 알림도 함께 보냅니다. 끄면 앱 내 배지는 유지됩니다.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return '사용 통계 보내기';
+      case 'usage_stats_enabled_hint':
+        return '하루에 한 번 무작위 설치 ID, 앱 버전, 플랫폼, 업데이트 채널을 fushi.moe로 보내 활성 사용자 수를 집계합니다. 계정, 라이브러리, 읽기 데이터는 포함되지 않으며 IP 주소도 저장하지 않습니다. 피드백에 기기 정보를 첨부하면 설치 ID도 함께 전송됩니다.';
       case 'video_air_season_autumn':
         return '가을';
       case 'video_air_season_spring':
@@ -459503,12 +459940,16 @@ extension on _StringsKo {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return '컴퓨터의 Fushi가 아직 이 기능을 지원하지 않습니다. 업데이트한 후 다시 시도하세요';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return '해당 에피소드로 전환할 수 없습니다';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -459536,6 +459977,10 @@ extension on _StringsKo {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return '컴퓨터에서 아직 자막을 불러오는 중입니다. 잠시 후 다시 시도하세요';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return '해당 자막 트랙을 선택할 수 없습니다';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -460056,6 +460501,8 @@ extension on _StringsKo {
         return '보조(번역) 자막을 흐리게 하거나 숨깁니다';
       case 'video_setting_seek_seconds':
         return '이동 간격(초)';
+      case 'video_setting_shortcuts_hint':
+        return '플레이어의 키보드 및 게임패드 단축키 보기 및 사용자 지정';
       case 'video_setting_slim_progress_bar':
         return '하단 얇은 진행 막대';
       case 'video_setting_slim_progress_bar_hint':
@@ -474939,6 +475386,10 @@ extension on _StringsNl {
         return 'Stuur ook een systeemmelding. Als je dit uitzet, blijft de badge in de app behouden.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'Gebruiksstatistieken delen';
+      case 'usage_stats_enabled_hint':
+        return 'Stuurt één keer per dag een willekeurige installatie-ID, de app-versie, het platform en het updatekanaal naar fushi.moe, zodat we actieve gebruikers kunnen tellen. Er worden geen account-, bibliotheek- of leesgegevens meegestuurd en je IP-adres wordt niet opgeslagen. Als je apparaatinformatie aan feedback toevoegt, wordt de installatie-ID meegestuurd.';
       case 'video_air_season_autumn':
         return 'Herfst';
       case 'video_air_season_spring':
@@ -475827,12 +476278,16 @@ extension on _StringsNl {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi op de computer ondersteunt dit nog niet. Werk het bij en probeer het opnieuw';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Kan niet naar die aflevering overschakelen';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -475860,6 +476315,10 @@ extension on _StringsNl {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'De ondertitels worden nog geladen op de computer. Probeer het zo opnieuw';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'Dat ondertitelspoor kan niet worden geselecteerd';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -476384,6 +476843,8 @@ extension on _StringsNl {
         return 'Vervaag of verberg de secundaire (vertaling) ondertitel';
       case 'video_setting_seek_seconds':
         return 'Spoelstap (seconden)';
+      case 'video_setting_shortcuts_hint':
+        return 'Toetsenbord- en gamepadsnelkoppelingen van de speler bekijken en aanpassen';
       case 'video_setting_slim_progress_bar':
         return 'Dunne voortgangsbalk onderaan';
       case 'video_setting_slim_progress_bar_hint':
@@ -491269,6 +491730,10 @@ extension on _StringsPtBr {
         return 'Também envia uma notificação do sistema. Desativar mantém o selo dentro do app.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'Compartilhar estatísticas de uso';
+      case 'usage_stats_enabled_hint':
+        return 'Uma vez por dia, envia ao fushi.moe um ID de instalação aleatório, a versão do app, a plataforma e o canal de atualização para que possamos contar os usuários ativos. Nenhum dado de conta, biblioteca ou leitura é incluído, e seu endereço IP não é armazenado. Ao anexar informações do dispositivo a um feedback, o ID de instalação é enviado junto.';
       case 'video_air_season_autumn':
         return 'Outono';
       case 'video_air_season_spring':
@@ -492158,12 +492623,16 @@ extension on _StringsPtBr {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'O Fushi no computador ainda não oferece suporte a isso. Atualize-o e tente novamente';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Não foi possível mudar para esse episódio';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -492191,6 +492660,10 @@ extension on _StringsPtBr {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'As legendas ainda estão carregando no computador. Tente novamente em instantes';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'Essa faixa de legenda não pode ser selecionada';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -492714,6 +493187,8 @@ extension on _StringsPtBr {
         return 'Desfocar ou ocultar a legenda secundária (tradução)';
       case 'video_setting_seek_seconds':
         return 'Segundos para avançar/retroceder';
+      case 'video_setting_shortcuts_hint':
+        return 'Ver e personalizar os atalhos de teclado e controle do player';
       case 'video_setting_slim_progress_bar':
         return 'Barra de progresso fina na parte inferior';
       case 'video_setting_slim_progress_bar_hint':
@@ -507606,6 +508081,10 @@ extension on _StringsRu {
         return 'Дополнительно отправлять системное уведомление. При отключении значок в приложении сохраняется.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'Отправлять статистику использования';
+      case 'usage_stats_enabled_hint':
+        return 'Раз в день отправляет на fushi.moe случайный идентификатор установки, версию приложения, платформу и канал обновлений, чтобы мы могли посчитать активных пользователей. Данные аккаунта, библиотеки и чтения не передаются, ваш IP-адрес не сохраняется. Если вы прикладываете к отзыву сведения об устройстве, идентификатор установки отправляется вместе с ним.';
       case 'video_air_season_autumn':
         return 'Осень';
       case 'video_air_season_spring':
@@ -508493,12 +508972,16 @@ extension on _StringsRu {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi на компьютере пока не поддерживает это. Обновите его и повторите попытку';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Не удалось переключиться на эту серию';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -508526,6 +509009,10 @@ extension on _StringsRu {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Субтитры на компьютере ещё загружаются. Повторите попытку чуть позже';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'Эту дорожку субтитров нельзя выбрать';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -509049,6 +509536,8 @@ extension on _StringsRu {
         return 'Размыть или скрыть вторичные (переводные) субтитры';
       case 'video_setting_seek_seconds':
         return 'Шаг перемотки (с)';
+      case 'video_setting_shortcuts_hint':
+        return 'Просмотр и настройка сочетаний клавиш клавиатуры и геймпада для плеера';
       case 'video_setting_slim_progress_bar':
         return 'Тонкая полоса прогресса внизу';
       case 'video_setting_slim_progress_bar_hint':
@@ -523900,6 +524389,10 @@ extension on _StringsTh {
         return 'ส่งการแจ้งเตือนของระบบด้วย การปิดตัวเลือกนี้ยังคงเก็บป้ายในแอปไว้';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'ส่งสถิติการใช้งาน';
+      case 'usage_stats_enabled_hint':
+        return 'วันละครั้ง จะส่ง ID การติดตั้งแบบสุ่ม เวอร์ชันแอป แพลตฟอร์ม และช่องทางอัปเดตไปยัง fushi.moe เพื่อนับจำนวนผู้ใช้ที่ใช้งานอยู่ ไม่มีข้อมูลบัญชี คลัง หรือการอ่าน และไม่จัดเก็บที่อยู่ IP ของคุณ เมื่อคุณแนบข้อมูลอุปกรณ์ไปกับความคิดเห็น ID การติดตั้งจะถูกส่งไปด้วย';
       case 'video_air_season_autumn':
         return 'ฤดูใบไม้ร่วง';
       case 'video_air_season_spring':
@@ -524785,12 +525278,16 @@ extension on _StringsTh {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi บนคอมพิวเตอร์ยังไม่รองรับการทำงานนี้ โปรดอัปเดตแล้วลองอีกครั้ง';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'ไม่สามารถสลับไปยังตอนนั้นได้';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -524818,6 +525315,10 @@ extension on _StringsTh {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'คำบรรยายบนคอมพิวเตอร์ยังโหลดอยู่ โปรดลองอีกครั้งในอีกสักครู่';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'ไม่สามารถเลือกแทร็กคำบรรยายนั้นได้';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -525340,6 +525841,8 @@ extension on _StringsTh {
         return 'เบลอหรือซ่อนคำบรรยายรอง (คำแปล)';
       case 'video_setting_seek_seconds':
         return 'ระยะเลื่อนเวลา (วินาที)';
+      case 'video_setting_shortcuts_hint':
+        return 'ดูและปรับแต่งปุ่มลัดแป้นพิมพ์และเกมแพดของเครื่องเล่น';
       case 'video_setting_slim_progress_bar':
         return 'แถบความคืบหน้าบางที่ด้านล่าง';
       case 'video_setting_slim_progress_bar_hint':
@@ -540216,6 +540719,10 @@ extension on _StringsTr {
         return 'Ayrıca bir sistem bildirimi gönder. Bunu kapatmak uygulama içi rozeti korur.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'Kullanım istatistiklerini paylaş';
+      case 'usage_stats_enabled_hint':
+        return 'Günde bir kez rastgele bir kurulum kimliğini, uygulama sürümünü, platformu ve güncelleme kanalını fushi.moe\'ya göndererek aktif kullanıcıları saymamızı sağlar. Hesap, kitaplık veya okuma verisi içermez ve IP adresiniz saklanmaz. Geri bildirime cihaz bilgisi eklediğinizde kurulum kimliği de birlikte gönderilir.';
       case 'video_air_season_autumn':
         return 'Sonbahar';
       case 'video_air_season_spring':
@@ -541103,12 +541610,16 @@ extension on _StringsTr {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Bilgisayardaki Fushi bunu henüz desteklemiyor. Güncelleyip tekrar deneyin';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'O bölüme geçilemedi';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -541136,6 +541647,10 @@ extension on _StringsTr {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Altyazılar bilgisayarda hâlâ yükleniyor. Birazdan tekrar deneyin';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'Bu altyazı parçası seçilemez';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -541660,6 +542175,8 @@ extension on _StringsTr {
         return 'İkincil (çeviri) altyazıyı bulanıklaştır veya gizle';
       case 'video_setting_seek_seconds':
         return 'Sarma saniyesi';
+      case 'video_setting_shortcuts_hint':
+        return 'Oynatıcının klavye ve oyun kumandası kısayollarını görüntüleyin ve özelleştirin';
       case 'video_setting_slim_progress_bar':
         return 'Altta ince ilerleme çubuğu';
       case 'video_setting_slim_progress_bar_hint':
@@ -556526,6 +557043,10 @@ extension on _StringsVi {
         return 'Gửi thêm thông báo hệ thống. Tắt mục này vẫn giữ huy hiệu trong ứng dụng.';
       case 'url':
         return 'URL';
+      case 'usage_stats_enabled':
+        return 'Chia sẻ thống kê sử dụng';
+      case 'usage_stats_enabled_hint':
+        return 'Mỗi ngày một lần, gửi ID cài đặt ngẫu nhiên, phiên bản ứng dụng, nền tảng và kênh cập nhật đến fushi.moe để chúng tôi đếm số người dùng hoạt động. Không bao gồm dữ liệu tài khoản, thư viện hay nội dung đọc, và địa chỉ IP của bạn không được lưu. Khi bạn đính kèm thông tin thiết bị vào phản hồi, ID cài đặt sẽ được gửi kèm.';
       case 'video_air_season_autumn':
         return 'Thu';
       case 'video_air_season_spring':
@@ -557410,12 +557931,16 @@ extension on _StringsVi {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return 'Fushi trên máy tính chưa hỗ trợ thao tác này. Hãy cập nhật rồi thử lại';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return 'Không thể chuyển sang tập đó';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -557443,6 +557968,10 @@ extension on _StringsVi {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return 'Phụ đề trên máy tính vẫn đang tải. Vui lòng thử lại sau giây lát';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return 'Không thể chọn bản phụ đề đó';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -557966,6 +558495,8 @@ extension on _StringsVi {
         return 'Làm mờ hoặc ẩn phụ đề phụ (bản dịch)';
       case 'video_setting_seek_seconds':
         return 'Bước tua (giây)';
+      case 'video_setting_shortcuts_hint':
+        return 'Xem và tùy chỉnh phím tắt bàn phím và tay cầm của trình phát';
       case 'video_setting_slim_progress_bar':
         return 'Thanh tiến độ mảnh ở dưới cùng';
       case 'video_setting_slim_progress_bar_hint':
@@ -572671,6 +573202,10 @@ extension on _StringsZhCn {
         return '同时发送系统通知。关掉后仍保留应用内红点。';
       case 'url':
         return '网址';
+      case 'usage_stats_enabled':
+        return '发送使用统计';
+      case 'usage_stats_enabled_hint':
+        return '每天一次向 fushi.moe 发送随机安装 ID、应用版本、平台和更新通道，用于统计活跃用户。不包含账户、书库或阅读内容，也不保存你的 IP 地址。提交反馈并附带设备信息时，安装 ID 会随反馈一起发送。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -573546,12 +574081,16 @@ extension on _StringsZhCn {
         return '取消收藏';
       case 'video_remote_current':
         return '回到当前字幕';
+      case 'video_remote_error_action_unsupported':
+        return '电脑上的 Fushi 还不支持这个操作，请更新后再试';
       case 'video_remote_error_certificate_mismatch':
         return '电脑证书与配对时不一致，请重新配对';
       case 'video_remote_error_controller_busy':
         return '另一台设备正在遥控这个视频';
       case 'video_remote_error_controller_lease_lost':
         return '遥控已超时或被接管，正在重新连接';
+      case 'video_remote_error_episode_unavailable':
+        return '无法切换到这一集';
       case 'video_remote_error_favorite_ambiguous':
         return '有多条字幕与这条收藏匹配，无法确定';
       case 'video_remote_error_favorite_missing':
@@ -573579,6 +574118,10 @@ extension on _StringsZhCn {
         return '电脑已关闭遥控';
       case 'video_remote_error_requests_busy':
         return '电脑忙，请稍后再试';
+      case 'video_remote_error_subtitle_busy':
+        return '电脑上的字幕还在加载，请稍后再试';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return '这条字幕当前无法选择';
       case 'video_remote_error_subtitles_changed':
         return '电脑上的字幕已变化，正在刷新';
       case 'video_remote_error_task_missing':
@@ -574097,6 +574640,8 @@ extension on _StringsZhCn {
         return '模糊或隐藏副字幕（翻译参考轨）';
       case 'video_setting_seek_seconds':
         return '快进/快退步长（秒）';
+      case 'video_setting_shortcuts_hint':
+        return '查看并自定义播放器的键盘 / 手柄快捷键';
       case 'video_setting_slim_progress_bar':
         return '底部细进度条';
       case 'video_setting_slim_progress_bar_hint':
@@ -588829,6 +589374,10 @@ extension on _StringsZhHk {
         return '同時發送系統通知。關掉後仍保留應用內紅點。';
       case 'url':
         return '網址';
+      case 'usage_stats_enabled':
+        return '傳送使用統計';
+      case 'usage_stats_enabled_hint':
+        return '每天一次向 fushi.moe 傳送隨機安裝 ID、應用程式版本、平台和更新通道，用於統計活躍用戶。不包含帳戶、書庫或閱讀內容，也不保存你的 IP 位址。提交回饋並附帶裝置資訊時，安裝 ID 會隨回饋一併傳送。';
       case 'video_air_season_autumn':
         return '秋';
       case 'video_air_season_spring':
@@ -589704,12 +590253,16 @@ extension on _StringsZhHk {
         return 'Remove from favorites';
       case 'video_remote_current':
         return 'Return to current subtitle';
+      case 'video_remote_error_action_unsupported':
+        return '電腦上的 Fushi 尚未支援此操作，請更新後再試';
       case 'video_remote_error_certificate_mismatch':
         return 'The computer\'s certificate doesn\'t match the paired one; pair again';
       case 'video_remote_error_controller_busy':
         return 'Another device is controlling this video';
       case 'video_remote_error_controller_lease_lost':
         return 'Remote control timed out or was taken over; reconnecting';
+      case 'video_remote_error_episode_unavailable':
+        return '無法切換到這一集';
       case 'video_remote_error_favorite_ambiguous':
         return 'Several subtitle lines match this favorite';
       case 'video_remote_error_favorite_missing':
@@ -589737,6 +590290,10 @@ extension on _StringsZhHk {
         return 'Remote control was closed on the computer';
       case 'video_remote_error_requests_busy':
         return 'The computer is busy; try again shortly';
+      case 'video_remote_error_subtitle_busy':
+        return '電腦上的字幕仍在載入，請稍後再試';
+      case 'video_remote_error_subtitle_track_unavailable':
+        return '目前無法選擇這條字幕';
       case 'video_remote_error_subtitles_changed':
         return 'Subtitles on the computer changed; refreshing';
       case 'video_remote_error_task_missing':
@@ -590256,6 +590813,8 @@ extension on _StringsZhHk {
         return '模糊或隱藏副字幕（翻譯參考軌）';
       case 'video_setting_seek_seconds':
         return '快進／快退步長（秒）';
+      case 'video_setting_shortcuts_hint':
+        return '查看並自訂播放器的鍵盤 / 手掣快捷鍵';
       case 'video_setting_slim_progress_bar':
         return '底部細進度條';
       case 'video_setting_slim_progress_bar_hint':
