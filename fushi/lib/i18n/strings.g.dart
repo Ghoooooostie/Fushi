@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 139791 (8223 per locale)
+/// Strings: 141542 (8326 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1741,6 +1741,77 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_tts_failure_unsupported =>
       'This voice is not available on this device';
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  String get audiobook_tts_irodori_local_model => 'Model';
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  String get audiobook_tts_irodori_local_port => 'Port';
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   String get audiobook_tts_lang_all_ja => 'Japanese only';
   String get audiobook_tts_lang_all_ko => 'Korean only';
@@ -1850,10 +1921,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_tts_param_api_key => 'API key';
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
+  String get audiobook_tts_param_caption => 'Voice description';
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
   String get audiobook_tts_param_endpoint => 'Server URL';
   String get audiobook_tts_param_invalid => 'This value is not valid';
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   String get audiobook_tts_param_prompt_text => 'Reference audio transcript';
   String get audiobook_tts_param_ref_audio => 'Reference audio path';
@@ -1876,6 +1952,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_tts_provider_google_translate => 'Google Translate';
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   String get audiobook_tts_provider_system => 'System voice';
   String get audiobook_tts_read_from_here => 'Read aloud from here';
@@ -3128,12 +3206,33 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_backend_setup_title => 'Set up download backend';
   String get download_backend_unsupported_note =>
       'The built-in engine is not available on this platform. Downloads use external qBittorrent.';
+  String get download_batch_clear => 'Remove from list';
   String download_batch_delete_confirm({required Object n}) =>
       'Delete ${n} download task(s)?';
   String download_batch_done({required Object n}) => '${n} task(s) processed';
   String download_batch_failed({required Object n}) => '${n} failed';
   String download_batch_unsupported({required Object n}) =>
       '${n} skipped (not supported)';
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   String get download_clear_finished => 'Clear finished';
   String get download_detail_backend_offline =>
       'The original download backend is offline. Persisted task information is shown; live parameters are unavailable.';
@@ -3421,6 +3520,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_task_status_seeding => 'Seeding';
   String get download_task_status_stalled => 'Stalled';
   String get download_task_toggle_failed => 'Pause/resume failed';
+  String get download_task_work_focus_clear => 'Show all tasks';
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
   String get download_tasks_tab => 'Tasks';
   String get download_test_connection => 'Test connection';
   String get download_test_connection_failed =>
@@ -3551,6 +3653,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_compose_body_field => 'Details';
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
   String get feedback_compose_contact_field => 'Contact (optional)';
   String get feedback_compose_contact_hint =>
       'Email, Telegram, QQ… only developers can see it';
@@ -3580,8 +3683,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get feedback_compose_title_field => 'Title';
   String get feedback_compose_title_hint => 'One-line summary';
   String get feedback_compose_title_missing => 'Please fill in a title.';
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   String get feedback_detail_add_shot => 'Add screenshot';
   String feedback_detail_attachments({required Object n}) =>
       '${n} attachment(s)';
@@ -5334,6 +5444,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_host_update_title => 'Host version';
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
   String get interconnect_moved_note =>
       'Connection & server settings are in the Fushi Interconnect category';
   String get interconnect_peer_list_empty =>
@@ -5609,6 +5727,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get leaderboard_kind_video => 'Videos';
   String get leaderboard_load_more => 'Load more';
   String get leaderboard_metric_chars => 'Characters';
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   String leaderboard_readers({required Object n}) => '${n} readers';
   String get leaderboard_recovery_export_hint =>
       'Use it to sign in on another device without email';
@@ -5888,6 +6012,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Lyrics mode has its own font size setting. You can adjust it in ⚙ Settings → Typography.';
   String get lyrics_mode_hint_title => 'Lyrics mode';
   String get lyrics_sentence_replay => 'Replay current sentence';
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   String get lyrics_sweep => 'Word-by-word sweep';
   String get lyrics_sweep_hint =>
       'Light up the current line as it is read. Turn off to show the whole line in one solid color';
@@ -6851,7 +6978,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Shared by manga and graphic subtitles: engine, local models and LLM correction';
   String get models_section_files => 'Model files';
   String get models_tts_card_fallback_section => 'Card audio fallback';
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  String get models_tts_fallback_voice => 'Fallback voice';
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
   String get models_tts_title => 'Speech synthesis (TTS)';
@@ -7483,12 +7617,28 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Subtitle start';
   String get popup_advanced_mining_image_none => 'None';
   String get popup_advanced_mining_image_section => 'Image';
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   String popup_advanced_mining_sentence_count({required Object count}) =>
       '${count} selected';
   String get popup_advanced_mining_sentence_section => 'Sentences';
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   String get popup_advanced_mining_title => 'Advanced mining';
   String get popup_append_sentence_tooltip => 'Add this sentence to the card';
   String get popup_auto_expand_dictionaries => 'Auto-expand rows';
@@ -7547,6 +7697,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
   String get popup_max_height => 'Popup max height';
   String get popup_max_width => 'Popup max width';
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
   String get popup_mining_target_switch => 'Switch profile or deck';
@@ -8928,6 +9080,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Reviewed ${n} cards in this session';
   String get srs_review_hide_hard_easy => 'Hide ‘Hard’ and ‘Easy’ buttons';
   String get srs_review_pending_decision => 'Needs your decision';
+  String get srs_review_replay_audio => 'Replay audio';
   String get srs_review_show_answer => 'Show answer';
   String get srs_review_undo_blocked =>
       'This card was already reviewed on another device, so this step can\'t be undone';
@@ -8938,9 +9091,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'A new algorithm applies from the next review; due dates already scheduled stay as they are. Use Reschedule deck now to apply it right away.';
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+  String get srs_settings_audio => 'Audio';
   String get srs_settings_auto_optimize => 'Optimize automatically';
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
   String srs_settings_inherited_from({required Object name}) =>
@@ -8969,6 +9126,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_settings_params_mode => 'Scheduling parameters';
   String get srs_settings_params_own => 'Own settings';
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   String get srs_settings_reschedule => 'Reschedule deck now';
   String get srs_settings_reschedule_confirm =>
       'Recompute the due dates of every review card in this deck with the current settings?';
@@ -9314,6 +9475,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Delete failed: ${reason}';
   String get storage_entry_delete_files_confirm_body =>
       'This deletes it from disk right away. Nothing in your library references it - it is cached, exported or re-downloadable data.';
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
   String get storage_entry_external_audio_hint =>
       'Audio references the original files, using no app storage';
   String storage_entry_more_rest({required Object n, required Object size}) =>
@@ -9562,7 +9725,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_p2p_relay_urls => 'Self-hosted relays (optional)';
   String get sync_p2p_relay_urls_hint =>
       'One iroh-relay URL per line. Leave empty to use iroh\'s public relays.';
-  String get sync_pair_allow => 'Allow';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   String sync_pair_confirm_identity_body({required Object device}) =>
       'You are pairing with ${device}. Confirm this is the device you expect before continuing.';
   String get sync_pair_confirm_identity_title => 'Confirm device';
@@ -9640,6 +9804,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get sync_pair_unknown_device => 'Unknown device';
   String get sync_pair_upgrade_required =>
       'The other device runs an older version that cannot pair securely from this network. Update it, then pair again.';
+  String get sync_paired_peer_owner_badge => 'My device';
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   String get sync_paired_peer_remove => 'Remove';
   String get sync_paired_peer_removed => 'Removed paired device';
   String get sync_paired_peer_unknown => 'Unknown device';
@@ -10025,6 +10193,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get updates_center_title => 'Updates';
   String get updates_check_now => 'Check for updates now';
   String get updates_checking => 'Checking...';
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  String get updates_extension_auto_updated => 'Updated automatically';
   String get updates_history_clear => 'Clear history';
   String get updates_history_clear_confirm_action => 'Clear';
   String updates_history_clear_confirm_body({required Object scope}) =>
@@ -10032,6 +10209,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get updates_history_clear_confirm_title => 'Clear update history?';
   String updates_history_cleared({required Object count}) =>
       'Cleared ${count} entries';
+  String get updates_kind_anime_extension => 'Video extensions';
   String get updates_kind_app_release => 'App releases';
   String get updates_kind_manga_chapter => 'Manga chapters';
   String get updates_kind_manga_extension => 'Manga extensions';
@@ -10047,6 +10225,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object count,
   }) => '${first} and ${count} more';
   String get updates_notification_view_all => 'View updates';
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   String get updates_notify_app_release => 'Notify about app releases';
   String get updates_notify_app_release_hint =>
       'Alert when a newer Fushi release is available.';
@@ -14364,6 +14546,117 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -14545,12 +14838,20 @@ class _StringsAr extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -14591,6 +14892,9 @@ class _StringsAr extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -16749,6 +17053,8 @@ class _StringsAr extends _StringsEn {
   String get download_backend_unsupported_note =>
       'المحرك المدمج غير متاح على هذه المنصة. تستخدم التحميلات qBittorrent خارجي.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'حذف ${n} مهمة تنزيل؟';
   @override
@@ -16758,6 +17064,36 @@ class _StringsAr extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       'تم تخطي ${n} (غير مدعومة)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'مسح المنتهية';
   @override
@@ -17250,6 +17586,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'فشل الإيقاف المؤقت/الاستئناف';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'المهام';
   @override
   String get download_test_connection => 'اختبار الاتصال';
@@ -17464,6 +17805,8 @@ class _StringsAr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -17511,8 +17854,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -20493,6 +20845,18 @@ class _StringsAr extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'إعدادات الاتصال والخادم موجودة في فئة ترابط Fushi';
   @override
@@ -20946,6 +21310,14 @@ class _StringsAr extends _StringsEn {
   String get leaderboard_load_more => 'تحميل المزيد';
   @override
   String get leaderboard_metric_chars => 'الأحرف';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} قارئ';
   @override
@@ -21420,6 +21792,11 @@ class _StringsAr extends _StringsEn {
   String get lyrics_mode_hint_title => 'وضع كلمات الأغاني';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -23078,7 +23455,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -24137,6 +24525,25 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -24146,6 +24553,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -24251,6 +24666,9 @@ class _StringsAr extends _StringsEn {
   String get popup_max_height => 'أقصى ارتفاع للنافذة المنبثقة';
   @override
   String get popup_max_width => 'أقصى عرض للنافذة المنبثقة';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -26711,6 +27129,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -26728,10 +27148,17 @@ class _StringsAr extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -26778,6 +27205,12 @@ class _StringsAr extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -27404,6 +27837,9 @@ class _StringsAr extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'سيُحذف من القرص فورًا. لا يشير إليه أي عنصر في مكتبتك — فهذه بيانات مؤقتة أو مُصدَّرة أو يمكن تنزيلها من جديد.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'يشير الصوت إلى الملفات الأصلية ولا يستهلك مساحة التطبيق';
   @override
@@ -27843,7 +28279,9 @@ class _StringsAr extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'عنوان URL واحد لـ iroh-relay في كل سطر. اتركه فارغًا لاستخدام مرحّلات iroh العامة.';
   @override
-  String get sync_pair_allow => 'سماح';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'أنت تقترن بـ ${device}. تأكد أن هذا هو الجهاز المتوقع قبل المتابعة.';
@@ -27975,6 +28413,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'الجهاز الآخر يعمل بإصدار أقدم لا يمكنه الاقتران بأمان من هذه الشبكة. حدّثه، ثم أعد الاقتران.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'إزالة';
   @override
@@ -28641,6 +29086,20 @@ class _StringsAr extends _StringsEn {
   @override
   String get updates_checking => 'جارٍ التحقق...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'مسح السجل';
   @override
   String get updates_history_clear_confirm_action => 'مسح';
@@ -28652,6 +29111,8 @@ class _StringsAr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'تم مسح ${count} إدخال';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'إصدارات التطبيق';
   @override
@@ -28679,6 +29140,12 @@ class _StringsAr extends _StringsEn {
   }) => '${first} و${count} أخرى';
   @override
   String get updates_notification_view_all => 'عرض التحديثات';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'إشعار بإصدارات التطبيق';
   @override
@@ -34238,6 +34705,117 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -34419,12 +34997,20 @@ class _StringsDe extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -34465,6 +35051,9 @@ class _StringsDe extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -36668,6 +37257,8 @@ class _StringsDe extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Die integrierte Engine ist auf dieser Plattform nicht verfügbar. Downloads verwenden externes qBittorrent.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       '${n} Download-Aufgabe(n) löschen?';
   @override
@@ -36678,6 +37269,36 @@ class _StringsDe extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} übersprungen (nicht unterstützt)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Abgeschlossene löschen';
   @override
@@ -37180,6 +37801,11 @@ class _StringsDe extends _StringsEn {
   String get download_task_toggle_failed =>
       'Pausieren/Fortsetzen fehlgeschlagen';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Aufgaben';
   @override
   String get download_test_connection => 'Verbindung testen';
@@ -37400,6 +38026,8 @@ class _StringsDe extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -37447,8 +38075,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -40499,6 +41136,18 @@ class _StringsDe extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Verbindungs- und Servereinstellungen befinden sich in der Kategorie Fushi Interconnect';
   @override
@@ -40968,6 +41617,14 @@ class _StringsDe extends _StringsEn {
   String get leaderboard_load_more => 'Mehr laden';
   @override
   String get leaderboard_metric_chars => 'Zeichen';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} Leser';
   @override
@@ -41449,6 +42106,11 @@ class _StringsDe extends _StringsEn {
   String get lyrics_mode_hint_title => 'Liedtextmodus';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -43152,7 +43814,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -44237,6 +44910,25 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -44246,6 +44938,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -44354,6 +45054,9 @@ class _StringsDe extends _StringsEn {
   String get popup_max_height => 'Maximale Popup-Höhe';
   @override
   String get popup_max_width => 'Maximale Popup-Breite';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -46844,6 +47547,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -46861,10 +47566,17 @@ class _StringsDe extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -46911,6 +47623,12 @@ class _StringsDe extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -47542,6 +48260,9 @@ class _StringsDe extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'Wird sofort von der Festplatte gelöscht. Nichts in deiner Bibliothek verweist darauf – es sind zwischengespeicherte, exportierte oder erneut herunterladbare Daten.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'Audio verweist auf die Originaldateien und belegt keinen App-Speicher';
   @override
@@ -47989,7 +48710,9 @@ class _StringsDe extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Eine iroh-relay-URL pro Zeile. Leer lassen, um die öffentlichen Relays von iroh zu verwenden.';
   @override
-  String get sync_pair_allow => 'Erlauben';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Du koppelst mit ${device}. Bestätige, dass dies das erwartete Gerät ist, bevor du fortfährst.';
@@ -48124,6 +48847,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'Das andere Gerät verwendet eine ältere Version, die aus diesem Netzwerk nicht sicher koppeln kann. Aktualisieren Sie es und koppeln Sie erneut.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Entfernen';
   @override
@@ -48801,6 +49531,20 @@ class _StringsDe extends _StringsEn {
   @override
   String get updates_checking => 'Suche läuft...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Verlauf löschen';
   @override
   String get updates_history_clear_confirm_action => 'Löschen';
@@ -48812,6 +49556,8 @@ class _StringsDe extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} Einträge gelöscht';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'App-Releases';
   @override
@@ -48839,6 +49585,12 @@ class _StringsDe extends _StringsEn {
   }) => '${first} und ${count} weitere';
   @override
   String get updates_notification_view_all => 'Updates anzeigen';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Über App-Releases benachrichtigen';
   @override
@@ -54478,6 +55230,117 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -54659,12 +55522,20 @@ class _StringsEs extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -54705,6 +55576,9 @@ class _StringsEs extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -56913,6 +57787,8 @@ class _StringsEs extends _StringsEn {
   String get download_backend_unsupported_note =>
       'El motor integrado no está disponible en esta plataforma. Las descargas usan qBittorrent externo.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       '¿Eliminar ${n} tarea(s) de descarga?';
   @override
@@ -56923,6 +57799,36 @@ class _StringsEs extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} omitida(s) (no compatible)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Limpiar finalizados';
   @override
@@ -57424,6 +58330,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'Pausa/reanudación falló';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Tareas';
   @override
   String get download_test_connection => 'Probar conexión';
@@ -57646,6 +58557,8 @@ class _StringsEs extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -57693,8 +58606,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -60744,6 +61666,18 @@ class _StringsEs extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Los ajustes de conexión y servidor están en la categoría Fushi Interconnect';
   @override
@@ -61217,6 +62151,14 @@ class _StringsEs extends _StringsEn {
   String get leaderboard_load_more => 'Cargar más';
   @override
   String get leaderboard_metric_chars => 'Caracteres';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} lectores';
   @override
@@ -61699,6 +62641,11 @@ class _StringsEs extends _StringsEn {
   String get lyrics_mode_hint_title => 'Modo de letras';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -63404,7 +64351,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -64484,6 +65442,25 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -64493,6 +65470,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -64600,6 +65585,9 @@ class _StringsEs extends _StringsEn {
   String get popup_max_height => 'Altura máxima de la ventana';
   @override
   String get popup_max_width => 'Ancho máximo del popup';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -67102,6 +68090,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -67119,10 +68109,17 @@ class _StringsEs extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -67169,6 +68166,12 @@ class _StringsEs extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -67801,6 +68804,9 @@ class _StringsEs extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'Se eliminará del disco de inmediato. Nada de tu biblioteca hace referencia a esto: son datos en caché, exportados o que se pueden volver a descargar.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'El audio hace referencia a los archivos originales y no ocupa espacio de la app';
   @override
@@ -68251,7 +69257,9 @@ class _StringsEs extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Una URL de iroh-relay por línea. Déjalo vacío para usar los relés públicos de iroh.';
   @override
-  String get sync_pair_allow => 'Permitir';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Se está emparejando con ${device}. Confirme que es el dispositivo que espera antes de continuar.';
@@ -68387,6 +69395,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'El otro dispositivo tiene una versión más antigua que no puede emparejarse de forma segura desde esta red. Actualícelo, luego empareje de nuevo.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Eliminar';
   @override
@@ -69069,6 +70084,20 @@ class _StringsEs extends _StringsEn {
   @override
   String get updates_checking => 'Comprobando...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Borrar historial';
   @override
   String get updates_history_clear_confirm_action => 'Borrar';
@@ -69081,6 +70110,8 @@ class _StringsEs extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Se borraron ${count} entradas';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Versiones de la app';
   @override
@@ -69108,6 +70139,12 @@ class _StringsEs extends _StringsEn {
   }) => '${first} y ${count} más';
   @override
   String get updates_notification_view_all => 'Ver actualizaciones';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Avisar de versiones de la app';
   @override
@@ -74774,6 +75811,117 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -74955,12 +76103,20 @@ class _StringsFr extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -75001,6 +76157,9 @@ class _StringsFr extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -77223,6 +78382,8 @@ class _StringsFr extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Le moteur intégré n\'est pas disponible sur cette plateforme. Les téléchargements utilisent qBittorrent externe.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Supprimer ${n} tâche(s) de téléchargement ?';
   @override
@@ -77232,6 +78393,36 @@ class _StringsFr extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} ignorée(s) (non prises en charge)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Effacer les terminés';
   @override
@@ -77735,6 +78926,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'Échec de la pause/reprise';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Tâches';
   @override
   String get download_test_connection => 'Tester la connexion';
@@ -77955,6 +79151,8 @@ class _StringsFr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -78002,8 +79200,17 @@ class _StringsFr extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -81061,6 +82268,18 @@ class _StringsFr extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Les paramètres de connexion et de serveur sont dans la catégorie Fushi Interconnect';
   @override
@@ -81535,6 +82754,14 @@ class _StringsFr extends _StringsEn {
   String get leaderboard_load_more => 'Charger plus';
   @override
   String get leaderboard_metric_chars => 'Caractères';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} lecteurs';
   @override
@@ -82019,6 +83246,11 @@ class _StringsFr extends _StringsEn {
   String get lyrics_mode_hint_title => 'Mode paroles';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -83733,7 +84965,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -84821,6 +86064,25 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -84830,6 +86092,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -84939,6 +86209,9 @@ class _StringsFr extends _StringsEn {
   String get popup_max_height => 'Hauteur max. de la fenêtre de recherche';
   @override
   String get popup_max_width => 'Largeur max du popup';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -87447,6 +88720,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -87464,10 +88739,17 @@ class _StringsFr extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -87514,6 +88796,12 @@ class _StringsFr extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -88145,6 +89433,9 @@ class _StringsFr extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'Suppression immédiate du disque. Rien dans votre bibliothèque n\'y fait référence : ce sont des données en cache, exportées ou re-téléchargeables.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'L\'audio référence les fichiers d\'origine et n\'occupe aucun espace de l\'application';
   @override
@@ -88593,7 +89884,9 @@ class _StringsFr extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Une URL iroh-relay par ligne. Laissez vide pour utiliser les relais publics d\'iroh.';
   @override
-  String get sync_pair_allow => 'Autoriser';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Vous vous appairez avec ${device}. Confirmez qu\'il s\'agit bien de l\'appareil attendu avant de continuer.';
@@ -88729,6 +90022,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'L\'autre appareil exécute une version plus ancienne qui ne peut pas s\'appairer en toute sécurité depuis ce réseau. Mettez-le à jour, puis réappairez.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Retirer';
   @override
@@ -89411,6 +90711,20 @@ class _StringsFr extends _StringsEn {
   @override
   String get updates_checking => 'Recherche en cours...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Effacer l\'historique';
   @override
   String get updates_history_clear_confirm_action => 'Effacer';
@@ -89423,6 +90737,8 @@ class _StringsFr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} entrées effacées';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Versions de l\'application';
   @override
@@ -89450,6 +90766,12 @@ class _StringsFr extends _StringsEn {
   }) => '${first} et ${count} autres';
   @override
   String get updates_notification_view_all => 'Voir les mises à jour';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release =>
       'Notifier des versions de l\'application';
@@ -95098,6 +96420,117 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -95279,12 +96712,20 @@ class _StringsId extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -95325,6 +96766,9 @@ class _StringsId extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -97497,6 +98941,8 @@ class _StringsId extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Mesin bawaan tidak tersedia di platform ini. Unduhan menggunakan qBittorrent eksternal.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Hapus ${n} tugas unduhan?';
   @override
@@ -97506,6 +98952,36 @@ class _StringsId extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} dilewati (tidak didukung)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Bersihkan yang selesai';
   @override
@@ -98003,6 +99479,11 @@ class _StringsId extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'Jeda/lanjutkan gagal';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Tugas';
   @override
   String get download_test_connection => 'Tes koneksi';
@@ -98219,6 +99700,8 @@ class _StringsId extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -98266,8 +99749,17 @@ class _StringsId extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -101281,6 +102773,18 @@ class _StringsId extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Pengaturan koneksi & server ada di kategori Fushi Interconnect';
   @override
@@ -101743,6 +103247,14 @@ class _StringsId extends _StringsEn {
   String get leaderboard_load_more => 'Muat lebih banyak';
   @override
   String get leaderboard_metric_chars => 'Karakter';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} pembaca';
   @override
@@ -102221,6 +103733,11 @@ class _StringsId extends _StringsEn {
   String get lyrics_mode_hint_title => 'Mode Lirik';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -103899,7 +105416,18 @@ class _StringsId extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -104966,6 +106494,25 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -104975,6 +106522,14 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -105081,6 +106636,9 @@ class _StringsId extends _StringsEn {
   String get popup_max_height => 'Tinggi maks popup';
   @override
   String get popup_max_width => 'Lebar maks popup';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -107556,6 +109114,8 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -107573,10 +109133,17 @@ class _StringsId extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -107623,6 +109190,12 @@ class _StringsId extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -108252,6 +109825,9 @@ class _StringsId extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'Akan langsung dihapus dari disk. Tidak ada di pustaka Anda yang merujuk ke sini — isinya data cache, hasil ekspor, atau yang bisa diunduh ulang.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'Audio merujuk ke berkas aslinya, tidak memakai penyimpanan aplikasi';
   @override
@@ -108691,7 +110267,9 @@ class _StringsId extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Satu URL iroh-relay per baris. Kosongkan untuk menggunakan relay publik iroh.';
   @override
-  String get sync_pair_allow => 'Izinkan';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Anda memasangkan dengan ${device}. Konfirmasi bahwa ini adalah perangkat yang Anda harapkan sebelum melanjutkan.';
@@ -108825,6 +110403,13 @@ class _StringsId extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'Perangkat lain menjalankan versi yang lebih lama dan tidak bisa berpasangan secara aman dari jaringan ini. Perbarui perangkat tersebut, lalu pasangkan lagi.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Hapus';
   @override
@@ -109497,6 +111082,20 @@ class _StringsId extends _StringsEn {
   @override
   String get updates_checking => 'Memeriksa...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Hapus riwayat';
   @override
   String get updates_history_clear_confirm_action => 'Hapus';
@@ -109508,6 +111107,8 @@ class _StringsId extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} entri dihapus';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Rilis aplikasi';
   @override
@@ -109535,6 +111136,12 @@ class _StringsId extends _StringsEn {
   }) => '${first} dan ${count} lainnya';
   @override
   String get updates_notification_view_all => 'Lihat pembaruan';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Beri tahu tentang rilis aplikasi';
   @override
@@ -115134,6 +116741,117 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -115315,12 +117033,20 @@ class _StringsIt extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -115361,6 +117087,9 @@ class _StringsIt extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -117557,6 +119286,8 @@ class _StringsIt extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Il motore integrato non è disponibile su questa piattaforma. I download usano qBittorrent esterno.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Eliminare ${n} attività di download?';
   @override
@@ -117566,6 +119297,36 @@ class _StringsIt extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} saltate (non supportate)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Cancella completati';
   @override
@@ -118064,6 +119825,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'Pausa/ripresa fallita';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Task';
   @override
   String get download_test_connection => 'Testa connessione';
@@ -118285,6 +120051,8 @@ class _StringsIt extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -118332,8 +120100,17 @@ class _StringsIt extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -121370,6 +123147,18 @@ class _StringsIt extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Le impostazioni di connessione e server sono nella categoria Fushi Interconnect';
   @override
@@ -121835,6 +123624,14 @@ class _StringsIt extends _StringsEn {
   String get leaderboard_load_more => 'Carica altro';
   @override
   String get leaderboard_metric_chars => 'Caratteri';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} lettori';
   @override
@@ -122314,6 +124111,11 @@ class _StringsIt extends _StringsEn {
   String get lyrics_mode_hint_title => 'Modalità testi';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -124019,7 +125821,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -125091,6 +126904,25 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -125100,6 +126932,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -125207,6 +127047,9 @@ class _StringsIt extends _StringsEn {
   String get popup_max_height => 'Altezza massima del popup';
   @override
   String get popup_max_width => 'Larghezza massima popup';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -127709,6 +129552,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -127726,10 +129571,17 @@ class _StringsIt extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -127776,6 +129628,12 @@ class _StringsIt extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -128406,6 +130264,9 @@ class _StringsIt extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'Verrà eliminato subito dal disco. Nulla nella tua libreria vi fa riferimento: sono dati in cache, esportati o riscaricabili.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'L\'audio fa riferimento ai file originali e non occupa spazio dell\'app';
   @override
@@ -128848,7 +130709,9 @@ class _StringsIt extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Un URL iroh-relay per riga. Lascia vuoto per usare i relay pubblici di iroh.';
   @override
-  String get sync_pair_allow => 'Consenti';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Stai accoppiando con ${device}. Conferma che sia il dispositivo che ti aspetti prima di continuare.';
@@ -128984,6 +130847,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'L\'altro dispositivo ha una versione più vecchia che non può accoppiarsi in modo sicuro da questa rete. Aggiornalo, poi riaccoppia.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Rimuovi';
   @override
@@ -129662,6 +131532,20 @@ class _StringsIt extends _StringsEn {
   @override
   String get updates_checking => 'Controllo in corso...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Cancella cronologia';
   @override
   String get updates_history_clear_confirm_action => 'Cancella';
@@ -129674,6 +131558,8 @@ class _StringsIt extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Cancellate ${count} voci';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Versioni dell\'app';
   @override
@@ -129701,6 +131587,12 @@ class _StringsIt extends _StringsEn {
   }) => '${first} e altri ${count}';
   @override
   String get updates_notification_view_all => 'Vedi aggiornamenti';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Notifica nuove versioni dell\'app';
   @override
@@ -135216,6 +137108,117 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -135397,12 +137400,20 @@ class _StringsJa extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -135443,6 +137454,9 @@ class _StringsJa extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -137520,6 +139534,8 @@ class _StringsJa extends _StringsEn {
   String get download_backend_unsupported_note =>
       '内蔵エンジンはこのプラットフォームでは利用できません。ダウンロードは外部のqBittorrentを使用します。';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'ダウンロードタスク ${n} 件を削除しますか？';
   @override
@@ -137529,6 +139545,36 @@ class _StringsJa extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} 件はサポート外のためスキップしました';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => '完了済みをクリア';
   @override
@@ -138012,6 +140058,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_task_toggle_failed => '一時停止/再開に失敗';
   @override
+  String get download_task_work_focus_clear => 'すべてのタスクを表示';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      '「${title}」のタスクのみ表示';
+  @override
   String get download_tasks_tab => 'タスク';
   @override
   String get download_test_connection => '接続テスト';
@@ -138213,6 +140264,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get feedback_compose_body_hint => '何が起きたか、期待した結果、再現手順';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => '連絡先（任意）';
   @override
   String get feedback_compose_contact_hint => 'メール・Telegram など。開発者だけが見られます';
@@ -138258,8 +140311,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'タイトルを入力してください。';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -141128,6 +143190,18 @@ class _StringsJa extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note => '接続とサーバーの設定は Fushi インターコネクト カテゴリにあります';
   @override
   String get interconnect_peer_list_empty =>
@@ -141556,6 +143630,14 @@ class _StringsJa extends _StringsEn {
   String get leaderboard_load_more => 'さらに読み込む';
   @override
   String get leaderboard_metric_chars => '文字数';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} 人の読者';
   @override
@@ -142017,6 +144099,11 @@ class _StringsJa extends _StringsEn {
   String get lyrics_mode_hint_title => '歌詞モード';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => '朗読されなかった本文を表示';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      '朗読で飛ばされた、または字幕と対応できなかった本文を、行の間に小さな灰色の文字で表示します';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -143621,7 +145708,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary => '読み上げ音声、ローカル GPT-SoVITS、カード音声の代替';
   @override
@@ -144640,6 +146738,25 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -144649,6 +146766,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -144753,6 +146878,9 @@ class _StringsJa extends _StringsEn {
   String get popup_max_height => 'ポップアップの最大高さ';
   @override
   String get popup_max_width => 'ポップアップの最大幅';
+  @override
+  String get popup_mine_still_queued =>
+      'カード作成に追加済みですが、まだ Anki への書き込みを確認できていないため上書きできません。';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -147155,6 +149283,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -147172,10 +149302,17 @@ class _StringsJa extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -147222,6 +149359,12 @@ class _StringsJa extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -147839,6 +149982,9 @@ class _StringsJa extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'ディスクからすぐに削除します。ライブラリのどの項目もこれを参照していません（キャッシュ・書き出し済みデータ・再取得できるデータです）。';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       '音声は元のファイルを参照するため、アプリの容量を使いません';
   @override
@@ -148248,7 +150394,9 @@ class _StringsJa extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       '1 行に iroh-relay の URL を 1 件。空欄の場合は iroh の公開リレーを使用します。';
   @override
-  String get sync_pair_allow => '許可';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       '${device}とペアリングしようとしています。続行する前に、これが意図したデバイスであることを確認してください。';
@@ -148372,6 +150520,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       '相手のデバイスは古いバージョンを実行しており、このネットワークから安全にペアリングできません。更新してから再度ペアリングしてください。';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => '削除';
   @override
@@ -149019,6 +151174,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get updates_checking => '確認中…';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => '履歴を消去';
   @override
   String get updates_history_clear_confirm_action => '消去';
@@ -149030,6 +151199,8 @@ class _StringsJa extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} 件を消去しました';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'アプリのリリース';
   @override
@@ -149057,6 +151228,12 @@ class _StringsJa extends _StringsEn {
   }) => '${first} ほか ${count} 件';
   @override
   String get updates_notification_view_all => 'アップデートを表示';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'アプリのリリースを通知';
   @override
@@ -154381,6 +156558,117 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -154562,12 +156850,20 @@ class _StringsKo extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -154608,6 +156904,9 @@ class _StringsKo extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -156685,6 +158984,8 @@ class _StringsKo extends _StringsEn {
   String get download_backend_unsupported_note =>
       '이 플랫폼에서는 내장 엔진을 사용할 수 없습니다. 외부 qBittorrent를 사용하여 다운로드합니다.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       '다운로드 작업 ${n}개를 삭제하시겠습니까?';
   @override
@@ -156694,6 +158995,36 @@ class _StringsKo extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n}개 건너뜀(지원되지 않음)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => '완료된 항목 지우기';
   @override
@@ -157175,6 +159506,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_task_toggle_failed => '일시정지/재개 실패';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => '작업';
   @override
   String get download_test_connection => '연결 테스트';
@@ -157379,6 +159715,8 @@ class _StringsKo extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -157426,8 +159764,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -160306,6 +162653,18 @@ class _StringsKo extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note => '연결 및 서버 설정은 Fushi 인터커넥트 카테고리에 있습니다';
   @override
   String get interconnect_peer_list_empty =>
@@ -160733,6 +163092,14 @@ class _StringsKo extends _StringsEn {
   String get leaderboard_load_more => '더 보기';
   @override
   String get leaderboard_metric_chars => '글자 수';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '독자 ${n}명';
   @override
@@ -161196,6 +163563,11 @@ class _StringsKo extends _StringsEn {
   String get lyrics_mode_hint_title => '가사 모드';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -162810,7 +165182,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -163833,6 +166216,25 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -163842,6 +166244,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -163946,6 +166356,9 @@ class _StringsKo extends _StringsEn {
   String get popup_max_height => '팝업 최대 높이';
   @override
   String get popup_max_width => '팝업 최대 너비';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -166349,6 +168762,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -166366,10 +168781,17 @@ class _StringsKo extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -166416,6 +168838,12 @@ class _StringsKo extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -167033,6 +169461,9 @@ class _StringsKo extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       '디스크에서 즉시 삭제합니다. 라이브러리의 어떤 항목도 이를 참조하지 않습니다 — 캐시, 내보낸 파일, 또는 다시 받을 수 있는 데이터입니다.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       '오디오는 원본 파일을 참조하므로 앱 저장 공간을 쓰지 않아요';
   @override
@@ -167443,7 +169874,9 @@ class _StringsKo extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       '한 줄에 iroh-relay URL 하나씩. 비워 두면 iroh의 공용 릴레이를 사용합니다.';
   @override
-  String get sync_pair_allow => '허용';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       '${device}와 페어링하려고 합니다. 계속하기 전에 예상하는 기기가 맞는지 확인하세요.';
@@ -167567,6 +170000,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       '상대 기기가 이 네트워크에서 안전하게 페어링할 수 없는 이전 버전을 실행 중입니다. 업데이트한 후 다시 페어링하세요.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => '제거';
   @override
@@ -168215,6 +170655,20 @@ class _StringsKo extends _StringsEn {
   @override
   String get updates_checking => '확인 중...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => '기록 지우기';
   @override
   String get updates_history_clear_confirm_action => '지우기';
@@ -168226,6 +170680,8 @@ class _StringsKo extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '항목 ${count}개를 지웠습니다';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => '앱 릴리스';
   @override
@@ -168253,6 +170709,12 @@ class _StringsKo extends _StringsEn {
   }) => '${first} 외 ${count}개';
   @override
   String get updates_notification_view_all => '업데이트 보기';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => '앱 릴리스 알림';
   @override
@@ -173697,6 +176159,117 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -173878,12 +176451,20 @@ class _StringsNl extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -173924,6 +176505,9 @@ class _StringsNl extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -176116,6 +178700,8 @@ class _StringsNl extends _StringsEn {
   String get download_backend_unsupported_note =>
       'De ingebouwde engine is niet beschikbaar op dit platform. Downloads gebruiken externe qBittorrent.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       '${n} downloadtaak/-taken verwijderen?';
   @override
@@ -176125,6 +178711,36 @@ class _StringsNl extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} overgeslagen (niet ondersteund)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Voltooide wissen';
   @override
@@ -176624,6 +179240,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'Pauzeren/hervatten mislukt';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Taken';
   @override
   String get download_test_connection => 'Verbinding testen';
@@ -176842,6 +179463,8 @@ class _StringsNl extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -176889,8 +179512,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -179912,6 +182544,18 @@ class _StringsNl extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Verbindings- en serverinstellingen staan in de categorie Fushi Interconnect';
   @override
@@ -180380,6 +183024,14 @@ class _StringsNl extends _StringsEn {
   String get leaderboard_load_more => 'Meer laden';
   @override
   String get leaderboard_metric_chars => 'Tekens';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} lezers';
   @override
@@ -180857,6 +183509,11 @@ class _StringsNl extends _StringsEn {
   String get lyrics_mode_hint_title => 'Songtekstmodus';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -182545,7 +185202,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -183622,6 +186290,25 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -183631,6 +186318,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -183738,6 +186433,9 @@ class _StringsNl extends _StringsEn {
   String get popup_max_height => 'Maximale hoogte pop-up';
   @override
   String get popup_max_width => 'Maximale popup-breedte';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -186228,6 +188926,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -186245,10 +188945,17 @@ class _StringsNl extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -186295,6 +189002,12 @@ class _StringsNl extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -186925,6 +189638,9 @@ class _StringsNl extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'Wordt meteen van de schijf verwijderd. Niets in je bibliotheek verwijst ernaar: het zijn cache-, geëxporteerde of opnieuw te downloaden gegevens.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'Audio verwijst naar de originele bestanden en gebruikt geen app-opslag';
   @override
@@ -187371,7 +190087,9 @@ class _StringsNl extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Eén iroh-relay-URL per regel. Laat leeg om de openbare relays van iroh te gebruiken.';
   @override
-  String get sync_pair_allow => 'Toestaan';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Je koppelt met ${device}. Bevestig dat dit het verwachte apparaat is voordat je verdergaat.';
@@ -187506,6 +190224,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'Het andere apparaat draait een oudere versie die niet veilig kan koppelen vanuit dit netwerk. Werk het bij en koppel opnieuw.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Verwijderen';
   @override
@@ -188183,6 +190908,20 @@ class _StringsNl extends _StringsEn {
   @override
   String get updates_checking => 'Controleren...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Geschiedenis wissen';
   @override
   String get updates_history_clear_confirm_action => 'Wissen';
@@ -188195,6 +190934,8 @@ class _StringsNl extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} items gewist';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'App-releases';
   @override
@@ -188222,6 +190963,12 @@ class _StringsNl extends _StringsEn {
   }) => '${first} en nog ${count}';
   @override
   String get updates_notification_view_all => 'Updates bekijken';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Melden bij app-releases';
   @override
@@ -193840,6 +196587,117 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -194021,12 +196879,20 @@ class _StringsPtBr extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -194067,6 +196933,9 @@ class _StringsPtBr extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -196263,6 +199132,8 @@ class _StringsPtBr extends _StringsEn {
   String get download_backend_unsupported_note =>
       'O motor integrado não está disponível nesta plataforma. Downloads usam qBittorrent externo.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Excluir ${n} tarefa(s) de download?';
   @override
@@ -196273,6 +199144,36 @@ class _StringsPtBr extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} ignorada(s) (não compatíveis)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Limpar concluídos';
   @override
@@ -196771,6 +199672,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'Pausar/retomar falhou';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Tarefas';
   @override
   String get download_test_connection => 'Testar conexão';
@@ -196993,6 +199899,8 @@ class _StringsPtBr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -197040,8 +199948,17 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -200082,6 +202999,18 @@ class _StringsPtBr extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'As configurações de conexão e servidor estão na categoria Fushi Interconnect';
   @override
@@ -200549,6 +203478,14 @@ class _StringsPtBr extends _StringsEn {
   String get leaderboard_load_more => 'Carregar mais';
   @override
   String get leaderboard_metric_chars => 'Caracteres';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} leitores';
   @override
@@ -201031,6 +203968,11 @@ class _StringsPtBr extends _StringsEn {
   String get lyrics_mode_hint_title => 'Modo de letras';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -202726,7 +205668,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -203802,6 +206755,25 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -203811,6 +206783,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -203919,6 +206899,9 @@ class _StringsPtBr extends _StringsEn {
   String get popup_max_height => 'Altura máxima do pop-up';
   @override
   String get popup_max_width => 'Largura máxima do popup';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -206410,6 +209393,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -206427,10 +209412,17 @@ class _StringsPtBr extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -206477,6 +209469,12 @@ class _StringsPtBr extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -207107,6 +210105,9 @@ class _StringsPtBr extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'Será excluído do disco imediatamente. Nada na sua biblioteca faz referência a isso — são dados em cache, exportados ou que podem ser baixados de novo.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'O áudio referencia os arquivos originais e não ocupa espaço do app';
   @override
@@ -207549,7 +210550,9 @@ class _StringsPtBr extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Uma URL de iroh-relay por linha. Deixe vazio para usar os relays públicos do iroh.';
   @override
-  String get sync_pair_allow => 'Permitir';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Você está pareando com ${device}. Confirme que este é o dispositivo esperado antes de continuar.';
@@ -207683,6 +210686,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'O outro dispositivo roda uma versão antiga que não pode parear com segurança desta rede. Atualize-o e pareie novamente.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Remover';
   @override
@@ -208362,6 +211372,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get updates_checking => 'Verificando...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Limpar histórico';
   @override
   String get updates_history_clear_confirm_action => 'Limpar';
@@ -208374,6 +211398,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} entradas removidas';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Versões do app';
   @override
@@ -208401,6 +211427,12 @@ class _StringsPtBr extends _StringsEn {
   }) => '${first} e mais ${count}';
   @override
   String get updates_notification_view_all => 'Ver atualizações';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Notificar sobre versões do app';
   @override
@@ -214029,6 +217061,117 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -214210,12 +217353,20 @@ class _StringsRu extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -214256,6 +217407,9 @@ class _StringsRu extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -216442,6 +219596,8 @@ class _StringsRu extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Встроенный движок недоступен на этой платформе. Загрузки используют внешний qBittorrent.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Удалить задач загрузки: ${n}?';
   @override
@@ -216451,6 +219607,36 @@ class _StringsRu extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       'Пропущено (не поддерживается): ${n}';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Очистить завершённые';
   @override
@@ -216949,6 +220135,11 @@ class _StringsRu extends _StringsEn {
   String get download_task_toggle_failed =>
       'Не удалось приостановить/возобновить';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Задачи';
   @override
   String get download_test_connection => 'Проверить подключение';
@@ -217166,6 +220357,8 @@ class _StringsRu extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -217213,8 +220406,17 @@ class _StringsRu extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -220242,6 +223444,18 @@ class _StringsRu extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Настройки подключения и сервера находятся в разделе «Fushi Interconnect»';
   @override
@@ -220708,6 +223922,14 @@ class _StringsRu extends _StringsEn {
   String get leaderboard_load_more => 'Загрузить ещё';
   @override
   String get leaderboard_metric_chars => 'Символы';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => 'Читателей: ${n}';
   @override
@@ -221189,6 +224411,11 @@ class _StringsRu extends _StringsEn {
   String get lyrics_mode_hint_title => 'Режим текстов песен';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -222880,7 +226107,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -223963,6 +227201,25 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -223972,6 +227229,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -224081,6 +227346,9 @@ class _StringsRu extends _StringsEn {
   String get popup_max_height => 'Макс. высота окна поиска';
   @override
   String get popup_max_width => 'Макс. ширина всплывающего окна';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -226570,6 +229838,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -226587,10 +229857,17 @@ class _StringsRu extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -226637,6 +229914,12 @@ class _StringsRu extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -227266,6 +230549,9 @@ class _StringsRu extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'Будет сразу удалено с диска. Ничто в вашей библиотеке на это не ссылается — это кеш, экспортированные или заново загружаемые данные.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'Аудио ссылается на исходные файлы и не занимает место приложения';
   @override
@@ -227710,7 +230996,9 @@ class _StringsRu extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'По одному URL iroh-relay в строке. Оставьте пустым, чтобы использовать публичные ретрансляторы iroh.';
   @override
-  String get sync_pair_allow => 'Разрешить';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Вы сопрягаетесь с ${device}. Убедитесь, что это ожидаемое устройство, прежде чем продолжить.';
@@ -227844,6 +231132,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'На другом устройстве установлена устаревшая версия, которая не может безопасно выполнить сопряжение из этой сети. Обновите его, затем повторите сопряжение.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Удалить';
   @override
@@ -228517,6 +231812,20 @@ class _StringsRu extends _StringsEn {
   @override
   String get updates_checking => 'Проверка...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Очистить историю';
   @override
   String get updates_history_clear_confirm_action => 'Очистить';
@@ -228529,6 +231838,8 @@ class _StringsRu extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Очищено записей: ${count}';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Выпуски приложения';
   @override
@@ -228556,6 +231867,12 @@ class _StringsRu extends _StringsEn {
   }) => '${first} и ещё ${count}';
   @override
   String get updates_notification_view_all => 'Посмотреть обновления';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Уведомлять о выпусках приложения';
   @override
@@ -234136,6 +237453,117 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -234317,12 +237745,20 @@ class _StringsTh extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -234363,6 +237799,9 @@ class _StringsTh extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -236519,6 +239958,8 @@ class _StringsTh extends _StringsEn {
   String get download_backend_unsupported_note =>
       'เอนจินในตัวไม่พร้อมใช้งานบนแพลตฟอร์มนี้ การดาวน์โหลดใช้ qBittorrent ภายนอก';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'ลบงานดาวน์โหลด ${n} งานหรือไม่?';
   @override
@@ -236528,6 +239969,36 @@ class _StringsTh extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       'ข้าม ${n} งาน (ไม่รองรับ)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'ล้างที่เสร็จแล้ว';
   @override
@@ -237021,6 +240492,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'หยุดชั่วคราว/เล่นต่อล้มเหลว';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'งาน';
   @override
   String get download_test_connection => 'ทดสอบการเชื่อมต่อ';
@@ -237234,6 +240710,8 @@ class _StringsTh extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -237281,8 +240759,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -240256,6 +243743,18 @@ class _StringsTh extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'การตั้งค่าการเชื่อมต่อและเซิร์ฟเวอร์อยู่ในหมวด Fushi Interconnect';
   @override
@@ -240709,6 +244208,14 @@ class _StringsTh extends _StringsEn {
   String get leaderboard_load_more => 'โหลดเพิ่ม';
   @override
   String get leaderboard_metric_chars => 'ตัวอักษร';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => 'ผู้อ่าน ${n} คน';
   @override
@@ -241183,6 +244690,11 @@ class _StringsTh extends _StringsEn {
   String get lyrics_mode_hint_title => 'โหมดเนื้อเพลง';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -242846,7 +246358,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -243904,6 +247427,25 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -243913,6 +247455,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -244019,6 +247569,9 @@ class _StringsTh extends _StringsEn {
   String get popup_max_height => 'ความสูงสูงสุดของหน้าต่างค้นคำ';
   @override
   String get popup_max_width => 'ความกว้างสูงสุดของป๊อปอัป';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -246481,6 +250034,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -246498,10 +250053,17 @@ class _StringsTh extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -246548,6 +250110,12 @@ class _StringsTh extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -247173,6 +250741,9 @@ class _StringsTh extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'จะถูกลบออกจากดิสก์ทันที ไม่มีรายการใดในคลังอ้างอิงถึงไฟล์นี้ — เป็นข้อมูลแคช ข้อมูลที่ส่งออก หรือข้อมูลที่ดาวน์โหลดใหม่ได้';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'เสียงอ้างอิงไฟล์ต้นฉบับ ไม่ใช้พื้นที่ของแอป';
   @override
@@ -247615,7 +251186,9 @@ class _StringsTh extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'URL ของ iroh-relay หนึ่งรายการต่อบรรทัด เว้นว่างไว้เพื่อใช้รีเลย์สาธารณะของ iroh';
   @override
-  String get sync_pair_allow => 'อนุญาต';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'คุณกำลังจับคู่กับ ${device} ยืนยันว่าเป็นอุปกรณ์ที่คุณต้องการก่อนดำเนินการต่อ';
@@ -247747,6 +251320,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'อุปกรณ์อีกเครื่องใช้เวอร์ชันเก่าที่ไม่สามารถจับคู่อย่างปลอดภัยจากเครือข่ายนี้ได้ อัปเดตแล้วจับคู่อีกครั้ง';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'ลบ';
   @override
@@ -248412,6 +251992,20 @@ class _StringsTh extends _StringsEn {
   @override
   String get updates_checking => 'กำลังตรวจสอบ...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'ล้างประวัติ';
   @override
   String get updates_history_clear_confirm_action => 'ล้าง';
@@ -248423,6 +252017,8 @@ class _StringsTh extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'ล้าง ${count} รายการแล้ว';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'รุ่นของแอป';
   @override
@@ -248450,6 +252046,12 @@ class _StringsTh extends _StringsEn {
   }) => '${first} และอีก ${count} รายการ';
   @override
   String get updates_notification_view_all => 'ดูอัปเดต';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'แจ้งเตือนรุ่นของแอป';
   @override
@@ -253984,6 +257586,117 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -254165,12 +257878,20 @@ class _StringsTr extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -254211,6 +257932,9 @@ class _StringsTr extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -256392,6 +260116,8 @@ class _StringsTr extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Yerleşik motor bu platformda kullanılamıyor. İndirmeler harici qBittorrent kullanıyor.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       '${n} indirme görevi silinsin mi?';
   @override
@@ -256401,6 +260127,36 @@ class _StringsTr extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       '${n} atlandı (desteklenmiyor)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Tamamlananları temizle';
   @override
@@ -256898,6 +260654,11 @@ class _StringsTr extends _StringsEn {
   String get download_task_toggle_failed =>
       'Duraklatma/devam ettirme başarısız';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Görevler';
   @override
   String get download_test_connection => 'Bağlantıyı test et';
@@ -257118,6 +260879,8 @@ class _StringsTr extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -257165,8 +260928,17 @@ class _StringsTr extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -260183,6 +263955,18 @@ class _StringsTr extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Bağlantı ve sunucu ayarları Fushi Interconnect kategorisindedir';
   @override
@@ -260645,6 +264429,14 @@ class _StringsTr extends _StringsEn {
   String get leaderboard_load_more => 'Daha fazla yükle';
   @override
   String get leaderboard_metric_chars => 'Karakter';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} okur';
   @override
@@ -261120,6 +264912,11 @@ class _StringsTr extends _StringsEn {
   String get lyrics_mode_hint_title => 'Şarkı Sözü Modu';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -262799,7 +266596,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -263869,6 +267677,25 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -263878,6 +267705,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -263983,6 +267818,9 @@ class _StringsTr extends _StringsEn {
   String get popup_max_height => 'Açılır pencere maksimum yüksekliği';
   @override
   String get popup_max_width => 'Açılır pencere maks. genişlik';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -266457,6 +270295,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -266474,10 +270314,17 @@ class _StringsTr extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -266524,6 +270371,12 @@ class _StringsTr extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -267152,6 +271005,9 @@ class _StringsTr extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'Diskten hemen silinir. Kitaplığınızdaki hiçbir şey buna başvurmuyor — bunlar önbellek, dışa aktarılmış veya yeniden indirilebilir verilerdir.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'Ses özgün dosyaları kullanır, uygulama depolamasında yer kaplamaz';
   @override
@@ -267597,7 +271453,9 @@ class _StringsTr extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Satır başına bir iroh-relay URL\'si. iroh\'un genel aktarıcılarını kullanmak için boş bırakın.';
   @override
-  String get sync_pair_allow => 'İzin ver';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       '${device} ile eşleşiyorsunuz. Devam etmeden önce bunun beklediğiniz cihaz olduğunu onaylayın.';
@@ -267731,6 +271589,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'Diğer cihaz, bu ağdan güvenli eşleştirme yapamayan eski bir sürüm çalıştırıyor. Güncelleyin, ardından tekrar eşleştirin.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Kaldır';
   @override
@@ -268403,6 +272268,20 @@ class _StringsTr extends _StringsEn {
   @override
   String get updates_checking => 'Kontrol ediliyor...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Geçmişi temizle';
   @override
   String get updates_history_clear_confirm_action => 'Temizle';
@@ -268415,6 +272294,8 @@ class _StringsTr extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       '${count} girdi temizlendi';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Uygulama sürümleri';
   @override
@@ -268442,6 +272323,12 @@ class _StringsTr extends _StringsEn {
   }) => '${first} ve ${count} tane daha';
   @override
   String get updates_notification_view_all => 'Güncellemeleri görüntüle';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => 'Uygulama sürümlerini bildir';
   @override
@@ -274004,6 +277891,117 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -274185,12 +278183,20 @@ class _StringsVi extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -274231,6 +278237,9 @@ class _StringsVi extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -276406,6 +280415,8 @@ class _StringsVi extends _StringsEn {
   String get download_backend_unsupported_note =>
       'Engine tích hợp không khả dụng trên nền tảng này. Tải xuống sử dụng qBittorrent bên ngoài.';
   @override
+  String get download_batch_clear => 'Remove from list';
+  @override
   String download_batch_delete_confirm({required Object n}) =>
       'Xóa ${n} tác vụ tải xuống?';
   @override
@@ -276415,6 +280426,36 @@ class _StringsVi extends _StringsEn {
   @override
   String download_batch_unsupported({required Object n}) =>
       'Bỏ qua ${n} (không được hỗ trợ)';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      'The matching videos will also be removed from your library.';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '${n} of them are seeding; deleting their files also stops seeding.';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '${n} of them cannot be cleared from here and stay as they are.';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      'Cleared ${n}';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      'Deleted files for ${n}';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} could not delete files, removed from list only';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} not processed';
   @override
   String get download_clear_finished => 'Xóa đã hoàn tất';
   @override
@@ -276912,6 +280953,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_task_toggle_failed => 'Tạm dừng/tiếp tục thất bại';
   @override
+  String get download_task_work_focus_clear => 'Show all tasks';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      'Tasks for ${title}';
+  @override
   String get download_tasks_tab => 'Tác vụ';
   @override
   String get download_test_connection => 'Kiểm tra kết nối';
@@ -277129,6 +281175,8 @@ class _StringsVi extends _StringsEn {
   String get feedback_compose_body_hint =>
       'What happened, what you expected, and how to reproduce it';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => 'Contact (optional)';
   @override
   String get feedback_compose_contact_hint =>
@@ -277176,8 +281224,17 @@ class _StringsVi extends _StringsEn {
   @override
   String get feedback_compose_title_missing => 'Please fill in a title.';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -280181,6 +284238,18 @@ class _StringsVi extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle =>
+      'Sign in with a paired device\'s account';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+  @override
+  String get interconnect_leaderboard_link_host_toggle =>
+      'Let paired devices sign in with my account';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
+  @override
   String get interconnect_moved_note =>
       'Cài đặt kết nối & máy chủ nằm trong danh mục Fushi Interconnect';
   @override
@@ -280639,6 +284708,14 @@ class _StringsVi extends _StringsEn {
   String get leaderboard_load_more => 'Tải thêm';
   @override
   String get leaderboard_metric_chars => 'Ký tự';
+  @override
+  String leaderboard_paired_login_done({
+    required Object name,
+    required Object device,
+  }) => 'Signed in as ${name} with the account from ${device}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      'Signed in as ${name} with a paired device\'s account';
   @override
   String leaderboard_readers({required Object n}) => '${n} người đọc';
   @override
@@ -281116,6 +285193,11 @@ class _StringsVi extends _StringsEn {
   String get lyrics_mode_hint_title => 'Chế độ lời bài hát';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -282786,7 +286868,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => 'Engine';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary =>
       'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
@@ -283847,6 +287940,25 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -283856,6 +287968,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -283961,6 +288081,9 @@ class _StringsVi extends _StringsEn {
   String get popup_max_height => 'Chiều cao tối đa cửa sổ tra';
   @override
   String get popup_max_width => 'Chiều rộng tối đa popup';
+  @override
+  String get popup_mine_still_queued =>
+      'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -286429,6 +290552,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -286446,10 +290571,17 @@ class _StringsVi extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -286496,6 +290628,12 @@ class _StringsVi extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -287124,6 +291262,9 @@ class _StringsVi extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       'Sẽ bị xóa khỏi ổ đĩa ngay lập tức. Không có mục nào trong thư viện tham chiếu tới nó — đây là dữ liệu bộ nhớ đệm, đã xuất hoặc có thể tải lại.';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint =>
       'Âm thanh tham chiếu tệp gốc, không chiếm dung lượng của ứng dụng';
   @override
@@ -287566,7 +291707,9 @@ class _StringsVi extends _StringsEn {
   String get sync_p2p_relay_urls_hint =>
       'Mỗi dòng một URL iroh-relay. Để trống để dùng relay công khai của iroh.';
   @override
-  String get sync_pair_allow => 'Cho phép';
+  String get sync_pair_allow_interconnect_only => 'Interconnect only';
+  @override
+  String get sync_pair_allow_owner_device => 'Allow · This is my device';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       'Bạn đang ghép nối với ${device}. Xác nhận đây là thiết bị bạn mong đợi trước khi tiếp tục.';
@@ -287699,6 +291842,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       'Thiết bị kia chạy phiên bản cũ không thể ghép nối an toàn từ mạng này. Cập nhật nó, rồi ghép nối lại.';
+  @override
+  String get sync_paired_peer_owner_badge => 'My device';
+  @override
+  String get sync_paired_peer_owner_mark =>
+      'Mark as my device (can sign in with my Fushi account)';
+  @override
+  String get sync_paired_peer_owner_unmark => 'Unmark as my device';
   @override
   String get sync_paired_peer_remove => 'Xóa';
   @override
@@ -288366,6 +292516,20 @@ class _StringsVi extends _StringsEn {
   @override
   String get updates_checking => 'Đang kiểm tra...';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => 'Xóa lịch sử';
   @override
   String get updates_history_clear_confirm_action => 'Xóa';
@@ -288377,6 +292541,8 @@ class _StringsVi extends _StringsEn {
   @override
   String updates_history_cleared({required Object count}) =>
       'Đã xóa ${count} mục';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => 'Bản phát hành ứng dụng';
   @override
@@ -288404,6 +292570,12 @@ class _StringsVi extends _StringsEn {
   }) => '${first} và ${count} mục khác';
   @override
   String get updates_notification_view_all => 'Xem cập nhật';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release =>
       'Thông báo về bản phát hành ứng dụng';
@@ -293741,6 +297913,105 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => '导入有声书';
   @override
+  String get audiobook_tts_irodori_local_add => '在本机一键部署 Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      '下载官方 Irodori-TTS 服务并在本机运行，无需命令行';
+  @override
+  String get audiobook_tts_irodori_local_backend => '计算后端';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple => 'Apple 芯片（Metal）';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA 显卡（CUDA 12.8）';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm => 'AMD 显卡（ROCm，仅 Linux）';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint => '新建后选一个服务上的声音并试听';
+  @override
+  String get audiobook_tts_irodori_local_delete => '删除本机 Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      '这会停止服务并删除 ${path}，包括你上传的声音。';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      '需要约 6–12 GB 空闲空间。Python、依赖、模型与你上传的声音都在同一个文件夹里，删除时一起删掉。';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      '还没有本机服务？在 Fushi 里一键部署 Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Python 环境安装失败，请查看安装日志后重试。';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      '不支持这台电脑（需要 64 位 Windows、Apple 芯片的 Mac 或 64 位 Linux）';
+  @override
+  String get audiobook_tts_irodori_local_install_log => '安装日志';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      '安装官方 Irodori-TTS 服务，自带独立的 Python 与 PyTorch（2–6 GB）和 v4.1 模型（约 3.5 GB），全部放在一个文件夹里。上传一段参考音频就能用那个声音朗读，也可以用文字描述一个声音。朗读时自动启动，退出 Fushi 时自动停止。';
+  @override
+  String get audiobook_tts_irodori_local_model => '模型';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF（快数倍，适合 CPU）';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      '所选模型还没下载：点「下载并安装」只补下模型，环境不会重装。';
+  @override
+  String get audiobook_tts_irodori_local_model_small => 'v4.1 Small（音质最好）';
+  @override
+  String get audiobook_tts_irodori_local_package => 'Irodori-TTS 环境与模型';
+  @override
+  String get audiobook_tts_irodori_local_port => '端口';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      '请用 1024–65535 之间的端口，且不能是 7870、7871、9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com（国内镜像）';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      '正在安装 PyTorch 等依赖（数 GB，可能要一段时间）…';
+  @override
+  String get audiobook_tts_irodori_local_step_python => '正在安装 Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => '本机 Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => '上传参考音频';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      '已上传声音 ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists => '已有同名声音';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed => '上传失败，请检查文件并确认服务在运行。';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      '一段干净的单人音频（WAV、FLAC、MP3 等），几秒到两分钟';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => '从服务上删除声音 ${id}？它的音频文件会被删掉。';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      '删不掉这个声音（只能删除上传的声音）';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => '声音 ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint => '只能用英文字母、数字、- 和 _';
+  @override
+  String get audiobook_tts_irodori_local_voice_name => 'Irodori-TTS（本机）';
+  @override
+  String get audiobook_tts_irodori_local_voices => '服务上的声音';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      '还没有上传的声音。内置声音 none 不用参考音频也能朗读。';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running => '启动服务后可管理声音';
+  @override
   String get audiobook_tts_key_required_hint => '需要填写自己的 API 密钥';
   @override
   String get audiobook_tts_lang_all_ja => '全部按日语读';
@@ -293896,12 +298167,20 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_tts_param_bearer_hint => '仅当服务架在需要认证的网关后面时填写';
   @override
+  String get audiobook_tts_param_caption => '声音描述';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      '可选。描述音色与语气，例如「落ち着いた低めの女性の声」。声音选 none 时就是凭描述设计一个新声音。';
+  @override
   String get audiobook_tts_param_endpoint => '服务地址';
   @override
   String get audiobook_tts_param_invalid => '填写的值无效';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori 工作台端口 7870，GPT-SoVITS 工作台 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      '官方 Irodori-TTS 服务默认端口 8088';
   @override
   String get audiobook_tts_param_prompt_lang => '参考音频语言';
   @override
@@ -293941,6 +298220,8 @@ class _StringsZhCn extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori 工作台';
+  @override
+  String get audiobook_tts_provider_irodori_server => 'Irodori-TTS（官方服务）';
   @override
   String get audiobook_tts_provider_ms_translator => '微软翻译';
   @override
@@ -295939,6 +300220,8 @@ class _StringsZhCn extends _StringsEn {
   String get download_backend_unsupported_note =>
       '本平台无内置引擎，下载使用外接 qBittorrent。';
   @override
+  String get download_batch_clear => '从列表移除';
+  @override
   String download_batch_delete_confirm({required Object n}) => '删除 ${n} 个下载任务？';
   @override
   String download_batch_done({required Object n}) => '已处理 ${n} 项';
@@ -295946,6 +300229,36 @@ class _StringsZhCn extends _StringsEn {
   String download_batch_failed({required Object n}) => '${n} 项失败';
   @override
   String download_batch_unsupported({required Object n}) => '${n} 项不支持此操作';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      '清除 ${n} 个已完成的下载任务？不勾选下方选项时只移出列表，已下载的文件保留。';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '其中 ${n} 个无法在这里删除文件，勾选后也只会移出列表。';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '其中 ${n} 个只能连同文件一起删除，不勾选时保持不动。';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      '对应的视频也会从媒体库中移除。';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '其中 ${n} 个正在做种，删除文件会同时停止做种。';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '其中 ${n} 个不支持在这里清除，将保持不动。';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      '已清除 ${n} 项';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      '已删除 ${n} 项的文件';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} 项无法删除文件，仅清除记录';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} 项未处理';
   @override
   String get download_clear_finished => '清除已完成';
   @override
@@ -296406,6 +300719,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get download_task_toggle_failed => '暂停/恢复操作失败';
   @override
+  String get download_task_work_focus_clear => '显示全部任务';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      '仅显示「${title}」的任务';
+  @override
   String get download_tasks_tab => '任务';
   @override
   String get download_test_connection => '测试连接';
@@ -296601,6 +300919,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get feedback_compose_body_hint => '发生了什么、你期望的结果、如何复现';
   @override
+  String get feedback_compose_cancel_video_compression => '取消压缩';
+  @override
   String get feedback_compose_contact_field => '联系方式（可选）';
   @override
   String get feedback_compose_contact_hint => '邮箱 / Telegram / QQ 等，仅开发者可见';
@@ -296644,8 +300964,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get feedback_compose_title_missing => '请填写标题。';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 720p。';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      '更清晰但文件更大；超过约 3 分钟的视频会改按 720p 压缩，以免超过 ${max}。';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      '视频较长，1080p 会超过 ${max}，本次改按 720p 压缩。';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) => '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 ${resolution}。';
   @override
   String get feedback_detail_add_shot => '追加截图';
   @override
@@ -299366,6 +303694,16 @@ class _StringsZhCn extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       '主机已是最新（${version}）';
   @override
+  String get interconnect_leaderboard_follow_login_toggle => '跟随已配对设备自动登录';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      '本机没有 Fushi 账户时，自动使用已登录的已配对设备的账户登录（仅当对方把本机标记为「我的设备」时生效）。只发送本机新生成的公钥；主动退出后不会再自动登录。';
+  @override
+  String get interconnect_leaderboard_link_host_toggle => '允许已配对设备自动登录我的账户';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      '仅对标记为「我的设备」的已配对设备生效：它们没有 Fushi 账户时会自动使用本机的账户登录（需开启 HTTPS）。本机私钥不会离开本机。';
+  @override
   String get interconnect_moved_note => '互联连接与本机服务器设置在「Fushi 互联」分类';
   @override
   String get interconnect_peer_list_empty =>
@@ -299774,6 +304112,14 @@ class _StringsZhCn extends _StringsEn {
   String get leaderboard_load_more => '加载更多';
   @override
   String get leaderboard_metric_chars => '字数';
+  @override
+  String leaderboard_paired_login_done({
+    required Object device,
+    required Object name,
+  }) => '已使用 ${device} 的账户登录：${name}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      '已使用已配对设备的账户登录：${name}';
   @override
   String leaderboard_readers({required Object n}) => '${n} 人';
   @override
@@ -300216,6 +304562,10 @@ class _StringsZhCn extends _StringsEn {
   String get lyrics_mode_hint_title => '歌词模式';
   @override
   String get lyrics_sentence_replay => '重播当前句';
+  @override
+  String get lyrics_skipped_text_show => '显示未朗读的原文';
+  @override
+  String get lyrics_skipped_text_show_hint => '朗读者跳过、或字幕没能对上的原文，以灰色小字显示在两句之间';
   @override
   String get lyrics_sweep => '逐字跟读渐变';
   @override
@@ -301764,7 +306114,15 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => '制卡发音兜底';
   @override
-  String get models_tts_engine => '引擎';
+  String get models_tts_fallback_off => '不使用 TTS 兜底';
+  @override
+  String get models_tts_fallback_online_notice => '词条文本会发送给该在线服务';
+  @override
+  String get models_tts_fallback_voice => '兜底声音';
+  @override
+  String get models_tts_fallback_voice_hint => '找不到单词音频时用哪个声音合成';
+  @override
+  String get models_tts_fallback_voice_missing => '所选声音已被删除';
   @override
   String get models_tts_summary => '朗读声音、本机 GPT-SoVITS 与制卡发音兜底';
   @override
@@ -302725,6 +307083,24 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => '图片';
   @override
+  String get popup_advanced_mining_mosaic_clear => '清除';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      '已打码 ${count} 处';
+  @override
+  String get popup_advanced_mining_mosaic_edit => '打码';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      '打码后改为输出静态截图（不再是动图 / 视频片段）';
+  @override
+  String get popup_advanced_mining_mosaic_hint => '在图上拖动，框出要打码的区域';
+  @override
+  String get popup_advanced_mining_mosaic_none => '未打码';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => '打码';
+  @override
+  String get popup_advanced_mining_mosaic_undo => '撤销';
+  @override
   String get popup_advanced_mining_reset => '恢复为一键制卡的默认';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -302734,6 +307110,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       '快捷键 [ ] 增减前文 · Shift+[ ] 增减后文';
+  @override
+  String get popup_advanced_mining_still_screenshot => '截图';
+  @override
+  String get popup_advanced_mining_still_stale => '这是打开对话框时的画面，不是该台词当时的画面';
+  @override
+  String get popup_advanced_mining_still_unavailable => '截图不可用';
   @override
   String get popup_advanced_mining_title => '高级制卡';
   @override
@@ -302833,6 +307215,8 @@ class _StringsZhCn extends _StringsEn {
   String get popup_max_height => '查词窗口最大高度';
   @override
   String get popup_max_width => '查词窗口最大宽度';
+  @override
+  String get popup_mine_still_queued => '已加入制卡，还没确认写进 Anki，暂时不能覆盖。';
   @override
   String get popup_mining_target_empty => '还没有可选的配置或牌组，请先在设置里连接 Anki。';
   @override
@@ -305134,6 +309518,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_review_pending_decision => '待你决定';
   @override
+  String get srs_review_replay_audio => '重播音频';
+  @override
   String get srs_review_show_answer => '显示答案';
   @override
   String get srs_review_undo_blocked => '这张卡已在其它设备上复习过，无法撤销这一步';
@@ -305150,9 +309536,16 @@ class _StringsZhCn extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       '此牌组的算法来自更新版本，本机暂用 ${alg}';
   @override
+  String get srs_settings_audio => '音频';
+  @override
   String get srs_settings_auto_optimize => '自动优化';
   @override
   String get srs_settings_auto_optimize_hint => '定期按你自己的复习记录调整排程参数';
+  @override
+  String get srs_settings_autoplay_audio => '自动播放音频';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      '显示问题面或答案面时自动播放卡上的音频；答案面不重播从正面带过来的音频。';
   @override
   String get srs_settings_conflict_replaced => '已被另一台设备的修改替换';
   @override
@@ -305193,6 +309586,10 @@ class _StringsZhCn extends _StringsEn {
   String get srs_settings_params_own => '单独设置';
   @override
   String get srs_settings_relearn_steps => '重学步长（分钟）';
+  @override
+  String get srs_settings_replay_question_audio => '重播答案时包含问题音频';
+  @override
+  String get srs_settings_replay_question_audio_hint => '关闭后，在答案面重播只播答案的音频。';
   @override
   String get srs_settings_reschedule => '立即重排整组';
   @override
@@ -305789,6 +310186,9 @@ class _StringsZhCn extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       '将立即从磁盘删除。媒体库里没有条目引用它——这里放的是缓存、导出或可重新获取的数据。';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      '会把这个视频从媒体库移除，并删除本机上的视频文件。';
+  @override
   String get storage_entry_external_audio_hint => '音频引用原文件，不占用应用空间';
   @override
   String storage_entry_more_rest({required Object n, required Object size}) =>
@@ -306183,7 +310583,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_p2p_relay_urls_hint => '每行一个 iroh-relay 地址；留空则用 iroh 公共中继。';
   @override
-  String get sync_pair_allow => '允许';
+  String get sync_pair_allow_interconnect_only => '仅互联';
+  @override
+  String get sync_pair_allow_owner_device => '允许 · 这是我的设备';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       '你正在与 ${device} 配对。继续前请确认这是你预期的设备。';
@@ -306300,6 +310702,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       '对方版本过旧，无法在当前网络下安全配对（需要 PIN）。请更新对方后重新配对。';
+  @override
+  String get sync_paired_peer_owner_badge => '我的设备';
+  @override
+  String get sync_paired_peer_owner_mark => '标记为我的设备（可跟随本机 Fushi 账户自动登录）';
+  @override
+  String get sync_paired_peer_owner_unmark => '取消标记为我的设备';
   @override
   String get sync_paired_peer_remove => '移除';
   @override
@@ -306917,6 +311325,18 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get updates_checking => '检查中…';
   @override
+  String get updates_extension_auto_update => '后台自动更新扩展';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      '需手动更新：${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      '启动时自动安装漫画与视频扩展的新版本（只装签名未变的）。本次已打开过在线源时，推迟到下次启动。';
+  @override
+  String get updates_extension_auto_update_reason_signature => '签名已变更';
+  @override
+  String get updates_extension_auto_updated => '已自动更新';
+  @override
   String get updates_history_clear => '清空记录';
   @override
   String get updates_history_clear_confirm_action => '清空';
@@ -306927,6 +311347,8 @@ class _StringsZhCn extends _StringsEn {
   String get updates_history_clear_confirm_title => '清空更新记录？';
   @override
   String updates_history_cleared({required Object count}) => '已清除 ${count} 条记录';
+  @override
+  String get updates_kind_anime_extension => '视频扩展';
   @override
   String get updates_kind_app_release => '应用新版';
   @override
@@ -306954,6 +311376,10 @@ class _StringsZhCn extends _StringsEn {
   }) => '${first} 等 ${count} 项';
   @override
   String get updates_notification_view_all => '查看更新';
+  @override
+  String get updates_notify_anime_extension => '视频扩展更新提醒';
+  @override
+  String get updates_notify_anime_extension_hint => '已装视频扩展在仓库里有更高版本时提醒。';
   @override
   String get updates_notify_app_release => '应用新版提醒';
   @override
@@ -312047,6 +316473,117 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_tts_import_audiobook => 'Import an audiobook';
   @override
+  String get audiobook_tts_irodori_local_add =>
+      'Set up Irodori-TTS on this computer';
+  @override
+  String get audiobook_tts_irodori_local_add_hint =>
+      'Download the official Irodori-TTS server and run it here, no command line needed';
+  @override
+  String get audiobook_tts_irodori_local_backend => 'Compute backend';
+  @override
+  String get audiobook_tts_irodori_local_backend_apple =>
+      'Apple silicon (Metal)';
+  @override
+  String get audiobook_tts_irodori_local_backend_cpu => 'CPU';
+  @override
+  String get audiobook_tts_irodori_local_backend_cu128 =>
+      'NVIDIA GPU (CUDA 12.8)';
+  @override
+  String get audiobook_tts_irodori_local_backend_rocm =>
+      'AMD GPU (ROCm, Linux)';
+  @override
+  String get audiobook_tts_irodori_local_create_voice_hint =>
+      'Then pick one of the service voices and play a test';
+  @override
+  String get audiobook_tts_irodori_local_delete => 'Delete local Irodori-TTS';
+  @override
+  String audiobook_tts_irodori_local_delete_confirm({required Object path}) =>
+      'This stops the service and deletes ${path}, including the voices you uploaded.';
+  @override
+  String get audiobook_tts_irodori_local_dir_hint =>
+      'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+  @override
+  String get audiobook_tts_irodori_local_editor_not_installed =>
+      'No local service yet? Set up Irodori-TTS on this computer in one step';
+  @override
+  String get audiobook_tts_irodori_local_failure_environment =>
+      'Setting up the Python environment failed. Check the install log and try again.';
+  @override
+  String get audiobook_tts_irodori_local_failure_unsupported =>
+      'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+  @override
+  String get audiobook_tts_irodori_local_install_log => 'Install log';
+  @override
+  String get audiobook_tts_irodori_local_intro =>
+      'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+  @override
+  String get audiobook_tts_irodori_local_model => 'Model';
+  @override
+  String get audiobook_tts_irodori_local_model_mf =>
+      'v4.1 Small MF (several times faster, good for CPU)';
+  @override
+  String get audiobook_tts_irodori_local_model_missing =>
+      'The selected model is not downloaded yet. Download and install fetches only the model.';
+  @override
+  String get audiobook_tts_irodori_local_model_small =>
+      'v4.1 Small (best quality)';
+  @override
+  String get audiobook_tts_irodori_local_package =>
+      'Irodori-TTS environment and model';
+  @override
+  String get audiobook_tts_irodori_local_port => 'Port';
+  @override
+  String get audiobook_tts_irodori_local_port_invalid =>
+      'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+  @override
+  String get audiobook_tts_irodori_local_source_hf_mirror =>
+      'hf-mirror.com (mirror in mainland China)';
+  @override
+  String get audiobook_tts_irodori_local_step_packages =>
+      'Installing PyTorch and other packages (several GB, this can take a while)…';
+  @override
+  String get audiobook_tts_irodori_local_step_python =>
+      'Installing Python 3.10…';
+  @override
+  String get audiobook_tts_irodori_local_title => 'Local Irodori-TTS';
+  @override
+  String get audiobook_tts_irodori_local_upload => 'Upload a reference voice';
+  @override
+  String audiobook_tts_irodori_local_upload_done({required Object id}) =>
+      'Uploaded voice ${id}';
+  @override
+  String get audiobook_tts_irodori_local_upload_exists =>
+      'A voice with that ID already exists';
+  @override
+  String get audiobook_tts_irodori_local_upload_failed =>
+      'Upload failed. Check the file and that the service is running.';
+  @override
+  String get audiobook_tts_irodori_local_upload_hint =>
+      'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+  @override
+  String audiobook_tts_irodori_local_voice_delete_confirm({
+    required Object id,
+  }) => 'Delete voice ${id} from the service? Its audio file is removed.';
+  @override
+  String get audiobook_tts_irodori_local_voice_delete_failed =>
+      'Could not delete this voice (only uploaded voices can be deleted)';
+  @override
+  String get audiobook_tts_irodori_local_voice_id => 'Voice ID';
+  @override
+  String get audiobook_tts_irodori_local_voice_id_hint =>
+      'Letters, digits, - and _ only';
+  @override
+  String get audiobook_tts_irodori_local_voice_name =>
+      'Irodori-TTS (this computer)';
+  @override
+  String get audiobook_tts_irodori_local_voices => 'Voices on the service';
+  @override
+  String get audiobook_tts_irodori_local_voices_empty =>
+      'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+  @override
+  String get audiobook_tts_irodori_local_voices_need_running =>
+      'Start the service to manage its voices';
+  @override
   String get audiobook_tts_key_required_hint => 'Requires your own API key';
   @override
   String get audiobook_tts_lang_all_ja => 'Japanese only';
@@ -312228,12 +316765,20 @@ class _StringsZhHk extends _StringsEn {
   String get audiobook_tts_param_bearer_hint =>
       'Only needed when the server sits behind an authenticating gateway';
   @override
+  String get audiobook_tts_param_caption => 'Voice description';
+  @override
+  String get audiobook_tts_param_caption_hint =>
+      'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
+  @override
   String get audiobook_tts_param_endpoint => 'Server URL';
   @override
   String get audiobook_tts_param_invalid => 'This value is not valid';
   @override
   String get audiobook_tts_param_irodori_endpoint_hint =>
       'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+  @override
+  String get audiobook_tts_param_irodori_server_endpoint_hint =>
+      'The official Irodori-TTS server uses port 8088';
   @override
   String get audiobook_tts_param_prompt_lang => 'Reference audio language';
   @override
@@ -312274,6 +316819,9 @@ class _StringsZhHk extends _StringsEn {
   String get audiobook_tts_provider_gpt_sovits => 'GPT-SoVITS';
   @override
   String get audiobook_tts_provider_irodori => 'Irodori studio';
+  @override
+  String get audiobook_tts_provider_irodori_server =>
+      'Irodori-TTS (official server)';
   @override
   String get audiobook_tts_provider_ms_translator => 'Microsoft Translator';
   @override
@@ -314299,6 +318847,8 @@ class _StringsZhHk extends _StringsEn {
   String get download_backend_unsupported_note =>
       '本平台無內置引擎，下載使用外接 qBittorrent。';
   @override
+  String get download_batch_clear => '從列表移除';
+  @override
   String download_batch_delete_confirm({required Object n}) => '刪除 ${n} 個下載任務？';
   @override
   String download_batch_done({required Object n}) => '已處理 ${n} 項';
@@ -314306,6 +318856,36 @@ class _StringsZhHk extends _StringsEn {
   String download_batch_failed({required Object n}) => '${n} 項失敗';
   @override
   String download_batch_unsupported({required Object n}) => '${n} 項不支持此操作';
+  @override
+  String download_clear_completed_confirm({required Object n}) =>
+      '清除 ${n} 個已完成的下載任務？不勾選下方選項時只移出列表，已下載的檔案保留。';
+  @override
+  String download_clear_completed_confirm_keeps_files({required Object n}) =>
+      '其中 ${n} 個無法在這裡刪除檔案，勾選後也只會移出列表。';
+  @override
+  String download_clear_completed_confirm_needs_delete({required Object n}) =>
+      '其中 ${n} 個只能連同檔案一起刪除，不勾選時保持不動。';
+  @override
+  String get download_clear_completed_confirm_removes_library =>
+      '對應的影片也會從媒體庫中移除。';
+  @override
+  String download_clear_completed_confirm_seeding({required Object n}) =>
+      '其中 ${n} 個正在做種，刪除檔案會同時停止做種。';
+  @override
+  String download_clear_completed_confirm_unsupported({required Object n}) =>
+      '其中 ${n} 個不支持在這裡清除，將保持不動。';
+  @override
+  String download_clear_completed_result_cleared({required Object n}) =>
+      '已清除 ${n} 項';
+  @override
+  String download_clear_completed_result_files_deleted({required Object n}) =>
+      '已刪除 ${n} 項的檔案';
+  @override
+  String download_clear_completed_result_kept_files({required Object n}) =>
+      '${n} 項無法刪除檔案，僅清除記錄';
+  @override
+  String download_clear_completed_result_untouched({required Object n}) =>
+      '${n} 項未處理';
   @override
   String get download_clear_finished => '清除已完成';
   @override
@@ -314770,6 +319350,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_task_toggle_failed => '暫停/恢復操作失敗';
   @override
+  String get download_task_work_focus_clear => '顯示全部任務';
+  @override
+  String download_task_work_focus_label({required Object title}) =>
+      '僅顯示「${title}」的任務';
+  @override
   String get download_tasks_tab => '任務';
   @override
   String get download_test_connection => '測試連接';
@@ -314965,6 +319550,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get feedback_compose_body_hint => '發生了甚麼、你期望的結果、如何重現';
   @override
+  String get feedback_compose_cancel_video_compression => 'Cancel compression';
+  @override
   String get feedback_compose_contact_field => '聯絡方式（可選）';
   @override
   String get feedback_compose_contact_hint => '電郵 / Telegram / QQ 等，只有開發者看得到';
@@ -315010,8 +319597,17 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get feedback_compose_title_missing => '請填寫標題。';
   @override
-  String feedback_compose_video_hint({required Object max}) =>
-      'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+  String feedback_compose_video_1080_hint({required Object max}) =>
+      'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+  @override
+  String feedback_compose_video_downgraded({required Object max}) =>
+      'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+  @override
+  String feedback_compose_video_hint({
+    required Object max,
+    required Object resolution,
+  }) =>
+      'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
   @override
   String get feedback_detail_add_shot => 'Add screenshot';
   @override
@@ -317776,6 +322372,16 @@ class _StringsZhHk extends _StringsEn {
   String interconnect_host_update_up_to_date({required Object version}) =>
       'Host is up to date (${version})';
   @override
+  String get interconnect_leaderboard_follow_login_toggle => '跟隨已配對裝置自動登入';
+  @override
+  String get interconnect_leaderboard_follow_login_toggle_desc =>
+      '本機沒有 Fushi 帳戶時，自動使用已登入的已配對裝置的帳戶登入（僅當對方把本機標記為「我的裝置」時生效）。只傳送本機新產生的公鑰；主動登出後不會再自動登入。';
+  @override
+  String get interconnect_leaderboard_link_host_toggle => '允許已配對裝置自動登入我的帳戶';
+  @override
+  String get interconnect_leaderboard_link_host_toggle_desc =>
+      '僅對標記為「我的裝置」的已配對裝置生效：它們沒有 Fushi 帳戶時會自動使用本機的帳戶登入（需開啟 HTTPS）。本機私鑰不會離開本機。';
+  @override
   String get interconnect_moved_note => '互聯連接與本機伺服器設定在「Fushi 互聯」分類';
   @override
   String get interconnect_peer_list_empty =>
@@ -318184,6 +322790,14 @@ class _StringsZhHk extends _StringsEn {
   String get leaderboard_load_more => '加載更多';
   @override
   String get leaderboard_metric_chars => '字數';
+  @override
+  String leaderboard_paired_login_done({
+    required Object device,
+    required Object name,
+  }) => '已使用 ${device} 的帳戶登入：${name}';
+  @override
+  String leaderboard_paired_login_done_generic({required Object name}) =>
+      '已使用已配對裝置的帳戶登入：${name}';
   @override
   String leaderboard_readers({required Object n}) => '${n} 人';
   @override
@@ -318630,6 +323244,11 @@ class _StringsZhHk extends _StringsEn {
   String get lyrics_mode_hint_title => '歌詞模式';
   @override
   String get lyrics_sentence_replay => 'Replay current sentence';
+  @override
+  String get lyrics_skipped_text_show => 'Show unread book text';
+  @override
+  String get lyrics_skipped_text_show_hint =>
+      'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
   @override
   String get lyrics_sweep => 'Word-by-word sweep';
   @override
@@ -320188,7 +324807,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get models_tts_card_fallback_section => 'Card audio fallback';
   @override
-  String get models_tts_engine => '引擎';
+  String get models_tts_fallback_off => 'Don\'t use TTS';
+  @override
+  String get models_tts_fallback_online_notice =>
+      'The word is sent to this online service';
+  @override
+  String get models_tts_fallback_voice => 'Fallback voice';
+  @override
+  String get models_tts_fallback_voice_hint =>
+      'Voice used to generate word audio when none is found';
+  @override
+  String get models_tts_fallback_voice_missing =>
+      'The selected voice was deleted';
   @override
   String get models_tts_summary => '朗讀聲音、本機 GPT-SoVITS 與製卡發音備援';
   @override
@@ -321171,6 +325801,25 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_advanced_mining_image_section => 'Image';
   @override
+  String get popup_advanced_mining_mosaic_clear => 'Clear';
+  @override
+  String popup_advanced_mining_mosaic_count({required Object count}) =>
+      'Masked ${count}';
+  @override
+  String get popup_advanced_mining_mosaic_edit => 'Mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_forces_still =>
+      'With mosaic, the card uses a still screenshot instead of an animation or clip';
+  @override
+  String get popup_advanced_mining_mosaic_hint =>
+      'Drag on the image to mask an area';
+  @override
+  String get popup_advanced_mining_mosaic_none => 'No mosaic';
+  @override
+  String get popup_advanced_mining_mosaic_page_title => 'Mosaic areas';
+  @override
+  String get popup_advanced_mining_mosaic_undo => 'Undo';
+  @override
   String get popup_advanced_mining_reset => 'Reset to one-click defaults';
   @override
   String popup_advanced_mining_sentence_count({required Object count}) =>
@@ -321180,6 +325829,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_advanced_mining_sentence_shortcut_hint =>
       'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+  @override
+  String get popup_advanced_mining_still_screenshot => 'Screenshot';
+  @override
+  String get popup_advanced_mining_still_stale =>
+      'This is the screen when the dialog opened, not the scene at that line';
+  @override
+  String get popup_advanced_mining_still_unavailable =>
+      'Screenshot unavailable';
   @override
   String get popup_advanced_mining_title => 'Advanced mining';
   @override
@@ -321279,6 +325936,8 @@ class _StringsZhHk extends _StringsEn {
   String get popup_max_height => '查詞視窗最大高度';
   @override
   String get popup_max_width => '查詞視窗最大寬度';
+  @override
+  String get popup_mine_still_queued => '已加入製卡，尚未確認寫入 Anki，暫時不能覆蓋。';
   @override
   String get popup_mining_target_empty =>
       'No profiles or decks yet. Connect Anki in settings first.';
@@ -323646,6 +328305,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_review_pending_decision => 'Needs your decision';
   @override
+  String get srs_review_replay_audio => 'Replay audio';
+  @override
   String get srs_review_show_answer => 'Show answer';
   @override
   String get srs_review_undo_blocked =>
@@ -323663,10 +328324,17 @@ class _StringsZhHk extends _StringsEn {
   String srs_settings_algorithm_unknown({required Object alg}) =>
       'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
   @override
+  String get srs_settings_audio => 'Audio';
+  @override
   String get srs_settings_auto_optimize => 'Optimize automatically';
   @override
   String get srs_settings_auto_optimize_hint =>
       'Fit the scheduling parameters to your own review history from time to time';
+  @override
+  String get srs_settings_autoplay_audio => 'Autoplay audio';
+  @override
+  String get srs_settings_autoplay_audio_hint =>
+      'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
   @override
   String get srs_settings_conflict_replaced =>
       'Replaced by a change from another device';
@@ -323713,6 +328381,12 @@ class _StringsZhHk extends _StringsEn {
   String get srs_settings_params_own => 'Own settings';
   @override
   String get srs_settings_relearn_steps => 'Relearning steps (minutes)';
+  @override
+  String get srs_settings_replay_question_audio =>
+      'Include question audio when replaying answer';
+  @override
+  String get srs_settings_replay_question_audio_hint =>
+      'When off, Replay audio on the answer side plays only the answer\'s audio.';
   @override
   String get srs_settings_reschedule => 'Reschedule deck now';
   @override
@@ -324321,6 +328995,9 @@ class _StringsZhHk extends _StringsEn {
   String get storage_entry_delete_files_confirm_body =>
       '將立即從磁碟刪除。媒體庫裡沒有項目引用它——這裡放的是快取、匯出或可重新取得的資料。';
   @override
+  String get storage_entry_delete_video_confirm_body =>
+      'Removes this video from the library and deletes its file from this device.';
+  @override
   String get storage_entry_external_audio_hint => '音訊引用原檔案，不佔用應用空間';
   @override
   String storage_entry_more_rest({required Object n, required Object size}) =>
@@ -324717,7 +329394,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_p2p_relay_urls_hint => '每行一個 iroh-relay 地址；留空則用 iroh 公共中繼。';
   @override
-  String get sync_pair_allow => '允許';
+  String get sync_pair_allow_interconnect_only => '僅互聯';
+  @override
+  String get sync_pair_allow_owner_device => '允許 · 這是我的裝置';
   @override
   String sync_pair_confirm_identity_body({required Object device}) =>
       '你正在與 ${device} 配對。繼續前請確認這是你預期的設備。';
@@ -324834,6 +329513,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get sync_pair_upgrade_required =>
       '對方版本過舊，無法在當前網路下安全配對（需要 PIN）。請更新對方後重新配對。';
+  @override
+  String get sync_paired_peer_owner_badge => '我的裝置';
+  @override
+  String get sync_paired_peer_owner_mark => '標記為我的裝置（可跟隨本機 Fushi 帳戶自動登入）';
+  @override
+  String get sync_paired_peer_owner_unmark => '取消標記為我的裝置';
   @override
   String get sync_paired_peer_remove => '移除';
   @override
@@ -325461,6 +330146,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get updates_checking => '檢查中…';
   @override
+  String get updates_extension_auto_update =>
+      'Auto-update extensions in the background';
+  @override
+  String updates_extension_auto_update_failed({required Object reason}) =>
+      'Needs manual update: ${reason}';
+  @override
+  String get updates_extension_auto_update_hint =>
+      'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+  @override
+  String get updates_extension_auto_update_reason_signature =>
+      'the signature changed';
+  @override
+  String get updates_extension_auto_updated => 'Updated automatically';
+  @override
   String get updates_history_clear => '清空記錄';
   @override
   String get updates_history_clear_confirm_action => '清空';
@@ -325471,6 +330170,8 @@ class _StringsZhHk extends _StringsEn {
   String get updates_history_clear_confirm_title => '清空更新記錄？';
   @override
   String updates_history_cleared({required Object count}) => '已清除 ${count} 條記錄';
+  @override
+  String get updates_kind_anime_extension => 'Video extensions';
   @override
   String get updates_kind_app_release => '應用新版';
   @override
@@ -325498,6 +330199,12 @@ class _StringsZhHk extends _StringsEn {
   }) => '${first} 等 ${count} 項';
   @override
   String get updates_notification_view_all => '查看更新';
+  @override
+  String get updates_notify_anime_extension =>
+      'Notify about video extension updates';
+  @override
+  String get updates_notify_anime_extension_hint =>
+      'Alert when an installed video extension has a newer version in its repository.';
   @override
   String get updates_notify_app_release => '應用新版提醒';
   @override
@@ -330338,6 +335045,88 @@ extension on _StringsEn {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -330484,12 +335273,18 @@ extension on _StringsEn {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -330527,6 +335322,8 @@ extension on _StringsEn {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -332419,6 +337216,8 @@ extension on _StringsEn {
         return 'Set up download backend';
       case 'download_backend_unsupported_note':
         return 'The built-in engine is not available on this platform. Downloads use external qBittorrent.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Delete ${n} download task(s)?';
       case 'download_batch_done':
@@ -332427,6 +337226,32 @@ extension on _StringsEn {
         return ({required Object n}) => '${n} failed';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Clear finished';
       case 'download_detail_backend_offline':
@@ -332851,6 +337676,10 @@ extension on _StringsEn {
         return 'Stalled';
       case 'download_task_toggle_failed':
         return 'Pause/resume failed';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tasks';
       case 'download_test_connection':
@@ -333033,6 +337862,8 @@ extension on _StringsEn {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -333072,9 +337903,15 @@ extension on _StringsEn {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -335614,6 +340451,14 @@ extension on _StringsEn {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Connection & server settings are in the Fushi Interconnect category';
       case 'interconnect_peer_list_empty':
@@ -335993,6 +340838,12 @@ extension on _StringsEn {
         return 'Load more';
       case 'leaderboard_metric_chars':
         return 'Characters';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} readers';
       case 'leaderboard_recovery_export_hint':
@@ -336394,6 +341245,10 @@ extension on _StringsEn {
         return 'Lyrics mode';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -337859,8 +342714,16 @@ extension on _StringsEn {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -338735,6 +343598,22 @@ extension on _StringsEn {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -338743,6 +343622,12 @@ extension on _StringsEn {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -338837,6 +343722,8 @@ extension on _StringsEn {
         return 'Popup max height';
       case 'popup_max_width':
         return 'Popup max width';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -341062,6 +345949,8 @@ extension on _StringsEn {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -341077,10 +345966,16 @@ extension on _StringsEn {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -341119,6 +346014,10 @@ extension on _StringsEn {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -341699,6 +346598,8 @@ extension on _StringsEn {
         return ({required Object reason}) => 'Delete failed: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'This deletes it from disk right away. Nothing in your library references it - it is cached, exported or re-downloadable data.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Audio references the original files, using no app storage';
       case 'storage_entry_more_rest':
@@ -342079,8 +346980,10 @@ extension on _StringsEn {
         return 'Self-hosted relays (optional)';
       case 'sync_p2p_relay_urls_hint':
         return 'One iroh-relay URL per line. Leave empty to use iroh\'s public relays.';
-      case 'sync_pair_allow':
-        return 'Allow';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'You are pairing with ${device}. Confirm this is the device you expect before continuing.';
@@ -342192,6 +347095,12 @@ extension on _StringsEn {
         return 'Unknown device';
       case 'sync_pair_upgrade_required':
         return 'The other device runs an older version that cannot pair securely from this network. Update it, then pair again.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Remove';
       case 'sync_paired_peer_removed':
@@ -342774,6 +347683,16 @@ extension on _StringsEn {
         return 'Check for updates now';
       case 'updates_checking':
         return 'Checking...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Clear history';
       case 'updates_history_clear_confirm_action':
@@ -342785,6 +347704,8 @@ extension on _StringsEn {
         return 'Clear update history?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cleared ${count} entries';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'App releases';
       case 'updates_kind_manga_chapter':
@@ -342810,6 +347731,10 @@ extension on _StringsEn {
             '${first} and ${count} more';
       case 'updates_notification_view_all':
         return 'View updates';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Notify about app releases';
       case 'updates_notify_app_release_hint':
@@ -347397,6 +352322,88 @@ extension on _StringsAr {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -347543,12 +352550,18 @@ extension on _StringsAr {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -347586,6 +352599,8 @@ extension on _StringsAr {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -349479,6 +354494,8 @@ extension on _StringsAr {
         return 'إعداد خلفية التحميل';
       case 'download_backend_unsupported_note':
         return 'المحرك المدمج غير متاح على هذه المنصة. تستخدم التحميلات qBittorrent خارجي.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'حذف ${n} مهمة تنزيل؟';
       case 'download_batch_done':
@@ -349487,6 +354504,32 @@ extension on _StringsAr {
         return ({required Object n}) => 'فشلت ${n}';
       case 'download_batch_unsupported':
         return ({required Object n}) => 'تم تخطي ${n} (غير مدعومة)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'مسح المنتهية';
       case 'download_detail_backend_offline':
@@ -349910,6 +354953,10 @@ extension on _StringsAr {
         return 'متوقف';
       case 'download_task_toggle_failed':
         return 'فشل الإيقاف المؤقت/الاستئناف';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'المهام';
       case 'download_test_connection':
@@ -350092,6 +355139,8 @@ extension on _StringsAr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -350131,9 +355180,15 @@ extension on _StringsAr {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -352671,6 +357726,14 @@ extension on _StringsAr {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'إعدادات الاتصال والخادم موجودة في فئة ترابط Fushi';
       case 'interconnect_peer_list_empty':
@@ -353047,6 +358110,12 @@ extension on _StringsAr {
         return 'تحميل المزيد';
       case 'leaderboard_metric_chars':
         return 'الأحرف';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} قارئ';
       case 'leaderboard_recovery_export_hint':
@@ -353448,6 +358517,10 @@ extension on _StringsAr {
         return 'وضع كلمات الأغاني';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -354913,8 +359986,16 @@ extension on _StringsAr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -355790,6 +360871,22 @@ extension on _StringsAr {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -355798,6 +360895,12 @@ extension on _StringsAr {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -355892,6 +360995,8 @@ extension on _StringsAr {
         return 'أقصى ارتفاع للنافذة المنبثقة';
       case 'popup_max_width':
         return 'أقصى عرض للنافذة المنبثقة';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -358117,6 +363222,8 @@ extension on _StringsAr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -358132,10 +363239,16 @@ extension on _StringsAr {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -358174,6 +363287,10 @@ extension on _StringsAr {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -358750,6 +363867,8 @@ extension on _StringsAr {
         return ({required Object reason}) => 'فشل الحذف: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'سيُحذف من القرص فورًا. لا يشير إليه أي عنصر في مكتبتك — فهذه بيانات مؤقتة أو مُصدَّرة أو يمكن تنزيلها من جديد.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'يشير الصوت إلى الملفات الأصلية ولا يستهلك مساحة التطبيق';
       case 'storage_entry_more_rest':
@@ -359129,8 +364248,10 @@ extension on _StringsAr {
         return 'مرحّلات مستضافة ذاتيًا (اختياري)';
       case 'sync_p2p_relay_urls_hint':
         return 'عنوان URL واحد لـ iroh-relay في كل سطر. اتركه فارغًا لاستخدام مرحّلات iroh العامة.';
-      case 'sync_pair_allow':
-        return 'سماح';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'أنت تقترن بـ ${device}. تأكد أن هذا هو الجهاز المتوقع قبل المتابعة.';
@@ -359242,6 +364363,12 @@ extension on _StringsAr {
         return 'جهاز غير معروف';
       case 'sync_pair_upgrade_required':
         return 'الجهاز الآخر يعمل بإصدار أقدم لا يمكنه الاقتران بأمان من هذه الشبكة. حدّثه، ثم أعد الاقتران.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'إزالة';
       case 'sync_paired_peer_removed':
@@ -359825,6 +364952,16 @@ extension on _StringsAr {
         return 'التحقق من التحديثات الآن';
       case 'updates_checking':
         return 'جارٍ التحقق...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'مسح السجل';
       case 'updates_history_clear_confirm_action':
@@ -359836,6 +364973,8 @@ extension on _StringsAr {
         return 'مسح سجل التحديثات؟';
       case 'updates_history_cleared':
         return ({required Object count}) => 'تم مسح ${count} إدخال';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'إصدارات التطبيق';
       case 'updates_kind_manga_chapter':
@@ -359861,6 +365000,10 @@ extension on _StringsAr {
             '${first} و${count} أخرى';
       case 'updates_notification_view_all':
         return 'عرض التحديثات';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'إشعار بإصدارات التطبيق';
       case 'updates_notify_app_release_hint':
@@ -364470,6 +369613,88 @@ extension on _StringsDe {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -364616,12 +369841,18 @@ extension on _StringsDe {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -364659,6 +369890,8 @@ extension on _StringsDe {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -366561,6 +371794,8 @@ extension on _StringsDe {
         return 'Download-Backend einrichten';
       case 'download_backend_unsupported_note':
         return 'Die integrierte Engine ist auf dieser Plattform nicht verfügbar. Downloads verwenden externes qBittorrent.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '${n} Download-Aufgabe(n) löschen?';
       case 'download_batch_done':
@@ -366569,6 +371804,32 @@ extension on _StringsDe {
         return ({required Object n}) => '${n} fehlgeschlagen';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} übersprungen (nicht unterstützt)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Abgeschlossene löschen';
       case 'download_detail_backend_offline':
@@ -366994,6 +372255,10 @@ extension on _StringsDe {
         return 'Blockiert';
       case 'download_task_toggle_failed':
         return 'Pausieren/Fortsetzen fehlgeschlagen';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Aufgaben';
       case 'download_test_connection':
@@ -367177,6 +372442,8 @@ extension on _StringsDe {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -367216,9 +372483,15 @@ extension on _StringsDe {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -369762,6 +375035,14 @@ extension on _StringsDe {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Verbindungs- und Servereinstellungen befinden sich in der Kategorie Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -370142,6 +375423,12 @@ extension on _StringsDe {
         return 'Mehr laden';
       case 'leaderboard_metric_chars':
         return 'Zeichen';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} Leser';
       case 'leaderboard_recovery_export_hint':
@@ -370543,6 +375830,10 @@ extension on _StringsDe {
         return 'Liedtextmodus';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -372018,8 +377309,16 @@ extension on _StringsDe {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -372899,6 +378198,22 @@ extension on _StringsDe {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -372907,6 +378222,12 @@ extension on _StringsDe {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -373001,6 +378322,8 @@ extension on _StringsDe {
         return 'Maximale Popup-Höhe';
       case 'popup_max_width':
         return 'Maximale Popup-Breite';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -375228,6 +380551,8 @@ extension on _StringsDe {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -375243,10 +380568,16 @@ extension on _StringsDe {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -375285,6 +380616,10 @@ extension on _StringsDe {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -375866,6 +381201,8 @@ extension on _StringsDe {
             'Löschen fehlgeschlagen: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Wird sofort von der Festplatte gelöscht. Nichts in deiner Bibliothek verweist darauf – es sind zwischengespeicherte, exportierte oder erneut herunterladbare Daten.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Audio verweist auf die Originaldateien und belegt keinen App-Speicher';
       case 'storage_entry_more_rest':
@@ -376247,8 +381584,10 @@ extension on _StringsDe {
         return 'Selbst gehostete Relays (optional)';
       case 'sync_p2p_relay_urls_hint':
         return 'Eine iroh-relay-URL pro Zeile. Leer lassen, um die öffentlichen Relays von iroh zu verwenden.';
-      case 'sync_pair_allow':
-        return 'Erlauben';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Du koppelst mit ${device}. Bestätige, dass dies das erwartete Gerät ist, bevor du fortfährst.';
@@ -376360,6 +381699,12 @@ extension on _StringsDe {
         return 'Unbekanntes Gerät';
       case 'sync_pair_upgrade_required':
         return 'Das andere Gerät verwendet eine ältere Version, die aus diesem Netzwerk nicht sicher koppeln kann. Aktualisieren Sie es und koppeln Sie erneut.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Entfernen';
       case 'sync_paired_peer_removed':
@@ -376947,6 +382292,16 @@ extension on _StringsDe {
         return 'Jetzt nach Updates suchen';
       case 'updates_checking':
         return 'Suche läuft...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Verlauf löschen';
       case 'updates_history_clear_confirm_action':
@@ -376958,6 +382313,8 @@ extension on _StringsDe {
         return 'Update-Verlauf löschen?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} Einträge gelöscht';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'App-Releases';
       case 'updates_kind_manga_chapter':
@@ -376983,6 +382340,10 @@ extension on _StringsDe {
             '${first} und ${count} weitere';
       case 'updates_notification_view_all':
         return 'Updates anzeigen';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Über App-Releases benachrichtigen';
       case 'updates_notify_app_release_hint':
@@ -381594,6 +386955,88 @@ extension on _StringsEs {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -381740,12 +387183,18 @@ extension on _StringsEs {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -381783,6 +387232,8 @@ extension on _StringsEs {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -383680,6 +389131,8 @@ extension on _StringsEs {
         return 'Configurar el backend de descargas';
       case 'download_backend_unsupported_note':
         return 'El motor integrado no está disponible en esta plataforma. Las descargas usan qBittorrent externo.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '¿Eliminar ${n} tarea(s) de descarga?';
       case 'download_batch_done':
@@ -383688,6 +389141,32 @@ extension on _StringsEs {
         return ({required Object n}) => '${n} fallida(s)';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} omitida(s) (no compatible)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Limpiar finalizados';
       case 'download_detail_backend_offline':
@@ -384114,6 +389593,10 @@ extension on _StringsEs {
         return 'Atascado';
       case 'download_task_toggle_failed':
         return 'Pausa/reanudación falló';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tareas';
       case 'download_test_connection':
@@ -384296,6 +389779,8 @@ extension on _StringsEs {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -384335,9 +389820,15 @@ extension on _StringsEs {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -386880,6 +392371,14 @@ extension on _StringsEs {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Los ajustes de conexión y servidor están en la categoría Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -387258,6 +392757,12 @@ extension on _StringsEs {
         return 'Cargar más';
       case 'leaderboard_metric_chars':
         return 'Caracteres';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} lectores';
       case 'leaderboard_recovery_export_hint':
@@ -387659,6 +393164,10 @@ extension on _StringsEs {
         return 'Modo de letras';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -389133,8 +394642,16 @@ extension on _StringsEs {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -390013,6 +395530,22 @@ extension on _StringsEs {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -390021,6 +395554,12 @@ extension on _StringsEs {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -390115,6 +395654,8 @@ extension on _StringsEs {
         return 'Altura máxima de la ventana';
       case 'popup_max_width':
         return 'Ancho máximo del popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -392343,6 +397884,8 @@ extension on _StringsEs {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -392358,10 +397901,16 @@ extension on _StringsEs {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -392400,6 +397949,10 @@ extension on _StringsEs {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -392980,6 +398533,8 @@ extension on _StringsEs {
         return ({required Object reason}) => 'La eliminación falló: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Se eliminará del disco de inmediato. Nada de tu biblioteca hace referencia a esto: son datos en caché, exportados o que se pueden volver a descargar.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'El audio hace referencia a los archivos originales y no ocupa espacio de la app';
       case 'storage_entry_more_rest':
@@ -393361,8 +398916,10 @@ extension on _StringsEs {
         return 'Relés autoalojados (opcional)';
       case 'sync_p2p_relay_urls_hint':
         return 'Una URL de iroh-relay por línea. Déjalo vacío para usar los relés públicos de iroh.';
-      case 'sync_pair_allow':
-        return 'Permitir';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Se está emparejando con ${device}. Confirme que es el dispositivo que espera antes de continuar.';
@@ -393474,6 +399031,12 @@ extension on _StringsEs {
         return 'Dispositivo desconocido';
       case 'sync_pair_upgrade_required':
         return 'El otro dispositivo tiene una versión más antigua que no puede emparejarse de forma segura desde esta red. Actualícelo, luego empareje de nuevo.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Eliminar';
       case 'sync_paired_peer_removed':
@@ -394060,6 +399623,16 @@ extension on _StringsEs {
         return 'Buscar actualizaciones ahora';
       case 'updates_checking':
         return 'Comprobando...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Borrar historial';
       case 'updates_history_clear_confirm_action':
@@ -394071,6 +399644,8 @@ extension on _StringsEs {
         return '¿Borrar el historial de actualizaciones?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Se borraron ${count} entradas';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Versiones de la app';
       case 'updates_kind_manga_chapter':
@@ -394096,6 +399671,10 @@ extension on _StringsEs {
             '${first} y ${count} más';
       case 'updates_notification_view_all':
         return 'Ver actualizaciones';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Avisar de versiones de la app';
       case 'updates_notify_app_release_hint':
@@ -398710,6 +404289,88 @@ extension on _StringsFr {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -398856,12 +404517,18 @@ extension on _StringsFr {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -398899,6 +404566,8 @@ extension on _StringsFr {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -400802,6 +406471,8 @@ extension on _StringsFr {
         return 'Configurer le backend de téléchargement';
       case 'download_backend_unsupported_note':
         return 'Le moteur intégré n\'est pas disponible sur cette plateforme. Les téléchargements utilisent qBittorrent externe.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) =>
             'Supprimer ${n} tâche(s) de téléchargement ?';
@@ -400812,6 +406483,32 @@ extension on _StringsFr {
       case 'download_batch_unsupported':
         return ({required Object n}) =>
             '${n} ignorée(s) (non prises en charge)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Effacer les terminés';
       case 'download_detail_backend_offline':
@@ -401238,6 +406935,10 @@ extension on _StringsFr {
         return 'Bloqué';
       case 'download_task_toggle_failed':
         return 'Échec de la pause/reprise';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tâches';
       case 'download_test_connection':
@@ -401420,6 +407121,8 @@ extension on _StringsFr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -401459,9 +407162,15 @@ extension on _StringsFr {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -404006,6 +409715,14 @@ extension on _StringsFr {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Les paramètres de connexion et de serveur sont dans la catégorie Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -404384,6 +410101,12 @@ extension on _StringsFr {
         return 'Charger plus';
       case 'leaderboard_metric_chars':
         return 'Caractères';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} lecteurs';
       case 'leaderboard_recovery_export_hint':
@@ -404785,6 +410508,10 @@ extension on _StringsFr {
         return 'Mode paroles';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -406258,8 +411985,16 @@ extension on _StringsFr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -407139,6 +412874,22 @@ extension on _StringsFr {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -407147,6 +412898,12 @@ extension on _StringsFr {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -407241,6 +412998,8 @@ extension on _StringsFr {
         return 'Hauteur max. de la fenêtre de recherche';
       case 'popup_max_width':
         return 'Largeur max du popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -409469,6 +415228,8 @@ extension on _StringsFr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -409484,10 +415245,16 @@ extension on _StringsFr {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -409526,6 +415293,10 @@ extension on _StringsFr {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -410104,6 +415875,8 @@ extension on _StringsFr {
         return ({required Object reason}) => 'Suppression échouée : ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Suppression immédiate du disque. Rien dans votre bibliothèque n\'y fait référence : ce sont des données en cache, exportées ou re-téléchargeables.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'L\'audio référence les fichiers d\'origine et n\'occupe aucun espace de l\'application';
       case 'storage_entry_more_rest':
@@ -410486,8 +416259,10 @@ extension on _StringsFr {
         return 'Relais auto-hébergés (facultatif)';
       case 'sync_p2p_relay_urls_hint':
         return 'Une URL iroh-relay par ligne. Laissez vide pour utiliser les relais publics d\'iroh.';
-      case 'sync_pair_allow':
-        return 'Autoriser';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Vous vous appairez avec ${device}. Confirmez qu\'il s\'agit bien de l\'appareil attendu avant de continuer.';
@@ -410599,6 +416374,12 @@ extension on _StringsFr {
         return 'Appareil inconnu';
       case 'sync_pair_upgrade_required':
         return 'L\'autre appareil exécute une version plus ancienne qui ne peut pas s\'appairer en toute sécurité depuis ce réseau. Mettez-le à jour, puis réappairez.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Retirer';
       case 'sync_paired_peer_removed':
@@ -411187,6 +416968,16 @@ extension on _StringsFr {
         return 'Rechercher les mises à jour maintenant';
       case 'updates_checking':
         return 'Recherche en cours...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Effacer l\'historique';
       case 'updates_history_clear_confirm_action':
@@ -411198,6 +416989,8 @@ extension on _StringsFr {
         return 'Effacer l\'historique des mises à jour ?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} entrées effacées';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Versions de l\'application';
       case 'updates_kind_manga_chapter':
@@ -411223,6 +417016,10 @@ extension on _StringsFr {
             '${first} et ${count} autres';
       case 'updates_notification_view_all':
         return 'Voir les mises à jour';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Notifier des versions de l\'application';
       case 'updates_notify_app_release_hint':
@@ -415826,6 +421623,88 @@ extension on _StringsId {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -415972,12 +421851,18 @@ extension on _StringsId {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -416015,6 +421900,8 @@ extension on _StringsId {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -417910,6 +423797,8 @@ extension on _StringsId {
         return 'Siapkan backend unduhan';
       case 'download_backend_unsupported_note':
         return 'Mesin bawaan tidak tersedia di platform ini. Unduhan menggunakan qBittorrent eksternal.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Hapus ${n} tugas unduhan?';
       case 'download_batch_done':
@@ -417918,6 +423807,32 @@ extension on _StringsId {
         return ({required Object n}) => '${n} gagal';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} dilewati (tidak didukung)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Bersihkan yang selesai';
       case 'download_detail_backend_offline':
@@ -418343,6 +424258,10 @@ extension on _StringsId {
         return 'Terhenti';
       case 'download_task_toggle_failed':
         return 'Jeda/lanjutkan gagal';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tugas';
       case 'download_test_connection':
@@ -418525,6 +424444,8 @@ extension on _StringsId {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -418564,9 +424485,15 @@ extension on _StringsId {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -421107,6 +427034,14 @@ extension on _StringsId {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Pengaturan koneksi & server ada di kategori Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -421485,6 +427420,12 @@ extension on _StringsId {
         return 'Muat lebih banyak';
       case 'leaderboard_metric_chars':
         return 'Karakter';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} pembaca';
       case 'leaderboard_recovery_export_hint':
@@ -421886,6 +427827,10 @@ extension on _StringsId {
         return 'Mode Lirik';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -423352,8 +429297,16 @@ extension on _StringsId {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -424228,6 +430181,22 @@ extension on _StringsId {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -424236,6 +430205,12 @@ extension on _StringsId {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -424330,6 +430305,8 @@ extension on _StringsId {
         return 'Tinggi maks popup';
       case 'popup_max_width':
         return 'Lebar maks popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -426555,6 +432532,8 @@ extension on _StringsId {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -426570,10 +432549,16 @@ extension on _StringsId {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -426612,6 +432597,10 @@ extension on _StringsId {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -427192,6 +433181,8 @@ extension on _StringsId {
         return ({required Object reason}) => 'Penghapusan gagal: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Akan langsung dihapus dari disk. Tidak ada di pustaka Anda yang merujuk ke sini — isinya data cache, hasil ekspor, atau yang bisa diunduh ulang.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Audio merujuk ke berkas aslinya, tidak memakai penyimpanan aplikasi';
       case 'storage_entry_more_rest':
@@ -427572,8 +433563,10 @@ extension on _StringsId {
         return 'Relay yang dihosting sendiri (opsional)';
       case 'sync_p2p_relay_urls_hint':
         return 'Satu URL iroh-relay per baris. Kosongkan untuk menggunakan relay publik iroh.';
-      case 'sync_pair_allow':
-        return 'Izinkan';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Anda memasangkan dengan ${device}. Konfirmasi bahwa ini adalah perangkat yang Anda harapkan sebelum melanjutkan.';
@@ -427685,6 +433678,12 @@ extension on _StringsId {
         return 'Perangkat tidak dikenal';
       case 'sync_pair_upgrade_required':
         return 'Perangkat lain menjalankan versi yang lebih lama dan tidak bisa berpasangan secara aman dari jaringan ini. Perbarui perangkat tersebut, lalu pasangkan lagi.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Hapus';
       case 'sync_paired_peer_removed':
@@ -428267,6 +434266,16 @@ extension on _StringsId {
         return 'Periksa pembaruan sekarang';
       case 'updates_checking':
         return 'Memeriksa...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Hapus riwayat';
       case 'updates_history_clear_confirm_action':
@@ -428278,6 +434287,8 @@ extension on _StringsId {
         return 'Hapus riwayat pembaruan?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} entri dihapus';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Rilis aplikasi';
       case 'updates_kind_manga_chapter':
@@ -428303,6 +434314,10 @@ extension on _StringsId {
             '${first} dan ${count} lainnya';
       case 'updates_notification_view_all':
         return 'Lihat pembaruan';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Beri tahu tentang rilis aplikasi';
       case 'updates_notify_app_release_hint':
@@ -432904,6 +438919,88 @@ extension on _StringsIt {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -433050,12 +439147,18 @@ extension on _StringsIt {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -433093,6 +439196,8 @@ extension on _StringsIt {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -434993,6 +441098,8 @@ extension on _StringsIt {
         return 'Configura il backend di download';
       case 'download_backend_unsupported_note':
         return 'Il motore integrato non è disponibile su questa piattaforma. I download usano qBittorrent esterno.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Eliminare ${n} attività di download?';
       case 'download_batch_done':
@@ -435001,6 +441108,32 @@ extension on _StringsIt {
         return ({required Object n}) => '${n} non riuscite';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} saltate (non supportate)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Cancella completati';
       case 'download_detail_backend_offline':
@@ -435426,6 +441559,10 @@ extension on _StringsIt {
         return 'Bloccato';
       case 'download_task_toggle_failed':
         return 'Pausa/ripresa fallita';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Task';
       case 'download_test_connection':
@@ -435608,6 +441745,8 @@ extension on _StringsIt {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -435647,9 +441786,15 @@ extension on _StringsIt {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -438192,6 +444337,14 @@ extension on _StringsIt {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Le impostazioni di connessione e server sono nella categoria Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -438570,6 +444723,12 @@ extension on _StringsIt {
         return 'Carica altro';
       case 'leaderboard_metric_chars':
         return 'Caratteri';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} lettori';
       case 'leaderboard_recovery_export_hint':
@@ -438971,6 +445130,10 @@ extension on _StringsIt {
         return 'Modalità testi';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -440443,8 +446606,16 @@ extension on _StringsIt {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -441321,6 +447492,22 @@ extension on _StringsIt {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -441329,6 +447516,12 @@ extension on _StringsIt {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -441423,6 +447616,8 @@ extension on _StringsIt {
         return 'Altezza massima del popup';
       case 'popup_max_width':
         return 'Larghezza massima popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -443650,6 +449845,8 @@ extension on _StringsIt {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -443665,10 +449862,16 @@ extension on _StringsIt {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -443707,6 +449910,10 @@ extension on _StringsIt {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -444287,6 +450494,8 @@ extension on _StringsIt {
         return ({required Object reason}) => 'Eliminazione fallita: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Verrà eliminato subito dal disco. Nulla nella tua libreria vi fa riferimento: sono dati in cache, esportati o riscaricabili.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'L\'audio fa riferimento ai file originali e non occupa spazio dell\'app';
       case 'storage_entry_more_rest':
@@ -444668,8 +450877,10 @@ extension on _StringsIt {
         return 'Relay self-hosted (facoltativo)';
       case 'sync_p2p_relay_urls_hint':
         return 'Un URL iroh-relay per riga. Lascia vuoto per usare i relay pubblici di iroh.';
-      case 'sync_pair_allow':
-        return 'Consenti';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Stai accoppiando con ${device}. Conferma che sia il dispositivo che ti aspetti prima di continuare.';
@@ -444781,6 +450992,12 @@ extension on _StringsIt {
         return 'Dispositivo sconosciuto';
       case 'sync_pair_upgrade_required':
         return 'L\'altro dispositivo ha una versione più vecchia che non può accoppiarsi in modo sicuro da questa rete. Aggiornalo, poi riaccoppia.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Rimuovi';
       case 'sync_paired_peer_removed':
@@ -445371,6 +451588,16 @@ extension on _StringsIt {
         return 'Cerca aggiornamenti ora';
       case 'updates_checking':
         return 'Controllo in corso...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Cancella cronologia';
       case 'updates_history_clear_confirm_action':
@@ -445382,6 +451609,8 @@ extension on _StringsIt {
         return 'Cancellare la cronologia degli aggiornamenti?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Cancellate ${count} voci';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Versioni dell\'app';
       case 'updates_kind_manga_chapter':
@@ -445407,6 +451636,10 @@ extension on _StringsIt {
             '${first} e altri ${count}';
       case 'updates_notification_view_all':
         return 'Vedi aggiornamenti';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Notifica nuove versioni dell\'app';
       case 'updates_notify_app_release_hint':
@@ -449990,6 +456223,88 @@ extension on _StringsJa {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -450136,12 +456451,18 @@ extension on _StringsJa {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -450179,6 +456500,8 @@ extension on _StringsJa {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -452063,6 +458386,8 @@ extension on _StringsJa {
         return 'ダウンロードバックエンドを設定';
       case 'download_backend_unsupported_note':
         return '内蔵エンジンはこのプラットフォームでは利用できません。ダウンロードは外部のqBittorrentを使用します。';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'ダウンロードタスク ${n} 件を削除しますか？';
       case 'download_batch_done':
@@ -452071,6 +458396,32 @@ extension on _StringsJa {
         return ({required Object n}) => '${n} 件が失敗しました';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} 件はサポート外のためスキップしました';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return '完了済みをクリア';
       case 'download_detail_backend_offline':
@@ -452493,6 +458844,10 @@ extension on _StringsJa {
         return '停滞中';
       case 'download_task_toggle_failed':
         return '一時停止/再開に失敗';
+      case 'download_task_work_focus_clear':
+        return 'すべてのタスクを表示';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => '「${title}」のタスクのみ表示';
       case 'download_tasks_tab':
         return 'タスク';
       case 'download_test_connection':
@@ -452674,6 +459029,8 @@ extension on _StringsJa {
         return '詳細';
       case 'feedback_compose_body_hint':
         return '何が起きたか、期待した結果、再現手順';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return '連絡先（任意）';
       case 'feedback_compose_contact_hint':
@@ -452713,9 +459070,15 @@ extension on _StringsJa {
         return '一行で要約';
       case 'feedback_compose_title_missing':
         return 'タイトルを入力してください。';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -455246,6 +461609,14 @@ extension on _StringsJa {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return '接続とサーバーの設定は Fushi インターコネクト カテゴリにあります';
       case 'interconnect_peer_list_empty':
@@ -455622,6 +461993,12 @@ extension on _StringsJa {
         return 'さらに読み込む';
       case 'leaderboard_metric_chars':
         return '文字数';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} 人の読者';
       case 'leaderboard_recovery_export_hint':
@@ -456020,6 +462397,10 @@ extension on _StringsJa {
         return '歌詞モード';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return '朗読されなかった本文を表示';
+      case 'lyrics_skipped_text_show_hint':
+        return '朗読で飛ばされた、または字幕と対応できなかった本文を、行の間に小さな灰色の文字で表示します';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -457482,8 +463863,16 @@ extension on _StringsJa {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return '読み上げ音声、ローカル GPT-SoVITS、カード音声の代替';
       case 'models_tts_title':
@@ -458354,6 +464743,22 @@ extension on _StringsJa {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -458362,6 +464767,12 @@ extension on _StringsJa {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -458456,6 +464867,8 @@ extension on _StringsJa {
         return 'ポップアップの最大高さ';
       case 'popup_max_width':
         return 'ポップアップの最大幅';
+      case 'popup_mine_still_queued':
+        return 'カード作成に追加済みですが、まだ Anki への書き込みを確認できていないため上書きできません。';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -460679,6 +467092,8 @@ extension on _StringsJa {
         return '「Hard」と「Easy」ボタンを隠す';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -460694,10 +467109,16 @@ extension on _StringsJa {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -460736,6 +467157,10 @@ extension on _StringsJa {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -461308,6 +467733,8 @@ extension on _StringsJa {
         return ({required Object reason}) => '削除に失敗: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'ディスクからすぐに削除します。ライブラリのどの項目もこれを参照していません（キャッシュ・書き出し済みデータ・再取得できるデータです）。';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return '音声は元のファイルを参照するため、アプリの容量を使いません';
       case 'storage_entry_more_rest':
@@ -461686,8 +468113,10 @@ extension on _StringsJa {
         return 'セルフホストのリレー（任意）';
       case 'sync_p2p_relay_urls_hint':
         return '1 行に iroh-relay の URL を 1 件。空欄の場合は iroh の公開リレーを使用します。';
-      case 'sync_pair_allow':
-        return '許可';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             '${device}とペアリングしようとしています。続行する前に、これが意図したデバイスであることを確認してください。';
@@ -461799,6 +468228,12 @@ extension on _StringsJa {
         return '不明なデバイス';
       case 'sync_pair_upgrade_required':
         return '相手のデバイスは古いバージョンを実行しており、このネットワークから安全にペアリングできません。更新してから再度ペアリングしてください。';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return '削除';
       case 'sync_paired_peer_removed':
@@ -462375,6 +468810,16 @@ extension on _StringsJa {
         return '今すぐアップデートを確認';
       case 'updates_checking':
         return '確認中…';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return '履歴を消去';
       case 'updates_history_clear_confirm_action':
@@ -462386,6 +468831,8 @@ extension on _StringsJa {
         return '更新履歴を消去しますか？';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} 件を消去しました';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'アプリのリリース';
       case 'updates_kind_manga_chapter':
@@ -462411,6 +468858,10 @@ extension on _StringsJa {
             '${first} ほか ${count} 件';
       case 'updates_notification_view_all':
         return 'アップデートを表示';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'アプリのリリースを通知';
       case 'updates_notify_app_release_hint':
@@ -466970,6 +473421,88 @@ extension on _StringsKo {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -467116,12 +473649,18 @@ extension on _StringsKo {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -467159,6 +473698,8 @@ extension on _StringsKo {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -469047,6 +475588,8 @@ extension on _StringsKo {
         return '다운로드 백엔드 설정';
       case 'download_backend_unsupported_note':
         return '이 플랫폼에서는 내장 엔진을 사용할 수 없습니다. 외부 qBittorrent를 사용하여 다운로드합니다.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '다운로드 작업 ${n}개를 삭제하시겠습니까?';
       case 'download_batch_done':
@@ -469055,6 +475598,32 @@ extension on _StringsKo {
         return ({required Object n}) => '${n}개 실패';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n}개 건너뜀(지원되지 않음)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return '완료된 항목 지우기';
       case 'download_detail_backend_offline':
@@ -469477,6 +476046,10 @@ extension on _StringsKo {
         return '정체됨';
       case 'download_task_toggle_failed':
         return '일시정지/재개 실패';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return '작업';
       case 'download_test_connection':
@@ -469658,6 +476231,8 @@ extension on _StringsKo {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -469697,9 +476272,15 @@ extension on _StringsKo {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -472232,6 +478813,14 @@ extension on _StringsKo {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return '연결 및 서버 설정은 Fushi 인터커넥트 카테고리에 있습니다';
       case 'interconnect_peer_list_empty':
@@ -472608,6 +479197,12 @@ extension on _StringsKo {
         return '더 보기';
       case 'leaderboard_metric_chars':
         return '글자 수';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '독자 ${n}명';
       case 'leaderboard_recovery_export_hint':
@@ -473006,6 +479601,10 @@ extension on _StringsKo {
         return '가사 모드';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -474466,8 +481065,16 @@ extension on _StringsKo {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -475339,6 +481946,22 @@ extension on _StringsKo {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -475347,6 +481970,12 @@ extension on _StringsKo {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -475441,6 +482070,8 @@ extension on _StringsKo {
         return '팝업 최대 높이';
       case 'popup_max_width':
         return '팝업 최대 너비';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -477665,6 +484296,8 @@ extension on _StringsKo {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -477680,10 +484313,16 @@ extension on _StringsKo {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -477722,6 +484361,10 @@ extension on _StringsKo {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -478295,6 +484938,8 @@ extension on _StringsKo {
         return ({required Object reason}) => '삭제 실패: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return '디스크에서 즉시 삭제합니다. 라이브러리의 어떤 항목도 이를 참조하지 않습니다 — 캐시, 내보낸 파일, 또는 다시 받을 수 있는 데이터입니다.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return '오디오는 원본 파일을 참조하므로 앱 저장 공간을 쓰지 않아요';
       case 'storage_entry_more_rest':
@@ -478673,8 +485318,10 @@ extension on _StringsKo {
         return '자체 호스팅 릴레이(선택 사항)';
       case 'sync_p2p_relay_urls_hint':
         return '한 줄에 iroh-relay URL 하나씩. 비워 두면 iroh의 공용 릴레이를 사용합니다.';
-      case 'sync_pair_allow':
-        return '허용';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             '${device}와 페어링하려고 합니다. 계속하기 전에 예상하는 기기가 맞는지 확인하세요.';
@@ -478786,6 +485433,12 @@ extension on _StringsKo {
         return '알 수 없는 기기';
       case 'sync_pair_upgrade_required':
         return '상대 기기가 이 네트워크에서 안전하게 페어링할 수 없는 이전 버전을 실행 중입니다. 업데이트한 후 다시 페어링하세요.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return '제거';
       case 'sync_paired_peer_removed':
@@ -479363,6 +486016,16 @@ extension on _StringsKo {
         return '지금 업데이트 확인';
       case 'updates_checking':
         return '확인 중...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return '기록 지우기';
       case 'updates_history_clear_confirm_action':
@@ -479374,6 +486037,8 @@ extension on _StringsKo {
         return '업데이트 기록을 지우시겠습니까?';
       case 'updates_history_cleared':
         return ({required Object count}) => '항목 ${count}개를 지웠습니다';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return '앱 릴리스';
       case 'updates_kind_manga_chapter':
@@ -479399,6 +486064,10 @@ extension on _StringsKo {
             '${first} 외 ${count}개';
       case 'updates_notification_view_all':
         return '업데이트 보기';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return '앱 릴리스 알림';
       case 'updates_notify_app_release_hint':
@@ -483983,6 +490652,88 @@ extension on _StringsNl {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -484129,12 +490880,18 @@ extension on _StringsNl {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -484172,6 +490929,8 @@ extension on _StringsNl {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -486073,6 +492832,8 @@ extension on _StringsNl {
         return 'Downloadbackend instellen';
       case 'download_backend_unsupported_note':
         return 'De ingebouwde engine is niet beschikbaar op dit platform. Downloads gebruiken externe qBittorrent.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '${n} downloadtaak/-taken verwijderen?';
       case 'download_batch_done':
@@ -486081,6 +492842,32 @@ extension on _StringsNl {
         return ({required Object n}) => '${n} mislukt';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} overgeslagen (niet ondersteund)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Voltooide wissen';
       case 'download_detail_backend_offline':
@@ -486505,6 +493292,10 @@ extension on _StringsNl {
         return 'Vastgelopen';
       case 'download_task_toggle_failed':
         return 'Pauzeren/hervatten mislukt';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Taken';
       case 'download_test_connection':
@@ -486687,6 +493478,8 @@ extension on _StringsNl {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -486726,9 +493519,15 @@ extension on _StringsNl {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -489270,6 +496069,14 @@ extension on _StringsNl {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Verbindings- en serverinstellingen staan in de categorie Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -489650,6 +496457,12 @@ extension on _StringsNl {
         return 'Meer laden';
       case 'leaderboard_metric_chars':
         return 'Tekens';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} lezers';
       case 'leaderboard_recovery_export_hint':
@@ -490051,6 +496864,10 @@ extension on _StringsNl {
         return 'Songtekstmodus';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -491526,8 +498343,16 @@ extension on _StringsNl {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -492404,6 +499229,22 @@ extension on _StringsNl {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -492412,6 +499253,12 @@ extension on _StringsNl {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -492506,6 +499353,8 @@ extension on _StringsNl {
         return 'Maximale hoogte pop-up';
       case 'popup_max_width':
         return 'Maximale popup-breedte';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -494733,6 +501582,8 @@ extension on _StringsNl {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -494748,10 +501599,16 @@ extension on _StringsNl {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -494790,6 +501647,10 @@ extension on _StringsNl {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -495370,6 +502231,8 @@ extension on _StringsNl {
         return ({required Object reason}) => 'Verwijderen mislukt: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Wordt meteen van de schijf verwijderd. Niets in je bibliotheek verwijst ernaar: het zijn cache-, geëxporteerde of opnieuw te downloaden gegevens.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Audio verwijst naar de originele bestanden en gebruikt geen app-opslag';
       case 'storage_entry_more_rest':
@@ -495750,8 +502613,10 @@ extension on _StringsNl {
         return 'Zelfgehoste relays (optioneel)';
       case 'sync_p2p_relay_urls_hint':
         return 'Eén iroh-relay-URL per regel. Laat leeg om de openbare relays van iroh te gebruiken.';
-      case 'sync_pair_allow':
-        return 'Toestaan';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Je koppelt met ${device}. Bevestig dat dit het verwachte apparaat is voordat je verdergaat.';
@@ -495863,6 +502728,12 @@ extension on _StringsNl {
         return 'Onbekend apparaat';
       case 'sync_pair_upgrade_required':
         return 'Het andere apparaat draait een oudere versie die niet veilig kan koppelen vanuit dit netwerk. Werk het bij en koppel opnieuw.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Verwijderen';
       case 'sync_paired_peer_removed':
@@ -496446,6 +503317,16 @@ extension on _StringsNl {
         return 'Nu op updates controleren';
       case 'updates_checking':
         return 'Controleren...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Geschiedenis wissen';
       case 'updates_history_clear_confirm_action':
@@ -496457,6 +503338,8 @@ extension on _StringsNl {
         return 'Updategeschiedenis wissen?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} items gewist';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'App-releases';
       case 'updates_kind_manga_chapter':
@@ -496482,6 +503365,10 @@ extension on _StringsNl {
             '${first} en nog ${count}';
       case 'updates_notification_view_all':
         return 'Updates bekijken';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Melden bij app-releases';
       case 'updates_notify_app_release_hint':
@@ -501089,6 +507976,88 @@ extension on _StringsPtBr {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -501235,12 +508204,18 @@ extension on _StringsPtBr {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -501278,6 +508253,8 @@ extension on _StringsPtBr {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -503176,6 +510153,8 @@ extension on _StringsPtBr {
         return 'Configurar o backend de downloads';
       case 'download_backend_unsupported_note':
         return 'O motor integrado não está disponível nesta plataforma. Downloads usam qBittorrent externo.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Excluir ${n} tarefa(s) de download?';
       case 'download_batch_done':
@@ -503184,6 +510163,32 @@ extension on _StringsPtBr {
         return ({required Object n}) => '${n} falharam';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} ignorada(s) (não compatíveis)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Limpar concluídos';
       case 'download_detail_backend_offline':
@@ -503608,6 +510613,10 @@ extension on _StringsPtBr {
         return 'Parado';
       case 'download_task_toggle_failed':
         return 'Pausar/retomar falhou';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tarefas';
       case 'download_test_connection':
@@ -503790,6 +510799,8 @@ extension on _StringsPtBr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -503829,9 +510840,15 @@ extension on _StringsPtBr {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -506373,6 +513390,14 @@ extension on _StringsPtBr {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'As configurações de conexão e servidor estão na categoria Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -506751,6 +513776,12 @@ extension on _StringsPtBr {
         return 'Carregar mais';
       case 'leaderboard_metric_chars':
         return 'Caracteres';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} leitores';
       case 'leaderboard_recovery_export_hint':
@@ -507152,6 +514183,10 @@ extension on _StringsPtBr {
         return 'Modo de letras';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -508625,8 +515660,16 @@ extension on _StringsPtBr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -509503,6 +516546,22 @@ extension on _StringsPtBr {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -509511,6 +516570,12 @@ extension on _StringsPtBr {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -509605,6 +516670,8 @@ extension on _StringsPtBr {
         return 'Altura máxima do pop-up';
       case 'popup_max_width':
         return 'Largura máxima do popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -511832,6 +518899,8 @@ extension on _StringsPtBr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -511847,10 +518916,16 @@ extension on _StringsPtBr {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -511889,6 +518964,10 @@ extension on _StringsPtBr {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -512467,6 +519546,8 @@ extension on _StringsPtBr {
         return ({required Object reason}) => 'Exclusão falhou: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Será excluído do disco imediatamente. Nada na sua biblioteca faz referência a isso — são dados em cache, exportados ou que podem ser baixados de novo.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'O áudio referencia os arquivos originais e não ocupa espaço do app';
       case 'storage_entry_more_rest':
@@ -512848,8 +519929,10 @@ extension on _StringsPtBr {
         return 'Relays auto-hospedados (opcional)';
       case 'sync_p2p_relay_urls_hint':
         return 'Uma URL de iroh-relay por linha. Deixe vazio para usar os relays públicos do iroh.';
-      case 'sync_pair_allow':
-        return 'Permitir';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Você está pareando com ${device}. Confirme que este é o dispositivo esperado antes de continuar.';
@@ -512961,6 +520044,12 @@ extension on _StringsPtBr {
         return 'Dispositivo desconhecido';
       case 'sync_pair_upgrade_required':
         return 'O outro dispositivo roda uma versão antiga que não pode parear com segurança desta rede. Atualize-o e pareie novamente.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Remover';
       case 'sync_paired_peer_removed':
@@ -513543,6 +520632,16 @@ extension on _StringsPtBr {
         return 'Verificar atualizações agora';
       case 'updates_checking':
         return 'Verificando...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Limpar histórico';
       case 'updates_history_clear_confirm_action':
@@ -513554,6 +520653,8 @@ extension on _StringsPtBr {
         return 'Limpar histórico de atualizações?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} entradas removidas';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Versões do app';
       case 'updates_kind_manga_chapter':
@@ -513579,6 +520680,10 @@ extension on _StringsPtBr {
             '${first} e mais ${count}';
       case 'updates_notification_view_all':
         return 'Ver atualizações';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Notificar sobre versões do app';
       case 'updates_notify_app_release_hint':
@@ -518188,6 +525293,88 @@ extension on _StringsRu {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -518334,12 +525521,18 @@ extension on _StringsRu {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -518377,6 +525570,8 @@ extension on _StringsRu {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -520278,6 +527473,8 @@ extension on _StringsRu {
         return 'Настройка бэкенда загрузок';
       case 'download_backend_unsupported_note':
         return 'Встроенный движок недоступен на этой платформе. Загрузки используют внешний qBittorrent.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Удалить задач загрузки: ${n}?';
       case 'download_batch_done':
@@ -520286,6 +527483,32 @@ extension on _StringsRu {
         return ({required Object n}) => 'Ошибок: ${n}';
       case 'download_batch_unsupported':
         return ({required Object n}) => 'Пропущено (не поддерживается): ${n}';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Очистить завершённые';
       case 'download_detail_backend_offline':
@@ -520711,6 +527934,10 @@ extension on _StringsRu {
         return 'Остановлено';
       case 'download_task_toggle_failed':
         return 'Не удалось приостановить/возобновить';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Задачи';
       case 'download_test_connection':
@@ -520893,6 +528120,8 @@ extension on _StringsRu {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -520932,9 +528161,15 @@ extension on _StringsRu {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -523476,6 +530711,14 @@ extension on _StringsRu {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Настройки подключения и сервера находятся в разделе «Fushi Interconnect»';
       case 'interconnect_peer_list_empty':
@@ -523854,6 +531097,12 @@ extension on _StringsRu {
         return 'Загрузить ещё';
       case 'leaderboard_metric_chars':
         return 'Символы';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => 'Читателей: ${n}';
       case 'leaderboard_recovery_export_hint':
@@ -524255,6 +531504,10 @@ extension on _StringsRu {
         return 'Режим текстов песен';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -525728,8 +532981,16 @@ extension on _StringsRu {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -526606,6 +533867,22 @@ extension on _StringsRu {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -526614,6 +533891,12 @@ extension on _StringsRu {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -526708,6 +533991,8 @@ extension on _StringsRu {
         return 'Макс. высота окна поиска';
       case 'popup_max_width':
         return 'Макс. ширина всплывающего окна';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -528935,6 +536220,8 @@ extension on _StringsRu {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -528950,10 +536237,16 @@ extension on _StringsRu {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -528992,6 +536285,10 @@ extension on _StringsRu {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -529570,6 +536867,8 @@ extension on _StringsRu {
         return ({required Object reason}) => 'Ошибка удаления: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Будет сразу удалено с диска. Ничто в вашей библиотеке на это не ссылается — это кеш, экспортированные или заново загружаемые данные.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Аудио ссылается на исходные файлы и не занимает место приложения';
       case 'storage_entry_more_rest':
@@ -529952,8 +537251,10 @@ extension on _StringsRu {
         return 'Собственные ретрансляторы (необязательно)';
       case 'sync_p2p_relay_urls_hint':
         return 'По одному URL iroh-relay в строке. Оставьте пустым, чтобы использовать публичные ретрансляторы iroh.';
-      case 'sync_pair_allow':
-        return 'Разрешить';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Вы сопрягаетесь с ${device}. Убедитесь, что это ожидаемое устройство, прежде чем продолжить.';
@@ -530065,6 +537366,12 @@ extension on _StringsRu {
         return 'Неизвестное устройство';
       case 'sync_pair_upgrade_required':
         return 'На другом устройстве установлена устаревшая версия, которая не может безопасно выполнить сопряжение из этой сети. Обновите его, затем повторите сопряжение.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Удалить';
       case 'sync_paired_peer_removed':
@@ -530647,6 +537954,16 @@ extension on _StringsRu {
         return 'Проверить обновления сейчас';
       case 'updates_checking':
         return 'Проверка...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Очистить историю';
       case 'updates_history_clear_confirm_action':
@@ -530658,6 +537975,8 @@ extension on _StringsRu {
         return 'Очистить историю обновлений?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Очищено записей: ${count}';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Выпуски приложения';
       case 'updates_kind_manga_chapter':
@@ -530683,6 +538002,10 @@ extension on _StringsRu {
             '${first} и ещё ${count}';
       case 'updates_notification_view_all':
         return 'Посмотреть обновления';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Уведомлять о выпусках приложения';
       case 'updates_notify_app_release_hint':
@@ -535274,6 +542597,88 @@ extension on _StringsTh {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -535420,12 +542825,18 @@ extension on _StringsTh {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -535463,6 +542874,8 @@ extension on _StringsTh {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -537355,6 +544768,8 @@ extension on _StringsTh {
         return 'ตั้งค่าแบ็กเอนด์ดาวน์โหลด';
       case 'download_backend_unsupported_note':
         return 'เอนจินในตัวไม่พร้อมใช้งานบนแพลตฟอร์มนี้ การดาวน์โหลดใช้ qBittorrent ภายนอก';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'ลบงานดาวน์โหลด ${n} งานหรือไม่?';
       case 'download_batch_done':
@@ -537363,6 +544778,32 @@ extension on _StringsTh {
         return ({required Object n}) => 'ล้มเหลว ${n} งาน';
       case 'download_batch_unsupported':
         return ({required Object n}) => 'ข้าม ${n} งาน (ไม่รองรับ)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'ล้างที่เสร็จแล้ว';
       case 'download_detail_backend_offline':
@@ -537786,6 +545227,10 @@ extension on _StringsTh {
         return 'หยุดชะงัก';
       case 'download_task_toggle_failed':
         return 'หยุดชั่วคราว/เล่นต่อล้มเหลว';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'งาน';
       case 'download_test_connection':
@@ -537970,6 +545415,8 @@ extension on _StringsTh {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -538009,9 +545456,15 @@ extension on _StringsTh {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -540551,6 +548004,14 @@ extension on _StringsTh {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'การตั้งค่าการเชื่อมต่อและเซิร์ฟเวอร์อยู่ในหมวด Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -540930,6 +548391,12 @@ extension on _StringsTh {
         return 'โหลดเพิ่ม';
       case 'leaderboard_metric_chars':
         return 'ตัวอักษร';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => 'ผู้อ่าน ${n} คน';
       case 'leaderboard_recovery_export_hint':
@@ -541331,6 +548798,10 @@ extension on _StringsTh {
         return 'โหมดเนื้อเพลง';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -542796,8 +550267,16 @@ extension on _StringsTh {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -543671,6 +551150,22 @@ extension on _StringsTh {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -543679,6 +551174,12 @@ extension on _StringsTh {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -543773,6 +551274,8 @@ extension on _StringsTh {
         return 'ความสูงสูงสุดของหน้าต่างค้นคำ';
       case 'popup_max_width':
         return 'ความกว้างสูงสุดของป๊อปอัป';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -545998,6 +553501,8 @@ extension on _StringsTh {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -546013,10 +553518,16 @@ extension on _StringsTh {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -546055,6 +553566,10 @@ extension on _StringsTh {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -546633,6 +554148,8 @@ extension on _StringsTh {
         return ({required Object reason}) => 'ลบไม่สำเร็จ: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'จะถูกลบออกจากดิสก์ทันที ไม่มีรายการใดในคลังอ้างอิงถึงไฟล์นี้ — เป็นข้อมูลแคช ข้อมูลที่ส่งออก หรือข้อมูลที่ดาวน์โหลดใหม่ได้';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'เสียงอ้างอิงไฟล์ต้นฉบับ ไม่ใช้พื้นที่ของแอป';
       case 'storage_entry_more_rest':
@@ -547013,8 +554530,10 @@ extension on _StringsTh {
         return 'รีเลย์ที่โฮสต์เอง (ไม่บังคับ)';
       case 'sync_p2p_relay_urls_hint':
         return 'URL ของ iroh-relay หนึ่งรายการต่อบรรทัด เว้นว่างไว้เพื่อใช้รีเลย์สาธารณะของ iroh';
-      case 'sync_pair_allow':
-        return 'อนุญาต';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'คุณกำลังจับคู่กับ ${device} ยืนยันว่าเป็นอุปกรณ์ที่คุณต้องการก่อนดำเนินการต่อ';
@@ -547126,6 +554645,12 @@ extension on _StringsTh {
         return 'อุปกรณ์ที่ไม่รู้จัก';
       case 'sync_pair_upgrade_required':
         return 'อุปกรณ์อีกเครื่องใช้เวอร์ชันเก่าที่ไม่สามารถจับคู่อย่างปลอดภัยจากเครือข่ายนี้ได้ อัปเดตแล้วจับคู่อีกครั้ง';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'ลบ';
       case 'sync_paired_peer_removed':
@@ -547708,6 +555233,16 @@ extension on _StringsTh {
         return 'ตรวจหาอัปเดตตอนนี้';
       case 'updates_checking':
         return 'กำลังตรวจสอบ...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'ล้างประวัติ';
       case 'updates_history_clear_confirm_action':
@@ -547719,6 +555254,8 @@ extension on _StringsTh {
         return 'ล้างประวัติอัปเดตหรือไม่?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'ล้าง ${count} รายการแล้ว';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'รุ่นของแอป';
       case 'updates_kind_manga_chapter':
@@ -547744,6 +555281,10 @@ extension on _StringsTh {
             '${first} และอีก ${count} รายการ';
       case 'updates_notification_view_all':
         return 'ดูอัปเดต';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'แจ้งเตือนรุ่นของแอป';
       case 'updates_notify_app_release_hint':
@@ -552343,6 +559884,88 @@ extension on _StringsTr {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -552489,12 +560112,18 @@ extension on _StringsTr {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -552532,6 +560161,8 @@ extension on _StringsTr {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -554429,6 +562060,8 @@ extension on _StringsTr {
         return 'İndirme arka ucunu ayarla';
       case 'download_backend_unsupported_note':
         return 'Yerleşik motor bu platformda kullanılamıyor. İndirmeler harici qBittorrent kullanıyor.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '${n} indirme görevi silinsin mi?';
       case 'download_batch_done':
@@ -554437,6 +562070,32 @@ extension on _StringsTr {
         return ({required Object n}) => '${n} başarısız oldu';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} atlandı (desteklenmiyor)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Tamamlananları temizle';
       case 'download_detail_backend_offline':
@@ -554862,6 +562521,10 @@ extension on _StringsTr {
         return 'Durağan';
       case 'download_task_toggle_failed':
         return 'Duraklatma/devam ettirme başarısız';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Görevler';
       case 'download_test_connection':
@@ -555044,6 +562707,8 @@ extension on _StringsTr {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -555083,9 +562748,15 @@ extension on _StringsTr {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -557627,6 +565298,14 @@ extension on _StringsTr {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Bağlantı ve sunucu ayarları Fushi Interconnect kategorisindedir';
       case 'interconnect_peer_list_empty':
@@ -558006,6 +565685,12 @@ extension on _StringsTr {
         return 'Daha fazla yükle';
       case 'leaderboard_metric_chars':
         return 'Karakter';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} okur';
       case 'leaderboard_recovery_export_hint':
@@ -558407,6 +566092,10 @@ extension on _StringsTr {
         return 'Şarkı Sözü Modu';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -559877,8 +567566,16 @@ extension on _StringsTr {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -560752,6 +568449,22 @@ extension on _StringsTr {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -560760,6 +568473,12 @@ extension on _StringsTr {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -560854,6 +568573,8 @@ extension on _StringsTr {
         return 'Açılır pencere maksimum yüksekliği';
       case 'popup_max_width':
         return 'Açılır pencere maks. genişlik';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -563079,6 +570800,8 @@ extension on _StringsTr {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -563094,10 +570817,16 @@ extension on _StringsTr {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -563136,6 +570865,10 @@ extension on _StringsTr {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -563713,6 +571446,8 @@ extension on _StringsTr {
         return ({required Object reason}) => 'Silme başarısız: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Diskten hemen silinir. Kitaplığınızdaki hiçbir şey buna başvurmuyor — bunlar önbellek, dışa aktarılmış veya yeniden indirilebilir verilerdir.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Ses özgün dosyaları kullanır, uygulama depolamasında yer kaplamaz';
       case 'storage_entry_more_rest':
@@ -564094,8 +571829,10 @@ extension on _StringsTr {
         return 'Kendi barındırdığınız aktarıcılar (isteğe bağlı)';
       case 'sync_p2p_relay_urls_hint':
         return 'Satır başına bir iroh-relay URL\'si. iroh\'un genel aktarıcılarını kullanmak için boş bırakın.';
-      case 'sync_pair_allow':
-        return 'İzin ver';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             '${device} ile eşleşiyorsunuz. Devam etmeden önce bunun beklediğiniz cihaz olduğunu onaylayın.';
@@ -564207,6 +571944,12 @@ extension on _StringsTr {
         return 'Bilinmeyen cihaz';
       case 'sync_pair_upgrade_required':
         return 'Diğer cihaz, bu ağdan güvenli eşleştirme yapamayan eski bir sürüm çalıştırıyor. Güncelleyin, ardından tekrar eşleştirin.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Kaldır';
       case 'sync_paired_peer_removed':
@@ -564791,6 +572534,16 @@ extension on _StringsTr {
         return 'Güncellemeleri şimdi kontrol et';
       case 'updates_checking':
         return 'Kontrol ediliyor...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Geçmişi temizle';
       case 'updates_history_clear_confirm_action':
@@ -564802,6 +572555,8 @@ extension on _StringsTr {
         return 'Güncelleme geçmişi temizlensin mi?';
       case 'updates_history_cleared':
         return ({required Object count}) => '${count} girdi temizlendi';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Uygulama sürümleri';
       case 'updates_kind_manga_chapter':
@@ -564827,6 +572582,10 @@ extension on _StringsTr {
             '${first} ve ${count} tane daha';
       case 'updates_notification_view_all':
         return 'Güncellemeleri görüntüle';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Uygulama sürümlerini bildir';
       case 'updates_notify_app_release_hint':
@@ -569425,6 +577184,88 @@ extension on _StringsVi {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -569571,12 +577412,18 @@ extension on _StringsVi {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -569614,6 +577461,8 @@ extension on _StringsVi {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -571509,6 +579358,8 @@ extension on _StringsVi {
         return 'Thiết lập backend tải xuống';
       case 'download_backend_unsupported_note':
         return 'Engine tích hợp không khả dụng trên nền tảng này. Tải xuống sử dụng qBittorrent bên ngoài.';
+      case 'download_batch_clear':
+        return 'Remove from list';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => 'Xóa ${n} tác vụ tải xuống?';
       case 'download_batch_done':
@@ -571517,6 +579368,32 @@ extension on _StringsVi {
         return ({required Object n}) => '${n} thất bại';
       case 'download_batch_unsupported':
         return ({required Object n}) => 'Bỏ qua ${n} (không được hỗ trợ)';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            'Clear ${n} completed download tasks? Without the option below they are only removed from the list and downloaded files are kept.';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) =>
+            '${n} of them cannot have their files deleted from here and will only be removed from the list.';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) =>
+            '${n} of them can only be removed together with their files, so they stay unless you tick the option.';
+      case 'download_clear_completed_confirm_removes_library':
+        return 'The matching videos will also be removed from your library.';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) =>
+            '${n} of them are seeding; deleting their files also stops seeding.';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) =>
+            '${n} of them cannot be cleared from here and stay as they are.';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => 'Cleared ${n}';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => 'Deleted files for ${n}';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) =>
+            '${n} could not delete files, removed from list only';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} not processed';
       case 'download_clear_finished':
         return 'Xóa đã hoàn tất';
       case 'download_detail_backend_offline':
@@ -571942,6 +579819,10 @@ extension on _StringsVi {
         return 'Bị treo';
       case 'download_task_toggle_failed':
         return 'Tạm dừng/tiếp tục thất bại';
+      case 'download_task_work_focus_clear':
+        return 'Show all tasks';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => 'Tasks for ${title}';
       case 'download_tasks_tab':
         return 'Tác vụ';
       case 'download_test_connection':
@@ -572125,6 +580006,8 @@ extension on _StringsVi {
         return 'Details';
       case 'feedback_compose_body_hint':
         return 'What happened, what you expected, and how to reproduce it';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return 'Contact (optional)';
       case 'feedback_compose_contact_hint':
@@ -572164,9 +580047,15 @@ extension on _StringsVi {
         return 'One-line summary';
       case 'feedback_compose_title_missing':
         return 'Please fill in a title.';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -574706,6 +582595,14 @@ extension on _StringsVi {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return 'Sign in with a paired device\'s account';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return 'When this device has no Fushi account, sign in automatically with the account of a signed-in paired device that has marked this device as its own. Only a new public key from this device is sent; after you sign out it will not sign in again automatically.';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return 'Let paired devices sign in with my account';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return 'Only applies to paired devices marked as "my device": if they have no Fushi account, they sign in with this device\'s account automatically (HTTPS required). Your private key never leaves this device.';
       case 'interconnect_moved_note':
         return 'Cài đặt kết nối & máy chủ nằm trong danh mục Fushi Interconnect';
       case 'interconnect_peer_list_empty':
@@ -575084,6 +582981,12 @@ extension on _StringsVi {
         return 'Tải thêm';
       case 'leaderboard_metric_chars':
         return 'Ký tự';
+      case 'leaderboard_paired_login_done':
+        return ({required Object name, required Object device}) =>
+            'Signed in as ${name} with the account from ${device}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) =>
+            'Signed in as ${name} with a paired device\'s account';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} người đọc';
       case 'leaderboard_recovery_export_hint':
@@ -575485,6 +583388,10 @@ extension on _StringsVi {
         return 'Chế độ lời bài hát';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -576950,8 +584857,16 @@ extension on _StringsVi {
         return 'Model files';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return 'Engine';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return 'Read-aloud voices, local GPT-SoVITS and the card audio fallback';
       case 'models_tts_title':
@@ -577826,6 +585741,22 @@ extension on _StringsVi {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -577834,6 +585765,12 @@ extension on _StringsVi {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -577928,6 +585865,8 @@ extension on _StringsVi {
         return 'Chiều cao tối đa cửa sổ tra';
       case 'popup_max_width':
         return 'Chiều rộng tối đa popup';
+      case 'popup_mine_still_queued':
+        return 'Added for mining, but not confirmed in Anki yet, so it can\'t be overwritten yet.';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -580155,6 +588094,8 @@ extension on _StringsVi {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -580170,10 +588111,16 @@ extension on _StringsVi {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -580212,6 +588159,10 @@ extension on _StringsVi {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -580792,6 +588743,8 @@ extension on _StringsVi {
         return ({required Object reason}) => 'Xóa thất bại: ${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return 'Sẽ bị xóa khỏi ổ đĩa ngay lập tức. Không có mục nào trong thư viện tham chiếu tới nó — đây là dữ liệu bộ nhớ đệm, đã xuất hoặc có thể tải lại.';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return 'Âm thanh tham chiếu tệp gốc, không chiếm dung lượng của ứng dụng';
       case 'storage_entry_more_rest':
@@ -581171,8 +589124,10 @@ extension on _StringsVi {
         return 'Relay tự lưu trữ (tùy chọn)';
       case 'sync_p2p_relay_urls_hint':
         return 'Mỗi dòng một URL iroh-relay. Để trống để dùng relay công khai của iroh.';
-      case 'sync_pair_allow':
-        return 'Cho phép';
+      case 'sync_pair_allow_interconnect_only':
+        return 'Interconnect only';
+      case 'sync_pair_allow_owner_device':
+        return 'Allow · This is my device';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             'Bạn đang ghép nối với ${device}. Xác nhận đây là thiết bị bạn mong đợi trước khi tiếp tục.';
@@ -581284,6 +589239,12 @@ extension on _StringsVi {
         return 'Thiết bị không xác định';
       case 'sync_pair_upgrade_required':
         return 'Thiết bị kia chạy phiên bản cũ không thể ghép nối an toàn từ mạng này. Cập nhật nó, rồi ghép nối lại.';
+      case 'sync_paired_peer_owner_badge':
+        return 'My device';
+      case 'sync_paired_peer_owner_mark':
+        return 'Mark as my device (can sign in with my Fushi account)';
+      case 'sync_paired_peer_owner_unmark':
+        return 'Unmark as my device';
       case 'sync_paired_peer_remove':
         return 'Xóa';
       case 'sync_paired_peer_removed':
@@ -581868,6 +589829,16 @@ extension on _StringsVi {
         return 'Kiểm tra cập nhật ngay';
       case 'updates_checking':
         return 'Đang kiểm tra...';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return 'Xóa lịch sử';
       case 'updates_history_clear_confirm_action':
@@ -581879,6 +589850,8 @@ extension on _StringsVi {
         return 'Xóa lịch sử cập nhật?';
       case 'updates_history_cleared':
         return ({required Object count}) => 'Đã xóa ${count} mục';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return 'Bản phát hành ứng dụng';
       case 'updates_kind_manga_chapter':
@@ -581904,6 +589877,10 @@ extension on _StringsVi {
             '${first} và ${count} mục khác';
       case 'updates_notification_view_all':
         return 'Xem cập nhật';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return 'Thông báo về bản phát hành ứng dụng';
       case 'updates_notify_app_release_hint':
@@ -586455,6 +594432,86 @@ extension on _StringsZhCn {
         return '此设备不支持该声音';
       case 'audiobook_tts_import_audiobook':
         return '导入有声书';
+      case 'audiobook_tts_irodori_local_add':
+        return '在本机一键部署 Irodori-TTS';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return '下载官方 Irodori-TTS 服务并在本机运行，无需命令行';
+      case 'audiobook_tts_irodori_local_backend':
+        return '计算后端';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple 芯片（Metal）';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA 显卡（CUDA 12.8）';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD 显卡（ROCm，仅 Linux）';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return '新建后选一个服务上的声音并试听';
+      case 'audiobook_tts_irodori_local_delete':
+        return '删除本机 Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) => '这会停止服务并删除 ${path}，包括你上传的声音。';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return '需要约 6–12 GB 空闲空间。Python、依赖、模型与你上传的声音都在同一个文件夹里，删除时一起删掉。';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return '还没有本机服务？在 Fushi 里一键部署 Irodori-TTS';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Python 环境安装失败，请查看安装日志后重试。';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return '不支持这台电脑（需要 64 位 Windows、Apple 芯片的 Mac 或 64 位 Linux）';
+      case 'audiobook_tts_irodori_local_install_log':
+        return '安装日志';
+      case 'audiobook_tts_irodori_local_intro':
+        return '安装官方 Irodori-TTS 服务，自带独立的 Python 与 PyTorch（2–6 GB）和 v4.1 模型（约 3.5 GB），全部放在一个文件夹里。上传一段参考音频就能用那个声音朗读，也可以用文字描述一个声音。朗读时自动启动，退出 Fushi 时自动停止。';
+      case 'audiobook_tts_irodori_local_model':
+        return '模型';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF（快数倍，适合 CPU）';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return '所选模型还没下载：点「下载并安装」只补下模型，环境不会重装。';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small（音质最好）';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS 环境与模型';
+      case 'audiobook_tts_irodori_local_port':
+        return '端口';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return '请用 1024–65535 之间的端口，且不能是 7870、7871、9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com（国内镜像）';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return '正在安装 PyTorch 等依赖（数 GB，可能要一段时间）…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return '正在安装 Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return '本机 Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return '上传参考音频';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => '已上传声音 ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return '已有同名声音';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return '上传失败，请检查文件并确认服务在运行。';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return '一段干净的单人音频（WAV、FLAC、MP3 等），几秒到两分钟';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) => '从服务上删除声音 ${id}？它的音频文件会被删掉。';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return '删不掉这个声音（只能删除上传的声音）';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return '声音 ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return '只能用英文字母、数字、- 和 _';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS（本机）';
+      case 'audiobook_tts_irodori_local_voices':
+        return '服务上的声音';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return '还没有上传的声音。内置声音 none 不用参考音频也能朗读。';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return '启动服务后可管理声音';
       case 'audiobook_tts_key_required_hint':
         return '需要填写自己的 API 密钥';
       case 'audiobook_tts_lang_all_ja':
@@ -586599,12 +594656,18 @@ extension on _StringsZhCn {
         return 'API 密钥';
       case 'audiobook_tts_param_bearer_hint':
         return '仅当服务架在需要认证的网关后面时填写';
+      case 'audiobook_tts_param_caption':
+        return '声音描述';
+      case 'audiobook_tts_param_caption_hint':
+        return '可选。描述音色与语气，例如「落ち着いた低めの女性の声」。声音选 none 时就是凭描述设计一个新声音。';
       case 'audiobook_tts_param_endpoint':
         return '服务地址';
       case 'audiobook_tts_param_invalid':
         return '填写的值无效';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori 工作台端口 7870，GPT-SoVITS 工作台 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return '官方 Irodori-TTS 服务默认端口 8088';
       case 'audiobook_tts_param_prompt_lang':
         return '参考音频语言';
       case 'audiobook_tts_param_prompt_text':
@@ -586642,6 +594705,8 @@ extension on _StringsZhCn {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori 工作台';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS（官方服务）';
       case 'audiobook_tts_provider_ms_translator':
         return '微软翻译';
       case 'audiobook_tts_provider_system':
@@ -588514,6 +596579,8 @@ extension on _StringsZhCn {
         return '配置下载后端';
       case 'download_backend_unsupported_note':
         return '本平台无内置引擎，下载使用外接 qBittorrent。';
+      case 'download_batch_clear':
+        return '从列表移除';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '删除 ${n} 个下载任务？';
       case 'download_batch_done':
@@ -588522,6 +596589,27 @@ extension on _StringsZhCn {
         return ({required Object n}) => '${n} 项失败';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} 项不支持此操作';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            '清除 ${n} 个已完成的下载任务？不勾选下方选项时只移出列表，已下载的文件保留。';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) => '其中 ${n} 个无法在这里删除文件，勾选后也只会移出列表。';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) => '其中 ${n} 个只能连同文件一起删除，不勾选时保持不动。';
+      case 'download_clear_completed_confirm_removes_library':
+        return '对应的视频也会从媒体库中移除。';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) => '其中 ${n} 个正在做种，删除文件会同时停止做种。';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) => '其中 ${n} 个不支持在这里清除，将保持不动。';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => '已清除 ${n} 项';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => '已删除 ${n} 项的文件';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) => '${n} 项无法删除文件，仅清除记录';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} 项未处理';
       case 'download_clear_finished':
         return '清除已完成';
       case 'download_detail_backend_offline':
@@ -588943,6 +597031,10 @@ extension on _StringsZhCn {
         return '等待资源';
       case 'download_task_toggle_failed':
         return '暂停/恢复操作失败';
+      case 'download_task_work_focus_clear':
+        return '显示全部任务';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => '仅显示「${title}」的任务';
       case 'download_tasks_tab':
         return '任务';
       case 'download_test_connection':
@@ -589122,6 +597214,8 @@ extension on _StringsZhCn {
         return '详细描述';
       case 'feedback_compose_body_hint':
         return '发生了什么、你期望的结果、如何复现';
+      case 'feedback_compose_cancel_video_compression':
+        return '取消压缩';
       case 'feedback_compose_contact_field':
         return '联系方式（可选）';
       case 'feedback_compose_contact_hint':
@@ -589159,9 +597253,14 @@ extension on _StringsZhCn {
         return '一句话概括';
       case 'feedback_compose_title_missing':
         return '请填写标题。';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 720p。';
+            '更清晰但文件更大；超过约 3 分钟的视频会改按 720p 压缩，以免超过 ${max}。';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) => '视频较长，1080p 会超过 ${max}，本次改按 720p 压缩。';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            '可附 1 个视频（不超过 ${max}），上传前会自动压缩为 ${resolution}。';
       case 'feedback_detail_add_shot':
         return '追加截图';
       case 'feedback_detail_attachments':
@@ -591681,6 +599780,14 @@ extension on _StringsZhCn {
         return '主机版本';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => '主机已是最新（${version}）';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return '跟随已配对设备自动登录';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return '本机没有 Fushi 账户时，自动使用已登录的已配对设备的账户登录（仅当对方把本机标记为「我的设备」时生效）。只发送本机新生成的公钥；主动退出后不会再自动登录。';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return '允许已配对设备自动登录我的账户';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return '仅对标记为「我的设备」的已配对设备生效：它们没有 Fushi 账户时会自动使用本机的账户登录（需开启 HTTPS）。本机私钥不会离开本机。';
       case 'interconnect_moved_note':
         return '互联连接与本机服务器设置在「Fushi 互联」分类';
       case 'interconnect_peer_list_empty':
@@ -592056,6 +600163,11 @@ extension on _StringsZhCn {
         return '加载更多';
       case 'leaderboard_metric_chars':
         return '字数';
+      case 'leaderboard_paired_login_done':
+        return ({required Object device, required Object name}) =>
+            '已使用 ${device} 的账户登录：${name}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) => '已使用已配对设备的账户登录：${name}';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} 人';
       case 'leaderboard_recovery_export_hint':
@@ -592454,6 +600566,10 @@ extension on _StringsZhCn {
         return '歌词模式';
       case 'lyrics_sentence_replay':
         return '重播当前句';
+      case 'lyrics_skipped_text_show':
+        return '显示未朗读的原文';
+      case 'lyrics_skipped_text_show_hint':
+        return '朗读者跳过、或字幕没能对上的原文，以灰色小字显示在两句之间';
       case 'lyrics_sweep':
         return '逐字跟读渐变';
       case 'lyrics_sweep_hint':
@@ -593907,8 +602023,16 @@ extension on _StringsZhCn {
         return '模型文件';
       case 'models_tts_card_fallback_section':
         return '制卡发音兜底';
-      case 'models_tts_engine':
-        return '引擎';
+      case 'models_tts_fallback_off':
+        return '不使用 TTS 兜底';
+      case 'models_tts_fallback_online_notice':
+        return '词条文本会发送给该在线服务';
+      case 'models_tts_fallback_voice':
+        return '兜底声音';
+      case 'models_tts_fallback_voice_hint':
+        return '找不到单词音频时用哪个声音合成';
+      case 'models_tts_fallback_voice_missing':
+        return '所选声音已被删除';
       case 'models_tts_summary':
         return '朗读声音、本机 GPT-SoVITS 与制卡发音兜底';
       case 'models_tts_title':
@@ -594778,6 +602902,22 @@ extension on _StringsZhCn {
         return '不要';
       case 'popup_advanced_mining_image_section':
         return '图片';
+      case 'popup_advanced_mining_mosaic_clear':
+        return '清除';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => '已打码 ${count} 处';
+      case 'popup_advanced_mining_mosaic_edit':
+        return '打码';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return '打码后改为输出静态截图（不再是动图 / 视频片段）';
+      case 'popup_advanced_mining_mosaic_hint':
+        return '在图上拖动，框出要打码的区域';
+      case 'popup_advanced_mining_mosaic_none':
+        return '未打码';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return '打码';
+      case 'popup_advanced_mining_mosaic_undo':
+        return '撤销';
       case 'popup_advanced_mining_reset':
         return '恢复为一键制卡的默认';
       case 'popup_advanced_mining_sentence_count':
@@ -594786,6 +602926,12 @@ extension on _StringsZhCn {
         return '句子';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return '快捷键 [ ] 增减前文 · Shift+[ ] 增减后文';
+      case 'popup_advanced_mining_still_screenshot':
+        return '截图';
+      case 'popup_advanced_mining_still_stale':
+        return '这是打开对话框时的画面，不是该台词当时的画面';
+      case 'popup_advanced_mining_still_unavailable':
+        return '截图不可用';
       case 'popup_advanced_mining_title':
         return '高级制卡';
       case 'popup_append_sentence_tooltip':
@@ -594880,6 +603026,8 @@ extension on _StringsZhCn {
         return '查词窗口最大高度';
       case 'popup_max_width':
         return '查词窗口最大宽度';
+      case 'popup_mine_still_queued':
+        return '已加入制卡，还没确认写进 Anki，暂时不能覆盖。';
       case 'popup_mining_target_empty':
         return '还没有可选的配置或牌组，请先在设置里连接 Anki。';
       case 'popup_mining_target_switch':
@@ -597083,6 +605231,8 @@ extension on _StringsZhCn {
         return '隐藏「困难」和「简单」按钮';
       case 'srs_review_pending_decision':
         return '待你决定';
+      case 'srs_review_replay_audio':
+        return '重播音频';
       case 'srs_review_show_answer':
         return '显示答案';
       case 'srs_review_undo_blocked':
@@ -597097,10 +605247,16 @@ extension on _StringsZhCn {
         return '新算法从下一次复习起生效，已排好的到期日不变；要立即生效请用「立即重排整组」。';
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) => '此牌组的算法来自更新版本，本机暂用 ${alg}';
+      case 'srs_settings_audio':
+        return '音频';
       case 'srs_settings_auto_optimize':
         return '自动优化';
       case 'srs_settings_auto_optimize_hint':
         return '定期按你自己的复习记录调整排程参数';
+      case 'srs_settings_autoplay_audio':
+        return '自动播放音频';
+      case 'srs_settings_autoplay_audio_hint':
+        return '显示问题面或答案面时自动播放卡上的音频；答案面不重播从正面带过来的音频。';
       case 'srs_settings_conflict_replaced':
         return '已被另一台设备的修改替换';
       case 'srs_settings_inherited_from':
@@ -597138,6 +605294,10 @@ extension on _StringsZhCn {
         return '单独设置';
       case 'srs_settings_relearn_steps':
         return '重学步长（分钟）';
+      case 'srs_settings_replay_question_audio':
+        return '重播答案时包含问题音频';
+      case 'srs_settings_replay_question_audio_hint':
+        return '关闭后，在答案面重播只播答案的音频。';
       case 'srs_settings_reschedule':
         return '立即重排整组';
       case 'srs_settings_reschedule_confirm':
@@ -597710,6 +605870,8 @@ extension on _StringsZhCn {
         return ({required Object reason}) => '删除失败：${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return '将立即从磁盘删除。媒体库里没有条目引用它——这里放的是缓存、导出或可重新获取的数据。';
+      case 'storage_entry_delete_video_confirm_body':
+        return '会把这个视频从媒体库移除，并删除本机上的视频文件。';
       case 'storage_entry_external_audio_hint':
         return '音频引用原文件，不占用应用空间';
       case 'storage_entry_more_rest':
@@ -598085,8 +606247,10 @@ extension on _StringsZhCn {
         return '自建中继（可选）';
       case 'sync_p2p_relay_urls_hint':
         return '每行一个 iroh-relay 地址；留空则用 iroh 公共中继。';
-      case 'sync_pair_allow':
-        return '允许';
+      case 'sync_pair_allow_interconnect_only':
+        return '仅互联';
+      case 'sync_pair_allow_owner_device':
+        return '允许 · 这是我的设备';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             '你正在与 ${device} 配对。继续前请确认这是你预期的设备。';
@@ -598198,6 +606362,12 @@ extension on _StringsZhCn {
         return '未知设备';
       case 'sync_pair_upgrade_required':
         return '对方版本过旧，无法在当前网络下安全配对（需要 PIN）。请更新对方后重新配对。';
+      case 'sync_paired_peer_owner_badge':
+        return '我的设备';
+      case 'sync_paired_peer_owner_mark':
+        return '标记为我的设备（可跟随本机 Fushi 账户自动登录）';
+      case 'sync_paired_peer_owner_unmark':
+        return '取消标记为我的设备';
       case 'sync_paired_peer_remove':
         return '移除';
       case 'sync_paired_peer_removed':
@@ -598771,6 +606941,16 @@ extension on _StringsZhCn {
         return '立即检查更新';
       case 'updates_checking':
         return '检查中…';
+      case 'updates_extension_auto_update':
+        return '后台自动更新扩展';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => '需手动更新：${reason}';
+      case 'updates_extension_auto_update_hint':
+        return '启动时自动安装漫画与视频扩展的新版本（只装签名未变的）。本次已打开过在线源时，推迟到下次启动。';
+      case 'updates_extension_auto_update_reason_signature':
+        return '签名已变更';
+      case 'updates_extension_auto_updated':
+        return '已自动更新';
       case 'updates_history_clear':
         return '清空记录';
       case 'updates_history_clear_confirm_action':
@@ -598782,6 +606962,8 @@ extension on _StringsZhCn {
         return '清空更新记录？';
       case 'updates_history_cleared':
         return ({required Object count}) => '已清除 ${count} 条记录';
+      case 'updates_kind_anime_extension':
+        return '视频扩展';
       case 'updates_kind_app_release':
         return '应用新版';
       case 'updates_kind_manga_chapter':
@@ -598807,6 +606989,10 @@ extension on _StringsZhCn {
             '${first} 等 ${count} 项';
       case 'updates_notification_view_all':
         return '查看更新';
+      case 'updates_notify_anime_extension':
+        return '视频扩展更新提醒';
+      case 'updates_notify_anime_extension_hint':
+        return '已装视频扩展在仓库里有更高版本时提醒。';
       case 'updates_notify_app_release':
         return '应用新版提醒';
       case 'updates_notify_app_release_hint':
@@ -603335,6 +611521,88 @@ extension on _StringsZhHk {
         return 'This voice is not available on this device';
       case 'audiobook_tts_import_audiobook':
         return 'Import an audiobook';
+      case 'audiobook_tts_irodori_local_add':
+        return 'Set up Irodori-TTS on this computer';
+      case 'audiobook_tts_irodori_local_add_hint':
+        return 'Download the official Irodori-TTS server and run it here, no command line needed';
+      case 'audiobook_tts_irodori_local_backend':
+        return 'Compute backend';
+      case 'audiobook_tts_irodori_local_backend_apple':
+        return 'Apple silicon (Metal)';
+      case 'audiobook_tts_irodori_local_backend_cpu':
+        return 'CPU';
+      case 'audiobook_tts_irodori_local_backend_cu128':
+        return 'NVIDIA GPU (CUDA 12.8)';
+      case 'audiobook_tts_irodori_local_backend_rocm':
+        return 'AMD GPU (ROCm, Linux)';
+      case 'audiobook_tts_irodori_local_create_voice_hint':
+        return 'Then pick one of the service voices and play a test';
+      case 'audiobook_tts_irodori_local_delete':
+        return 'Delete local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_delete_confirm':
+        return ({required Object path}) =>
+            'This stops the service and deletes ${path}, including the voices you uploaded.';
+      case 'audiobook_tts_irodori_local_dir_hint':
+        return 'Needs about 6–12 GB free. Python, packages, models and your uploaded voices all live in one folder and are deleted together.';
+      case 'audiobook_tts_irodori_local_editor_not_installed':
+        return 'No local service yet? Set up Irodori-TTS on this computer in one step';
+      case 'audiobook_tts_irodori_local_failure_environment':
+        return 'Setting up the Python environment failed. Check the install log and try again.';
+      case 'audiobook_tts_irodori_local_failure_unsupported':
+        return 'This computer is not supported (needs 64-bit Windows, an Apple silicon Mac or 64-bit Linux)';
+      case 'audiobook_tts_irodori_local_install_log':
+        return 'Install log';
+      case 'audiobook_tts_irodori_local_intro':
+        return 'Installs the official Irodori-TTS server with its own Python and PyTorch (2–6 GB) plus the v4.1 model (about 3.5 GB), all inside one folder. A short voice sample is enough to read in that voice, or you can describe a voice in words. It starts automatically when reading aloud and stops when Fushi exits.';
+      case 'audiobook_tts_irodori_local_model':
+        return 'Model';
+      case 'audiobook_tts_irodori_local_model_mf':
+        return 'v4.1 Small MF (several times faster, good for CPU)';
+      case 'audiobook_tts_irodori_local_model_missing':
+        return 'The selected model is not downloaded yet. Download and install fetches only the model.';
+      case 'audiobook_tts_irodori_local_model_small':
+        return 'v4.1 Small (best quality)';
+      case 'audiobook_tts_irodori_local_package':
+        return 'Irodori-TTS environment and model';
+      case 'audiobook_tts_irodori_local_port':
+        return 'Port';
+      case 'audiobook_tts_irodori_local_port_invalid':
+        return 'Use a port from 1024 to 65535, other than 7870, 7871 and 9880';
+      case 'audiobook_tts_irodori_local_source_hf_mirror':
+        return 'hf-mirror.com (mirror in mainland China)';
+      case 'audiobook_tts_irodori_local_step_packages':
+        return 'Installing PyTorch and other packages (several GB, this can take a while)…';
+      case 'audiobook_tts_irodori_local_step_python':
+        return 'Installing Python 3.10…';
+      case 'audiobook_tts_irodori_local_title':
+        return 'Local Irodori-TTS';
+      case 'audiobook_tts_irodori_local_upload':
+        return 'Upload a reference voice';
+      case 'audiobook_tts_irodori_local_upload_done':
+        return ({required Object id}) => 'Uploaded voice ${id}';
+      case 'audiobook_tts_irodori_local_upload_exists':
+        return 'A voice with that ID already exists';
+      case 'audiobook_tts_irodori_local_upload_failed':
+        return 'Upload failed. Check the file and that the service is running.';
+      case 'audiobook_tts_irodori_local_upload_hint':
+        return 'A clean clip of one speaker (WAV, FLAC, MP3 …), a few seconds up to two minutes';
+      case 'audiobook_tts_irodori_local_voice_delete_confirm':
+        return ({required Object id}) =>
+            'Delete voice ${id} from the service? Its audio file is removed.';
+      case 'audiobook_tts_irodori_local_voice_delete_failed':
+        return 'Could not delete this voice (only uploaded voices can be deleted)';
+      case 'audiobook_tts_irodori_local_voice_id':
+        return 'Voice ID';
+      case 'audiobook_tts_irodori_local_voice_id_hint':
+        return 'Letters, digits, - and _ only';
+      case 'audiobook_tts_irodori_local_voice_name':
+        return 'Irodori-TTS (this computer)';
+      case 'audiobook_tts_irodori_local_voices':
+        return 'Voices on the service';
+      case 'audiobook_tts_irodori_local_voices_empty':
+        return 'No uploaded voices yet. The built-in voice "none" reads without a reference.';
+      case 'audiobook_tts_irodori_local_voices_need_running':
+        return 'Start the service to manage its voices';
       case 'audiobook_tts_key_required_hint':
         return 'Requires your own API key';
       case 'audiobook_tts_lang_all_ja':
@@ -603481,12 +611749,18 @@ extension on _StringsZhHk {
         return 'API key';
       case 'audiobook_tts_param_bearer_hint':
         return 'Only needed when the server sits behind an authenticating gateway';
+      case 'audiobook_tts_param_caption':
+        return 'Voice description';
+      case 'audiobook_tts_param_caption_hint':
+        return 'Optional. Describe the voice and delivery, e.g. a calm, low female voice. With the voice "none" this designs a new voice from the description.';
       case 'audiobook_tts_param_endpoint':
         return 'Server URL';
       case 'audiobook_tts_param_invalid':
         return 'This value is not valid';
       case 'audiobook_tts_param_irodori_endpoint_hint':
         return 'Irodori studio uses port 7870, the GPT-SoVITS studio 7871';
+      case 'audiobook_tts_param_irodori_server_endpoint_hint':
+        return 'The official Irodori-TTS server uses port 8088';
       case 'audiobook_tts_param_prompt_lang':
         return 'Reference audio language';
       case 'audiobook_tts_param_prompt_text':
@@ -603524,6 +611798,8 @@ extension on _StringsZhHk {
         return 'GPT-SoVITS';
       case 'audiobook_tts_provider_irodori':
         return 'Irodori studio';
+      case 'audiobook_tts_provider_irodori_server':
+        return 'Irodori-TTS (official server)';
       case 'audiobook_tts_provider_ms_translator':
         return 'Microsoft Translator';
       case 'audiobook_tts_provider_system':
@@ -605401,6 +613677,8 @@ extension on _StringsZhHk {
         return '設定下載後端';
       case 'download_backend_unsupported_note':
         return '本平台無內置引擎，下載使用外接 qBittorrent。';
+      case 'download_batch_clear':
+        return '從列表移除';
       case 'download_batch_delete_confirm':
         return ({required Object n}) => '刪除 ${n} 個下載任務？';
       case 'download_batch_done':
@@ -605409,6 +613687,27 @@ extension on _StringsZhHk {
         return ({required Object n}) => '${n} 項失敗';
       case 'download_batch_unsupported':
         return ({required Object n}) => '${n} 項不支持此操作';
+      case 'download_clear_completed_confirm':
+        return ({required Object n}) =>
+            '清除 ${n} 個已完成的下載任務？不勾選下方選項時只移出列表，已下載的檔案保留。';
+      case 'download_clear_completed_confirm_keeps_files':
+        return ({required Object n}) => '其中 ${n} 個無法在這裡刪除檔案，勾選後也只會移出列表。';
+      case 'download_clear_completed_confirm_needs_delete':
+        return ({required Object n}) => '其中 ${n} 個只能連同檔案一起刪除，不勾選時保持不動。';
+      case 'download_clear_completed_confirm_removes_library':
+        return '對應的影片也會從媒體庫中移除。';
+      case 'download_clear_completed_confirm_seeding':
+        return ({required Object n}) => '其中 ${n} 個正在做種，刪除檔案會同時停止做種。';
+      case 'download_clear_completed_confirm_unsupported':
+        return ({required Object n}) => '其中 ${n} 個不支持在這裡清除，將保持不動。';
+      case 'download_clear_completed_result_cleared':
+        return ({required Object n}) => '已清除 ${n} 項';
+      case 'download_clear_completed_result_files_deleted':
+        return ({required Object n}) => '已刪除 ${n} 項的檔案';
+      case 'download_clear_completed_result_kept_files':
+        return ({required Object n}) => '${n} 項無法刪除檔案，僅清除記錄';
+      case 'download_clear_completed_result_untouched':
+        return ({required Object n}) => '${n} 項未處理';
       case 'download_clear_finished':
         return '清除已完成';
       case 'download_detail_backend_offline':
@@ -605830,6 +614129,10 @@ extension on _StringsZhHk {
         return '等待資源';
       case 'download_task_toggle_failed':
         return '暫停/恢復操作失敗';
+      case 'download_task_work_focus_clear':
+        return '顯示全部任務';
+      case 'download_task_work_focus_label':
+        return ({required Object title}) => '僅顯示「${title}」的任務';
       case 'download_tasks_tab':
         return '任務';
       case 'download_test_connection':
@@ -606010,6 +614313,8 @@ extension on _StringsZhHk {
         return '詳細描述';
       case 'feedback_compose_body_hint':
         return '發生了甚麼、你期望的結果、如何重現';
+      case 'feedback_compose_cancel_video_compression':
+        return 'Cancel compression';
       case 'feedback_compose_contact_field':
         return '聯絡方式（可選）';
       case 'feedback_compose_contact_hint':
@@ -606048,9 +614353,15 @@ extension on _StringsZhHk {
         return '一句話概括';
       case 'feedback_compose_title_missing':
         return '請填寫標題。';
-      case 'feedback_compose_video_hint':
+      case 'feedback_compose_video_1080_hint':
         return ({required Object max}) =>
-            'You can attach 1 video (up to ${max}). It is compressed to 720p before uploading.';
+            'Sharper but larger. Videos longer than about 3 minutes are compressed at 720p instead so they stay within ${max}.';
+      case 'feedback_compose_video_downgraded':
+        return ({required Object max}) =>
+            'This video is too long for 1080p within ${max}, so it is being compressed at 720p.';
+      case 'feedback_compose_video_hint':
+        return ({required Object max, required Object resolution}) =>
+            'You can attach 1 video (up to ${max}). It is compressed to ${resolution} before uploading.';
       case 'feedback_detail_add_shot':
         return 'Add screenshot';
       case 'feedback_detail_attachments':
@@ -608579,6 +616890,14 @@ extension on _StringsZhHk {
         return 'Host version';
       case 'interconnect_host_update_up_to_date':
         return ({required Object version}) => 'Host is up to date (${version})';
+      case 'interconnect_leaderboard_follow_login_toggle':
+        return '跟隨已配對裝置自動登入';
+      case 'interconnect_leaderboard_follow_login_toggle_desc':
+        return '本機沒有 Fushi 帳戶時，自動使用已登入的已配對裝置的帳戶登入（僅當對方把本機標記為「我的裝置」時生效）。只傳送本機新產生的公鑰；主動登出後不會再自動登入。';
+      case 'interconnect_leaderboard_link_host_toggle':
+        return '允許已配對裝置自動登入我的帳戶';
+      case 'interconnect_leaderboard_link_host_toggle_desc':
+        return '僅對標記為「我的裝置」的已配對裝置生效：它們沒有 Fushi 帳戶時會自動使用本機的帳戶登入（需開啟 HTTPS）。本機私鑰不會離開本機。';
       case 'interconnect_moved_note':
         return '互聯連接與本機伺服器設定在「Fushi 互聯」分類';
       case 'interconnect_peer_list_empty':
@@ -608954,6 +617273,11 @@ extension on _StringsZhHk {
         return '加載更多';
       case 'leaderboard_metric_chars':
         return '字數';
+      case 'leaderboard_paired_login_done':
+        return ({required Object device, required Object name}) =>
+            '已使用 ${device} 的帳戶登入：${name}';
+      case 'leaderboard_paired_login_done_generic':
+        return ({required Object name}) => '已使用已配對裝置的帳戶登入：${name}';
       case 'leaderboard_readers':
         return ({required Object n}) => '${n} 人';
       case 'leaderboard_recovery_export_hint':
@@ -609352,6 +617676,10 @@ extension on _StringsZhHk {
         return '歌詞模式';
       case 'lyrics_sentence_replay':
         return 'Replay current sentence';
+      case 'lyrics_skipped_text_show':
+        return 'Show unread book text';
+      case 'lyrics_skipped_text_show_hint':
+        return 'Book text the narrator skipped, or the transcript could not match, appears between lines in small grey text';
       case 'lyrics_sweep':
         return 'Word-by-word sweep';
       case 'lyrics_sweep_hint':
@@ -610809,8 +619137,16 @@ extension on _StringsZhHk {
         return '模型檔案';
       case 'models_tts_card_fallback_section':
         return 'Card audio fallback';
-      case 'models_tts_engine':
-        return '引擎';
+      case 'models_tts_fallback_off':
+        return 'Don\'t use TTS';
+      case 'models_tts_fallback_online_notice':
+        return 'The word is sent to this online service';
+      case 'models_tts_fallback_voice':
+        return 'Fallback voice';
+      case 'models_tts_fallback_voice_hint':
+        return 'Voice used to generate word audio when none is found';
+      case 'models_tts_fallback_voice_missing':
+        return 'The selected voice was deleted';
       case 'models_tts_summary':
         return '朗讀聲音、本機 GPT-SoVITS 與製卡發音備援';
       case 'models_tts_title':
@@ -611681,6 +620017,22 @@ extension on _StringsZhHk {
         return 'None';
       case 'popup_advanced_mining_image_section':
         return 'Image';
+      case 'popup_advanced_mining_mosaic_clear':
+        return 'Clear';
+      case 'popup_advanced_mining_mosaic_count':
+        return ({required Object count}) => 'Masked ${count}';
+      case 'popup_advanced_mining_mosaic_edit':
+        return 'Mosaic';
+      case 'popup_advanced_mining_mosaic_forces_still':
+        return 'With mosaic, the card uses a still screenshot instead of an animation or clip';
+      case 'popup_advanced_mining_mosaic_hint':
+        return 'Drag on the image to mask an area';
+      case 'popup_advanced_mining_mosaic_none':
+        return 'No mosaic';
+      case 'popup_advanced_mining_mosaic_page_title':
+        return 'Mosaic areas';
+      case 'popup_advanced_mining_mosaic_undo':
+        return 'Undo';
       case 'popup_advanced_mining_reset':
         return 'Reset to one-click defaults';
       case 'popup_advanced_mining_sentence_count':
@@ -611689,6 +620041,12 @@ extension on _StringsZhHk {
         return 'Sentences';
       case 'popup_advanced_mining_sentence_shortcut_hint':
         return 'Shortcuts: [ / ] add or remove previous · Shift+[ / ] add or remove next';
+      case 'popup_advanced_mining_still_screenshot':
+        return 'Screenshot';
+      case 'popup_advanced_mining_still_stale':
+        return 'This is the screen when the dialog opened, not the scene at that line';
+      case 'popup_advanced_mining_still_unavailable':
+        return 'Screenshot unavailable';
       case 'popup_advanced_mining_title':
         return 'Advanced mining';
       case 'popup_append_sentence_tooltip':
@@ -611783,6 +620141,8 @@ extension on _StringsZhHk {
         return '查詞視窗最大高度';
       case 'popup_max_width':
         return '查詞視窗最大寬度';
+      case 'popup_mine_still_queued':
+        return '已加入製卡，尚未確認寫入 Anki，暫時不能覆蓋。';
       case 'popup_mining_target_empty':
         return 'No profiles or decks yet. Connect Anki in settings first.';
       case 'popup_mining_target_switch':
@@ -614005,6 +622365,8 @@ extension on _StringsZhHk {
         return 'Hide ‘Hard’ and ‘Easy’ buttons';
       case 'srs_review_pending_decision':
         return 'Needs your decision';
+      case 'srs_review_replay_audio':
+        return 'Replay audio';
       case 'srs_review_show_answer':
         return 'Show answer';
       case 'srs_review_undo_blocked':
@@ -614020,10 +622382,16 @@ extension on _StringsZhHk {
       case 'srs_settings_algorithm_unknown':
         return ({required Object alg}) =>
             'This deck uses an algorithm from a newer version; this device uses ${alg} for now';
+      case 'srs_settings_audio':
+        return 'Audio';
       case 'srs_settings_auto_optimize':
         return 'Optimize automatically';
       case 'srs_settings_auto_optimize_hint':
         return 'Fit the scheduling parameters to your own review history from time to time';
+      case 'srs_settings_autoplay_audio':
+        return 'Autoplay audio';
+      case 'srs_settings_autoplay_audio_hint':
+        return 'Play the card\'s audio when the question or the answer is shown. The answer side skips audio carried over from the front.';
       case 'srs_settings_conflict_replaced':
         return 'Replaced by a change from another device';
       case 'srs_settings_inherited_from':
@@ -614062,6 +622430,10 @@ extension on _StringsZhHk {
         return 'Own settings';
       case 'srs_settings_relearn_steps':
         return 'Relearning steps (minutes)';
+      case 'srs_settings_replay_question_audio':
+        return 'Include question audio when replaying answer';
+      case 'srs_settings_replay_question_audio_hint':
+        return 'When off, Replay audio on the answer side plays only the answer\'s audio.';
       case 'srs_settings_reschedule':
         return 'Reschedule deck now';
       case 'srs_settings_reschedule_confirm':
@@ -614634,6 +623006,8 @@ extension on _StringsZhHk {
         return ({required Object reason}) => '刪除失敗：${reason}';
       case 'storage_entry_delete_files_confirm_body':
         return '將立即從磁碟刪除。媒體庫裡沒有項目引用它——這裡放的是快取、匯出或可重新取得的資料。';
+      case 'storage_entry_delete_video_confirm_body':
+        return 'Removes this video from the library and deletes its file from this device.';
       case 'storage_entry_external_audio_hint':
         return '音訊引用原檔案，不佔用應用空間';
       case 'storage_entry_more_rest':
@@ -615010,8 +623384,10 @@ extension on _StringsZhHk {
         return '自建中繼（可選）';
       case 'sync_p2p_relay_urls_hint':
         return '每行一個 iroh-relay 地址；留空則用 iroh 公共中繼。';
-      case 'sync_pair_allow':
-        return '允許';
+      case 'sync_pair_allow_interconnect_only':
+        return '僅互聯';
+      case 'sync_pair_allow_owner_device':
+        return '允許 · 這是我的裝置';
       case 'sync_pair_confirm_identity_body':
         return ({required Object device}) =>
             '你正在與 ${device} 配對。繼續前請確認這是你預期的設備。';
@@ -615123,6 +623499,12 @@ extension on _StringsZhHk {
         return '未知裝置';
       case 'sync_pair_upgrade_required':
         return '對方版本過舊，無法在當前網路下安全配對（需要 PIN）。請更新對方後重新配對。';
+      case 'sync_paired_peer_owner_badge':
+        return '我的裝置';
+      case 'sync_paired_peer_owner_mark':
+        return '標記為我的裝置（可跟隨本機 Fushi 帳戶自動登入）';
+      case 'sync_paired_peer_owner_unmark':
+        return '取消標記為我的裝置';
       case 'sync_paired_peer_remove':
         return '移除';
       case 'sync_paired_peer_removed':
@@ -615696,6 +624078,16 @@ extension on _StringsZhHk {
         return '立即檢查更新';
       case 'updates_checking':
         return '檢查中…';
+      case 'updates_extension_auto_update':
+        return 'Auto-update extensions in the background';
+      case 'updates_extension_auto_update_failed':
+        return ({required Object reason}) => 'Needs manual update: ${reason}';
+      case 'updates_extension_auto_update_hint':
+        return 'On launch, install newer versions of manga and video extensions whose signature hasn\'t changed. If online sources were already opened, it waits until the next launch.';
+      case 'updates_extension_auto_update_reason_signature':
+        return 'the signature changed';
+      case 'updates_extension_auto_updated':
+        return 'Updated automatically';
       case 'updates_history_clear':
         return '清空記錄';
       case 'updates_history_clear_confirm_action':
@@ -615707,6 +624099,8 @@ extension on _StringsZhHk {
         return '清空更新記錄？';
       case 'updates_history_cleared':
         return ({required Object count}) => '已清除 ${count} 條記錄';
+      case 'updates_kind_anime_extension':
+        return 'Video extensions';
       case 'updates_kind_app_release':
         return '應用新版';
       case 'updates_kind_manga_chapter':
@@ -615732,6 +624126,10 @@ extension on _StringsZhHk {
             '${first} 等 ${count} 項';
       case 'updates_notification_view_all':
         return '查看更新';
+      case 'updates_notify_anime_extension':
+        return 'Notify about video extension updates';
+      case 'updates_notify_anime_extension_hint':
+        return 'Alert when an installed video extension has a newer version in its repository.';
       case 'updates_notify_app_release':
         return '應用新版提醒';
       case 'updates_notify_app_release_hint':
