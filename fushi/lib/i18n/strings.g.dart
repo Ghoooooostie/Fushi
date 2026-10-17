@@ -6962,7 +6962,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mining_clip_format_mp4_h264 =>
       'MP4 · H.264 (Anki\'s own player; use for AnkiMobile)';
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9; desktop only)';
+      'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9)';
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (plays inside the card, recommended)';
   String get mining_image_quality => 'Image / GIF quality';
@@ -23426,7 +23426,7 @@ class _StringsAr extends _StringsEn {
       'MP4 · H.264 (مشغّل Anki نفسه؛ استخدمه مع AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9؛ لسطح المكتب فقط)';
+      'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (يُشغَّل داخل البطاقة، موصى به)';
@@ -43785,7 +43785,7 @@ class _StringsDe extends _StringsEn {
       'MP4 · H.264 (eigener Player von Anki; für AnkiMobile verwenden)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9; nur Desktop)';
+      'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (wird in der Karte abgespielt, empfohlen)';
@@ -64322,7 +64322,7 @@ class _StringsEs extends _StringsEn {
       'MP4 · H.264 (reproductor propio de Anki; úsalo para AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9; solo escritorio)';
+      'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (se reproduce dentro de la tarjeta, recomendado)';
@@ -84936,7 +84936,7 @@ class _StringsFr extends _StringsEn {
       'MP4 · H.264 (lecteur propre d\'Anki ; à utiliser pour AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9 ; ordinateur uniquement)';
+      'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (lu dans la carte, recommandé)';
@@ -105387,7 +105387,7 @@ class _StringsId extends _StringsEn {
       'MP4 · H.264 (pemutar Anki sendiri; gunakan untuk AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9; hanya desktop)';
+      'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (diputar di dalam kartu, direkomendasikan)';
@@ -125792,7 +125792,7 @@ class _StringsIt extends _StringsEn {
       'MP4 · H.264 (lettore di Anki; da usare per AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9; solo desktop)';
+      'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (si riproduce dentro la carta, consigliato)';
@@ -145680,7 +145680,7 @@ class _StringsJa extends _StringsEn {
       'MP4 · H.264（Anki 独自のプレーヤー。AnkiMobile 向け）';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間。デスクトップのみ）';
+      'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間）';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9（カード内で再生、推奨）';
   @override
@@ -165154,7 +165154,7 @@ class _StringsKo extends _StringsEn {
       'MP4 · H.264 (Anki 자체 플레이어, AnkiMobile용)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배, 데스크톱 전용)';
+      'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배)';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9 (카드 안에서 재생, 권장)';
   @override
@@ -185173,7 +185173,7 @@ class _StringsNl extends _StringsEn {
       'MP4 · H.264 (eigen speler van Anki; gebruik voor AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9; alleen desktop)';
+      'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (speelt binnen de kaart af, aanbevolen)';
@@ -205639,7 +205639,7 @@ class _StringsPtBr extends _StringsEn {
       'MP4 · H.264 (player do próprio Anki; use para o AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9; somente desktop)';
+      'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (reproduz dentro do cartão, recomendado)';
@@ -226078,7 +226078,7 @@ class _StringsRu extends _StringsEn {
       'MP4 · H.264 (встроенный плеер Anki; для AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9; только на компьютере)';
+      'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (воспроизводится внутри карточки, рекомендуется)';
@@ -246330,7 +246330,7 @@ class _StringsTh extends _StringsEn {
       'MP4 · H.264 (เครื่องเล่นของ Anki เอง ใช้กับ AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9 เฉพาะเดสก์ท็อป)';
+      'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9)';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9 (เล่นในการ์ด แนะนำ)';
   @override
@@ -266567,7 +266567,7 @@ class _StringsTr extends _StringsEn {
       'MP4 · H.264 (Anki\'nin kendi oynatıcısı; AnkiMobile için kullanın)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi; yalnızca masaüstü)';
+      'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (kartın içinde oynar, önerilir)';
@@ -286839,7 +286839,7 @@ class _StringsVi extends _StringsEn {
       'MP4 · H.264 (trình phát riêng của Anki; dùng cho AnkiMobile)';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9; chỉ máy tính)';
+      'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9)';
   @override
   String get mining_clip_format_webm_vp9 =>
       'WebM · VP9 (phát trong thẻ, khuyến nghị)';
@@ -306087,7 +306087,7 @@ class _StringsZhCn extends _StringsEn {
       'MP4 · H.264（Anki 自带播放器；AnkiMobile 用这个）';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍；仅桌面端）';
+      'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍）';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9（卡片内播放，推荐）';
   @override
@@ -324780,7 +324780,7 @@ class _StringsZhHk extends _StringsEn {
       'MP4 · H.264（Anki 自帶播放器；AnkiMobile 用這個）';
   @override
   String get mining_clip_format_webm_av1 =>
-      'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍；僅桌面端）';
+      'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍）';
   @override
   String get mining_clip_format_webm_vp9 => 'WebM · VP9（卡片內播放，推薦）';
   @override
@@ -342689,7 +342689,7 @@ extension on _StringsEn {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (Anki\'s own player; use for AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9; desktop only)';
+        return 'WebM · AV1 (plays inside the card; smallest file, about 2× the encode time of VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (plays inside the card, recommended)';
       case 'mining_image_quality':
@@ -359961,7 +359961,7 @@ extension on _StringsAr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (مشغّل Anki نفسه؛ استخدمه مع AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9؛ لسطح المكتب فقط)';
+        return 'WebM · AV1 (يُشغَّل داخل البطاقة؛ أصغر ملف، نحو ضعف وقت الترميز مقارنة بـ VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (يُشغَّل داخل البطاقة، موصى به)';
       case 'mining_image_quality':
@@ -377284,7 +377284,7 @@ extension on _StringsDe {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (eigener Player von Anki; für AnkiMobile verwenden)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9; nur Desktop)';
+        return 'WebM · AV1 (wird in der Karte abgespielt; kleinste Datei, etwa die doppelte Kodierzeit von VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (wird in der Karte abgespielt, empfohlen)';
       case 'mining_image_quality':
@@ -394617,7 +394617,7 @@ extension on _StringsEs {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (reproductor propio de Anki; úsalo para AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9; solo escritorio)';
+        return 'WebM · AV1 (se reproduce dentro de la tarjeta; archivo más pequeño, unas 2× el tiempo de codificación de VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (se reproduce dentro de la tarjeta, recomendado)';
       case 'mining_image_quality':
@@ -411960,7 +411960,7 @@ extension on _StringsFr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (lecteur propre d\'Anki ; à utiliser pour AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9 ; ordinateur uniquement)';
+        return 'WebM · AV1 (lu dans la carte ; fichier le plus petit, environ 2× le temps d\'encodage de VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (lu dans la carte, recommandé)';
       case 'mining_image_quality':
@@ -429272,7 +429272,7 @@ extension on _StringsId {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (pemutar Anki sendiri; gunakan untuk AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9; hanya desktop)';
+        return 'WebM · AV1 (diputar di dalam kartu; file terkecil, sekitar 2× waktu enkode VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (diputar di dalam kartu, direkomendasikan)';
       case 'mining_image_quality':
@@ -446581,7 +446581,7 @@ extension on _StringsIt {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (lettore di Anki; da usare per AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9; solo desktop)';
+        return 'WebM · AV1 (si riproduce dentro la carta; file più piccolo, circa 2× il tempo di codifica di VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (si riproduce dentro la carta, consigliato)';
       case 'mining_image_quality':
@@ -463838,7 +463838,7 @@ extension on _StringsJa {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264（Anki 独自のプレーヤー。AnkiMobile 向け）';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間。デスクトップのみ）';
+        return 'WebM · AV1（カード内で再生。最小サイズだが、エンコードに VP9 の約 2 倍の時間）';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9（カード内で再生、推奨）';
       case 'mining_image_quality':
@@ -481040,7 +481040,7 @@ extension on _StringsKo {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (Anki 자체 플레이어, AnkiMobile용)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배, 데스크톱 전용)';
+        return 'WebM · AV1 (카드 안에서 재생. 파일이 가장 작고 인코딩 시간은 VP9의 약 2배)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (카드 안에서 재생, 권장)';
       case 'mining_image_quality':
@@ -498318,7 +498318,7 @@ extension on _StringsNl {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (eigen speler van Anki; gebruik voor AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9; alleen desktop)';
+        return 'WebM · AV1 (speelt binnen de kaart af; kleinste bestand, ongeveer 2× de coderingstijd van VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (speelt binnen de kaart af, aanbevolen)';
       case 'mining_image_quality':
@@ -515635,7 +515635,7 @@ extension on _StringsPtBr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (player do próprio Anki; use para o AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9; somente desktop)';
+        return 'WebM · AV1 (reproduz dentro do cartão; menor arquivo, cerca de 2× o tempo de codificação do VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (reproduz dentro do cartão, recomendado)';
       case 'mining_image_quality':
@@ -532956,7 +532956,7 @@ extension on _StringsRu {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (встроенный плеер Anki; для AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9; только на компьютере)';
+        return 'WebM · AV1 (воспроизводится внутри карточки; самый маленький файл, кодирование примерно вдвое дольше, чем VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (воспроизводится внутри карточки, рекомендуется)';
       case 'mining_image_quality':
@@ -550242,7 +550242,7 @@ extension on _StringsTh {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (เครื่องเล่นของ Anki เอง ใช้กับ AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9 เฉพาะเดสก์ท็อป)';
+        return 'WebM · AV1 (เล่นในการ์ด ไฟล์เล็กที่สุด ใช้เวลาเข้ารหัสประมาณ 2 เท่าของ VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (เล่นในการ์ด แนะนำ)';
       case 'mining_image_quality':
@@ -567541,7 +567541,7 @@ extension on _StringsTr {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (Anki\'nin kendi oynatıcısı; AnkiMobile için kullanın)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi; yalnızca masaüstü)';
+        return 'WebM · AV1 (kartın içinde oynar; en küçük dosya, VP9\'un yaklaşık 2× kodlama süresi)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (kartın içinde oynar, önerilir)';
       case 'mining_image_quality':
@@ -584832,7 +584832,7 @@ extension on _StringsVi {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264 (trình phát riêng của Anki; dùng cho AnkiMobile)';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9; chỉ máy tính)';
+        return 'WebM · AV1 (phát trong thẻ; tệp nhỏ nhất, thời gian mã hóa gấp khoảng 2× VP9)';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9 (phát trong thẻ, khuyến nghị)';
       case 'mining_image_quality':
@@ -601998,7 +601998,7 @@ extension on _StringsZhCn {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264（Anki 自带播放器；AnkiMobile 用这个）';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍；仅桌面端）';
+        return 'WebM · AV1（卡片内播放；体积最小，编码耗时约为 VP9 的 2 倍）';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9（卡片内播放，推荐）';
       case 'mining_image_quality':
@@ -619112,7 +619112,7 @@ extension on _StringsZhHk {
       case 'mining_clip_format_mp4_h264':
         return 'MP4 · H.264（Anki 自帶播放器；AnkiMobile 用這個）';
       case 'mining_clip_format_webm_av1':
-        return 'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍；僅桌面端）';
+        return 'WebM · AV1（卡片內播放；體積最小，編碼耗時約為 VP9 的 2 倍）';
       case 'mining_clip_format_webm_vp9':
         return 'WebM · VP9（卡片內播放，推薦）';
       case 'mining_image_quality':
