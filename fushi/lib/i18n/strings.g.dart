@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142426 (8378 per locale)
+/// Strings: 142460 (8380 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12054,6 +12054,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String web_video_mine_switch_builtin({required Object count}) =>
       'Switch to built-in mode to create ${count} queued cards';
   String get web_video_no_tracks => 'No subtitles captured yet';
+  String get web_video_page_show => 'Back to web page';
+  String get web_video_player_open => 'Watch in player';
   String get web_video_player_unavailable =>
       'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
   String get web_video_track_live => 'Live captions (sampled from page)';
@@ -32285,6 +32287,10 @@ class _StringsAr extends _StringsEn {
       'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
   @override
   String get web_video_no_tracks => 'لم يتم التقاط أي ترجمة بعد';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
@@ -52924,6 +52930,10 @@ class _StringsDe extends _StringsEn {
       'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
   @override
   String get web_video_no_tracks => 'Noch keine Untertitel erfasst';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
@@ -73619,6 +73629,10 @@ class _StringsEs extends _StringsEn {
       'Cambiar al modo integrado para crear ${count} tarjetas en cola';
   @override
   String get web_video_no_tracks => 'Aún no se han capturado subtítulos';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
@@ -94397,6 +94411,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_video_no_tracks => 'Aucun sous-titre capturé pour l’instant';
   @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
+  @override
   String get web_video_player_unavailable =>
       'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
   @override
@@ -114830,6 +114848,10 @@ class _StringsId extends _StringsEn {
       'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
   @override
   String get web_video_no_tracks => 'Belum ada subtitel yang ditangkap';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
@@ -135427,6 +135449,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_video_no_tracks => 'Nessun sottotitolo acquisito ancora';
   @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
+  @override
   String get web_video_player_unavailable =>
       'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
   @override
@@ -155008,6 +155034,10 @@ class _StringsJa extends _StringsEn {
       '内蔵モードに切り替えて ${count} 件のカードを作成';
   @override
   String get web_video_no_tracks => '字幕はまだ取得されていません';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
@@ -174626,6 +174656,10 @@ class _StringsKo extends _StringsEn {
       '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
   @override
   String get web_video_no_tracks => '아직 수집된 자막이 없습니다';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
@@ -195170,6 +195204,10 @@ class _StringsNl extends _StringsEn {
       'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
   @override
   String get web_video_no_tracks => 'Nog geen ondertitels vastgelegd';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
@@ -215784,6 +215822,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_video_no_tracks => 'Nenhuma legenda capturada ainda';
   @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
+  @override
   String get web_video_player_unavailable =>
       'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
   @override
@@ -236344,6 +236386,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_video_no_tracks => 'Субтитры пока не получены';
   @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
+  @override
   String get web_video_player_unavailable =>
       'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
   @override
@@ -256579,6 +256625,10 @@ class _StringsTh extends _StringsEn {
       'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
   @override
   String get web_video_no_tracks => 'ยังไม่ได้เก็บคำบรรยาย';
+  @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
   @override
   String get web_video_player_unavailable =>
       'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
@@ -277019,6 +277069,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_video_no_tracks => 'Henüz altyazı yakalanmadı';
   @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
+  @override
   String get web_video_player_unavailable =>
       'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
   @override
@@ -297386,6 +297440,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_video_no_tracks => 'Chưa bắt được phụ đề nào';
   @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
+  @override
   String get web_video_player_unavailable =>
       'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
   @override
@@ -316003,6 +316061,10 @@ class _StringsZhCn extends _StringsEn {
       '切到内置模式制作 ${count} 张排队卡片';
   @override
   String get web_video_no_tracks => '尚未采集到字幕';
+  @override
+  String get web_video_page_show => '回到网页';
+  @override
+  String get web_video_player_open => '在播放器里看';
   @override
   String get web_video_player_unavailable => '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
   @override
@@ -335011,6 +335073,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_video_no_tracks => '尚未擷取到字幕';
   @override
+  String get web_video_page_show => 'Back to web page';
+  @override
+  String get web_video_player_open => 'Watch in player';
+  @override
   String get web_video_player_unavailable => '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
   @override
   String get web_video_track_live => '即時字幕（從頁面取樣）';
@@ -352399,6 +352465,10 @@ extension on _StringsEn {
             'Switch to built-in mode to create ${count} queued cards';
       case 'web_video_no_tracks':
         return 'No subtitles captured yet';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
       case 'web_video_track_live':
@@ -369783,6 +369853,10 @@ extension on _StringsAr {
             'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
       case 'web_video_no_tracks':
         return 'لم يتم التقاط أي ترجمة بعد';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
       case 'web_video_track_live':
@@ -387243,6 +387317,10 @@ extension on _StringsDe {
             'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
       case 'web_video_no_tracks':
         return 'Noch keine Untertitel erfasst';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
       case 'web_video_track_live':
@@ -404685,6 +404763,10 @@ extension on _StringsEs {
             'Cambiar al modo integrado para crear ${count} tarjetas en cola';
       case 'web_video_no_tracks':
         return 'Aún no se han capturado subtítulos';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
       case 'web_video_track_live':
@@ -422145,6 +422227,10 @@ extension on _StringsFr {
             'Passer en mode intégré pour créer ${count} cartes en attente';
       case 'web_video_no_tracks':
         return 'Aucun sous-titre capturé pour l’instant';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
       case 'web_video_track_live':
@@ -439549,6 +439635,10 @@ extension on _StringsId {
             'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
       case 'web_video_no_tracks':
         return 'Belum ada subtitel yang ditangkap';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
       case 'web_video_track_live':
@@ -456989,6 +457079,10 @@ extension on _StringsIt {
             'Passa alla modalità integrata per creare ${count} carte in coda';
       case 'web_video_no_tracks':
         return 'Nessun sottotitolo acquisito ancora';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
       case 'web_video_track_live':
@@ -474302,6 +474396,10 @@ extension on _StringsJa {
         return ({required Object count}) => '内蔵モードに切り替えて ${count} 件のカードを作成';
       case 'web_video_no_tracks':
         return '字幕はまだ取得されていません';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
       case 'web_video_track_live':
@@ -491624,6 +491722,10 @@ extension on _StringsKo {
             '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
       case 'web_video_no_tracks':
         return '아직 수집된 자막이 없습니다';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
       case 'web_video_track_live':
@@ -509057,6 +509159,10 @@ extension on _StringsNl {
             'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
       case 'web_video_no_tracks':
         return 'Nog geen ondertitels vastgelegd';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
       case 'web_video_track_live':
@@ -526484,6 +526590,10 @@ extension on _StringsPtBr {
             'Mudar para o modo integrado para criar ${count} cartões na fila';
       case 'web_video_no_tracks':
         return 'Nenhuma legenda capturada ainda';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
       case 'web_video_track_live':
@@ -543916,6 +544026,10 @@ extension on _StringsRu {
             'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
       case 'web_video_no_tracks':
         return 'Субтитры пока не получены';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
       case 'web_video_track_live':
@@ -561304,6 +561418,10 @@ extension on _StringsTh {
             'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
       case 'web_video_no_tracks':
         return 'ยังไม่ได้เก็บคำบรรยาย';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
       case 'web_video_track_live':
@@ -578723,6 +578841,10 @@ extension on _StringsTr {
             '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
       case 'web_video_no_tracks':
         return 'Henüz altyazı yakalanmadı';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
       case 'web_video_track_live':
@@ -596125,6 +596247,10 @@ extension on _StringsVi {
             'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
       case 'web_video_no_tracks':
         return 'Chưa bắt được phụ đề nào';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
       case 'web_video_track_live':
@@ -613323,6 +613449,10 @@ extension on _StringsZhCn {
         return ({required Object count}) => '切到内置模式制作 ${count} 张排队卡片';
       case 'web_video_no_tracks':
         return '尚未采集到字幕';
+      case 'web_video_page_show':
+        return '回到网页';
+      case 'web_video_player_open':
+        return '在播放器里看';
       case 'web_video_player_unavailable':
         return '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
       case 'web_video_track_live':
@@ -630574,6 +630704,10 @@ extension on _StringsZhHk {
         return ({required Object count}) => '切換到內建模式製作 ${count} 張排隊卡片';
       case 'web_video_no_tracks':
         return '尚未擷取到字幕';
+      case 'web_video_page_show':
+        return 'Back to web page';
+      case 'web_video_player_open':
+        return 'Watch in player';
       case 'web_video_player_unavailable':
         return '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
       case 'web_video_track_live':
