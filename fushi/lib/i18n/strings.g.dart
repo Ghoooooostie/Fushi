@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142460 (8380 per locale)
+/// Strings: 142596 (8388 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10767,6 +10767,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
   String get video_library_scrape_pending_banner_action => 'Confirm';
+  String get video_library_sites => 'Sites';
   String get video_load_failed_back => 'Back';
   String get video_load_failed_generic => 'Couldn\'t load this video.';
   String get video_load_failed_network =>
@@ -12058,6 +12059,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_player_open => 'Watch in player';
   String get web_video_player_unavailable =>
       'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
+  String get web_video_site_add => 'Add site';
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  String get web_video_site_address_invalid => 'Not a web address';
+  String get web_video_site_name_hint => 'Name (optional)';
+  String get web_video_site_open => 'Open';
+  String get web_video_site_remove => 'Remove';
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   String get web_video_track_live => 'Live captions (sampled from page)';
   String get web_video_track_menu => 'Subtitle track';
   String get wheel_page_turn_interval => 'Mouse wheel page-turn interval';
@@ -30140,6 +30149,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'تأكيد';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'رجوع';
   @override
   String get video_load_failed_generic => 'تعذر تحميل هذا الفيديو.';
@@ -32294,6 +32305,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live => 'ترجمة مباشرة (مأخوذة من الصفحة)';
   @override
@@ -50731,6 +50757,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Bestätigen';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'Zurück';
   @override
   String get video_load_failed_generic =>
@@ -52937,6 +52965,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live => 'Live-Untertitel (von der Seite erfasst)';
   @override
@@ -71420,6 +71463,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Confirmar';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'Atrás';
   @override
   String get video_load_failed_generic => 'No se pudo cargar este vídeo.';
@@ -73636,6 +73681,21 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live =>
       'Subtítulos en vivo (capturados de la página)';
@@ -92183,6 +92243,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Confirmer';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'Retour';
   @override
   String get video_load_failed_generic => 'Impossible de charger cette vidéo.';
@@ -94417,6 +94479,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live =>
       'Sous-titres en direct (capturés sur la page)';
@@ -112673,6 +112750,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Konfirmasi';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'Kembali';
   @override
   String get video_load_failed_generic => 'Tidak bisa memuat video ini.';
@@ -114855,6 +114934,21 @@ class _StringsId extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live => 'Teks langsung (diambil dari halaman)';
   @override
@@ -133253,6 +133347,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Conferma';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'Indietro';
   @override
   String get video_load_failed_generic => 'Impossibile caricare questo video.';
@@ -135455,6 +135551,21 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live =>
       'Sottotitoli live (campionati dalla pagina)';
@@ -152980,6 +153091,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => '確認';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => '戻る';
   @override
   String get video_load_failed_generic => 'この動画を読み込めませんでした。';
@@ -155041,6 +155154,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live => 'ライブ字幕（ページから取得）';
   @override
@@ -172590,6 +172718,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => '확인';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => '뒤로';
   @override
   String get video_load_failed_generic => '이 동영상을 불러올 수 없습니다.';
@@ -174663,6 +174793,21 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live => '실시간 자막(페이지에서 수집)';
   @override
@@ -193017,6 +193162,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Bevestigen';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'Terug';
   @override
   String get video_load_failed_generic => 'Kon deze video niet laden.';
@@ -195211,6 +195358,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live => 'Live-ondertitels (van de pagina)';
   @override
@@ -213618,6 +213780,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Confirmar';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'Voltar';
   @override
   String get video_load_failed_generic =>
@@ -215828,6 +215992,21 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live => 'Legendas ao vivo (capturadas da página)';
   @override
@@ -234184,6 +234363,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Подтвердить';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'Назад';
   @override
   String get video_load_failed_generic => 'Не удалось загрузить это видео.';
@@ -236392,6 +236573,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live => 'Живые субтитры (с страницы)';
   @override
@@ -254481,6 +254677,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'ยืนยัน';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'ย้อนกลับ';
   @override
   String get video_load_failed_generic => 'ไม่สามารถโหลดวิดีโอนี้ได้';
@@ -256632,6 +256830,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live => 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
   @override
@@ -274893,6 +275106,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Onayla';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'Geri';
   @override
   String get video_load_failed_generic => 'Bu video yüklenemedi.';
@@ -277075,6 +277290,21 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live => 'Canlı altyazılar (sayfadan alınan)';
   @override
@@ -295273,6 +295503,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Xác nhận';
   @override
+  String get video_library_sites => 'Sites';
+  @override
   String get video_load_failed_back => 'Quay lại';
   @override
   String get video_load_failed_generic => 'Không thể tải video này.';
@@ -297446,6 +297678,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_video_player_unavailable =>
       'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
+  @override
+  String get web_video_site_add => 'Add site';
+  @override
+  String get web_video_site_address_hint => 'Web address, e.g. netflix.com';
+  @override
+  String get web_video_site_address_invalid => 'Not a web address';
+  @override
+  String get web_video_site_name_hint => 'Name (optional)';
+  @override
+  String get web_video_site_open => 'Open';
+  @override
+  String get web_video_site_remove => 'Remove';
+  @override
+  String get web_video_sites_hint =>
+      'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   @override
   String get web_video_track_live => 'Phụ đề trực tiếp (lấy từ trang)';
   @override
@@ -314118,6 +314365,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => '去确认';
   @override
+  String get video_library_sites => '网站';
+  @override
   String get video_load_failed_back => '返回';
   @override
   String get video_load_failed_generic => '无法加载该视频。';
@@ -316067,6 +316316,21 @@ class _StringsZhCn extends _StringsEn {
   String get web_video_player_open => '在播放器里看';
   @override
   String get web_video_player_unavailable => '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
+  @override
+  String get web_video_site_add => '添加网站';
+  @override
+  String get web_video_site_address_hint => '网址，比如 netflix.com';
+  @override
+  String get web_video_site_address_invalid => '不是有效的网址';
+  @override
+  String get web_video_site_name_hint => '名称（可选）';
+  @override
+  String get web_video_site_open => '打开';
+  @override
+  String get web_video_site_remove => '移除';
+  @override
+  String get web_video_sites_hint =>
+      '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
   @override
   String get web_video_track_live => '实时采集（页面字幕）';
   @override
@@ -333081,6 +333345,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => '去確認';
   @override
+  String get video_library_sites => '網站';
+  @override
   String get video_load_failed_back => '返回';
   @override
   String get video_load_failed_generic => '無法加載該影片。';
@@ -335073,11 +335339,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_video_no_tracks => '尚未擷取到字幕';
   @override
-  String get web_video_page_show => 'Back to web page';
+  String get web_video_page_show => '回到網頁';
   @override
-  String get web_video_player_open => 'Watch in player';
+  String get web_video_player_open => '在播放器裡看';
   @override
   String get web_video_player_unavailable => '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
+  @override
+  String get web_video_site_add => '新增網站';
+  @override
+  String get web_video_site_address_hint => '網址，例如 netflix.com';
+  @override
+  String get web_video_site_address_invalid => '不是有效的網址';
+  @override
+  String get web_video_site_name_hint => '名稱（可選）';
+  @override
+  String get web_video_site_open => '開啟';
+  @override
+  String get web_video_site_remove => '移除';
+  @override
+  String get web_video_sites_hint =>
+      '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
   @override
   String get web_video_track_live => '即時字幕（從頁面取樣）';
   @override
@@ -350664,6 +350945,8 @@ extension on _StringsEn {
             '${count} works still need identity confirmation';
       case 'video_library_scrape_pending_banner_action':
         return 'Confirm';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'Back';
       case 'video_load_failed_generic':
@@ -352471,6 +352754,20 @@ extension on _StringsEn {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'The built-in web page player is temporarily disabled; this address cannot be played inside the app for now.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Live captions (sampled from page)';
       case 'web_video_track_menu':
@@ -368051,6 +368348,8 @@ extension on _StringsAr {
             'لا يزال ${count} عمل بحاجة إلى تأكيد الهوية';
       case 'video_library_scrape_pending_banner_action':
         return 'تأكيد';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'رجوع';
       case 'video_load_failed_generic':
@@ -369859,6 +370158,20 @@ extension on _StringsAr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'مشغّل صفحات الويب المدمج معطّل مؤقتًا؛ لا يمكن تشغيل هذا العنوان داخل التطبيق حاليًا.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'ترجمة مباشرة (مأخوذة من الصفحة)';
       case 'web_video_track_menu':
@@ -385511,6 +385824,8 @@ extension on _StringsDe {
             'Bei ${count} Werken muss die Identität noch bestätigt werden';
       case 'video_library_scrape_pending_banner_action':
         return 'Bestätigen';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'Zurück';
       case 'video_load_failed_generic':
@@ -387323,6 +387638,20 @@ extension on _StringsDe {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Der integrierte Webseiten-Player ist vorübergehend deaktiviert; diese Adresse kann vorerst nicht in der App abgespielt werden.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Live-Untertitel (von der Seite erfasst)';
       case 'web_video_track_menu':
@@ -402959,6 +403288,8 @@ extension on _StringsEs {
             '${count} obras aún necesitan confirmar su identidad';
       case 'video_library_scrape_pending_banner_action':
         return 'Confirmar';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'Atrás';
       case 'video_load_failed_generic':
@@ -404769,6 +405100,20 @@ extension on _StringsEs {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'El reproductor de páginas web integrado está desactivado temporalmente; por ahora esta dirección no se puede reproducir dentro de la app.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Subtítulos en vivo (capturados de la página)';
       case 'web_video_track_menu':
@@ -420422,6 +420767,8 @@ extension on _StringsFr {
             '${count} œuvres nécessitent encore une confirmation d\'identité';
       case 'video_library_scrape_pending_banner_action':
         return 'Confirmer';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'Retour';
       case 'video_load_failed_generic':
@@ -422233,6 +422580,20 @@ extension on _StringsFr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Le lecteur de pages web intégré est temporairement désactivé ; cette adresse ne peut pas être lue dans l\'application pour le moment.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Sous-titres en direct (capturés sur la page)';
       case 'web_video_track_menu':
@@ -437833,6 +438194,8 @@ extension on _StringsId {
             '${count} karya masih perlu konfirmasi identitas';
       case 'video_library_scrape_pending_banner_action':
         return 'Konfirmasi';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'Kembali';
       case 'video_load_failed_generic':
@@ -439641,6 +440004,20 @@ extension on _StringsId {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Pemutar halaman web bawaan dinonaktifkan sementara; alamat ini belum dapat diputar di dalam aplikasi.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Teks langsung (diambil dari halaman)';
       case 'web_video_track_menu':
@@ -455275,6 +455652,8 @@ extension on _StringsIt {
             '${count} opere richiedono ancora la conferma dell\'identità';
       case 'video_library_scrape_pending_banner_action':
         return 'Conferma';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'Indietro';
       case 'video_load_failed_generic':
@@ -457085,6 +457464,20 @@ extension on _StringsIt {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Il lettore integrato per pagine web è temporaneamente disattivato; per ora questo indirizzo non può essere riprodotto nell\'app.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Sottotitoli live (campionati dalla pagina)';
       case 'web_video_track_menu':
@@ -472605,6 +472998,8 @@ extension on _StringsJa {
         return ({required Object count}) => '${count} 作品がまだ身元確認されていません';
       case 'video_library_scrape_pending_banner_action':
         return '確認';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return '戻る';
       case 'video_load_failed_generic':
@@ -474402,6 +474797,20 @@ extension on _StringsJa {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return '内蔵ウェブページプレーヤーは一時的に無効化されています。このアドレスは今のところアプリ内で再生できません。';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'ライブ字幕（ページから取得）';
       case 'web_video_track_menu':
@@ -489929,6 +490338,8 @@ extension on _StringsKo {
         return ({required Object count}) => '신원 확인이 필요한 작품이 ${count}개 있습니다';
       case 'video_library_scrape_pending_banner_action':
         return '확인';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return '뒤로';
       case 'video_load_failed_generic':
@@ -491728,6 +492139,20 @@ extension on _StringsKo {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return '내장 웹 페이지 플레이어가 일시적으로 비활성화되어 있어 현재 앱 안에서 이 주소를 재생할 수 없습니다.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return '실시간 자막(페이지에서 수집)';
       case 'web_video_track_menu':
@@ -507353,6 +507778,8 @@ extension on _StringsNl {
             'Voor ${count} werken moet de identiteit nog worden bevestigd';
       case 'video_library_scrape_pending_banner_action':
         return 'Bevestigen';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'Terug';
       case 'video_load_failed_generic':
@@ -509165,6 +509592,20 @@ extension on _StringsNl {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'De ingebouwde webpaginaspeler is tijdelijk uitgeschakeld; dit adres kan voorlopig niet in de app worden afgespeeld.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Live-ondertitels (van de pagina)';
       case 'web_video_track_menu':
@@ -524786,6 +525227,8 @@ extension on _StringsPtBr {
             '${count} obras ainda precisam de confirmação de identidade';
       case 'video_library_scrape_pending_banner_action':
         return 'Confirmar';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'Voltar';
       case 'video_load_failed_generic':
@@ -526596,6 +527039,20 @@ extension on _StringsPtBr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'O player de páginas web integrado está temporariamente desativado; este endereço não pode ser reproduzido dentro do app por enquanto.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Legendas ao vivo (capturadas da página)';
       case 'web_video_track_menu':
@@ -542224,6 +542681,8 @@ extension on _StringsRu {
             'Произведений, требующих подтверждения: ${count}';
       case 'video_library_scrape_pending_banner_action':
         return 'Подтвердить';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'Назад';
       case 'video_load_failed_generic':
@@ -544032,6 +544491,20 @@ extension on _StringsRu {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Встроенный веб-плеер временно отключён; этот адрес пока нельзя воспроизвести внутри приложения.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Живые субтитры (с страницы)';
       case 'web_video_track_menu':
@@ -559619,6 +560092,8 @@ extension on _StringsTh {
             'ผลงาน ${count} เรื่องยังต้องยืนยันตัวตน';
       case 'video_library_scrape_pending_banner_action':
         return 'ยืนยัน';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'ย้อนกลับ';
       case 'video_load_failed_generic':
@@ -561424,6 +561899,20 @@ extension on _StringsTh {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'ตัวเล่นหน้าเว็บในตัวถูกปิดชั่วคราว ตอนนี้ยังเล่นที่อยู่นี้ในแอปไม่ได้';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
       case 'web_video_track_menu':
@@ -577038,6 +577527,8 @@ extension on _StringsTr {
             '${count} eserin kimliğinin hâlâ onaylanması gerekiyor';
       case 'video_library_scrape_pending_banner_action':
         return 'Onayla';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'Geri';
       case 'video_load_failed_generic':
@@ -578847,6 +579338,20 @@ extension on _StringsTr {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Yerleşik web sayfası oynatıcısı geçici olarak devre dışı; bu adres şimdilik uygulama içinde oynatılamıyor.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Canlı altyazılar (sayfadan alınan)';
       case 'web_video_track_menu':
@@ -594448,6 +594953,8 @@ extension on _StringsVi {
             '${count} tác phẩm vẫn cần xác nhận danh tính';
       case 'video_library_scrape_pending_banner_action':
         return 'Xác nhận';
+      case 'video_library_sites':
+        return 'Sites';
       case 'video_load_failed_back':
         return 'Quay lại';
       case 'video_load_failed_generic':
@@ -596253,6 +596760,20 @@ extension on _StringsVi {
         return 'Watch in player';
       case 'web_video_player_unavailable':
         return 'Trình phát trang web tích hợp tạm thời bị tắt; hiện chưa thể phát địa chỉ này trong ứng dụng.';
+      case 'web_video_site_add':
+        return 'Add site';
+      case 'web_video_site_address_hint':
+        return 'Web address, e.g. netflix.com';
+      case 'web_video_site_address_invalid':
+        return 'Not a web address';
+      case 'web_video_site_name_hint':
+        return 'Name (optional)';
+      case 'web_video_site_open':
+        return 'Open';
+      case 'web_video_site_remove':
+        return 'Remove';
+      case 'web_video_sites_hint':
+        return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Phụ đề trực tiếp (lấy từ trang)';
       case 'web_video_track_menu':
@@ -611669,6 +612190,8 @@ extension on _StringsZhCn {
         return ({required Object count}) => '${count} 部作品还没确认身份，资料和封面都没刮出来';
       case 'video_library_scrape_pending_banner_action':
         return '去确认';
+      case 'video_library_sites':
+        return '网站';
       case 'video_load_failed_back':
         return '返回';
       case 'video_load_failed_generic':
@@ -613455,6 +613978,20 @@ extension on _StringsZhCn {
         return '在播放器里看';
       case 'web_video_player_unavailable':
         return '内置网页播放器已暂时停用，此地址暂时无法在应用内播放。';
+      case 'web_video_site_add':
+        return '添加网站';
+      case 'web_video_site_address_hint':
+        return '网址，比如 netflix.com';
+      case 'web_video_site_address_invalid':
+        return '不是有效的网址';
+      case 'web_video_site_name_hint':
+        return '名称（可选）';
+      case 'web_video_site_open':
+        return '打开';
+      case 'web_video_site_remove':
+        return '移除';
+      case 'web_video_sites_hint':
+        return '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
       case 'web_video_track_live':
         return '实时采集（页面字幕）';
       case 'web_video_track_menu':
@@ -628922,6 +629459,8 @@ extension on _StringsZhHk {
         return ({required Object count}) => '${count} 部作品還沒確認身份，資料和封面都沒刮出來';
       case 'video_library_scrape_pending_banner_action':
         return '去確認';
+      case 'video_library_sites':
+        return '網站';
       case 'video_load_failed_back':
         return '返回';
       case 'video_load_failed_generic':
@@ -630705,11 +631244,25 @@ extension on _StringsZhHk {
       case 'web_video_no_tracks':
         return '尚未擷取到字幕';
       case 'web_video_page_show':
-        return 'Back to web page';
+        return '回到網頁';
       case 'web_video_player_open':
-        return 'Watch in player';
+        return '在播放器裡看';
       case 'web_video_player_unavailable':
         return '內置網頁播放器已暫時停用，此地址暫時無法在應用內播放。';
+      case 'web_video_site_add':
+        return '新增網站';
+      case 'web_video_site_address_hint':
+        return '網址，例如 netflix.com';
+      case 'web_video_site_address_invalid':
+        return '不是有效的網址';
+      case 'web_video_site_name_hint':
+        return '名稱（可選）';
+      case 'web_video_site_open':
+        return '開啟';
+      case 'web_video_site_remove':
+        return '移除';
+      case 'web_video_sites_hint':
+        return '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
       case 'web_video_track_live':
         return '即時字幕（從頁面取樣）';
       case 'web_video_track_menu':
