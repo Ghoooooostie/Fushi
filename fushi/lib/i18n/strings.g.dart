@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142443 (8379 per locale)
+/// Strings: 142664 (8392 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12032,6 +12032,24 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get view_illustrations => 'Illustrations';
   String get volume_button_page_turning => 'Volume button page turning';
   String get volume_key_sentence_nav => 'Volume key sentence navigation';
+  String get web_adblock_allowlist => 'Sites not to block';
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  String get web_adblock_section_title => 'Web ad blocking';
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  String get web_adblock_update_done => 'Filter lists updated';
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  String get web_adblock_update_now => 'Update filter lists now';
   String get web_video_hide_native_subtitles => 'Hide site subtitles';
   String get web_video_hosting_builtin =>
       'Built-in (1080p; super-resolution, screenshots and cards available)';
@@ -32253,6 +32271,37 @@ class _StringsAr extends _StringsEn {
   String get volume_button_page_turning => 'تقليب الصفحات بأزرار الصوت';
   @override
   String get volume_key_sentence_nav => 'التنقل بين الجمل بأزرار الصوت';
+  @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
   @override
   String get web_video_hide_native_subtitles => 'إخفاء ترجمة الموقع';
   @override
@@ -52895,6 +52944,37 @@ class _StringsDe extends _StringsEn {
       'Seitenblättern mit Lautstärketasten';
   @override
   String get volume_key_sentence_nav => 'Satznavigation mit Lautstärketasten';
+  @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
   @override
   String get web_video_hide_native_subtitles => 'Website-Untertitel ausblenden';
   @override
@@ -73593,6 +73673,37 @@ class _StringsEs extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Navegación de oraciones con teclas de volumen';
+  @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
   @override
   String get web_video_hide_native_subtitles => 'Ocultar subtítulos del sitio';
   @override
@@ -94373,6 +94484,37 @@ class _StringsFr extends _StringsEn {
   String get volume_key_sentence_nav =>
       'Navigation par phrase avec les touches de volume';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
   String get web_video_hide_native_subtitles =>
       'Masquer les sous-titres du site';
   @override
@@ -114810,6 +114952,37 @@ class _StringsId extends _StringsEn {
   String get volume_button_page_turning => 'Tombol volume untuk ganti halaman';
   @override
   String get volume_key_sentence_nav => 'Navigasi kalimat dengan tombol volume';
+  @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
   @override
   String get web_video_hide_native_subtitles => 'Sembunyikan subtitel situs';
   @override
@@ -135409,6 +135582,37 @@ class _StringsIt extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Navigazione frase con tasti volume';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
   String get web_video_hide_native_subtitles =>
       'Nascondi i sottotitoli del sito';
   @override
@@ -154995,6 +155199,37 @@ class _StringsJa extends _StringsEn {
   String get volume_button_page_turning => '音量ボタンでページ送り';
   @override
   String get volume_key_sentence_nav => '音量キーで文ナビゲーション';
+  @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
   @override
   String get web_video_hide_native_subtitles => 'サイトの字幕を隠す';
   @override
@@ -174617,6 +174852,37 @@ class _StringsKo extends _StringsEn {
   String get volume_button_page_turning => '볼륨 버튼으로 페이지 넘기기';
   @override
   String get volume_key_sentence_nav => '볼륨 키 문장 탐색';
+  @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
   @override
   String get web_video_hide_native_subtitles => '사이트 자막 숨기기';
   @override
@@ -195161,6 +195427,37 @@ class _StringsNl extends _StringsEn {
       'Pagina\'s omslaan met volumeknoppen';
   @override
   String get volume_key_sentence_nav => 'Zinsnavigatie met volumeknoppen';
+  @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
   @override
   String get web_video_hide_native_subtitles =>
       'Ondertitels van de site verbergen';
@@ -215779,6 +216076,37 @@ class _StringsPtBr extends _StringsEn {
   String get volume_key_sentence_nav =>
       'Navegação de frases com teclas de volume';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
   String get web_video_hide_native_subtitles => 'Ocultar legendas do site';
   @override
   String get web_video_hosting_builtin =>
@@ -236342,6 +236670,37 @@ class _StringsRu extends _StringsEn {
   String get volume_key_sentence_nav =>
       'Навигация по предложениям кнопками громкости';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
   String get web_video_hide_native_subtitles => 'Скрыть субтитры сайта';
   @override
   String get web_video_hosting_builtin =>
@@ -256580,6 +256939,37 @@ class _StringsTh extends _StringsEn {
   String get volume_button_page_turning => 'ปุ่มเสียงเปลี่ยนหน้า';
   @override
   String get volume_key_sentence_nav => 'นำทางประโยคด้วยปุ่มเสียง';
+  @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
   @override
   String get web_video_hide_native_subtitles => 'ซ่อนคำบรรยายของเว็บไซต์';
   @override
@@ -277023,6 +277413,37 @@ class _StringsTr extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Ses Tuşuyla Cümle Gezinme';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
   String get web_video_hide_native_subtitles => 'Site altyazılarını gizle';
   @override
   String get web_video_hosting_builtin =>
@@ -297393,6 +297814,37 @@ class _StringsVi extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Điều hướng câu bằng phím âm lượng';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
   String get web_video_hide_native_subtitles => 'Ẩn phụ đề của trang';
   @override
   String get web_video_hosting_builtin =>
@@ -316016,6 +316468,34 @@ class _StringsZhCn extends _StringsEn {
   String get volume_button_page_turning => '音量键翻页';
   @override
   String get volume_key_sentence_nav => '音量键句子导航';
+  @override
+  String get web_adblock_allowlist => '不拦截的网站';
+  @override
+  String get web_adblock_allowlist_hint => '用逗号或空格分隔域名，包含子域名';
+  @override
+  String get web_adblock_enabled => '拦截网页广告与跟踪器';
+  @override
+  String get web_adblock_enabled_hint =>
+      '作用于应用内的网页浏览，例如网页漫画、视频站点和在线源登录页。过滤列表会自动下载并定期更新。';
+  @override
+  String get web_adblock_section_title => '网页广告拦截';
+  @override
+  String get web_adblock_status_failed => '过滤列表下载失败，稍后会重试';
+  @override
+  String get web_adblock_status_loading => '正在加载过滤列表…';
+  @override
+  String get web_adblock_status_never => '过滤列表尚未下载';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      '过滤列表更新于 ${time}';
+  @override
+  String get web_adblock_unavailable => '此版本未包含广告拦截引擎';
+  @override
+  String get web_adblock_update_done => '过滤列表已更新';
+  @override
+  String get web_adblock_update_failed => '过滤列表更新失败';
+  @override
+  String get web_adblock_update_now => '立即更新过滤列表';
   @override
   String get web_video_hide_native_subtitles => '隐藏站点字幕';
   @override
@@ -335027,6 +335507,37 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get volume_key_sentence_nav => '音量鍵句子導覽';
   @override
+  String get web_adblock_allowlist => 'Sites not to block';
+  @override
+  String get web_adblock_allowlist_hint =>
+      'Domains separated by commas or spaces; subdomains are included';
+  @override
+  String get web_adblock_enabled => 'Block ads and trackers on web pages';
+  @override
+  String get web_adblock_enabled_hint =>
+      'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+  @override
+  String get web_adblock_section_title => 'Web ad blocking';
+  @override
+  String get web_adblock_status_failed =>
+      'Filter lists could not be downloaded; will retry later';
+  @override
+  String get web_adblock_status_loading => 'Loading filter lists…';
+  @override
+  String get web_adblock_status_never => 'Filter lists not downloaded yet';
+  @override
+  String web_adblock_status_updated({required Object time}) =>
+      'Filter lists updated ${time}';
+  @override
+  String get web_adblock_unavailable =>
+      'The ad blocking engine is not included in this build';
+  @override
+  String get web_adblock_update_done => 'Filter lists updated';
+  @override
+  String get web_adblock_update_failed => 'Failed to update filter lists';
+  @override
+  String get web_adblock_update_now => 'Update filter lists now';
+  @override
   String get web_video_hide_native_subtitles => '隱藏網站字幕';
   @override
   String get web_video_hosting_builtin => '內建（1080p；可超解析、截圖、製卡）';
@@ -352421,6 +352932,32 @@ extension on _StringsEn {
         return 'Volume button page turning';
       case 'volume_key_sentence_nav':
         return 'Volume key sentence navigation';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'Hide site subtitles';
       case 'web_video_hosting_builtin':
@@ -369807,6 +370344,32 @@ extension on _StringsAr {
         return 'تقليب الصفحات بأزرار الصوت';
       case 'volume_key_sentence_nav':
         return 'التنقل بين الجمل بأزرار الصوت';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'إخفاء ترجمة الموقع';
       case 'web_video_hosting_builtin':
@@ -387269,6 +387832,32 @@ extension on _StringsDe {
         return 'Seitenblättern mit Lautstärketasten';
       case 'volume_key_sentence_nav':
         return 'Satznavigation mit Lautstärketasten';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'Website-Untertitel ausblenden';
       case 'web_video_hosting_builtin':
@@ -404713,6 +405302,32 @@ extension on _StringsEs {
         return 'Pasar página con botones de volumen';
       case 'volume_key_sentence_nav':
         return 'Navegación de oraciones con teclas de volumen';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'Ocultar subtítulos del sitio';
       case 'web_video_hosting_builtin':
@@ -422175,6 +422790,32 @@ extension on _StringsFr {
         return 'Tourner les pages avec les boutons de volume';
       case 'volume_key_sentence_nav':
         return 'Navigation par phrase avec les touches de volume';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'Masquer les sous-titres du site';
       case 'web_video_hosting_builtin':
@@ -439581,6 +440222,32 @@ extension on _StringsId {
         return 'Tombol volume untuk ganti halaman';
       case 'volume_key_sentence_nav':
         return 'Navigasi kalimat dengan tombol volume';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'Sembunyikan subtitel situs';
       case 'web_video_hosting_builtin':
@@ -457023,6 +457690,32 @@ extension on _StringsIt {
         return 'Cambia pagina con i tasti volume';
       case 'volume_key_sentence_nav':
         return 'Navigazione frase con tasti volume';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'Nascondi i sottotitoli del sito';
       case 'web_video_hosting_builtin':
@@ -474340,6 +475033,32 @@ extension on _StringsJa {
         return '音量ボタンでページ送り';
       case 'volume_key_sentence_nav':
         return '音量キーで文ナビゲーション';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'サイトの字幕を隠す';
       case 'web_video_hosting_builtin':
@@ -491663,6 +492382,32 @@ extension on _StringsKo {
         return '볼륨 버튼으로 페이지 넘기기';
       case 'volume_key_sentence_nav':
         return '볼륨 키 문장 탐색';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return '사이트 자막 숨기기';
       case 'web_video_hosting_builtin':
@@ -509097,6 +509842,32 @@ extension on _StringsNl {
         return 'Pagina\'s omslaan met volumeknoppen';
       case 'volume_key_sentence_nav':
         return 'Zinsnavigatie met volumeknoppen';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'Ondertitels van de site verbergen';
       case 'web_video_hosting_builtin':
@@ -526526,6 +527297,32 @@ extension on _StringsPtBr {
         return 'Virar página com botão de volume';
       case 'volume_key_sentence_nav':
         return 'Navegação de frases com teclas de volume';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'Ocultar legendas do site';
       case 'web_video_hosting_builtin':
@@ -543960,6 +544757,32 @@ extension on _StringsRu {
         return 'Перелистывание кнопками громкости';
       case 'volume_key_sentence_nav':
         return 'Навигация по предложениям кнопками громкости';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'Скрыть субтитры сайта';
       case 'web_video_hosting_builtin':
@@ -561350,6 +562173,32 @@ extension on _StringsTh {
         return 'ปุ่มเสียงเปลี่ยนหน้า';
       case 'volume_key_sentence_nav':
         return 'นำทางประโยคด้วยปุ่มเสียง';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'ซ่อนคำบรรยายของเว็บไซต์';
       case 'web_video_hosting_builtin':
@@ -578771,6 +579620,32 @@ extension on _StringsTr {
         return 'Ses düğmeleriyle sayfa çevirme';
       case 'volume_key_sentence_nav':
         return 'Ses Tuşuyla Cümle Gezinme';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'Site altyazılarını gizle';
       case 'web_video_hosting_builtin':
@@ -596175,6 +597050,32 @@ extension on _StringsVi {
         return 'Lật trang bằng nút âm lượng';
       case 'volume_key_sentence_nav':
         return 'Điều hướng câu bằng phím âm lượng';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return 'Ẩn phụ đề của trang';
       case 'web_video_hosting_builtin':
@@ -613377,6 +614278,32 @@ extension on _StringsZhCn {
         return '音量键翻页';
       case 'volume_key_sentence_nav':
         return '音量键句子导航';
+      case 'web_adblock_allowlist':
+        return '不拦截的网站';
+      case 'web_adblock_allowlist_hint':
+        return '用逗号或空格分隔域名，包含子域名';
+      case 'web_adblock_enabled':
+        return '拦截网页广告与跟踪器';
+      case 'web_adblock_enabled_hint':
+        return '作用于应用内的网页浏览，例如网页漫画、视频站点和在线源登录页。过滤列表会自动下载并定期更新。';
+      case 'web_adblock_section_title':
+        return '网页广告拦截';
+      case 'web_adblock_status_failed':
+        return '过滤列表下载失败，稍后会重试';
+      case 'web_adblock_status_loading':
+        return '正在加载过滤列表…';
+      case 'web_adblock_status_never':
+        return '过滤列表尚未下载';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => '过滤列表更新于 ${time}';
+      case 'web_adblock_unavailable':
+        return '此版本未包含广告拦截引擎';
+      case 'web_adblock_update_done':
+        return '过滤列表已更新';
+      case 'web_adblock_update_failed':
+        return '过滤列表更新失败';
+      case 'web_adblock_update_now':
+        return '立即更新过滤列表';
       case 'web_video_hide_native_subtitles':
         return '隐藏站点字幕';
       case 'web_video_hosting_builtin':
@@ -630630,6 +631557,32 @@ extension on _StringsZhHk {
         return '音量鍵翻頁';
       case 'volume_key_sentence_nav':
         return '音量鍵句子導覽';
+      case 'web_adblock_allowlist':
+        return 'Sites not to block';
+      case 'web_adblock_allowlist_hint':
+        return 'Domains separated by commas or spaces; subdomains are included';
+      case 'web_adblock_enabled':
+        return 'Block ads and trackers on web pages';
+      case 'web_adblock_enabled_hint':
+        return 'Applies to in-app web browsing such as web manga, video sites and source login pages. Filter lists are downloaded and refreshed automatically.';
+      case 'web_adblock_section_title':
+        return 'Web ad blocking';
+      case 'web_adblock_status_failed':
+        return 'Filter lists could not be downloaded; will retry later';
+      case 'web_adblock_status_loading':
+        return 'Loading filter lists…';
+      case 'web_adblock_status_never':
+        return 'Filter lists not downloaded yet';
+      case 'web_adblock_status_updated':
+        return ({required Object time}) => 'Filter lists updated ${time}';
+      case 'web_adblock_unavailable':
+        return 'The ad blocking engine is not included in this build';
+      case 'web_adblock_update_done':
+        return 'Filter lists updated';
+      case 'web_adblock_update_failed':
+        return 'Failed to update filter lists';
+      case 'web_adblock_update_now':
+        return 'Update filter lists now';
       case 'web_video_hide_native_subtitles':
         return '隱藏網站字幕';
       case 'web_video_hosting_builtin':
