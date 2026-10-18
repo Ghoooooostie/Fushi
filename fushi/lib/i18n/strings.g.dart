@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 143514 (8442 per locale)
+/// Strings: 143718 (8454 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7128,6 +7128,26 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
   String get novel_store_empty =>
       'No plugin repositories yet. Fushi doesn\'t include any — add the index URL of an LNReader plugin repository you trust.';
+  String get novel_web_chapter_next => 'Next chapter';
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  String get novel_web_preview_read => 'Read';
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  String get novel_web_read_page => 'Read in Fushi (novel)';
   String get now_listening_label => 'Now listening';
   String get ocr_llm_default_accept => 'Turn on';
   String ocr_llm_default_body({required Object provider}) =>
@@ -23868,6 +23888,38 @@ class _StringsAr extends _StringsEn {
   @override
   String get novel_store_empty =>
       'لا توجد مستودعات إضافات بعد. لا يتضمن Fushi أي مستودع — أضف رابط فهرس مستودع إضافات LNReader تثق به.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'يُستمع الآن';
   @override
@@ -44503,6 +44555,38 @@ class _StringsDe extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Noch keine Plugin-Repositories. Fushi enthält keine – fügen Sie die Index-URL eines LNReader-Plugin-Repositorys hinzu, dem Sie vertrauen.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Wird gerade gehört';
   @override
@@ -65314,6 +65398,38 @@ class _StringsEs extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Aún no hay repositorios de plugins. Fushi no incluye ninguno: agregue la URL del índice de un repositorio de plugins de LNReader en el que confíe.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Escuchando ahora';
   @override
@@ -86205,6 +86321,38 @@ class _StringsFr extends _StringsEn {
   String get novel_store_empty =>
       'Aucun dépôt de plugins pour l\'instant. Fushi n\'en inclut aucun : ajoutez l\'URL d\'index d\'un dépôt de plugins LNReader de confiance.';
   @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
+  @override
   String get now_listening_label => 'Écoute en cours';
   @override
   String get ocr_llm_default_accept => 'Turn on';
@@ -106928,6 +107076,38 @@ class _StringsId extends _StringsEn {
   String get novel_store_empty =>
       'Belum ada repositori plugin. Fushi tidak menyertakan satu pun — tambahkan URL indeks repositori plugin LNReader yang Anda percayai.';
   @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
+  @override
   String get now_listening_label => 'Sedang mendengarkan';
   @override
   String get ocr_llm_default_accept => 'Turn on';
@@ -127607,6 +127787,38 @@ class _StringsIt extends _StringsEn {
   String get novel_store_empty =>
       'Nessun repository di plugin. Fushi non ne include nessuno: aggiungi l\'URL dell\'indice di un repository di plugin LNReader di cui ti fidi.';
   @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
+  @override
   String get now_listening_label => 'In ascolto';
   @override
   String get ocr_llm_default_accept => 'Turn on';
@@ -147758,6 +147970,38 @@ class _StringsJa extends _StringsEn {
   String get novel_store_empty =>
       'プラグインリポジトリがまだありません。Fushi にはリポジトリが同梱されていません。信頼できる LNReader プラグインリポジトリのインデックス URL を追加してください。';
   @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
+  @override
   String get now_listening_label => '再生中';
   @override
   String get ocr_llm_default_accept => 'Turn on';
@@ -167504,6 +167748,38 @@ class _StringsKo extends _StringsEn {
   @override
   String get novel_store_empty =>
       '플러그인 저장소가 아직 없습니다. Fushi에는 기본 저장소가 포함되어 있지 않습니다. 신뢰하는 LNReader 플러그인 저장소의 인덱스 URL을 추가하세요.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => '현재 듣는 중';
   @override
@@ -187806,6 +188082,38 @@ class _StringsNl extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Nog geen plug-inrepositories. Fushi bevat er geen — voeg de index-URL toe van een LNReader-plug-inrepository die je vertrouwt.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Nu aan het luisteren';
   @override
@@ -208547,6 +208855,38 @@ class _StringsPtBr extends _StringsEn {
   String get novel_store_empty =>
       'Nenhum repositório de plugins ainda. O Fushi não inclui nenhum — adicione a URL do índice de um repositório de plugins do LNReader em que você confia.';
   @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
+  @override
   String get now_listening_label => 'Ouvindo agora';
   @override
   String get ocr_llm_default_accept => 'Turn on';
@@ -229262,6 +229602,38 @@ class _StringsRu extends _StringsEn {
   String get novel_store_empty =>
       'Репозиториев плагинов пока нет. Fushi не содержит встроенных репозиториев — добавьте URL индекса репозитория плагинов LNReader, которому вы доверяете.';
   @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
+  @override
   String get now_listening_label => 'Сейчас слушаете';
   @override
   String get ocr_llm_default_accept => 'Turn on';
@@ -249784,6 +250156,38 @@ class _StringsTh extends _StringsEn {
   String get novel_store_empty =>
       'ยังไม่มีที่เก็บปลั๊กอิน Fushi ไม่ได้รวมที่เก็บใดไว้ — เพิ่ม URL ดัชนีของที่เก็บปลั๊กอิน LNReader ที่คุณเชื่อถือ';
   @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
+  @override
   String get now_listening_label => 'กำลังฟังอยู่';
   @override
   String get ocr_llm_default_accept => 'Turn on';
@@ -270296,6 +270700,38 @@ class _StringsTr extends _StringsEn {
   @override
   String get novel_store_empty =>
       'Henüz eklenti deposu yok. Fushi hiçbir depo içermez; güvendiğiniz bir LNReader eklenti deposunun dizin URL\'sini ekleyin.';
+  @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
   @override
   String get now_listening_label => 'Şimdi dinleniyor';
   @override
@@ -290843,6 +291279,38 @@ class _StringsVi extends _StringsEn {
   String get novel_store_empty =>
       'Chưa có kho plugin. Fushi không kèm sẵn kho nào — hãy thêm URL chỉ mục của một kho plugin LNReader mà bạn tin tưởng.';
   @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
+  @override
   String get now_listening_label => 'Đang nghe';
   @override
   String get ocr_llm_default_accept => 'Turn on';
@@ -310339,6 +310807,34 @@ class _StringsZhCn extends _StringsEn {
   String get novel_store_empty =>
       '还没有插件仓库。Fushi 不内置任何仓库——请添加你信任的 LNReader 插件仓库的索引地址。';
   @override
+  String get novel_web_chapter_next => '下一章';
+  @override
+  String get novel_web_chapter_pending =>
+      '读到这一页时会从网站取回下一章。取不到时，请先在 Fushi 浏览器里打开一次原网页再回来。';
+  @override
+  String get novel_web_extract_empty => '这一页没有识别到小说正文';
+  @override
+  String novel_web_extract_failed({required Object error}) => '提取正文失败：${error}';
+  @override
+  String get novel_web_extract_running => '正在提取正文…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => '将并入书架上的《${title}》（已有 ${count} 章）。';
+  @override
+  String get novel_web_preview_new => '将作为新书加入书架。';
+  @override
+  String get novel_web_preview_next_found => '已找到下一章：读到末尾会自动取回。';
+  @override
+  String get novel_web_preview_next_missing => '这一页没有找到下一章链接。';
+  @override
+  String get novel_web_preview_read => '阅读';
+  @override
+  String get novel_web_preview_title => '用 Fushi 阅读这一章';
+  @override
+  String get novel_web_read_page => '用 Fushi 阅读（小说）';
+  @override
   String get now_listening_label => '正在听书';
   @override
   String get ocr_llm_default_accept => '开启';
@@ -329291,6 +329787,38 @@ class _StringsZhHk extends _StringsEn {
   String get novel_store_empty =>
       '還沒有插件倉庫。Fushi 不內置任何倉庫——請添加你信任的 LNReader 插件倉庫的索引地址。';
   @override
+  String get novel_web_chapter_next => 'Next chapter';
+  @override
+  String get novel_web_chapter_pending =>
+      'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+  @override
+  String get novel_web_extract_empty =>
+      'No novel chapter text was found on this page';
+  @override
+  String novel_web_extract_failed({required Object error}) =>
+      'Couldn\'t extract this page: ${error}';
+  @override
+  String get novel_web_extract_running => 'Extracting the chapter text…';
+  @override
+  String novel_web_preview_merge({
+    required Object title,
+    required Object count,
+  }) => 'Adds to “${title}” on your shelf (${count} chapters so far).';
+  @override
+  String get novel_web_preview_new => 'Adds a new book to your shelf.';
+  @override
+  String get novel_web_preview_next_found =>
+      'Next chapter found. It is fetched automatically when you reach the end.';
+  @override
+  String get novel_web_preview_next_missing =>
+      'No next-chapter link was found on this page.';
+  @override
+  String get novel_web_preview_read => 'Read';
+  @override
+  String get novel_web_preview_title => 'Read this chapter in Fushi';
+  @override
+  String get novel_web_read_page => 'Read in Fushi (novel)';
+  @override
   String get now_listening_label => '正在聽書';
   @override
   String get ocr_llm_default_accept => '開啟';
@@ -347447,6 +347975,32 @@ extension on _StringsEn {
         return 'LNReader plugins are third-party scripts that fetch content from websites. Only add repositories you trust.';
       case 'novel_store_empty':
         return 'No plugin repositories yet. Fushi doesn\'t include any — add the index URL of an LNReader plugin repository you trust.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Now listening';
       case 'ocr_llm_default_accept':
@@ -364962,6 +365516,32 @@ extension on _StringsAr {
         return 'إضافات LNReader نصوص برمجية من جهات خارجية تجلب المحتوى من مواقع الويب. أضف المستودعات التي تثق بها فقط.';
       case 'novel_store_empty':
         return 'لا توجد مستودعات إضافات بعد. لا يتضمن Fushi أي مستودع — أضف رابط فهرس مستودع إضافات LNReader تثق به.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'يُستمع الآن';
       case 'ocr_llm_default_accept':
@@ -382530,6 +383110,32 @@ extension on _StringsDe {
         return 'LNReader-Plugins sind Skripte von Drittanbietern, die Inhalte von Websites abrufen. Füge nur Repositories hinzu, denen du vertraust.';
       case 'novel_store_empty':
         return 'Noch keine Plugin-Repositories. Fushi enthält keine – fügen Sie die Index-URL eines LNReader-Plugin-Repositorys hinzu, dem Sie vertrauen.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Wird gerade gehört';
       case 'ocr_llm_default_accept':
@@ -400105,6 +400711,32 @@ extension on _StringsEs {
         return 'Los plugins de LNReader son scripts de terceros que obtienen contenido de sitios web. Añade solo repositorios en los que confíes.';
       case 'novel_store_empty':
         return 'Aún no hay repositorios de plugins. Fushi no incluye ninguno: agregue la URL del índice de un repositorio de plugins de LNReader en el que confíe.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Escuchando ahora';
       case 'ocr_llm_default_accept':
@@ -417692,6 +418324,32 @@ extension on _StringsFr {
         return 'Les plugins LNReader sont des scripts tiers qui récupèrent du contenu sur des sites web. N\'ajoutez que des dépôts de confiance.';
       case 'novel_store_empty':
         return 'Aucun dépôt de plugins pour l\'instant. Fushi n\'en inclut aucun : ajoutez l\'URL d\'index d\'un dépôt de plugins LNReader de confiance.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Écoute en cours';
       case 'ocr_llm_default_accept':
@@ -435245,6 +435903,32 @@ extension on _StringsId {
         return 'Plugin LNReader adalah skrip pihak ketiga yang mengambil konten dari situs web. Tambahkan hanya repositori yang Anda percayai.';
       case 'novel_store_empty':
         return 'Belum ada repositori plugin. Fushi tidak menyertakan satu pun — tambahkan URL indeks repositori plugin LNReader yang Anda percayai.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Sedang mendengarkan';
       case 'ocr_llm_default_accept':
@@ -452798,6 +453482,32 @@ extension on _StringsIt {
         return 'I plugin LNReader sono script di terze parti che recuperano contenuti dai siti web. Aggiungi solo repository di cui ti fidi.';
       case 'novel_store_empty':
         return 'Nessun repository di plugin. Fushi non ne include nessuno: aggiungi l\'URL dell\'indice di un repository di plugin LNReader di cui ti fidi.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'In ascolto';
       case 'ocr_llm_default_accept':
@@ -470295,6 +471005,32 @@ extension on _StringsJa {
         return 'LNReader プラグインは Web サイトからコンテンツを取得するサードパーティのスクリプトです。信頼できるリポジトリだけを追加してください。';
       case 'novel_store_empty':
         return 'プラグインリポジトリがまだありません。Fushi にはリポジトリが同梱されていません。信頼できる LNReader プラグインリポジトリのインデックス URL を追加してください。';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return '再生中';
       case 'ocr_llm_default_accept':
@@ -487739,6 +488475,32 @@ extension on _StringsKo {
         return 'LNReader 플러그인은 웹사이트에서 콘텐츠를 가져오는 서드파티 스크립트입니다. 신뢰할 수 있는 저장소만 추가하세요.';
       case 'novel_store_empty':
         return '플러그인 저장소가 아직 없습니다. Fushi에는 기본 저장소가 포함되어 있지 않습니다. 신뢰하는 LNReader 플러그인 저장소의 인덱스 URL을 추가하세요.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return '현재 듣는 중';
       case 'ocr_llm_default_accept':
@@ -505263,6 +506025,32 @@ extension on _StringsNl {
         return 'LNReader-plug-ins zijn scripts van derden die inhoud van websites ophalen. Voeg alleen repositories toe die je vertrouwt.';
       case 'novel_store_empty':
         return 'Nog geen plug-inrepositories. Fushi bevat er geen — voeg de index-URL toe van een LNReader-plug-inrepository die je vertrouwt.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Nu aan het luisteren';
       case 'ocr_llm_default_accept':
@@ -522823,6 +523611,32 @@ extension on _StringsPtBr {
         return 'Os plugins do LNReader são scripts de terceiros que buscam conteúdo em sites. Adicione apenas repositórios em que você confia.';
       case 'novel_store_empty':
         return 'Nenhum repositório de plugins ainda. O Fushi não inclui nenhum — adicione a URL do índice de um repositório de plugins do LNReader em que você confia.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Ouvindo agora';
       case 'ocr_llm_default_accept':
@@ -540387,6 +541201,32 @@ extension on _StringsRu {
         return 'Плагины LNReader — это сторонние скрипты, получающие содержимое с сайтов. Добавляйте только те репозитории, которым доверяете.';
       case 'novel_store_empty':
         return 'Репозиториев плагинов пока нет. Fushi не содержит встроенных репозиториев — добавьте URL индекса репозитория плагинов LNReader, которому вы доверяете.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Сейчас слушаете';
       case 'ocr_llm_default_accept':
@@ -557914,6 +558754,32 @@ extension on _StringsTh {
         return 'ปลั๊กอิน LNReader เป็นสคริปต์ของบุคคลที่สามที่ดึงเนื้อหาจากเว็บไซต์ เพิ่มเฉพาะที่เก็บที่คุณเชื่อถือ';
       case 'novel_store_empty':
         return 'ยังไม่มีที่เก็บปลั๊กอิน Fushi ไม่ได้รวมที่เก็บใดไว้ — เพิ่ม URL ดัชนีของที่เก็บปลั๊กอิน LNReader ที่คุณเชื่อถือ';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'กำลังฟังอยู่';
       case 'ocr_llm_default_accept':
@@ -575456,6 +576322,32 @@ extension on _StringsTr {
         return 'LNReader eklentileri, web sitelerinden içerik getiren üçüncü taraf betiklerdir. Yalnızca güvendiğiniz depoları ekleyin.';
       case 'novel_store_empty':
         return 'Henüz eklenti deposu yok. Fushi hiçbir depo içermez; güvendiğiniz bir LNReader eklenti deposunun dizin URL\'sini ekleyin.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Şimdi dinleniyor';
       case 'ocr_llm_default_accept':
@@ -592990,6 +593882,32 @@ extension on _StringsVi {
         return 'Plugin LNReader là các tập lệnh của bên thứ ba lấy nội dung từ trang web. Chỉ thêm các kho mà bạn tin tưởng.';
       case 'novel_store_empty':
         return 'Chưa có kho plugin. Fushi không kèm sẵn kho nào — hãy thêm URL chỉ mục của một kho plugin LNReader mà bạn tin tưởng.';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return 'Đang nghe';
       case 'ocr_llm_default_accept':
@@ -610398,6 +611316,31 @@ extension on _StringsZhCn {
         return 'LNReader 插件是从网站抓取内容的第三方脚本。只添加你信任的仓库。';
       case 'novel_store_empty':
         return '还没有插件仓库。Fushi 不内置任何仓库——请添加你信任的 LNReader 插件仓库的索引地址。';
+      case 'novel_web_chapter_next':
+        return '下一章';
+      case 'novel_web_chapter_pending':
+        return '读到这一页时会从网站取回下一章。取不到时，请先在 Fushi 浏览器里打开一次原网页再回来。';
+      case 'novel_web_extract_empty':
+        return '这一页没有识别到小说正文';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) => '提取正文失败：${error}';
+      case 'novel_web_extract_running':
+        return '正在提取正文…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            '将并入书架上的《${title}》（已有 ${count} 章）。';
+      case 'novel_web_preview_new':
+        return '将作为新书加入书架。';
+      case 'novel_web_preview_next_found':
+        return '已找到下一章：读到末尾会自动取回。';
+      case 'novel_web_preview_next_missing':
+        return '这一页没有找到下一章链接。';
+      case 'novel_web_preview_read':
+        return '阅读';
+      case 'novel_web_preview_title':
+        return '用 Fushi 阅读这一章';
+      case 'novel_web_read_page':
+        return '用 Fushi 阅读（小说）';
       case 'now_listening_label':
         return '正在听书';
       case 'ocr_llm_default_accept':
@@ -627751,6 +628694,32 @@ extension on _StringsZhHk {
         return 'LNReader 插件是從網站抓取內容的第三方腳本。只新增你信任的倉庫。';
       case 'novel_store_empty':
         return '還沒有插件倉庫。Fushi 不內置任何倉庫——請添加你信任的 LNReader 插件倉庫的索引地址。';
+      case 'novel_web_chapter_next':
+        return 'Next chapter';
+      case 'novel_web_chapter_pending':
+        return 'The next chapter is fetched from the website when you reach this page. If it doesn\'t load, open the original page in the Fushi browser once, then come back.';
+      case 'novel_web_extract_empty':
+        return 'No novel chapter text was found on this page';
+      case 'novel_web_extract_failed':
+        return ({required Object error}) =>
+            'Couldn\'t extract this page: ${error}';
+      case 'novel_web_extract_running':
+        return 'Extracting the chapter text…';
+      case 'novel_web_preview_merge':
+        return ({required Object title, required Object count}) =>
+            'Adds to “${title}” on your shelf (${count} chapters so far).';
+      case 'novel_web_preview_new':
+        return 'Adds a new book to your shelf.';
+      case 'novel_web_preview_next_found':
+        return 'Next chapter found. It is fetched automatically when you reach the end.';
+      case 'novel_web_preview_next_missing':
+        return 'No next-chapter link was found on this page.';
+      case 'novel_web_preview_read':
+        return 'Read';
+      case 'novel_web_preview_title':
+        return 'Read this chapter in Fushi';
+      case 'novel_web_read_page':
+        return 'Read in Fushi (novel)';
       case 'now_listening_label':
         return '正在聽書';
       case 'ocr_llm_default_accept':
