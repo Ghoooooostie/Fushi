@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 143140 (8420 per locale)
+/// Strings: 143293 (8429 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12061,6 +12061,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_hub_video_sites => 'Video sites';
   String get web_video_ad_skipping => 'Skipping ad…';
   String get web_video_address_hint => 'Search or enter address';
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  String get web_video_chapter_credits => 'Credits';
+  String get web_video_chapter_intro => 'Intro';
+  String get web_video_chapter_main => 'Episode';
+  String get web_video_chapter_recap => 'Recap';
   String get web_video_hide_native_subtitles => 'Hide site subtitles';
   String get web_video_hosting_builtin =>
       'Built-in (1080p; super-resolution, screenshots and cards available)';
@@ -12106,6 +12116,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_site_remove => 'Remove';
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   String get web_video_track_live => 'Live captions (sampled from page)';
   String get web_video_track_loading => 'Loading…';
   String get web_video_track_menu => 'Subtitle track';
@@ -32357,6 +32371,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'إخفاء ترجمة الموقع';
   @override
   String get web_video_hosting_builtin =>
@@ -32430,6 +32461,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => 'ترجمة مباشرة (مأخوذة من الصفحة)';
   @override
@@ -53090,6 +53127,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Website-Untertitel ausblenden';
   @override
   String get web_video_hosting_builtin =>
@@ -53163,6 +53217,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => 'Live-Untertitel (von der Seite erfasst)';
   @override
@@ -73879,6 +73939,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Ocultar subtítulos del sitio';
   @override
   String get web_video_hosting_builtin =>
@@ -73952,6 +74029,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live =>
       'Subtítulos en vivo (capturados de la página)';
@@ -94749,6 +94832,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles =>
       'Masquer les sous-titres du site';
   @override
@@ -94823,6 +94923,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live =>
       'Sous-titres en direct (capturés sur la page)';
@@ -115278,6 +115384,23 @@ class _StringsId extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Sembunyikan subtitel situs';
   @override
   String get web_video_hosting_builtin =>
@@ -115351,6 +115474,12 @@ class _StringsId extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => 'Teks langsung (diambil dari halaman)';
   @override
@@ -135967,6 +136096,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles =>
       'Nascondi i sottotitoli del sito';
   @override
@@ -136041,6 +136187,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live =>
       'Sottotitoli live (campionati dalla pagina)';
@@ -155646,6 +155798,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'サイトの字幕を隠す';
   @override
   String get web_video_hosting_builtin => '内蔵（1080p；超解像・スクリーンショット・カード作成が可能）';
@@ -155718,6 +155887,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => 'ライブ字幕（ページから取得）';
   @override
@@ -175360,6 +175535,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => '사이트 자막 숨기기';
   @override
   String get web_video_hosting_builtin => '내장(1080p; 초해상도, 스크린샷, 카드 만들기 가능)';
@@ -175431,6 +175623,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => '실시간 자막(페이지에서 수집)';
   @override
@@ -195995,6 +196193,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles =>
       'Ondertitels van de site verbergen';
   @override
@@ -196069,6 +196284,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => 'Live-ondertitels (van de pagina)';
   @override
@@ -216703,6 +216924,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Ocultar legendas do site';
   @override
   String get web_video_hosting_builtin =>
@@ -216776,6 +217014,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => 'Legendas ao vivo (capturadas da página)';
   @override
@@ -237357,6 +237601,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Скрыть субтитры сайта';
   @override
   String get web_video_hosting_builtin =>
@@ -237430,6 +237691,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => 'Живые субтитры (с страницы)';
   @override
@@ -257687,6 +257954,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'ซ่อนคำบรรยายของเว็บไซต์';
   @override
   String get web_video_hosting_builtin =>
@@ -257760,6 +258044,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
   @override
@@ -278220,6 +278510,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Site altyazılarını gizle';
   @override
   String get web_video_hosting_builtin =>
@@ -278293,6 +278600,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => 'Canlı altyazılar (sayfadan alınan)';
   @override
@@ -298681,6 +298994,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_video_address_hint => 'Search or enter address';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => 'Ẩn phụ đề của trang';
   @override
   String get web_video_hosting_builtin =>
@@ -298754,6 +299084,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => 'Phụ đề trực tiếp (lấy từ trang)';
   @override
@@ -317391,6 +317727,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_video_address_hint => '搜索或输入网址';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      '站点报告播放错误（${code}），已切回网页，请在页面上处理。';
+  @override
+  String get web_video_blocked_error_generic => '站点报告播放错误，已切回网页，请在页面上处理。';
+  @override
+  String get web_video_blocked_interrupt =>
+      '站点暂停了播放并在页面上询问你。请在网页上处理，处理完会自动回到播放器。';
+  @override
+  String get web_video_chapter_credits => '片尾';
+  @override
+  String get web_video_chapter_intro => '片头';
+  @override
+  String get web_video_chapter_main => '正片';
+  @override
+  String get web_video_chapter_recap => '前情回顾';
+  @override
   String get web_video_hide_native_subtitles => '隐藏站点字幕';
   @override
   String get web_video_hosting_builtin => '内置（1080p；可超分、可截图制卡）';
@@ -317459,6 +317811,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
+  @override
+  String get web_video_track_failed => '未能截获这条字幕，点选重试';
+  @override
+  String get web_video_track_image => '图片字幕：由站点显示，不可查词';
   @override
   String get web_video_track_live => '实时采集（页面字幕）';
   @override
@@ -336491,6 +336847,23 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_video_address_hint => '搜尋或輸入網址';
   @override
+  String web_video_blocked_error({required Object code}) =>
+      'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_error_generic =>
+      'The site reported a playback error. Showing the web page so you can deal with it.';
+  @override
+  String get web_video_blocked_interrupt =>
+      'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+  @override
+  String get web_video_chapter_credits => 'Credits';
+  @override
+  String get web_video_chapter_intro => 'Intro';
+  @override
+  String get web_video_chapter_main => 'Episode';
+  @override
+  String get web_video_chapter_recap => 'Recap';
+  @override
   String get web_video_hide_native_subtitles => '隱藏網站字幕';
   @override
   String get web_video_hosting_builtin => '內建（1080p；可超解析、截圖、製卡）';
@@ -336559,6 +336932,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_video_sites_hint =>
       '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
+  @override
+  String get web_video_track_failed =>
+      'Couldn\'t capture this track. Select to retry';
+  @override
+  String get web_video_track_image =>
+      'Image subtitles: shown by the site, no lookup';
   @override
   String get web_video_track_live => '即時字幕（從頁面取樣）';
   @override
@@ -353970,6 +354349,21 @@ extension on _StringsEn {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Hide site subtitles';
       case 'web_video_hosting_builtin':
@@ -354033,6 +354427,10 @@ extension on _StringsEn {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Live captions (sampled from page)';
       case 'web_video_track_loading':
@@ -371439,6 +371837,21 @@ extension on _StringsAr {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'إخفاء ترجمة الموقع';
       case 'web_video_hosting_builtin':
@@ -371502,6 +371915,10 @@ extension on _StringsAr {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'ترجمة مباشرة (مأخوذة من الصفحة)';
       case 'web_video_track_loading':
@@ -388984,6 +389401,21 @@ extension on _StringsDe {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Website-Untertitel ausblenden';
       case 'web_video_hosting_builtin':
@@ -389047,6 +389479,10 @@ extension on _StringsDe {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Live-Untertitel (von der Seite erfasst)';
       case 'web_video_track_loading':
@@ -406511,6 +406947,21 @@ extension on _StringsEs {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Ocultar subtítulos del sitio';
       case 'web_video_hosting_builtin':
@@ -406574,6 +407025,10 @@ extension on _StringsEs {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Subtítulos en vivo (capturados de la página)';
       case 'web_video_track_loading':
@@ -424056,6 +424511,21 @@ extension on _StringsFr {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Masquer les sous-titres du site';
       case 'web_video_hosting_builtin':
@@ -424119,6 +424589,10 @@ extension on _StringsFr {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Sous-titres en direct (capturés sur la page)';
       case 'web_video_track_loading':
@@ -441545,6 +442019,21 @@ extension on _StringsId {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Sembunyikan subtitel situs';
       case 'web_video_hosting_builtin':
@@ -441608,6 +442097,10 @@ extension on _StringsId {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Teks langsung (diambil dari halaman)';
       case 'web_video_track_loading':
@@ -459070,6 +459563,21 @@ extension on _StringsIt {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Nascondi i sottotitoli del sito';
       case 'web_video_hosting_builtin':
@@ -459133,6 +459641,10 @@ extension on _StringsIt {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Sottotitoli live (campionati dalla pagina)';
       case 'web_video_track_loading':
@@ -476470,6 +476982,21 @@ extension on _StringsJa {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'サイトの字幕を隠す';
       case 'web_video_hosting_builtin':
@@ -476531,6 +477058,10 @@ extension on _StringsJa {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'ライブ字幕（ページから取得）';
       case 'web_video_track_loading':
@@ -493876,6 +494407,21 @@ extension on _StringsKo {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return '사이트 자막 숨기기';
       case 'web_video_hosting_builtin':
@@ -493938,6 +494484,10 @@ extension on _StringsKo {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return '실시간 자막(페이지에서 수집)';
       case 'web_video_track_loading':
@@ -511393,6 +511943,21 @@ extension on _StringsNl {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Ondertitels van de site verbergen';
       case 'web_video_hosting_builtin':
@@ -511456,6 +512021,10 @@ extension on _StringsNl {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Live-ondertitels (van de pagina)';
       case 'web_video_track_loading':
@@ -528905,6 +529474,21 @@ extension on _StringsPtBr {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Ocultar legendas do site';
       case 'web_video_hosting_builtin':
@@ -528968,6 +529552,10 @@ extension on _StringsPtBr {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Legendas ao vivo (capturadas da página)';
       case 'web_video_track_loading':
@@ -546422,6 +547010,21 @@ extension on _StringsRu {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Скрыть субтитры сайта';
       case 'web_video_hosting_builtin':
@@ -546485,6 +547088,10 @@ extension on _StringsRu {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Живые субтитры (с страницы)';
       case 'web_video_track_loading':
@@ -563895,6 +564502,21 @@ extension on _StringsTh {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'ซ่อนคำบรรยายของเว็บไซต์';
       case 'web_video_hosting_builtin':
@@ -563958,6 +564580,10 @@ extension on _StringsTh {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
       case 'web_video_track_loading':
@@ -581399,6 +582025,21 @@ extension on _StringsTr {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Site altyazılarını gizle';
       case 'web_video_hosting_builtin':
@@ -581462,6 +582103,10 @@ extension on _StringsTr {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Canlı altyazılar (sayfadan alınan)';
       case 'web_video_track_loading':
@@ -598886,6 +599531,21 @@ extension on _StringsVi {
         return 'Skipping ad…';
       case 'web_video_address_hint':
         return 'Search or enter address';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return 'Ẩn phụ đề của trang';
       case 'web_video_hosting_builtin':
@@ -598949,6 +599609,10 @@ extension on _StringsVi {
         return 'Remove';
       case 'web_video_sites_hint':
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return 'Phụ đề trực tiếp (lấy từ trang)';
       case 'web_video_track_loading':
@@ -616171,6 +616835,20 @@ extension on _StringsZhCn {
         return '正在跳过广告…';
       case 'web_video_address_hint':
         return '搜索或输入网址';
+      case 'web_video_blocked_error':
+        return ({required Object code}) => '站点报告播放错误（${code}），已切回网页，请在页面上处理。';
+      case 'web_video_blocked_error_generic':
+        return '站点报告播放错误，已切回网页，请在页面上处理。';
+      case 'web_video_blocked_interrupt':
+        return '站点暂停了播放并在页面上询问你。请在网页上处理，处理完会自动回到播放器。';
+      case 'web_video_chapter_credits':
+        return '片尾';
+      case 'web_video_chapter_intro':
+        return '片头';
+      case 'web_video_chapter_main':
+        return '正片';
+      case 'web_video_chapter_recap':
+        return '前情回顾';
       case 'web_video_hide_native_subtitles':
         return '隐藏站点字幕';
       case 'web_video_hosting_builtin':
@@ -616231,6 +616909,10 @@ extension on _StringsZhCn {
         return '移除';
       case 'web_video_sites_hint':
         return '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
+      case 'web_video_track_failed':
+        return '未能截获这条字幕，点选重试';
+      case 'web_video_track_image':
+        return '图片字幕：由站点显示，不可查词';
       case 'web_video_track_live':
         return '实时采集（页面字幕）';
       case 'web_video_track_loading':
@@ -633506,6 +634188,21 @@ extension on _StringsZhHk {
         return '正在略過廣告…';
       case 'web_video_address_hint':
         return '搜尋或輸入網址';
+      case 'web_video_blocked_error':
+        return ({required Object code}) =>
+            'The site reported a playback error (${code}). Showing the web page so you can deal with it.';
+      case 'web_video_blocked_error_generic':
+        return 'The site reported a playback error. Showing the web page so you can deal with it.';
+      case 'web_video_blocked_interrupt':
+        return 'The site paused playback and is asking you something. Answer it on the web page; the player comes back on its own.';
+      case 'web_video_chapter_credits':
+        return 'Credits';
+      case 'web_video_chapter_intro':
+        return 'Intro';
+      case 'web_video_chapter_main':
+        return 'Episode';
+      case 'web_video_chapter_recap':
+        return 'Recap';
       case 'web_video_hide_native_subtitles':
         return '隱藏網站字幕';
       case 'web_video_hosting_builtin':
@@ -633566,6 +634263,10 @@ extension on _StringsZhHk {
         return '移除';
       case 'web_video_sites_hint':
         return '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
+      case 'web_video_track_failed':
+        return 'Couldn\'t capture this track. Select to retry';
+      case 'web_video_track_image':
+        return 'Image subtitles: shown by the site, no lookup';
       case 'web_video_track_live':
         return '即時字幕（從頁面取樣）';
       case 'web_video_track_loading':
