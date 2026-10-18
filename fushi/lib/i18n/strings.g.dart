@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 143395 (8435 per locale)
+/// Strings: 143412 (8436 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8905,6 +8905,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_deck_delete => 'Delete deck';
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  String get srs_deck_deleting => 'Deleting…';
   String get srs_deck_expand => 'Expand subdecks';
   String get srs_deck_menu => 'More actions';
   String get srs_deck_name => 'Deck name';
@@ -26994,6 +26995,8 @@ class _StringsAr extends _StringsEn {
   @override
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_deleting => 'Deleting…';
   @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
@@ -47700,6 +47703,8 @@ class _StringsDe extends _StringsEn {
   @override
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_deleting => 'Deleting…';
   @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
@@ -68531,6 +68536,8 @@ class _StringsEs extends _StringsEn {
   @override
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_deleting => 'Deleting…';
   @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
@@ -89450,6 +89457,8 @@ class _StringsFr extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -110131,6 +110140,8 @@ class _StringsId extends _StringsEn {
   @override
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_deleting => 'Deleting…';
   @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
@@ -130858,6 +130869,8 @@ class _StringsIt extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -150875,6 +150888,8 @@ class _StringsJa extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -170638,6 +170653,8 @@ class _StringsKo extends _StringsEn {
   @override
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_deleting => 'Deleting…';
   @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
@@ -191090,6 +191107,8 @@ class _StringsNl extends _StringsEn {
   @override
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_deleting => 'Deleting…';
   @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
@@ -211846,6 +211865,8 @@ class _StringsPtBr extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -232579,6 +232600,8 @@ class _StringsRu extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -253062,6 +253085,8 @@ class _StringsTh extends _StringsEn {
   @override
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+  @override
+  String get srs_deck_deleting => 'Deleting…';
   @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
@@ -273612,6 +273637,8 @@ class _StringsTr extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -294157,6 +294184,8 @@ class _StringsVi extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -313431,6 +313460,8 @@ class _StringsZhCn extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       '删除「${name}」及其子牌组？其中的卡片会移到上级牌组（没有上级则移到默认牌组）。';
   @override
+  String get srs_deck_deleting => '正在删除…';
+  @override
   String get srs_deck_expand => '展开子牌组';
   @override
   String get srs_deck_menu => '更多操作';
@@ -332460,6 +332491,8 @@ class _StringsZhHk extends _StringsEn {
   String srs_deck_delete_confirm({required Object name}) =>
       'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
   @override
+  String get srs_deck_deleting => 'Deleting…';
+  @override
   String get srs_deck_expand => 'Expand subdecks';
   @override
   String get srs_deck_menu => 'More actions';
@@ -350413,6 +350446,8 @@ extension on _StringsEn {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -367929,6 +367964,8 @@ extension on _StringsAr {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -385501,6 +385538,8 @@ extension on _StringsDe {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -403077,6 +403116,8 @@ extension on _StringsEs {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -420664,6 +420705,8 @@ extension on _StringsFr {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -438211,6 +438254,8 @@ extension on _StringsId {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -455767,6 +455812,8 @@ extension on _StringsIt {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -473257,6 +473304,8 @@ extension on _StringsJa {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -490703,6 +490752,8 @@ extension on _StringsKo {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -508232,6 +508283,8 @@ extension on _StringsNl {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -525792,6 +525845,8 @@ extension on _StringsPtBr {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -543356,6 +543411,8 @@ extension on _StringsRu {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -560880,6 +560937,8 @@ extension on _StringsTh {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -578422,6 +578481,8 @@ extension on _StringsTr {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -595959,6 +596020,8 @@ extension on _StringsVi {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
@@ -613349,6 +613412,8 @@ extension on _StringsZhCn {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             '删除「${name}」及其子牌组？其中的卡片会移到上级牌组（没有上级则移到默认牌组）。';
+      case 'srs_deck_deleting':
+        return '正在删除…';
       case 'srs_deck_expand':
         return '展开子牌组';
       case 'srs_deck_menu':
@@ -630710,6 +630775,8 @@ extension on _StringsZhHk {
       case 'srs_deck_delete_confirm':
         return ({required Object name}) =>
             'Delete "${name}" and its subdecks? Their cards move to the parent deck (or the default deck).';
+      case 'srs_deck_deleting':
+        return 'Deleting…';
       case 'srs_deck_expand':
         return 'Expand subdecks';
       case 'srs_deck_menu':
