@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142443 (8379 per locale)
+/// Strings: 142426 (8378 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2728,7 +2728,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get debug_log_toggle => 'Enable debug log';
   String get decrease => 'Decrease';
   String get deduplicate_pitch_accents => 'Deduplicate pitch accents';
-  String get delete_choices_remember => 'Remember these choices';
   String get delete_collection => 'Delete collection';
   String get delete_collection_also_books => 'Also delete the books in it';
   String get delete_collection_also_videos => 'Also delete the videos';
@@ -16305,8 +16304,6 @@ class _StringsAr extends _StringsEn {
   String get decrease => 'تقليل';
   @override
   String get deduplicate_pitch_accents => 'إزالة تكرار النبرات';
-  @override
-  String get delete_choices_remember => 'تذكّر هذه الخيارات';
   @override
   String get delete_collection => 'حذف المجموعة';
   @override
@@ -36617,8 +36614,6 @@ class _StringsDe extends _StringsEn {
   String get decrease => 'Verringern';
   @override
   String get deduplicate_pitch_accents => 'Tonhöhenakzente deduplizieren';
-  @override
-  String get delete_choices_remember => 'Diese Auswahl merken';
   @override
   String get delete_collection => 'Sammlung löschen';
   @override
@@ -57271,8 +57266,6 @@ class _StringsEs extends _StringsEn {
   String get decrease => 'Disminuir';
   @override
   String get deduplicate_pitch_accents => 'Deduplicar acentos tonales';
-  @override
-  String get delete_choices_remember => 'Recordar estas opciones';
   @override
   String get delete_collection => 'Eliminar colección';
   @override
@@ -77994,8 +77987,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Dédupliquer les accents tonaux';
   @override
-  String get delete_choices_remember => 'Mémoriser ces choix';
-  @override
   String get delete_collection => 'Supprimer la collection';
   @override
   String get delete_collection_also_books =>
@@ -98705,8 +98696,6 @@ class _StringsId extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Hapus duplikat aksen nada';
   @override
-  String get delete_choices_remember => 'Ingat pilihan ini';
-  @override
   String get delete_collection => 'Hapus koleksi';
   @override
   String get delete_collection_also_books => 'Hapus juga buku di dalamnya';
@@ -119169,8 +119158,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Deduplica accenti tonali';
   @override
-  String get delete_choices_remember => 'Ricorda queste scelte';
-  @override
   String get delete_collection => 'Elimina raccolta';
   @override
   String get delete_collection_also_books => 'Elimina anche i libri contenuti';
@@ -139595,8 +139582,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'アクセント重複除外';
   @override
-  String get delete_choices_remember => 'この選択を記憶する';
-  @override
   String get delete_collection => 'コレクションを削除';
   @override
   String get delete_collection_also_books => '中の書籍も削除';
@@ -159174,8 +159159,6 @@ class _StringsKo extends _StringsEn {
   String get decrease => '감소';
   @override
   String get deduplicate_pitch_accents => '악센트 중복 제거';
-  @override
-  String get delete_choices_remember => '이 선택 기억하기';
   @override
   String get delete_collection => '컬렉션 삭제';
   @override
@@ -178968,8 +178951,6 @@ class _StringsNl extends _StringsEn {
   String get decrease => 'Verlagen';
   @override
   String get deduplicate_pitch_accents => 'Toonhoogteaccenten dedupliceren';
-  @override
-  String get delete_choices_remember => 'Deze keuzes onthouden';
   @override
   String get delete_collection => 'Collectie verwijderen';
   @override
@@ -199528,8 +199509,6 @@ class _StringsPtBr extends _StringsEn {
   String get decrease => 'Diminuir';
   @override
   String get deduplicate_pitch_accents => 'Deduplicar acentos tonais';
-  @override
-  String get delete_choices_remember => 'Lembrar estas escolhas';
   @override
   String get delete_collection => 'Excluir coleção';
   @override
@@ -220132,8 +220111,6 @@ class _StringsRu extends _StringsEn {
   String get deduplicate_pitch_accents =>
       'Удалить дубликаты тональных ударений';
   @override
-  String get delete_choices_remember => 'Запомнить этот выбор';
-  @override
   String get delete_collection => 'Удалить коллекцию';
   @override
   String get delete_collection_also_books => 'Также удалить книги из неё';
@@ -240629,8 +240606,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'ลบสำเนียงซ้ำ';
   @override
-  String get delete_choices_remember => 'จดจำตัวเลือกเหล่านี้';
-  @override
   String get delete_collection => 'ลบคอลเลกชัน';
   @override
   String get delete_collection_also_books => 'ลบหนังสือในนั้นด้วย';
@@ -260911,8 +260886,6 @@ class _StringsTr extends _StringsEn {
   String get decrease => 'Azalt';
   @override
   String get deduplicate_pitch_accents => 'Ton vurgularını tekrarsızlaştır';
-  @override
-  String get delete_choices_remember => 'Bu seçimleri hatırla';
   @override
   String get delete_collection => 'Koleksiyonu sil';
   @override
@@ -281343,8 +281316,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => 'Loại bỏ trùng lặp thanh điệu';
   @override
-  String get delete_choices_remember => 'Ghi nhớ các lựa chọn này';
-  @override
   String get delete_collection => 'Xóa bộ sưu tập';
   @override
   String get delete_collection_also_books => 'Đồng thời xóa sách trong đó';
@@ -301343,8 +301314,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => '音调去重';
   @override
-  String get delete_choices_remember => '记住这些选择';
-  @override
   String get delete_collection => '删除合集';
   @override
   String get delete_collection_also_books => '同时删除其中的书';
@@ -320080,8 +320049,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get deduplicate_pitch_accents => '音調重複去除';
   @override
-  String get delete_choices_remember => '記住這些選擇';
-  @override
   String get delete_collection => '刪除合集';
   @override
   String get delete_collection_also_books => '同時刪除其中的書';
@@ -338623,8 +338590,6 @@ extension on _StringsEn {
         return 'Decrease';
       case 'deduplicate_pitch_accents':
         return 'Deduplicate pitch accents';
-      case 'delete_choices_remember':
-        return 'Remember these choices';
       case 'delete_collection':
         return 'Delete collection';
       case 'delete_collection_also_books':
@@ -356016,8 +355981,6 @@ extension on _StringsAr {
         return 'تقليل';
       case 'deduplicate_pitch_accents':
         return 'إزالة تكرار النبرات';
-      case 'delete_choices_remember':
-        return 'تذكّر هذه الخيارات';
       case 'delete_collection':
         return 'حذف المجموعة';
       case 'delete_collection_also_books':
@@ -373424,8 +373387,6 @@ extension on _StringsDe {
         return 'Verringern';
       case 'deduplicate_pitch_accents':
         return 'Tonhöhenakzente deduplizieren';
-      case 'delete_choices_remember':
-        return 'Diese Auswahl merken';
       case 'delete_collection':
         return 'Sammlung löschen';
       case 'delete_collection_also_books':
@@ -390881,8 +390842,6 @@ extension on _StringsEs {
         return 'Disminuir';
       case 'deduplicate_pitch_accents':
         return 'Deduplicar acentos tonales';
-      case 'delete_choices_remember':
-        return 'Recordar estas opciones';
       case 'delete_collection':
         return 'Eliminar colección';
       case 'delete_collection_also_books':
@@ -408330,8 +408289,6 @@ extension on _StringsFr {
         return 'Diminuer';
       case 'deduplicate_pitch_accents':
         return 'Dédupliquer les accents tonaux';
-      case 'delete_choices_remember':
-        return 'Mémoriser ces choix';
       case 'delete_collection':
         return 'Supprimer la collection';
       case 'delete_collection_also_books':
@@ -425778,8 +425735,6 @@ extension on _StringsId {
         return 'Kurangi';
       case 'deduplicate_pitch_accents':
         return 'Hapus duplikat aksen nada';
-      case 'delete_choices_remember':
-        return 'Ingat pilihan ini';
       case 'delete_collection':
         return 'Hapus koleksi';
       case 'delete_collection_also_books':
@@ -443190,8 +443145,6 @@ extension on _StringsIt {
         return 'Diminuisci';
       case 'deduplicate_pitch_accents':
         return 'Deduplica accenti tonali';
-      case 'delete_choices_remember':
-        return 'Ricorda queste scelte';
       case 'delete_collection':
         return 'Elimina raccolta';
       case 'delete_collection_also_books':
@@ -460600,8 +460553,6 @@ extension on _StringsJa {
         return '減少';
       case 'deduplicate_pitch_accents':
         return 'アクセント重複除外';
-      case 'delete_choices_remember':
-        return 'この選択を記憶する';
       case 'delete_collection':
         return 'コレクションを削除';
       case 'delete_collection_also_books':
@@ -477915,8 +477866,6 @@ extension on _StringsKo {
         return '감소';
       case 'deduplicate_pitch_accents':
         return '악센트 중복 제거';
-      case 'delete_choices_remember':
-        return '이 선택 기억하기';
       case 'delete_collection':
         return '컬렉션 삭제';
       case 'delete_collection_also_books':
@@ -495268,8 +495217,6 @@ extension on _StringsNl {
         return 'Verlagen';
       case 'deduplicate_pitch_accents':
         return 'Toonhoogteaccenten dedupliceren';
-      case 'delete_choices_remember':
-        return 'Deze keuzes onthouden';
       case 'delete_collection':
         return 'Collectie verwijderen';
       case 'delete_collection_also_books':
@@ -512706,8 +512653,6 @@ extension on _StringsPtBr {
         return 'Diminuir';
       case 'deduplicate_pitch_accents':
         return 'Deduplicar acentos tonais';
-      case 'delete_choices_remember':
-        return 'Lembrar estas escolhas';
       case 'delete_collection':
         return 'Excluir coleção';
       case 'delete_collection_also_books':
@@ -530139,8 +530084,6 @@ extension on _StringsRu {
         return 'Уменьшить';
       case 'deduplicate_pitch_accents':
         return 'Удалить дубликаты тональных ударений';
-      case 'delete_choices_remember':
-        return 'Запомнить этот выбор';
       case 'delete_collection':
         return 'Удалить коллекцию';
       case 'delete_collection_also_books':
@@ -547554,8 +547497,6 @@ extension on _StringsTh {
         return 'ลด';
       case 'deduplicate_pitch_accents':
         return 'ลบสำเนียงซ้ำ';
-      case 'delete_choices_remember':
-        return 'จดจำตัวเลือกเหล่านี้';
       case 'delete_collection':
         return 'ลบคอลเลกชัน';
       case 'delete_collection_also_books':
@@ -564960,8 +564901,6 @@ extension on _StringsTr {
         return 'Azalt';
       case 'deduplicate_pitch_accents':
         return 'Ton vurgularını tekrarsızlaştır';
-      case 'delete_choices_remember':
-        return 'Bu seçimleri hatırla';
       case 'delete_collection':
         return 'Koleksiyonu sil';
       case 'delete_collection_also_books':
@@ -582372,8 +582311,6 @@ extension on _StringsVi {
         return 'Giảm';
       case 'deduplicate_pitch_accents':
         return 'Loại bỏ trùng lặp thanh điệu';
-      case 'delete_choices_remember':
-        return 'Ghi nhớ các lựa chọn này';
       case 'delete_collection':
         return 'Xóa bộ sưu tập';
       case 'delete_collection_also_books':
@@ -599718,8 +599655,6 @@ extension on _StringsZhCn {
         return '减少';
       case 'deduplicate_pitch_accents':
         return '音调去重';
-      case 'delete_choices_remember':
-        return '记住这些选择';
       case 'delete_collection':
         return '删除合集';
       case 'delete_collection_also_books':
@@ -616925,8 +616860,6 @@ extension on _StringsZhHk {
         return '減少';
       case 'deduplicate_pitch_accents':
         return '音調重複去除';
-      case 'delete_choices_remember':
-        return '記住這些選擇';
       case 'delete_collection':
         return '刪除合集';
       case 'delete_collection_also_books':
