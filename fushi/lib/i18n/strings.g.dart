@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142443 (8379 per locale)
+/// Strings: 142766 (8398 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6577,6 +6577,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_volume_key_paging => 'Volume keys turn pages';
   String get manga_volume_key_paging_subtitle =>
       'Use volume up and down to turn pages in the manga reader';
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  String get manga_web_chapter_next => 'Next chapter';
+  String get manga_web_chapter_prev => 'Previous chapter';
+  String get manga_web_read_chapter => 'Read in Fushi';
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
   String get manga_wide_page_solo => 'Wide pages alone';
   String get manga_wide_page_solo_subtitle =>
       'Show a double-width spread page on its own';
@@ -12032,6 +12044,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get view_illustrations => 'Illustrations';
   String get volume_button_page_turning => 'Volume button page turning';
   String get volume_key_sentence_nav => 'Volume key sentence navigation';
+  String get web_browser_address_hint => 'Enter a website address';
+  String get web_browser_address_invalid => 'Not a valid website address';
+  String get web_browser_forward => 'Forward';
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  String get web_browser_site_add => 'Add to sites';
+  String get web_browser_site_added => 'Added to sites';
+  String get web_browser_site_remove => 'Remove from sites';
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  String get web_browser_sites_title => 'Sites';
+  String get web_browser_title => 'Browser';
   String get web_video_hide_native_subtitles => 'Hide site subtitles';
   String get web_video_hosting_builtin =>
       'Built-in (1080p; super-resolution, screenshots and cards available)';
@@ -22855,6 +22879,26 @@ class _StringsAr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'استخدم زري رفع وخفض الصوت لتقليب الصفحات في قارئ المانغا';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'الصفحات العريضة وحدها';
   @override
   String get manga_wide_page_solo_subtitle => 'عرض الصفحة المزدوجة العرض وحدها';
@@ -32253,6 +32297,29 @@ class _StringsAr extends _StringsEn {
   String get volume_button_page_turning => 'تقليب الصفحات بأزرار الصوت';
   @override
   String get volume_key_sentence_nav => 'التنقل بين الجمل بأزرار الصوت';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => 'إخفاء ترجمة الموقع';
   @override
@@ -43326,6 +43393,26 @@ class _StringsDe extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Lautstärke hoch und runter zum Seitenumblättern im Manga-Reader verwenden';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Breite Seiten einzeln';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -52895,6 +52982,29 @@ class _StringsDe extends _StringsEn {
       'Seitenblättern mit Lautstärketasten';
   @override
   String get volume_key_sentence_nav => 'Satznavigation mit Lautstärketasten';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => 'Website-Untertitel ausblenden';
   @override
@@ -63995,6 +64105,26 @@ class _StringsEs extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Use subir y bajar volumen para pasar páginas en el lector de manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Páginas anchas solas';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -73593,6 +73723,29 @@ class _StringsEs extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Navegación de oraciones con teclas de volumen';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => 'Ocultar subtítulos del sitio';
   @override
@@ -84736,6 +84889,26 @@ class _StringsFr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Utiliser les touches volume haut et bas pour tourner les pages dans le lecteur de manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Pages larges seules';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -94372,6 +94545,29 @@ class _StringsFr extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Navigation par phrase avec les touches de volume';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles =>
       'Masquer les sous-titres du site';
@@ -105328,6 +105524,26 @@ class _StringsId extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Gunakan tombol volume naik dan turun untuk mengganti halaman di pembaca manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Halaman lebar sendiri';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -114810,6 +115026,29 @@ class _StringsId extends _StringsEn {
   String get volume_button_page_turning => 'Tombol volume untuk ganti halaman';
   @override
   String get volume_key_sentence_nav => 'Navigasi kalimat dengan tombol volume';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => 'Sembunyikan subtitel situs';
   @override
@@ -125855,6 +126094,26 @@ class _StringsIt extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Usa volume su e giù per cambiare pagina nel lettore manga';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Pagine larghe da sole';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -135408,6 +135667,29 @@ class _StringsIt extends _StringsEn {
   String get volume_button_page_turning => 'Cambia pagina con i tasti volume';
   @override
   String get volume_key_sentence_nav => 'Navigazione frase con tasti volume';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles =>
       'Nascondi i sottotitoli del sito';
@@ -145916,6 +146198,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '音量の上下ボタンでマンガリーダーのページをめくります';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => '横長ページを単独表示';
   @override
   String get manga_wide_page_solo_subtitle => '見開きの横長ページを 1 画面に単独で表示します';
@@ -154995,6 +155297,29 @@ class _StringsJa extends _StringsEn {
   String get volume_button_page_turning => '音量ボタンでページ送り';
   @override
   String get volume_key_sentence_nav => '音量キーで文ナビゲーション';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => 'サイトの字幕を隠す';
   @override
@@ -165514,6 +165839,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '만화 리더에서 볼륨 업/다운 키로 페이지를 넘깁니다';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => '넓은 페이지 단독 표시';
   @override
   String get manga_wide_page_solo_subtitle => '두 배 너비의 펼침 페이지를 단독으로 표시합니다';
@@ -174617,6 +174962,29 @@ class _StringsKo extends _StringsEn {
   String get volume_button_page_turning => '볼륨 버튼으로 페이지 넘기기';
   @override
   String get volume_key_sentence_nav => '볼륨 키 문장 탐색';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => '사이트 자막 숨기기';
   @override
@@ -185625,6 +185993,26 @@ class _StringsNl extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Gebruik volume omhoog en omlaag om pagina\'s te bladeren in de mangalezer';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Brede pagina\'s alleen';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -195161,6 +195549,29 @@ class _StringsNl extends _StringsEn {
       'Pagina\'s omslaan met volumeknoppen';
   @override
   String get volume_key_sentence_nav => 'Zinsnavigatie met volumeknoppen';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles =>
       'Ondertitels van de site verbergen';
@@ -206217,6 +206628,26 @@ class _StringsPtBr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Usar volume para cima e para baixo para virar páginas no leitor de mangá';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Páginas largas sozinhas';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -215778,6 +216209,29 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Navegação de frases com teclas de volume';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => 'Ocultar legendas do site';
   @override
@@ -226787,6 +227241,26 @@ class _StringsRu extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Используйте кнопки громкости для перелистывания страниц в читалке манги';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Широкие страницы отдельно';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -236341,6 +236815,29 @@ class _StringsRu extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Навигация по предложениям кнопками громкости';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => 'Скрыть субтитры сайта';
   @override
@@ -247179,6 +247676,26 @@ class _StringsTh extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'ใช้ปุ่มเพิ่ม/ลดเสียงเพื่อพลิกหน้าในตัวอ่านมังงะ';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'หน้ากว้างอยู่เดี่ยว';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -256580,6 +257097,29 @@ class _StringsTh extends _StringsEn {
   String get volume_button_page_turning => 'ปุ่มเสียงเปลี่ยนหน้า';
   @override
   String get volume_key_sentence_nav => 'นำทางประโยคด้วยปุ่มเสียง';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => 'ซ่อนคำบรรยายของเว็บไซต์';
   @override
@@ -267542,6 +268082,26 @@ class _StringsTr extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Manga okuyucusunda sayfa çevirmek için ses açma ve kısma tuşlarını kullanın';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Geniş sayfalar tek başına';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -277022,6 +277582,29 @@ class _StringsTr extends _StringsEn {
   String get volume_button_page_turning => 'Ses düğmeleriyle sayfa çevirme';
   @override
   String get volume_key_sentence_nav => 'Ses Tuşuyla Cümle Gezinme';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => 'Site altyazılarını gizle';
   @override
@@ -287948,6 +288531,26 @@ class _StringsVi extends _StringsEn {
   String get manga_volume_key_paging_subtitle =>
       'Sử dụng phím tăng giảm âm lượng để lật trang trong trình đọc truyện tranh';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => 'Trang rộng đứng riêng';
   @override
   String get manga_wide_page_solo_subtitle =>
@@ -297392,6 +297995,29 @@ class _StringsVi extends _StringsEn {
   String get volume_button_page_turning => 'Lật trang bằng nút âm lượng';
   @override
   String get volume_key_sentence_nav => 'Điều hướng câu bằng phím âm lượng';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => 'Ẩn phụ đề của trang';
   @override
@@ -307386,6 +308012,22 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '在漫画阅读器中用音量加减键翻页';
   @override
+  String get manga_web_ad_filter_off => '跳过章末二维码广告页：关';
+  @override
+  String get manga_web_ad_filter_on => '跳过章末二维码广告页：开';
+  @override
+  String get manga_web_chapter_next => '下一话';
+  @override
+  String get manga_web_chapter_prev => '上一话';
+  @override
+  String get manga_web_read_chapter => '用 Fushi 阅读本章';
+  @override
+  String get manga_web_scan_empty => '本页没有找到漫画图片，请先打开某一话的阅读页。';
+  @override
+  String get manga_web_scan_failed => '读取本页漫画失败';
+  @override
+  String get manga_web_scan_running => '正在识别本页的漫画图片…';
+  @override
   String get manga_wide_page_solo => '宽页独占一屏';
   @override
   String get manga_wide_page_solo_subtitle => '见开き页单独占一屏显示';
@@ -316016,6 +316658,28 @@ class _StringsZhCn extends _StringsEn {
   String get volume_button_page_turning => '音量键翻页';
   @override
   String get volume_key_sentence_nav => '音量键句子导航';
+  @override
+  String get web_browser_address_hint => '输入网址';
+  @override
+  String get web_browser_address_invalid => '不是有效的网址';
+  @override
+  String get web_browser_forward => '前进';
+  @override
+  String get web_browser_lookup_off => '点词查词：关';
+  @override
+  String get web_browser_lookup_on => '点词查词：开';
+  @override
+  String get web_browser_site_add => '加入站点';
+  @override
+  String get web_browser_site_added => '已加入站点';
+  @override
+  String get web_browser_site_remove => '从站点移除';
+  @override
+  String get web_browser_sites_empty => '还没有站点。在地址栏打开网页后，可以把它加入站点。';
+  @override
+  String get web_browser_sites_title => '站点';
+  @override
+  String get web_browser_title => '浏览器';
   @override
   String get web_video_hide_native_subtitles => '隐藏站点字幕';
   @override
@@ -326195,6 +326859,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_volume_key_paging_subtitle => '在漫畫閱讀器中用音量加減鍵翻頁';
   @override
+  String get manga_web_ad_filter_off =>
+      'Skip QR-code ad pages at chapter end: off';
+  @override
+  String get manga_web_ad_filter_on =>
+      'Skip QR-code ad pages at chapter end: on';
+  @override
+  String get manga_web_chapter_next => 'Next chapter';
+  @override
+  String get manga_web_chapter_prev => 'Previous chapter';
+  @override
+  String get manga_web_read_chapter => 'Read in Fushi';
+  @override
+  String get manga_web_scan_empty =>
+      'No manga pages were found here. Open a chapter\'s reading page first.';
+  @override
+  String get manga_web_scan_failed =>
+      'Could not read the manga pages on this page';
+  @override
+  String get manga_web_scan_running => 'Finding the manga pages on this page…';
+  @override
   String get manga_wide_page_solo => '寬頁獨佔一屏';
   @override
   String get manga_wide_page_solo_subtitle => '見開き頁單獨佔一屏顯示';
@@ -335026,6 +335710,29 @@ class _StringsZhHk extends _StringsEn {
   String get volume_button_page_turning => '音量鍵翻頁';
   @override
   String get volume_key_sentence_nav => '音量鍵句子導覽';
+  @override
+  String get web_browser_address_hint => 'Enter a website address';
+  @override
+  String get web_browser_address_invalid => 'Not a valid website address';
+  @override
+  String get web_browser_forward => 'Forward';
+  @override
+  String get web_browser_lookup_off => 'Tap to look up: off';
+  @override
+  String get web_browser_lookup_on => 'Tap to look up: on';
+  @override
+  String get web_browser_site_add => 'Add to sites';
+  @override
+  String get web_browser_site_added => 'Added to sites';
+  @override
+  String get web_browser_site_remove => 'Remove from sites';
+  @override
+  String get web_browser_sites_empty =>
+      'No sites yet. Open a page from the address bar, then add it to your sites.';
+  @override
+  String get web_browser_sites_title => 'Sites';
+  @override
+  String get web_browser_title => 'Browser';
   @override
   String get web_video_hide_native_subtitles => '隱藏網站字幕';
   @override
@@ -344255,6 +344962,22 @@ extension on _StringsEn {
         return 'Volume keys turn pages';
       case 'manga_volume_key_paging_subtitle':
         return 'Use volume up and down to turn pages in the manga reader';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Wide pages alone';
       case 'manga_wide_page_solo_subtitle':
@@ -352421,6 +353144,28 @@ extension on _StringsEn {
         return 'Volume button page turning';
       case 'volume_key_sentence_nav':
         return 'Volume key sentence navigation';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'Hide site subtitles';
       case 'web_video_hosting_builtin':
@@ -361642,6 +362387,22 @@ extension on _StringsAr {
         return 'أزرار الصوت لتقليب الصفحات';
       case 'manga_volume_key_paging_subtitle':
         return 'استخدم زري رفع وخفض الصوت لتقليب الصفحات في قارئ المانغا';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'الصفحات العريضة وحدها';
       case 'manga_wide_page_solo_subtitle':
@@ -369807,6 +370568,28 @@ extension on _StringsAr {
         return 'تقليب الصفحات بأزرار الصوت';
       case 'volume_key_sentence_nav':
         return 'التنقل بين الجمل بأزرار الصوت';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'إخفاء ترجمة الموقع';
       case 'web_video_hosting_builtin':
@@ -379076,6 +379859,22 @@ extension on _StringsDe {
         return 'Lautstärketasten zum Blättern';
       case 'manga_volume_key_paging_subtitle':
         return 'Lautstärke hoch und runter zum Seitenumblättern im Manga-Reader verwenden';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Breite Seiten einzeln';
       case 'manga_wide_page_solo_subtitle':
@@ -387269,6 +388068,28 @@ extension on _StringsDe {
         return 'Seitenblättern mit Lautstärketasten';
       case 'volume_key_sentence_nav':
         return 'Satznavigation mit Lautstärketasten';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'Website-Untertitel ausblenden';
       case 'web_video_hosting_builtin':
@@ -396524,6 +397345,22 @@ extension on _StringsEs {
         return 'Teclas de volumen pasan páginas';
       case 'manga_volume_key_paging_subtitle':
         return 'Use subir y bajar volumen para pasar páginas en el lector de manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Páginas anchas solas';
       case 'manga_wide_page_solo_subtitle':
@@ -404713,6 +405550,28 @@ extension on _StringsEs {
         return 'Pasar página con botones de volumen';
       case 'volume_key_sentence_nav':
         return 'Navegación de oraciones con teclas de volumen';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'Ocultar subtítulos del sitio';
       case 'web_video_hosting_builtin':
@@ -413982,6 +414841,22 @@ extension on _StringsFr {
         return 'Touches de volume pour tourner les pages';
       case 'manga_volume_key_paging_subtitle':
         return 'Utiliser les touches volume haut et bas pour tourner les pages dans le lecteur de manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Pages larges seules';
       case 'manga_wide_page_solo_subtitle':
@@ -422175,6 +423050,28 @@ extension on _StringsFr {
         return 'Tourner les pages avec les boutons de volume';
       case 'volume_key_sentence_nav':
         return 'Navigation par phrase avec les touches de volume';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'Masquer les sous-titres du site';
       case 'web_video_hosting_builtin':
@@ -431413,6 +432310,22 @@ extension on _StringsId {
         return 'Tombol volume untuk ganti halaman';
       case 'manga_volume_key_paging_subtitle':
         return 'Gunakan tombol volume naik dan turun untuk mengganti halaman di pembaca manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Halaman lebar sendiri';
       case 'manga_wide_page_solo_subtitle':
@@ -439581,6 +440494,28 @@ extension on _StringsId {
         return 'Tombol volume untuk ganti halaman';
       case 'volume_key_sentence_nav':
         return 'Navigasi kalimat dengan tombol volume';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'Sembunyikan subtitel situs';
       case 'web_video_hosting_builtin':
@@ -448833,6 +449768,22 @@ extension on _StringsIt {
         return 'Tasti volume cambiano pagina';
       case 'manga_volume_key_paging_subtitle':
         return 'Usa volume su e giù per cambiare pagina nel lettore manga';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Pagine larghe da sole';
       case 'manga_wide_page_solo_subtitle':
@@ -457023,6 +457974,28 @@ extension on _StringsIt {
         return 'Cambia pagina con i tasti volume';
       case 'volume_key_sentence_nav':
         return 'Navigazione frase con tasti volume';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'Nascondi i sottotitoli del sito';
       case 'web_video_hosting_builtin':
@@ -466211,6 +467184,22 @@ extension on _StringsJa {
         return '音量キーでページめくり';
       case 'manga_volume_key_paging_subtitle':
         return '音量の上下ボタンでマンガリーダーのページをめくります';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return '横長ページを単独表示';
       case 'manga_wide_page_solo_subtitle':
@@ -474340,6 +475329,28 @@ extension on _StringsJa {
         return '音量ボタンでページ送り';
       case 'volume_key_sentence_nav':
         return '音量キーで文ナビゲーション';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'サイトの字幕を隠す';
       case 'web_video_hosting_builtin':
@@ -483528,6 +484539,22 @@ extension on _StringsKo {
         return '볼륨 키로 페이지 넘기기';
       case 'manga_volume_key_paging_subtitle':
         return '만화 리더에서 볼륨 업/다운 키로 페이지를 넘깁니다';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return '넓은 페이지 단독 표시';
       case 'manga_wide_page_solo_subtitle':
@@ -491663,6 +492690,28 @@ extension on _StringsKo {
         return '볼륨 버튼으로 페이지 넘기기';
       case 'volume_key_sentence_nav':
         return '볼륨 키 문장 탐색';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return '사이트 자막 숨기기';
       case 'web_video_hosting_builtin':
@@ -500914,6 +501963,22 @@ extension on _StringsNl {
         return 'Volumeknoppen bladeren pagina\'s';
       case 'manga_volume_key_paging_subtitle':
         return 'Gebruik volume omhoog en omlaag om pagina\'s te bladeren in de mangalezer';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Brede pagina\'s alleen';
       case 'manga_wide_page_solo_subtitle':
@@ -509097,6 +510162,28 @@ extension on _StringsNl {
         return 'Pagina\'s omslaan met volumeknoppen';
       case 'volume_key_sentence_nav':
         return 'Zinsnavigatie met volumeknoppen';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'Ondertitels van de site verbergen';
       case 'web_video_hosting_builtin':
@@ -518346,6 +519433,22 @@ extension on _StringsPtBr {
         return 'Botões de volume viram páginas';
       case 'manga_volume_key_paging_subtitle':
         return 'Usar volume para cima e para baixo para virar páginas no leitor de mangá';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Páginas largas sozinhas';
       case 'manga_wide_page_solo_subtitle':
@@ -526526,6 +527629,28 @@ extension on _StringsPtBr {
         return 'Virar página com botão de volume';
       case 'volume_key_sentence_nav':
         return 'Navegação de frases com teclas de volume';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'Ocultar legendas do site';
       case 'web_video_hosting_builtin':
@@ -535782,6 +536907,22 @@ extension on _StringsRu {
         return 'Перелистывание кнопками громкости';
       case 'manga_volume_key_paging_subtitle':
         return 'Используйте кнопки громкости для перелистывания страниц в читалке манги';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Широкие страницы отдельно';
       case 'manga_wide_page_solo_subtitle':
@@ -543960,6 +545101,28 @@ extension on _StringsRu {
         return 'Перелистывание кнопками громкости';
       case 'volume_key_sentence_nav':
         return 'Навигация по предложениям кнопками громкости';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'Скрыть субтитры сайта';
       case 'web_video_hosting_builtin':
@@ -553187,6 +554350,22 @@ extension on _StringsTh {
         return 'ปุ่มเสียงพลิกหน้า';
       case 'manga_volume_key_paging_subtitle':
         return 'ใช้ปุ่มเพิ่ม/ลดเสียงเพื่อพลิกหน้าในตัวอ่านมังงะ';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'หน้ากว้างอยู่เดี่ยว';
       case 'manga_wide_page_solo_subtitle':
@@ -561350,6 +562529,28 @@ extension on _StringsTh {
         return 'ปุ่มเสียงเปลี่ยนหน้า';
       case 'volume_key_sentence_nav':
         return 'นำทางประโยคด้วยปุ่มเสียง';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'ซ่อนคำบรรยายของเว็บไซต์';
       case 'web_video_hosting_builtin':
@@ -570598,6 +571799,22 @@ extension on _StringsTr {
         return 'Ses tuşlarıyla sayfa çevirme';
       case 'manga_volume_key_paging_subtitle':
         return 'Manga okuyucusunda sayfa çevirmek için ses açma ve kısma tuşlarını kullanın';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Geniş sayfalar tek başına';
       case 'manga_wide_page_solo_subtitle':
@@ -578771,6 +579988,28 @@ extension on _StringsTr {
         return 'Ses düğmeleriyle sayfa çevirme';
       case 'volume_key_sentence_nav':
         return 'Ses Tuşuyla Cümle Gezinme';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'Site altyazılarını gizle';
       case 'web_video_hosting_builtin':
@@ -588007,6 +589246,22 @@ extension on _StringsVi {
         return 'Phím âm lượng lật trang';
       case 'manga_volume_key_paging_subtitle':
         return 'Sử dụng phím tăng giảm âm lượng để lật trang trong trình đọc truyện tranh';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return 'Trang rộng đứng riêng';
       case 'manga_wide_page_solo_subtitle':
@@ -596175,6 +597430,28 @@ extension on _StringsVi {
         return 'Lật trang bằng nút âm lượng';
       case 'volume_key_sentence_nav':
         return 'Điều hướng câu bằng phím âm lượng';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return 'Ẩn phụ đề của trang';
       case 'web_video_hosting_builtin':
@@ -605296,6 +606573,22 @@ extension on _StringsZhCn {
         return '音量键翻页';
       case 'manga_volume_key_paging_subtitle':
         return '在漫画阅读器中用音量加减键翻页';
+      case 'manga_web_ad_filter_off':
+        return '跳过章末二维码广告页：关';
+      case 'manga_web_ad_filter_on':
+        return '跳过章末二维码广告页：开';
+      case 'manga_web_chapter_next':
+        return '下一话';
+      case 'manga_web_chapter_prev':
+        return '上一话';
+      case 'manga_web_read_chapter':
+        return '用 Fushi 阅读本章';
+      case 'manga_web_scan_empty':
+        return '本页没有找到漫画图片，请先打开某一话的阅读页。';
+      case 'manga_web_scan_failed':
+        return '读取本页漫画失败';
+      case 'manga_web_scan_running':
+        return '正在识别本页的漫画图片…';
       case 'manga_wide_page_solo':
         return '宽页独占一屏';
       case 'manga_wide_page_solo_subtitle':
@@ -613377,6 +614670,28 @@ extension on _StringsZhCn {
         return '音量键翻页';
       case 'volume_key_sentence_nav':
         return '音量键句子导航';
+      case 'web_browser_address_hint':
+        return '输入网址';
+      case 'web_browser_address_invalid':
+        return '不是有效的网址';
+      case 'web_browser_forward':
+        return '前进';
+      case 'web_browser_lookup_off':
+        return '点词查词：关';
+      case 'web_browser_lookup_on':
+        return '点词查词：开';
+      case 'web_browser_site_add':
+        return '加入站点';
+      case 'web_browser_site_added':
+        return '已加入站点';
+      case 'web_browser_site_remove':
+        return '从站点移除';
+      case 'web_browser_sites_empty':
+        return '还没有站点。在地址栏打开网页后，可以把它加入站点。';
+      case 'web_browser_sites_title':
+        return '站点';
+      case 'web_browser_title':
+        return '浏览器';
       case 'web_video_hide_native_subtitles':
         return '隐藏站点字幕';
       case 'web_video_hosting_builtin':
@@ -622520,6 +623835,22 @@ extension on _StringsZhHk {
         return '音量鍵翻頁';
       case 'manga_volume_key_paging_subtitle':
         return '在漫畫閱讀器中用音量加減鍵翻頁';
+      case 'manga_web_ad_filter_off':
+        return 'Skip QR-code ad pages at chapter end: off';
+      case 'manga_web_ad_filter_on':
+        return 'Skip QR-code ad pages at chapter end: on';
+      case 'manga_web_chapter_next':
+        return 'Next chapter';
+      case 'manga_web_chapter_prev':
+        return 'Previous chapter';
+      case 'manga_web_read_chapter':
+        return 'Read in Fushi';
+      case 'manga_web_scan_empty':
+        return 'No manga pages were found here. Open a chapter\'s reading page first.';
+      case 'manga_web_scan_failed':
+        return 'Could not read the manga pages on this page';
+      case 'manga_web_scan_running':
+        return 'Finding the manga pages on this page…';
       case 'manga_wide_page_solo':
         return '寬頁獨佔一屏';
       case 'manga_wide_page_solo_subtitle':
@@ -630630,6 +631961,28 @@ extension on _StringsZhHk {
         return '音量鍵翻頁';
       case 'volume_key_sentence_nav':
         return '音量鍵句子導覽';
+      case 'web_browser_address_hint':
+        return 'Enter a website address';
+      case 'web_browser_address_invalid':
+        return 'Not a valid website address';
+      case 'web_browser_forward':
+        return 'Forward';
+      case 'web_browser_lookup_off':
+        return 'Tap to look up: off';
+      case 'web_browser_lookup_on':
+        return 'Tap to look up: on';
+      case 'web_browser_site_add':
+        return 'Add to sites';
+      case 'web_browser_site_added':
+        return 'Added to sites';
+      case 'web_browser_site_remove':
+        return 'Remove from sites';
+      case 'web_browser_sites_empty':
+        return 'No sites yet. Open a page from the address bar, then add it to your sites.';
+      case 'web_browser_sites_title':
+        return 'Sites';
+      case 'web_browser_title':
+        return 'Browser';
       case 'web_video_hide_native_subtitles':
         return '隱藏網站字幕';
       case 'web_video_hosting_builtin':
