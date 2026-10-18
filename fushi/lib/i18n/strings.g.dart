@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142443 (8379 per locale)
+/// Strings: 142426 (8378 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -10569,8 +10569,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_discovery_subscribe => 'Subscribe';
   String get video_discovery_subscription_manage => 'Manage subscription';
   String get video_discovery_subtitle_search => 'Search subtitles';
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
   String get video_double_tap_next_cue => 'Next line';
@@ -11223,8 +11221,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_hdr_output => 'HDR / 10-bit output';
   String get video_setting_hdr_output_always => 'Always';
   String get video_setting_hdr_output_auto => 'Auto';
-  String get video_setting_hdr_output_hint =>
-      'Windows only. Auto hands HDR sources straight to an HDR display through a native video window (Dolby Vision profile 5 always uses it, since only that renderer shows its colors correctly); Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Windows only. Auto outputs HDR when the display is in HDR mode and the video is HDR; Always outputs every video as HDR / 10-bit; Off always shows SDR (HDR videos are tone-mapped). Video and interface are composited together either way.';
   String get video_setting_hdr_output_off => 'Off';
   String get video_setting_hdr_tone_mapping => 'HDR tone mapping';
   String get video_setting_hdr_tone_mapping_hint =>
@@ -29802,9 +29800,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'بحث عن الترجمات';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'فيديو Dolby Vision بالملف التعريفي 5: ستبدو الألوان بنفسجية أو خضراء عند تعطيل إخراج HDR / 10 بت. اضبطه على تلقائي لإصلاحها.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'فيديو Dolby Vision بالملف التعريفي 5: لا تستطيع هذه المنصة عرض ألوانه بشكل صحيح بعد، لذا قد تبدو الصورة بنفسجية أو خضراء.';
   @override
@@ -30902,8 +30897,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'تلقائي';
   @override
-  String get video_setting_hdr_output_hint =>
-      'على Windows فقط. يمرّر «تلقائي» مصادر HDR مباشرةً إلى شاشة HDR عبر نافذة فيديو أصلية، ويستخدم «دائمًا» تلك النافذة لكل مقطع (إخراج 10 بت)، بينما يُبقي «إيقاف» على العارض القياسي.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Windows فقط. «تلقائي» يُخرج HDR عندما تكون الشاشة في وضع HDR والفيديو بتقنية HDR؛ «دائمًا» يُخرج كل فيديو بتقنية HDR / 10 بت؛ «إيقاف» يعرض SDR دائمًا (تُطبَّق مطابقة الألوان على فيديوهات HDR). في كل الأحوال يُركَّب الفيديو والواجهة معًا.';
   @override
   String get video_setting_hdr_output_off => 'إيقاف';
   @override
@@ -50385,9 +50380,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'Untertitel suchen';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby-Vision-Profil-5-Video: Die Farben sehen bei ausgeschalteter HDR-/10-Bit-Ausgabe violett oder grün aus. Stelle sie auf Automatisch, um das zu beheben.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby-Vision-Profil-5-Video: Diese Plattform kann dessen Farben noch nicht korrekt darstellen, daher kann das Bild violett oder grün aussehen.';
   @override
@@ -51510,8 +51502,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Automatisch';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Nur Windows. „Automatisch“ reicht HDR-Quellen über ein natives Videofenster direkt an ein HDR-Display weiter; „Immer“ nutzt dieses Fenster für jedes Video (10-Bit-Ausgabe); „Aus“ behält den Standard-Renderer.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Nur Windows. Automatisch gibt HDR aus, wenn der Bildschirm im HDR-Modus ist und das Video HDR ist; Immer gibt jedes Video als HDR / 10 Bit aus; Aus zeigt immer SDR (HDR-Videos werden tonemapped). Video und Oberfläche werden in jedem Fall gemeinsam zusammengesetzt.';
   @override
   String get video_setting_hdr_output_off => 'Aus';
   @override
@@ -71075,9 +71067,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'Buscar subtítulos';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Vídeo Dolby Vision perfil 5: los colores se verán morados o verdes con la salida HDR / 10 bits desactivada. Ponla en Auto para corregirlo.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Vídeo Dolby Vision perfil 5: esta plataforma aún no puede mostrar sus colores correctamente, por lo que la imagen puede verse morada o verde.';
   @override
@@ -72198,8 +72187,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Automático';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Solo en Windows. «Automático» entrega las fuentes HDR directamente a una pantalla HDR mediante una ventana de vídeo nativa; «Siempre» usa esa ventana para todos los vídeos (salida de 10 bits); «Desactivado» mantiene el renderizador estándar.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Solo Windows. Automático emite HDR cuando la pantalla está en modo HDR y el vídeo es HDR; Siempre emite todos los vídeos en HDR / 10 bits; Desactivado muestra siempre SDR (los vídeos HDR se mapean en tono). En cualquier caso, el vídeo y la interfaz se componen juntos.';
   @override
   String get video_setting_hdr_output_off => 'Desactivado';
   @override
@@ -91832,9 +91821,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'Rechercher des sous-titres';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Vidéo Dolby Vision profil 5 : les couleurs paraîtront violettes ou vertes avec la sortie HDR / 10 bits désactivée. Réglez-la sur Auto pour corriger.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Vidéo Dolby Vision profil 5 : cette plateforme ne sait pas encore rendre correctement ses couleurs, l\'image peut donc paraître violette ou verte.';
   @override
@@ -92964,8 +92950,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Auto';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Windows uniquement. « Auto » transmet les sources HDR directement à un écran HDR via une fenêtre vidéo native ; « Toujours » utilise cette fenêtre pour toutes les vidéos (sortie 10 bits) ; « Désactivé » conserve le rendu standard.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Windows uniquement. Auto produit du HDR quand l’écran est en mode HDR et que la vidéo est HDR ; Toujours sort chaque vidéo en HDR / 10 bits ; Désactivé affiche toujours en SDR (les vidéos HDR sont tone-mappées). La vidéo et l’interface sont composées ensemble dans tous les cas.';
   @override
   String get video_setting_hdr_output_off => 'Désactivé';
   @override
@@ -112328,9 +112314,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'Cari subtitle';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Video Dolby Vision profil 5: warna akan tampak ungu atau hijau saat output HDR / 10-bit dimatikan. Atur ke Otomatis untuk memperbaikinya.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Video Dolby Vision profil 5: platform ini belum dapat merender warnanya dengan benar, sehingga gambar mungkin tampak ungu atau hijau.';
   @override
@@ -113441,8 +113424,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Otomatis';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Hanya Windows. «Otomatis» meneruskan sumber HDR langsung ke layar HDR lewat jendela video native; «Selalu» memakai jendela itu untuk semua video (keluaran 10 bit); «Mati» tetap memakai perender standar.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Hanya Windows. Otomatis mengeluarkan HDR saat layar dalam mode HDR dan videonya HDR; Selalu mengeluarkan setiap video sebagai HDR / 10-bit; Mati selalu menampilkan SDR (video HDR di-tone-map). Video dan antarmuka selalu digabungkan bersama.';
   @override
   String get video_setting_hdr_output_off => 'Mati';
   @override
@@ -132907,9 +132890,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'Cerca sottotitoli';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Video Dolby Vision profilo 5: i colori appariranno viola o verdi con l\'uscita HDR / 10 bit disattivata. Impostala su Auto per correggerli.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Video Dolby Vision profilo 5: questa piattaforma non sa ancora renderne correttamente i colori, quindi l\'immagine può apparire viola o verde.';
   @override
@@ -134021,8 +134001,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Automatico';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Solo Windows. «Automatico» passa le sorgenti HDR direttamente a uno schermo HDR tramite una finestra video nativa; «Sempre» usa quella finestra per ogni video (uscita a 10 bit); «Disattivato» mantiene il renderer standard.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Solo Windows. Automatico emette HDR quando lo schermo è in modalità HDR e il video è HDR; Sempre emette ogni video in HDR / 10 bit; Disattivato mostra sempre SDR (i video HDR vengono tone-mappati). Video e interfaccia vengono composti insieme in ogni caso.';
   @override
   String get video_setting_hdr_output_off => 'Disattivato';
   @override
@@ -152649,9 +152629,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => '字幕を検索';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby Vision プロファイル 5 の動画: HDR / 10-bit 出力がオフだと、色が紫や緑がかって見えます。「自動」に設定すると解消します。';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision プロファイル 5 の動画: このプラットフォームでは色をまだ正しく表示できないため、映像が紫や緑がかって見える場合があります。';
   @override
@@ -153707,8 +153684,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => '自動';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Windows のみ。「自動」はディスプレイとソースがどちらも HDR のとき、ネイティブ動画ウィンドウ経由でそのまま HDR ディスプレイへ渡します。「常に」はすべての動画でそのウィンドウを使います（10 ビット出力）。「オフ」は標準のレンダラーのままです。';
+  String get video_setting_hdr_output_mode_hint =>
+      'Windows のみ。自動：ディスプレイが HDR モードで動画が HDR のとき HDR 出力；常に：すべての動画を HDR / 10-bit で出力；オフ：常に SDR 表示（HDR 動画はトーンマッピング）。どの設定でも動画と画面は同じフレームで合成されます。';
   @override
   String get video_setting_hdr_output_off => 'オフ';
   @override
@@ -172259,9 +172236,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => '자막 검색';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby Vision 프로파일 5 비디오: HDR / 10비트 출력이 꺼져 있으면 색상이 보라색이나 녹색으로 보입니다. 자동으로 설정하면 해결됩니다.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision 프로파일 5 비디오: 이 플랫폼에서는 아직 색상을 올바르게 표현할 수 없어 화면이 보라색이나 녹색으로 보일 수 있습니다.';
   @override
@@ -173321,8 +173295,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => '자동';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Windows 전용. «자동»은 디스플레이와 원본이 모두 HDR일 때 네이티브 동영상 창을 통해 HDR 디스플레이로 그대로 전달합니다. «항상»은 모든 동영상에 그 창을 사용합니다(10비트 출력). «끄기»는 표준 렌더러를 유지합니다.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Windows 전용. 자동: 디스플레이가 HDR 모드이고 영상이 HDR이면 HDR로 출력, 항상: 모든 영상을 HDR / 10비트로 출력, 끄기: 항상 SDR로 표시(HDR 영상은 톤 매핑). 어느 경우든 영상과 인터페이스는 한 화면에서 합성됩니다.';
   @override
   String get video_setting_hdr_output_off => '끄기';
   @override
@@ -192669,9 +192643,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'Ondertitels zoeken';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby Vision profiel 5-video: kleuren lijken paars of groen als HDR-/10-bit-uitvoer is uitgeschakeld. Zet het op Automatisch om dit te verhelpen.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profiel 5-video: dit platform kan de kleuren nog niet correct weergeven, dus het beeld kan paars of groen lijken.';
   @override
@@ -193783,8 +193754,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Automatisch';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Alleen Windows. «Automatisch» stuurt HDR-bronnen via een native videovenster rechtstreeks naar een HDR-scherm; «Altijd» gebruikt dat venster voor elke video (10-bits uitvoer); «Uit» houdt de standaardrenderer aan.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Alleen Windows. Automatisch geeft HDR weer als het scherm in HDR-modus staat en de video HDR is; Altijd geeft elke video als HDR / 10-bit weer; Uit toont altijd SDR (HDR-video’s worden getonemapt). Video en interface worden in alle gevallen samen samengesteld.';
   @override
   String get video_setting_hdr_output_off => 'Uit';
   @override
@@ -213265,9 +213236,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'Buscar legendas';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Vídeo Dolby Vision perfil 5: as cores ficarão roxas ou verdes com a saída HDR / 10 bits desativada. Defina como Automático para corrigir.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Vídeo Dolby Vision perfil 5: esta plataforma ainda não consegue renderizar as cores corretamente, então a imagem pode ficar roxa ou verde.';
   @override
@@ -214389,8 +214357,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Automático';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Somente no Windows. «Automático» entrega fontes HDR direto a uma tela HDR por uma janela de vídeo nativa; «Sempre» usa essa janela para todos os vídeos (saída de 10 bits); «Desligado» mantém o renderizador padrão.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Somente Windows. Automático gera HDR quando a tela está no modo HDR e o vídeo é HDR; Sempre gera todo vídeo em HDR / 10 bits; Desligado mostra sempre SDR (vídeos HDR passam por mapeamento de tons). Em qualquer caso, vídeo e interface são compostos juntos.';
   @override
   String get video_setting_hdr_output_off => 'Desligado';
   @override
@@ -233828,9 +233796,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'Поиск субтитров';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Видео Dolby Vision профиля 5: при выключенном выводе HDR / 10 бит цвета будут фиолетовыми или зелёными. Установите «Авто», чтобы исправить.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Видео Dolby Vision профиля 5: эта платформа пока не может правильно отображать его цвета, поэтому картинка может выглядеть фиолетовой или зелёной.';
   @override
@@ -234951,8 +234916,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Авто';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Только Windows. «Авто» передаёт HDR-источники прямо на HDR-дисплей через нативное окно видео; «Всегда» использует это окно для любого видео (10-битный вывод); «Выключено» оставляет обычный рендерер.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Только Windows. «Авто» выводит HDR, когда экран в режиме HDR и видео в HDR; «Всегда» выводит любое видео как HDR / 10 бит; «Выкл.» всегда показывает SDR (HDR-видео проходит тональное отображение). В любом случае видео и интерфейс компонуются вместе.';
   @override
   String get video_setting_hdr_output_off => 'Выключено';
   @override
@@ -254134,9 +254099,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'ค้นหาคำบรรยาย';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'วิดีโอ Dolby Vision โปรไฟล์ 5: สีจะออกม่วงหรือเขียวเมื่อปิดเอาต์พุต HDR / 10 บิต ตั้งเป็น อัตโนมัติ เพื่อแก้ไข';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'วิดีโอ Dolby Vision โปรไฟล์ 5: แพลตฟอร์มนี้ยังแสดงสีได้ไม่ถูกต้อง ภาพจึงอาจออกม่วงหรือเขียว';
   @override
@@ -255229,8 +255191,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'อัตโนมัติ';
   @override
-  String get video_setting_hdr_output_hint =>
-      'เฉพาะ Windows «อัตโนมัติ» ส่งแหล่งภาพ HDR ตรงไปยังจอ HDR ผ่านหน้าต่างวิดีโอดั้งเดิม «เสมอ» ใช้หน้าต่างนั้นกับทุกวิดีโอ (เอาต์พุต 10 บิต) «ปิด» คงตัวเรนเดอร์มาตรฐานไว้';
+  String get video_setting_hdr_output_mode_hint =>
+      'เฉพาะ Windows อัตโนมัติ: ส่งออก HDR เมื่อจอแสดงผลอยู่ในโหมด HDR และวิดีโอเป็น HDR; เสมอ: ส่งออกทุกวิดีโอเป็น HDR / 10 บิต; ปิด: แสดงเป็น SDR เสมอ (วิดีโอ HDR จะถูกโทนแมป) ไม่ว่าแบบใด วิดีโอและอินเทอร์เฟซจะถูกรวมภาพพร้อมกัน';
   @override
   String get video_setting_hdr_output_off => 'ปิด';
   @override
@@ -274541,9 +274503,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'Altyazı ara';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Dolby Vision profil 5 videosu: HDR / 10 bit çıkışı kapalıyken renkler mor veya yeşil görünür. Düzeltmek için Otomatik olarak ayarlayın.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Dolby Vision profil 5 videosu: bu platform renklerini henüz doğru işleyemiyor, bu yüzden görüntü mor veya yeşil görünebilir.';
   @override
@@ -275652,8 +275611,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Otomatik';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Yalnızca Windows. «Otomatik», HDR kaynakları yerel bir video penceresi üzerinden doğrudan HDR ekrana verir; «Her zaman» bu pencereyi tüm videolar için kullanır (10 bit çıkış); «Kapalı» standart işleyiciyi korur.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Yalnızca Windows. Otomatik, ekran HDR modundayken ve video HDR ise HDR çıkış verir; Her zaman her videoyu HDR / 10 bit olarak verir; Kapalı her zaman SDR gösterir (HDR videolar ton eşlenir). Her durumda video ve arayüz birlikte birleştirilir.';
   @override
   String get video_setting_hdr_output_off => 'Kapalı';
   @override
@@ -294920,9 +294879,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => 'Tìm phụ đề';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      'Video Dolby Vision profile 5: màu sẽ ngả tím hoặc xanh lục khi đầu ra HDR / 10-bit bị tắt. Hãy đặt thành Tự động để khắc phục.';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       'Video Dolby Vision profile 5: nền tảng này chưa thể hiển thị đúng màu của nó nên hình ảnh có thể ngả tím hoặc xanh lục.';
   @override
@@ -296030,8 +295986,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => 'Tự động';
   @override
-  String get video_setting_hdr_output_hint =>
-      'Chỉ trên Windows. «Tự động» đưa nguồn HDR thẳng tới màn hình HDR qua một cửa sổ video gốc; «Luôn luôn» dùng cửa sổ đó cho mọi video (đầu ra 10 bit); «Tắt» giữ nguyên bộ kết xuất tiêu chuẩn.';
+  String get video_setting_hdr_output_mode_hint =>
+      'Chỉ Windows. Tự động xuất HDR khi màn hình ở chế độ HDR và video là HDR; Luôn luôn xuất mọi video dưới dạng HDR / 10-bit; Tắt luôn hiển thị SDR (video HDR được ánh xạ tông màu). Dù chọn gì, video và giao diện đều được ghép chung trên cùng khung hình.';
   @override
   String get video_setting_hdr_output_off => 'Tắt';
   @override
@@ -313794,9 +313750,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => '搜索字幕';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      '杜比视界 Profile 5 片源：HDR / 10-bit 输出关闭时颜色会偏紫或偏绿，改成「自动」即可正常显示。';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       '杜比视界 Profile 5 片源：本平台暂时无法正确还原它的颜色，画面可能偏紫或偏绿。';
   @override
@@ -314782,8 +314735,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => '自动';
   @override
-  String get video_setting_hdr_output_hint =>
-      '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通（杜比视界 Profile 5 片源不论显示器都走它，只有它能正确还原颜色）；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+  String get video_setting_hdr_output_mode_hint =>
+      '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时输出 HDR；始终：所有视频都按 HDR / 10-bit 输出；关闭：始终按 SDR 显示（HDR 片源经色调映射）。无论哪种，视频与界面都在同一画面里合成。';
   @override
   String get video_setting_hdr_output_off => '关闭';
   @override
@@ -332754,9 +332707,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_discovery_subtitle_search => '搜索字幕';
   @override
-  String get video_dolby_vision_colors_enable_hdr_output =>
-      '杜比視界 Profile 5 片源：HDR / 10-bit 輸出關閉時顏色會偏紫或偏綠，改成「自動」即可正常顯示。';
-  @override
   String get video_dolby_vision_colors_unsupported =>
       '杜比視界 Profile 5 片源：本平台暫時無法正確還原它的顏色，畫面可能偏紫或偏綠。';
   @override
@@ -333781,8 +333731,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_setting_hdr_output_auto => '自動';
   @override
-  String get video_setting_hdr_output_hint =>
-      '僅 Windows。「自動」在顯示器與片源都是 HDR 時把畫面經原生影片視窗直通；「始終」對所有影片都用原生視窗（10-bit 輸出）；「關閉」沿用常規算繪。';
+  String get video_setting_hdr_output_mode_hint =>
+      '僅 Windows。自動：顯示器開著 HDR 且片源是 HDR 時輸出 HDR；始終：所有影片都按 HDR / 10-bit 輸出；關閉：始終按 SDR 顯示（HDR 片源經色調映射）。無論哪種，影片與介面都在同一畫面裡合成。';
   @override
   String get video_setting_hdr_output_off => '關閉';
   @override
@@ -350359,8 +350309,6 @@ extension on _StringsEn {
         return 'Manage subscription';
       case 'video_discovery_subtitle_search':
         return 'Search subtitles';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby Vision profile 5 video: colors will look purple or green with HDR / 10-bit output turned off. Set it to Auto to fix them.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profile 5 video: this platform can\'t render its colors correctly yet, so the picture may look purple or green.';
       case 'video_double_tap_next_cue':
@@ -351283,8 +351231,8 @@ extension on _StringsEn {
         return 'Always';
       case 'video_setting_hdr_output_auto':
         return 'Auto';
-      case 'video_setting_hdr_output_hint':
-        return 'Windows only. Auto hands HDR sources straight to an HDR display through a native video window (Dolby Vision profile 5 always uses it, since only that renderer shows its colors correctly); Always uses that window for every video (10-bit output); Off keeps the standard renderer.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Windows only. Auto outputs HDR when the display is in HDR mode and the video is HDR; Always outputs every video as HDR / 10-bit; Off always shows SDR (HDR videos are tone-mapped). Video and interface are composited together either way.';
       case 'video_setting_hdr_output_off':
         return 'Off';
       case 'video_setting_hdr_tone_mapping':
@@ -367744,8 +367692,6 @@ extension on _StringsAr {
         return 'إدارة الاشتراك';
       case 'video_discovery_subtitle_search':
         return 'بحث عن الترجمات';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'فيديو Dolby Vision بالملف التعريفي 5: ستبدو الألوان بنفسجية أو خضراء عند تعطيل إخراج HDR / 10 بت. اضبطه على تلقائي لإصلاحها.';
       case 'video_dolby_vision_colors_unsupported':
         return 'فيديو Dolby Vision بالملف التعريفي 5: لا تستطيع هذه المنصة عرض ألوانه بشكل صحيح بعد، لذا قد تبدو الصورة بنفسجية أو خضراء.';
       case 'video_double_tap_next_cue':
@@ -368668,8 +368614,8 @@ extension on _StringsAr {
         return 'دائمًا';
       case 'video_setting_hdr_output_auto':
         return 'تلقائي';
-      case 'video_setting_hdr_output_hint':
-        return 'على Windows فقط. يمرّر «تلقائي» مصادر HDR مباشرةً إلى شاشة HDR عبر نافذة فيديو أصلية، ويستخدم «دائمًا» تلك النافذة لكل مقطع (إخراج 10 بت)، بينما يُبقي «إيقاف» على العارض القياسي.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Windows فقط. «تلقائي» يُخرج HDR عندما تكون الشاشة في وضع HDR والفيديو بتقنية HDR؛ «دائمًا» يُخرج كل فيديو بتقنية HDR / 10 بت؛ «إيقاف» يعرض SDR دائمًا (تُطبَّق مطابقة الألوان على فيديوهات HDR). في كل الأحوال يُركَّب الفيديو والواجهة معًا.';
       case 'video_setting_hdr_output_off':
         return 'إيقاف';
       case 'video_setting_hdr_tone_mapping':
@@ -385200,8 +385146,6 @@ extension on _StringsDe {
         return 'Abonnement verwalten';
       case 'video_discovery_subtitle_search':
         return 'Untertitel suchen';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby-Vision-Profil-5-Video: Die Farben sehen bei ausgeschalteter HDR-/10-Bit-Ausgabe violett oder grün aus. Stelle sie auf Automatisch, um das zu beheben.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby-Vision-Profil-5-Video: Diese Plattform kann dessen Farben noch nicht korrekt darstellen, daher kann das Bild violett oder grün aussehen.';
       case 'video_double_tap_next_cue':
@@ -386128,8 +386072,8 @@ extension on _StringsDe {
         return 'Immer';
       case 'video_setting_hdr_output_auto':
         return 'Automatisch';
-      case 'video_setting_hdr_output_hint':
-        return 'Nur Windows. „Automatisch“ reicht HDR-Quellen über ein natives Videofenster direkt an ein HDR-Display weiter; „Immer“ nutzt dieses Fenster für jedes Video (10-Bit-Ausgabe); „Aus“ behält den Standard-Renderer.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Nur Windows. Automatisch gibt HDR aus, wenn der Bildschirm im HDR-Modus ist und das Video HDR ist; Immer gibt jedes Video als HDR / 10 Bit aus; Aus zeigt immer SDR (HDR-Videos werden tonemapped). Video und Oberfläche werden in jedem Fall gemeinsam zusammengesetzt.';
       case 'video_setting_hdr_output_off':
         return 'Aus';
       case 'video_setting_hdr_tone_mapping':
@@ -402647,8 +402591,6 @@ extension on _StringsEs {
         return 'Administrar suscripción';
       case 'video_discovery_subtitle_search':
         return 'Buscar subtítulos';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Vídeo Dolby Vision perfil 5: los colores se verán morados o verdes con la salida HDR / 10 bits desactivada. Ponla en Auto para corregirlo.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Vídeo Dolby Vision perfil 5: esta plataforma aún no puede mostrar sus colores correctamente, por lo que la imagen puede verse morada o verde.';
       case 'video_double_tap_next_cue':
@@ -403573,8 +403515,8 @@ extension on _StringsEs {
         return 'Siempre';
       case 'video_setting_hdr_output_auto':
         return 'Automático';
-      case 'video_setting_hdr_output_hint':
-        return 'Solo en Windows. «Automático» entrega las fuentes HDR directamente a una pantalla HDR mediante una ventana de vídeo nativa; «Siempre» usa esa ventana para todos los vídeos (salida de 10 bits); «Desactivado» mantiene el renderizador estándar.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Solo Windows. Automático emite HDR cuando la pantalla está en modo HDR y el vídeo es HDR; Siempre emite todos los vídeos en HDR / 10 bits; Desactivado muestra siempre SDR (los vídeos HDR se mapean en tono). En cualquier caso, el vídeo y la interfaz se componen juntos.';
       case 'video_setting_hdr_output_off':
         return 'Desactivado';
       case 'video_setting_hdr_tone_mapping':
@@ -420107,8 +420049,6 @@ extension on _StringsFr {
         return 'Gérer l\'abonnement';
       case 'video_discovery_subtitle_search':
         return 'Rechercher des sous-titres';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Vidéo Dolby Vision profil 5 : les couleurs paraîtront violettes ou vertes avec la sortie HDR / 10 bits désactivée. Réglez-la sur Auto pour corriger.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Vidéo Dolby Vision profil 5 : cette plateforme ne sait pas encore rendre correctement ses couleurs, l\'image peut donc paraître violette ou verte.';
       case 'video_double_tap_next_cue':
@@ -421035,8 +420975,8 @@ extension on _StringsFr {
         return 'Toujours';
       case 'video_setting_hdr_output_auto':
         return 'Auto';
-      case 'video_setting_hdr_output_hint':
-        return 'Windows uniquement. « Auto » transmet les sources HDR directement à un écran HDR via une fenêtre vidéo native ; « Toujours » utilise cette fenêtre pour toutes les vidéos (sortie 10 bits) ; « Désactivé » conserve le rendu standard.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Windows uniquement. Auto produit du HDR quand l’écran est en mode HDR et que la vidéo est HDR ; Toujours sort chaque vidéo en HDR / 10 bits ; Désactivé affiche toujours en SDR (les vidéos HDR sont tone-mappées). La vidéo et l’interface sont composées ensemble dans tous les cas.';
       case 'video_setting_hdr_output_off':
         return 'Désactivé';
       case 'video_setting_hdr_tone_mapping':
@@ -437518,8 +437458,6 @@ extension on _StringsId {
         return 'Kelola langganan';
       case 'video_discovery_subtitle_search':
         return 'Cari subtitle';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Video Dolby Vision profil 5: warna akan tampak ungu atau hijau saat output HDR / 10-bit dimatikan. Atur ke Otomatis untuk memperbaikinya.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Video Dolby Vision profil 5: platform ini belum dapat merender warnanya dengan benar, sehingga gambar mungkin tampak ungu atau hijau.';
       case 'video_double_tap_next_cue':
@@ -438442,8 +438380,8 @@ extension on _StringsId {
         return 'Selalu';
       case 'video_setting_hdr_output_auto':
         return 'Otomatis';
-      case 'video_setting_hdr_output_hint':
-        return 'Hanya Windows. «Otomatis» meneruskan sumber HDR langsung ke layar HDR lewat jendela video native; «Selalu» memakai jendela itu untuk semua video (keluaran 10 bit); «Mati» tetap memakai perender standar.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Hanya Windows. Otomatis mengeluarkan HDR saat layar dalam mode HDR dan videonya HDR; Selalu mengeluarkan setiap video sebagai HDR / 10-bit; Mati selalu menampilkan SDR (video HDR di-tone-map). Video dan antarmuka selalu digabungkan bersama.';
       case 'video_setting_hdr_output_off':
         return 'Mati';
       case 'video_setting_hdr_tone_mapping':
@@ -454957,8 +454895,6 @@ extension on _StringsIt {
         return 'Gestisci abbonamento';
       case 'video_discovery_subtitle_search':
         return 'Cerca sottotitoli';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Video Dolby Vision profilo 5: i colori appariranno viola o verdi con l\'uscita HDR / 10 bit disattivata. Impostala su Auto per correggerli.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Video Dolby Vision profilo 5: questa piattaforma non sa ancora renderne correttamente i colori, quindi l\'immagine può apparire viola o verde.';
       case 'video_double_tap_next_cue':
@@ -455882,8 +455818,8 @@ extension on _StringsIt {
         return 'Sempre';
       case 'video_setting_hdr_output_auto':
         return 'Automatico';
-      case 'video_setting_hdr_output_hint':
-        return 'Solo Windows. «Automatico» passa le sorgenti HDR direttamente a uno schermo HDR tramite una finestra video nativa; «Sempre» usa quella finestra per ogni video (uscita a 10 bit); «Disattivato» mantiene il renderer standard.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Solo Windows. Automatico emette HDR quando lo schermo è in modalità HDR e il video è HDR; Sempre emette ogni video in HDR / 10 bit; Disattivato mostra sempre SDR (i video HDR vengono tone-mappati). Video e interfaccia vengono composti insieme in ogni caso.';
       case 'video_setting_hdr_output_off':
         return 'Disattivato';
       case 'video_setting_hdr_tone_mapping':
@@ -472289,8 +472225,6 @@ extension on _StringsJa {
         return '購読を管理';
       case 'video_discovery_subtitle_search':
         return '字幕を検索';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby Vision プロファイル 5 の動画: HDR / 10-bit 出力がオフだと、色が紫や緑がかって見えます。「自動」に設定すると解消します。';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision プロファイル 5 の動画: このプラットフォームでは色をまだ正しく表示できないため、映像が紫や緑がかって見える場合があります。';
       case 'video_double_tap_next_cue':
@@ -473204,8 +473138,8 @@ extension on _StringsJa {
         return '常に';
       case 'video_setting_hdr_output_auto':
         return '自動';
-      case 'video_setting_hdr_output_hint':
-        return 'Windows のみ。「自動」はディスプレイとソースがどちらも HDR のとき、ネイティブ動画ウィンドウ経由でそのまま HDR ディスプレイへ渡します。「常に」はすべての動画でそのウィンドウを使います（10 ビット出力）。「オフ」は標準のレンダラーのままです。';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Windows のみ。自動：ディスプレイが HDR モードで動画が HDR のとき HDR 出力；常に：すべての動画を HDR / 10-bit で出力；オフ：常に SDR 表示（HDR 動画はトーンマッピング）。どの設定でも動画と画面は同じフレームで合成されます。';
       case 'video_setting_hdr_output_off':
         return 'オフ';
       case 'video_setting_hdr_tone_mapping':
@@ -489609,8 +489543,6 @@ extension on _StringsKo {
         return '구독 관리';
       case 'video_discovery_subtitle_search':
         return '자막 검색';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby Vision 프로파일 5 비디오: HDR / 10비트 출력이 꺼져 있으면 색상이 보라색이나 녹색으로 보입니다. 자동으로 설정하면 해결됩니다.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision 프로파일 5 비디오: 이 플랫폼에서는 아직 색상을 올바르게 표현할 수 없어 화면이 보라색이나 녹색으로 보일 수 있습니다.';
       case 'video_double_tap_next_cue':
@@ -490528,8 +490460,8 @@ extension on _StringsKo {
         return '항상';
       case 'video_setting_hdr_output_auto':
         return '자동';
-      case 'video_setting_hdr_output_hint':
-        return 'Windows 전용. «자동»은 디스플레이와 원본이 모두 HDR일 때 네이티브 동영상 창을 통해 HDR 디스플레이로 그대로 전달합니다. «항상»은 모든 동영상에 그 창을 사용합니다(10비트 출력). «끄기»는 표준 렌더러를 유지합니다.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Windows 전용. 자동: 디스플레이가 HDR 모드이고 영상이 HDR이면 HDR로 출력, 항상: 모든 영상을 HDR / 10비트로 출력, 끄기: 항상 SDR로 표시(HDR 영상은 톤 매핑). 어느 경우든 영상과 인터페이스는 한 화면에서 합성됩니다.';
       case 'video_setting_hdr_output_off':
         return '끄기';
       case 'video_setting_hdr_tone_mapping':
@@ -507029,8 +506961,6 @@ extension on _StringsNl {
         return 'Abonnement beheren';
       case 'video_discovery_subtitle_search':
         return 'Ondertitels zoeken';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby Vision profiel 5-video: kleuren lijken paars of groen als HDR-/10-bit-uitvoer is uitgeschakeld. Zet het op Automatisch om dit te verhelpen.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profiel 5-video: dit platform kan de kleuren nog niet correct weergeven, dus het beeld kan paars of groen lijken.';
       case 'video_double_tap_next_cue':
@@ -507956,8 +507886,8 @@ extension on _StringsNl {
         return 'Altijd';
       case 'video_setting_hdr_output_auto':
         return 'Automatisch';
-      case 'video_setting_hdr_output_hint':
-        return 'Alleen Windows. «Automatisch» stuurt HDR-bronnen via een native videovenster rechtstreeks naar een HDR-scherm; «Altijd» gebruikt dat venster voor elke video (10-bits uitvoer); «Uit» houdt de standaardrenderer aan.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Alleen Windows. Automatisch geeft HDR weer als het scherm in HDR-modus staat en de video HDR is; Altijd geeft elke video als HDR / 10-bit weer; Uit toont altijd SDR (HDR-video’s worden getonemapt). Video en interface worden in alle gevallen samen samengesteld.';
       case 'video_setting_hdr_output_off':
         return 'Uit';
       case 'video_setting_hdr_tone_mapping':
@@ -524459,8 +524389,6 @@ extension on _StringsPtBr {
         return 'Gerenciar assinatura';
       case 'video_discovery_subtitle_search':
         return 'Buscar legendas';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Vídeo Dolby Vision perfil 5: as cores ficarão roxas ou verdes com a saída HDR / 10 bits desativada. Defina como Automático para corrigir.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Vídeo Dolby Vision perfil 5: esta plataforma ainda não consegue renderizar as cores corretamente, então a imagem pode ficar roxa ou verde.';
       case 'video_double_tap_next_cue':
@@ -525386,8 +525314,8 @@ extension on _StringsPtBr {
         return 'Sempre';
       case 'video_setting_hdr_output_auto':
         return 'Automático';
-      case 'video_setting_hdr_output_hint':
-        return 'Somente no Windows. «Automático» entrega fontes HDR direto a uma tela HDR por uma janela de vídeo nativa; «Sempre» usa essa janela para todos os vídeos (saída de 10 bits); «Desligado» mantém o renderizador padrão.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Somente Windows. Automático gera HDR quando a tela está no modo HDR e o vídeo é HDR; Sempre gera todo vídeo em HDR / 10 bits; Desligado mostra sempre SDR (vídeos HDR passam por mapeamento de tons). Em qualquer caso, vídeo e interface são compostos juntos.';
       case 'video_setting_hdr_output_off':
         return 'Desligado';
       case 'video_setting_hdr_tone_mapping':
@@ -541897,8 +541825,6 @@ extension on _StringsRu {
         return 'Управление подпиской';
       case 'video_discovery_subtitle_search':
         return 'Поиск субтитров';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Видео Dolby Vision профиля 5: при выключенном выводе HDR / 10 бит цвета будут фиолетовыми или зелёными. Установите «Авто», чтобы исправить.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Видео Dolby Vision профиля 5: эта платформа пока не может правильно отображать его цвета, поэтому картинка может выглядеть фиолетовой или зелёной.';
       case 'video_double_tap_next_cue':
@@ -542821,8 +542747,8 @@ extension on _StringsRu {
         return 'Всегда';
       case 'video_setting_hdr_output_auto':
         return 'Авто';
-      case 'video_setting_hdr_output_hint':
-        return 'Только Windows. «Авто» передаёт HDR-источники прямо на HDR-дисплей через нативное окно видео; «Всегда» использует это окно для любого видео (10-битный вывод); «Выключено» оставляет обычный рендерер.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Только Windows. «Авто» выводит HDR, когда экран в режиме HDR и видео в HDR; «Всегда» выводит любое видео как HDR / 10 бит; «Выкл.» всегда показывает SDR (HDR-видео проходит тональное отображение). В любом случае видео и интерфейс компонуются вместе.';
       case 'video_setting_hdr_output_off':
         return 'Выключено';
       case 'video_setting_hdr_tone_mapping':
@@ -559290,8 +559216,6 @@ extension on _StringsTh {
         return 'จัดการการติดตาม';
       case 'video_discovery_subtitle_search':
         return 'ค้นหาคำบรรยาย';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'วิดีโอ Dolby Vision โปรไฟล์ 5: สีจะออกม่วงหรือเขียวเมื่อปิดเอาต์พุต HDR / 10 บิต ตั้งเป็น อัตโนมัติ เพื่อแก้ไข';
       case 'video_dolby_vision_colors_unsupported':
         return 'วิดีโอ Dolby Vision โปรไฟล์ 5: แพลตฟอร์มนี้ยังแสดงสีได้ไม่ถูกต้อง ภาพจึงอาจออกม่วงหรือเขียว';
       case 'video_double_tap_next_cue':
@@ -560212,8 +560136,8 @@ extension on _StringsTh {
         return 'เสมอ';
       case 'video_setting_hdr_output_auto':
         return 'อัตโนมัติ';
-      case 'video_setting_hdr_output_hint':
-        return 'เฉพาะ Windows «อัตโนมัติ» ส่งแหล่งภาพ HDR ตรงไปยังจอ HDR ผ่านหน้าต่างวิดีโอดั้งเดิม «เสมอ» ใช้หน้าต่างนั้นกับทุกวิดีโอ (เอาต์พุต 10 บิต) «ปิด» คงตัวเรนเดอร์มาตรฐานไว้';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'เฉพาะ Windows อัตโนมัติ: ส่งออก HDR เมื่อจอแสดงผลอยู่ในโหมด HDR และวิดีโอเป็น HDR; เสมอ: ส่งออกทุกวิดีโอเป็น HDR / 10 บิต; ปิด: แสดงเป็น SDR เสมอ (วิดีโอ HDR จะถูกโทนแมป) ไม่ว่าแบบใด วิดีโอและอินเทอร์เฟซจะถูกรวมภาพพร้อมกัน';
       case 'video_setting_hdr_output_off':
         return 'ปิด';
       case 'video_setting_hdr_tone_mapping':
@@ -576707,8 +576631,6 @@ extension on _StringsTr {
         return 'Aboneliği yönet';
       case 'video_discovery_subtitle_search':
         return 'Altyazı ara';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Dolby Vision profil 5 videosu: HDR / 10 bit çıkışı kapalıyken renkler mor veya yeşil görünür. Düzeltmek için Otomatik olarak ayarlayın.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Dolby Vision profil 5 videosu: bu platform renklerini henüz doğru işleyemiyor, bu yüzden görüntü mor veya yeşil görünebilir.';
       case 'video_double_tap_next_cue':
@@ -577632,8 +577554,8 @@ extension on _StringsTr {
         return 'Her zaman';
       case 'video_setting_hdr_output_auto':
         return 'Otomatik';
-      case 'video_setting_hdr_output_hint':
-        return 'Yalnızca Windows. «Otomatik», HDR kaynakları yerel bir video penceresi üzerinden doğrudan HDR ekrana verir; «Her zaman» bu pencereyi tüm videolar için kullanır (10 bit çıkış); «Kapalı» standart işleyiciyi korur.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Yalnızca Windows. Otomatik, ekran HDR modundayken ve video HDR ise HDR çıkış verir; Her zaman her videoyu HDR / 10 bit olarak verir; Kapalı her zaman SDR gösterir (HDR videolar ton eşlenir). Her durumda video ve arayüz birlikte birleştirilir.';
       case 'video_setting_hdr_output_off':
         return 'Kapalı';
       case 'video_setting_hdr_tone_mapping':
@@ -594115,8 +594037,6 @@ extension on _StringsVi {
         return 'Quản lý đăng ký';
       case 'video_discovery_subtitle_search':
         return 'Tìm phụ đề';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return 'Video Dolby Vision profile 5: màu sẽ ngả tím hoặc xanh lục khi đầu ra HDR / 10-bit bị tắt. Hãy đặt thành Tự động để khắc phục.';
       case 'video_dolby_vision_colors_unsupported':
         return 'Video Dolby Vision profile 5: nền tảng này chưa thể hiển thị đúng màu của nó nên hình ảnh có thể ngả tím hoặc xanh lục.';
       case 'video_double_tap_next_cue':
@@ -595038,8 +594958,8 @@ extension on _StringsVi {
         return 'Luôn luôn';
       case 'video_setting_hdr_output_auto':
         return 'Tự động';
-      case 'video_setting_hdr_output_hint':
-        return 'Chỉ trên Windows. «Tự động» đưa nguồn HDR thẳng tới màn hình HDR qua một cửa sổ video gốc; «Luôn luôn» dùng cửa sổ đó cho mọi video (đầu ra 10 bit); «Tắt» giữ nguyên bộ kết xuất tiêu chuẩn.';
+      case 'video_setting_hdr_output_mode_hint':
+        return 'Chỉ Windows. Tự động xuất HDR khi màn hình ở chế độ HDR và video là HDR; Luôn luôn xuất mọi video dưới dạng HDR / 10-bit; Tắt luôn hiển thị SDR (video HDR được ánh xạ tông màu). Dù chọn gì, video và giao diện đều được ghép chung trên cùng khung hình.';
       case 'video_setting_hdr_output_off':
         return 'Tắt';
       case 'video_setting_hdr_tone_mapping':
@@ -611337,8 +611257,6 @@ extension on _StringsZhCn {
         return '管理订阅';
       case 'video_discovery_subtitle_search':
         return '搜索字幕';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return '杜比视界 Profile 5 片源：HDR / 10-bit 输出关闭时颜色会偏紫或偏绿，改成「自动」即可正常显示。';
       case 'video_dolby_vision_colors_unsupported':
         return '杜比视界 Profile 5 片源：本平台暂时无法正确还原它的颜色，画面可能偏紫或偏绿。';
       case 'video_double_tap_next_cue':
@@ -612249,8 +612167,8 @@ extension on _StringsZhCn {
         return '始终';
       case 'video_setting_hdr_output_auto':
         return '自动';
-      case 'video_setting_hdr_output_hint':
-        return '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时经原生视频窗口直通（杜比视界 Profile 5 片源不论显示器都走它，只有它能正确还原颜色）；始终：所有视频都走原生窗口（10-bit 输出）；关闭：沿用常规渲染。';
+      case 'video_setting_hdr_output_mode_hint':
+        return '仅 Windows。自动：显示器开着 HDR 且片源是 HDR 时输出 HDR；始终：所有视频都按 HDR / 10-bit 输出；关闭：始终按 SDR 显示（HDR 片源经色调映射）。无论哪种，视频与界面都在同一画面里合成。';
       case 'video_setting_hdr_output_off':
         return '关闭';
       case 'video_setting_hdr_tone_mapping':
@@ -628588,8 +628506,6 @@ extension on _StringsZhHk {
         return '管理訂閱';
       case 'video_discovery_subtitle_search':
         return '搜索字幕';
-      case 'video_dolby_vision_colors_enable_hdr_output':
-        return '杜比視界 Profile 5 片源：HDR / 10-bit 輸出關閉時顏色會偏紫或偏綠，改成「自動」即可正常顯示。';
       case 'video_dolby_vision_colors_unsupported':
         return '杜比視界 Profile 5 片源：本平台暫時無法正確還原它的顏色，畫面可能偏紫或偏綠。';
       case 'video_double_tap_next_cue':
@@ -629501,8 +629417,8 @@ extension on _StringsZhHk {
         return '始終';
       case 'video_setting_hdr_output_auto':
         return '自動';
-      case 'video_setting_hdr_output_hint':
-        return '僅 Windows。「自動」在顯示器與片源都是 HDR 時把畫面經原生影片視窗直通；「始終」對所有影片都用原生視窗（10-bit 輸出）；「關閉」沿用常規算繪。';
+      case 'video_setting_hdr_output_mode_hint':
+        return '僅 Windows。自動：顯示器開著 HDR 且片源是 HDR 時輸出 HDR；始終：所有影片都按 HDR / 10-bit 輸出；關閉：始終按 SDR 顯示（HDR 片源經色調映射）。無論哪種，影片與介面都在同一畫面裡合成。';
       case 'video_setting_hdr_output_off':
         return '關閉';
       case 'video_setting_hdr_tone_mapping':
