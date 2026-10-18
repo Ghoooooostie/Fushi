@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142800 (8400 per locale)
+/// Strings: 142817 (8401 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7007,7 +7007,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This feature module is turned off in Settings > Appearance > Feature modules.';
   String get module_downloads_hidden_hint =>
       'The Browse tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
-  String get module_extension_label => 'Browser extension';
   String get move_down => 'Move down';
   String get move_up => 'Move up';
   String get name => 'Name';
@@ -7019,6 +7018,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get nav_lookup => 'Lookup';
   String get nav_srs => 'Review';
   String get nav_video => 'Video';
+  String get nav_web => 'Browser';
   String get network_proxy_address_hint =>
       'HTTP proxy server used by all public internet requests';
   String get network_proxy_auto_hint =>
@@ -7223,8 +7223,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'EPUB reading with lookup and audiobook sync';
   String get onboarding_feature_browse_hint =>
       'Online sources, extensions, discovery and downloads';
-  String get onboarding_feature_extension_hint =>
-      'Look up words on any web page (desktop only)';
   String get onboarding_feature_fonts => 'Custom fonts';
   String get onboarding_feature_fonts_hint =>
       'Use your own fonts for the interface, book text and dictionary';
@@ -7247,6 +7245,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Turn lookups into cards and choose where to review them';
   String get onboarding_feature_video => 'Video';
   String get onboarding_feature_video_hint => 'Subtitle lookup and card mining';
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   String get onboarding_features_modules_hint =>
       'Unchecked pages are hidden from the navigation bar. Change anytime in Settings → Appearance.';
   String get onboarding_features_modules_title => 'Library pages';
@@ -10770,7 +10770,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
   String get video_library_scrape_pending_banner_action => 'Confirm';
-  String get video_library_sites => 'Sites';
   String get video_load_failed_back => 'Back';
   String get video_load_failed_generic => 'Couldn\'t load this video.';
   String get video_load_failed_network =>
@@ -12034,6 +12033,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get view_illustrations => 'Illustrations';
   String get volume_button_page_turning => 'Volume button page turning';
   String get volume_key_sentence_nav => 'Volume key sentence navigation';
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  String get web_hub_video_sites => 'Video sites';
   String get web_video_ad_skipping => 'Skipping ad…';
   String get web_video_address_hint => 'Search or enter address';
   String get web_video_hide_native_subtitles => 'Hide site subtitles';
@@ -23605,8 +23606,6 @@ class _StringsAr extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'تبويب التصفح مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
   @override
-  String get module_extension_label => 'إضافة المتصفح';
-  @override
   String get move_down => 'تحريك لأسفل';
   @override
   String get move_up => 'تحريك لأعلى';
@@ -23628,6 +23627,8 @@ class _StringsAr extends _StringsEn {
   String get nav_srs => 'المراجعة';
   @override
   String get nav_video => 'فيديو';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'خادم وكيل HTTP تستخدمه كل طلبات الإنترنت العامة';
@@ -23967,9 +23968,6 @@ class _StringsAr extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'المصادر عبر الإنترنت والإضافات والاكتشاف والتنزيلات';
   @override
-  String get onboarding_feature_extension_hint =>
-      'ابحث عن الكلمات في أي صفحة ويب (سطح المكتب فقط)';
-  @override
   String get onboarding_feature_fonts => 'خطوط مخصّصة';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -24008,6 +24006,9 @@ class _StringsAr extends _StringsEn {
   String get onboarding_feature_video => 'الفيديو';
   @override
   String get onboarding_feature_video_hint => 'بحث في الترجمات وإنشاء بطاقات';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'الصفحات غير المحدّدة تُخفى من شريط التنقل. يمكنك تغيير ذلك في أي وقت من الإعدادات → المظهر.';
@@ -30170,8 +30171,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'تأكيد';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'رجوع';
   @override
   String get video_load_failed_generic => 'تعذر تحميل هذا الفيديو.';
@@ -32282,6 +32281,10 @@ class _StringsAr extends _StringsEn {
   String get volume_button_page_turning => 'تقليب الصفحات بأزرار الصوت';
   @override
   String get volume_key_sentence_nav => 'التنقل بين الجمل بأزرار الصوت';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -44140,8 +44143,6 @@ class _StringsDe extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Der Tab „Durchsuchen“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
   @override
-  String get module_extension_label => 'Browser-Erweiterung';
-  @override
   String get move_down => 'Nach unten';
   @override
   String get move_up => 'Nach oben';
@@ -44163,6 +44164,8 @@ class _StringsDe extends _StringsEn {
   String get nav_srs => 'Wiederholen';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'HTTP-Proxyserver für alle Anfragen ins öffentliche Internet';
@@ -44506,9 +44509,6 @@ class _StringsDe extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Online-Quellen, Erweiterungen, Entdecken und Downloads';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Wörter auf beliebigen Webseiten nachschlagen (nur Desktop)';
-  @override
   String get onboarding_feature_fonts => 'Eigene Schriften';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -44549,6 +44549,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Untertitel nachschlagen und Karten erstellen';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'Nicht angehakte Seiten werden in der Navigationsleiste ausgeblendet. Jederzeit änderbar unter Einstellungen → Erscheinungsbild.';
@@ -50806,8 +50809,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Bestätigen';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'Zurück';
   @override
   String get video_load_failed_generic =>
@@ -52970,6 +52971,10 @@ class _StringsDe extends _StringsEn {
       'Seitenblättern mit Lautstärketasten';
   @override
   String get volume_key_sentence_nav => 'Satznavigation mit Lautstärketasten';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -64853,8 +64858,6 @@ class _StringsEs extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'La pestaña Explorar está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
   @override
-  String get module_extension_label => 'Extensión del navegador';
-  @override
   String get move_down => 'Mover abajo';
   @override
   String get move_up => 'Mover arriba';
@@ -64876,6 +64879,8 @@ class _StringsEs extends _StringsEn {
   String get nav_srs => 'Repaso';
   @override
   String get nav_video => 'Vídeo';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Servidor proxy HTTP usado por todas las solicitudes a Internet público';
@@ -65219,9 +65224,6 @@ class _StringsEs extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Fuentes en línea, extensiones, descubrimiento y descargas';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Busque palabras en cualquier página web (solo escritorio)';
-  @override
   String get onboarding_feature_fonts => 'Fuentes personalizadas';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -65261,6 +65263,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Consulta en subtítulos y creación de tarjetas';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'Las páginas sin marcar se ocultan de la barra de navegación. Puede cambiarlo cuando quiera en Ajustes → Apariencia.';
@@ -71540,8 +71545,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Confirmar';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'Atrás';
   @override
   String get video_load_failed_generic => 'No se pudo cargar este vídeo.';
@@ -73714,6 +73717,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Navegación de oraciones con teclas de volumen';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -85643,8 +85650,6 @@ class _StringsFr extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'L\'onglet Parcourir est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.';
   @override
-  String get module_extension_label => 'Extension navigateur';
-  @override
   String get move_down => 'Descendre';
   @override
   String get move_up => 'Monter';
@@ -85666,6 +85671,8 @@ class _StringsFr extends _StringsEn {
   String get nav_srs => 'Révision';
   @override
   String get nav_video => 'Vidéo';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Serveur proxy HTTP utilisé par toutes les requêtes vers Internet public';
@@ -86012,9 +86019,6 @@ class _StringsFr extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Sources en ligne, extensions, découverte et téléchargements';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Rechercher des mots sur n\'importe quelle page web (ordinateur uniquement)';
-  @override
   String get onboarding_feature_fonts => 'Polices personnalisées';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -86055,6 +86059,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Recherche dans les sous-titres et création de cartes';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'Les pages non cochées sont masquées de la barre de navigation. Modifiable à tout moment dans Paramètres → Apparence.';
@@ -92348,8 +92355,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Confirmer';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'Retour';
   @override
   String get video_load_failed_generic => 'Impossible de charger cette vidéo.';
@@ -94539,6 +94544,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Navigation par phrase avec les touches de volume';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -106270,8 +106279,6 @@ class _StringsId extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Tab Jelajah disembunyikan di Pengaturan → Tampilan → Modul fitur; nyalakan lagi untuk mengelola langganan.';
   @override
-  String get module_extension_label => 'Ekstensi browser';
-  @override
   String get move_down => 'Turunkan';
   @override
   String get move_up => 'Naikkan';
@@ -106293,6 +106300,8 @@ class _StringsId extends _StringsEn {
   String get nav_srs => 'Ulasan';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Server proxy HTTP yang dipakai semua permintaan internet publik';
@@ -106636,9 +106645,6 @@ class _StringsId extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Sumber online, ekstensi, penemuan, dan unduhan';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Cari kata di halaman web mana pun (hanya desktop)';
-  @override
   String get onboarding_feature_fonts => 'Font kustom';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -106677,6 +106683,9 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Pencarian pada takarir dan pembuatan kartu';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'Halaman yang tidak dicentang disembunyikan dari bilah navigasi. Bisa diubah kapan saja di Pengaturan → Tampilan.';
@@ -112883,8 +112892,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Konfirmasi';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'Kembali';
   @override
   String get video_load_failed_generic => 'Tidak bisa memuat video ini.';
@@ -115023,6 +115030,10 @@ class _StringsId extends _StringsEn {
   String get volume_button_page_turning => 'Tombol volume untuk ganti halaman';
   @override
   String get volume_key_sentence_nav => 'Navigasi kalimat dengan tombol volume';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -126851,8 +126862,6 @@ class _StringsIt extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'La scheda Sfoglia è nascosta in Impostazioni → Aspetto → Moduli funzionalità; riattivala per gestire le sottoscrizioni.';
   @override
-  String get module_extension_label => 'Estensione browser';
-  @override
   String get move_down => 'Sposta giù';
   @override
   String get move_up => 'Sposta su';
@@ -126874,6 +126883,8 @@ class _StringsIt extends _StringsEn {
   String get nav_srs => 'Ripasso';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Server proxy HTTP usato da tutte le richieste verso Internet pubblico';
@@ -127217,9 +127228,6 @@ class _StringsIt extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Fonti online, estensioni, scoperta e download';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Cerca parole su qualsiasi pagina web (solo desktop)';
-  @override
   String get onboarding_feature_fonts => 'Font personalizzati';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -127258,6 +127266,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Ricerca sui sottotitoli e creazione di carte';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'Le pagine non selezionate vengono nascoste dalla barra di navigazione. Puoi cambiarle quando vuoi in Impostazioni → Aspetto.';
@@ -133508,8 +133519,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Conferma';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'Indietro';
   @override
   String get video_load_failed_generic => 'Impossibile caricare questo video.';
@@ -135667,6 +135676,10 @@ class _StringsIt extends _StringsEn {
   String get volume_button_page_turning => 'Cambia pagina con i tasti volume';
   @override
   String get volume_key_sentence_nav => 'Navigazione frase con tasti volume';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -146912,8 +146925,6 @@ class _StringsJa extends _StringsEn {
   String get module_downloads_hidden_hint =>
       '「ブラウズ」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。';
   @override
-  String get module_extension_label => 'ブラウザ拡張機能';
-  @override
   String get move_down => '下に移動';
   @override
   String get move_up => '上に移動';
@@ -146935,6 +146946,8 @@ class _StringsJa extends _StringsEn {
   String get nav_srs => '復習';
   @override
   String get nav_video => '動画';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint => 'すべての公開インターネット通信で使う HTTP プロキシサーバー';
   @override
@@ -147263,8 +147276,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_feature_browse_hint => 'オンラインソース、拡張機能、発見、ダウンロード';
   @override
-  String get onboarding_feature_extension_hint => '任意のWebページで単語を検索（デスクトップのみ）';
-  @override
   String get onboarding_feature_fonts => 'カスタムフォント';
   @override
   String get onboarding_feature_fonts_hint => 'UI・本文・辞書に好きなフォントを使う';
@@ -147298,6 +147309,9 @@ class _StringsJa extends _StringsEn {
   String get onboarding_feature_video => '動画';
   @override
   String get onboarding_feature_video_hint => '字幕から調べてカードを作る';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'チェックを外したページはナビゲーションバーに表示されません。設定 → 外観でいつでも変更できます。';
@@ -153280,8 +153294,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => '確認';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => '戻る';
   @override
   String get video_load_failed_generic => 'この動画を読み込めませんでした。';
@@ -155300,6 +155312,10 @@ class _StringsJa extends _StringsEn {
   String get volume_button_page_turning => '音量ボタンでページ送り';
   @override
   String get volume_key_sentence_nav => '音量キーで文ナビゲーション';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -166558,8 +166574,6 @@ class _StringsKo extends _StringsEn {
   String get module_downloads_hidden_hint =>
       '‘탐색’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
   @override
-  String get module_extension_label => '브라우저 확장';
-  @override
   String get move_down => '아래로 이동';
   @override
   String get move_up => '위로 이동';
@@ -166581,6 +166595,8 @@ class _StringsKo extends _StringsEn {
   String get nav_srs => '복습';
   @override
   String get nav_video => '비디오';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint => '모든 공용 인터넷 요청에 사용되는 HTTP 프록시 서버';
   @override
@@ -166913,8 +166929,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_feature_browse_hint => '온라인 소스, 확장 프로그램, 발견, 다운로드';
   @override
-  String get onboarding_feature_extension_hint => '모든 웹 페이지에서 단어 검색 (데스크톱 전용)';
-  @override
   String get onboarding_feature_fonts => '사용자 지정 글꼴';
   @override
   String get onboarding_feature_fonts_hint => '인터페이스, 책 본문, 사전에 원하는 글꼴 사용';
@@ -166950,6 +166964,9 @@ class _StringsKo extends _StringsEn {
   String get onboarding_feature_video => '동영상';
   @override
   String get onboarding_feature_video_hint => '자막에서 단어 찾고 카드 만들기';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       '선택하지 않은 페이지는 내비게이션 바에서 숨겨집니다. 설정 → 외관에서 언제든 바꿀 수 있습니다.';
@@ -172935,8 +172952,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => '확인';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => '뒤로';
   @override
   String get video_load_failed_generic => '이 동영상을 불러올 수 없습니다.';
@@ -174968,6 +174983,10 @@ class _StringsKo extends _StringsEn {
   String get volume_button_page_turning => '볼륨 버튼으로 페이지 넘기기';
   @override
   String get volume_key_sentence_nav => '볼륨 키 문장 탐색';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -186755,8 +186774,6 @@ class _StringsNl extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Het tabblad Bladeren is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
   @override
-  String get module_extension_label => 'Browserextensie';
-  @override
   String get move_down => 'Omlaag';
   @override
   String get move_up => 'Omhoog';
@@ -186778,6 +186795,8 @@ class _StringsNl extends _StringsEn {
   String get nav_srs => 'Herhalen';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'HTTP-proxyserver die door alle verzoeken naar het publieke internet wordt gebruikt';
@@ -187121,9 +187140,6 @@ class _StringsNl extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Online bronnen, extensies, ontdekken en downloads';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Zoek woorden op op elke webpagina (alleen desktop)';
-  @override
   String get onboarding_feature_fonts => 'Eigen lettertypen';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -187163,6 +187179,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Opzoeken in ondertitels en kaarten maken';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'Niet-aangevinkte pagina\'s worden verborgen in de navigatiebalk. Later aan te passen via Instellingen → Uiterlijk.';
@@ -193407,8 +193426,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Bevestigen';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'Terug';
   @override
   String get video_load_failed_generic => 'Kon deze video niet laden.';
@@ -195558,6 +195575,10 @@ class _StringsNl extends _StringsEn {
       'Pagina\'s omslaan met volumeknoppen';
   @override
   String get volume_key_sentence_nav => 'Zinsnavigatie met volumeknoppen';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -207397,8 +207418,6 @@ class _StringsPtBr extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'A aba Navegar está oculta em Configurações → Aparência → Módulos de funcionalidades; reative-a para gerenciar as assinaturas.';
   @override
-  String get module_extension_label => 'Extensão do navegador';
-  @override
   String get move_down => 'Mover para baixo';
   @override
   String get move_up => 'Mover para cima';
@@ -207420,6 +207439,8 @@ class _StringsPtBr extends _StringsEn {
   String get nav_srs => 'Revisão';
   @override
   String get nav_video => 'Vídeo';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Servidor proxy HTTP usado por todas as requisições à internet pública';
@@ -207764,9 +207785,6 @@ class _StringsPtBr extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Fontes online, extensões, descoberta e downloads';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Consulte palavras em qualquer página web (apenas desktop)';
-  @override
   String get onboarding_feature_fonts => 'Fontes personalizadas';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -207806,6 +207824,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Consulta em legendas e criação de cartões';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'Páginas não marcadas ficam ocultas na barra de navegação. Dá para mudar quando quiser em Configurações → Aparência.';
@@ -214053,8 +214074,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Confirmar';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'Voltar';
   @override
   String get video_load_failed_generic =>
@@ -216221,6 +216240,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Navegação de frases com teclas de volume';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -228012,8 +228035,6 @@ class _StringsRu extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Вкладка «Обзор» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.';
   @override
-  String get module_extension_label => 'Расширение для браузера';
-  @override
   String get move_down => 'Вниз';
   @override
   String get move_up => 'Вверх';
@@ -228035,6 +228056,8 @@ class _StringsRu extends _StringsEn {
   String get nav_srs => 'Повторение';
   @override
   String get nav_video => 'Видео';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'HTTP-прокси, через который идут все запросы в публичный интернет';
@@ -228382,9 +228405,6 @@ class _StringsRu extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Онлайн-источники, расширения, поиск контента и загрузки';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Ищите слова на любой веб-странице (только десктоп)';
-  @override
   String get onboarding_feature_fonts => 'Свои шрифты';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -228424,6 +228444,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Поиск по субтитрам и создание карточек';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'Неотмеченные страницы скрываются из панели навигации. Изменить можно в любой момент: Настройки → Внешний вид.';
@@ -234664,8 +234687,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Подтвердить';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'Назад';
   @override
   String get video_load_failed_generic => 'Не удалось загрузить это видео.';
@@ -236830,6 +236851,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get volume_key_sentence_nav =>
       'Навигация по предложениям кнопками громкости';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -248439,8 +248464,6 @@ class _StringsTh extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'แท็บเรียกดูถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้';
   @override
-  String get module_extension_label => 'ส่วนขยายเบราว์เซอร์';
-  @override
   String get move_down => 'เลื่อนลง';
   @override
   String get move_up => 'เลื่อนขึ้น';
@@ -248462,6 +248485,8 @@ class _StringsTh extends _StringsEn {
   String get nav_srs => 'ทบทวน';
   @override
   String get nav_video => 'วิดีโอ';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'เซิร์ฟเวอร์พร็อกซี HTTP ที่ใช้กับคำขออินเทอร์เน็ตสาธารณะทั้งหมด';
@@ -248804,9 +248829,6 @@ class _StringsTh extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'แหล่งออนไลน์ ส่วนขยาย การค้นพบ และการดาวน์โหลด';
   @override
-  String get onboarding_feature_extension_hint =>
-      'ค้นหาคำศัพท์บนเว็บเพจใดก็ได้ (เดสก์ท็อปเท่านั้น)';
-  @override
   String get onboarding_feature_fonts => 'ฟอนต์กำหนดเอง';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -248844,6 +248866,9 @@ class _StringsTh extends _StringsEn {
   String get onboarding_feature_video => 'วิดีโอ';
   @override
   String get onboarding_feature_video_hint => 'ค้นคำจากคำบรรยายและสร้างการ์ด';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'หน้าที่ไม่ได้เลือกจะถูกซ่อนจากแถบนำทาง เปลี่ยนได้ทุกเมื่อที่ การตั้งค่า → รูปลักษณ์';
@@ -255006,8 +255031,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'ยืนยัน';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'ย้อนกลับ';
   @override
   String get video_load_failed_generic => 'ไม่สามารถโหลดวิดีโอนี้ได้';
@@ -257115,6 +257138,10 @@ class _StringsTh extends _StringsEn {
   String get volume_button_page_turning => 'ปุ่มเสียงเปลี่ยนหน้า';
   @override
   String get volume_key_sentence_nav => 'นำทางประโยคด้วยปุ่มเสียง';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -268853,8 +268880,6 @@ class _StringsTr extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Göz at sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
   @override
-  String get module_extension_label => 'Tarayıcı eklentisi';
-  @override
   String get move_down => 'Aşağı taşı';
   @override
   String get move_up => 'Yukarı taşı';
@@ -268876,6 +268901,8 @@ class _StringsTr extends _StringsEn {
   String get nav_srs => 'Tekrar';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Tüm genel internet isteklerinde kullanılan HTTP proxy sunucusu';
@@ -269220,9 +269247,6 @@ class _StringsTr extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Çevrimiçi kaynaklar, eklentiler, keşif ve indirmeler';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Herhangi bir web sayfasında kelime arayın (yalnızca masaüstü)';
-  @override
   String get onboarding_feature_fonts => 'Özel yazı tipleri';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -269262,6 +269286,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_feature_video_hint =>
       'Altyazıda arama ve kart oluşturma';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'İşaretlenmeyen sayfalar gezinme çubuğunda gizlenir. İstediğiniz zaman Ayarlar → Görünüm\'den değiştirebilirsiniz.';
@@ -275463,8 +275490,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Onayla';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'Geri';
   @override
   String get video_load_failed_generic => 'Bu video yüklenemedi.';
@@ -277603,6 +277628,10 @@ class _StringsTr extends _StringsEn {
   String get volume_button_page_turning => 'Ses düğmeleriyle sayfa çevirme';
   @override
   String get volume_key_sentence_nav => 'Ses Tuşuyla Cümle Gezinme';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -289301,8 +289330,6 @@ class _StringsVi extends _StringsEn {
   String get module_downloads_hidden_hint =>
       'Tab Duyệt đang bị ẩn trong Cài đặt → Giao diện → Mô-đun tính năng; bật lại để quản lý đăng ký.';
   @override
-  String get module_extension_label => 'Tiện ích mở rộng trình duyệt';
-  @override
   String get move_down => 'Di chuyển xuống';
   @override
   String get move_up => 'Di chuyển lên';
@@ -289324,6 +289351,8 @@ class _StringsVi extends _StringsEn {
   String get nav_srs => 'Ôn tập';
   @override
   String get nav_video => 'Video';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint =>
       'Máy chủ proxy HTTP dùng cho mọi yêu cầu ra Internet công cộng';
@@ -289666,9 +289695,6 @@ class _StringsVi extends _StringsEn {
   String get onboarding_feature_browse_hint =>
       'Nguồn trực tuyến, tiện ích, khám phá và tải xuống';
   @override
-  String get onboarding_feature_extension_hint =>
-      'Tra từ trên bất kỳ trang web nào (chỉ trên máy tính)';
-  @override
   String get onboarding_feature_fonts => 'Phông chữ tùy chỉnh';
   @override
   String get onboarding_feature_fonts_hint =>
@@ -289707,6 +289733,9 @@ class _StringsVi extends _StringsEn {
   String get onboarding_feature_video => 'Video';
   @override
   String get onboarding_feature_video_hint => 'Tra từ trên phụ đề và tạo thẻ';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       'Những trang không đánh dấu sẽ bị ẩn khỏi thanh điều hướng. Đổi lại bất cứ lúc nào ở Cài đặt → Giao diện.';
@@ -295888,8 +295917,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => 'Xác nhận';
   @override
-  String get video_library_sites => 'Sites';
-  @override
   String get video_load_failed_back => 'Quay lại';
   @override
   String get video_load_failed_generic => 'Không thể tải video này.';
@@ -298019,6 +298046,10 @@ class _StringsVi extends _StringsEn {
   String get volume_button_page_turning => 'Lật trang bằng nút âm lượng';
   @override
   String get volume_key_sentence_nav => 'Điều hướng câu bằng phím âm lượng';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => 'Skipping ad…';
   @override
@@ -308716,8 +308747,6 @@ class _StringsZhCn extends _StringsEn {
   String get module_downloads_hidden_hint =>
       '「浏览」页已在 设置 → 外观 → 功能模块 中隐藏；重新打开它才能管理订阅。';
   @override
-  String get module_extension_label => '浏览器扩展';
-  @override
   String get move_down => '下移';
   @override
   String get move_up => '上移';
@@ -308739,6 +308768,8 @@ class _StringsZhCn extends _StringsEn {
   String get nav_srs => '复习';
   @override
   String get nav_video => '视频';
+  @override
+  String get nav_web => '浏览器';
   @override
   String get network_proxy_address_hint => '供应用全部公网请求使用的 HTTP 代理服务器';
   @override
@@ -309057,8 +309088,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_feature_browse_hint => '在线来源、扩展、发现与下载';
   @override
-  String get onboarding_feature_extension_hint => '在任意网页查词（仅桌面）';
-  @override
   String get onboarding_feature_fonts => '自定义字体';
   @override
   String get onboarding_feature_fonts_hint => '界面、正文、词典各用自己喜欢的字体';
@@ -309090,6 +309119,9 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_feature_video => '视频';
   @override
   String get onboarding_feature_video_hint => '字幕查词与制卡';
+  @override
+  String get onboarding_feature_web_hint =>
+      '在 Fushi 里直接浏览网站：视频站点用 Fushi 播放器看、网页漫画用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
   @override
   String get onboarding_features_modules_hint =>
       '未勾选的页面不显示在导航栏，之后可在「设置 → 外观」改回。';
@@ -314777,8 +314809,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => '去确认';
   @override
-  String get video_library_sites => '网站';
-  @override
   String get video_load_failed_back => '返回';
   @override
   String get video_load_failed_generic => '无法加载该视频。';
@@ -316688,6 +316718,10 @@ class _StringsZhCn extends _StringsEn {
   String get volume_button_page_turning => '音量键翻页';
   @override
   String get volume_key_sentence_nav => '音量键句子导航';
+  @override
+  String get web_hub_empty => '这台设备上暂时没有可用的浏览功能。';
+  @override
+  String get web_hub_video_sites => '视频站点';
   @override
   String get web_video_ad_skipping => '正在跳过广告…';
   @override
@@ -327575,8 +327609,6 @@ class _StringsZhHk extends _StringsEn {
   String get module_downloads_hidden_hint =>
       '「瀏覽」頁已在 設定 → 外觀 → 功能模塊 中隱藏；重新開啟才能管理訂閱。';
   @override
-  String get module_extension_label => '瀏覽器擴展';
-  @override
   String get move_down => '下移';
   @override
   String get move_up => '上移';
@@ -327598,6 +327630,8 @@ class _StringsZhHk extends _StringsEn {
   String get nav_srs => '複習';
   @override
   String get nav_video => '影片';
+  @override
+  String get nav_web => 'Browser';
   @override
   String get network_proxy_address_hint => '所有公網請求都會使用的 HTTP 代理伺服器';
   @override
@@ -327917,8 +327951,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_feature_browse_hint => '線上來源、擴展、發現與下載';
   @override
-  String get onboarding_feature_extension_hint => '網頁查詞（僅桌面）';
-  @override
   String get onboarding_feature_fonts => '自定義字體';
   @override
   String get onboarding_feature_fonts_hint => '界面、正文、詞典各用自己喜歡的字體';
@@ -327951,6 +327983,9 @@ class _StringsZhHk extends _StringsEn {
   String get onboarding_feature_video => '影片';
   @override
   String get onboarding_feature_video_hint => '字幕查詞與製卡';
+  @override
+  String get onboarding_feature_web_hint =>
+      'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
   @override
   String get onboarding_features_modules_hint =>
       '未勾選的頁面不顯示在導航欄，之後可在「設定 → 外觀」改回。';
@@ -333783,8 +333818,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_library_scrape_pending_banner_action => '去確認';
   @override
-  String get video_library_sites => '網站';
-  @override
   String get video_load_failed_back => '返回';
   @override
   String get video_load_failed_generic => '無法加載該影片。';
@@ -335742,6 +335775,10 @@ class _StringsZhHk extends _StringsEn {
   String get volume_button_page_turning => '音量鍵翻頁';
   @override
   String get volume_key_sentence_nav => '音量鍵句子導覽';
+  @override
+  String get web_hub_empty => 'Nothing to browse on this device yet.';
+  @override
+  String get web_hub_video_sites => 'Video sites';
   @override
   String get web_video_ad_skipping => '正在略過廣告…';
   @override
@@ -345645,8 +345682,6 @@ extension on _StringsEn {
         return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'The Browse tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
-      case 'module_extension_label':
-        return 'Browser extension';
       case 'move_down':
         return 'Move down';
       case 'move_up':
@@ -345669,6 +345704,8 @@ extension on _StringsEn {
         return 'Review';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'HTTP proxy server used by all public internet requests';
       case 'network_proxy_auto_hint':
@@ -345951,8 +345988,6 @@ extension on _StringsEn {
         return 'EPUB reading with lookup and audiobook sync';
       case 'onboarding_feature_browse_hint':
         return 'Online sources, extensions, discovery and downloads';
-      case 'onboarding_feature_extension_hint':
-        return 'Look up words on any web page (desktop only)';
       case 'onboarding_feature_fonts':
         return 'Custom fonts';
       case 'onboarding_feature_fonts_hint':
@@ -345985,6 +346020,8 @@ extension on _StringsEn {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Subtitle lookup and card mining';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'Unchecked pages are hidden from the navigation bar. Change anytime in Settings → Appearance.';
       case 'onboarding_features_modules_title':
@@ -351409,8 +351446,6 @@ extension on _StringsEn {
             '${count} works still need identity confirmation';
       case 'video_library_scrape_pending_banner_action':
         return 'Confirm';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'Back';
       case 'video_load_failed_generic':
@@ -353182,6 +353217,10 @@ extension on _StringsEn {
         return 'Volume button page turning';
       case 'volume_key_sentence_nav':
         return 'Volume key sentence navigation';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -363075,8 +363114,6 @@ extension on _StringsAr {
         return 'وحدة الميزة هذه معطّلة في الإعدادات > المظهر > وحدات الميزات.';
       case 'module_downloads_hidden_hint':
         return 'تبويب التصفح مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
-      case 'module_extension_label':
-        return 'إضافة المتصفح';
       case 'move_down':
         return 'تحريك لأسفل';
       case 'move_up':
@@ -363099,6 +363136,8 @@ extension on _StringsAr {
         return 'المراجعة';
       case 'nav_video':
         return 'فيديو';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'خادم وكيل HTTP تستخدمه كل طلبات الإنترنت العامة';
       case 'network_proxy_auto_hint':
@@ -363382,8 +363421,6 @@ extension on _StringsAr {
         return 'قراءة EPUB مع البحث ومزامنة الكتب الصوتية';
       case 'onboarding_feature_browse_hint':
         return 'المصادر عبر الإنترنت والإضافات والاكتشاف والتنزيلات';
-      case 'onboarding_feature_extension_hint':
-        return 'ابحث عن الكلمات في أي صفحة ويب (سطح المكتب فقط)';
       case 'onboarding_feature_fonts':
         return 'خطوط مخصّصة';
       case 'onboarding_feature_fonts_hint':
@@ -363416,6 +363453,8 @@ extension on _StringsAr {
         return 'الفيديو';
       case 'onboarding_feature_video_hint':
         return 'بحث في الترجمات وإنشاء بطاقات';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'الصفحات غير المحدّدة تُخفى من شريط التنقل. يمكنك تغيير ذلك في أي وقت من الإعدادات → المظهر.';
       case 'onboarding_features_modules_title':
@@ -368837,8 +368876,6 @@ extension on _StringsAr {
             'لا يزال ${count} عمل بحاجة إلى تأكيد الهوية';
       case 'video_library_scrape_pending_banner_action':
         return 'تأكيد';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'رجوع';
       case 'video_load_failed_generic':
@@ -370611,6 +370648,10 @@ extension on _StringsAr {
         return 'تقليب الصفحات بأزرار الصوت';
       case 'volume_key_sentence_nav':
         return 'التنقل بين الجمل بأزرار الصوت';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -380556,8 +380597,6 @@ extension on _StringsDe {
         return 'Dieses Funktionsmodul ist unter Einstellungen > Darstellung > Funktionsmodule deaktiviert.';
       case 'module_downloads_hidden_hint':
         return 'Der Tab „Durchsuchen“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
-      case 'module_extension_label':
-        return 'Browser-Erweiterung';
       case 'move_down':
         return 'Nach unten';
       case 'move_up':
@@ -380580,6 +380619,8 @@ extension on _StringsDe {
         return 'Wiederholen';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'HTTP-Proxyserver für alle Anfragen ins öffentliche Internet';
       case 'network_proxy_auto_hint':
@@ -380866,8 +380907,6 @@ extension on _StringsDe {
         return 'EPUB lesen mit Nachschlagen und Hörbuch-Synchronisation';
       case 'onboarding_feature_browse_hint':
         return 'Online-Quellen, Erweiterungen, Entdecken und Downloads';
-      case 'onboarding_feature_extension_hint':
-        return 'Wörter auf beliebigen Webseiten nachschlagen (nur Desktop)';
       case 'onboarding_feature_fonts':
         return 'Eigene Schriften';
       case 'onboarding_feature_fonts_hint':
@@ -380900,6 +380939,8 @@ extension on _StringsDe {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Untertitel nachschlagen und Karten erstellen';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'Nicht angehakte Seiten werden in der Navigationsleiste ausgeblendet. Jederzeit änderbar unter Einstellungen → Erscheinungsbild.';
       case 'onboarding_features_modules_title':
@@ -386338,8 +386379,6 @@ extension on _StringsDe {
             'Bei ${count} Werken muss die Identität noch bestätigt werden';
       case 'video_library_scrape_pending_banner_action':
         return 'Bestätigen';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'Zurück';
       case 'video_load_failed_generic':
@@ -388116,6 +388155,10 @@ extension on _StringsDe {
         return 'Seitenblättern mit Lautstärketasten';
       case 'volume_key_sentence_nav':
         return 'Satznavigation mit Lautstärketasten';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -398047,8 +398090,6 @@ extension on _StringsEs {
         return 'Este módulo de funciones está desactivado en Ajustes > Apariencia > Módulos de funciones.';
       case 'module_downloads_hidden_hint':
         return 'La pestaña Explorar está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
-      case 'module_extension_label':
-        return 'Extensión del navegador';
       case 'move_down':
         return 'Mover abajo';
       case 'move_up':
@@ -398071,6 +398112,8 @@ extension on _StringsEs {
         return 'Repaso';
       case 'nav_video':
         return 'Vídeo';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Servidor proxy HTTP usado por todas las solicitudes a Internet público';
       case 'network_proxy_auto_hint':
@@ -398356,8 +398399,6 @@ extension on _StringsEs {
         return 'Lectura de EPUB con consulta y sincronización de audiolibro';
       case 'onboarding_feature_browse_hint':
         return 'Fuentes en línea, extensiones, descubrimiento y descargas';
-      case 'onboarding_feature_extension_hint':
-        return 'Busque palabras en cualquier página web (solo escritorio)';
       case 'onboarding_feature_fonts':
         return 'Fuentes personalizadas';
       case 'onboarding_feature_fonts_hint':
@@ -398390,6 +398431,8 @@ extension on _StringsEs {
         return 'Vídeo';
       case 'onboarding_feature_video_hint':
         return 'Consulta en subtítulos y creación de tarjetas';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'Las páginas sin marcar se ocultan de la barra de navegación. Puede cambiarlo cuando quiera en Ajustes → Apariencia.';
       case 'onboarding_features_modules_title':
@@ -403827,8 +403870,6 @@ extension on _StringsEs {
             '${count} obras aún necesitan confirmar su identidad';
       case 'video_library_scrape_pending_banner_action':
         return 'Confirmar';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'Atrás';
       case 'video_load_failed_generic':
@@ -405603,6 +405644,10 @@ extension on _StringsEs {
         return 'Pasar página con botones de volumen';
       case 'volume_key_sentence_nav':
         return 'Navegación de oraciones con teclas de volumen';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -415548,8 +415593,6 @@ extension on _StringsFr {
         return 'Ce module est désactivé dans Réglages > Apparence > Modules de fonctionnalités.';
       case 'module_downloads_hidden_hint':
         return 'L\'onglet Parcourir est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.';
-      case 'module_extension_label':
-        return 'Extension navigateur';
       case 'move_down':
         return 'Descendre';
       case 'move_up':
@@ -415572,6 +415615,8 @@ extension on _StringsFr {
         return 'Révision';
       case 'nav_video':
         return 'Vidéo';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Serveur proxy HTTP utilisé par toutes les requêtes vers Internet public';
       case 'network_proxy_auto_hint':
@@ -415858,8 +415903,6 @@ extension on _StringsFr {
         return 'Lecture EPUB avec recherche et synchronisation des livres audio';
       case 'onboarding_feature_browse_hint':
         return 'Sources en ligne, extensions, découverte et téléchargements';
-      case 'onboarding_feature_extension_hint':
-        return 'Rechercher des mots sur n\'importe quelle page web (ordinateur uniquement)';
       case 'onboarding_feature_fonts':
         return 'Polices personnalisées';
       case 'onboarding_feature_fonts_hint':
@@ -415892,6 +415935,8 @@ extension on _StringsFr {
         return 'Vidéo';
       case 'onboarding_feature_video_hint':
         return 'Recherche dans les sous-titres et création de cartes';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'Les pages non cochées sont masquées de la barre de navigation. Modifiable à tout moment dans Paramètres → Apparence.';
       case 'onboarding_features_modules_title':
@@ -421331,8 +421376,6 @@ extension on _StringsFr {
             '${count} œuvres nécessitent encore une confirmation d\'identité';
       case 'video_library_scrape_pending_banner_action':
         return 'Confirmer';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'Retour';
       case 'video_load_failed_generic':
@@ -423108,6 +423151,10 @@ extension on _StringsFr {
         return 'Tourner les pages avec les boutons de volume';
       case 'volume_key_sentence_nav':
         return 'Navigation par phrase avec les touches de volume';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -433018,8 +433065,6 @@ extension on _StringsId {
         return 'Modul fitur ini dimatikan di Pengaturan > Tampilan > Modul fitur.';
       case 'module_downloads_hidden_hint':
         return 'Tab Jelajah disembunyikan di Pengaturan → Tampilan → Modul fitur; nyalakan lagi untuk mengelola langganan.';
-      case 'module_extension_label':
-        return 'Ekstensi browser';
       case 'move_down':
         return 'Turunkan';
       case 'move_up':
@@ -433042,6 +433087,8 @@ extension on _StringsId {
         return 'Ulasan';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Server proxy HTTP yang dipakai semua permintaan internet publik';
       case 'network_proxy_auto_hint':
@@ -433324,8 +433371,6 @@ extension on _StringsId {
         return 'Baca EPUB dengan pencarian kata dan sinkronisasi buku audio';
       case 'onboarding_feature_browse_hint':
         return 'Sumber online, ekstensi, penemuan, dan unduhan';
-      case 'onboarding_feature_extension_hint':
-        return 'Cari kata di halaman web mana pun (hanya desktop)';
       case 'onboarding_feature_fonts':
         return 'Font kustom';
       case 'onboarding_feature_fonts_hint':
@@ -433358,6 +433403,8 @@ extension on _StringsId {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Pencarian pada takarir dan pembuatan kartu';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'Halaman yang tidak dicentang disembunyikan dari bilah navigasi. Bisa diubah kapan saja di Pengaturan → Tampilan.';
       case 'onboarding_features_modules_title':
@@ -438783,8 +438830,6 @@ extension on _StringsId {
             '${count} karya masih perlu konfirmasi identitas';
       case 'video_library_scrape_pending_banner_action':
         return 'Konfirmasi';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'Kembali';
       case 'video_load_failed_generic':
@@ -440557,6 +440602,10 @@ extension on _StringsId {
         return 'Tombol volume untuk ganti halaman';
       case 'volume_key_sentence_nav':
         return 'Navigasi kalimat dengan tombol volume';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -450485,8 +450534,6 @@ extension on _StringsIt {
         return 'Questo modulo funzionale è disattivato in Impostazioni > Aspetto > Moduli funzionali.';
       case 'module_downloads_hidden_hint':
         return 'La scheda Sfoglia è nascosta in Impostazioni → Aspetto → Moduli funzionalità; riattivala per gestire le sottoscrizioni.';
-      case 'module_extension_label':
-        return 'Estensione browser';
       case 'move_down':
         return 'Sposta giù';
       case 'move_up':
@@ -450509,6 +450556,8 @@ extension on _StringsIt {
         return 'Ripasso';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Server proxy HTTP usato da tutte le richieste verso Internet pubblico';
       case 'network_proxy_auto_hint':
@@ -450793,8 +450842,6 @@ extension on _StringsIt {
         return 'Lettura EPUB con ricerca e sincronizzazione audiolibri';
       case 'onboarding_feature_browse_hint':
         return 'Fonti online, estensioni, scoperta e download';
-      case 'onboarding_feature_extension_hint':
-        return 'Cerca parole su qualsiasi pagina web (solo desktop)';
       case 'onboarding_feature_fonts':
         return 'Font personalizzati';
       case 'onboarding_feature_fonts_hint':
@@ -450827,6 +450874,8 @@ extension on _StringsIt {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Ricerca sui sottotitoli e creazione di carte';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'Le pagine non selezionate vengono nascoste dalla barra di navigazione. Puoi cambiarle quando vuoi in Impostazioni → Aspetto.';
       case 'onboarding_features_modules_title':
@@ -456266,8 +456315,6 @@ extension on _StringsIt {
             '${count} opere richiedono ancora la conferma dell\'identità';
       case 'video_library_scrape_pending_banner_action':
         return 'Conferma';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'Indietro';
       case 'video_load_failed_generic':
@@ -458042,6 +458089,10 @@ extension on _StringsIt {
         return 'Cambia pagina con i tasti volume';
       case 'volume_key_sentence_nav':
         return 'Navigazione frase con tasti volume';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -467900,8 +467951,6 @@ extension on _StringsJa {
         return 'この機能モジュールは「設定 > 外観 > 機能モジュール」でオフになっています。';
       case 'module_downloads_hidden_hint':
         return '「ブラウズ」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。';
-      case 'module_extension_label':
-        return 'ブラウザ拡張機能';
       case 'move_down':
         return '下に移動';
       case 'move_up':
@@ -467924,6 +467973,8 @@ extension on _StringsJa {
         return '復習';
       case 'nav_video':
         return '動画';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'すべての公開インターネット通信で使う HTTP プロキシサーバー';
       case 'network_proxy_auto_hint':
@@ -468203,8 +468254,6 @@ extension on _StringsJa {
         return 'EPUB を読みながら辞書検索とオーディオブック同期';
       case 'onboarding_feature_browse_hint':
         return 'オンラインソース、拡張機能、発見、ダウンロード';
-      case 'onboarding_feature_extension_hint':
-        return '任意のWebページで単語を検索（デスクトップのみ）';
       case 'onboarding_feature_fonts':
         return 'カスタムフォント';
       case 'onboarding_feature_fonts_hint':
@@ -468237,6 +468286,8 @@ extension on _StringsJa {
         return '動画';
       case 'onboarding_feature_video_hint':
         return '字幕から調べてカードを作る';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'チェックを外したページはナビゲーションバーに表示されません。設定 → 外観でいつでも変更できます。';
       case 'onboarding_features_modules_title':
@@ -473637,8 +473688,6 @@ extension on _StringsJa {
         return ({required Object count}) => '${count} 作品がまだ身元確認されていません';
       case 'video_library_scrape_pending_banner_action':
         return '確認';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return '戻る';
       case 'video_load_failed_generic':
@@ -475402,6 +475451,10 @@ extension on _StringsJa {
         return '音量ボタンでページ送り';
       case 'volume_key_sentence_nav':
         return '音量キーで文ナビゲーション';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -485259,8 +485312,6 @@ extension on _StringsKo {
         return '이 기능 모듈은 설정 > 모양 > 기능 모듈에서 꺼져 있습니다.';
       case 'module_downloads_hidden_hint':
         return '‘탐색’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
-      case 'module_extension_label':
-        return '브라우저 확장';
       case 'move_down':
         return '아래로 이동';
       case 'move_up':
@@ -485283,6 +485334,8 @@ extension on _StringsKo {
         return '복습';
       case 'nav_video':
         return '비디오';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return '모든 공용 인터넷 요청에 사용되는 HTTP 프록시 서버';
       case 'network_proxy_auto_hint':
@@ -485563,8 +485616,6 @@ extension on _StringsKo {
         return 'EPUB 읽기, 단어 찾기, 오디오북 동기화';
       case 'onboarding_feature_browse_hint':
         return '온라인 소스, 확장 프로그램, 발견, 다운로드';
-      case 'onboarding_feature_extension_hint':
-        return '모든 웹 페이지에서 단어 검색 (데스크톱 전용)';
       case 'onboarding_feature_fonts':
         return '사용자 지정 글꼴';
       case 'onboarding_feature_fonts_hint':
@@ -485597,6 +485648,8 @@ extension on _StringsKo {
         return '동영상';
       case 'onboarding_feature_video_hint':
         return '자막에서 단어 찾고 카드 만들기';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return '선택하지 않은 페이지는 내비게이션 바에서 숨겨집니다. 설정 → 외관에서 언제든 바꿀 수 있습니다.';
       case 'onboarding_features_modules_title':
@@ -491002,8 +491055,6 @@ extension on _StringsKo {
         return ({required Object count}) => '신원 확인이 필요한 작품이 ${count}개 있습니다';
       case 'video_library_scrape_pending_banner_action':
         return '확인';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return '뒤로';
       case 'video_load_failed_generic':
@@ -492768,6 +492819,10 @@ extension on _StringsKo {
         return '볼륨 버튼으로 페이지 넘기기';
       case 'volume_key_sentence_nav':
         return '볼륨 키 문장 탐색';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -502695,8 +502750,6 @@ extension on _StringsNl {
         return 'Deze functiemodule is uitgeschakeld in Instellingen > Weergave > Functiemodules.';
       case 'module_downloads_hidden_hint':
         return 'Het tabblad Bladeren is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
-      case 'module_extension_label':
-        return 'Browserextensie';
       case 'move_down':
         return 'Omlaag';
       case 'move_up':
@@ -502719,6 +502772,8 @@ extension on _StringsNl {
         return 'Herhalen';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'HTTP-proxyserver die door alle verzoeken naar het publieke internet wordt gebruikt';
       case 'network_proxy_auto_hint':
@@ -503003,8 +503058,6 @@ extension on _StringsNl {
         return 'EPUB lezen met opzoeken en luisterboekafstemming';
       case 'onboarding_feature_browse_hint':
         return 'Online bronnen, extensies, ontdekken en downloads';
-      case 'onboarding_feature_extension_hint':
-        return 'Zoek woorden op op elke webpagina (alleen desktop)';
       case 'onboarding_feature_fonts':
         return 'Eigen lettertypen';
       case 'onboarding_feature_fonts_hint':
@@ -503037,6 +503090,8 @@ extension on _StringsNl {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Opzoeken in ondertitels en kaarten maken';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'Niet-aangevinkte pagina\'s worden verborgen in de navigatiebalk. Later aan te passen via Instellingen → Uiterlijk.';
       case 'onboarding_features_modules_title':
@@ -508467,8 +508522,6 @@ extension on _StringsNl {
             'Voor ${count} werken moet de identiteit nog worden bevestigd';
       case 'video_library_scrape_pending_banner_action':
         return 'Bevestigen';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'Terug';
       case 'video_load_failed_generic':
@@ -510245,6 +510298,10 @@ extension on _StringsNl {
         return 'Pagina\'s omslaan met volumeknoppen';
       case 'volume_key_sentence_nav':
         return 'Zinsnavigatie met volumeknoppen';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -520170,8 +520227,6 @@ extension on _StringsPtBr {
         return 'Este módulo de recursos está desativado em Configurações > Aparência > Módulos de recursos.';
       case 'module_downloads_hidden_hint':
         return 'A aba Navegar está oculta em Configurações → Aparência → Módulos de funcionalidades; reative-a para gerenciar as assinaturas.';
-      case 'module_extension_label':
-        return 'Extensão do navegador';
       case 'move_down':
         return 'Mover para baixo';
       case 'move_up':
@@ -520194,6 +520249,8 @@ extension on _StringsPtBr {
         return 'Revisão';
       case 'nav_video':
         return 'Vídeo';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Servidor proxy HTTP usado por todas as requisições à internet pública';
       case 'network_proxy_auto_hint':
@@ -520478,8 +520535,6 @@ extension on _StringsPtBr {
         return 'Leitura de EPUB com consulta e sincronização de audiolivro';
       case 'onboarding_feature_browse_hint':
         return 'Fontes online, extensões, descoberta e downloads';
-      case 'onboarding_feature_extension_hint':
-        return 'Consulte palavras em qualquer página web (apenas desktop)';
       case 'onboarding_feature_fonts':
         return 'Fontes personalizadas';
       case 'onboarding_feature_fonts_hint':
@@ -520512,6 +520567,8 @@ extension on _StringsPtBr {
         return 'Vídeo';
       case 'onboarding_feature_video_hint':
         return 'Consulta em legendas e criação de cartões';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'Páginas não marcadas ficam ocultas na barra de navegação. Dá para mudar quando quiser em Configurações → Aparência.';
       case 'onboarding_features_modules_title':
@@ -525941,8 +525998,6 @@ extension on _StringsPtBr {
             '${count} obras ainda precisam de confirmação de identidade';
       case 'video_library_scrape_pending_banner_action':
         return 'Confirmar';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'Voltar';
       case 'video_load_failed_generic':
@@ -527717,6 +527772,10 @@ extension on _StringsPtBr {
         return 'Virar página com botão de volume';
       case 'volume_key_sentence_nav':
         return 'Navegação de frases com teclas de volume';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -537649,8 +537708,6 @@ extension on _StringsRu {
         return 'Этот модуль отключён в разделе Настройки > Внешний вид > Функциональные модули.';
       case 'module_downloads_hidden_hint':
         return 'Вкладка «Обзор» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.';
-      case 'module_extension_label':
-        return 'Расширение для браузера';
       case 'move_down':
         return 'Вниз';
       case 'move_up':
@@ -537673,6 +537730,8 @@ extension on _StringsRu {
         return 'Повторение';
       case 'nav_video':
         return 'Видео';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'HTTP-прокси, через который идут все запросы в публичный интернет';
       case 'network_proxy_auto_hint':
@@ -537957,8 +538016,6 @@ extension on _StringsRu {
         return 'Чтение EPUB с поиском по словарю и синхронизацией аудиокниг';
       case 'onboarding_feature_browse_hint':
         return 'Онлайн-источники, расширения, поиск контента и загрузки';
-      case 'onboarding_feature_extension_hint':
-        return 'Ищите слова на любой веб-странице (только десктоп)';
       case 'onboarding_feature_fonts':
         return 'Свои шрифты';
       case 'onboarding_feature_fonts_hint':
@@ -537991,6 +538048,8 @@ extension on _StringsRu {
         return 'Видео';
       case 'onboarding_feature_video_hint':
         return 'Поиск по субтитрам и создание карточек';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'Неотмеченные страницы скрываются из панели навигации. Изменить можно в любой момент: Настройки → Внешний вид.';
       case 'onboarding_features_modules_title':
@@ -543420,8 +543479,6 @@ extension on _StringsRu {
             'Произведений, требующих подтверждения: ${count}';
       case 'video_library_scrape_pending_banner_action':
         return 'Подтвердить';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'Назад';
       case 'video_load_failed_generic':
@@ -545194,6 +545251,10 @@ extension on _StringsRu {
         return 'Перелистывание кнопками громкости';
       case 'volume_key_sentence_nav':
         return 'Навигация по предложениям кнопками громкости';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -555093,8 +555154,6 @@ extension on _StringsTh {
         return 'ฟีเจอร์โมดูลนี้ปิดอยู่ใน การตั้งค่า › การแสดงผล › โมดูลฟีเจอร์';
       case 'module_downloads_hidden_hint':
         return 'แท็บเรียกดูถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้';
-      case 'module_extension_label':
-        return 'ส่วนขยายเบราว์เซอร์';
       case 'move_down':
         return 'เลื่อนลง';
       case 'move_up':
@@ -555117,6 +555176,8 @@ extension on _StringsTh {
         return 'ทบทวน';
       case 'nav_video':
         return 'วิดีโอ';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'เซิร์ฟเวอร์พร็อกซี HTTP ที่ใช้กับคำขออินเทอร์เน็ตสาธารณะทั้งหมด';
       case 'network_proxy_auto_hint':
@@ -555398,8 +555459,6 @@ extension on _StringsTh {
         return 'อ่าน EPUB พร้อมค้นคำและซิงค์หนังสือเสียง';
       case 'onboarding_feature_browse_hint':
         return 'แหล่งออนไลน์ ส่วนขยาย การค้นพบ และการดาวน์โหลด';
-      case 'onboarding_feature_extension_hint':
-        return 'ค้นหาคำศัพท์บนเว็บเพจใดก็ได้ (เดสก์ท็อปเท่านั้น)';
       case 'onboarding_feature_fonts':
         return 'ฟอนต์กำหนดเอง';
       case 'onboarding_feature_fonts_hint':
@@ -555432,6 +555491,8 @@ extension on _StringsTh {
         return 'วิดีโอ';
       case 'onboarding_feature_video_hint':
         return 'ค้นคำจากคำบรรยายและสร้างการ์ด';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'หน้าที่ไม่ได้เลือกจะถูกซ่อนจากแถบนำทาง เปลี่ยนได้ทุกเมื่อที่ การตั้งค่า → รูปลักษณ์';
       case 'onboarding_features_modules_title':
@@ -560856,8 +560917,6 @@ extension on _StringsTh {
             'ผลงาน ${count} เรื่องยังต้องยืนยันตัวตน';
       case 'video_library_scrape_pending_banner_action':
         return 'ยืนยัน';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'ย้อนกลับ';
       case 'video_load_failed_generic':
@@ -562627,6 +562686,10 @@ extension on _StringsTh {
         return 'ปุ่มเสียงเปลี่ยนหน้า';
       case 'volume_key_sentence_nav':
         return 'นำทางประโยคด้วยปุ่มเสียง';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -572550,8 +572613,6 @@ extension on _StringsTr {
         return 'Bu özellik modülü Ayarlar > Görünüm > Özellik modülleri bölümünde kapatılmış.';
       case 'module_downloads_hidden_hint':
         return 'Göz at sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
-      case 'module_extension_label':
-        return 'Tarayıcı eklentisi';
       case 'move_down':
         return 'Aşağı taşı';
       case 'move_up':
@@ -572574,6 +572635,8 @@ extension on _StringsTr {
         return 'Tekrar';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Tüm genel internet isteklerinde kullanılan HTTP proxy sunucusu';
       case 'network_proxy_auto_hint':
@@ -572855,8 +572918,6 @@ extension on _StringsTr {
         return 'Kelime araması ve sesli kitap eşitlemesiyle EPUB okuma';
       case 'onboarding_feature_browse_hint':
         return 'Çevrimiçi kaynaklar, eklentiler, keşif ve indirmeler';
-      case 'onboarding_feature_extension_hint':
-        return 'Herhangi bir web sayfasında kelime arayın (yalnızca masaüstü)';
       case 'onboarding_feature_fonts':
         return 'Özel yazı tipleri';
       case 'onboarding_feature_fonts_hint':
@@ -572889,6 +572950,8 @@ extension on _StringsTr {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Altyazıda arama ve kart oluşturma';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'İşaretlenmeyen sayfalar gezinme çubuğunda gizlenir. İstediğiniz zaman Ayarlar → Görünüm\'den değiştirebilirsiniz.';
       case 'onboarding_features_modules_title':
@@ -578316,8 +578379,6 @@ extension on _StringsTr {
             '${count} eserin kimliğinin hâlâ onaylanması gerekiyor';
       case 'video_library_scrape_pending_banner_action':
         return 'Onayla';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'Geri';
       case 'video_load_failed_generic':
@@ -580091,6 +580152,10 @@ extension on _StringsTr {
         return 'Ses düğmeleriyle sayfa çevirme';
       case 'volume_key_sentence_nav':
         return 'Ses Tuşuyla Cümle Gezinme';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -589999,8 +590064,6 @@ extension on _StringsVi {
         return 'Mô-đun tính năng này đang tắt trong Cài đặt > Giao diện > Mô-đun tính năng.';
       case 'module_downloads_hidden_hint':
         return 'Tab Duyệt đang bị ẩn trong Cài đặt → Giao diện → Mô-đun tính năng; bật lại để quản lý đăng ký.';
-      case 'module_extension_label':
-        return 'Tiện ích mở rộng trình duyệt';
       case 'move_down':
         return 'Di chuyển xuống';
       case 'move_up':
@@ -590023,6 +590086,8 @@ extension on _StringsVi {
         return 'Ôn tập';
       case 'nav_video':
         return 'Video';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return 'Máy chủ proxy HTTP dùng cho mọi yêu cầu ra Internet công cộng';
       case 'network_proxy_auto_hint':
@@ -590305,8 +590370,6 @@ extension on _StringsVi {
         return 'Đọc EPUB kèm tra từ và đồng bộ sách nói';
       case 'onboarding_feature_browse_hint':
         return 'Nguồn trực tuyến, tiện ích, khám phá và tải xuống';
-      case 'onboarding_feature_extension_hint':
-        return 'Tra từ trên bất kỳ trang web nào (chỉ trên máy tính)';
       case 'onboarding_feature_fonts':
         return 'Phông chữ tùy chỉnh';
       case 'onboarding_feature_fonts_hint':
@@ -590339,6 +590402,8 @@ extension on _StringsVi {
         return 'Video';
       case 'onboarding_feature_video_hint':
         return 'Tra từ trên phụ đề và tạo thẻ';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return 'Những trang không đánh dấu sẽ bị ẩn khỏi thanh điều hướng. Đổi lại bất cứ lúc nào ở Cài đặt → Giao diện.';
       case 'onboarding_features_modules_title':
@@ -595767,8 +595832,6 @@ extension on _StringsVi {
             '${count} tác phẩm vẫn cần xác nhận danh tính';
       case 'video_library_scrape_pending_banner_action':
         return 'Xác nhận';
-      case 'video_library_sites':
-        return 'Sites';
       case 'video_load_failed_back':
         return 'Quay lại';
       case 'video_load_failed_generic':
@@ -597538,6 +597601,10 @@ extension on _StringsVi {
         return 'Lật trang bằng nút âm lượng';
       case 'volume_key_sentence_nav':
         return 'Điều hướng câu bằng phím âm lượng';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return 'Skipping ad…';
       case 'web_video_address_hint':
@@ -607323,8 +607390,6 @@ extension on _StringsZhCn {
         return '该功能模块已在「设置 → 外观 → 功能模块」中关闭。';
       case 'module_downloads_hidden_hint':
         return '「浏览」页已在 设置 → 外观 → 功能模块 中隐藏；重新打开它才能管理订阅。';
-      case 'module_extension_label':
-        return '浏览器扩展';
       case 'move_down':
         return '下移';
       case 'move_up':
@@ -607347,6 +607412,8 @@ extension on _StringsZhCn {
         return '复习';
       case 'nav_video':
         return '视频';
+      case 'nav_web':
+        return '浏览器';
       case 'network_proxy_address_hint':
         return '供应用全部公网请求使用的 HTTP 代理服务器';
       case 'network_proxy_auto_hint':
@@ -607626,8 +607693,6 @@ extension on _StringsZhCn {
         return '读 EPUB，点词查词，有声书同步';
       case 'onboarding_feature_browse_hint':
         return '在线来源、扩展、发现与下载';
-      case 'onboarding_feature_extension_hint':
-        return '在任意网页查词（仅桌面）';
       case 'onboarding_feature_fonts':
         return '自定义字体';
       case 'onboarding_feature_fonts_hint':
@@ -607660,6 +607725,8 @@ extension on _StringsZhCn {
         return '视频';
       case 'onboarding_feature_video_hint':
         return '字幕查词与制卡';
+      case 'onboarding_feature_web_hint':
+        return '在 Fushi 里直接浏览网站：视频站点用 Fushi 播放器看、网页漫画用 Fushi 阅读器读，任何网页都能查词；桌面端还可以装浏览器扩展。';
       case 'onboarding_features_modules_hint':
         return '未勾选的页面不显示在导航栏，之后可在「设置 → 外观」改回。';
       case 'onboarding_features_modules_title':
@@ -613029,8 +613096,6 @@ extension on _StringsZhCn {
         return ({required Object count}) => '${count} 部作品还没确认身份，资料和封面都没刮出来';
       case 'video_library_scrape_pending_banner_action':
         return '去确认';
-      case 'video_library_sites':
-        return '网站';
       case 'video_load_failed_back':
         return '返回';
       case 'video_load_failed_generic':
@@ -614783,6 +614848,10 @@ extension on _StringsZhCn {
         return '音量键翻页';
       case 'volume_key_sentence_nav':
         return '音量键句子导航';
+      case 'web_hub_empty':
+        return '这台设备上暂时没有可用的浏览功能。';
+      case 'web_hub_video_sites':
+        return '视频站点';
       case 'web_video_ad_skipping':
         return '正在跳过广告…';
       case 'web_video_address_hint':
@@ -624592,8 +624661,6 @@ extension on _StringsZhHk {
         return '該功能模塊已在「設定 → 外觀 → 功能模塊」中關閉。';
       case 'module_downloads_hidden_hint':
         return '「瀏覽」頁已在 設定 → 外觀 → 功能模塊 中隱藏；重新開啟才能管理訂閱。';
-      case 'module_extension_label':
-        return '瀏覽器擴展';
       case 'move_down':
         return '下移';
       case 'move_up':
@@ -624616,6 +624683,8 @@ extension on _StringsZhHk {
         return '複習';
       case 'nav_video':
         return '影片';
+      case 'nav_web':
+        return 'Browser';
       case 'network_proxy_address_hint':
         return '所有公網請求都會使用的 HTTP 代理伺服器';
       case 'network_proxy_auto_hint':
@@ -624895,8 +624964,6 @@ extension on _StringsZhHk {
         return '讀 EPUB，點詞查詞，有聲書同步';
       case 'onboarding_feature_browse_hint':
         return '線上來源、擴展、發現與下載';
-      case 'onboarding_feature_extension_hint':
-        return '網頁查詞（僅桌面）';
       case 'onboarding_feature_fonts':
         return '自定義字體';
       case 'onboarding_feature_fonts_hint':
@@ -624929,6 +624996,8 @@ extension on _StringsZhHk {
         return '影片';
       case 'onboarding_feature_video_hint':
         return '字幕查詞與製卡';
+      case 'onboarding_feature_web_hint':
+        return 'Browse sites inside Fushi: watch video sites in the Fushi player, read web comics in the Fushi reader, and look up words on any page. Desktop can also install the browser extension.';
       case 'onboarding_features_modules_hint':
         return '未勾選的頁面不顯示在導航欄，之後可在「設定 → 外觀」改回。';
       case 'onboarding_features_modules_title':
@@ -630322,8 +630391,6 @@ extension on _StringsZhHk {
         return ({required Object count}) => '${count} 部作品還沒確認身份，資料和封面都沒刮出來';
       case 'video_library_scrape_pending_banner_action':
         return '去確認';
-      case 'video_library_sites':
-        return '網站';
       case 'video_load_failed_back':
         return '返回';
       case 'video_load_failed_generic':
@@ -632078,6 +632145,10 @@ extension on _StringsZhHk {
         return '音量鍵翻頁';
       case 'volume_key_sentence_nav':
         return '音量鍵句子導覽';
+      case 'web_hub_empty':
+        return 'Nothing to browse on this device yet.';
+      case 'web_hub_video_sites':
+        return 'Video sites';
       case 'web_video_ad_skipping':
         return '正在略過廣告…';
       case 'web_video_address_hint':
