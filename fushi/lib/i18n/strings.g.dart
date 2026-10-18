@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 143531 (8443 per locale)
+/// Strings: 143514 (8442 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12058,8 +12058,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_adblock_status_never => 'Filter lists not downloaded yet';
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
   String get web_adblock_update_done => 'Filter lists updated';
   String get web_adblock_update_failed => 'Failed to update filter lists';
   String get web_adblock_update_now => 'Update filter lists now';
@@ -32380,9 +32378,6 @@ class _StringsAr extends _StringsEn {
   @override
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
-  @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
   @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
@@ -53169,9 +53164,6 @@ class _StringsDe extends _StringsEn {
   @override
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
-  @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
   @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
@@ -74014,9 +74006,6 @@ class _StringsEs extends _StringsEn {
   @override
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
-  @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
   @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
@@ -94941,9 +94930,6 @@ class _StringsFr extends _StringsEn {
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
   @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
-  @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
   String get web_adblock_update_failed => 'Failed to update filter lists';
@@ -115525,9 +115511,6 @@ class _StringsId extends _StringsEn {
   @override
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
-  @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
   @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
@@ -136271,9 +136254,6 @@ class _StringsIt extends _StringsEn {
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
   @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
-  @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
   String get web_adblock_update_failed => 'Failed to update filter lists';
@@ -156005,9 +155985,6 @@ class _StringsJa extends _StringsEn {
   @override
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
-  @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
   @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
@@ -175775,9 +175752,6 @@ class _StringsKo extends _StringsEn {
   @override
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
-  @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
   @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
@@ -196466,9 +196440,6 @@ class _StringsNl extends _StringsEn {
   @override
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
-  @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
   @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
@@ -217231,9 +217202,6 @@ class _StringsPtBr extends _StringsEn {
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
   @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
-  @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
   String get web_adblock_update_failed => 'Failed to update filter lists';
@@ -237941,9 +237909,6 @@ class _StringsRu extends _StringsEn {
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
   @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
-  @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
   String get web_adblock_update_failed => 'Failed to update filter lists';
@@ -258326,9 +258291,6 @@ class _StringsTh extends _StringsEn {
   @override
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
-  @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
   @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
@@ -278916,9 +278878,6 @@ class _StringsTr extends _StringsEn {
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
   @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
-  @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
   String get web_adblock_update_failed => 'Failed to update filter lists';
@@ -299433,9 +299392,6 @@ class _StringsVi extends _StringsEn {
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
   @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
-  @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
   String get web_adblock_update_failed => 'Failed to update filter lists';
@@ -318197,8 +318153,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String web_adblock_status_updated({required Object time}) =>
       '过滤列表更新于 ${time}';
-  @override
-  String get web_adblock_unavailable => '此版本未包含广告拦截引擎';
   @override
   String get web_adblock_update_done => '过滤列表已更新';
   @override
@@ -337349,9 +337303,6 @@ class _StringsZhHk extends _StringsEn {
   String web_adblock_status_updated({required Object time}) =>
       'Filter lists updated ${time}';
   @override
-  String get web_adblock_unavailable =>
-      'The ad blocking engine is not included in this build';
-  @override
   String get web_adblock_update_done => 'Filter lists updated';
   @override
   String get web_adblock_update_failed => 'Failed to update filter lists';
@@ -354881,8 +354832,6 @@ extension on _StringsEn {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -372397,8 +372346,6 @@ extension on _StringsAr {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -389989,8 +389936,6 @@ extension on _StringsDe {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -407563,8 +407508,6 @@ extension on _StringsEs {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -425155,8 +425098,6 @@ extension on _StringsFr {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -442691,8 +442632,6 @@ extension on _StringsId {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -460263,8 +460202,6 @@ extension on _StringsIt {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -477710,8 +477647,6 @@ extension on _StringsJa {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -495163,8 +495098,6 @@ extension on _StringsKo {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -512727,8 +512660,6 @@ extension on _StringsNl {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -530286,8 +530217,6 @@ extension on _StringsPtBr {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -547850,8 +547779,6 @@ extension on _StringsRu {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -565370,8 +565297,6 @@ extension on _StringsTh {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -582921,8 +582846,6 @@ extension on _StringsTr {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -600455,8 +600378,6 @@ extension on _StringsVi {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
@@ -617787,8 +617708,6 @@ extension on _StringsZhCn {
         return '过滤列表尚未下载';
       case 'web_adblock_status_updated':
         return ({required Object time}) => '过滤列表更新于 ${time}';
-      case 'web_adblock_unavailable':
-        return '此版本未包含广告拦截引擎';
       case 'web_adblock_update_done':
         return '过滤列表已更新';
       case 'web_adblock_update_failed':
@@ -635168,8 +635087,6 @@ extension on _StringsZhHk {
         return 'Filter lists not downloaded yet';
       case 'web_adblock_status_updated':
         return ({required Object time}) => 'Filter lists updated ${time}';
-      case 'web_adblock_unavailable':
-        return 'The ad blocking engine is not included in this build';
       case 'web_adblock_update_done':
         return 'Filter lists updated';
       case 'web_adblock_update_failed':
