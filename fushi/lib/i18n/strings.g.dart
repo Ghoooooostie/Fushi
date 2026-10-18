@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142749 (8397 per locale)
+/// Strings: 142800 (8400 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12049,6 +12049,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Imported ${count} login cookies from the browser';
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
   String get web_video_mine_queue_empty => 'No queued cards';
   String web_video_mine_queue_finished({
     required Object ok,
@@ -12080,7 +12082,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get web_video_sites_hint =>
       'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
   String get web_video_track_live => 'Live captions (sampled from page)';
+  String get web_video_track_loading => 'Loading…';
   String get web_video_track_menu => 'Subtitle track';
+  String get web_video_track_site => 'Site subtitles: select to load';
   String get wheel_page_turn_interval => 'Mouse wheel page-turn interval';
   String get window_caption_maximize => 'Maximize';
   String get window_caption_minimize => 'Minimize';
@@ -32304,6 +32308,9 @@ class _StringsAr extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'لا توجد بطاقات في قائمة الانتظار';
   @override
   String web_video_mine_queue_finished({
@@ -32356,7 +32363,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_video_track_live => 'ترجمة مباشرة (مأخوذة من الصفحة)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'مسار الترجمة';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'فترة قلب الصفحة بعجلة الفأرة';
   @override
@@ -52985,6 +52996,9 @@ class _StringsDe extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'Keine wartenden Karten';
   @override
   String web_video_mine_queue_finished({
@@ -53037,7 +53051,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_track_live => 'Live-Untertitel (von der Seite erfasst)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Untertitelspur';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'Mausrad-Blätterintervall';
   @override
@@ -73722,6 +73740,9 @@ class _StringsEs extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'No hay tarjetas en cola';
   @override
   String web_video_mine_queue_finished({
@@ -73775,7 +73796,11 @@ class _StringsEs extends _StringsEn {
   String get web_video_track_live =>
       'Subtítulos en vivo (capturados de la página)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Pista de subtítulos';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Intervalo de pasar página con la rueda';
@@ -94541,6 +94566,9 @@ class _StringsFr extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'Aucune carte en attente';
   @override
   String web_video_mine_queue_finished({
@@ -94594,7 +94622,11 @@ class _StringsFr extends _StringsEn {
   String get web_video_track_live =>
       'Sous-titres en direct (capturés sur la page)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Piste de sous-titres';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Intervalle de changement de page à la molette';
@@ -115017,6 +115049,9 @@ class _StringsId extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'Tidak ada kartu yang antre';
   @override
   String web_video_mine_queue_finished({
@@ -115069,7 +115104,11 @@ class _StringsId extends _StringsEn {
   @override
   String get web_video_track_live => 'Teks langsung (diambil dari halaman)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Trek subtitel';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'Interval ganti halaman roda mouse';
   @override
@@ -135655,6 +135694,9 @@ class _StringsIt extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'Nessuna carta in coda';
   @override
   String web_video_mine_queue_finished({
@@ -135708,7 +135750,11 @@ class _StringsIt extends _StringsEn {
   String get web_video_track_live =>
       'Sottotitoli live (campionati dalla pagina)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Traccia sottotitoli';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Intervallo cambio pagina con la rotellina';
@@ -155279,6 +155325,9 @@ class _StringsJa extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'キューにカードはありません';
   @override
   String web_video_mine_queue_finished({
@@ -155331,7 +155380,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_video_track_live => 'ライブ字幕（ページから取得）';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => '字幕トラック';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'マウスホイールのページめくり間隔';
   @override
@@ -174939,6 +174992,9 @@ class _StringsKo extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => '대기 중인 카드가 없습니다';
   @override
   String web_video_mine_queue_finished({
@@ -174991,7 +175047,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get web_video_track_live => '실시간 자막(페이지에서 수집)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => '자막 트랙';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => '마우스 휠 페이지 넘김 간격';
   @override
@@ -195525,6 +195585,9 @@ class _StringsNl extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'Geen wachtende kaarten';
   @override
   String web_video_mine_queue_finished({
@@ -195577,7 +195640,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_video_track_live => 'Live-ondertitels (van de pagina)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Ondertitelspoor';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'Interval voor bladeren met muiswiel';
   @override
@@ -216180,6 +216247,9 @@ class _StringsPtBr extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'Nenhum cartão na fila';
   @override
   String web_video_mine_queue_finished({
@@ -216232,7 +216302,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_video_track_live => 'Legendas ao vivo (capturadas da página)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Faixa de legendas';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Intervalo de virada de página com a roda do mouse';
@@ -236782,6 +236856,9 @@ class _StringsRu extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'Очередь карточек пуста';
   @override
   String web_video_mine_queue_finished({
@@ -236834,7 +236911,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_video_track_live => 'Живые субтитры (с страницы)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Дорожка субтитров';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'Интервал перелистывания колёсиком';
   @override
@@ -257060,6 +257141,9 @@ class _StringsTh extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'ไม่มีการ์ดในคิว';
   @override
   String web_video_mine_queue_finished({
@@ -257112,7 +257196,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_video_track_live => 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'แทร็กคำบรรยาย';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval => 'ระยะเวลาเลื่อนหน้าด้วยล้อเมาส์';
   @override
@@ -277541,6 +277629,9 @@ class _StringsTr extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'Sırada kart yok';
   @override
   String web_video_mine_queue_finished({
@@ -277593,7 +277684,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_video_track_live => 'Canlı altyazılar (sayfadan alınan)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Altyazı parçası';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Fare tekerleğiyle sayfa çevirme aralığı';
@@ -297950,6 +298045,9 @@ class _StringsVi extends _StringsEn {
   String get web_video_login_import_waiting =>
       'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
+  String get web_video_mine_background =>
+      'Making the card in the background (cut straight from the YouTube stream)';
+  @override
   String get web_video_mine_queue_empty => 'Không có thẻ nào đang chờ';
   @override
   String web_video_mine_queue_finished({
@@ -298002,7 +298100,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_video_track_live => 'Phụ đề trực tiếp (lấy từ trang)';
   @override
+  String get web_video_track_loading => 'Loading…';
+  @override
   String get web_video_track_menu => 'Rãnh phụ đề';
+  @override
+  String get web_video_track_site => 'Site subtitles: select to load';
   @override
   String get wheel_page_turn_interval =>
       'Khoảng cách lật trang bằng con lăn chuột';
@@ -316609,6 +316711,8 @@ class _StringsZhCn extends _StringsEn {
   String get web_video_login_import_waiting =>
       '已在浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
   @override
+  String get web_video_mine_background => '正在后台制卡（直接从 YouTube 视频流截取）';
+  @override
   String get web_video_mine_queue_empty => '制卡队列为空';
   @override
   String web_video_mine_queue_finished({
@@ -316660,7 +316764,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get web_video_track_live => '实时采集（页面字幕）';
   @override
+  String get web_video_track_loading => '正在加载…';
+  @override
   String get web_video_track_menu => '字幕轨';
+  @override
+  String get web_video_track_site => '站点字幕，点选加载';
   @override
   String get wheel_page_turn_interval => '滚轮翻页间隔';
   @override
@@ -335657,6 +335765,8 @@ class _StringsZhHk extends _StringsEn {
   String get web_video_login_import_waiting =>
       '已在瀏覽器開啟本站。裝了 Fushi 瀏覽器擴充功能會自動把登入送過來，還沒登入就先在瀏覽器裡登入。';
   @override
+  String get web_video_mine_background => '正在背景製卡（直接從 YouTube 影片串流擷取）';
+  @override
   String get web_video_mine_queue_empty => '佇列中沒有卡片';
   @override
   String web_video_mine_queue_finished({
@@ -335708,7 +335818,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_video_track_live => '即時字幕（從頁面取樣）';
   @override
+  String get web_video_track_loading => '正在載入…';
+  @override
   String get web_video_track_menu => '字幕軌';
+  @override
+  String get web_video_track_site => '站點字幕，點選載入';
   @override
   String get wheel_page_turn_interval => '滑鼠滾輪翻頁間隔';
   @override
@@ -353089,6 +353203,8 @@ extension on _StringsEn {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'No queued cards';
       case 'web_video_mine_queue_finished':
@@ -353135,8 +353251,12 @@ extension on _StringsEn {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Live captions (sampled from page)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Subtitle track';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Mouse wheel page-turn interval';
       case 'window_caption_maximize':
@@ -370512,6 +370632,8 @@ extension on _StringsAr {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'لا توجد بطاقات في قائمة الانتظار';
       case 'web_video_mine_queue_finished':
@@ -370558,8 +370680,12 @@ extension on _StringsAr {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'ترجمة مباشرة (مأخوذة من الصفحة)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'مسار الترجمة';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'فترة قلب الصفحة بعجلة الفأرة';
       case 'window_caption_maximize':
@@ -388011,6 +388137,8 @@ extension on _StringsDe {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Keine wartenden Karten';
       case 'web_video_mine_queue_finished':
@@ -388057,8 +388185,12 @@ extension on _StringsDe {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Live-Untertitel (von der Seite erfasst)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Untertitelspur';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Mausrad-Blätterintervall';
       case 'window_caption_maximize':
@@ -405492,6 +405624,8 @@ extension on _StringsEs {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'No hay tarjetas en cola';
       case 'web_video_mine_queue_finished':
@@ -405538,8 +405672,12 @@ extension on _StringsEs {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Subtítulos en vivo (capturados de la página)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Pista de subtítulos';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Intervalo de pasar página con la rueda';
       case 'window_caption_maximize':
@@ -422991,6 +423129,8 @@ extension on _StringsFr {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Aucune carte en attente';
       case 'web_video_mine_queue_finished':
@@ -423037,8 +423177,12 @@ extension on _StringsFr {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Sous-titres en direct (capturés sur la page)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Piste de sous-titres';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Intervalle de changement de page à la molette';
       case 'window_caption_maximize':
@@ -440434,6 +440578,8 @@ extension on _StringsId {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Tidak ada kartu yang antre';
       case 'web_video_mine_queue_finished':
@@ -440480,8 +440626,12 @@ extension on _StringsId {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Teks langsung (diambil dari halaman)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Trek subtitel';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Interval ganti halaman roda mouse';
       case 'window_caption_maximize':
@@ -457913,6 +458063,8 @@ extension on _StringsIt {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Nessuna carta in coda';
       case 'web_video_mine_queue_finished':
@@ -457959,8 +458111,12 @@ extension on _StringsIt {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Sottotitoli live (campionati dalla pagina)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Traccia sottotitoli';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Intervallo cambio pagina con la rotellina';
       case 'window_caption_maximize':
@@ -475267,6 +475423,8 @@ extension on _StringsJa {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'キューにカードはありません';
       case 'web_video_mine_queue_finished':
@@ -475311,8 +475469,12 @@ extension on _StringsJa {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'ライブ字幕（ページから取得）';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return '字幕トラック';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'マウスホイールのページめくり間隔';
       case 'window_caption_maximize':
@@ -492627,6 +492789,8 @@ extension on _StringsKo {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return '대기 중인 카드가 없습니다';
       case 'web_video_mine_queue_finished':
@@ -492672,8 +492836,12 @@ extension on _StringsKo {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return '실시간 자막(페이지에서 수집)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return '자막 트랙';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return '마우스 휠 페이지 넘김 간격';
       case 'window_caption_maximize':
@@ -510098,6 +510266,8 @@ extension on _StringsNl {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Geen wachtende kaarten';
       case 'web_video_mine_queue_finished':
@@ -510144,8 +510314,12 @@ extension on _StringsNl {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Live-ondertitels (van de pagina)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Ondertitelspoor';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Interval voor bladeren met muiswiel';
       case 'window_caption_maximize':
@@ -527564,6 +527738,8 @@ extension on _StringsPtBr {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Nenhum cartão na fila';
       case 'web_video_mine_queue_finished':
@@ -527610,8 +527786,12 @@ extension on _StringsPtBr {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Legendas ao vivo (capturadas da página)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Faixa de legendas';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Intervalo de virada de página com a roda do mouse';
       case 'window_caption_maximize':
@@ -545035,6 +545215,8 @@ extension on _StringsRu {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Очередь карточек пуста';
       case 'web_video_mine_queue_finished':
@@ -545081,8 +545263,12 @@ extension on _StringsRu {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Живые субтитры (с страницы)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Дорожка субтитров';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Интервал перелистывания колёсиком';
       case 'window_caption_maximize':
@@ -562462,6 +562648,8 @@ extension on _StringsTh {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'ไม่มีการ์ดในคิว';
       case 'web_video_mine_queue_finished':
@@ -562508,8 +562696,12 @@ extension on _StringsTh {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'คำบรรยายสด (เก็บจากหน้าเว็บ)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'แทร็กคำบรรยาย';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'ระยะเวลาเลื่อนหน้าด้วยล้อเมาส์';
       case 'window_caption_maximize':
@@ -579920,6 +580112,8 @@ extension on _StringsTr {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Sırada kart yok';
       case 'web_video_mine_queue_finished':
@@ -579966,8 +580160,12 @@ extension on _StringsTr {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Canlı altyazılar (sayfadan alınan)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Altyazı parçası';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Fare tekerleğiyle sayfa çevirme aralığı';
       case 'window_caption_maximize':
@@ -597361,6 +597559,8 @@ extension on _StringsVi {
             'Imported ${count} login cookies from the browser';
       case 'web_video_login_import_waiting':
         return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+      case 'web_video_mine_background':
+        return 'Making the card in the background (cut straight from the YouTube stream)';
       case 'web_video_mine_queue_empty':
         return 'Không có thẻ nào đang chờ';
       case 'web_video_mine_queue_finished':
@@ -597407,8 +597607,12 @@ extension on _StringsVi {
         return 'Browse and pick episodes on the site; playback switches to the Fushi player. Every episode you watch shows up in your library.';
       case 'web_video_track_live':
         return 'Phụ đề trực tiếp (lấy từ trang)';
+      case 'web_video_track_loading':
+        return 'Loading…';
       case 'web_video_track_menu':
         return 'Rãnh phụ đề';
+      case 'web_video_track_site':
+        return 'Site subtitles: select to load';
       case 'wheel_page_turn_interval':
         return 'Khoảng cách lật trang bằng con lăn chuột';
       case 'window_caption_maximize':
@@ -614599,6 +614803,8 @@ extension on _StringsZhCn {
         return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
       case 'web_video_login_import_waiting':
         return '已在浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
+      case 'web_video_mine_background':
+        return '正在后台制卡（直接从 YouTube 视频流截取）';
       case 'web_video_mine_queue_empty':
         return '制卡队列为空';
       case 'web_video_mine_queue_finished':
@@ -614643,8 +614849,12 @@ extension on _StringsZhCn {
         return '在网站里选人、选剧、选集，播起来自动换成 Fushi 播放器；看过的每一集都会出现在媒体库里。';
       case 'web_video_track_live':
         return '实时采集（页面字幕）';
+      case 'web_video_track_loading':
+        return '正在加载…';
       case 'web_video_track_menu':
         return '字幕轨';
+      case 'web_video_track_site':
+        return '站点字幕，点选加载';
       case 'wheel_page_turn_interval':
         return '滚轮翻页间隔';
       case 'window_caption_maximize':
@@ -631888,6 +632098,8 @@ extension on _StringsZhHk {
         return ({required Object count}) => '已從瀏覽器匯入 ${count} 條登入資訊';
       case 'web_video_login_import_waiting':
         return '已在瀏覽器開啟本站。裝了 Fushi 瀏覽器擴充功能會自動把登入送過來，還沒登入就先在瀏覽器裡登入。';
+      case 'web_video_mine_background':
+        return '正在背景製卡（直接從 YouTube 影片串流擷取）';
       case 'web_video_mine_queue_empty':
         return '佇列中沒有卡片';
       case 'web_video_mine_queue_finished':
@@ -631932,8 +632144,12 @@ extension on _StringsZhHk {
         return '在網站裡選人、選劇、選集，播起來自動換成 Fushi 播放器；看過的每一集都會出現在媒體庫裡。';
       case 'web_video_track_live':
         return '即時字幕（從頁面取樣）';
+      case 'web_video_track_loading':
+        return '正在載入…';
       case 'web_video_track_menu':
         return '字幕軌';
+      case 'web_video_track_site':
+        return '站點字幕，點選載入';
       case 'wheel_page_turn_interval':
         return '滑鼠滾輪翻頁間隔';
       case 'window_caption_maximize':
