@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142596 (8388 per locale)
+/// Strings: 142664 (8392 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12031,6 +12031,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get view_illustrations => 'Illustrations';
   String get volume_button_page_turning => 'Volume button page turning';
   String get volume_key_sentence_nav => 'Volume key sentence navigation';
+  String get web_video_ad_skipping => 'Skipping ad…';
+  String get web_video_address_hint => 'Search or enter address';
   String get web_video_hide_native_subtitles => 'Hide site subtitles';
   String get web_video_hosting_builtin =>
       'Built-in (1080p; super-resolution, screenshots and cards available)';
@@ -12054,6 +12056,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Queued for card creation (${count} pending)';
   String web_video_mine_switch_builtin({required Object count}) =>
       'Switch to built-in mode to create ${count} queued cards';
+  String get web_video_nav_close => 'Close';
+  String get web_video_nav_forward => 'Forward';
   String get web_video_no_tracks => 'No subtitles captured yet';
   String get web_video_page_show => 'Back to web page';
   String get web_video_player_open => 'Watch in player';
@@ -32262,6 +32266,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'التنقل بين الجمل بأزرار الصوت';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles => 'إخفاء ترجمة الموقع';
   @override
   String get web_video_hosting_builtin =>
@@ -32296,6 +32304,10 @@ class _StringsAr extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'لم يتم التقاط أي ترجمة بعد';
   @override
@@ -52922,6 +52934,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Satznavigation mit Lautstärketasten';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles => 'Website-Untertitel ausblenden';
   @override
   String get web_video_hosting_builtin =>
@@ -52956,6 +52972,10 @@ class _StringsDe extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'Noch keine Untertitel erfasst';
   @override
@@ -73638,6 +73658,10 @@ class _StringsEs extends _StringsEn {
   String get volume_key_sentence_nav =>
       'Navegación de oraciones con teclas de volumen';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles => 'Ocultar subtítulos del sitio';
   @override
   String get web_video_hosting_builtin =>
@@ -73672,6 +73696,10 @@ class _StringsEs extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Cambiar al modo integrado para crear ${count} tarjetas en cola';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'Aún no se han capturado subtítulos';
   @override
@@ -94435,6 +94463,10 @@ class _StringsFr extends _StringsEn {
   String get volume_key_sentence_nav =>
       'Navigation par phrase avec les touches de volume';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles =>
       'Masquer les sous-titres du site';
   @override
@@ -94470,6 +94502,10 @@ class _StringsFr extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Passer en mode intégré pour créer ${count} cartes en attente';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'Aucun sous-titre capturé pour l’instant';
   @override
@@ -114891,6 +114927,10 @@ class _StringsId extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Navigasi kalimat dengan tombol volume';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles => 'Sembunyikan subtitel situs';
   @override
   String get web_video_hosting_builtin =>
@@ -114925,6 +114965,10 @@ class _StringsId extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'Belum ada subtitel yang ditangkap';
   @override
@@ -135507,6 +135551,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Navigazione frase con tasti volume';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles =>
       'Nascondi i sottotitoli del sito';
   @override
@@ -135542,6 +135590,10 @@ class _StringsIt extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Passa alla modalità integrata per creare ${count} carte in coda';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'Nessun sottotitolo acquisito ancora';
   @override
@@ -155112,6 +155164,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get volume_key_sentence_nav => '音量キーで文ナビゲーション';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles => 'サイトの字幕を隠す';
   @override
   String get web_video_hosting_builtin => '内蔵（1080p；超解像・スクリーンショット・カード作成が可能）';
@@ -155145,6 +155201,10 @@ class _StringsJa extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       '内蔵モードに切り替えて ${count} 件のカードを作成';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => '字幕はまだ取得されていません';
   @override
@@ -174752,6 +174812,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get volume_key_sentence_nav => '볼륨 키 문장 탐색';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles => '사이트 자막 숨기기';
   @override
   String get web_video_hosting_builtin => '내장(1080p; 초해상도, 스크린샷, 카드 만들기 가능)';
@@ -174784,6 +174848,10 @@ class _StringsKo extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => '아직 수집된 자막이 없습니다';
   @override
@@ -195314,6 +195382,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Zinsnavigatie met volumeknoppen';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles =>
       'Ondertitels van de site verbergen';
   @override
@@ -195349,6 +195421,10 @@ class _StringsNl extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'Nog geen ondertitels vastgelegd';
   @override
@@ -215949,6 +216025,10 @@ class _StringsPtBr extends _StringsEn {
   String get volume_key_sentence_nav =>
       'Navegação de frases com teclas de volume';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles => 'Ocultar legendas do site';
   @override
   String get web_video_hosting_builtin =>
@@ -215983,6 +216063,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Mudar para o modo integrado para criar ${count} cartões na fila';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'Nenhuma legenda capturada ainda';
   @override
@@ -236530,6 +236614,10 @@ class _StringsRu extends _StringsEn {
   String get volume_key_sentence_nav =>
       'Навигация по предложениям кнопками громкости';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles => 'Скрыть субтитры сайта';
   @override
   String get web_video_hosting_builtin =>
@@ -236564,6 +236652,10 @@ class _StringsRu extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'Субтитры пока не получены';
   @override
@@ -256787,6 +256879,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'นำทางประโยคด้วยปุ่มเสียง';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles => 'ซ่อนคำบรรยายของเว็บไซต์';
   @override
   String get web_video_hosting_builtin =>
@@ -256821,6 +256917,10 @@ class _StringsTh extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'ยังไม่ได้เก็บคำบรรยาย';
   @override
@@ -277247,6 +277347,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Ses Tuşuyla Cümle Gezinme';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles => 'Site altyazılarını gizle';
   @override
   String get web_video_hosting_builtin =>
@@ -277281,6 +277385,10 @@ class _StringsTr extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'Henüz altyazı yakalanmadı';
   @override
@@ -297635,6 +297743,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get volume_key_sentence_nav => 'Điều hướng câu bằng phím âm lượng';
   @override
+  String get web_video_ad_skipping => 'Skipping ad…';
+  @override
+  String get web_video_address_hint => 'Search or enter address';
+  @override
   String get web_video_hide_native_subtitles => 'Ẩn phụ đề của trang';
   @override
   String get web_video_hosting_builtin =>
@@ -297669,6 +297781,10 @@ class _StringsVi extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
+  @override
+  String get web_video_nav_close => 'Close';
+  @override
+  String get web_video_nav_forward => 'Forward';
   @override
   String get web_video_no_tracks => 'Chưa bắt được phụ đề nào';
   @override
@@ -316277,6 +316393,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get volume_key_sentence_nav => '音量键句子导航';
   @override
+  String get web_video_ad_skipping => '正在跳过广告…';
+  @override
+  String get web_video_address_hint => '搜索或输入网址';
+  @override
   String get web_video_hide_native_subtitles => '隐藏站点字幕';
   @override
   String get web_video_hosting_builtin => '内置（1080p；可超分、可截图制卡）';
@@ -316308,6 +316428,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       '切到内置模式制作 ${count} 张排队卡片';
+  @override
+  String get web_video_nav_close => '关闭';
+  @override
+  String get web_video_nav_forward => '前进';
   @override
   String get web_video_no_tracks => '尚未采集到字幕';
   @override
@@ -335305,6 +335429,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get volume_key_sentence_nav => '音量鍵句子導覽';
   @override
+  String get web_video_ad_skipping => '正在略過廣告…';
+  @override
+  String get web_video_address_hint => '搜尋或輸入網址';
+  @override
   String get web_video_hide_native_subtitles => '隱藏網站字幕';
   @override
   String get web_video_hosting_builtin => '內建（1080p；可超解析、截圖、製卡）';
@@ -335336,6 +335464,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String web_video_mine_switch_builtin({required Object count}) =>
       '切換到內建模式製作 ${count} 張排隊卡片';
+  @override
+  String get web_video_nav_close => '關閉';
+  @override
+  String get web_video_nav_forward => '前進';
   @override
   String get web_video_no_tracks => '尚未擷取到字幕';
   @override
@@ -352718,6 +352850,10 @@ extension on _StringsEn {
         return 'Volume button page turning';
       case 'volume_key_sentence_nav':
         return 'Volume key sentence navigation';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'Hide site subtitles';
       case 'web_video_hosting_builtin':
@@ -352746,6 +352882,10 @@ extension on _StringsEn {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Switch to built-in mode to create ${count} queued cards';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'No subtitles captured yet';
       case 'web_video_page_show':
@@ -370122,6 +370262,10 @@ extension on _StringsAr {
         return 'تقليب الصفحات بأزرار الصوت';
       case 'volume_key_sentence_nav':
         return 'التنقل بين الجمل بأزرار الصوت';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'إخفاء ترجمة الموقع';
       case 'web_video_hosting_builtin':
@@ -370150,6 +370294,10 @@ extension on _StringsAr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'التبديل إلى الوضع المدمج لإنشاء ${count} بطاقة منتظرة';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'لم يتم التقاط أي ترجمة بعد';
       case 'web_video_page_show':
@@ -387602,6 +387750,10 @@ extension on _StringsDe {
         return 'Seitenblättern mit Lautstärketasten';
       case 'volume_key_sentence_nav':
         return 'Satznavigation mit Lautstärketasten';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'Website-Untertitel ausblenden';
       case 'web_video_hosting_builtin':
@@ -387630,6 +387782,10 @@ extension on _StringsDe {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'In den integrierten Modus wechseln, um ${count} wartende Karten zu erstellen';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Noch keine Untertitel erfasst';
       case 'web_video_page_show':
@@ -405064,6 +405220,10 @@ extension on _StringsEs {
         return 'Pasar página con botones de volumen';
       case 'volume_key_sentence_nav':
         return 'Navegación de oraciones con teclas de volumen';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'Ocultar subtítulos del sitio';
       case 'web_video_hosting_builtin':
@@ -405092,6 +405252,10 @@ extension on _StringsEs {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Cambiar al modo integrado para crear ${count} tarjetas en cola';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Aún no se han capturado subtítulos';
       case 'web_video_page_show':
@@ -422544,6 +422708,10 @@ extension on _StringsFr {
         return 'Tourner les pages avec les boutons de volume';
       case 'volume_key_sentence_nav':
         return 'Navigation par phrase avec les touches de volume';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'Masquer les sous-titres du site';
       case 'web_video_hosting_builtin':
@@ -422572,6 +422740,10 @@ extension on _StringsFr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Passer en mode intégré pour créer ${count} cartes en attente';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Aucun sous-titre capturé pour l’instant';
       case 'web_video_page_show':
@@ -439968,6 +440140,10 @@ extension on _StringsId {
         return 'Tombol volume untuk ganti halaman';
       case 'volume_key_sentence_nav':
         return 'Navigasi kalimat dengan tombol volume';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'Sembunyikan subtitel situs';
       case 'web_video_hosting_builtin':
@@ -439996,6 +440172,10 @@ extension on _StringsId {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Beralih ke mode bawaan untuk membuat ${count} kartu yang antre';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Belum ada subtitel yang ditangkap';
       case 'web_video_page_show':
@@ -457428,6 +457608,10 @@ extension on _StringsIt {
         return 'Cambia pagina con i tasti volume';
       case 'volume_key_sentence_nav':
         return 'Navigazione frase con tasti volume';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'Nascondi i sottotitoli del sito';
       case 'web_video_hosting_builtin':
@@ -457456,6 +457640,10 @@ extension on _StringsIt {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Passa alla modalità integrata per creare ${count} carte in coda';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Nessun sottotitolo acquisito ancora';
       case 'web_video_page_show':
@@ -474763,6 +474951,10 @@ extension on _StringsJa {
         return '音量ボタンでページ送り';
       case 'volume_key_sentence_nav':
         return '音量キーで文ナビゲーション';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'サイトの字幕を隠す';
       case 'web_video_hosting_builtin':
@@ -474789,6 +474981,10 @@ extension on _StringsJa {
         return ({required Object count}) => 'カード作成のキューに追加しました（残り ${count} 件）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '内蔵モードに切り替えて ${count} 件のカードを作成';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return '字幕はまだ取得されていません';
       case 'web_video_page_show':
@@ -492104,6 +492300,10 @@ extension on _StringsKo {
         return '볼륨 버튼으로 페이지 넘기기';
       case 'volume_key_sentence_nav':
         return '볼륨 키 문장 탐색';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return '사이트 자막 숨기기';
       case 'web_video_hosting_builtin':
@@ -492131,6 +492331,10 @@ extension on _StringsKo {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             '내장 모드로 전환하여 대기 중인 카드 ${count}개 만들기';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return '아직 수집된 자막이 없습니다';
       case 'web_video_page_show':
@@ -509556,6 +509760,10 @@ extension on _StringsNl {
         return 'Pagina\'s omslaan met volumeknoppen';
       case 'volume_key_sentence_nav':
         return 'Zinsnavigatie met volumeknoppen';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'Ondertitels van de site verbergen';
       case 'web_video_hosting_builtin':
@@ -509584,6 +509792,10 @@ extension on _StringsNl {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Schakel naar ingebouwde modus om ${count} wachtende kaarten aan te maken';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Nog geen ondertitels vastgelegd';
       case 'web_video_page_show':
@@ -527003,6 +527215,10 @@ extension on _StringsPtBr {
         return 'Virar página com botão de volume';
       case 'volume_key_sentence_nav':
         return 'Navegação de frases com teclas de volume';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'Ocultar legendas do site';
       case 'web_video_hosting_builtin':
@@ -527031,6 +527247,10 @@ extension on _StringsPtBr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Mudar para o modo integrado para criar ${count} cartões na fila';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Nenhuma legenda capturada ainda';
       case 'web_video_page_show':
@@ -544455,6 +544675,10 @@ extension on _StringsRu {
         return 'Перелистывание кнопками громкости';
       case 'volume_key_sentence_nav':
         return 'Навигация по предложениям кнопками громкости';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'Скрыть субтитры сайта';
       case 'web_video_hosting_builtin':
@@ -544483,6 +544707,10 @@ extension on _StringsRu {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Переключиться на встроенный режим и создать карточек из очереди: ${count}';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Субтитры пока не получены';
       case 'web_video_page_show':
@@ -561863,6 +562091,10 @@ extension on _StringsTh {
         return 'ปุ่มเสียงเปลี่ยนหน้า';
       case 'volume_key_sentence_nav':
         return 'นำทางประโยคด้วยปุ่มเสียง';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'ซ่อนคำบรรยายของเว็บไซต์';
       case 'web_video_hosting_builtin':
@@ -561891,6 +562123,10 @@ extension on _StringsTh {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'สลับไปโหมดในตัวเพื่อสร้างการ์ดในคิว ${count} รายการ';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'ยังไม่ได้เก็บคำบรรยาย';
       case 'web_video_page_show':
@@ -579302,6 +579538,10 @@ extension on _StringsTr {
         return 'Ses düğmeleriyle sayfa çevirme';
       case 'volume_key_sentence_nav':
         return 'Ses Tuşuyla Cümle Gezinme';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'Site altyazılarını gizle';
       case 'web_video_hosting_builtin':
@@ -579330,6 +579570,10 @@ extension on _StringsTr {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             '${count} bekleyen kartı oluşturmak için yerleşik moda geç';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Henüz altyazı yakalanmadı';
       case 'web_video_page_show':
@@ -596724,6 +596968,10 @@ extension on _StringsVi {
         return 'Lật trang bằng nút âm lượng';
       case 'volume_key_sentence_nav':
         return 'Điều hướng câu bằng phím âm lượng';
+      case 'web_video_ad_skipping':
+        return 'Skipping ad…';
+      case 'web_video_address_hint':
+        return 'Search or enter address';
       case 'web_video_hide_native_subtitles':
         return 'Ẩn phụ đề của trang';
       case 'web_video_hosting_builtin':
@@ -596752,6 +597000,10 @@ extension on _StringsVi {
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) =>
             'Chuyển sang chế độ tích hợp để tạo ${count} thẻ đang chờ';
+      case 'web_video_nav_close':
+        return 'Close';
+      case 'web_video_nav_forward':
+        return 'Forward';
       case 'web_video_no_tracks':
         return 'Chưa bắt được phụ đề nào';
       case 'web_video_page_show':
@@ -613944,6 +614196,10 @@ extension on _StringsZhCn {
         return '音量键翻页';
       case 'volume_key_sentence_nav':
         return '音量键句子导航';
+      case 'web_video_ad_skipping':
+        return '正在跳过广告…';
+      case 'web_video_address_hint':
+        return '搜索或输入网址';
       case 'web_video_hide_native_subtitles':
         return '隐藏站点字幕';
       case 'web_video_hosting_builtin':
@@ -613970,6 +614226,10 @@ extension on _StringsZhCn {
         return ({required Object count}) => '已加入制卡队列（待制 ${count} 张）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '切到内置模式制作 ${count} 张排队卡片';
+      case 'web_video_nav_close':
+        return '关闭';
+      case 'web_video_nav_forward':
+        return '前进';
       case 'web_video_no_tracks':
         return '尚未采集到字幕';
       case 'web_video_page_show':
@@ -631215,6 +631475,10 @@ extension on _StringsZhHk {
         return '音量鍵翻頁';
       case 'volume_key_sentence_nav':
         return '音量鍵句子導覽';
+      case 'web_video_ad_skipping':
+        return '正在略過廣告…';
+      case 'web_video_address_hint':
+        return '搜尋或輸入網址';
       case 'web_video_hide_native_subtitles':
         return '隱藏網站字幕';
       case 'web_video_hosting_builtin':
@@ -631241,6 +631505,10 @@ extension on _StringsZhHk {
         return ({required Object count}) => '已加入製卡佇列（待製 ${count} 張）';
       case 'web_video_mine_switch_builtin':
         return ({required Object count}) => '切換到內建模式製作 ${count} 張排隊卡片';
+      case 'web_video_nav_close':
+        return '關閉';
+      case 'web_video_nav_forward':
+        return '前進';
       case 'web_video_no_tracks':
         return '尚未擷取到字幕';
       case 'web_video_page_show':
