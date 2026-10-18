@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 143344 (8432 per locale)
+/// Strings: 143395 (8435 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8802,6 +8802,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_density_comfortable => 'Comfortable';
   String get srs_card_appearance_density_compact => 'Compact';
   String get srs_card_appearance_density_standard => 'Standard';
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   String get srs_card_appearance_dict_unified_hint =>
       'Recolor each dictionary\'s own colors to match the card (Material). Off keeps the original dictionary style.';
@@ -8827,6 +8830,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_card_appearance_section_content => 'Card content';
   String get srs_card_appearance_section_fonts => 'Fonts';
   String get srs_card_appearance_section_layout => 'Layout';
+  String get srs_card_appearance_section_other => 'Other card types';
   String get srs_card_appearance_section_text => 'Text';
   String get srs_card_appearance_sentence_furigana =>
       'Always show sentence furigana';
@@ -26806,6 +26810,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -26853,6 +26862,8 @@ class _StringsAr extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -47505,6 +47516,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -47552,6 +47568,8 @@ class _StringsDe extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -68329,6 +68347,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -68376,6 +68399,8 @@ class _StringsEs extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -89240,6 +89265,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -89287,6 +89317,8 @@ class _StringsFr extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -109915,6 +109947,11 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -109962,6 +109999,8 @@ class _StringsId extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -130634,6 +130673,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -130681,6 +130725,8 @@ class _StringsIt extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -150644,6 +150690,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -150691,6 +150742,8 @@ class _StringsJa extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -170401,6 +170454,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -170448,6 +170506,8 @@ class _StringsKo extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -190846,6 +190906,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -190893,6 +190958,8 @@ class _StringsNl extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -211594,6 +211661,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -211641,6 +211713,8 @@ class _StringsPtBr extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -232320,6 +232394,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -232367,6 +232446,8 @@ class _StringsRu extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -252797,6 +252878,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -252844,6 +252930,8 @@ class _StringsTh extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -273339,6 +273427,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -273386,6 +273479,8 @@ class _StringsTr extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -293877,6 +293972,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -293924,6 +294024,8 @@ class _StringsVi extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -313152,6 +313254,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => '标准';
   @override
+  String get srs_card_appearance_design_skin => '卡面跟随设计系统';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      '用应用当前的 M3E / 苹果风样式覆盖导入牌组与自建模板的外观（背景、边框、文字与链接颜色、字体），模板的布局与内容不变。关闭则完全按模板原样显示。';
+  @override
   String get srs_card_appearance_dict_unified => '统一词典样式';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -313198,6 +313305,8 @@ class _StringsZhCn extends _StringsEn {
   String get srs_card_appearance_section_fonts => '字体';
   @override
   String get srs_card_appearance_section_layout => '布局';
+  @override
+  String get srs_card_appearance_section_other => '其它卡片类型';
   @override
   String get srs_card_appearance_section_text => '文字';
   @override
@@ -332166,6 +332275,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_card_appearance_density_standard => 'Standard';
   @override
+  String get srs_card_appearance_design_skin => 'Match the design system';
+  @override
+  String get srs_card_appearance_design_skin_hint =>
+      'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
+  @override
   String get srs_card_appearance_dict_unified => 'Unified dictionary style';
   @override
   String get srs_card_appearance_dict_unified_hint =>
@@ -332213,6 +332327,8 @@ class _StringsZhHk extends _StringsEn {
   String get srs_card_appearance_section_fonts => 'Fonts';
   @override
   String get srs_card_appearance_section_layout => 'Layout';
+  @override
+  String get srs_card_appearance_section_other => 'Other card types';
   @override
   String get srs_card_appearance_section_text => 'Text';
   @override
@@ -350127,6 +350243,10 @@ extension on _StringsEn {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -350173,6 +350293,8 @@ extension on _StringsEn {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -367637,6 +367759,10 @@ extension on _StringsAr {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -367683,6 +367809,8 @@ extension on _StringsAr {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -385203,6 +385331,10 @@ extension on _StringsDe {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -385249,6 +385381,8 @@ extension on _StringsDe {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -402773,6 +402907,10 @@ extension on _StringsEs {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -402819,6 +402957,8 @@ extension on _StringsEs {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -420354,6 +420494,10 @@ extension on _StringsFr {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -420400,6 +420544,8 @@ extension on _StringsFr {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -437895,6 +438041,10 @@ extension on _StringsId {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -437941,6 +438091,8 @@ extension on _StringsId {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -455445,6 +455597,10 @@ extension on _StringsIt {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -455491,6 +455647,8 @@ extension on _StringsIt {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -472929,6 +473087,10 @@ extension on _StringsJa {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -472975,6 +473137,8 @@ extension on _StringsJa {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -490369,6 +490533,10 @@ extension on _StringsKo {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -490415,6 +490583,8 @@ extension on _StringsKo {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -507892,6 +508062,10 @@ extension on _StringsNl {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -507938,6 +508112,8 @@ extension on _StringsNl {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -525446,6 +525622,10 @@ extension on _StringsPtBr {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -525492,6 +525672,8 @@ extension on _StringsPtBr {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -543004,6 +543186,10 @@ extension on _StringsRu {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -543050,6 +543236,8 @@ extension on _StringsRu {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -560522,6 +560710,10 @@ extension on _StringsTh {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -560568,6 +560760,8 @@ extension on _StringsTh {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -578058,6 +578252,10 @@ extension on _StringsTr {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -578104,6 +578302,8 @@ extension on _StringsTr {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -595589,6 +595789,10 @@ extension on _StringsVi {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -595635,6 +595839,8 @@ extension on _StringsVi {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
@@ -612975,6 +613181,10 @@ extension on _StringsZhCn {
         return '紧凑';
       case 'srs_card_appearance_density_standard':
         return '标准';
+      case 'srs_card_appearance_design_skin':
+        return '卡面跟随设计系统';
+      case 'srs_card_appearance_design_skin_hint':
+        return '用应用当前的 M3E / 苹果风样式覆盖导入牌组与自建模板的外观（背景、边框、文字与链接颜色、字体），模板的布局与内容不变。关闭则完全按模板原样显示。';
       case 'srs_card_appearance_dict_unified':
         return '统一词典样式';
       case 'srs_card_appearance_dict_unified_hint':
@@ -613021,6 +613231,8 @@ extension on _StringsZhCn {
         return '字体';
       case 'srs_card_appearance_section_layout':
         return '布局';
+      case 'srs_card_appearance_section_other':
+        return '其它卡片类型';
       case 'srs_card_appearance_section_text':
         return '文字';
       case 'srs_card_appearance_sentence_furigana':
@@ -630328,6 +630540,10 @@ extension on _StringsZhHk {
         return 'Compact';
       case 'srs_card_appearance_density_standard':
         return 'Standard';
+      case 'srs_card_appearance_design_skin':
+        return 'Match the design system';
+      case 'srs_card_appearance_design_skin_hint':
+        return 'Restyle imported and custom card templates (background, frames, text and link colors, fonts) in the app\'s M3E or Apple style. The template\'s layout and content stay as designed. Off shows templates exactly as authored.';
       case 'srs_card_appearance_dict_unified':
         return 'Unified dictionary style';
       case 'srs_card_appearance_dict_unified_hint':
@@ -630374,6 +630590,8 @@ extension on _StringsZhHk {
         return 'Fonts';
       case 'srs_card_appearance_section_layout':
         return 'Layout';
+      case 'srs_card_appearance_section_other':
+        return 'Other card types';
       case 'srs_card_appearance_section_text':
         return 'Text';
       case 'srs_card_appearance_sentence_furigana':
