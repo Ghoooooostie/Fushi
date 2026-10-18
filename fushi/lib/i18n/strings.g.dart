@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142919 (8407 per locale)
+/// Strings: 143242 (8426 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -9023,6 +9023,40 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_key_parent => 'Parent deck';
   String get srs_key_rollover => 'Day start';
   String get srs_key_steps => 'Learning steps';
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  String get srs_lapis_migration_migrate => 'Migrate';
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
   String get srs_migrate_fushi_action => 'Migrate to Fushi Card';
@@ -27143,6 +27177,59 @@ class _StringsAr extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -47772,6 +47859,59 @@ class _StringsDe extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -68526,6 +68666,59 @@ class _StringsEs extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -89368,6 +89561,59 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_key_steps => 'Learning steps';
   @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
   @override
@@ -109972,6 +110218,59 @@ class _StringsId extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -130622,6 +130921,59 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_key_steps => 'Learning steps';
   @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
   @override
@@ -150562,6 +150914,59 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_key_steps => 'Learning steps';
   @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
   @override
@@ -170248,6 +170653,59 @@ class _StringsKo extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -190623,6 +191081,59 @@ class _StringsNl extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -211302,6 +211813,59 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_key_steps => 'Learning steps';
   @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
   @override
@@ -231958,6 +232522,59 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_key_steps => 'Learning steps';
   @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
   @override
@@ -252364,6 +252981,59 @@ class _StringsTh extends _StringsEn {
   String get srs_key_rollover => 'Day start';
   @override
   String get srs_key_steps => 'Learning steps';
+  @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
   @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
@@ -272837,6 +273507,59 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_key_steps => 'Learning steps';
   @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
   @override
@@ -293305,6 +294028,59 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_key_steps => 'Learning steps';
   @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
   @override
@@ -312492,6 +313268,56 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_key_steps => '学习步长';
   @override
+  String get srs_lapis_migration_backfill_action => '补迁';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      '已为 ${n} 条笔记补上遗漏字段';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} 条已迁移的笔记有空字段，而迁移前的旧字段仍有内容。只补空字段，已有内容绝不覆盖。';
+  @override
+  String get srs_lapis_migration_backfill_title => '补迁旧版迁移遗漏的字段';
+  @override
+  String get srs_lapis_migration_by_synonym => '按同义名';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) => '${linked} 张卡继承复习历史，${dropped} 张卡不再出现';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object name,
+    required Object n,
+  }) => '将「${name}」的 ${n} 条笔记迁移到 Fushi 卡片？';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} 条笔记可迁移或有遗漏字段可补';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} 条笔记的空字段会从同含义的其它字段补上';
+  @override
+  String get srs_lapis_migration_intro =>
+      '把旧 Lapis 笔记类型（内置、从 Anki 导入或改过名的）迁到 Fushi 卡片。字段按含义对应，复习历史随卡迁移，确认后才写入。';
+  @override
+  String get srs_lapis_migration_kind_builtin => '内置 Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => '按字段识别';
+  @override
+  String get srs_lapis_migration_kind_named => '按名称识别';
+  @override
+  String get srs_lapis_migration_left_empty => '留空';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'Fushi 卡片里没有对应字段（内容留在笔记上，不迁移）：${fields}';
+  @override
+  String get srs_lapis_migration_migrate => '迁移';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} 条笔记';
+  @override
+  String get srs_lapis_migration_nothing => '没有需要迁移的旧 Lapis 笔记，也没有遗漏字段。';
+  @override
+  String get srs_lapis_migration_title => '迁移旧 Lapis 到新模板';
+  @override
   String srs_media_missing({required Object name}) => '找不到媒体文件：${name}';
   @override
   String get srs_migrate_fushi_action => '迁移到 Fushi 卡片';
@@ -331460,6 +332286,59 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_key_steps => 'Learning steps';
   @override
+  String get srs_lapis_migration_backfill_action => 'Fill in';
+  @override
+  String srs_lapis_migration_backfill_done({required Object n}) =>
+      'Filled missed fields in ${n} notes';
+  @override
+  String srs_lapis_migration_backfill_summary({required Object n}) =>
+      '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+  @override
+  String get srs_lapis_migration_backfill_title =>
+      'Fill fields missed by earlier migrations';
+  @override
+  String get srs_lapis_migration_by_synonym => 'by synonym';
+  @override
+  String srs_lapis_migration_cards({
+    required Object linked,
+    required Object dropped,
+  }) =>
+      '${linked} cards keep their review history, ${dropped} cards no longer appear';
+  @override
+  String srs_lapis_migration_confirm({
+    required Object n,
+    required Object name,
+  }) => 'Migrate ${n} notes of “${name}” to Fushi Card?';
+  @override
+  String srs_lapis_migration_entry_summary({required Object n}) =>
+      '${n} notes can be migrated or have missed fields';
+  @override
+  String srs_lapis_migration_fallback({required Object n}) =>
+      '${n} notes fill an empty field from another field with the same meaning';
+  @override
+  String get srs_lapis_migration_intro =>
+      'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+  @override
+  String get srs_lapis_migration_kind_builtin => 'Built-in Lapis';
+  @override
+  String get srs_lapis_migration_kind_fields => 'Recognized by fields';
+  @override
+  String get srs_lapis_migration_kind_named => 'Recognized by name';
+  @override
+  String get srs_lapis_migration_left_empty => 'Left empty';
+  @override
+  String srs_lapis_migration_lost({required Object fields}) =>
+      'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+  @override
+  String get srs_lapis_migration_migrate => 'Migrate';
+  @override
+  String srs_lapis_migration_notes({required Object n}) => '${n} notes';
+  @override
+  String get srs_lapis_migration_nothing =>
+      'Nothing to migrate: no old Lapis notes and no missed fields.';
+  @override
+  String get srs_lapis_migration_title => 'Migrate old Lapis';
+  @override
   String srs_media_missing({required Object name}) =>
       'Media file not found: ${name}';
   @override
@@ -349317,6 +350196,50 @@ extension on _StringsEn {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -366769,6 +367692,50 @@ extension on _StringsAr {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -384277,6 +385244,50 @@ extension on _StringsDe {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -401789,6 +402800,50 @@ extension on _StringsEs {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -419312,6 +420367,50 @@ extension on _StringsFr {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -436795,6 +437894,50 @@ extension on _StringsId {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -454287,6 +455430,50 @@ extension on _StringsIt {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -471713,6 +472900,50 @@ extension on _StringsJa {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -489095,6 +490326,50 @@ extension on _StringsKo {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -506560,6 +507835,50 @@ extension on _StringsNl {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -524056,6 +525375,50 @@ extension on _StringsPtBr {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -541556,6 +542919,50 @@ extension on _StringsRu {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -559016,6 +560423,50 @@ extension on _StringsTh {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -576494,6 +577945,50 @@ extension on _StringsTr {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -593967,6 +595462,50 @@ extension on _StringsVi {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
@@ -611281,6 +612820,48 @@ extension on _StringsZhCn {
         return '每日起点';
       case 'srs_key_steps':
         return '学习步长';
+      case 'srs_lapis_migration_backfill_action':
+        return '补迁';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => '已为 ${n} 条笔记补上遗漏字段';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} 条已迁移的笔记有空字段，而迁移前的旧字段仍有内容。只补空字段，已有内容绝不覆盖。';
+      case 'srs_lapis_migration_backfill_title':
+        return '补迁旧版迁移遗漏的字段';
+      case 'srs_lapis_migration_by_synonym':
+        return '按同义名';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} 张卡继承复习历史，${dropped} 张卡不再出现';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object name, required Object n}) =>
+            '将「${name}」的 ${n} 条笔记迁移到 Fushi 卡片？';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) => '${n} 条笔记可迁移或有遗漏字段可补';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) => '${n} 条笔记的空字段会从同含义的其它字段补上';
+      case 'srs_lapis_migration_intro':
+        return '把旧 Lapis 笔记类型（内置、从 Anki 导入或改过名的）迁到 Fushi 卡片。字段按含义对应，复习历史随卡迁移，确认后才写入。';
+      case 'srs_lapis_migration_kind_builtin':
+        return '内置 Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return '按字段识别';
+      case 'srs_lapis_migration_kind_named':
+        return '按名称识别';
+      case 'srs_lapis_migration_left_empty':
+        return '留空';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'Fushi 卡片里没有对应字段（内容留在笔记上，不迁移）：${fields}';
+      case 'srs_lapis_migration_migrate':
+        return '迁移';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} 条笔记';
+      case 'srs_lapis_migration_nothing':
+        return '没有需要迁移的旧 Lapis 笔记，也没有遗漏字段。';
+      case 'srs_lapis_migration_title':
+        return '迁移旧 Lapis 到新模板';
       case 'srs_media_missing':
         return ({required Object name}) => '找不到媒体文件：${name}';
       case 'srs_migrate_fushi_action':
@@ -628593,6 +630174,50 @@ extension on _StringsZhHk {
         return 'Day start';
       case 'srs_key_steps':
         return 'Learning steps';
+      case 'srs_lapis_migration_backfill_action':
+        return 'Fill in';
+      case 'srs_lapis_migration_backfill_done':
+        return ({required Object n}) => 'Filled missed fields in ${n} notes';
+      case 'srs_lapis_migration_backfill_summary':
+        return ({required Object n}) =>
+            '${n} migrated notes have empty fields whose pre-migration content still exists. Only empty fields are filled; existing content is never overwritten.';
+      case 'srs_lapis_migration_backfill_title':
+        return 'Fill fields missed by earlier migrations';
+      case 'srs_lapis_migration_by_synonym':
+        return 'by synonym';
+      case 'srs_lapis_migration_cards':
+        return ({required Object linked, required Object dropped}) =>
+            '${linked} cards keep their review history, ${dropped} cards no longer appear';
+      case 'srs_lapis_migration_confirm':
+        return ({required Object n, required Object name}) =>
+            'Migrate ${n} notes of “${name}” to Fushi Card?';
+      case 'srs_lapis_migration_entry_summary':
+        return ({required Object n}) =>
+            '${n} notes can be migrated or have missed fields';
+      case 'srs_lapis_migration_fallback':
+        return ({required Object n}) =>
+            '${n} notes fill an empty field from another field with the same meaning';
+      case 'srs_lapis_migration_intro':
+        return 'Old Lapis note types (built-in, imported from Anki, or renamed) move to Fushi Card. Fields map by meaning, review history moves with the cards, and nothing is written until you confirm.';
+      case 'srs_lapis_migration_kind_builtin':
+        return 'Built-in Lapis';
+      case 'srs_lapis_migration_kind_fields':
+        return 'Recognized by fields';
+      case 'srs_lapis_migration_kind_named':
+        return 'Recognized by name';
+      case 'srs_lapis_migration_left_empty':
+        return 'Left empty';
+      case 'srs_lapis_migration_lost':
+        return ({required Object fields}) =>
+            'No matching field in Fushi Card (content stays on the note, not migrated): ${fields}';
+      case 'srs_lapis_migration_migrate':
+        return 'Migrate';
+      case 'srs_lapis_migration_notes':
+        return ({required Object n}) => '${n} notes';
+      case 'srs_lapis_migration_nothing':
+        return 'Nothing to migrate: no old Lapis notes and no missed fields.';
+      case 'srs_lapis_migration_title':
+        return 'Migrate old Lapis';
       case 'srs_media_missing':
         return ({required Object name}) => 'Media file not found: ${name}';
       case 'srs_migrate_fushi_action':
