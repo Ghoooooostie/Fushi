@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 143293 (8429 per locale)
+/// Strings: 143310 (8430 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12057,6 +12057,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'No sites yet. Open a page from the address bar, then add it to your sites.';
   String get web_browser_sites_title => 'Sites';
   String get web_browser_title => 'Browser';
+  String get web_hub_browse => 'Web';
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   String get web_hub_video_sites => 'Video sites';
   String get web_video_ad_skipping => 'Skipping ad…';
@@ -32362,6 +32363,8 @@ class _StringsAr extends _StringsEn {
   String get web_browser_sites_title => 'Sites';
   @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -53118,6 +53121,8 @@ class _StringsDe extends _StringsEn {
   String get web_browser_sites_title => 'Sites';
   @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -73930,6 +73935,8 @@ class _StringsEs extends _StringsEn {
   String get web_browser_sites_title => 'Sites';
   @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -94824,6 +94831,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get web_browser_title => 'Browser';
   @override
+  String get web_hub_browse => 'Web';
+  @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -115375,6 +115384,8 @@ class _StringsId extends _StringsEn {
   String get web_browser_sites_title => 'Sites';
   @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -136088,6 +136099,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get web_browser_title => 'Browser';
   @override
+  String get web_hub_browse => 'Web';
+  @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -155789,6 +155802,8 @@ class _StringsJa extends _StringsEn {
   String get web_browser_sites_title => 'Sites';
   @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -175526,6 +175541,8 @@ class _StringsKo extends _StringsEn {
   String get web_browser_sites_title => 'Sites';
   @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -196184,6 +196201,8 @@ class _StringsNl extends _StringsEn {
   String get web_browser_sites_title => 'Sites';
   @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -216916,6 +216935,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get web_browser_title => 'Browser';
   @override
+  String get web_hub_browse => 'Web';
+  @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -237593,6 +237614,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get web_browser_title => 'Browser';
   @override
+  String get web_hub_browse => 'Web';
+  @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -257945,6 +257968,8 @@ class _StringsTh extends _StringsEn {
   String get web_browser_sites_title => 'Sites';
   @override
   String get web_browser_title => 'Browser';
+  @override
+  String get web_hub_browse => 'Web';
   @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
@@ -278502,6 +278527,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get web_browser_title => 'Browser';
   @override
+  String get web_hub_browse => 'Web';
+  @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -298986,6 +299013,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get web_browser_title => 'Browser';
   @override
+  String get web_hub_browse => 'Web';
+  @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -317718,6 +317747,8 @@ class _StringsZhCn extends _StringsEn {
   String get web_browser_sites_title => '站点';
   @override
   String get web_browser_title => '浏览器';
+  @override
+  String get web_hub_browse => '网页';
   @override
   String get web_hub_empty => '这台设备上暂时没有可用的浏览功能。';
   @override
@@ -336839,6 +336870,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_browser_title => 'Browser';
   @override
+  String get web_hub_browse => 'Web';
+  @override
   String get web_hub_empty => 'Nothing to browse on this device yet.';
   @override
   String get web_hub_video_sites => 'Video sites';
@@ -354341,6 +354374,8 @@ extension on _StringsEn {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -371829,6 +371864,8 @@ extension on _StringsAr {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -389393,6 +389430,8 @@ extension on _StringsDe {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -406939,6 +406978,8 @@ extension on _StringsEs {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -424503,6 +424544,8 @@ extension on _StringsFr {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -442011,6 +442054,8 @@ extension on _StringsId {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -459555,6 +459600,8 @@ extension on _StringsIt {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -476974,6 +477021,8 @@ extension on _StringsJa {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -494399,6 +494448,8 @@ extension on _StringsKo {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -511935,6 +511986,8 @@ extension on _StringsNl {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -529466,6 +529519,8 @@ extension on _StringsPtBr {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -547002,6 +547057,8 @@ extension on _StringsRu {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -564494,6 +564551,8 @@ extension on _StringsTh {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -582017,6 +582076,8 @@ extension on _StringsTr {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -599523,6 +599584,8 @@ extension on _StringsVi {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
@@ -616827,6 +616890,8 @@ extension on _StringsZhCn {
         return '站点';
       case 'web_browser_title':
         return '浏览器';
+      case 'web_hub_browse':
+        return '网页';
       case 'web_hub_empty':
         return '这台设备上暂时没有可用的浏览功能。';
       case 'web_hub_video_sites':
@@ -634180,6 +634245,8 @@ extension on _StringsZhHk {
         return 'Sites';
       case 'web_browser_title':
         return 'Browser';
+      case 'web_hub_browse':
+        return 'Web';
       case 'web_hub_empty':
         return 'Nothing to browse on this device yet.';
       case 'web_hub_video_sites':
