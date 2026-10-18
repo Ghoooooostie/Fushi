@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142443 (8379 per locale)
+/// Strings: 142919 (8407 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8598,6 +8598,59 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get spread_off => 'Off';
   String get spread_on => 'On';
   String get srs_action_failed => 'That didn\'t work. Please try again.';
+  String get srs_anki_migrate => 'Migrate from Anki';
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  String get srs_anki_migrate_rescan => 'Scan again';
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  String get srs_anki_migrate_start => 'Migrate';
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
   String get srs_ankiconnect_generate_key => 'Generate key';
   String srs_ankiconnect_hint({required Object port}) =>
       'With the review module on, AnkiConnect tools (Yomitan, asbplayer and others) can use http://127.0.0.1:${port} as their AnkiConnect address to add cards straight to Fushi review.';
@@ -26355,6 +26408,87 @@ class _StringsAr extends _StringsEn {
   String get spread_on => 'تشغيل';
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
@@ -46903,6 +47037,87 @@ class _StringsDe extends _StringsEn {
   String get spread_on => 'Ein';
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
@@ -67576,6 +67791,87 @@ class _StringsEs extends _StringsEn {
   String get spread_on => 'Activado';
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
@@ -88337,6 +88633,87 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -108860,6 +109237,87 @@ class _StringsId extends _StringsEn {
   String get spread_on => 'Nyala';
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
@@ -129429,6 +129887,87 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -149288,6 +149827,87 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'キーを生成';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -168893,6 +169513,87 @@ class _StringsKo extends _StringsEn {
   String get spread_on => '켜기';
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
@@ -189187,6 +189888,87 @@ class _StringsNl extends _StringsEn {
   String get spread_on => 'Aan';
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
@@ -209785,6 +210567,87 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -230360,6 +231223,87 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -250685,6 +251629,87 @@ class _StringsTh extends _StringsEn {
   String get spread_on => 'เปิด';
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
+  @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
   @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
@@ -271077,6 +272102,87 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -291464,6 +292570,87 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => 'Generate key';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -310607,6 +311794,80 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_action_failed => '操作没有成功，请重试';
   @override
+  String get srs_anki_migrate => '从 Anki 迁移';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 起把集合放在其他 app 读不到的私有目录。请在 AnkiDroid 里选「导出 → 集合包（.colpkg）」，勾选包含排程与媒体，再在这里选择该文件。';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '将导入 ${notes} 条笔记、${cards} 张卡片、${reviews} 条复习记录，连同排程、笔记类型和媒体。Fushi 现有数据会保留，重复迁移不会产生重复。';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '「${name}」将连同排程、笔记类型和媒体一起导入。Fushi 现有数据会保留，重复迁移不会产生重复。';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      '迁移「${name}」？';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      '迁移前请先关闭 Anki。Fushi 读取的是集合的副本，不会改动 Anki。';
+  @override
+  String get srs_anki_migrate_error_changed => '读取期间 Anki 改动了集合。请关闭 Anki 后再试。';
+  @override
+  String get srs_anki_migrate_error_corrupt => '这份集合读取不了（已损坏或不是 Anki 集合）。';
+  @override
+  String get srs_anki_migrate_error_locked => '读取不了集合。请关闭 Anki 后再试。';
+  @override
+  String get srs_anki_migrate_error_missing => '集合已经不在了，请重新查找。';
+  @override
+  String get srs_anki_migrate_found => '本机找到的 Anki 集合';
+  @override
+  String get srs_anki_migrate_grant_access => '授予文件访问权限以查找 AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      '把 Anki 的牌组、笔记、笔记类型、复习进度和媒体一次搬过来。只读取 Anki 数据，不会改动它。';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      '请在 AnkiMobile 或 Anki 里导出集合包（.colpkg），勾选包含排程与媒体，存到「文件」后在这里选择。';
+  @override
+  String get srs_anki_migrate_kind_folder => '所选文件夹';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      '该文件夹及其子文件夹里没有 collection.anki2。';
+  @override
+  String get srs_anki_migrate_none_found => '本机没有找到 Anki 集合。';
+  @override
+  String get srs_anki_migrate_open_ankidroid => '打开 AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki 似乎正开着。先关闭 Anki（或同步一次），最新的复习才会带过来。';
+  @override
+  String get srs_anki_migrate_other_ways => '其他方式';
+  @override
+  String get srs_anki_migrate_pick_file => '选择导出的文件（.colpkg / .apkg）';
+  @override
+  String get srs_anki_migrate_pick_folder => '选择 Anki 数据文件夹';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · 最后修改 ${time}';
+  @override
+  String get srs_anki_migrate_rescan => '重新查找';
+  @override
+  String get srs_anki_migrate_scanning => '正在查找 Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      '会迁移：牌组、笔记、笔记类型与模板、卡片排程、复习记录、牌组选项和媒体。不会迁移：插件、筛选牌组（卡片回到原牌组）以及 Anki 自身的偏好设置。';
+  @override
+  String get srs_anki_migrate_start => '开始迁移';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      '有些文件夹读取不了：${paths}';
+  @override
   String get srs_ankiconnect_generate_key => '生成密钥';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -329464,6 +330725,87 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_action_failed => 'That didn\'t work. Please try again.';
   @override
+  String get srs_anki_migrate => 'Migrate from Anki';
+  @override
+  String get srs_anki_migrate_android_hint =>
+      'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+  @override
+  String srs_anki_migrate_confirm_body({
+    required Object notes,
+    required Object cards,
+    required Object reviews,
+  }) =>
+      '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_file({required Object name}) =>
+      '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+  @override
+  String srs_anki_migrate_confirm_title({required Object name}) =>
+      'Migrate “${name}”?';
+  @override
+  String get srs_anki_migrate_desktop_hint =>
+      'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+  @override
+  String get srs_anki_migrate_error_changed =>
+      'Anki changed the collection while it was being read. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_corrupt =>
+      'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+  @override
+  String get srs_anki_migrate_error_locked =>
+      'Couldn\'t read the collection. Close Anki and try again.';
+  @override
+  String get srs_anki_migrate_error_missing =>
+      'The collection is no longer there. Scan again.';
+  @override
+  String get srs_anki_migrate_found => 'Anki collections on this device';
+  @override
+  String get srs_anki_migrate_grant_access =>
+      'Allow file access to find AnkiDroid';
+  @override
+  String get srs_anki_migrate_intro =>
+      'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+  @override
+  String get srs_anki_migrate_ios_hint =>
+      'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+  @override
+  String get srs_anki_migrate_kind_folder => 'Chosen folder';
+  @override
+  String get srs_anki_migrate_no_collection_in_folder =>
+      'No collection.anki2 in that folder or its subfolders.';
+  @override
+  String get srs_anki_migrate_none_found =>
+      'No Anki collection found on this device.';
+  @override
+  String get srs_anki_migrate_open_ankidroid => 'Open AnkiDroid';
+  @override
+  String get srs_anki_migrate_open_warning =>
+      'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+  @override
+  String get srs_anki_migrate_other_ways => 'Other ways';
+  @override
+  String get srs_anki_migrate_pick_file =>
+      'Choose exported file (.colpkg / .apkg)';
+  @override
+  String get srs_anki_migrate_pick_folder => 'Choose Anki data folder';
+  @override
+  String srs_anki_migrate_profile_meta({
+    required Object size,
+    required Object time,
+  }) => '${size} · last changed ${time}';
+  @override
+  String get srs_anki_migrate_rescan => 'Scan again';
+  @override
+  String get srs_anki_migrate_scanning => 'Looking for Anki…';
+  @override
+  String get srs_anki_migrate_scope =>
+      'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+  @override
+  String get srs_anki_migrate_start => 'Migrate';
+  @override
+  String srs_anki_migrate_unreadable({required Object paths}) =>
+      'Some folders couldn\'t be read: ${paths}';
+  @override
   String get srs_ankiconnect_generate_key => '產生金鑰';
   @override
   String srs_ankiconnect_hint({required Object port}) =>
@@ -347311,6 +348653,70 @@ extension on _StringsEn {
         return 'On';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -364699,6 +366105,70 @@ extension on _StringsAr {
         return 'تشغيل';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -382143,6 +383613,70 @@ extension on _StringsDe {
         return 'Ein';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -399591,6 +401125,70 @@ extension on _StringsEs {
         return 'Activado';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -417050,6 +418648,70 @@ extension on _StringsFr {
         return 'Activé';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -434469,6 +436131,70 @@ extension on _StringsId {
         return 'Nyala';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -451897,6 +453623,70 @@ extension on _StringsIt {
         return 'Attivato';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -469259,6 +471049,70 @@ extension on _StringsJa {
         return 'オン';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'キーを生成';
       case 'srs_ankiconnect_hint':
@@ -486577,6 +488431,70 @@ extension on _StringsKo {
         return '켜기';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -503978,6 +505896,70 @@ extension on _StringsNl {
         return 'Aan';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -521410,6 +523392,70 @@ extension on _StringsPtBr {
         return 'Ativado';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -538846,6 +540892,70 @@ extension on _StringsRu {
         return 'Вкл';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -556242,6 +558352,70 @@ extension on _StringsTh {
         return 'เปิด';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -573656,6 +575830,70 @@ extension on _StringsTr {
         return 'Açık';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -591065,6 +593303,70 @@ extension on _StringsVi {
         return 'Bật';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return 'Generate key';
       case 'srs_ankiconnect_hint':
@@ -608334,6 +610636,69 @@ extension on _StringsZhCn {
         return '开启';
       case 'srs_action_failed':
         return '操作没有成功，请重试';
+      case 'srs_anki_migrate':
+        return '从 Anki 迁移';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 起把集合放在其他 app 读不到的私有目录。请在 AnkiDroid 里选「导出 → 集合包（.colpkg）」，勾选包含排程与媒体，再在这里选择该文件。';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '将导入 ${notes} 条笔记、${cards} 张卡片、${reviews} 条复习记录，连同排程、笔记类型和媒体。Fushi 现有数据会保留，重复迁移不会产生重复。';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '「${name}」将连同排程、笔记类型和媒体一起导入。Fushi 现有数据会保留，重复迁移不会产生重复。';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => '迁移「${name}」？';
+      case 'srs_anki_migrate_desktop_hint':
+        return '迁移前请先关闭 Anki。Fushi 读取的是集合的副本，不会改动 Anki。';
+      case 'srs_anki_migrate_error_changed':
+        return '读取期间 Anki 改动了集合。请关闭 Anki 后再试。';
+      case 'srs_anki_migrate_error_corrupt':
+        return '这份集合读取不了（已损坏或不是 Anki 集合）。';
+      case 'srs_anki_migrate_error_locked':
+        return '读取不了集合。请关闭 Anki 后再试。';
+      case 'srs_anki_migrate_error_missing':
+        return '集合已经不在了，请重新查找。';
+      case 'srs_anki_migrate_found':
+        return '本机找到的 Anki 集合';
+      case 'srs_anki_migrate_grant_access':
+        return '授予文件访问权限以查找 AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return '把 Anki 的牌组、笔记、笔记类型、复习进度和媒体一次搬过来。只读取 Anki 数据，不会改动它。';
+      case 'srs_anki_migrate_ios_hint':
+        return '请在 AnkiMobile 或 Anki 里导出集合包（.colpkg），勾选包含排程与媒体，存到「文件」后在这里选择。';
+      case 'srs_anki_migrate_kind_folder':
+        return '所选文件夹';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return '该文件夹及其子文件夹里没有 collection.anki2。';
+      case 'srs_anki_migrate_none_found':
+        return '本机没有找到 Anki 集合。';
+      case 'srs_anki_migrate_open_ankidroid':
+        return '打开 AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki 似乎正开着。先关闭 Anki（或同步一次），最新的复习才会带过来。';
+      case 'srs_anki_migrate_other_ways':
+        return '其他方式';
+      case 'srs_anki_migrate_pick_file':
+        return '选择导出的文件（.colpkg / .apkg）';
+      case 'srs_anki_migrate_pick_folder':
+        return '选择 Anki 数据文件夹';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · 最后修改 ${time}';
+      case 'srs_anki_migrate_rescan':
+        return '重新查找';
+      case 'srs_anki_migrate_scanning':
+        return '正在查找 Anki…';
+      case 'srs_anki_migrate_scope':
+        return '会迁移：牌组、笔记、笔记类型与模板、卡片排程、复习记录、牌组选项和媒体。不会迁移：插件、筛选牌组（卡片回到原牌组）以及 Anki 自身的偏好设置。';
+      case 'srs_anki_migrate_start':
+        return '开始迁移';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) => '有些文件夹读取不了：${paths}';
       case 'srs_ankiconnect_generate_key':
         return '生成密钥';
       case 'srs_ankiconnect_hint':
@@ -625564,6 +627929,70 @@ extension on _StringsZhHk {
         return '開啟';
       case 'srs_action_failed':
         return 'That didn\'t work. Please try again.';
+      case 'srs_anki_migrate':
+        return 'Migrate from Anki';
+      case 'srs_anki_migrate_android_hint':
+        return 'AnkiDroid 2.17 and later keep the collection in private storage other apps can\'t read. In AnkiDroid choose Export → Collection package (.colpkg), include scheduling and media, then pick that file here.';
+      case 'srs_anki_migrate_confirm_body':
+        return ({
+          required Object notes,
+          required Object cards,
+          required Object reviews,
+        }) =>
+            '${notes} notes, ${cards} cards and ${reviews} reviews will be imported together with their scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_file':
+        return ({required Object name}) =>
+            '“${name}” will be imported together with its scheduling, note types and media. Your existing Fushi data is kept, and migrating again won\'t create duplicates.';
+      case 'srs_anki_migrate_confirm_title':
+        return ({required Object name}) => 'Migrate “${name}”?';
+      case 'srs_anki_migrate_desktop_hint':
+        return 'Close Anki before migrating. Fushi reads a copy of your collection and leaves Anki untouched.';
+      case 'srs_anki_migrate_error_changed':
+        return 'Anki changed the collection while it was being read. Close Anki and try again.';
+      case 'srs_anki_migrate_error_corrupt':
+        return 'This collection can\'t be read (it\'s damaged or not an Anki collection).';
+      case 'srs_anki_migrate_error_locked':
+        return 'Couldn\'t read the collection. Close Anki and try again.';
+      case 'srs_anki_migrate_error_missing':
+        return 'The collection is no longer there. Scan again.';
+      case 'srs_anki_migrate_found':
+        return 'Anki collections on this device';
+      case 'srs_anki_migrate_grant_access':
+        return 'Allow file access to find AnkiDroid';
+      case 'srs_anki_migrate_intro':
+        return 'Bring your decks, notes, note types, review progress and media over from Anki in one go. Your Anki data is only read, never changed.';
+      case 'srs_anki_migrate_ios_hint':
+        return 'In AnkiMobile or Anki, export a collection package (.colpkg) with scheduling and media, save it to Files, then pick it here.';
+      case 'srs_anki_migrate_kind_folder':
+        return 'Chosen folder';
+      case 'srs_anki_migrate_no_collection_in_folder':
+        return 'No collection.anki2 in that folder or its subfolders.';
+      case 'srs_anki_migrate_none_found':
+        return 'No Anki collection found on this device.';
+      case 'srs_anki_migrate_open_ankidroid':
+        return 'Open AnkiDroid';
+      case 'srs_anki_migrate_open_warning':
+        return 'Anki seems to be open. Close it (or sync) first so the latest reviews come along.';
+      case 'srs_anki_migrate_other_ways':
+        return 'Other ways';
+      case 'srs_anki_migrate_pick_file':
+        return 'Choose exported file (.colpkg / .apkg)';
+      case 'srs_anki_migrate_pick_folder':
+        return 'Choose Anki data folder';
+      case 'srs_anki_migrate_profile_meta':
+        return ({required Object size, required Object time}) =>
+            '${size} · last changed ${time}';
+      case 'srs_anki_migrate_rescan':
+        return 'Scan again';
+      case 'srs_anki_migrate_scanning':
+        return 'Looking for Anki…';
+      case 'srs_anki_migrate_scope':
+        return 'Carried over: decks, notes, note types and templates, card scheduling, review history, deck options and media. Not carried over: add-ons, filtered decks (their cards go back to their home deck) and Anki\'s own preferences.';
+      case 'srs_anki_migrate_start':
+        return 'Migrate';
+      case 'srs_anki_migrate_unreadable':
+        return ({required Object paths}) =>
+            'Some folders couldn\'t be read: ${paths}';
       case 'srs_ankiconnect_generate_key':
         return '產生金鑰';
       case 'srs_ankiconnect_hint':
