@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 142698 (8394 per locale)
+/// Strings: 142749 (8397 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -12044,6 +12044,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Native window (4K, hardware DRM; cards are queued for later)';
   String get web_video_import_hint =>
       'This is a web page (not a direct stream). It will open in the built-in web player.';
+  String get web_video_login_import => 'Import login from browser';
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   String get web_video_mine_queue_empty => 'No queued cards';
   String web_video_mine_queue_finished({
     required Object ok,
@@ -32290,6 +32295,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'هذه صفحة ويب (وليست بثًا مباشرًا). ستُفتح في مشغّل الويب المدمج.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_queue_empty => 'لا توجد بطاقات في قائمة الانتظار';
   @override
@@ -52963,6 +52976,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Dies ist eine Webseite (kein direkter Stream). Sie wird im integrierten Web-Player geöffnet.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_queue_empty => 'Keine wartenden Karten';
   @override
@@ -73692,6 +73713,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Esto es una página web (no una transmisión directa). Se abrirá en el reproductor web integrado.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_queue_empty => 'No hay tarjetas en cola';
   @override
@@ -94504,6 +94533,14 @@ class _StringsFr extends _StringsEn {
   String get web_video_import_hint =>
       'Il s’agit d’une page web (pas d’un flux direct). Elle s’ouvrira dans le lecteur web intégré.';
   @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
   String get web_video_mine_queue_empty => 'Aucune carte en attente';
   @override
   String web_video_mine_queue_finished({
@@ -114971,6 +115008,14 @@ class _StringsId extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Ini halaman web (bukan stream langsung). Akan dibuka di pemutar web bawaan.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_queue_empty => 'Tidak ada kartu yang antre';
   @override
@@ -135602,6 +135647,14 @@ class _StringsIt extends _StringsEn {
   String get web_video_import_hint =>
       'Questa è una pagina web (non uno stream diretto). Si aprirà nel lettore web integrato.';
   @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
   String get web_video_mine_queue_empty => 'Nessuna carta in coda';
   @override
   String web_video_mine_queue_finished({
@@ -155217,6 +155270,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'これは（直接ストリームではなく）Web ページです。内蔵 Web プレーヤーで開きます。';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_queue_empty => 'キューにカードはありません';
   @override
@@ -174869,6 +174930,14 @@ class _StringsKo extends _StringsEn {
       '네이티브 창(4K, 하드웨어 DRM; 카드는 나중에 대기열 처리)';
   @override
   String get web_video_import_hint => '직접 스트림이 아닌 웹 페이지입니다. 내장 웹 플레이어에서 열립니다.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_queue_empty => '대기 중인 카드가 없습니다';
   @override
@@ -195447,6 +195516,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'Dit is een webpagina (geen directe stream). Deze wordt in de ingebouwde webspeler geopend.';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_queue_empty => 'Geen wachtende kaarten';
   @override
@@ -216095,6 +216172,14 @@ class _StringsPtBr extends _StringsEn {
   String get web_video_import_hint =>
       'Isto é uma página web (não um stream direto). Será aberta no player web integrado.';
   @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
   String get web_video_mine_queue_empty => 'Nenhum cartão na fila';
   @override
   String web_video_mine_queue_finished({
@@ -236689,6 +236774,14 @@ class _StringsRu extends _StringsEn {
   String get web_video_import_hint =>
       'Это веб-страница (не прямой поток). Она откроется во встроенном веб-плеере.';
   @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
   String get web_video_mine_queue_empty => 'Очередь карточек пуста';
   @override
   String web_video_mine_queue_finished({
@@ -256958,6 +257051,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get web_video_import_hint =>
       'นี่คือหน้าเว็บ (ไม่ใช่สตรีมโดยตรง) จะเปิดในเว็บเพลเยอร์ในตัว';
+  @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
   @override
   String get web_video_mine_queue_empty => 'ไม่มีการ์ดในคิว';
   @override
@@ -277432,6 +277533,14 @@ class _StringsTr extends _StringsEn {
   String get web_video_import_hint =>
       'Bu bir web sayfası (doğrudan akış değil). Yerleşik web oynatıcıda açılacak.';
   @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
   String get web_video_mine_queue_empty => 'Sırada kart yok';
   @override
   String web_video_mine_queue_finished({
@@ -297833,6 +297942,14 @@ class _StringsVi extends _StringsEn {
   String get web_video_import_hint =>
       'Đây là trang web (không phải luồng trực tiếp). Sẽ mở trong trình phát web tích hợp.';
   @override
+  String get web_video_login_import => 'Import login from browser';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      'Imported ${count} login cookies from the browser';
+  @override
+  String get web_video_login_import_waiting =>
+      'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
+  @override
   String get web_video_mine_queue_empty => 'Không có thẻ nào đang chờ';
   @override
   String web_video_mine_queue_finished({
@@ -316483,6 +316600,14 @@ class _StringsZhCn extends _StringsEn {
   String get web_video_hosting_windowed => '原生窗口（4K 硬件 DRM；制卡先排队）';
   @override
   String get web_video_import_hint => '这是网页地址（非直链），将用内置网页播放器打开。';
+  @override
+  String get web_video_login_import => '从浏览器导入登录';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      '已从浏览器导入 ${count} 条登录信息';
+  @override
+  String get web_video_login_import_waiting =>
+      '已在浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
   @override
   String get web_video_mine_queue_empty => '制卡队列为空';
   @override
@@ -335524,6 +335649,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get web_video_import_hint => '這是網頁（不是直接串流），將在內建網頁播放器中開啟。';
   @override
+  String get web_video_login_import => '從瀏覽器匯入登入';
+  @override
+  String web_video_login_import_received({required Object count}) =>
+      '已從瀏覽器匯入 ${count} 條登入資訊';
+  @override
+  String get web_video_login_import_waiting =>
+      '已在瀏覽器開啟本站。裝了 Fushi 瀏覽器擴充功能會自動把登入送過來，還沒登入就先在瀏覽器裡登入。';
+  @override
   String get web_video_mine_queue_empty => '佇列中沒有卡片';
   @override
   String web_video_mine_queue_finished({
@@ -352949,6 +353082,13 @@ extension on _StringsEn {
         return 'Native window (4K, hardware DRM; cards are queued for later)';
       case 'web_video_import_hint':
         return 'This is a web page (not a direct stream). It will open in the built-in web player.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'No queued cards';
       case 'web_video_mine_queue_finished':
@@ -370365,6 +370505,13 @@ extension on _StringsAr {
         return 'نافذة أصلية (4K، DRM عتادي؛ تُوضع البطاقات في قائمة الانتظار)';
       case 'web_video_import_hint':
         return 'هذه صفحة ويب (وليست بثًا مباشرًا). ستُفتح في مشغّل الويب المدمج.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'لا توجد بطاقات في قائمة الانتظار';
       case 'web_video_mine_queue_finished':
@@ -387857,6 +388004,13 @@ extension on _StringsDe {
         return 'Natives Fenster (4K, Hardware-DRM; Karten werden später erstellt)';
       case 'web_video_import_hint':
         return 'Dies ist eine Webseite (kein direkter Stream). Sie wird im integrierten Web-Player geöffnet.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'Keine wartenden Karten';
       case 'web_video_mine_queue_finished':
@@ -405331,6 +405485,13 @@ extension on _StringsEs {
         return 'Ventana nativa (4K, DRM por hardware; las tarjetas se ponen en cola)';
       case 'web_video_import_hint':
         return 'Esto es una página web (no una transmisión directa). Se abrirá en el reproductor web integrado.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'No hay tarjetas en cola';
       case 'web_video_mine_queue_finished':
@@ -422823,6 +422984,13 @@ extension on _StringsFr {
         return 'Fenêtre native (4K, DRM matériel ; les cartes sont mises en attente)';
       case 'web_video_import_hint':
         return 'Il s’agit d’une page web (pas d’un flux direct). Elle s’ouvrira dans le lecteur web intégré.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'Aucune carte en attente';
       case 'web_video_mine_queue_finished':
@@ -440259,6 +440427,13 @@ extension on _StringsId {
         return 'Jendela native (4K, DRM perangkat keras; kartu diantrekan dulu)';
       case 'web_video_import_hint':
         return 'Ini halaman web (bukan stream langsung). Akan dibuka di pemutar web bawaan.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'Tidak ada kartu yang antre';
       case 'web_video_mine_queue_finished':
@@ -457731,6 +457906,13 @@ extension on _StringsIt {
         return 'Finestra nativa (4K, DRM hardware; le carte vengono messe in coda)';
       case 'web_video_import_hint':
         return 'Questa è una pagina web (non uno stream diretto). Si aprirà nel lettore web integrato.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'Nessuna carta in coda';
       case 'web_video_mine_queue_finished':
@@ -475078,6 +475260,13 @@ extension on _StringsJa {
         return 'ネイティブウィンドウ（4K、ハードウェア DRM；カードは後でキュー処理）';
       case 'web_video_import_hint':
         return 'これは（直接ストリームではなく）Web ページです。内蔵 Web プレーヤーで開きます。';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'キューにカードはありません';
       case 'web_video_mine_queue_finished':
@@ -492431,6 +492620,13 @@ extension on _StringsKo {
         return '네이티브 창(4K, 하드웨어 DRM; 카드는 나중에 대기열 처리)';
       case 'web_video_import_hint':
         return '직접 스트림이 아닌 웹 페이지입니다. 내장 웹 플레이어에서 열립니다.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return '대기 중인 카드가 없습니다';
       case 'web_video_mine_queue_finished':
@@ -509895,6 +510091,13 @@ extension on _StringsNl {
         return 'Native venster (4K, hardware-DRM; kaarten komen in de wachtrij)';
       case 'web_video_import_hint':
         return 'Dit is een webpagina (geen directe stream). Deze wordt in de ingebouwde webspeler geopend.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'Geen wachtende kaarten';
       case 'web_video_mine_queue_finished':
@@ -527354,6 +527557,13 @@ extension on _StringsPtBr {
         return 'Janela nativa (4K, DRM por hardware; cartões ficam na fila)';
       case 'web_video_import_hint':
         return 'Isto é uma página web (não um stream direto). Será aberta no player web integrado.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'Nenhum cartão na fila';
       case 'web_video_mine_queue_finished':
@@ -544818,6 +545028,13 @@ extension on _StringsRu {
         return 'Нативное окно (4K, аппаратный DRM; карточки ставятся в очередь)';
       case 'web_video_import_hint':
         return 'Это веб-страница (не прямой поток). Она откроется во встроенном веб-плеере.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'Очередь карточек пуста';
       case 'web_video_mine_queue_finished':
@@ -562238,6 +562455,13 @@ extension on _StringsTh {
         return 'หน้าต่างเนทีฟ (4K, DRM ฮาร์ดแวร์; การ์ดจะเข้าคิวไว้ก่อน)';
       case 'web_video_import_hint':
         return 'นี่คือหน้าเว็บ (ไม่ใช่สตรีมโดยตรง) จะเปิดในเว็บเพลเยอร์ในตัว';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'ไม่มีการ์ดในคิว';
       case 'web_video_mine_queue_finished':
@@ -579689,6 +579913,13 @@ extension on _StringsTr {
         return 'Yerel pencere (4K, donanımsal DRM; kartlar sonra sıraya alınır)';
       case 'web_video_import_hint':
         return 'Bu bir web sayfası (doğrudan akış değil). Yerleşik web oynatıcıda açılacak.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'Sırada kart yok';
       case 'web_video_mine_queue_finished':
@@ -597123,6 +597354,13 @@ extension on _StringsVi {
         return 'Cửa sổ gốc (4K, DRM phần cứng; thẻ được xếp hàng để làm sau)';
       case 'web_video_import_hint':
         return 'Đây là trang web (không phải luồng trực tiếp). Sẽ mở trong trình phát web tích hợp.';
+      case 'web_video_login_import':
+        return 'Import login from browser';
+      case 'web_video_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} login cookies from the browser';
+      case 'web_video_login_import_waiting':
+        return 'Opened this site in your browser. With the Fushi browser extension installed, your login is sent over automatically. Sign in there first if needed.';
       case 'web_video_mine_queue_empty':
         return 'Không có thẻ nào đang chờ';
       case 'web_video_mine_queue_finished':
@@ -614355,6 +614593,12 @@ extension on _StringsZhCn {
         return '原生窗口（4K 硬件 DRM；制卡先排队）';
       case 'web_video_import_hint':
         return '这是网页地址（非直链），将用内置网页播放器打开。';
+      case 'web_video_login_import':
+        return '从浏览器导入登录';
+      case 'web_video_login_import_received':
+        return ({required Object count}) => '已从浏览器导入 ${count} 条登录信息';
+      case 'web_video_login_import_waiting':
+        return '已在浏览器打开本站。装了 Fushi 浏览器扩展会自动把登录送过来，还没登录就先在浏览器里登录。';
       case 'web_video_mine_queue_empty':
         return '制卡队列为空';
       case 'web_video_mine_queue_finished':
@@ -631638,6 +631882,12 @@ extension on _StringsZhHk {
         return '原生視窗（4K 硬體 DRM；製卡先排隊）';
       case 'web_video_import_hint':
         return '這是網頁（不是直接串流），將在內建網頁播放器中開啟。';
+      case 'web_video_login_import':
+        return '從瀏覽器匯入登入';
+      case 'web_video_login_import_received':
+        return ({required Object count}) => '已從瀏覽器匯入 ${count} 條登入資訊';
+      case 'web_video_login_import_waiting':
+        return '已在瀏覽器開啟本站。裝了 Fushi 瀏覽器擴充功能會自動把登入送過來，還沒登入就先在瀏覽器裡登入。';
       case 'web_video_mine_queue_empty':
         return '佇列中沒有卡片';
       case 'web_video_mine_queue_finished':
