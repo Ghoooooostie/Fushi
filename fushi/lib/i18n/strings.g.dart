@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 143242 (8426 per locale)
+/// Strings: 143344 (8432 per locale)
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -8940,6 +8940,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object skipped,
   }) => 'Imported ${n}, skipped ${skipped}';
   String get srs_import => 'Import';
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   String srs_import_failed({required Object error}) =>
@@ -8995,6 +8997,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srs_import_reset_default => 'Restore default';
   String get srs_import_running => 'Importing…';
   String get srs_import_section_updates => 'Updates';
+  String get srs_import_task_dismiss => 'Dismiss';
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   String get srs_import_update_always => 'Always';
   String get srs_import_update_if_newer => 'If newer';
   String get srs_import_update_never => 'Never';
@@ -27042,6 +27053,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -27125,6 +27139,20 @@ class _StringsAr extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -47724,6 +47752,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -47807,6 +47838,20 @@ class _StringsDe extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -68531,6 +68576,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -68614,6 +68662,20 @@ class _StringsEs extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -89425,6 +89487,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -89508,6 +89573,20 @@ class _StringsFr extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -110083,6 +110162,9 @@ class _StringsId extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -110166,6 +110248,20 @@ class _StringsId extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -130785,6 +130881,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -130868,6 +130967,20 @@ class _StringsIt extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -150778,6 +150891,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -150861,6 +150977,20 @@ class _StringsJa extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -170518,6 +170648,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -170601,6 +170734,20 @@ class _StringsKo extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -190946,6 +191093,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -191029,6 +191179,20 @@ class _StringsNl extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -211677,6 +211841,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -211760,6 +211927,20 @@ class _StringsPtBr extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -232386,6 +232567,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -232469,6 +232653,20 @@ class _StringsRu extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -252846,6 +253044,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -252929,6 +253130,20 @@ class _StringsTh extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -273371,6 +273586,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -273454,6 +273672,20 @@ class _StringsTr extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -293892,6 +294124,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -293975,6 +294210,20 @@ class _StringsVi extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -313138,6 +313387,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srs_import => '导入';
   @override
+  String get srs_import_background_started => '正在后台导入，可以继续使用 Fushi。';
+  @override
   String get srs_import_colpkg_note =>
       '这是整库包（.colpkg）。Anki 会用它替换整个集合；Fushi 改为合并导入，不会删除或替换你已有的卡片。';
   @override
@@ -313216,6 +313467,18 @@ class _StringsZhCn extends _StringsEn {
   String get srs_import_running => '正在导入…';
   @override
   String get srs_import_section_updates => '更新';
+  @override
+  String get srs_import_task_dismiss => '关闭';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      '已导入 ${name}：新增 ${n} 条笔记';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      '导入 ${name} 失败，点按查看原因。';
+  @override
+  String srs_import_task_queued({required Object name}) => '等待导入 ${name}';
+  @override
+  String srs_import_task_running({required Object name}) => '正在导入 ${name}…';
   @override
   String get srs_import_update_always => '始终';
   @override
@@ -332150,6 +332413,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get srs_import => 'Import';
   @override
+  String get srs_import_background_started =>
+      'Importing in the background. You can keep using Fushi.';
+  @override
   String get srs_import_colpkg_note =>
       'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
   @override
@@ -332233,6 +332499,20 @@ class _StringsZhHk extends _StringsEn {
   String get srs_import_running => 'Importing…';
   @override
   String get srs_import_section_updates => 'Updates';
+  @override
+  String get srs_import_task_dismiss => 'Dismiss';
+  @override
+  String srs_import_task_done({required Object name, required Object n}) =>
+      'Imported ${name}: ${n} notes added';
+  @override
+  String srs_import_task_failed({required Object name}) =>
+      'Couldn\'t import ${name}. Tap for details.';
+  @override
+  String srs_import_task_queued({required Object name}) =>
+      'Waiting to import ${name}';
+  @override
+  String srs_import_task_running({required Object name}) =>
+      'Importing ${name}…';
   @override
   String get srs_import_update_always => 'Always';
   @override
@@ -350074,6 +350354,8 @@ extension on _StringsEn {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -350148,6 +350430,18 @@ extension on _StringsEn {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -367570,6 +367864,8 @@ extension on _StringsAr {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -367644,6 +367940,18 @@ extension on _StringsAr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -385122,6 +385430,8 @@ extension on _StringsDe {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -385196,6 +385506,18 @@ extension on _StringsDe {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -402678,6 +403000,8 @@ extension on _StringsEs {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -402752,6 +403076,18 @@ extension on _StringsEs {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -420245,6 +420581,8 @@ extension on _StringsFr {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -420319,6 +420657,18 @@ extension on _StringsFr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -437772,6 +438122,8 @@ extension on _StringsId {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -437846,6 +438198,18 @@ extension on _StringsId {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -455308,6 +455672,8 @@ extension on _StringsIt {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -455382,6 +455748,18 @@ extension on _StringsIt {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -472778,6 +473156,8 @@ extension on _StringsJa {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -472852,6 +473232,18 @@ extension on _StringsJa {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -490204,6 +490596,8 @@ extension on _StringsKo {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -490278,6 +490672,18 @@ extension on _StringsKo {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -507713,6 +508119,8 @@ extension on _StringsNl {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -507787,6 +508195,18 @@ extension on _StringsNl {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -525253,6 +525673,8 @@ extension on _StringsPtBr {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -525327,6 +525749,18 @@ extension on _StringsPtBr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -542797,6 +543231,8 @@ extension on _StringsRu {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -542871,6 +543307,18 @@ extension on _StringsRu {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -560301,6 +560749,8 @@ extension on _StringsTh {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -560375,6 +560825,18 @@ extension on _StringsTh {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -577823,6 +578285,8 @@ extension on _StringsTr {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -577897,6 +578361,18 @@ extension on _StringsTr {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -595340,6 +595816,8 @@ extension on _StringsVi {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -595414,6 +595892,18 @@ extension on _StringsVi {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
@@ -612709,6 +613199,8 @@ extension on _StringsZhCn {
             '已导入 ${n} 条，跳过 ${skipped} 条';
       case 'srs_import':
         return '导入';
+      case 'srs_import_background_started':
+        return '正在后台导入，可以继续使用 Fushi。';
       case 'srs_import_colpkg_note':
         return '这是整库包（.colpkg）。Anki 会用它替换整个集合；Fushi 改为合并导入，不会删除或替换你已有的卡片。';
       case 'srs_import_failed':
@@ -612772,6 +613264,17 @@ extension on _StringsZhCn {
         return '正在导入…';
       case 'srs_import_section_updates':
         return '更新';
+      case 'srs_import_task_dismiss':
+        return '关闭';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            '已导入 ${name}：新增 ${n} 条笔记';
+      case 'srs_import_task_failed':
+        return ({required Object name}) => '导入 ${name} 失败，点按查看原因。';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => '等待导入 ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => '正在导入 ${name}…';
       case 'srs_import_update_always':
         return '始终';
       case 'srs_import_update_if_newer':
@@ -630052,6 +630555,8 @@ extension on _StringsZhHk {
             'Imported ${n}, skipped ${skipped}';
       case 'srs_import':
         return 'Import';
+      case 'srs_import_background_started':
+        return 'Importing in the background. You can keep using Fushi.';
       case 'srs_import_colpkg_note':
         return 'This is a whole-collection package. Anki would replace its entire collection with it; Fushi merges it instead and never deletes or replaces the cards you already have.';
       case 'srs_import_failed':
@@ -630126,6 +630631,18 @@ extension on _StringsZhHk {
         return 'Importing…';
       case 'srs_import_section_updates':
         return 'Updates';
+      case 'srs_import_task_dismiss':
+        return 'Dismiss';
+      case 'srs_import_task_done':
+        return ({required Object name, required Object n}) =>
+            'Imported ${name}: ${n} notes added';
+      case 'srs_import_task_failed':
+        return ({required Object name}) =>
+            'Couldn\'t import ${name}. Tap for details.';
+      case 'srs_import_task_queued':
+        return ({required Object name}) => 'Waiting to import ${name}';
+      case 'srs_import_task_running':
+        return ({required Object name}) => 'Importing ${name}…';
       case 'srs_import_update_always':
         return 'Always';
       case 'srs_import_update_if_newer':
